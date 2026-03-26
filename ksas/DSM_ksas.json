@@ -1,0 +1,277 @@
+{
+  "dataset_id": "ATLAS-KSAS",
+  "category_code": "DSM",
+  "ksa_count": 38,
+  "knowledge_count": 16,
+  "skill_count": 8,
+  "task_count": 14,
+  "schema_version": "1.0.0",
+  "ksas": [
+    {
+      "ksa_id": "DSM-04.01-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of data quality dimensions (accuracy, completeness, consistency, timeliness, uniqueness, validity, integrity) and the measurement approaches applicable to each dimension.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.01-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of data quality management program design, including profiling methodology, rule authoring standards, threshold setting, issue classification, and escalation path design.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.01-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of root cause analysis methods for data quality failures, including source system analysis, transformation logic review, and process failure identification.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.01-S-001",
+      "type": "Skill",
+      "statement": "Skill in designing and implementing data quality measurement programs, including profiling, rule definition, scoring, and business impact quantification.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.01-S-002",
+      "type": "Skill",
+      "statement": "Skill in producing data quality reporting for business and governance audiences, translating technical quality scores into business risk and operational impact language.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.01-T-001",
+      "type": "Task",
+      "statement": "Define and maintain enterprise data quality standards, including dimensional targets, measurement methodology, scoring approach, and escalation thresholds by data domain.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.01-T-002",
+      "type": "Task",
+      "statement": "Operate the data quality issue management process, including intake, prioritization, root cause assignment, remediation tracking, and closure verification.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.01-T-003",
+      "type": "Task",
+      "statement": "Produce regular data quality reports for governance and business stakeholders, including trend analysis, high-impact issue summaries, and remediation progress.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.02-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of MDM architectural patterns, including registry, consolidation, coexistence, and centralized hub models, and the organizational and technical conditions that favor each.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.02-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of entity resolution methods, including deterministic matching rules, probabilistic matching, and ML-based matching, and the precision-recall trade-offs involved.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.02-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of reference data management principles, including reference data taxonomy, governance of controlled vocabularies, and change management for reference data updates.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.02-S-001",
+      "type": "Skill",
+      "statement": "Skill in designing matching and merging rules for entity resolution, including rule documentation, threshold calibration, and exception handling workflows.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.02-T-001",
+      "type": "Task",
+      "statement": "Manage the MDM hub operations, including golden record maintenance, match review queues, merge/unmerge workflows, and survivorship rule updates.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.02-T-002",
+      "type": "Task",
+      "statement": "Govern the enterprise reference data library, including controlled vocabulary management, change request processing, and version control.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.03-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of metadata types (business, technical, operational, process) and the systems and methods used to collect, store, and maintain each type.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.03-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of data catalog platform capabilities, including automated metadata harvesting, lineage visualization, search and discovery, classification, and glossary linkage.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.03-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of data lineage concepts and documentation methods, including end-to-end lineage from source to consumption, transformation-level lineage, and impact analysis use cases.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.03-S-001",
+      "type": "Skill",
+      "statement": "Skill in operating a data catalog platform, including configuring connectors, reviewing harvested metadata, curating business context, and managing access.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.03-T-001",
+      "type": "Task",
+      "statement": "Maintain the enterprise data catalog, including asset registration, metadata quality review, business context enrichment, and freshness monitoring.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.03-T-002",
+      "type": "Task",
+      "statement": "Manage the enterprise business glossary, including term authoring workflows, approval processes, linkage to catalog assets, and conflict resolution between competing definitions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.03-T-003",
+      "type": "Task",
+      "statement": "Document and maintain data lineage for critical data elements and high-risk data flows, ensuring lineage is current and accessible to authorized consumers.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.04-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of global data protection regulations, including GDPR, CCPA/CPRA, LGPD, PDPA, and sector-specific privacy obligations, and the data management requirements each creates.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.04-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of privacy-by-design principles and how to embed privacy requirements into data platform design, data product development, and AI system design.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.04-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of data subject rights management, including rights request intake, fulfillment workflows, response timelines, and documentation requirements.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.04-K-004",
+      "type": "Knowledge",
+      "statement": "Knowledge of data minimization, purpose limitation, consent management, and legitimate interest assessment as operational data management practices.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.04-S-001",
+      "type": "Skill",
+      "statement": "Skill in conducting privacy impact assessments (PIAs) and data protection impact assessments (DPIAs) for new data processing activities and AI systems.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.04-S-002",
+      "type": "Skill",
+      "statement": "Skill in mapping personal data flows across systems, vendors, and jurisdictions to produce records of processing activities (RoPA) in compliance with regulatory requirements.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.04-T-001",
+      "type": "Task",
+      "statement": "Maintain the records of processing activities (RoPA), ensuring accuracy, completeness, and currency for all personal data processing operations.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.04-T-002",
+      "type": "Task",
+      "statement": "Manage the data subject rights fulfillment process, including request intake, identity verification, fulfillment coordination, response delivery, and documentation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.04-T-003",
+      "type": "Task",
+      "statement": "Conduct DPIAs for new or materially changed data processing activities, documenting risks, mitigations, and residual risk acceptance decisions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.05-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of data product design principles, including data product definition, consumer segmentation, interface design (APIs, subscriptions, files), SLA definition, and data product lifecycle.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.05-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of data mesh principles and the role of data product thinking within a federated data ownership model.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.05-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of product management practices as applied to data products, including roadmap prioritization, consumer discovery, feedback loops, and value measurement.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.05-S-001",
+      "type": "Skill",
+      "statement": "Skill in conducting data consumer discovery, translating consumer data needs into data product requirements with defined quality, freshness, and access standards.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.05-S-002",
+      "type": "Skill",
+      "statement": "Skill in defining and managing data product SLAs, including freshness, quality, availability, and access response time commitments.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.05-T-001",
+      "type": "Task",
+      "statement": "Define and maintain the data product roadmap, including consumer prioritization, capability dependencies, delivery milestones, and deprecation plans.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.05-T-002",
+      "type": "Task",
+      "statement": "Manage the data product lifecycle, including launch, active management, deprecation, and consumer migration planning.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DSM-04.05-T-003",
+      "type": "Task",
+      "statement": "Monitor data product health against defined SLAs, managing consumer communications for SLA breaches and planned changes.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    }
+  ]
+}

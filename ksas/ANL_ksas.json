@@ -1,0 +1,221 @@
+{
+  "dataset_id": "ATLAS-KSAS",
+  "category_code": "ANL",
+  "ksa_count": 30,
+  "knowledge_count": 12,
+  "skill_count": 8,
+  "task_count": 10,
+  "schema_version": "1.0.0",
+  "ksas": [
+    {
+      "ksa_id": "ANL-05.01-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of SQL for data querying, including joins, aggregations, window functions, subqueries, and query optimization fundamentals.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.01-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of descriptive statistics, including measures of central tendency, dispersion, distribution shape, and correlation, and how to interpret each in a business context.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.01-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of data visualization best practices, including chart type selection, cognitive load principles, color accessibility, and the difference between exploratory and explanatory visualization.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.01-K-004",
+      "type": "Knowledge",
+      "statement": "Knowledge of common analytical frameworks, including cohort analysis, funnel analysis, segmentation, time series analysis, and A/B test result interpretation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.01-S-001",
+      "type": "Skill",
+      "statement": "Skill in translating a business question into a data query, identifying the correct data sources, joins, filters, and aggregations required to answer the question accurately.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.01-S-002",
+      "type": "Skill",
+      "statement": "Skill in identifying and communicating data quality issues that affect analytical conclusions, including null handling, outlier treatment, and source system reliability caveats.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.01-S-003",
+      "type": "Skill",
+      "statement": "Skill in producing analysis documentation that is reproducible, clearly reasoned, and accessible to a non-technical business audience.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.01-T-001",
+      "type": "Task",
+      "statement": "Execute analytical requests from business stakeholders, including data extraction, transformation, analysis, and delivery of findings with documented methodology.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.01-T-002",
+      "type": "Task",
+      "statement": "Build and maintain self-service reports and dashboards that enable business stakeholders to monitor KPIs and explore data without analyst intervention.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.01-T-003",
+      "type": "Task",
+      "statement": "Document analytical methodologies, data sources, business rules, and known data limitations for all recurring analyses and reports.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.02-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of advanced analytical methods including multivariate regression, time series forecasting, clustering, cohort analysis, and experimental design.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.02-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of A/B testing and experimentation design, including sample size calculation, randomization methods, guardrail metric selection, and statistical significance interpretation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.02-S-001",
+      "type": "Skill",
+      "statement": "Skill in designing and executing complex analytical projects independently, including scoping, methodology selection, execution, and executive-level communication of findings.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.02-S-002",
+      "type": "Skill",
+      "statement": "Skill in mentoring junior analysts, including code and methodology review, feedback delivery, and capability development.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.02-T-001",
+      "type": "Task",
+      "statement": "Lead complex cross-functional analytical projects, coordinating data access, methodology alignment, and stakeholder communication across business units.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.02-T-002",
+      "type": "Task",
+      "statement": "Design and analyze controlled experiments (A/B tests), including hypothesis specification, randomization oversight, results interpretation, and recommendation delivery.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.03-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of BI platform capabilities (e.g., Power BI, Tableau, Looker, MicroStrategy) including data model design, calculated field logic, performance optimization, and security implementation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.03-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of semantic layer design, including measure definition, dimension hierarchy design, slowly changing dimension handling, and the relationship between semantic model design and report performance.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.03-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of BI governance practices, including report certification, content lifecycle management, access control, and version control for BI assets.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.03-S-001",
+      "type": "Skill",
+      "statement": "Skill in designing BI semantic models that are performant, reusable, and understandable by business users without requiring technical knowledge.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.03-S-002",
+      "type": "Skill",
+      "statement": "Skill in building dashboard layouts that communicate KPIs clearly, prioritize decision-relevant information, and scale across device types and user roles.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.03-T-001",
+      "type": "Task",
+      "statement": "Design, build, and publish BI dashboards and reports that meet defined consumer requirements for content, performance, accessibility, and refresh frequency.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.03-T-002",
+      "type": "Task",
+      "statement": "Maintain and optimize existing BI assets, including performance tuning, data model updates, and deprecation of unused content.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.03-T-003",
+      "type": "Task",
+      "statement": "Manage BI platform governance, including report certification workflows, access control maintenance, and content lifecycle reviews.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.04-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of statistical modeling methods including regression modeling (OLS, GLM, mixed effects), survival analysis, Bayesian modeling, and simulation methods.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.04-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of causal inference methods, including difference-in-differences, instrumental variables, regression discontinuity, propensity score matching, and their identification assumptions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.04-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of risk quantification frameworks, including Value at Risk, expected loss models, Monte Carlo simulation, and sensitivity analysis methods.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.04-S-001",
+      "type": "Skill",
+      "statement": "Skill in designing analytical studies that produce defensible causal or correlational conclusions, with appropriate documentation of assumptions and limitations.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.04-T-001",
+      "type": "Task",
+      "statement": "Design and execute quantitative analyses for high-stakes business decisions, including methodology selection, sensitivity analysis, and uncertainty quantification.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.04-T-002",
+      "type": "Task",
+      "statement": "Produce analytical documentation that meets the evidence standard required for regulatory, audit, or executive decision support contexts.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    }
+  ]
+}

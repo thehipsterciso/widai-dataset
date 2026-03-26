@@ -1,0 +1,530 @@
+{
+  "dataset_id": "ATLAS-MASTER-ROLES",
+  "category_code": "DSM",
+  "category_title": "Data Stewardship, Quality, and Management",
+  "role_count": 21,
+  "schema_version": "1.0.0",
+  "roles": [
+    {
+      "role_id": "ATLAS-DSM-0066",
+      "canonical_title": "Data Quality Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 66,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-DSM-04.01",
+      "seniority_level": "Manager",
+      "key_variants": [
+        "DQ Program Lead"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.13 — Data Quality",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "DCAM",
+          "reference": "EDM Council Data Capability Assessment Model (DCAM)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/dcam/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0067",
+      "canonical_title": "Master Data Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 67,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-DSM-04.02",
+      "seniority_level": "Manager",
+      "key_variants": [
+        "MDM Lead",
+        "Reference Data Manager"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.10 — Reference and Master Data",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0068",
+      "canonical_title": "Metadata Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 68,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-DSM-04.03",
+      "seniority_level": "Manager",
+      "key_variants": [
+        "Metadata Administrator"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.12 — Metadata Management",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "Gartner",
+          "reference": "Gartner research",
+          "url": "PLACEHOLDER — Gartner paywalled analyst research; no stable public URL",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0069",
+      "canonical_title": "Data Privacy Specialist",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 69,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-DSM-04.04",
+      "seniority_level": "IC–Mid",
+      "key_variants": [
+        "Data Privacy Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "IAPP",
+          "reference": "IAPP privacy professional resources",
+          "url": "https://iapp.org/resources/",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0070",
+      "canonical_title": "Data Product Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 70,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-DSM-04.05",
+      "seniority_level": "Manager/Director",
+      "key_variants": [
+        "Data Product Owner"
+      ],
+      "sources": [
+        {
+          "framework": "TDWI",
+          "reference": "TDWI research report",
+          "url": "PLACEHOLDER — TDWI publication; see https://tdwi.org/research",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Forrester",
+          "reference": "Forrester research",
+          "url": "PLACEHOLDER — Forrester paywalled research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Data Mesh",
+          "reference": "Data Mesh Principles and Logical Architecture (Dehghani / Martin Fowler)",
+          "url": "https://martinfowler.com/articles/data-mesh-principles.html",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0071",
+      "canonical_title": "Data Quality Analyst",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 71,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "IC–Mid",
+      "key_variants": [
+        "DQ Specialist",
+        "Data Profiling Specialist"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.13 — Data Quality roles",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "CMMI-DMM",
+          "reference": "CMMI Data Management Maturity Model",
+          "url": "PLACEHOLDER — ISACA/CMMI Institute publication; no public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Monte Carlo Data",
+          "reference": "Monte Carlo Data — Data Reliability Engineering definition",
+          "url": "PLACEHOLDER — see https://www.montecarlodata.com/blog-what-is-a-data-reliability-engineer/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0072",
+      "canonical_title": "Data Catalog Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 72,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Data Discovery Lead"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.12 — Metadata Management",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "CDMC",
+          "reference": "EDM Council Cloud Data Management Capabilities (CDMC)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/cdmc/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0073",
+      "canonical_title": "Data Classification Specialist",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 73,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Data Sensitivity Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "CDMC",
+          "reference": "EDM Council Cloud Data Management Capabilities (CDMC)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/cdmc/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0074",
+      "canonical_title": "Data Lineage Analyst",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 74,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Data Provenance Specialist"
+      ],
+      "sources": [
+        {
+          "framework": "CDMC",
+          "reference": "EDM Council Cloud Data Management Capabilities (CDMC)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/cdmc/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0075",
+      "canonical_title": "Records Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 75,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Content Manager",
+        "Document Librarian"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.9 — Document and Content Management",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 15-1299.03",
+          "url": "https://www.onetonline.org/link/summary/15-1299.03",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0076",
+      "canonical_title": "Knowledge Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 76,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.9 — Document and Content Management",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "NIST NICE",
+          "reference": "NICE Framework Work Role IO-WRL-003 (Implementation and Operation) — Knowledge management work role",
+          "url": "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/NICE_FRAMEWORK_V1_0_0/home",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DCWF",
+          "reference": "DoD DCWF Work Role 431",
+          "url": "https://dodcio.defense.gov/Cyber-Workforce/DCWF/",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0077",
+      "canonical_title": "Business Glossary Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 77,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Data Terminology Lead"
+      ],
+      "sources": [
+        {
+          "framework": "CMMI-DMM",
+          "reference": "CMMI Data Management Maturity Model",
+          "url": "PLACEHOLDER — ISACA/CMMI Institute publication; no public URL",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0078",
+      "canonical_title": "Data Lifecycle Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 78,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Data Retention Specialist"
+      ],
+      "sources": [
+        {
+          "framework": "CDMC",
+          "reference": "EDM Council Cloud Data Management Capabilities (CDMC)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/cdmc/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "CMMI-DMM",
+          "reference": "CMMI Data Management Maturity Model",
+          "url": "PLACEHOLDER — ISACA/CMMI Institute publication; no public URL",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0079",
+      "canonical_title": "AI Product Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 79,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Manager/Director",
+      "key_variants": [
+        "GenAI Product Manager",
+        "ML Product Manager"
+      ],
+      "sources": [
+        {
+          "framework": "McKinsey",
+          "reference": "McKinsey research",
+          "url": "PLACEHOLDER — McKinsey paywalled research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "BCG",
+          "reference": "BCG AI / data research",
+          "url": "PLACEHOLDER — BCG paywalled research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Gartner",
+          "reference": "Gartner research",
+          "url": "PLACEHOLDER — Gartner paywalled analyst research; no stable public URL",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0080",
+      "canonical_title": "Data Marketplace Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 80,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Manager",
+      "key_variants": [
+        "Data Exchange Manager"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0081",
+      "canonical_title": "Data Monetization Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 81,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Manager/Director",
+      "key_variants": [
+        "Data Monetization Strategist"
+      ],
+      "sources": [
+        {
+          "framework": "LinkedIn",
+          "reference": "LinkedIn job market data / Workforce Reports",
+          "url": "PLACEHOLDER — LinkedIn Workforce Insights; see https://economicgraph.linkedin.com/research",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0082",
+      "canonical_title": "Data Valuation Analyst",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 82,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Data Asset Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0083",
+      "canonical_title": "Domain Data Product Owner",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 83,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Manager",
+      "key_variants": [
+        "Domain Data Product Manager"
+      ],
+      "sources": [
+        {
+          "framework": "Data Mesh",
+          "reference": "Data Mesh Principles and Logical Architecture (Dehghani / Martin Fowler)",
+          "url": "https://martinfowler.com/articles/data-mesh-principles.html",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0084",
+      "canonical_title": "ISO 8000 Data Manager",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 84,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Senior",
+      "key_variants": [],
+      "sources": [
+        {
+          "framework": "ISO-8000",
+          "reference": "ISO 8000-150:2022 — Data quality: Process maturity",
+          "url": "urn:iso:std:iso:8000:-150",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0085",
+      "canonical_title": "ISO 8000 Data Administrator",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 85,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [],
+      "sources": [
+        {
+          "framework": "ISO-8000",
+          "reference": "ISO 8000-150:2022 — Data quality: Process maturity",
+          "url": "urn:iso:std:iso:8000:-150",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-DSM-0086",
+      "canonical_title": "ISO 8000 Data Technician",
+      "category_code": "DSM",
+      "category_title": "Data Stewardship, Quality, and Management",
+      "inventory_sequence": 86,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Junior",
+      "key_variants": [],
+      "sources": [
+        {
+          "framework": "ISO-8000",
+          "reference": "ISO 8000-150:2022 — Data quality: Process maturity",
+          "url": "urn:iso:std:iso:8000:-150",
+          "url_status": "paywalled"
+        }
+      ]
+    }
+  ]
+}

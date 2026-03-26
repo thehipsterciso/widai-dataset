@@ -1,0 +1,736 @@
+{
+  "dataset_id": "ATLAS-MASTER-ROLES",
+  "category_code": "GOV",
+  "category_title": "Governance, Strategy, and Executive Leadership",
+  "role_count": 25,
+  "schema_version": "1.0.0",
+  "roles": [
+    {
+      "role_id": "ATLAS-GOV-0001",
+      "canonical_title": "Chief Data and AI Officer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 1,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-GOV-01.01",
+      "seniority_level": "C-Suite",
+      "key_variants": [
+        "CDAIO",
+        "CDAO",
+        "Pioneer CDAx"
+      ],
+      "sources": [
+        {
+          "framework": "Gartner",
+          "reference": "Gartner research",
+          "url": "PLACEHOLDER — Gartner paywalled analyst research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "HBR",
+          "reference": "Harvard Business Review article",
+          "url": "PLACEHOLDER — HBR paywalled article; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "CDO Magazine",
+          "reference": "CDO Magazine article",
+          "url": "PLACEHOLDER — CDO Magazine; search cdomagazine.com for specific article",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0002",
+      "canonical_title": "Chief Data Officer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 2,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-GOV-01.01",
+      "seniority_level": "C-Suite",
+      "key_variants": [
+        "CDO"
+      ],
+      "sources": [
+        {
+          "framework": "Evidence Act",
+          "reference": "44 USC §3520A — Chief Data Officers",
+          "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3520A",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — CDO role definition",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "Gartner",
+          "reference": "Gartner research",
+          "url": "PLACEHOLDER — Gartner paywalled analyst research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Deloitte",
+          "reference": "Deloitte CDO Playbook / research",
+          "url": "PLACEHOLDER — Deloitte paywalled publication; no stable public URL",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0003",
+      "canonical_title": "Chief AI Officer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 3,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-GOV-01.01",
+      "seniority_level": "C-Suite",
+      "key_variants": [
+        "CAIO"
+      ],
+      "sources": [
+        {
+          "framework": "Executive Order",
+          "reference": "EO 14110 — Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence (Oct 2023)",
+          "url": "https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "IBM",
+          "reference": "IBM 2025 CAIO/AI leadership research",
+          "url": "PLACEHOLDER — IBM Institute for Business Value; see https://www.ibm.com/thought-leadership/institute-business-value/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "MIT Sloan",
+          "reference": "MIT Sloan Management Review article",
+          "url": "PLACEHOLDER — MIT Sloan paywalled article; search sloanreview.mit.edu",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0004",
+      "canonical_title": "Chief Analytics Officer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 4,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "C-Suite",
+      "key_variants": [
+        "CAO"
+      ],
+      "sources": [
+        {
+          "framework": "HBR",
+          "reference": "Harvard Business Review article",
+          "url": "PLACEHOLDER — HBR paywalled article; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "CDO Magazine",
+          "reference": "CDO Magazine article",
+          "url": "PLACEHOLDER — CDO Magazine; search cdomagazine.com for specific article",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0005",
+      "canonical_title": "Chief AI Ethics Officer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 5,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "C-Suite/VP",
+      "key_variants": [
+        "CAIEO",
+        "Head of Responsible AI"
+      ],
+      "sources": [
+        {
+          "framework": "WEF",
+          "reference": "World Economic Forum 2021 AI governance research",
+          "url": "PLACEHOLDER — WEF report; search reports.weforum.org",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "IEEE",
+          "reference": "IEEE Ethically Aligned Design",
+          "url": "https://standards.ieee.org/industry-connections/ec/autonomous-systems/",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "BCG",
+          "reference": "BCG AI / data research",
+          "url": "PLACEHOLDER — BCG paywalled research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0006",
+      "canonical_title": "Chief Data and Information Officer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 6,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "C-Suite",
+      "key_variants": [
+        "CDIO"
+      ],
+      "sources": [
+        {
+          "framework": "MIT Sloan",
+          "reference": "MIT Sloan Management Review article",
+          "url": "PLACEHOLDER — MIT Sloan paywalled article; search sloanreview.mit.edu",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0007",
+      "canonical_title": "Data Governance Director",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 7,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-GOV-01.02",
+      "seniority_level": "Director",
+      "key_variants": [
+        "DG Director",
+        "DG Program Director"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.3 — Data Governance",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "DCAM",
+          "reference": "EDM Council Data Capability Assessment Model (DCAM)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/dcam/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0008",
+      "canonical_title": "AI Governance Manager",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 8,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-GOV-01.03",
+      "seniority_level": "Manager/Director",
+      "key_variants": [
+        "AI Governance Lead"
+      ],
+      "sources": [
+        {
+          "framework": "Forrester",
+          "reference": "Forrester research",
+          "url": "PLACEHOLDER — Forrester paywalled research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "ISACA",
+          "reference": "ISACA AI governance framework",
+          "url": "PLACEHOLDER — ISACA publication; see https://www.isaca.org/resources/artificial-intelligence",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "NIST AI RMF",
+          "reference": "NIST AI RMF — implied role from framework structure",
+          "url": "https://csrc.nist.gov/pubs/ai/100/1/final",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0009",
+      "canonical_title": "Data Steward",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 9,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-GOV-01.04",
+      "seniority_level": "IC–Manager",
+      "key_variants": [
+        "Business Data Steward",
+        "Technical Data Steward",
+        "Domain Data Steward"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.3 — Data Stewardship (8 variants)",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "DCAM",
+          "reference": "EDM Council Data Capability Assessment Model (DCAM)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/dcam/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "CDMC",
+          "reference": "EDM Council Cloud Data Management Capabilities (CDMC)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/cdmc/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "CMMI-DMM",
+          "reference": "CMMI Data Management Maturity Model",
+          "url": "PLACEHOLDER — ISACA/CMMI Institute publication; no public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "DCWF",
+          "reference": "DoD DCWF Work Role 424",
+          "url": "https://dodcio.defense.gov/Cyber-Workforce/DCWF/",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0010",
+      "canonical_title": "Executive Data Steward",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 10,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "VP/Director",
+      "key_variants": [
+        "Senior Data Steward",
+        "Chief Data Steward"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.3 — Executive/Coordinating Data Steward",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0011",
+      "canonical_title": "Data Owner",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 11,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Director/VP",
+      "key_variants": [
+        "Business Data Owner",
+        "Domain Owner"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.3 — Data Ownership",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "DCAM",
+          "reference": "EDM Council Data Capability Assessment Model (DCAM)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/dcam/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "CMMI-DMM",
+          "reference": "CMMI Data Management Maturity Model",
+          "url": "PLACEHOLDER — ISACA/CMMI Institute publication; no public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "ISO-38505",
+          "reference": "ISO/IEC 38505-1:2017 — Governance of data",
+          "url": "urn:iso:std:iso-iec:38505:-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "IIA",
+          "reference": "IIA Three Lines Model",
+          "url": "https://www.theiia.org/en/standards/the-iia-standards/three-lines-model/",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0012",
+      "canonical_title": "Data Trustee",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 12,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Executive",
+      "key_variants": [
+        "Data Sponsor"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.3 — Data Trustee/Sponsor role",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0013",
+      "canonical_title": "Data Custodian",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 13,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid-level IT",
+      "key_variants": [
+        "Technical Data Steward (synonymous per DAMA)"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.3 — Data Custodian (synonymous with Technical Data Steward)",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0014",
+      "canonical_title": "Data Governance Council Chair",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 14,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Executive",
+      "key_variants": [
+        "DG Board Chair"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.3 — Data Governance Council structure",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "DCAM",
+          "reference": "EDM Council Data Capability Assessment Model (DCAM)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/dcam/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "CMMI-DMM",
+          "reference": "CMMI Data Management Maturity Model",
+          "url": "PLACEHOLDER — ISACA/CMMI Institute publication; no public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "COBIT-2019",
+          "reference": "COBIT 2019 — IT Governance Framework (ISACA)",
+          "url": "PLACEHOLDER — ISACA paywalled publication; see https://www.isaca.org/resources/cobit",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0015",
+      "canonical_title": "Data Governance Analyst",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 15,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "IC–Mid",
+      "key_variants": [
+        "DG Coordinator"
+      ],
+      "sources": [
+        {
+          "framework": "DQOps",
+          "reference": "DQOps practitioner community definition",
+          "url": "PLACEHOLDER — see https://dqops.com/docs/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Community practice — DG Analyst/Coordinator role",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0016",
+      "canonical_title": "Data Protection Officer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 16,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Senior",
+      "key_variants": [
+        "DPO"
+      ],
+      "sources": [
+        {
+          "framework": "GDPR",
+          "reference": "GDPR Art 37-39 — Designation, position and tasks of the DPO",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679#d1e3261-1-1",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "ISO-27701",
+          "reference": "ISO/IEC 27701:2019 — Privacy information management",
+          "url": "urn:iso:std:iso-iec:27701",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "IAPP",
+          "reference": "IAPP Certified Information Privacy Manager (CIPM)",
+          "url": "https://iapp.org/certify/cipm/",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0017",
+      "canonical_title": "Privacy Program Manager",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 17,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Privacy Manager",
+        "Privacy Operations Manager"
+      ],
+      "sources": [
+        {
+          "framework": "IAPP",
+          "reference": "IAPP Certified Information Privacy Manager (CIPM)",
+          "url": "https://iapp.org/certify/cipm/",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0018",
+      "canonical_title": "Privacy Engineer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 18,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Privacy Technologist",
+        "Privacy-by-Design Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "IAPP",
+          "reference": "IAPP Certified Information Privacy Technologist (CIPT)",
+          "url": "https://iapp.org/certify/cipt/",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "GDPR",
+          "reference": "GDPR Art 25 — Data protection by design and by default",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679#d1e2816-1-1",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0019",
+      "canonical_title": "AI Governance Professional",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 19,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "AI Policy Specialist"
+      ],
+      "sources": [
+        {
+          "framework": "IAPP",
+          "reference": "IAPP AI Governance Professional (AIGP) certification",
+          "url": "https://iapp.org/certify/aigp/",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "EC-Council",
+          "reference": "EC-Council Certified Responsible AI Engineer (CRAGE)",
+          "url": "PLACEHOLDER — see https://www.eccouncil.org/train-certify/certified-responsible-ai-engineer/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0020",
+      "canonical_title": "Data Ethics Officer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 20,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Data Ethicist"
+      ],
+      "sources": [
+        {
+          "framework": "DCAM",
+          "reference": "EDM Council Data Capability Assessment Model (DCAM)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/dcam/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "DDaT",
+          "reference": "UK Government Data Profession Capability Framework",
+          "url": "https://www.gov.uk/guidance/data-profession-capability-framework",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0021",
+      "canonical_title": "Cloud Data Governance Lead",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 21,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Senior",
+      "key_variants": [
+        "Cloud Data Steward"
+      ],
+      "sources": [
+        {
+          "framework": "CDMC",
+          "reference": "EDM Council Cloud Data Management Capabilities (CDMC)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/cdmc/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0022",
+      "canonical_title": "Federated Governance Group Representative",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 22,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Senior",
+      "key_variants": [
+        "Data Governance Council Member (Mesh)"
+      ],
+      "sources": [
+        {
+          "framework": "Data Mesh",
+          "reference": "Data Mesh Principles and Logical Architecture (Dehghani / Martin Fowler)",
+          "url": "https://martinfowler.com/articles/data-mesh-principles.html",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0023",
+      "canonical_title": "Data Officer (Federal/DoD)",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 23,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Executive",
+      "key_variants": [
+        "Agency CDO"
+      ],
+      "sources": [
+        {
+          "framework": "DCWF",
+          "reference": "DoD DCWF Work Role 903",
+          "url": "https://dodcio.defense.gov/Cyber-Workforce/DCWF/",
+          "url_status": "framework_level"
+        },
+        {
+          "framework": "Evidence Act",
+          "reference": "44 USC §3520A — Chief Data Officers",
+          "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3520A",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0024",
+      "canonical_title": "Evaluation Officer",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 24,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Senior/Executive",
+      "key_variants": [
+        "Statistical Official"
+      ],
+      "sources": [
+        {
+          "framework": "Evidence Act",
+          "reference": "5 USC §313 — Evaluation Officers",
+          "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section313",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-GOV-0025",
+      "canonical_title": "AI Literacy Training Manager",
+      "category_code": "GOV",
+      "category_title": "Governance, Strategy, and Executive Leadership",
+      "inventory_sequence": 25,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "AI Literacy Lead"
+      ],
+      "sources": [
+        {
+          "framework": "EU AI Act",
+          "reference": "EU AI Act Art 4 — Provider obligations on AI literacy",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+          "url_status": "resolvable"
+        }
+      ]
+    }
+  ]
+}

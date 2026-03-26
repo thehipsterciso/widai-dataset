@@ -1,0 +1,704 @@
+{
+  "dataset_id": "ATLAS-MASTER-ROLES",
+  "category_code": "ENG",
+  "category_title": "Engineering, Architecture, and Platform",
+  "role_count": 25,
+  "schema_version": "1.0.0",
+  "roles": [
+    {
+      "role_id": "ATLAS-ENG-0026",
+      "canonical_title": "Data Architect",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 26,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-ENG-02.01",
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Enterprise Data Architect",
+        "Solution Data Architect"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.4 — Data Architecture",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "O*NET",
+          "reference": "O*NET 15-1243.00",
+          "url": "https://www.onetonline.org/link/summary/15-1243.00",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DCWF",
+          "reference": "DoD DCWF Work Role 653",
+          "url": "https://dodcio.defense.gov/Cyber-Workforce/DCWF/",
+          "url_status": "framework_level"
+        },
+        {
+          "framework": "DDaT",
+          "reference": "UK Government Data Profession Capability Framework",
+          "url": "https://www.gov.uk/guidance/data-profession-capability-framework",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0027",
+      "canonical_title": "AI/ML Platform Architect",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 27,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-ENG-02.02",
+      "seniority_level": "Senior",
+      "key_variants": [
+        "ML Infrastructure Architect"
+      ],
+      "sources": [
+        {
+          "framework": "Gartner",
+          "reference": "Gartner research",
+          "url": "PLACEHOLDER — Gartner paywalled analyst research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "AWS",
+          "reference": "AWS Machine Learning Lens — Well-Architected Framework",
+          "url": "https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/welcome.html",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0028",
+      "canonical_title": "Data Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 28,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-ENG-02.03",
+      "seniority_level": "IC–Senior",
+      "key_variants": [
+        "Cloud Data Engineer",
+        "Big Data Engineer",
+        "Streaming Data Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET 15-1243.00",
+          "url": "https://www.onetonline.org/link/summary/15-1243.00",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Data engineering role",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "DDaT",
+          "reference": "UK Government Data Profession Capability Framework",
+          "url": "https://www.gov.uk/guidance/data-profession-capability-framework",
+          "url_status": "framework_level"
+        },
+        {
+          "framework": "DCWF",
+          "reference": "DoD DCWF Work Role 624",
+          "url": "https://dodcio.defense.gov/Cyber-Workforce/DCWF/",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0029",
+      "canonical_title": "Analytics Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 29,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-ENG-02.04",
+      "seniority_level": "IC–Senior",
+      "key_variants": [
+        "Visual Analytics Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "dbt Labs",
+          "reference": "The Analytics Engineer — dbt Labs definition",
+          "url": "https://www.getdbt.com/analytics-engineering/",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DDaT",
+          "reference": "UK Government Data Profession Capability Framework",
+          "url": "https://www.gov.uk/guidance/data-profession-capability-framework",
+          "url_status": "framework_level"
+        },
+        {
+          "framework": "GitLab",
+          "reference": "GitLab Analytics Engineer role definition",
+          "url": "PLACEHOLDER — see https://about.gitlab.com/job-families/finance/analytics-engineer/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0030",
+      "canonical_title": "Data Platform Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 30,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-ENG-02.05",
+      "seniority_level": "IC–Senior",
+      "key_variants": [
+        "Data Infrastructure Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "Gartner",
+          "reference": "Gartner research",
+          "url": "PLACEHOLDER — Gartner paywalled analyst research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0031",
+      "canonical_title": "Data Integration Architect",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 31,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "ETL Developer/Architect"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.8 — Data Integration and Interoperability",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0032",
+      "canonical_title": "Data Warehouse Architect",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 32,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "DW Developer"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET 15-1243.01",
+          "url": "https://www.onetonline.org/link/summary/15-1243.01",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.11 — Data Warehousing and Business Intelligence",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0033",
+      "canonical_title": "Data Modeler",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 33,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Database Designer"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.5 — Data Modeling and Design",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "DCAM",
+          "reference": "EDM Council Data Capability Assessment Model (DCAM)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/dcam/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0034",
+      "canonical_title": "Database Administrator",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 34,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "DBA",
+        "Data Warehouse Administrator"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET 15-1242.00",
+          "url": "https://www.onetonline.org/link/summary/15-1242.00",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.6 — Data Storage and Operations",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "NIST NICE",
+          "reference": "NICE Framework Work Role IO-WRL-002 (Implementation and Operation) — Secure storage, query, protection, and utilization of data",
+          "url": "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/NICE_FRAMEWORK_V1_0_0/home",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DCWF",
+          "reference": "DoD DCWF Work Role 421",
+          "url": "https://dodcio.defense.gov/Cyber-Workforce/DCWF/",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0035",
+      "canonical_title": "Cloud Data Architect",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 35,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Senior",
+      "key_variants": [
+        "Cloud/Hybrid Data Architect"
+      ],
+      "sources": [
+        {
+          "framework": "CDMC",
+          "reference": "EDM Council Cloud Data Management Capabilities (CDMC)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/cdmc/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0036",
+      "canonical_title": "Cloud Platform Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 36,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Cloud Infrastructure Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "CDMC",
+          "reference": "EDM Council Cloud Data Management Capabilities (CDMC)",
+          "url": "PLACEHOLDER — EDM Council publication; see https://edmcouncil.org/frameworks/cdmc/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0037",
+      "canonical_title": "DataOps Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 37,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Data Operations Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "TDWI",
+          "reference": "TDWI research report",
+          "url": "PLACEHOLDER — TDWI publication; see https://tdwi.org/research",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "McKinsey",
+          "reference": "McKinsey research",
+          "url": "PLACEHOLDER — McKinsey paywalled research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "DataOps.live",
+          "reference": "DataOps practitioner community definition",
+          "url": "PLACEHOLDER — see https://dataops.live/what-is-dataops/",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0038",
+      "canonical_title": "Data Reliability Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 38,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Data SRE",
+        "Data Quality Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "Monte Carlo Data",
+          "reference": "Monte Carlo Data — Data Reliability Engineering definition",
+          "url": "PLACEHOLDER — see https://www.montecarlodata.com/blog-what-is-a-data-reliability-engineer/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0039",
+      "canonical_title": "Data Observability Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 39,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Data Monitoring Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "Monte Carlo Data",
+          "reference": "Monte Carlo Data — Data Reliability Engineering definition",
+          "url": "PLACEHOLDER — see https://www.montecarlodata.com/blog-what-is-a-data-reliability-engineer/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0040",
+      "canonical_title": "Data Contracts Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 40,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Data API Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "Data Mesh",
+          "reference": "datamesh-architecture.com — Data Contracts definition",
+          "url": "https://www.datamesh-architecture.com/data-contracts",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0041",
+      "canonical_title": "MLOps Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 41,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "ML Operations Engineer",
+        "ML Deployment Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "AWS",
+          "reference": "AWS Machine Learning Lens — Well-Architected Framework",
+          "url": "https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/welcome.html",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "Coursera",
+          "reference": "Coursera MLOps Specialization",
+          "url": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "LinkedIn",
+          "reference": "LinkedIn job market data / Workforce Reports",
+          "url": "PLACEHOLDER — LinkedIn Workforce Insights; no stable citation URL; see https://economicgraph.linkedin.com/research",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0042",
+      "canonical_title": "LLMOps Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 42,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "GenAI Operations Engineer",
+        "FMOps Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "DZone",
+          "reference": "DZone — LLMOps maturity model (2023–2024)",
+          "url": "PLACEHOLDER — search dzone.com for LLMOps articles",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0043",
+      "canonical_title": "Knowledge Graph Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 43,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Semantic Engineer",
+        "Taxonomy Manager"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0044",
+      "canonical_title": "Ontologist",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 44,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Principal Ontologist"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0045",
+      "canonical_title": "Vector Database Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 45,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Semantic Search Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "aijobs.net",
+          "reference": "aijobs.net job posting data",
+          "url": "PLACEHOLDER — see https://aijobs.net",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0046",
+      "canonical_title": "Synthetic Data Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 46,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Simulation Data Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0047",
+      "canonical_title": "Self-Serve Data Platform Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 47,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Data Mesh Platform Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "Data Mesh",
+          "reference": "datamesh-architecture.com — Self-Serve Data Platform",
+          "url": "https://www.datamesh-architecture.com/",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0048",
+      "canonical_title": "Context Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 48,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "AI Context Architect"
+      ],
+      "sources": [
+        {
+          "framework": "Gartner",
+          "reference": "Gartner research",
+          "url": "PLACEHOLDER — Gartner paywalled analyst research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "ODSC",
+          "reference": "ODSC (Open Data Science Conference) practitioner community",
+          "url": "PLACEHOLDER — see https://odsc.com",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0049",
+      "canonical_title": "RAG Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 49,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Retrieval Engineer"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Vellum",
+          "reference": "Vellum — RAG Engineer practitioner definition (2023–2024)",
+          "url": "PLACEHOLDER — see https://www.vellum.ai/blog",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-ENG-0050",
+      "canonical_title": "Embedding Engineer",
+      "category_code": "ENG",
+      "category_title": "Engineering, Architecture, and Platform",
+      "inventory_sequence": 50,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Vector Embedding Specialist"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    }
+  ]
+}

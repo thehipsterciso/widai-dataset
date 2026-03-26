@@ -1,0 +1,634 @@
+{
+  "dataset_id": "ATLAS-MASTER-ROLES",
+  "category_code": "RSK",
+  "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+  "role_count": 24,
+  "schema_version": "1.0.0",
+  "roles": [
+    {
+      "role_id": "ATLAS-RSK-0101",
+      "canonical_title": "AI Risk and Ethics Specialist",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 101,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-RSK-06.01",
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Responsible AI Lead"
+      ],
+      "sources": [
+        {
+          "framework": "NIST AI RMF",
+          "reference": "NIST AI Risk Management Framework (AI RMF 1.0)",
+          "url": "https://csrc.nist.gov/pubs/ai/100/1/final",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DCWF",
+          "reference": "DoD DCWF Work Role 733",
+          "url": "https://dodcio.defense.gov/Cyber-Workforce/DCWF/",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0102",
+      "canonical_title": "AI Security Specialist",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 102,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-RSK-06.02",
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "AI Cybersecurity Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "NIST NICE",
+          "reference": "NICE Framework Work Role  (NICE competency area) — AI/data security competency area",
+          "url": "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/NICE_FRAMEWORK_V1_0_0/home",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "NIST AI RMF",
+          "reference": "NIST AI Risk Management Framework (AI RMF 1.0)",
+          "url": "https://csrc.nist.gov/pubs/ai/100/1/final",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0103",
+      "canonical_title": "AI Test and Evaluation Specialist",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 103,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-RSK-06.03",
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "TEVV Specialist"
+      ],
+      "sources": [
+        {
+          "framework": "NIST AI RMF",
+          "reference": "NIST AI Risk Management Framework (AI RMF 1.0)",
+          "url": "https://csrc.nist.gov/pubs/ai/100/1/final",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DCWF",
+          "reference": "DoD DCWF Work Role 672",
+          "url": "https://dodcio.defense.gov/Cyber-Workforce/DCWF/",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0104",
+      "canonical_title": "Data Compliance Analyst",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 104,
+      "in_atlas_v030": true,
+      "atlas_work_role_id": "WR-RSK-06.04",
+      "seniority_level": "IC–Mid",
+      "key_variants": [
+        "Data Compliance Officer"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 13-1041.00",
+          "url": "https://www.onetonline.org/link/summary/13-1041.00",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0105",
+      "canonical_title": "AI Red Team Lead",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 105,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "AI Red Teamer",
+        "Adversarial ML Specialist"
+      ],
+      "sources": [
+        {
+          "framework": "NIST AI RMF",
+          "reference": "NIST AI Risk Management Framework (AI RMF 1.0)",
+          "url": "https://csrc.nist.gov/pubs/ai/100/1/final",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "Executive Order",
+          "reference": "EO 14110 — Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence",
+          "url": "https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "Microsoft",
+          "reference": "Microsoft AI Red Team / responsible AI practice",
+          "url": "PLACEHOLDER — see https://www.microsoft.com/en-us/security/blog/topic/microsoft-security-response-center/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "EU AI Act",
+          "reference": "EU AI Act Art 9 — Risk management system — adversarial testing obligations",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0106",
+      "canonical_title": "AI Incident Response Manager",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 106,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "AI Safety Officer"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "NIST AI RMF",
+          "reference": "NIST AI Risk Management Framework (AI RMF 1.0)",
+          "url": "https://csrc.nist.gov/pubs/ai/100/1/final",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0107",
+      "canonical_title": "AI Auditor",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 107,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "AI/ML Auditor",
+        "Advanced AI Auditor"
+      ],
+      "sources": [
+        {
+          "framework": "ISACA",
+          "reference": "ISACA Advanced in AI Audit (AAIA) credential (2024)",
+          "url": "https://www.isaca.org/credentialing/certified-in-emerging-technology/advanced-in-ai-audit",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "IIA",
+          "reference": "IIA AI Auditing Framework",
+          "url": "PLACEHOLDER — IIA publication; see https://www.theiia.org/en/products/research-and-resources/research-reports/",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "AICPA",
+          "reference": "AICPA AI auditing guidance",
+          "url": "PLACEHOLDER — see https://www.aicpa-cima.com/resources/article/ai-artificial-intelligence",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0108",
+      "canonical_title": "Model Risk Manager",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 108,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Director",
+      "key_variants": [
+        "Head of MRM",
+        "MRM Director"
+      ],
+      "sources": [
+        {
+          "framework": "Fed SR 11-7",
+          "reference": "Federal Reserve SR Letter 11-7 — Supervisory Guidance on Model Risk Management",
+          "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "OCC",
+          "reference": "OCC Bulletin 2011-12 — Sound Practices for Model Risk Management",
+          "url": "https://www.occ.gov/news-issuances/bulletins/2011/bulletin-2011-12.html",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0109",
+      "canonical_title": "Model Validator",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 109,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Model Reviewer",
+        "Independent Validator"
+      ],
+      "sources": [
+        {
+          "framework": "Fed SR 11-7",
+          "reference": "Federal Reserve SR 11-7 — Second Line model validation",
+          "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0110",
+      "canonical_title": "Model Owner",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 110,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Model Sponsor"
+      ],
+      "sources": [
+        {
+          "framework": "Fed SR 11-7",
+          "reference": "Federal Reserve SR Letter 11-7 — Supervisory Guidance on Model Risk Management",
+          "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "ISO-42001",
+          "reference": "ISO/IEC 42001:2023 — Annex A.3.2 — Roles and responsibilities",
+          "url": "urn:iso:std:iso-iec:42001",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "IIA",
+          "reference": "IIA Three Lines Model",
+          "url": "https://www.theiia.org/en/standards/the-iia-standards/three-lines-model/",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0111",
+      "canonical_title": "Model Governance Analyst",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 111,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Model Inventory Manager"
+      ],
+      "sources": [
+        {
+          "framework": "Fed SR 11-7",
+          "reference": "Federal Reserve SR Letter 11-7 — Supervisory Guidance on Model Risk Management",
+          "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "KPMG",
+          "reference": "KPMG model risk management practice",
+          "url": "PLACEHOLDER — KPMG paywalled research; no stable public URL",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0112",
+      "canonical_title": "AI System Owner",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 112,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "AI Lifecycle Owner"
+      ],
+      "sources": [
+        {
+          "framework": "ISO-42001",
+          "reference": "ISO/IEC 42001:2023 — Annex A.3.2 and A.6 — AI system ownership and lifecycle",
+          "url": "urn:iso:std:iso-iec:42001",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0113",
+      "canonical_title": "AI Risk Owner",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 113,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [],
+      "sources": [
+        {
+          "framework": "ISO-42001",
+          "reference": "ISO/IEC 42001:2023 — Clause 6.1 — Actions to address risks and opportunities",
+          "url": "urn:iso:std:iso-iec:42001",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "ISO-23894",
+          "reference": "ISO/IEC 23894:2023 — Guidance on risk management",
+          "url": "urn:iso:std:iso-iec:23894",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0114",
+      "canonical_title": "AI Ethics Board Member",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 114,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Cross-functional",
+      "key_variants": [
+        "Responsible AI Committee Member"
+      ],
+      "sources": [
+        {
+          "framework": "ISACA",
+          "reference": "ISACA AI governance resources",
+          "url": "https://www.isaca.org/resources/artificial-intelligence",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "ISO-42001",
+          "reference": "ISO/IEC 42001:2023 — Implementation — AI ethics oversight",
+          "url": "urn:iso:std:iso-iec:42001",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "Stanford HAI",
+          "reference": "Stanford Human-Centered AI research",
+          "url": "PLACEHOLDER — see https://hai.stanford.edu/research",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0115",
+      "canonical_title": "AI Compliance Liaison",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 115,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "AI Regulatory Liaison"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "EU AI Act",
+          "reference": "EU AI Act Art 26 — Obligations of deployers of high-risk AI systems",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0116",
+      "canonical_title": "AI Transparency/Documentation Specialist",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 116,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [],
+      "sources": [
+        {
+          "framework": "EU AI Act",
+          "reference": "EU AI Act Art 12-13 and Annex IV — Transparency, logging, and technical documentation",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0117",
+      "canonical_title": "Post-Market Monitoring Manager",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 117,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [],
+      "sources": [
+        {
+          "framework": "EU AI Act",
+          "reference": "EU AI Act Art 72 — Post-market monitoring by providers",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0118",
+      "canonical_title": "Bias Auditor",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 118,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Fairness Analyst",
+        "Algorithmic Bias Assessor"
+      ],
+      "sources": [
+        {
+          "framework": "IEEE",
+          "reference": "IEEE 7003 — Algorithmic Bias Considerations",
+          "url": "https://standards.ieee.org/ieee/IEEE%207003/10789/",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "IEEE",
+          "reference": "IEEE CertifAIEd — AI ethics certification program",
+          "url": "https://engagestandards.ieee.org/certifaied.html",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0119",
+      "canonical_title": "AI Ethics Assessor",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 119,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "CertifAIEd Professional"
+      ],
+      "sources": [
+        {
+          "framework": "IEEE",
+          "reference": "IEEE CertifAIEd — AI ethics certification program",
+          "url": "https://engagestandards.ieee.org/certifaied.html",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0120",
+      "canonical_title": "Data Security Administrator",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 120,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Data Security Lead"
+      ],
+      "sources": [
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.7 — Data Security",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        },
+        {
+          "framework": "ISO-27001",
+          "reference": "ISO/IEC 27001:2022 — Information security management systems",
+          "url": "urn:iso:std:iso-iec:27001",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0121",
+      "canonical_title": "HIPAA Privacy/Security Officer",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 121,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Senior",
+      "key_variants": [
+        "Health Data Compliance Officer"
+      ],
+      "sources": [
+        {
+          "framework": "HIPAA",
+          "reference": "HHS HIPAA Security Rule",
+          "url": "https://www.hhs.gov/hipaa/for-professionals/security/index.html",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0122",
+      "canonical_title": "AI Governance Professional (IAPP)",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 122,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "AIGP credential holder"
+      ],
+      "sources": [
+        {
+          "framework": "IAPP",
+          "reference": "IAPP AI Governance Professional (AIGP) certification",
+          "url": "https://iapp.org/certify/aigp/",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0123",
+      "canonical_title": "LLM Evaluator",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 123,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Evals Engineer",
+        "AI Evaluation Specialist"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    },
+    {
+      "role_id": "ATLAS-RSK-0124",
+      "canonical_title": "AI Safety Researcher",
+      "category_code": "RSK",
+      "category_title": "Risk, Ethics, Safety, Compliance, and Audit",
+      "inventory_sequence": 124,
+      "in_atlas_v030": false,
+      "atlas_work_role_id": null,
+      "seniority_level": "IC–Senior",
+      "key_variants": [
+        "Alignment Researcher",
+        "Misalignment Researcher"
+      ],
+      "sources": [
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "80000 Hours",
+          "reference": "80,000 Hours — AI safety career research",
+          "url": "https://80000hours.org/problem-profiles/artificial-intelligence/",
+          "url_status": "resolvable"
+        }
+      ]
+    }
+  ]
+}

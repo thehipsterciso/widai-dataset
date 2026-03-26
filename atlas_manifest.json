@@ -1,0 +1,401 @@
+{
+  "dataset_id": "ATLAS-DATASET",
+  "dataset_title": "ATLAS — A Workforce Framework for Talent, Leadership, and Skills in Data and AI",
+  "version": "0.4.0",
+  "schema_version": "1.0.0",
+  "status": "development",
+  "created_date": "2026-03-26",
+  "scope": "Covers the full data and AI profession. Explicitly excludes the CISO and cybersecurity workforce, covered by NIST NICE.",
+  "architecture": {
+    "pattern": "Entity-separated flat files with foreign key references",
+    "primary_key": "role_id for roles, ksa_id for KSAs",
+    "relationship_model": "KSAs are independent entities. Roles reference KSAs via relationship tables in /mappings/. Framework mappings are separate files per framework."
+  },
+  "directories": {
+    "roles": {
+      "description": "One file per category_code. Each contains role identity, title, seniority, variants, and source references. No KSAs embedded.",
+      "files": {
+        "ANL.json": {
+          "role_count": 14
+        },
+        "DEV.json": {
+          "role_count": 15
+        },
+        "DSM.json": {
+          "role_count": 21
+        },
+        "ENG.json": {
+          "role_count": 25
+        },
+        "GOV.json": {
+          "role_count": 25
+        },
+        "LDR.json": {
+          "role_count": 31
+        },
+        "NICHE.json": {
+          "role_count": 9
+        },
+        "OPS.json": {
+          "role_count": 15
+        },
+        "REG.json": {
+          "role_count": 8
+        },
+        "RSK.json": {
+          "role_count": 24
+        }
+      }
+    },
+    "ksas": {
+      "description": "Independent KSA entities by category. Each KSA has a stable ksa_id and exists independent of any role.",
+      "files": {
+        "ANL_ksas.json": {
+          "ksa_count": 30
+        },
+        "DEV_ksas.json": {
+          "ksa_count": 46
+        },
+        "DSM_ksas.json": {
+          "ksa_count": 38
+        },
+        "ENG_ksas.json": {
+          "ksa_count": 53
+        },
+        "GOV_ksas.json": {
+          "ksa_count": 73
+        },
+        "LDR_ksas.json": {
+          "ksa_count": 24
+        },
+        "OPS_ksas.json": {
+          "ksa_count": 23
+        },
+        "RSK_ksas.json": {
+          "ksa_count": 35
+        }
+      }
+    },
+    "frameworks": {
+      "description": "Reference data for each source framework (NICE, SFIA, O*NET, DAMA, etc.)",
+      "files": {
+        "frameworks.json": {
+          "framework_count": 70
+        }
+      }
+    },
+    "mappings": {
+      "description": "Relationship tables. role_ksa_* files link roles to KSAs. roles_to_* files link roles to framework references.",
+      "files": {
+        "roles_to_80000_HOURS.json": {
+          "mapping_count": 1
+        },
+        "roles_to_AICPA.json": {
+          "mapping_count": 1
+        },
+        "roles_to_ATLAS.json": {
+          "mapping_count": 4
+        },
+        "roles_to_AWS.json": {
+          "mapping_count": 4
+        },
+        "roles_to_BCG.json": {
+          "mapping_count": 3
+        },
+        "roles_to_BLS_SOC.json": {
+          "mapping_count": 3
+        },
+        "roles_to_CDMC.json": {
+          "mapping_count": 8
+        },
+        "roles_to_CDO_MAGAZINE.json": {
+          "mapping_count": 6
+        },
+        "roles_to_CMMI_DMM.json": {
+          "mapping_count": 6
+        },
+        "roles_to_COBIT_2019.json": {
+          "mapping_count": 1
+        },
+        "roles_to_CONVERSATION_DESIGN_INSTITUTE.json": {
+          "mapping_count": 1
+        },
+        "roles_to_COURSERA.json": {
+          "mapping_count": 1
+        },
+        "roles_to_DAMA_DMBOK.json": {
+          "mapping_count": 26
+        },
+        "roles_to_DATAVERSITY.json": {
+          "mapping_count": 1
+        },
+        "roles_to_DCAM.json": {
+          "mapping_count": 7
+        },
+        "roles_to_DCWF.json": {
+          "mapping_count": 15
+        },
+        "roles_to_DDAT.json": {
+          "mapping_count": 8
+        },
+        "roles_to_DQOPS.json": {
+          "mapping_count": 2
+        },
+        "roles_to_DZONE.json": {
+          "mapping_count": 1
+        },
+        "roles_to_DATA_MESH.json": {
+          "mapping_count": 10
+        },
+        "roles_to_DATAOPS.LIVE.json": {
+          "mapping_count": 1
+        },
+        "roles_to_DELOITTE.json": {
+          "mapping_count": 7
+        },
+        "roles_to_EC_COUNCIL.json": {
+          "mapping_count": 1
+        },
+        "roles_to_EU_AI_ACT.json": {
+          "mapping_count": 10
+        },
+        "roles_to_EVIDENCE_ACT.json": {
+          "mapping_count": 3
+        },
+        "roles_to_EXECUTIVE_ORDER.json": {
+          "mapping_count": 2
+        },
+        "roles_to_FDA.json": {
+          "mapping_count": 2
+        },
+        "roles_to_FED_SR_11_7.json": {
+          "mapping_count": 4
+        },
+        "roles_to_FORRESTER.json": {
+          "mapping_count": 3
+        },
+        "roles_to_GDPR.json": {
+          "mapping_count": 2
+        },
+        "roles_to_GARTNER.json": {
+          "mapping_count": 14
+        },
+        "roles_to_GITLAB.json": {
+          "mapping_count": 1
+        },
+        "roles_to_GLASSDOOR.json": {
+          "mapping_count": 1
+        },
+        "roles_to_HBR.json": {
+          "mapping_count": 2
+        },
+        "roles_to_HIPAA.json": {
+          "mapping_count": 1
+        },
+        "roles_to_IAPP.json": {
+          "mapping_count": 6
+        },
+        "roles_to_IBM.json": {
+          "mapping_count": 2
+        },
+        "roles_to_IDC.json": {
+          "mapping_count": 1
+        },
+        "roles_to_IEEE.json": {
+          "mapping_count": 4
+        },
+        "roles_to_IIA.json": {
+          "mapping_count": 3
+        },
+        "roles_to_ISACA.json": {
+          "mapping_count": 3
+        },
+        "roles_to_ISO_23894.json": {
+          "mapping_count": 1
+        },
+        "roles_to_ISO_27001.json": {
+          "mapping_count": 1
+        },
+        "roles_to_ISO_27701.json": {
+          "mapping_count": 1
+        },
+        "roles_to_ISO_38505.json": {
+          "mapping_count": 1
+        },
+        "roles_to_ISO_42001.json": {
+          "mapping_count": 8
+        },
+        "roles_to_ISO_5338.json": {
+          "mapping_count": 1
+        },
+        "roles_to_ISO_8000.json": {
+          "mapping_count": 3
+        },
+        "roles_to_INDEED.json": {
+          "mapping_count": 4
+        },
+        "roles_to_KPMG.json": {
+          "mapping_count": 1
+        },
+        "roles_to_LINKEDIN.json": {
+          "mapping_count": 15
+        },
+        "roles_to_MIT_SLOAN.json": {
+          "mapping_count": 3
+        },
+        "roles_to_MCKINSEY.json": {
+          "mapping_count": 6
+        },
+        "roles_to_MICROSOFT.json": {
+          "mapping_count": 2
+        },
+        "roles_to_MONTE_CARLO_DATA.json": {
+          "mapping_count": 3
+        },
+        "roles_to_NIST_AI_RMF.json": {
+          "mapping_count": 6
+        },
+        "roles_to_NIST_NICE.json": {
+          "mapping_count": 4
+        },
+        "roles_to_O*NET.json": {
+          "mapping_count": 25
+        },
+        "roles_to_OCC.json": {
+          "mapping_count": 1
+        },
+        "roles_to_ODSC.json": {
+          "mapping_count": 3
+        },
+        "roles_to_PRACTITIONER_COMMUNITY.json": {
+          "mapping_count": 47
+        },
+        "roles_to_SCALE_AI.json": {
+          "mapping_count": 3
+        },
+        "roles_to_SINGAPORE_MAIG.json": {
+          "mapping_count": 1
+        },
+        "roles_to_STANFORD_HAI.json": {
+          "mapping_count": 2
+        },
+        "roles_to_TDWI.json": {
+          "mapping_count": 3
+        },
+        "roles_to_THOUGHTWORKS.json": {
+          "mapping_count": 1
+        },
+        "roles_to_VELLUM.json": {
+          "mapping_count": 1
+        },
+        "roles_to_WEF.json": {
+          "mapping_count": 1
+        },
+        "roles_to_AIJOBS.NET.json": {
+          "mapping_count": 2
+        },
+        "roles_to_DBT_LABS.json": {
+          "mapping_count": 1
+        },
+        "role_ksa_ANL.json": {
+          "relationship_count": 30
+        },
+        "role_ksa_DEV.json": {
+          "relationship_count": 46
+        },
+        "role_ksa_DSM.json": {
+          "relationship_count": 38
+        },
+        "role_ksa_ENG.json": {
+          "relationship_count": 53
+        },
+        "role_ksa_GOV.json": {
+          "relationship_count": 73
+        },
+        "role_ksa_LDR.json": {
+          "relationship_count": 24
+        },
+        "role_ksa_OPS.json": {
+          "relationship_count": 23
+        },
+        "role_ksa_RSK.json": {
+          "relationship_count": 35
+        }
+      }
+    },
+    "career_tracks": {
+      "description": "Career progression paths across roles. Populated in future versions.",
+      "files": {}
+    },
+    "job_descriptions": {
+      "description": "Per-role job description templates. Populated in future versions.",
+      "files": {}
+    },
+    "schema": {
+      "description": "JSON Schema definitions for validation.",
+      "files": {}
+    },
+    "docs": {
+      "description": "Architecture decisions, research, and assessments.",
+      "files": {}
+    }
+  },
+  "statistics": {
+    "total_roles": 187,
+    "total_ksas": 322,
+    "total_role_ksa_relationships": 322,
+    "total_frameworks": 70,
+    "categories": {
+      "ANL": {
+        "role_count": 14,
+        "ksa_count": 30,
+        "role_ksa_count": 30
+      },
+      "DEV": {
+        "role_count": 15,
+        "ksa_count": 46,
+        "role_ksa_count": 46
+      },
+      "DSM": {
+        "role_count": 21,
+        "ksa_count": 38,
+        "role_ksa_count": 38
+      },
+      "ENG": {
+        "role_count": 25,
+        "ksa_count": 53,
+        "role_ksa_count": 53
+      },
+      "GOV": {
+        "role_count": 25,
+        "ksa_count": 73,
+        "role_ksa_count": 73
+      },
+      "LDR": {
+        "role_count": 31,
+        "ksa_count": 24,
+        "role_ksa_count": 24
+      },
+      "NICHE": {
+        "role_count": 9,
+        "ksa_count": 0,
+        "role_ksa_count": 0
+      },
+      "OPS": {
+        "role_count": 15,
+        "ksa_count": 23,
+        "role_ksa_count": 23
+      },
+      "REG": {
+        "role_count": 8,
+        "ksa_count": 0,
+        "role_ksa_count": 0
+      },
+      "RSK": {
+        "role_count": 24,
+        "ksa_count": 35,
+        "role_ksa_count": 35
+      }
+    }
+  }
+}

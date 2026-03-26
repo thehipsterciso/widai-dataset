@@ -1,0 +1,333 @@
+{
+  "dataset_id": "ATLAS-KSAS",
+  "category_code": "DEV",
+  "ksa_count": 46,
+  "knowledge_count": 18,
+  "skill_count": 14,
+  "task_count": 13,
+  "schema_version": "1.0.0",
+  "ksas": [
+    {
+      "ksa_id": "DEV-03.01-A-001",
+      "type": "Ability",
+      "statement": "Ability to distinguish between problems that require machine learning and problems that can be solved more simply and reliably with rule-based logic or statistical methods.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of supervised and unsupervised machine learning algorithms, including their mathematical foundations, hyperparameter behavior, and appropriate application conditions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of statistical inference methods, including hypothesis testing, confidence intervals, Bayesian inference, and the assumptions underlying each method.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of model evaluation frameworks, including train/validation/test split design, cross-validation, evaluation metric selection, and the conditions under which each metric is appropriate.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-K-004",
+      "type": "Knowledge",
+      "statement": "Knowledge of feature engineering techniques, including encoding strategies, normalization, handling of missing data, feature selection methods, and the relationship between feature quality and model performance.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-K-005",
+      "type": "Knowledge",
+      "statement": "Knowledge of model interpretability and explainability methods, including SHAP values, LIME, partial dependence plots, and when explanation requirements should influence model selection.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-S-001",
+      "type": "Skill",
+      "statement": "Skill in formulating business problems as machine learning problems, including defining the prediction target, identifying appropriate inputs, and establishing measurable success criteria.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-S-002",
+      "type": "Skill",
+      "statement": "Skill in conducting exploratory data analysis, including distributional analysis, correlation analysis, anomaly detection, and translating EDA findings into modeling decisions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-S-003",
+      "type": "Skill",
+      "statement": "Skill in writing production-quality Python code for data processing, feature engineering, model training, and evaluation, including documentation and unit testing.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-S-004",
+      "type": "Skill",
+      "statement": "Skill in communicating model findings and limitations to non-technical business stakeholders in terms of business impact rather than technical metrics.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-T-001",
+      "type": "Task",
+      "statement": "Conduct exploratory data analysis on new datasets, documenting distributional characteristics, data quality findings, and implications for modeling approach.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-T-002",
+      "type": "Task",
+      "statement": "Design, train, evaluate, and document machine learning models, including feature engineering decisions, algorithm selection rationale, and evaluation results against baseline.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-T-003",
+      "type": "Task",
+      "statement": "Prepare model documentation for production deployment, including model card, performance characteristics, known limitations, and monitoring recommendations.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.01-T-004",
+      "type": "Task",
+      "statement": "Conduct post-deployment model monitoring, identifying performance degradation, data drift, and conditions requiring model retraining or replacement.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of ML model serving patterns, including REST API serving, batch inference, streaming inference, edge deployment, and the latency, throughput, and cost trade-offs of each.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of containerization and orchestration technologies (Docker, Kubernetes) as applied to ML model packaging, deployment, and scaling.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of ML pipeline frameworks and the engineering practices required to make training and inference pipelines reproducible, testable, and maintainable.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-K-004",
+      "type": "Knowledge",
+      "statement": "Knowledge of model monitoring approaches, including prediction drift detection, input data distribution monitoring, and latency and throughput tracking.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-S-001",
+      "type": "Skill",
+      "statement": "Skill in refactoring research-quality data science code into production-grade, tested, documented, and deployable ML systems.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-S-002",
+      "type": "Skill",
+      "statement": "Skill in designing and implementing model serving APIs, including input validation, output formatting, error handling, authentication, and versioning.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-S-003",
+      "type": "Skill",
+      "statement": "Skill in implementing automated ML retraining pipelines triggered by performance degradation signals or data distribution shifts.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-T-001",
+      "type": "Task",
+      "statement": "Package and deploy ML models to production serving infrastructure, including containerization, API wrapping, load testing, and rollback procedures.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-T-002",
+      "type": "Task",
+      "statement": "Implement model monitoring dashboards and alerting, including performance degradation thresholds, drift detection, and incident response procedures.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.02-T-003",
+      "type": "Task",
+      "statement": "Build and maintain ML training pipelines, including data ingestion, preprocessing, training, evaluation, and model registration steps.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of large language model capabilities, limitations, failure modes, and the prompt engineering and system design patterns that shape reliable LLM-based application behavior.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of retrieval-augmented generation (RAG) architecture patterns, including vector store design, chunking strategies, retrieval evaluation, and hallucination mitigation approaches.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of agentic AI design patterns, including tool use, multi-agent coordination, memory systems, and the safety and reliability challenges specific to agentic architectures.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-K-004",
+      "type": "Knowledge",
+      "statement": "Knowledge of AI application security risks, including prompt injection, jailbreaking, data exfiltration via LLM outputs, and model supply chain vulnerabilities.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-S-001",
+      "type": "Skill",
+      "statement": "Skill in designing and evaluating prompt engineering strategies, including few-shot prompting, chain-of-thought prompting, and structured output generation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-S-002",
+      "type": "Skill",
+      "statement": "Skill in building and evaluating RAG pipelines, including embedding model selection, retrieval quality measurement, and end-to-end system evaluation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-S-003",
+      "type": "Skill",
+      "statement": "Skill in implementing AI application guardrails, including input validation, output filtering, safety classifiers, and human-in-the-loop intervention points.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-T-001",
+      "type": "Task",
+      "statement": "Design and build LLM-based application systems, including system prompt design, tool integration, retrieval pipeline, output validation, and failure mode documentation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-T-002",
+      "type": "Task",
+      "statement": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.03-T-003",
+      "type": "Task",
+      "statement": "Implement AI application security controls, including prompt injection defenses, output filtering, access controls, and audit logging.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.04-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of NLP task taxonomy, including classification, named entity recognition, relation extraction, summarization, translation, and question answering, and the model architectures appropriate for each.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.04-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of transformer architecture, attention mechanisms, and the pre-training and fine-tuning paradigm as it applies to language models.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.04-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of NLP evaluation frameworks, including BLEU, ROUGE, BERTScore, and human evaluation methodologies and their appropriate application contexts.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.04-S-001",
+      "type": "Skill",
+      "statement": "Skill in fine-tuning pre-trained language models for domain-specific tasks, including dataset preparation, training configuration, and evaluation design.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.04-S-002",
+      "type": "Skill",
+      "statement": "Skill in designing and implementing NLP evaluation pipelines that measure task-specific performance, robustness, and fairness.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.04-T-001",
+      "type": "Task",
+      "statement": "Design and implement NLP systems for defined business tasks, including model selection, data preparation, fine-tuning, evaluation, and deployment documentation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.04-T-002",
+      "type": "Task",
+      "statement": "Conduct linguistic analysis and error analysis on NLP system outputs, documenting failure patterns and recommending model or data improvements.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.05-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of computer vision task taxonomy, including image classification, object detection, segmentation, pose estimation, and generation, and the architectures appropriate for each.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.05-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of CNN architectures, vision transformer architectures, and the data augmentation, regularization, and transfer learning techniques applicable to visual recognition tasks.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.05-S-001",
+      "type": "Skill",
+      "statement": "Skill in preparing image and video datasets for model training, including annotation pipeline design, quality control, augmentation strategy, and train/validation split construction.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.05-S-002",
+      "type": "Skill",
+      "statement": "Skill in training, evaluating, and optimizing computer vision models, including performance profiling, inference optimization, and edge deployment considerations.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "DEV-03.05-T-001",
+      "type": "Task",
+      "statement": "Design and build computer vision systems for defined business applications, including dataset preparation, model training, evaluation, deployment, and performance monitoring.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.3.0"
+    }
+  ]
+}
