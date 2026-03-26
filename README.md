@@ -1,82 +1,150 @@
-# ATLAS Dataset
+<p align="center">
+  <img src="docs/assets/atlas-at-a-glance.svg" alt="ATLAS at a glance — 187 roles, 322 KSAs, 70+ frameworks, one standard" width="100%"/>
+</p>
 
-**A Workforce Framework for Talent, Leadership, and Skills in Data and AI**
+# ATLAS
 
-ATLAS defines the roles, knowledge, skills, and abilities (KSAs) that constitute the Chief Data and AI Officer (CDAIO) organizational domain. It unifies 15+ workforce frameworks — NIST NICE, O\*NET, SFIA, DAMA DMBOK, DCWF, DDaT, ESCO, EU AI Act, ISO 42001, SR 11-7, LinkedIn, IAPP, ISACA, and others — into a single, version-controlled dataset with full source provenance.
+**The first machine-readable, cross-framework workforce taxonomy for data and AI.**
 
-## Current state
+ATLAS answers a question that every organization building with data and AI eventually faces but nobody has standardized: *who do we need, what should they know, and how do we measure the gap between where we are and where we need to be?*
 
-| Metric | Count |
-|--------|-------|
-| Roles | 187 |
-| Categories | 10 |
-| Independent KSAs | 322 |
-| Role–KSA relationships | 322 |
-| Source frameworks | 70 |
-| Role–framework mappings | 333 |
+There are frameworks that describe cybersecurity roles. Frameworks that describe general occupations. Frameworks that describe IT skills. None of them were built for the data and AI profession — the discipline that now underpins every enterprise strategy but has no shared language for its workforce.
 
-**Version:** 0.4.0 (development)
+ATLAS fills that gap. It defines 187 roles across the full data and AI organization, maps 322 knowledge, skills, and abilities to those roles, and unifies 70+ source frameworks — NIST NICE, O\*NET, SFIA, DAMA DMBOK, ESCO, EU AI Act, ISO 42001, SR 11-7, and dozens more — into a single dataset with full source provenance. Every mapping traces back to where it came from. Every role carries context from every framework that describes it.
 
-## Architecture
+The result: one taxonomy that speaks every framework's language simultaneously.
 
-The dataset uses entity-separated flat files with foreign key references. `role_id` is the primary key for roles. `ksa_id` is the primary key for KSAs. Relationship tables in `/mappings/` connect them.
+---
 
-```
-atlas-dataset/
-  roles/              One file per category_code (GOV.json, ENG.json, ...)
-  ksas/               Independent KSA entities by category
-  frameworks/         Reference data for each source framework
-  mappings/           Relationship tables (role↔KSA, role↔framework)
-  career_tracks/      Career progression paths (future)
-  job_descriptions/   Per-role JD templates (future)
-  schema/             JSON Schema definitions
-  docs/               Architecture decisions and research
-  scripts/            Validation and build tooling
-  atlas_manifest.json Index of everything — no payload
-```
+## The Problem Worth Solving
 
-### Why this structure
+Organizations are making consequential workforce decisions — hiring, restructuring, assessing regulatory readiness, evaluating acquisition targets — using frameworks that were never designed for data and AI. They translate between NICE and O\*NET and SFIA manually. They map regulatory obligations to roles on whiteboards. They assess team capability against standards that exist only in someone's head.
 
-KSAs are independent entities, not role properties. A single KSA can belong to multiple roles. Two frameworks can describe the same KSA differently. The relationship tables capture all of this without duplicating the KSA itself.
+This is not a tooling gap. It is an infrastructure gap. The same infrastructure gap that O\*NET solved for the general labor market forty years ago, that NICE solved for cybersecurity a decade ago. Data and AI is the last major professional domain without a machine-readable workforce standard.
 
-This follows the patterns established by NICE (Tasks own KSAs, roles reference Tasks) and SFIA (skills exist independently, roles are assembled from skills). The disagreement between frameworks about how to describe a competency is analytically valuable — we record it rather than reconciling it.
+<p align="center">
+  <img src="docs/assets/market-opportunity.svg" alt="Market opportunity across PE, EU AI Act, Model Risk, and Agentic AI" width="100%"/>
+</p>
 
-Each directory represents a node type. Each mapping file represents an edge type. The structure loads directly into Neo4j or any graph database without transformation.
+---
 
-### Categories
+## What ATLAS Makes Possible
 
-| Code | Title | Roles |
-|------|-------|-------|
-| GOV | Governance, Strategy, and Executive Leadership | 25 |
-| ENG | Engineering, Architecture, and Platform | 25 |
-| DEV | Data Science, ML, and AI Development | 15 |
-| DSM | Data Stewardship and Master Data | 21 |
-| ANL | Analytics and Business Intelligence | 14 |
-| RSK | Risk, Ethics, Safety, Compliance, and Audit | 24 |
-| OPS | Operations, Monitoring, and Reliability | 15 |
-| LDR | Leadership and Management (VP/Director) | 31 |
-| REG | Regulatory and Standards Compliance | 8 |
-| NICHE | Niche and Emerging Specializations | 9 |
+**For PE operating partners evaluating acquisition targets:** A standardized assessment that maps the target's data/AI team against a reference taxonomy, produces a maturity score, identifies key-person risks, and models the Year 1–3 workforce investment. Delivered in 30 days, priced as deal-level trivial. No more gut feel and reference checks for the workforce that will determine whether the value creation plan succeeds.
 
-## Validation
+**For organizations navigating the EU AI Act:** A mapping between regulatory obligations and the people who must fulfill them — across EU AI Act, NIST AI RMF, and ISO 42001 simultaneously. Not a compliance workflow tool. A workforce blueprint that tells you which roles satisfy which obligations, and which two hires cover the most regulatory surface area if your budget is limited.
 
-```bash
-python3 scripts/validate.py
-```
+**For financial institutions governing AI models:** An organizational design framework for SR 11-7 model risk governance adapted for AI. Three lines of defense mapped to defined roles with independence requirements, staffing ratios, and cross-regulatory context. The reference architecture that consulting firms haven't published.
 
-Checks JSON integrity, referential integrity (every ksa_id and role_id in mapping files resolves), duplicate detection, and manifest completeness. Runs automatically on push/PR via GitHub Actions.
+**For anyone building with agentic AI:** The first structured role definitions for a workforce category that doesn't exist in any established framework. Agent Supervisor, Agent Orchestrator, AI Trust Engineer — roles that organizations are creating ad hoc, without a shared vocabulary. ATLAS provides the vocabulary.
 
-## Scope
+**For newly hired CDIAOs walking into a role on Monday:** A Week 1 assessment that maps the current team, identifies the three biggest gaps, and produces a hiring plan by end of Week 2. Not a 187-role taxonomy to study. A tool that produces answers on the timeline the operating partner expects.
 
-Covers the full data and AI profession. Explicitly excludes the CISO and cybersecurity workforce, which is covered by NIST NICE. Boundary roles (Database Administrator, Privacy Officer, etc.) are included with domain-qualified framing, following the NICE precedent for adjacent roles.
+---
 
-## Documentation
+## The Differentiator Nobody Else Can Provide
 
-- [Master Schema Design](docs/master-schema-design.md) — unified JSON schema for cross-framework role records
-- [Field-by-Field Assessment](docs/field-by-field-assessment.md) — use case analysis for every schema field
-- [Gap Analysis](docs/gap-analysis.md) — 187-role inventory and coverage assessment
-- [NICE Boundary Scoping](docs/nice-boundary-scoping.md) — how NICE handles adjacent roles and what it means for ATLAS
+<p align="center">
+  <img src="docs/assets/competitive-position.svg" alt="Competitive positioning — ATLAS occupies a category of one" width="100%"/>
+</p>
 
-## License
+Lightcast processes billions of job postings and has compensation data updated biweekly. Eightfold builds proprietary organizational taxonomies for individual enterprises. NICE defines cybersecurity roles. O\*NET covers the general labor market. Each is excellent at what it does. None of them do what ATLAS does.
 
-Copyright 2026 Thomas Jones. All rights reserved.
+ATLAS is the only dataset that maps a single role to obligations under multiple regulatory and professional frameworks simultaneously. An AI Governance Manager in ATLAS carries context from EU AI Act Article 14, NIST AI RMF GOVERN functions, ISO 42001 controls, DAMA DMBOK knowledge areas, and SFIA skills — all in one record, all with source provenance.
+
+That cross-framework mapping is the feature a CISO with budget for two hires and three regulatory obligations needs. It is the feature a PE operating partner assessing a regulated target needs. It is the feature that makes ATLAS citable by analysts and usable by practitioners. And it is genuinely difficult to replicate, because it requires not just data access but two decades of judgment about how these frameworks relate to each other.
+
+---
+
+## Execution Roadmap
+
+Every roadmap item has been scored on impact, overlooked probability, and dependency weight. The sequence is determined by structural dependencies — what must be true before the next thing can be built — not by which use case sounds most appealing in a strategy meeting.
+
+<p align="center">
+  <img src="docs/assets/roadmap-timeline.svg" alt="Roadmap from validation to scale — five phases, dependency-driven" width="100%"/>
+</p>
+
+The full roadmap contains 25 scored items organized into dependency tiers, each with documented rationale. Ten Architectural Decision Records capture the reasoning behind every major decision — what was chosen, what was considered, and what the consequences are.
+
+**Phase 0 — Validate (Weeks 1–2).** Four parallel tests determine whether core assumptions hold before any product build begins. Can current data support a pilot assessment? Can AI-assisted authoring match manual quality? Do source framework licenses permit commercial use? Is existing data consistent enough to build on? Each test has explicit pass/fail criteria and documented consequences for either outcome.
+
+**Phase 1 — First Product (Weeks 3–8).** Build the PE workforce due diligence assessment — scoring model, engagement workflow, deliverable templates. Identify and engage a pilot partner. Begin populating regulatory context fields for governance and risk roles. Document the methodology.
+
+**Phase 2 — Compliance + Validation (Weeks 9–16).** EU AI Act obligation-to-role mapping ships before August 2026 enforcement. Cross-regulatory role coverage analysis produces the killer feature. Regulatory practitioners validate the mappings. The quick assessment interface makes the methodology repeatable.
+
+**Phase 3 — Expand (Weeks 17–24).** Agentic AI role definitions. SR 11-7 organizational design patterns. CDAIO assessment toolkit. Built on the credibility established by a validated pilot and compliance market presence.
+
+**Phase 4 — Scale (Weeks 25+).** API. Graph database. Full KSA coverage. Funded by Phases 1–3 revenue.
+
+> Full roadmap analysis, scoring methodology, and all 10 ADRs: [`docs/roadmap/`](docs/roadmap/)
+
+---
+
+## Current State — Honest Assessment
+
+ATLAS is in active development at version 0.4.0. Transparency about where things stand is not a weakness; it is the credibility this project is built on.
+
+**What exists today:** 187 roles defined across 10 categories. 322 KSAs mapped. 70+ source frameworks with provenance. 333 role-to-framework mappings. Entity-separated architecture designed for graph database ingestion. Schema supporting regulatory context, cross-framework mapping, and quantified assessment.
+
+**What does not exist yet:** Full KSA coverage (37 of 187 roles have complete KSAs). Populated regulatory context fields. A shipped assessment product. A completed pilot engagement. Practitioner-validated regulatory mappings. An API.
+
+**What the research says:** The gap between current state and first product is smaller than it appears. A PE assessment pilot targeting a mid-market data/AI team of 15–30 people maps to 20–40 ATLAS roles. The categories with KSA coverage (Governance, Engineering, Data Science, Stewardship, Risk, Analytics, Leadership, Operations) account for the majority of those roles. The validation sprint exists specifically to test this hypothesis before committing to the product build.
+
+---
+
+## How Decisions Get Made
+
+This project does not operate on intuition. The roadmap was produced through a structured five-pass analysis — Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, and Second-Order Mapping — applied against six priority use cases with parallel research across five domains. Each major decision is documented as an Architectural Decision Record with context, rationale, alternatives considered, and consequences.
+
+| Decision | Record | Core Reasoning |
+|----------|--------|----------------|
+| Sequence by dependencies, not priority | [ADR-001](docs/roadmap/adr/ADR-001-dependency-driven-roadmap-sequencing.md) | Priority rankings create serialization traps. Dependencies reveal the natural build order. |
+| PE due diligence as first product | [ADR-002](docs/roadmap/adr/ADR-002-pe-due-diligence-as-beachhead.md) | One PE firm adoption cascades to 8+ portfolio assessments. No other use case has this multiplier. |
+| Ship on current data, don't wait | [ADR-003](docs/roadmap/adr/ADR-003-ship-on-current-data-coverage.md) | Every month spent completing the dataset before piloting is a month of deferred market validation. |
+| EU AI Act as urgent parallel track | [ADR-004](docs/roadmap/adr/ADR-004-eu-ai-act-timeline-urgency.md) | August 2026 enforcement. Five months. The compliance window does not wait. |
+| AI-assisted authoring with quality gates | [ADR-005](docs/roadmap/adr/ADR-005-ai-assisted-ksa-authoring.md) | 3–5x speedup, shifting the bottleneck from production to review. Contingent on quality validation. |
+| Cross-regulatory mapping as differentiator | [ADR-006](docs/roadmap/adr/ADR-006-cross-regulatory-role-coverage.md) | One role satisfying multiple regulatory obligations is the feature nobody else provides. |
+| Assessment service, not dataset product | [ADR-007](docs/roadmap/adr/ADR-007-product-positioning-assessment-service.md) | Every buyer persona buys answers, not data access. The taxonomy is cost of goods. |
+| Schema modifications before enrichment | [ADR-008](docs/roadmap/adr/ADR-008-schema-modifications-before-enrichment.md) | Don't populate fields that will change. Modify the schema first. |
+| Agentic AI as Tier 3 first-mover play | [ADR-009](docs/roadmap/adr/ADR-009-agentic-ai-roles-first-mover.md) | First-mover advantage is real but only holds if definitions are credible. Credibility comes from the beachhead. |
+| Validate before building | [ADR-010](docs/roadmap/adr/ADR-010-validation-sprint-before-product-build.md) | Four tests in two weeks that determine the roadmap's shape. Cheaper than discovering issues in Week 16. |
+
+---
+
+## For Collaborators
+
+ATLAS is built by [Thomas Jones](https://www.linkedin.com/in/yourprofilehere) — The Hipster CISO. Twenty years of executive leadership spanning cybersecurity, data governance, and AI strategy. Carnegie Mellon CDAIO Program. Building at the intersection of enterprise protection and enterprise growth, because those are the same discipline viewed from different altitudes.
+
+The project welcomes collaborators who bring specific expertise the roadmap needs:
+
+**Regulatory practitioners** — EU AI Act interpretation, SR 11-7 model risk governance, ISO 42001 implementation experience. The regulatory context mappings need validation by people who have been through examinations, not just people who have read the regulations.
+
+**PE operating partners and portfolio advisors** — If you assess data/AI teams as part of deal diligence or portfolio management, you are the user ATLAS was designed to serve first. A pilot engagement produces value for both sides: you get a structured assessment methodology, ATLAS gets market validation.
+
+**CDIAOs and CISOs in the first 90 days of a new role** — You are building the assessment and organizational design that ATLAS is being built to support. Your feedback on what's useful, what's missing, and what's wrong is more valuable than any framework analysis.
+
+**Data and AI workforce researchers** — If you study role evolution, skills taxonomies, or organizational design for data/AI teams, ATLAS's dataset is available for research collaboration.
+
+> Interested? Open an issue, or reach out directly through [The Hipster CISO](https://thehipsterciso.substack.com).
+
+---
+
+## Technical Documentation
+
+The executive narrative above tells you why ATLAS exists and where it's going. The technical documentation tells you how it's built.
+
+| Document | What It Covers |
+|----------|----------------|
+| [Architecture and Data Model](docs/TECHNICAL.md) | Entity-separated flat files, schema design, graph-ready structure, validation |
+| [Master Schema Design](docs/master-schema-design.md) | 25+ field JSON schema with nested regulatory and framework context |
+| [Field-by-Field Assessment](docs/field-by-field-assessment.md) | Use case analysis and modification verdicts for every schema field |
+| [Gap Analysis](docs/gap-analysis.md) | 187-role inventory with coverage status against source frameworks |
+| [Roadmap Analysis](docs/roadmap/ensemble-brainstorm-atlas.md) | Full five-pass strategic analysis with research citations |
+| [Architectural Decision Records](docs/roadmap/adr/) | 10 ADRs documenting rationale for every major roadmap decision |
+| [NICE Boundary Scoping](docs/nice-boundary-scoping.md) | How ATLAS relates to NIST NICE for cybersecurity boundary roles |
+
+---
+
+<p align="center">
+  <sub>Version 0.4.0 · Copyright 2026 Thomas Jones · All rights reserved</sub>
+</p>
