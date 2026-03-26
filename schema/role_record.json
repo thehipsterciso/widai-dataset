@@ -94,8 +94,34 @@
 
     "secondary_domains": {
       "type": "array",
-      "items": { "type": "string" },
-      "description": "Additional functional domains this role spans."
+      "items": {
+        "type": "string",
+        "enum": [
+          "Data Management & Operations",
+          "Data Engineering & Architecture",
+          "Data Science & Machine Learning",
+          "Analytics & Business Intelligence",
+          "Data Governance & Stewardship",
+          "AI Governance & Ethics",
+          "Model Risk & Validation",
+          "Privacy & Compliance",
+          "Data Security",
+          "Data Product Management",
+          "Data Leadership"
+        ]
+      },
+      "description": "Additional functional domains this role spans. Uses same enum as functional_domain."
+    },
+
+    "category_code": {
+      "type": "string",
+      "enum": ["GOV", "ENG", "DEV", "DSM", "ANL", "RSK", "OPS", "LDR", "REG", "NICHE"],
+      "description": "ATLAS category code (10 values). Maps to functional domains: GOV=Data Governance & Stewardship; ENG=Data Engineering & Architecture; DEV=Data Science & Machine Learning; DSM=Data Management & Operations; ANL=Analytics & Business Intelligence; RSK=Model Risk & Validation; OPS=Data Security+Privacy & Compliance; LDR=Data Leadership; REG=Privacy & Compliance; NICHE=Data Product Management+AI Governance & Ethics."
+    },
+
+    "category_title": {
+      "type": "string",
+      "description": "Human-readable title corresponding to category_code. Explicitly documents the mapping between the 10 category codes and the 11 functional domains."
     },
 
     "occupation_codes": {
@@ -142,6 +168,20 @@
           "retrieved_date": { "type": "string", "format": "date" },
           "license": { "type": "string" },
           "notes": { "type": "string" }
+        }
+      }
+    },
+
+    "seniority_level": {
+      "type": "array",
+      "description": "Seniority level classifications from various frameworks with provenance tracking.",
+      "items": {
+        "type": "object",
+        "required": ["seniority_text"],
+        "properties": {
+          "seniority_text": { "type": "string", "description": "Text description of seniority level (e.g., 'Entry-level', 'Mid-level', 'Senior', 'Executive')." },
+          "source_framework": { "type": "string", "description": "Framework providing this seniority classification." },
+          "source_version": { "type": "string", "description": "Version of the source framework." }
         }
       }
     },
@@ -224,15 +264,15 @@
 
     "abilities": {
       "type": "array",
-      "description": "Abilities from O*NET and DCWF (deprecated in NICE v2.0+).",
+      "description": "Abilities from O*NET and DCWF (deprecated in NICE v2.0+). Includes importance and level scoring to match skills structure.",
       "items": {
         "type": "object",
         "properties": {
           "ability_id": { "type": "string" },
           "ability_name": { "type": "string" },
           "source_framework": { "type": "string" },
-          "importance_score": { "type": "number" },
-          "level_score": { "type": "number" }
+          "importance_score": { "type": "number", "description": "O*NET Importance (1-5)." },
+          "level_score": { "type": "number", "description": "O*NET Level (0-7)." }
         }
       }
     },
@@ -253,13 +293,23 @@
 
     "regulatory_context": {
       "type": "object",
-      "description": "Regulatory/standards role attributes from EU AI Act, ISO 42001, SR 11-7.",
+      "description": "Regulatory/standards role attributes from EU AI Act, ISO 42001, SR 11-7, and NIST AI RMF.",
       "properties": {
         "eu_ai_act_role": { "type": "string", "enum": ["Provider", "Deployer", "Importer", "Distributor", "Authorized Representative", "Downstream Provider", "Product Manufacturer", "Not Applicable"] },
         "eu_ai_act_risk_tiers": { "type": "array", "items": { "type": "string", "enum": ["Unacceptable", "High", "Limited/Transparency", "Minimal", "GPAI Systemic Risk"] } },
         "iso42001_control_mappings": { "type": "array", "items": { "type": "string" }, "description": "Annex A control IDs (e.g., A.3.2, A.6.1)." },
         "sr117_independence_required": { "type": "boolean" },
         "sr117_effective_challenge_authority": { "type": "boolean" },
+        "nist_ai_rmf_functions": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["GOVERN", "MAP", "MEASURE", "MANAGE"] },
+          "description": "Applicable NIST AI Risk Management Framework functions."
+        },
+        "jurisdictions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Geographic jurisdictions where this role operates or is regulated (e.g., 'EU', 'US', 'UK', 'APAC')."
+        },
         "obligations_summary": { "type": "string" }
       }
     },
@@ -314,13 +364,34 @@
       }
     },
 
-    "dama_context": {
+    "framework_specific_context": {
       "type": "object",
-      "description": "DAMA DMBOK-specific attributes for data management roles.",
+      "description": "Framework-specific attributes for roles, with extensible structure supporting DAMA, NIST, TOGAF, MLOps, and others.",
       "properties": {
-        "knowledge_areas": { "type": "array", "items": { "type": "string", "enum": ["Data Governance", "Data Architecture", "Data Modeling and Design", "Data Storage and Operations", "Data Security", "Data Integration and Interoperability", "DW and BI", "Document and Content Management", "Reference and Master Data Management", "Metadata Management", "Data Quality"] } },
-        "steward_type": { "type": "string", "enum": ["Executive", "Coordinating", "Business", "Technical"] },
-        "data_lifecycle_role": { "type": "string", "enum": ["Creator", "Producer", "Consumer", "User", "Steward", "Owner", "Custodian"] }
+        "dama": {
+          "type": "object",
+          "description": "DAMA DMBOK-specific attributes for data management roles.",
+          "properties": {
+            "knowledge_areas": { "type": "array", "items": { "type": "string", "enum": ["Data Governance", "Data Architecture", "Data Modeling and Design", "Data Storage and Operations", "Data Security", "Data Integration and Interoperability", "DW and BI", "Document and Content Management", "Reference and Master Data Management", "Metadata Management", "Data Quality"] } },
+            "steward_type": { "type": "string", "enum": ["Executive", "Coordinating", "Business", "Technical"] },
+            "data_lifecycle_role": { "type": "string", "enum": ["Creator", "Producer", "Consumer", "User", "Steward", "Owner", "Custodian"] }
+          }
+        },
+        "nist": {
+          "type": "object",
+          "description": "NIST-specific attributes (AI RMF, Cybersecurity Framework, etc.).",
+          "properties": {}
+        },
+        "togaf": {
+          "type": "object",
+          "description": "TOGAF architecture framework specific attributes.",
+          "properties": {}
+        },
+        "mlops": {
+          "type": "object",
+          "description": "MLOps and ML lifecycle specific attributes.",
+          "properties": {}
+        }
       }
     },
 
@@ -358,6 +429,12 @@
       "type": "string",
       "enum": ["draft", "review", "published", "deprecated"],
       "description": "Record lifecycle status."
+    },
+
+    "introduced_in_version": {
+      "type": "string",
+      "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "ATLAS schema version in which this role record was introduced (e.g., 'v0.3.0', 'v0.4.0'). Scales across versions."
     },
 
     "created_date": { "type": "string", "format": "date" },
