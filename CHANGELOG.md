@@ -3,6 +3,26 @@
 All notable changes to the ATLAS dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.4.1] - 2026-03-26
+
+### Roadmap & Strategy
+- Redesigned README.md as C-suite strategy deck with competitive positioning, market opportunity, and execution roadmap
+- Published ATLAS Roadmap: Ensemble Brainstorm five-pass strategic analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping)
+- Added 10 Architectural Decision Records (ADRs) documenting rationale for roadmap decisions, consequences, and alternatives considered
+
+### Phase 0 Validation Sprint — Complete
+- **R01 (Coverage Gap Test):** PASS — 92.2% KSA coverage across 5 archetypes (2026-03-26). Current 37-role KSA coverage spans 8 categories supporting mid-market team assessments (15-40 roles). Validated ADR-003 decision to ship on current data.
+- **R02 (AI-Assisted KSA Quality Test):** PASS — Average quality score 4.26/5 across AI-assisted drafts blind-compared to manual baselines. No systematic deficiencies; quality comparable to existing KSA set. Validated AI-assisted authoring as primary acceleration strategy for remaining 150 roles. Established provenance tagging for transparency.
+- **R24 (KSA Quality Consistency Audit):** PASS WITH CONDITIONS — 8.2/10 consistency score across existing KSAs. Documented style drift in historical roles; consistency requirements established for future authoring.
+- **R05 (Source Framework License Audit):** CONDITIONAL — 19 GREEN (commercial use permitted), 28 YELLOW (requires attribution or notice), 23 RED (citation-only, no commercial use). Licensed frameworks reclassified into commercial_status field. Dependency analysis: ALL 70 frameworks carry citation-only requirements at minimum; NO dependencies block commercial build. Added ATTRIBUTION.md documenting licensing requirements for each framework.
+- **ADR-010 (Validation Sprint) Execution:** All tests complete. Go decision: Phase 1 (PE due diligence assessment) and Phase 2 (EU AI Act compliance tracking) cleared for product build.
+
+### R05 License Audit Follow-Through
+- Added `commercial_status` field to all 70 frameworks (GREEN/YELLOW/RED classification)
+- Reclassified Practitioner Community framework as citation-only per license review
+- Completed framework dependency analysis: documented that all framework citations are attribution-only; no blocking dependencies for commercial products
+- Created ATTRIBUTION.md with per-framework licensing notices, required citations, and GREEN framework commercial pathway
+
 ## [0.4.0] - 2026-03-26
 
 ### Added

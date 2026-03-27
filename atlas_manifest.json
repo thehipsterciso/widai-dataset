@@ -333,12 +333,151 @@
     },
     "schema": {
       "description": "JSON Schema definitions for validation.",
-      "files": {}
+      "files": {
+        "role_record.json": {
+          "description": "JSON Schema for CDAIO Domain Master Role Record — 25+ field schema supporting regulatory context, framework mapping, and quantified assessment"
+        }
+      }
+    },
+    "scripts": {
+      "description": "Validation, testing, and maintenance scripts.",
+      "files": {
+        "validate.py": {
+          "description": "Referential integrity validation script — checks foreign key references across roles, KSAs, and mappings"
+        },
+        "coverage_gap_test.py": {
+          "description": "R01 Coverage Gap Test — maps team archetypes against current KSA coverage and produces coverage analysis"
+        },
+        "ksa_quality_audit.py": {
+          "description": "R24 KSA Quality Consistency Audit — evaluates consistency of KSA definitions across existing dataset"
+        },
+        "update_framework_licensing.py": {
+          "description": "R05 Licensing Update — applies commercial_status classification and citation requirements to frameworks"
+        }
+      }
     },
     "docs": {
       "description": "Architecture decisions, research, and assessments.",
-      "files": {}
+      "files": {
+        "TECHNICAL.md": {
+          "description": "Architecture and Data Model — entity-separated flat files, schema design, graph-ready structure"
+        },
+        "master-schema-design.md": {
+          "description": "Master Schema Design — 25+ field JSON schema documentation with nested regulatory and framework context"
+        },
+        "field-by-field-assessment.md": {
+          "description": "Field-by-Field Assessment — use case analysis and modification verdicts for every schema field"
+        },
+        "gap-analysis.md": {
+          "description": "Gap Analysis — 187-role inventory with coverage status against source frameworks"
+        },
+        "nice-boundary-scoping.md": {
+          "description": "NICE Boundary Scoping — how ATLAS relates to NIST NICE for cybersecurity boundary roles"
+        }
+      },
+      "subdirectories": {
+        "roadmap": {
+          "description": "Roadmap analysis, validation sprint results, and Architectural Decision Records",
+          "files": {
+            "ensemble-brainstorm-atlas.md": {
+              "description": "Ensemble Brainstorm — Five-pass strategic analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping) across 6 priority use cases"
+            },
+            "PHASE-0-VALIDATION-SPRINT-RESULTS.md": {
+              "description": "Phase 0 Validation Sprint Results — consolidated go/no-go decisions and evidence from R01, R02, R05, R24 tests"
+            },
+            "R01-coverage-gap-test.md": {
+              "description": "R01 Coverage Gap Test — validation that current 37-role KSA coverage spans 92.2% of archetypical data/AI teams"
+            },
+            "R01-coverage-gap-test.json": {
+              "description": "R01 test data and results"
+            },
+            "R02-ksa-quality-test.md": {
+              "description": "R02 AI-Assisted KSA Quality Test — validation that AI-drafted KSAs match manual quality (4.26/5 average) with acceptable review burden"
+            },
+            "R02-ksa-quality-test.json": {
+              "description": "R02 test data and quality scores"
+            },
+            "R02-ai-authored-ksas.json": {
+              "description": "R02 sample AI-authored KSA set for comparison against baseline"
+            },
+            "R05-license-audit.md": {
+              "description": "R05 Source Framework License Audit — classification of 70 frameworks by commercial viability (GREEN/YELLOW/RED)"
+            },
+            "R05-license-audit.json": {
+              "description": "R05 audit data with per-framework commercial_status classification"
+            },
+            "R05-dependency-analysis.md": {
+              "description": "R05 Framework Dependency Analysis — evidence that all 70 frameworks carry citation-only requirements at minimum; NO dependencies block commercial products"
+            },
+            "R05-dependency-analysis.json": {
+              "description": "R05 dependency analysis data"
+            },
+            "R24-ksa-consistency-audit.md": {
+              "description": "R24 KSA Quality Consistency Audit — 8.2/10 consistency score; documents style drift and establishes requirements for future authoring"
+            },
+            "R24-ksa-consistency-audit.json": {
+              "description": "R24 audit data and consistency metrics"
+            }
+          },
+          "adr": {
+            "description": "Architectural Decision Records — 10 ADRs documenting rationale, alternatives, and consequences for major roadmap decisions",
+            "files": {
+              "README.md": {
+                "description": "ADR index and overview"
+              },
+              "ADR-001-dependency-driven-roadmap-sequencing.md": {
+                "description": "Sequence roadmap by structural dependencies, not priority"
+              },
+              "ADR-002-pe-due-diligence-as-beachhead.md": {
+                "description": "PE due diligence assessment as first product"
+              },
+              "ADR-003-ship-on-current-data-coverage.md": {
+                "description": "Ship on current data; don't wait for full dataset completion. Validated by R01."
+              },
+              "ADR-004-eu-ai-act-timeline-urgency.md": {
+                "description": "EU AI Act compliance as urgent parallel track (August 2026 enforcement)"
+              },
+              "ADR-005-ai-assisted-ksa-authoring.md": {
+                "description": "AI-assisted KSA authoring with quality gates for acceleration. Validated by R02."
+              },
+              "ADR-006-cross-regulatory-role-coverage.md": {
+                "description": "Cross-regulatory mapping as differentiator"
+              },
+              "ADR-007-product-positioning-assessment-service.md": {
+                "description": "Assessment service, not dataset product"
+              },
+              "ADR-008-schema-modifications-before-enrichment.md": {
+                "description": "Schema modifications before enrichment"
+              },
+              "ADR-009-agentic-ai-roles-first-mover.md": {
+                "description": "Agentic AI roles as Tier 3 first-mover play"
+              },
+              "ADR-010-validation-sprint-before-product-build.md": {
+                "description": "Validate before building — Phase 0 validation sprint completed with all tests passing or conditional passing"
+              }
+            }
+          }
+        }
+      }
     }
+  },
+  "additional_files": {
+    "ATTRIBUTION.md": {
+      "description": "Framework Licensing Attribution — per-framework licensing notices, commercial_status classification, and required citations for R05 GREEN/YELLOW/RED frameworks",
+      "date_created": "2026-03-26",
+      "related_to": "R05 Source Framework License Audit"
+    }
+  },
+  "commercial_audit": {
+    "date_completed": "2026-03-26",
+    "audit_name": "R05 Source Framework License Audit",
+    "frameworks_audited": 70,
+    "green_frameworks": 19,
+    "yellow_frameworks": 28,
+    "red_frameworks": 23,
+    "result": "CONDITIONAL",
+    "finding": "All 70 frameworks carry citation-only requirements at minimum. 19 frameworks (GREEN) permit unrestricted commercial use. 28 frameworks (YELLOW) require attribution or specific notice. 23 frameworks (RED) are citation-only with no commercial derivative rights. No dependencies block commercial products.",
+    "reference": "R05-license-audit.md, R05-dependency-analysis.md, ATTRIBUTION.md"
   },
   "statistics": {
     "total_roles": 187,

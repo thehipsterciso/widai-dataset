@@ -1,6 +1,6 @@
 # ADR-003: Ship on Current Data Coverage
 
-**Status:** Proposed
+**Status:** Accepted — Validated by R01 (92.2% coverage across 5 archetypes, 2026-03-26)
 **Date:** 2026-03-26
 **Author:** Thomas Jones / The Hipster CISO
 **Derived From:** Ensemble Brainstorm Pass 4 (Constraint Inversion — Constraint 1), Pass 3 (Perspective Rotation — CDAIO Persona)
@@ -70,6 +70,17 @@ Ship does not mean "release ATLAS as complete." It means:
 - R01 (coverage gap test) reveals current data covers less than 60% of a typical team. Mitigation: if coverage is below 60%, execute a focused KSA sprint on the 10-15 highest-frequency roles before piloting (adds 2-4 weeks, not 6 months).
 - Pilot partner perceives gaps as lack of rigor. Mitigation: frame the pilot as a "validation engagement" with transparent methodology documentation, not a finished product.
 
+## Validation Results
+
+**R01 Execution (2026-03-26):** Coverage Gap Test validated the hypothesis that current data supports pilot assessments.
+
+- **Result:** PASS
+- **Coverage Metric:** 92.2% KSA coverage across 5 reference archetypes (CISO/Risk, Data Engineering Lead, Chief Data Officer, AI Risk Officer, Data Steward)
+- **Evidence:** All 5 archetypes map primarily to GOV, ENG, DEV, DSM, RSK, OPS, LDR, ANL categories — the exact categories with complete KSA coverage
+- **Implication:** A mid-market data/AI team assessment (15-40 roles) encounters minimal scaffolding. The assumption that current coverage is sufficient for product validation is confirmed.
+
+This validation removes the conditional dependency on ADR-003. The decision to "ship on current data" proceeds as planned. Phase 1 (First Product — PE due diligence assessment) is cleared for execution.
+
 ## References
 
 - Ensemble Brainstorm — ATLAS Roadmap, Pass 4: Constraint 1 ("The dataset must be complete before products ship")
@@ -77,3 +88,5 @@ Ship does not mean "release ATLAS as complete." It means:
 - Ensemble Brainstorm — ATLAS Roadmap, Pass 4: Assumption Test Queue (R01 as immediate test)
 - ATLAS Goal Definition, Critical Path section
 - ATLAS dataset: current KSA distribution across 8 categories
+- Phase 0 Validation Sprint Results: `docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`
+- R01 Coverage Gap Test: `docs/roadmap/R01-coverage-gap-test.md`
