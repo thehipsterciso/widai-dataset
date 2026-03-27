@@ -1,0 +1,386 @@
+{
+  "dataset_id": "ATLAS-KSAS",
+  "domain_code": "AG",
+  "domain_title": "AI Governance & Ethics",
+  "ksa_count": 31,
+  "knowledge_count": 14,
+  "skill_count": 6,
+  "task_count": 11,
+  "ability_count": 0,
+  "schema_version": "2.0.0",
+  "ksas": [
+    {
+      "ksa_id": "AG-K-001",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of model interpretability and explainability methods, including SHAP values, LIME, partial dependence plots, and when explanation requirements should influence model selection.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "DEV-03.01-K-005"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-002",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-K-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-003",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI risk taxonomy, including model risk, algorithmic bias, opacity, adversarial vulnerability, data poisoning, training data integrity failures, and systemic AI failure modes.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-K-001"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-004",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-K-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-005",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI regulatory frameworks, including the EU AI Act risk classification structure, conformity assessment requirements, prohibited use categories, and obligations on providers versus deployers.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-K-003"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-006",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.05-K-001"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-007",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.05-K-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-008",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI regulatory compliance requirements, including EU AI Act conformity assessment obligations, prohibited use categories, and documentation requirements for high-risk AI systems.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.05-K-003"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-009",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI literacy concepts, including what AI is and is not, how ML models work at a conceptual level, AI limitations and failure modes, and responsible AI principles for non-technical audiences.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "OPS-07.03-K-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-010",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.01-K-001"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-011",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of algorithmic fairness concepts, including group fairness metrics (demographic parity, equalized odds, calibration), individual fairness, and the mathematical trade-offs between competing fairness definitions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.01-K-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-012",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI explainability methods, including SHAP, LIME, counterfactual explanations, attention visualization, and the appropriate application of each method type by model class.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.01-K-003"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-013",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI regulatory requirements, including the EU AI Act prohibited use categories, high-risk system obligations, conformity assessment requirements, and technical documentation standards.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.01-K-004"
+      ]
+    },
+    {
+      "ksa_id": "AG-K-014",
+      "type": "Knowledge",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Knowledge of AI and machine learning-specific model risk considerations, including data drift, concept drift, black-box explainability requirements, and how traditional model risk frameworks must adapt for non-parametric, ensemble, and foundation models.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.05-K-004"
+      ]
+    },
+    {
+      "ksa_id": "AG-S-001",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in designing and operating enterprise data and AI governance councils, including role definition, decision rights, escalation paths, and policy enforcement mechanisms.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-S-003"
+      ]
+    },
+    {
+      "ksa_id": "AG-S-002",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in designing AI governance frameworks that address the full AI lifecycle from procurement or build through development, testing, deployment, monitoring, and retirement.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-S-001"
+      ]
+    },
+    {
+      "ksa_id": "AG-S-003",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in constructing and communicating AI risk assessments to non-technical executive and board audiences using business risk framing and financial impact language.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-S-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-S-004",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.05-S-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-S-005",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.05-S-001",
+        "RSK-06.01-S-001"
+      ]
+    },
+    {
+      "ksa_id": "AG-S-006",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in designing and executing bias audits for AI systems, including test dataset construction, metric selection, results interpretation, and remediation recommendation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.01-S-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-001",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Define and maintain the enterprise AI governance framework, including the AI system inventory, risk tiering, review thresholds, and decommissioning criteria.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-T-005"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-002",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Establish and maintain the enterprise AI inventory, cataloging all AI systems in production with risk tier, owner, training data provenance, model version, and review status.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-T-001"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-003",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Lead enterprise AI ethics reviews for high-stakes applications, including impact assessments, bias audits, and explainability documentation prior to production deployment.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-T-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-004",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Define the enterprise AI acceptable use policy, prohibited use categories, and human oversight requirements for AI-assisted decision making.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-T-003"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-005",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Maintain the enterprise AI system inventory, ensuring all AI applications are registered, risk-tiered, owned, and subject to appropriate review and monitoring.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.05-T-001"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-006",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Conduct AI impact assessments for new and materially modified AI systems prior to production deployment.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.05-T-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-007",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Manage ongoing AI policy compliance monitoring, including periodic review of deployed AI systems against current policy requirements and regulatory obligations.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.05-T-003"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-008",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Conduct AI impact assessments for new and materially modified AI systems, producing documented risk findings with recommended mitigations and residual risk statements.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.01-T-001"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-009",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Execute bias audits on AI systems in development and production, documenting methodology, findings, and recommended interventions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.01-T-002"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-010",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Develop and maintain responsible AI assessment tools, templates, and rubrics for use across the enterprise AI development lifecycle.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.01-T-003"
+      ]
+    },
+    {
+      "ksa_id": "AG-T-011",
+      "type": "Task",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Monitor AI regulatory developments and assess their implications for the enterprise AI system portfolio, producing compliance gap analyses for impacted systems.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.01-T-004"
+      ]
+    }
+  ]
+}

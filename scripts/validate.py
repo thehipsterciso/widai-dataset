@@ -74,6 +74,8 @@ def main():
     all_ksa_ids = {}
     ksas_dir = os.path.join(base, "ksas")
     for fp in sorted(glob.glob(os.path.join(ksas_dir, "*.json"))):
+        if os.path.basename(fp).startswith("_"):
+            continue  # Skip metadata files like _legacy_id_map.json
         result = load_json(fp)
         if isinstance(result, tuple):
             continue

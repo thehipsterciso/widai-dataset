@@ -1,0 +1,97 @@
+{
+  "dataset_id": "ATLAS-KSAS",
+  "domain_code": "RC",
+  "domain_title": "Regulatory & Compliance",
+  "ksa_count": 7,
+  "knowledge_count": 1,
+  "skill_count": 1,
+  "task_count": 5,
+  "ability_count": 0,
+  "schema_version": "2.0.0",
+  "ksas": [
+    {
+      "ksa_id": "RC-K-001",
+      "type": "Knowledge",
+      "domain": "Regulatory & Compliance",
+      "domain_code": "RC",
+      "statement": "Knowledge of compliance assessment methodologies, including control testing, evidence gathering, gap analysis, and findings documentation standards.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.04-K-002"
+      ]
+    },
+    {
+      "ksa_id": "RC-S-001",
+      "type": "Skill",
+      "domain": "Regulatory & Compliance",
+      "domain_code": "RC",
+      "statement": "Skill in conducting data compliance gap assessments against specific regulatory frameworks, producing findings with evidence references and prioritized remediation recommendations.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.04-S-001"
+      ]
+    },
+    {
+      "ksa_id": "RC-T-001",
+      "type": "Task",
+      "domain": "Regulatory & Compliance",
+      "domain_code": "RC",
+      "statement": "Design, build, and validate clinical trial databases in electronic data capture systems, including CRF specifications, edit check logic, user acceptance testing, and documentation of compliance with study protocol and applicable regulatory requirements.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ANL-05.05-T-001"
+      ]
+    },
+    {
+      "ksa_id": "RC-T-002",
+      "type": "Task",
+      "domain": "Regulatory & Compliance",
+      "domain_code": "RC",
+      "statement": "Author, maintain, and enforce the enterprise data policy library, ensuring policies are current, accessible, enforced, and aligned with regulatory requirements.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-T-001"
+      ]
+    },
+    {
+      "ksa_id": "RC-T-003",
+      "type": "Task",
+      "domain": "Regulatory & Compliance",
+      "domain_code": "RC",
+      "statement": "Conduct periodic data compliance assessments, documenting findings, evidence, risk ratings, and remediation assignments.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.04-T-001"
+      ]
+    },
+    {
+      "ksa_id": "RC-T-004",
+      "type": "Task",
+      "domain": "Regulatory & Compliance",
+      "domain_code": "RC",
+      "statement": "Manage regulatory data reporting obligations, including data submission preparation, accuracy verification, submission execution, and confirmation documentation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.04-T-002"
+      ]
+    },
+    {
+      "ksa_id": "RC-T-005",
+      "type": "Task",
+      "domain": "Regulatory & Compliance",
+      "domain_code": "RC",
+      "statement": "Track data compliance remediation activities, including milestone monitoring, blocker escalation, and closure verification with evidence.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.04-T-003"
+      ]
+    }
+  ]
+}

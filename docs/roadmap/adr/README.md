@@ -30,6 +30,9 @@ The ADRs are derived from a systematic five-pass analysis (Forward Decomposition
 | [ADR-008](ADR-008-schema-modifications-before-enrichment.md) | Schema Modifications Before Enrichment | 7 schema changes implemented before data population to prevent rework | Proposed |
 | [ADR-009](ADR-009-agentic-ai-roles-first-mover.md) | Agentic AI Roles as First-Mover Play | New role definitions in Tier 3 — after credibility established, before window closes | Proposed |
 | [ADR-010](ADR-010-validation-sprint-before-product-build.md) | Validation Sprint Before Product Build | 2-week Tier 0 sprint runs 4 parallel tests that determine the roadmap's shape | Proposed |
+| [ADR-011](ADR-011-pe-assessment-scoring-model.md) | PE Assessment Scoring Model Design | 4-dimension scoring model (Coverage, Capability, Criticality, Concentration Risk) → WRS 0-100 | Accepted |
+| [ADR-012](ADR-012-ksa-depth-correction.md) | KSA Depth Correction | External benchmarking, DCI metric, adversarial quality gate — corrects R02 validation gap | Accepted |
+| [ADR-013](ADR-013-shared-pool-ksa-architecture.md) | Shared-Pool KSA Architecture | Domain-based KSA pool with many-to-many role mappings — replaces role-centric model | Accepted |
 
 ---
 

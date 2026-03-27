@@ -1,514 +1,126 @@
 {
   "dataset_id": "ATLAS-DATASET",
   "dataset_title": "ATLAS — A Workforce Framework for Talent, Leadership, and Skills in Data and AI",
-  "version": "0.4.3",
-  "schema_version": "1.0.0",
+  "version": "0.5.0",
+  "schema_version": "2.0.0",
   "status": "development",
   "created_date": "2026-03-26",
+  "last_modified": "2026-03-27",
   "scope": "Covers the full data and AI profession. Explicitly excludes the CISO and cybersecurity workforce, covered by NIST NICE.",
   "architecture": {
-    "pattern": "Entity-separated flat files with foreign key references",
-    "primary_key": "role_id for roles, ksa_id for KSAs",
-    "relationship_model": "KSAs are independent entities. Roles reference KSAs via relationship tables in /mappings/. Framework mappings are separate files per framework."
+    "pattern": "Shared-pool KSA model with domain-based organization and many-to-many role mappings",
+    "ksa_model": "KSAs are independent entities organized by knowledge domain (not role category). Roles reference KSAs from any domain via relationship tables. One KSA can be referenced by multiple roles. KSA IDs are role-independent.",
+    "ksa_id_format": "{DOMAIN_CODE}-{TYPE}-{SEQUENCE} (e.g., DG-K-001, AI-S-012)",
+    "mapping_model": "Many-to-many. Each mapping includes proficiency_context (strategic, operational, technical, oversight) to differentiate how roles apply the same KSA.",
+    "primary_keys": "role_id for roles, ksa_id for KSAs (domain-based)",
+    "adr": "ADR-013 (shared-pool architecture), supersedes role-centric model"
+  },
+  "ksa_domains": {
+    "DG": "Data Governance & Policy",
+    "DA": "Data Architecture & Infrastructure",
+    "DQ": "Data Quality & Management",
+    "AI": "AI/ML Foundations",
+    "AG": "AI Governance & Ethics",
+    "SP": "Security & Privacy",
+    "AB": "Analytics & BI",
+    "LS": "Leadership & Strategy",
+    "OP": "Operations & Enablement",
+    "RC": "Regulatory & Compliance",
+    "RM": "Risk Management",
+    "TF": "Technical Foundations"
   },
   "directories": {
     "roles": {
       "description": "One file per category_code. Each contains role identity, title, seniority, variants, and source references. No KSAs embedded.",
       "files": {
-        "ANL.json": {
-          "role_count": 14
-        },
-        "DEV.json": {
-          "role_count": 15
-        },
-        "DSM.json": {
-          "role_count": 21
-        },
-        "ENG.json": {
-          "role_count": 25
-        },
-        "GOV.json": {
-          "role_count": 25
-        },
-        "LDR.json": {
-          "role_count": 31
-        },
-        "NICHE.json": {
-          "role_count": 9
-        },
-        "OPS.json": {
-          "role_count": 15
-        },
-        "REG.json": {
-          "role_count": 8
-        },
-        "RSK.json": {
-          "role_count": 24
-        }
+        "ANL.json": { "role_count": 14 },
+        "DEV.json": { "role_count": 15 },
+        "DSM.json": { "role_count": 21 },
+        "ENG.json": { "role_count": 25 },
+        "GOV.json": { "role_count": 25 },
+        "LDR.json": { "role_count": 31 },
+        "NICHE.json": { "role_count": 9 },
+        "OPS.json": { "role_count": 15 },
+        "REG.json": { "role_count": 8 },
+        "RSK.json": { "role_count": 24 }
       }
     },
     "ksas": {
-      "description": "Independent KSA entities by category. Each KSA has a stable ksa_id and exists independent of any role.",
+      "description": "Shared KSA pool organized by knowledge domain. Each KSA has a domain-based ID and can be referenced by any role. Schema version 2.0.0.",
       "files": {
-        "ANL_ksas.json": {
-          "ksa_count": 38
-        },
-        "DEV_ksas.json": {
-          "ksa_count": 46
-        },
-        "DSM_ksas.json": {
-          "ksa_count": 38
-        },
-        "ENG_ksas.json": {
-          "ksa_count": 69
-        },
-        "GOV_ksas.json": {
-          "ksa_count": 82
-        },
-        "LDR_ksas.json": {
-          "ksa_count": 24
-        },
-        "OPS_ksas.json": {
-          "ksa_count": 23
-        },
-        "RSK_ksas.json": {
-          "ksa_count": 44
-        }
+        "AB_ksas.json": { "domain": "Analytics & BI", "ksa_count": 29 },
+        "AG_ksas.json": { "domain": "AI Governance & Ethics", "ksa_count": 31 },
+        "AI_ksas.json": { "domain": "AI/ML Foundations", "ksa_count": 72 },
+        "DA_ksas.json": { "domain": "Data Architecture & Infrastructure", "ksa_count": 40 },
+        "DG_ksas.json": { "domain": "Data Governance & Policy", "ksa_count": 40 },
+        "DQ_ksas.json": { "domain": "Data Quality & Management", "ksa_count": 47 },
+        "LS_ksas.json": { "domain": "Leadership & Strategy", "ksa_count": 19 },
+        "OP_ksas.json": { "domain": "Operations & Enablement", "ksa_count": 16 },
+        "RC_ksas.json": { "domain": "Regulatory & Compliance", "ksa_count": 7 },
+        "RM_ksas.json": { "domain": "Risk Management", "ksa_count": 26 },
+        "SP_ksas.json": { "domain": "Security & Privacy", "ksa_count": 29 },
+        "TF_ksas.json": { "domain": "Technical Foundations", "ksa_count": 7 },
+        "_legacy_id_map.json": { "description": "Maps old role-coupled KSA IDs (v0.4.x) to new domain-based IDs (v0.5.0) for audit trail" }
       }
     },
     "frameworks": {
       "description": "Reference data for each source framework (NICE, SFIA, O*NET, DAMA, etc.)",
       "files": {
-        "frameworks.json": {
-          "framework_count": 70
-        }
+        "frameworks.json": { "framework_count": 70 }
       }
     },
     "mappings": {
-      "description": "Relationship tables. role_ksa_* files link roles to KSAs. roles_to_* files link roles to framework references.",
+      "description": "Relationship tables. role_ksa_* files link roles to KSAs (many-to-many with proficiency_context). roles_to_* files link roles to framework references.",
+      "role_ksa_files": {
+        "role_ksa_ANL.json": { "relationship_count": 38 },
+        "role_ksa_DEV.json": { "relationship_count": 46 },
+        "role_ksa_DSM.json": { "relationship_count": 38 },
+        "role_ksa_ENG.json": { "relationship_count": 69 },
+        "role_ksa_GOV.json": { "relationship_count": 82 },
+        "role_ksa_LDR.json": { "relationship_count": 24 },
+        "role_ksa_OPS.json": { "relationship_count": 23 },
+        "role_ksa_RSK.json": { "relationship_count": 44 }
+      },
+      "framework_mapping_count": 70
+    },
+    "methodology": {
+      "description": "Product methodology specifications — scoring models, engagement workflows, deliverable templates.",
       "files": {
-        "roles_to_80000_HOURS.json": {
-          "mapping_count": 1
-        },
-        "roles_to_AICPA.json": {
-          "mapping_count": 1
-        },
-        "roles_to_ATLAS.json": {
-          "mapping_count": 4
-        },
-        "roles_to_AWS.json": {
-          "mapping_count": 4
-        },
-        "roles_to_BCG.json": {
-          "mapping_count": 3
-        },
-        "roles_to_BLS_SOC.json": {
-          "mapping_count": 3
-        },
-        "roles_to_CDMC.json": {
-          "mapping_count": 8
-        },
-        "roles_to_CDO_MAGAZINE.json": {
-          "mapping_count": 6
-        },
-        "roles_to_CMMI_DMM.json": {
-          "mapping_count": 6
-        },
-        "roles_to_COBIT_2019.json": {
-          "mapping_count": 1
-        },
-        "roles_to_CONVERSATION_DESIGN_INSTITUTE.json": {
-          "mapping_count": 1
-        },
-        "roles_to_COURSERA.json": {
-          "mapping_count": 1
-        },
-        "roles_to_DAMA_DMBOK.json": {
-          "mapping_count": 26
-        },
-        "roles_to_DATAVERSITY.json": {
-          "mapping_count": 1
-        },
-        "roles_to_DCAM.json": {
-          "mapping_count": 7
-        },
-        "roles_to_DCWF.json": {
-          "mapping_count": 15
-        },
-        "roles_to_DDAT.json": {
-          "mapping_count": 8
-        },
-        "roles_to_DQOPS.json": {
-          "mapping_count": 2
-        },
-        "roles_to_DZONE.json": {
-          "mapping_count": 1
-        },
-        "roles_to_DATA_MESH.json": {
-          "mapping_count": 10
-        },
-        "roles_to_DATAOPS.LIVE.json": {
-          "mapping_count": 1
-        },
-        "roles_to_DELOITTE.json": {
-          "mapping_count": 7
-        },
-        "roles_to_EC_COUNCIL.json": {
-          "mapping_count": 1
-        },
-        "roles_to_EU_AI_ACT.json": {
-          "mapping_count": 10
-        },
-        "roles_to_EVIDENCE_ACT.json": {
-          "mapping_count": 3
-        },
-        "roles_to_EXECUTIVE_ORDER.json": {
-          "mapping_count": 2
-        },
-        "roles_to_FDA.json": {
-          "mapping_count": 2
-        },
-        "roles_to_FED_SR_11_7.json": {
-          "mapping_count": 4
-        },
-        "roles_to_FORRESTER.json": {
-          "mapping_count": 3
-        },
-        "roles_to_GDPR.json": {
-          "mapping_count": 2
-        },
-        "roles_to_GARTNER.json": {
-          "mapping_count": 14
-        },
-        "roles_to_GITLAB.json": {
-          "mapping_count": 1
-        },
-        "roles_to_GLASSDOOR.json": {
-          "mapping_count": 1
-        },
-        "roles_to_HBR.json": {
-          "mapping_count": 2
-        },
-        "roles_to_HIPAA.json": {
-          "mapping_count": 1
-        },
-        "roles_to_IAPP.json": {
-          "mapping_count": 6
-        },
-        "roles_to_IBM.json": {
-          "mapping_count": 2
-        },
-        "roles_to_IDC.json": {
-          "mapping_count": 1
-        },
-        "roles_to_IEEE.json": {
-          "mapping_count": 4
-        },
-        "roles_to_IIA.json": {
-          "mapping_count": 3
-        },
-        "roles_to_ISACA.json": {
-          "mapping_count": 3
-        },
-        "roles_to_ISO_23894.json": {
-          "mapping_count": 1
-        },
-        "roles_to_ISO_27001.json": {
-          "mapping_count": 1
-        },
-        "roles_to_ISO_27701.json": {
-          "mapping_count": 1
-        },
-        "roles_to_ISO_38505.json": {
-          "mapping_count": 1
-        },
-        "roles_to_ISO_42001.json": {
-          "mapping_count": 8
-        },
-        "roles_to_ISO_5338.json": {
-          "mapping_count": 1
-        },
-        "roles_to_ISO_8000.json": {
-          "mapping_count": 3
-        },
-        "roles_to_INDEED.json": {
-          "mapping_count": 4
-        },
-        "roles_to_KPMG.json": {
-          "mapping_count": 1
-        },
-        "roles_to_LINKEDIN.json": {
-          "mapping_count": 15
-        },
-        "roles_to_MIT_SLOAN.json": {
-          "mapping_count": 3
-        },
-        "roles_to_MCKINSEY.json": {
-          "mapping_count": 6
-        },
-        "roles_to_MICROSOFT.json": {
-          "mapping_count": 2
-        },
-        "roles_to_MONTE_CARLO_DATA.json": {
-          "mapping_count": 3
-        },
-        "roles_to_NIST_AI_RMF.json": {
-          "mapping_count": 6
-        },
-        "roles_to_NIST_NICE.json": {
-          "mapping_count": 4
-        },
-        "roles_to_O*NET.json": {
-          "mapping_count": 25
-        },
-        "roles_to_OCC.json": {
-          "mapping_count": 1
-        },
-        "roles_to_ODSC.json": {
-          "mapping_count": 3
-        },
-        "roles_to_PRACTITIONER_COMMUNITY.json": {
-          "mapping_count": 47
-        },
-        "roles_to_SCALE_AI.json": {
-          "mapping_count": 3
-        },
-        "roles_to_SINGAPORE_MAIG.json": {
-          "mapping_count": 1
-        },
-        "roles_to_STANFORD_HAI.json": {
-          "mapping_count": 2
-        },
-        "roles_to_TDWI.json": {
-          "mapping_count": 3
-        },
-        "roles_to_THOUGHTWORKS.json": {
-          "mapping_count": 1
-        },
-        "roles_to_VELLUM.json": {
-          "mapping_count": 1
-        },
-        "roles_to_WEF.json": {
-          "mapping_count": 1
-        },
-        "roles_to_AIJOBS.NET.json": {
-          "mapping_count": 2
-        },
-        "roles_to_DBT_LABS.json": {
-          "mapping_count": 1
-        },
-        "role_ksa_ANL.json": {
-          "relationship_count": 38
-        },
-        "role_ksa_DEV.json": {
-          "relationship_count": 46
-        },
-        "role_ksa_DSM.json": {
-          "relationship_count": 38
-        },
-        "role_ksa_ENG.json": {
-          "relationship_count": 69
-        },
-        "role_ksa_GOV.json": {
-          "relationship_count": 82
-        },
-        "role_ksa_LDR.json": {
-          "relationship_count": 24
-        },
-        "role_ksa_OPS.json": {
-          "relationship_count": 23
-        },
-        "role_ksa_RSK.json": {
-          "relationship_count": 44
-        }
+        "pe-assessment-scoring-model.json": { "description": "R04 PE Assessment Scoring Model" },
+        "pe-assessment-workflow.json": { "description": "R04 PE Assessment Engagement Workflow" },
+        "pe-assessment-deliverables.json": { "description": "R04 PE Assessment Deliverables" },
+        "R04-pe-assessment-methodology.md": { "description": "R04 PE Assessment Methodology (human-readable)" }
       }
     },
-    "career_tracks": {
-      "description": "Career progression paths across roles. Populated in future versions.",
-      "files": {}
-    },
-    "job_descriptions": {
-      "description": "Per-role job description templates. Populated in future versions.",
-      "files": {}
+    "scripts": {
+      "description": "Validation, quality gates, and maintenance scripts.",
+      "files": {
+        "validate.py": { "description": "Referential integrity validation" },
+        "check_consistency.py": { "description": "Pre-commit consistency validation" },
+        "check_ksa_depth.py": { "description": "KSA Depth Coverage Index (DCI) — benchmarks against NICE v2.1.0 (ADR-012)" },
+        "adversarial_quality_gate.py": { "description": "Adversarial Quality Gate (AQG) — 5-pass review (ADR-012)" },
+        "migrate_to_domain_pool.py": { "description": "Migration script — role-centric to shared domain pool (ADR-013)" },
+        "coverage_gap_test.py": { "description": "R01 Coverage Gap Test" },
+        "ksa_quality_audit.py": { "description": "R24 KSA Quality Consistency Audit" },
+        "update_framework_licensing.py": { "description": "R05 Licensing Update" }
+      }
     },
     "schema": {
       "description": "JSON Schema definitions for validation.",
       "files": {
-        "role_record.json": {
-          "description": "JSON Schema for CDAIO Domain Master Role Record — 25+ field schema supporting regulatory context, framework mapping, and quantified assessment"
-        }
-      }
-    },
-    "scripts": {
-      "description": "Validation, testing, and maintenance scripts.",
-      "files": {
-        "validate.py": {
-          "description": "Referential integrity validation script — checks foreign key references across roles, KSAs, and mappings"
-        },
-        "coverage_gap_test.py": {
-          "description": "R01 Coverage Gap Test — maps team archetypes against current KSA coverage and produces coverage analysis"
-        },
-        "ksa_quality_audit.py": {
-          "description": "R24 KSA Quality Consistency Audit — evaluates consistency of KSA definitions across existing dataset"
-        },
-        "update_framework_licensing.py": {
-          "description": "R05 Licensing Update — applies commercial_status classification and citation requirements to frameworks"
-        },
-        "check_consistency.py": {
-          "description": "Pre-commit consistency validation — checks manifest accuracy, framework consistency, cross-references, CHANGELOG currency, and ADR statuses"
-        },
-        "r08_author_gap_ksas.py": {
-          "description": "R08 Priority KSA Authoring — authors 42 KSAs for 5 gap roles and creates role-KSA mappings"
-        }
-      }
-    },
-    "methodology": {
-      "description": "Product methodology specifications — scoring models, engagement workflows, deliverable templates, and human-readable methodology documents.",
-      "files": {
-        "pe-assessment-scoring-model.json": {
-          "description": "R04 PE Assessment Scoring Model — 4 dimensions (Coverage, Capability, Criticality, Concentration Risk), 3 composite indices (TCI, KPRS, GSI), single Workforce Readiness Score (WRS, 0-100)"
-        },
-        "pe-assessment-workflow.json": {
-          "description": "R04 PE Assessment Engagement Workflow — 30-day, 5-phase process designed for PE deal timelines with phase gates and deliverable milestones"
-        },
-        "pe-assessment-deliverables.json": {
-          "description": "R04 PE Assessment Deliverables — 4 deliverable specifications (Executive Summary, Workforce Capability Map, Gap Analysis & Hiring Priority Plan, Key Person Risk Assessment)"
-        },
-        "R04-pe-assessment-methodology.md": {
-          "description": "R04 PE Assessment Methodology — human-readable methodology document for PE operating partners describing the complete assessment approach"
-        }
+        "role_record.json": { "description": "JSON Schema for role records" }
       }
     },
     "docs": {
       "description": "Architecture decisions, research, and assessments.",
-      "files": {
-        "TECHNICAL.md": {
-          "description": "Architecture and Data Model — entity-separated flat files, schema design, graph-ready structure"
-        },
-        "master-schema-design.md": {
-          "description": "Master Schema Design — 25+ field JSON schema documentation with nested regulatory and framework context"
-        },
-        "field-by-field-assessment.md": {
-          "description": "Field-by-Field Assessment — use case analysis and modification verdicts for every schema field"
-        },
-        "gap-analysis.md": {
-          "description": "Gap Analysis — 187-role inventory with coverage status against source frameworks"
-        },
-        "nice-boundary-scoping.md": {
-          "description": "NICE Boundary Scoping — how ATLAS relates to NIST NICE for cybersecurity boundary roles"
-        }
-      },
-      "subdirectories": {
-        "roadmap": {
-          "description": "Roadmap analysis, validation sprint results, and Architectural Decision Records",
-          "files": {
-            "ensemble-brainstorm-atlas.md": {
-              "description": "Ensemble Brainstorm — Five-pass strategic analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping) across 6 priority use cases"
-            },
-            "PHASE-0-VALIDATION-SPRINT-RESULTS.md": {
-              "description": "Phase 0 Validation Sprint Results — consolidated go/no-go decisions and evidence from R01, R02, R05, R24 tests"
-            },
-            "R01-coverage-gap-test.md": {
-              "description": "R01 Coverage Gap Test — validation that current 37-role KSA coverage spans 92.2% of archetypical data/AI teams"
-            },
-            "R01-coverage-gap-test.json": {
-              "description": "R01 test data and results"
-            },
-            "R02-ksa-quality-test.md": {
-              "description": "R02 AI-Assisted KSA Quality Test — validation that AI-drafted KSAs match manual quality (4.26/5 average) with acceptable review burden"
-            },
-            "R02-ksa-quality-test.json": {
-              "description": "R02 test data and quality scores"
-            },
-            "R02-ai-authored-ksas.json": {
-              "description": "R02 sample AI-authored KSA set for comparison against baseline"
-            },
-            "R05-license-audit.md": {
-              "description": "R05 Source Framework License Audit — classification of 70 frameworks by commercial viability (GREEN/YELLOW/RED)"
-            },
-            "R05-license-audit.json": {
-              "description": "R05 audit data with per-framework commercial_status classification"
-            },
-            "R05-dependency-analysis.md": {
-              "description": "R05 Framework Dependency Analysis — evidence that all 70 frameworks carry citation-only requirements at minimum; NO dependencies block commercial products"
-            },
-            "R05-dependency-analysis.json": {
-              "description": "R05 dependency analysis data"
-            },
-            "R24-ksa-consistency-audit.md": {
-              "description": "R24 KSA Quality Consistency Audit — 8.2/10 consistency score; documents style drift and establishes requirements for future authoring"
-            },
-            "R24-ksa-consistency-audit.json": {
-              "description": "R24 audit data and consistency metrics"
-            },
-            "R08-priority-ksa-authoring.md": {
-              "description": "R08 Priority KSA Authoring — 42 KSAs authored for 5 gap roles, PE archetype coverage 92.2% → 100%"
-            },
-            "R08-priority-ksa-authoring.json": {
-              "description": "R08 machine-readable results with per-role KSA counts and impact metrics"
-            }
-          },
-          "adr": {
-            "description": "Architectural Decision Records — 11 ADRs documenting rationale, alternatives, and consequences for major roadmap decisions",
-            "files": {
-              "README.md": {
-                "description": "ADR index and overview"
-              },
-              "ADR-001-dependency-driven-roadmap-sequencing.md": {
-                "description": "Sequence roadmap by structural dependencies, not priority"
-              },
-              "ADR-002-pe-due-diligence-as-beachhead.md": {
-                "description": "PE due diligence assessment as first product"
-              },
-              "ADR-003-ship-on-current-data-coverage.md": {
-                "description": "Ship on current data; don't wait for full dataset completion. Validated by R01."
-              },
-              "ADR-004-eu-ai-act-timeline-urgency.md": {
-                "description": "EU AI Act compliance as urgent parallel track (August 2026 enforcement)"
-              },
-              "ADR-005-ai-assisted-ksa-authoring.md": {
-                "description": "AI-assisted KSA authoring with quality gates for acceleration. Validated by R02."
-              },
-              "ADR-006-cross-regulatory-role-coverage.md": {
-                "description": "Cross-regulatory mapping as differentiator"
-              },
-              "ADR-007-product-positioning-assessment-service.md": {
-                "description": "Assessment service, not dataset product"
-              },
-              "ADR-008-schema-modifications-before-enrichment.md": {
-                "description": "Schema modifications before enrichment"
-              },
-              "ADR-009-agentic-ai-roles-first-mover.md": {
-                "description": "Agentic AI roles as Tier 3 first-mover play"
-              },
-              "ADR-010-validation-sprint-before-product-build.md": {
-                "description": "Validate before building — Phase 0 validation sprint completed with all tests passing or conditional passing"
-              },
-              "ADR-011-pe-assessment-scoring-model.md": {
-                "description": "PE Assessment Scoring Model Design — documents 5 key design choices for the R04 scoring methodology, alternatives considered, and consequences"
-              }
-            }
-          }
-        }
-      }
+      "adr_count": 13
     }
   },
   "additional_files": {
-    "ATTRIBUTION.md": {
-      "description": "Framework Licensing Attribution — per-framework licensing notices, commercial_status classification, and required citations for R05 GREEN/YELLOW/RED frameworks",
-      "date_created": "2026-03-26",
-      "related_to": "R05 Source Framework License Audit"
-    },
-    "CONTRIBUTING.md": {
-      "description": "Pre-commit discipline checklist — Section A (Update 9 doc surfaces), Section B (Create 7 new doc types), Section C (Verify via check_consistency.py). Commit message convention with roadmap and ADR references.",
-      "date_created": "2026-03-27",
-      "related_to": "Commit discipline system"
-    },
-    ".github/workflows/consistency.yml": {
-      "description": "CI gate — runs check_consistency.py on every push and PR to main/develop",
-      "date_created": "2026-03-27",
-      "related_to": "Commit discipline system"
-    }
+    "ATTRIBUTION.md": { "description": "Framework licensing attribution" },
+    "CONTRIBUTING.md": { "description": "Pre-commit discipline checklist" },
+    ".github/workflows/consistency.yml": { "description": "CI gate — consistency, DCI, and AQG checks" },
+    ".github/workflows/validate.yml": { "description": "CI gate — validation on push/PR" }
   },
   "commercial_audit": {
     "date_completed": "2026-03-26",
@@ -518,65 +130,20 @@
     "yellow_frameworks": 28,
     "red_frameworks": 23,
     "result": "CONDITIONAL",
-    "finding": "All 70 frameworks carry citation-only requirements at minimum. 19 frameworks (GREEN) permit unrestricted commercial use. 28 frameworks (YELLOW) require attribution or specific notice. 23 frameworks (RED) are citation-only with no commercial derivative rights. No dependencies block commercial products.",
     "reference": "R05-license-audit.md, R05-dependency-analysis.md, ATTRIBUTION.md"
   },
   "statistics": {
     "total_roles": 187,
-    "total_ksas": 364,
+    "total_unique_ksas": 363,
     "total_role_ksa_relationships": 364,
     "total_frameworks": 70,
-    "categories": {
-      "ANL": {
-        "role_count": 14,
-        "ksa_count": 38,
-        "role_ksa_count": 38
-      },
-      "DEV": {
-        "role_count": 15,
-        "ksa_count": 46,
-        "role_ksa_count": 46
-      },
-      "DSM": {
-        "role_count": 21,
-        "ksa_count": 38,
-        "role_ksa_count": 38
-      },
-      "ENG": {
-        "role_count": 25,
-        "ksa_count": 69,
-        "role_ksa_count": 69
-      },
-      "GOV": {
-        "role_count": 25,
-        "ksa_count": 82,
-        "role_ksa_count": 82
-      },
-      "LDR": {
-        "role_count": 31,
-        "ksa_count": 24,
-        "role_ksa_count": 24
-      },
-      "NICHE": {
-        "role_count": 9,
-        "ksa_count": 0,
-        "role_ksa_count": 0
-      },
-      "OPS": {
-        "role_count": 15,
-        "ksa_count": 23,
-        "role_ksa_count": 23
-      },
-      "REG": {
-        "role_count": 8,
-        "ksa_count": 0,
-        "role_ksa_count": 0
-      },
-      "RSK": {
-        "role_count": 24,
-        "ksa_count": 44,
-        "role_ksa_count": 44
-      }
+    "ksa_domains": 12,
+    "roles_with_ksa_mappings": 42,
+    "ksa_architecture": "shared-pool (ADR-013)",
+    "domain_distribution": {
+      "AB": 29, "AG": 31, "AI": 72, "DA": 40, "DG": 40,
+      "DQ": 47, "LS": 19, "OP": 16, "RC": 7, "RM": 26,
+      "SP": 29, "TF": 7
     }
   }
 }

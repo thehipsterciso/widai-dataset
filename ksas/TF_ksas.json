@@ -1,0 +1,97 @@
+{
+  "dataset_id": "ATLAS-KSAS",
+  "domain_code": "TF",
+  "domain_title": "Technical Foundations",
+  "ksa_count": 7,
+  "knowledge_count": 1,
+  "skill_count": 3,
+  "task_count": 3,
+  "ability_count": 0,
+  "schema_version": "2.0.0",
+  "ksas": [
+    {
+      "ksa_id": "TF-K-001",
+      "type": "Knowledge",
+      "domain": "Technical Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of SQL for data querying, including joins, aggregations, window functions, subqueries, and query optimization fundamentals.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ANL-05.01-K-001"
+      ]
+    },
+    {
+      "ksa_id": "TF-S-001",
+      "type": "Skill",
+      "domain": "Technical Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in writing production-quality data transformation code in SQL and at least one general-purpose programming language (Python or Scala), including unit testing and documentation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.03-S-001"
+      ]
+    },
+    {
+      "ksa_id": "TF-S-002",
+      "type": "Skill",
+      "domain": "Technical Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in writing well-structured, tested, and documented SQL transformations that produce reliable, reusable datasets for analytics consumers.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.04-S-001"
+      ]
+    },
+    {
+      "ksa_id": "TF-S-003",
+      "type": "Skill",
+      "domain": "Technical Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in translating business metric definitions from domain stakeholders into precise, unambiguous SQL logic with documented assumptions and edge case handling.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.04-S-002"
+      ]
+    },
+    {
+      "ksa_id": "TF-T-001",
+      "type": "Task",
+      "domain": "Technical Foundations",
+      "domain_code": "TF",
+      "statement": "Package and deploy ML models to production serving infrastructure, including containerization, API wrapping, load testing, and rollback procedures.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "DEV-03.02-T-001"
+      ]
+    },
+    {
+      "ksa_id": "TF-T-002",
+      "type": "Task",
+      "domain": "Technical Foundations",
+      "domain_code": "TF",
+      "statement": "Govern the enterprise reference data library, including controlled vocabulary management, change request processing, and version control.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "DSM-04.02-T-002"
+      ]
+    },
+    {
+      "ksa_id": "TF-T-003",
+      "type": "Task",
+      "domain": "Technical Foundations",
+      "domain_code": "TF",
+      "statement": "Implement automated data testing on all transformation outputs, including uniqueness, not-null, referential integrity, and custom business rule tests.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.04-T-003"
+      ]
+    }
+  ]
+}

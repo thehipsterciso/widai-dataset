@@ -126,6 +126,8 @@ class ConsistencyChecker:
         ksa_count = 0
 
         for fp in sorted(glob.glob(os.path.join(ksas_dir, "*.json"))):
+            if os.path.basename(fp).startswith("_"):
+                continue  # Skip metadata files like _legacy_id_map.json
             data, error = self.load_json(fp)
             if error:
                 continue
@@ -182,7 +184,7 @@ class ConsistencyChecker:
             )
 
         actual_ksas = len(self.all_ksa_ids)
-        manifest_ksas = self.manifest.get("statistics", {}).get("total_ksas", 0)
+        manifest_ksas = self.manifest.get("statistics", {}).get("total_unique_ksas", 0)
         if actual_ksas != manifest_ksas:
             self.errors.append(
                 f"KSA count mismatch: manifest says {manifest_ksas}, actual is {actual_ksas}"

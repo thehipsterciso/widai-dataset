@@ -26,7 +26,13 @@ jobs:
       - name: Run ATLAS consistency check
         run: python scripts/check_consistency.py
 
+      - name: Run KSA Depth Coverage Index (DCI)
+        run: python scripts/check_ksa_depth.py
+
+      - name: Run Adversarial Quality Gate (AQG)
+        run: python scripts/adversarial_quality_gate.py
+
       - name: Report results
         if: always()
         run: |
-          echo "Consistency check completed. Review output above for any errors."
+          echo "All quality gates completed. Review output above for any errors."

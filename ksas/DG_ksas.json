@@ -1,0 +1,493 @@
+{
+  "dataset_id": "ATLAS-KSAS",
+  "domain_code": "DG",
+  "domain_title": "Data Governance & Policy",
+  "ksa_count": 40,
+  "knowledge_count": 11,
+  "skill_count": 9,
+  "task_count": 15,
+  "ability_count": 5,
+  "schema_version": "2.0.0",
+  "ksas": [
+    {
+      "ksa_id": "DG-A-001",
+      "type": "Ability",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Ability to balance short-term operational data and AI demands against long-term strategic platform investments under resource and organizational constraints.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-A-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-A-002",
+      "type": "Ability",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Ability to prioritize data governance investments across competing data domains and business units with limited resources and uneven organizational maturity.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.02-A-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-A-003",
+      "type": "Ability",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Ability to distinguish between AI use cases that require formal governance review and those that can proceed under standard operating procedures, calibrating oversight to actual risk.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-A-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-A-004",
+      "type": "Ability",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Ability to sustain governance program momentum in organizations where data governance lacks executive mandate or where business unit resistance is high.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-A-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-A-005",
+      "type": "Ability",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Ability to serve as an effective bridge between business stakeholders who generate and consume data and technical stakeholders who store and process it.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.06-A-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-001",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of enterprise data strategy frameworks, including data governance operating models, data architecture principles, and the organizational interdependencies that determine data program effectiveness.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-K-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-002",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of enterprise risk management frameworks and how data risk, AI risk, and technology risk are integrated into enterprise risk reporting and board-level risk governance.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-K-006"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-003",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of data governance operating models, including federated, centralized, and hub-and-spoke structures, and the organizational conditions under which each model is appropriate.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.02-K-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-004",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of data catalog and metadata management platforms, including active metadata principles, automated lineage tracking, and business glossary governance.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.02-K-002"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-005",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of data maturity assessment frameworks, including DCAM, DAMA DMBOK, and CMMI-DMM, and how maturity scores translate to organizational investment priorities.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.02-K-005"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-006",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of AI model lifecycle management, including model versioning, drift detection, performance monitoring, retraining triggers, and decommissioning criteria.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-K-004"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-007",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of data governance program design, including operating model options, council structures, policy frameworks, stewardship network models, and escalation path architectures.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-K-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-008",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of data policy authoring, including policy structure standards, enforcement mechanisms, exception handling processes, and policy lifecycle management.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-K-002"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-009",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of data domain and data ownership concepts, including how to define domain boundaries, assign accountability, and resolve cross-domain ownership disputes.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-K-003"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-010",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of the data domain for which stewardship responsibility is held, including its business purpose, system sources, consumer use cases, and applicable regulatory classifications.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.06-K-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-K-011",
+      "type": "Knowledge",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Knowledge of metadata standards, business glossary conventions, and data catalog tooling used to document and publish data asset definitions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.06-K-003"
+      ]
+    },
+    {
+      "ksa_id": "DG-S-001",
+      "type": "Skill",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Skill in communicating data and AI strategy, risk posture, and investment priorities to board-level and C-suite audiences using financial and business terms rather than technical language.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-S-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-S-002",
+      "type": "Skill",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Skill in aligning data and AI program objectives to organizational strategy, translating business priorities into data and AI capability requirements with measurable outcomes.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-S-004"
+      ]
+    },
+    {
+      "ksa_id": "DG-S-003",
+      "type": "Skill",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Skill in designing data stewardship programs that assign clear ownership, accountability, and service level agreements for enterprise data domains.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.02-S-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-S-004",
+      "type": "Skill",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Skill in building and managing a Data Governance Council, including membership design, decision authority, meeting cadence, escalation processes, and conflict resolution.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.02-S-002"
+      ]
+    },
+    {
+      "ksa_id": "DG-S-005",
+      "type": "Skill",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Skill in operating data governance councils, including agenda management, issue escalation, decision documentation, and multi-stakeholder conflict resolution.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-S-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-S-006",
+      "type": "Skill",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Skill in designing and running data stewardship programs, including steward selection, training, responsibility definition, and performance measurement.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-S-002"
+      ]
+    },
+    {
+      "ksa_id": "DG-S-007",
+      "type": "Skill",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Skill in measuring and reporting data governance program effectiveness using maturity scores, policy compliance rates, issue resolution metrics, and stewardship participation rates.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-S-003"
+      ]
+    },
+    {
+      "ksa_id": "DG-S-008",
+      "type": "Skill",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Skill in authoring and maintaining business glossary definitions, data dictionaries, and data asset documentation that are clear and accurate for both technical and business audiences.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.06-S-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-S-009",
+      "type": "Skill",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Skill in developing actionable data and AI strategy recommendations, including prioritized roadmaps, capability investment plans, and organizational design recommendations.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "LDR-08.04-S-002"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-001",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Manage the enterprise business glossary, including term authoring workflows, approval processes, linkage to catalog assets, and conflict resolution between competing definitions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "DSM-04.03-T-002"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-002",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Develop and maintain the enterprise data and AI strategy, aligned to business objectives, with defined investment priorities, milestones, accountability assignments, and success metrics.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-T-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-003",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Lead selection, contracting, and performance oversight of strategic data and AI technology vendors and platform providers.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-T-004"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-004",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Establish and operate the enterprise data governance program, including council structure, policy library, stewardship network, data domain ownership registry, and governance metrics.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.02-T-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-005",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Conduct enterprise data maturity assessments against recognized frameworks and define improvement roadmaps with measurable milestones and accountable owners.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.02-T-002"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-006",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Establish and maintain the enterprise data catalog, business glossary, and metadata management program, ensuring discoverability, lineage visibility, and classification currency.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.02-T-003"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-007",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.03-T-004"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-008",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Operate the Data Governance Council, including scheduling, agenda preparation, issue tracking, decision logging, and follow-through on action items.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-T-002"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-009",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Manage the enterprise data stewardship network, including steward onboarding, role clarity, tools access, and regular steward community engagement.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-T-003"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-010",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Produce and distribute regular data governance program status reports, including maturity progress, open issues, policy violations, and upcoming regulatory obligations.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.04-T-004"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-011",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Maintain the business glossary definitions, data asset catalog entries, and data lineage documentation for the assigned data domain.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.06-T-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-012",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Participate in the data governance council and stewardship community, representing the assigned domain's interests and escalating unresolved issues through established channels.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.06-T-003"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-013",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Review and approve data access requests, data sharing agreements, and data use authorizations for data assets within the assigned domain.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.06-T-004"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-014",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Conduct data and AI strategy engagements, including current state assessment, future state design, gap analysis, and roadmap development with defined milestones and investment estimates.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "LDR-08.04-T-001"
+      ]
+    },
+    {
+      "ksa_id": "DG-T-015",
+      "type": "Task",
+      "domain": "Data Governance & Policy",
+      "domain_code": "DG",
+      "statement": "Process data access requests per defined procedures, including request validation, approval routing, provisioning, and access log documentation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "OPS-07.04-T-002"
+      ]
+    }
+  ]
+}

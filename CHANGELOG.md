@@ -3,18 +3,39 @@
 All notable changes to the ATLAS dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
-## [0.4.3] - 2026-03-27
+## [0.5.0] - 2026-03-27
 
-### R08 — Priority KSA Authoring for Gap Roles
-- **42 KSAs authored** across 5 roles identified by R01 as PE archetype coverage gaps
-- Model Risk Manager (RSK-0108): 9 KSAs — SR 11-7/OCC model governance, AI/ML model risk adaptation
-- MLOps Engineer (ENG-0041): 8 KSAs — ML pipeline automation, model deployment, drift monitoring
-- DataOps Engineer (ENG-0037): 8 KSAs — pipeline testing, data observability, environment management
-- Data Protection Officer (GOV-0016): 9 KSAs — GDPR Art 37-39, DPIAs, privacy-by-design, supervisory authority liaison
-- Clinical Data Manager (ANL-0092): 8 KSAs — GCP/ICH, CDISC standards, EDC systems, regulatory submissions
-- **PE archetype KSA coverage: 92.2% → 100%** (all 64 archetype roles now fully assessable)
-- Total ATLAS KSAs: 322 → 364
-- Authored via AI-assisted workflow validated by R02 (4.26/5 quality standard)
+### BREAKING: Shared-Pool KSA Architecture (ADR-013)
+
+**Architectural restructuring** — KSA data model migrated from role-centric ownership to shared domain-based pool with many-to-many role mappings.
+
+**Why:** Manual review on 2026-03-27 exposed two critical failures: (1) KSA depth averaged 8.95 per role versus NICE framework's 68-206 — a 14.9x shortfall, and (2) the KSA identity model (IDs embedding role ownership, perfect 1:1 mapping cardinality, zero cross-role sharing) structurally prevented the depth correction needed.
+
+**What changed:**
+- KSA files reorganized from 8 category-based files to 12 domain-based pool files
+- KSA IDs changed from role-coupled (`GOV-01.01-K-001`) to domain-based (`DG-K-001`)
+- 364 KSAs deduplicated to 363 unique (1 semantic duplicate merged)
+- Role-KSA mappings rewritten with new IDs and `proficiency_context` field
+- Schema version bumped to 2.0.0
+
+**KSA Domain Taxonomy (12 domains):**
+AB (Analytics & BI), AG (AI Governance & Ethics), AI (AI/ML Foundations), DA (Data Architecture & Infrastructure), DG (Data Governance & Policy), DQ (Data Quality & Management), LS (Leadership & Strategy), OP (Operations & Enablement), RC (Regulatory & Compliance), RM (Risk Management), SP (Security & Privacy), TF (Technical Foundations)
+
+**Files removed:** 8 old category KSA files, R08 outputs (superseded by ADR-012), r08_author_gap_ksas.py
+
+**Files added:** 12 domain KSA pool files, `_legacy_id_map.json` (old→new ID audit trail), `migrate_to_domain_pool.py`, `check_ksa_depth.py` (DCI metric), `adversarial_quality_gate.py` (AQG)
+
+**New ADRs:** ADR-012 (KSA Depth Correction), ADR-013 (Shared-Pool Architecture)
+
+**New documentation:** R02 Failure Assessment, Architecture Brainstorm, Repo Audit
+
+**Note:** KSA depth enrichment (40-80 KSAs per role) is pending. This release establishes the correct architecture. The next release will populate it to industry-standard depth.
+
+## [0.4.3] - 2026-03-27 [SUPERSEDED by v0.5.0]
+
+### R08 — Priority KSA Authoring for Gap Roles (DEPRECATED — built on flawed 1:1 model)
+- 42 KSAs authored across 5 gap roles — statement quality valid, architecture invalidated by ADR-012/013
+- See R02-FAILURE-ASSESSMENT.md for root cause analysis
 
 ## [0.4.2] - 2026-03-27
 
