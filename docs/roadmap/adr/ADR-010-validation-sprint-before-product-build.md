@@ -1,7 +1,8 @@
 # ADR-010: Validation Sprint (Tier 0) Before Product Build
 
-**Status:** Proposed
+**Status:** Accepted — Sprint executed 2026-03-26. All four tests complete. See PHASE-0-VALIDATION-SPRINT-RESULTS.md.
 **Date:** 2026-03-26
+**Closed:** 2026-03-26
 **Author:** Thomas Jones / The Hipster CISO
 **Derived From:** Ensemble Brainstorm Pass 4 (Constraint Inversion — Assumption Test Queue), Scoring Layer (Tier 0 items)
 
@@ -90,6 +91,24 @@ Total: 2 weeks of parallel execution. No sequential dependencies between R01, R0
 **Risks:**
 - Multiple tests produce negative results simultaneously (e.g., R01 shows low coverage AND R05 finds license restrictions AND R24 finds quality inconsistencies). This would require a substantial roadmap restructure. Mitigation: this is exactly why Tier 0 exists — better to know in Week 2 than in Week 16.
 - The Validation Sprint becomes a procrastination mechanism — "we need more data before we can act." Mitigation: hard 2-week timebox. Tests produce results with the data available, not with perfect data.
+
+## Execution Results (2026-03-26)
+
+All four tests executed in parallel on Day 1 of the sprint. Results:
+
+| Test | Result | Gate Threshold | Outcome |
+|------|--------|----------------|---------|
+| R01: Coverage Gap | PASS (92.2%) | ≥60% KSA coverage | Proceed to Tier 1 on current data |
+| R02: AI-Assisted KSA | PASS (4.26/5) | Quality comparable | Adopt AI-assisted workflow |
+| R05: License Audit | CONDITIONAL (19G/28Y/23R) | No blockers | GREEN frameworks safe; dependency analysis needed |
+| R24: KSA Consistency | PASS WITH CONDITIONS (8.2/10) | Consistent baseline | Proceed; document Ability type decision |
+
+**Roadmap impact:** Tier 1 is unblocked. Three conditions documented in PHASE-0-VALIDATION-SPRINT-RESULTS.md must be addressed during Tier 1 execution:
+1. RED framework dependency analysis (R05 follow-up)
+2. Ability type design decision (R24 follow-up)
+3. Thomas reviews R02 AI-authored KSAs (independent quality validation)
+
+**Detailed results:** See `docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md` and individual test reports (R01, R02, R05, R24) in the same directory.
 
 ## References
 
