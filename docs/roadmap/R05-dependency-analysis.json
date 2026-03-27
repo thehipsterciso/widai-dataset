@@ -1,0 +1,1352 @@
+{
+  "analysis_date": "2026-03-26",
+  "issue_ref": "#26",
+  "frameworks_analyzed": 70,
+  "red_frameworks": [
+    {
+      "framework": "BCG",
+      "framework_id": "BCG",
+      "license_status": "RED",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-DSM-0079",
+        "ATLAS-GOV-0005",
+        "ATLAS-LDR-0148"
+      ],
+      "categories_affected": [
+        "DSM",
+        "GOV",
+        "LDR"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - restricted",
+      "restrictions": "Commercial use requires prior written permission; no unauthorized derivatives"
+    },
+    {
+      "framework": "CDO Magazine",
+      "framework_id": "CDO_MAGAZINE",
+      "license_status": "RED",
+      "role_mapping_count": 6,
+      "roles_referencing": [
+        "ATLAS-GOV-0001",
+        "ATLAS-GOV-0004",
+        "ATLAS-LDR-0163",
+        "ATLAS-LDR-0170",
+        "ATLAS-OPS-0130",
+        "ATLAS-OPS-0136"
+      ],
+      "categories_affected": [
+        "GOV",
+        "LDR",
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - editorial content is copyrighted",
+      "restrictions": "Magazine content is copyrighted; commercial reuse restricted"
+    },
+    {
+      "framework": "CMMI-DMM",
+      "framework_id": "CMMI_DMM",
+      "license_status": "RED",
+      "role_mapping_count": 6,
+      "roles_referencing": [
+        "ATLAS-DSM-0071",
+        "ATLAS-DSM-0077",
+        "ATLAS-DSM-0078",
+        "ATLAS-GOV-0009",
+        "ATLAS-GOV-0011",
+        "ATLAS-GOV-0014"
+      ],
+      "categories_affected": [
+        "DSM",
+        "GOV"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires annual license",
+      "restrictions": "Cannot be copied, distributed, or embedded in commercial products without ISACA license. Commercial use requires annual licensing fee."
+    },
+    {
+      "framework": "COBIT-2019",
+      "framework_id": "COBIT_2019",
+      "license_status": "RED",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-GOV-0014"
+      ],
+      "categories_affected": [
+        "GOV"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires annual commercial license",
+      "restrictions": "Copying, distributing, creating derivatives for commercial purposes, or embedding in commercial products is prohibited without written ISACA permission. Annual license required for commercial/training/consulting use."
+    },
+    {
+      "framework": "DAMA-DMBOK",
+      "framework_id": "DAMA_DMBOK",
+      "license_status": "RED",
+      "role_mapping_count": 26,
+      "roles_referencing": [
+        "ATLAS-ANL-0089",
+        "ATLAS-DSM-0066",
+        "ATLAS-DSM-0067",
+        "ATLAS-DSM-0068",
+        "ATLAS-DSM-0071",
+        "ATLAS-DSM-0072",
+        "ATLAS-DSM-0075",
+        "ATLAS-DSM-0076",
+        "ATLAS-ENG-0026",
+        "ATLAS-ENG-0028",
+        "ATLAS-ENG-0031",
+        "ATLAS-ENG-0032",
+        "ATLAS-ENG-0033",
+        "ATLAS-ENG-0034",
+        "ATLAS-GOV-0002",
+        "ATLAS-GOV-0007",
+        "ATLAS-GOV-0009",
+        "ATLAS-GOV-0010",
+        "ATLAS-GOV-0011",
+        "ATLAS-GOV-0012",
+        "ATLAS-GOV-0013",
+        "ATLAS-GOV-0014",
+        "ATLAS-GOV-0015",
+        "ATLAS-LDR-0157",
+        "ATLAS-LDR-0167",
+        "ATLAS-RSK-0120"
+      ],
+      "categories_affected": [
+        "ANL",
+        "DSM",
+        "ENG",
+        "GOV",
+        "LDR",
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "Conditional - depends on specific component",
+      "restrictions": "Select diagrams are CC BY-ND 4.0 (cannot modify). Other content is proprietary. Fair use permits limited quotation for non-commercial purposes. Licensing required for commercial use."
+    },
+    {
+      "framework": "Deloitte",
+      "framework_id": "DELOITTE",
+      "license_status": "RED",
+      "role_mapping_count": 7,
+      "roles_referencing": [
+        "ATLAS-GOV-0002",
+        "ATLAS-LDR-0144",
+        "ATLAS-LDR-0146",
+        "ATLAS-LDR-0147",
+        "ATLAS-LDR-0151",
+        "ATLAS-LDR-0157",
+        "ATLAS-LDR-0163"
+      ],
+      "categories_affected": [
+        "GOV",
+        "LDR"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - restricted",
+      "restrictions": "Consulting research is proprietary. Commercial use requires prior written permission."
+    },
+    {
+      "framework": "Forrester",
+      "framework_id": "FORRESTER",
+      "license_status": "RED",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-DSM-0070",
+        "ATLAS-GOV-0008",
+        "ATLAS-OPS-0132"
+      ],
+      "categories_affected": [
+        "DSM",
+        "GOV",
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires reprints license",
+      "restrictions": "All syndicated research is proprietary. Commercial use requires reprints license. No custom modifications allowed. Contact citations@forrester.com or account manager."
+    },
+    {
+      "framework": "Gartner",
+      "framework_id": "GARTNER",
+      "license_status": "RED",
+      "role_mapping_count": 14,
+      "roles_referencing": [
+        "ATLAS-ANL-0100",
+        "ATLAS-DSM-0068",
+        "ATLAS-DSM-0079",
+        "ATLAS-ENG-0027",
+        "ATLAS-ENG-0030",
+        "ATLAS-ENG-0048",
+        "ATLAS-GOV-0001",
+        "ATLAS-GOV-0002",
+        "ATLAS-LDR-0144",
+        "ATLAS-LDR-0145",
+        "ATLAS-LDR-0146",
+        "ATLAS-LDR-0150",
+        "ATLAS-LDR-0151",
+        "ATLAS-OPS-0129"
+      ],
+      "categories_affected": [
+        "ANL",
+        "DSM",
+        "ENG",
+        "GOV",
+        "LDR",
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - explicitly prohibits AI training and commercial derivatives",
+      "restrictions": "CRITICAL: Gartner explicitly prohibits using content as input into AI/ML, creating derivative works, or using in commercial products. No scraping or automated access permitted. Commercial external use requires written permission from Gartner Content Compliance."
+    },
+    {
+      "framework": "HBR",
+      "framework_id": "HBR",
+      "license_status": "RED",
+      "role_mapping_count": 2,
+      "roles_referencing": [
+        "ATLAS-GOV-0001",
+        "ATLAS-GOV-0004"
+      ],
+      "categories_affected": [
+        "GOV"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires permission for commercial use",
+      "restrictions": "Strict commercial restrictions. Content not permitted for corporate training, coursepacks, or commercial products. Copyright permission required. Contact: permissions@harvardbusiness.org"
+    },
+    {
+      "framework": "IDC",
+      "framework_id": "IDC",
+      "license_status": "RED",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-LDR-0169"
+      ],
+      "categories_affected": [
+        "LDR"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires written permission for external use",
+      "restrictions": "All IDC research is copyrighted. Cannot be reproduced, excerpted, or distributed externally without written permission from IDC Permissions (permissions@idc.com). Commercial use strictly prohibited."
+    },
+    {
+      "framework": "ISACA",
+      "framework_id": "ISACA",
+      "license_status": "RED",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-GOV-0008",
+        "ATLAS-RSK-0107",
+        "ATLAS-RSK-0114"
+      ],
+      "categories_affected": [
+        "GOV",
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires annual commercial license",
+      "restrictions": "All ISACA IP (including COBIT, DMBOK, etc.) requires licensing for commercial use, training, or consulting. Annual fees apply."
+    },
+    {
+      "framework": "ISO-23894",
+      "framework_id": "ISO_23894",
+      "license_status": "RED",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-RSK-0113"
+      ],
+      "categories_affected": [
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires ISO licensing",
+      "restrictions": "ISO standards are copyrighted and must be purchased. Derivative works require ISO permission."
+    },
+    {
+      "framework": "ISO-27001",
+      "framework_id": "ISO_27001",
+      "license_status": "RED",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-RSK-0120"
+      ],
+      "categories_affected": [
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires ISO licensing",
+      "restrictions": "ISO standards are copyrighted and must be purchased. Derivative works require ISO permission."
+    },
+    {
+      "framework": "ISO-27701",
+      "framework_id": "ISO_27701",
+      "license_status": "RED",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-GOV-0016"
+      ],
+      "categories_affected": [
+        "GOV"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires ISO licensing",
+      "restrictions": "ISO standards are copyrighted and must be purchased. Derivative works require ISO permission."
+    },
+    {
+      "framework": "ISO-38505",
+      "framework_id": "ISO_38505",
+      "license_status": "RED",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-GOV-0011"
+      ],
+      "categories_affected": [
+        "GOV"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires ISO licensing",
+      "restrictions": "ISO standards are copyrighted and must be purchased. Derivative works require ISO permission."
+    },
+    {
+      "framework": "ISO-42001",
+      "framework_id": "ISO_42001",
+      "license_status": "RED",
+      "role_mapping_count": 8,
+      "roles_referencing": [
+        "ATLAS-REG-0175",
+        "ATLAS-REG-0176",
+        "ATLAS-REG-0177",
+        "ATLAS-REG-0178",
+        "ATLAS-RSK-0110",
+        "ATLAS-RSK-0112",
+        "ATLAS-RSK-0113",
+        "ATLAS-RSK-0114"
+      ],
+      "categories_affected": [
+        "REG",
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires ISO licensing",
+      "restrictions": "ISO standards are copyrighted and must be purchased. Derivative works require ISO permission."
+    },
+    {
+      "framework": "ISO-5338",
+      "framework_id": "ISO_5338",
+      "license_status": "RED",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-REG-0177"
+      ],
+      "categories_affected": [
+        "REG"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires ISO licensing",
+      "restrictions": "ISO standards are copyrighted and must be purchased. Derivative works require ISO permission."
+    },
+    {
+      "framework": "ISO-8000",
+      "framework_id": "ISO_8000",
+      "license_status": "RED",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-DSM-0084",
+        "ATLAS-DSM-0085",
+        "ATLAS-DSM-0086"
+      ],
+      "categories_affected": [
+        "DSM"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires ISO licensing",
+      "restrictions": "ISO standards are copyrighted and must be purchased. Derivative works require ISO permission."
+    },
+    {
+      "framework": "KPMG",
+      "framework_id": "KPMG",
+      "license_status": "RED",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-RSK-0111"
+      ],
+      "categories_affected": [
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires permission",
+      "restrictions": "KPMG research and consulting frameworks are proprietary. Commercial use requires written permission."
+    },
+    {
+      "framework": "McKinsey",
+      "framework_id": "MCKINSEY",
+      "license_status": "RED",
+      "role_mapping_count": 6,
+      "roles_referencing": [
+        "ATLAS-DSM-0079",
+        "ATLAS-ENG-0037",
+        "ATLAS-LDR-0148",
+        "ATLAS-LDR-0156",
+        "ATLAS-OPS-0129",
+        "ATLAS-OPS-0136"
+      ],
+      "categories_affected": [
+        "DSM",
+        "ENG",
+        "LDR",
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - requires written permission",
+      "restrictions": "All McKinsey content is proprietary. Non-commercial internal use only. External use, reprints, or commercial derivatives require written permission from reprints@mckinsey.com. No marketing/promotional use permitted."
+    },
+    {
+      "framework": "WEF",
+      "framework_id": "WEF",
+      "license_status": "RED",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-GOV-0005"
+      ],
+      "categories_affected": [
+        "GOV"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "exclude",
+      "commercial_derivatives": "No - CC BY-NC-ND prohibits commercial use and derivatives",
+      "restrictions": "CRITICAL: Most WEF reports are CC BY-NC-ND 4.0 (Non-Commercial, No Derivatives). Cannot be modified or used commercially. Only non-commercial sharing permitted with attribution."
+    }
+  ],
+  "yellow_frameworks": [
+    {
+      "framework": "AICPA",
+      "framework_id": "AICPA",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-RSK-0107"
+      ],
+      "categories_affected": [
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - requires explicit permission",
+      "restrictions": "Copyright protected; commercial use requires licensing"
+    },
+    {
+      "framework": "aijobs.net",
+      "framework_id": "AIJOBS.NET",
+      "license_status": "YELLOW",
+      "role_mapping_count": 2,
+      "roles_referencing": [
+        "ATLAS-DEV-0062",
+        "ATLAS-ENG-0045"
+      ],
+      "categories_affected": [
+        "DEV",
+        "ENG"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - platform data is proprietary",
+      "restrictions": "Job listings are proprietary. Commercial use restricted by terms of service."
+    },
+    {
+      "framework": "AWS",
+      "framework_id": "AWS",
+      "license_status": "YELLOW",
+      "role_mapping_count": 4,
+      "roles_referencing": [
+        "ATLAS-DEV-0052",
+        "ATLAS-ENG-0027",
+        "ATLAS-ENG-0041",
+        "ATLAS-LDR-0169"
+      ],
+      "categories_affected": [
+        "DEV",
+        "ENG",
+        "LDR"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Conditional - permitted within AWS service context",
+      "restrictions": "Usage restricted to AWS service context; resale/redistribution limited"
+    },
+    {
+      "framework": "CDMC",
+      "framework_id": "CDMC",
+      "license_status": "YELLOW",
+      "role_mapping_count": 8,
+      "roles_referencing": [
+        "ATLAS-DSM-0072",
+        "ATLAS-DSM-0073",
+        "ATLAS-DSM-0074",
+        "ATLAS-DSM-0078",
+        "ATLAS-ENG-0035",
+        "ATLAS-ENG-0036",
+        "ATLAS-GOV-0009",
+        "ATLAS-GOV-0021"
+      ],
+      "categories_affected": [
+        "DSM",
+        "ENG",
+        "GOV"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Unknown",
+      "restrictions": "Unknown"
+    },
+    {
+      "framework": "Conversation Design Institute",
+      "framework_id": "CONVERSATION_DESIGN_INSTITUTE",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-OPS-0139"
+      ],
+      "categories_affected": [
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Unknown",
+      "restrictions": "Unknown"
+    },
+    {
+      "framework": "Coursera",
+      "framework_id": "COURSERA",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-ENG-0041"
+      ],
+      "categories_affected": [
+        "ENG"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - course content copyright owned by Coursera or instructors",
+      "restrictions": "Non-commercial personal use only; cannot reproduce, retransmit, or create derivatives for commercial purposes. Partner content licensed to Coursera with sub-licensability."
+    },
+    {
+      "framework": "DataOps.live",
+      "framework_id": "DATAOPS.LIVE",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-ENG-0037"
+      ],
+      "categories_affected": [
+        "ENG"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Unknown",
+      "restrictions": "Unknown"
+    },
+    {
+      "framework": "DATAVERSITY",
+      "framework_id": "DATAVERSITY",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-OPS-0129"
+      ],
+      "categories_affected": [
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - educational content is copyrighted",
+      "restrictions": "Educational content is copyrighted. Commercial reuse restricted."
+    },
+    {
+      "framework": "DCAM",
+      "framework_id": "DCAM",
+      "license_status": "YELLOW",
+      "role_mapping_count": 7,
+      "roles_referencing": [
+        "ATLAS-DSM-0066",
+        "ATLAS-ENG-0033",
+        "ATLAS-GOV-0007",
+        "ATLAS-GOV-0009",
+        "ATLAS-GOV-0011",
+        "ATLAS-GOV-0014",
+        "ATLAS-GOV-0020"
+      ],
+      "categories_affected": [
+        "DSM",
+        "ENG",
+        "GOV"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Unknown",
+      "restrictions": "Unknown"
+    },
+    {
+      "framework": "DQOps",
+      "framework_id": "DQOPS",
+      "license_status": "YELLOW",
+      "role_mapping_count": 2,
+      "roles_referencing": [
+        "ATLAS-GOV-0015",
+        "ATLAS-OPS-0132"
+      ],
+      "categories_affected": [
+        "GOV",
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Unknown",
+      "restrictions": "Unknown"
+    },
+    {
+      "framework": "DZone",
+      "framework_id": "DZONE",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-ENG-0042"
+      ],
+      "categories_affected": [
+        "ENG"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - editorial content is copyrighted",
+      "restrictions": "Developer content is copyrighted. Commercial reuse restricted."
+    },
+    {
+      "framework": "EC-Council",
+      "framework_id": "EC_COUNCIL",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-GOV-0019"
+      ],
+      "categories_affected": [
+        "GOV"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - certification frameworks are proprietary",
+      "restrictions": "Certification and training materials are proprietary. Unauthorized use is restricted."
+    },
+    {
+      "framework": "GitLab",
+      "framework_id": "GITLAB",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-ENG-0029"
+      ],
+      "categories_affected": [
+        "ENG"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Conditional",
+      "restrictions": "GitLab platform is proprietary. Artwork is CC BY-NC-SA (non-commercial). Documentation terms vary."
+    },
+    {
+      "framework": "Glassdoor",
+      "framework_id": "GLASSDOOR",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-OPS-0133"
+      ],
+      "categories_affected": [
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - user-generated content and platform data are proprietary",
+      "restrictions": "Platform content and job data are proprietary. Scraping prohibited in terms of service."
+    },
+    {
+      "framework": "IAPP",
+      "framework_id": "IAPP",
+      "license_status": "YELLOW",
+      "role_mapping_count": 6,
+      "roles_referencing": [
+        "ATLAS-DSM-0069",
+        "ATLAS-GOV-0016",
+        "ATLAS-GOV-0017",
+        "ATLAS-GOV-0018",
+        "ATLAS-GOV-0019",
+        "ATLAS-RSK-0122"
+      ],
+      "categories_affected": [
+        "DSM",
+        "GOV",
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - content is copyrighted",
+      "restrictions": "Materials are copyrighted. Personal use only unless permission obtained. Derivative works require written license."
+    },
+    {
+      "framework": "IBM",
+      "framework_id": "IBM",
+      "license_status": "YELLOW",
+      "role_mapping_count": 2,
+      "roles_referencing": [
+        "ATLAS-GOV-0003",
+        "ATLAS-LDR-0159"
+      ],
+      "categories_affected": [
+        "GOV",
+        "LDR"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Conditional - varies by product",
+      "restrictions": "IBM documentation and frameworks are proprietary. Cloud licensing and commercial use governed by IBM software agreement. Derivative works require IBM approval."
+    },
+    {
+      "framework": "IEEE",
+      "framework_id": "IEEE",
+      "license_status": "YELLOW",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-GOV-0005",
+        "ATLAS-RSK-0118",
+        "ATLAS-RSK-0119"
+      ],
+      "categories_affected": [
+        "GOV",
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - requires IEEE permission for most content",
+      "restrictions": "IEEE standards are copyrighted. Derivative works require written IEEE permission. Open access articles may be CC BY, but standards themselves are restricted."
+    },
+    {
+      "framework": "IIA",
+      "framework_id": "IIA",
+      "license_status": "YELLOW",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-GOV-0011",
+        "ATLAS-RSK-0107",
+        "ATLAS-RSK-0110"
+      ],
+      "categories_affected": [
+        "GOV",
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - requires licensing",
+      "restrictions": "Standards and frameworks are copyrighted. Commercial use requires IIA licensing."
+    },
+    {
+      "framework": "Indeed",
+      "framework_id": "INDEED",
+      "license_status": "YELLOW",
+      "role_mapping_count": 4,
+      "roles_referencing": [
+        "ATLAS-LDR-0153",
+        "ATLAS-LDR-0154",
+        "ATLAS-LDR-0155",
+        "ATLAS-OPS-0139"
+      ],
+      "categories_affected": [
+        "LDR",
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - job listings and platform data are proprietary",
+      "restrictions": "Indeed's terms of service restrict commercial use of job market data."
+    },
+    {
+      "framework": "LinkedIn",
+      "framework_id": "LINKEDIN",
+      "license_status": "YELLOW",
+      "role_mapping_count": 15,
+      "roles_referencing": [
+        "ATLAS-DEV-0052",
+        "ATLAS-DEV-0053",
+        "ATLAS-DEV-0059",
+        "ATLAS-DSM-0081",
+        "ATLAS-ENG-0041",
+        "ATLAS-LDR-0144",
+        "ATLAS-LDR-0145",
+        "ATLAS-LDR-0148",
+        "ATLAS-LDR-0153",
+        "ATLAS-LDR-0154",
+        "ATLAS-LDR-0155",
+        "ATLAS-LDR-0156",
+        "ATLAS-NICHE-0183",
+        "ATLAS-OPS-0133",
+        "ATLAS-OPS-0137"
+      ],
+      "categories_affected": [
+        "DEV",
+        "DSM",
+        "ENG",
+        "LDR",
+        "NICHE",
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - platform data and content are proprietary",
+      "restrictions": "LinkedIn's terms of service restrict commercial use of profile and job data. Scraping prohibited."
+    },
+    {
+      "framework": "Microsoft",
+      "framework_id": "MICROSOFT",
+      "license_status": "YELLOW",
+      "role_mapping_count": 2,
+      "roles_referencing": [
+        "ATLAS-LDR-0169",
+        "ATLAS-RSK-0105"
+      ],
+      "categories_affected": [
+        "LDR",
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Conditional - varies by product/documentation",
+      "restrictions": "Microsoft cloud documentation is available but proprietary. Creating derivatives for commercial products requires Microsoft agreement. Some content may be under specific cloud service licenses."
+    },
+    {
+      "framework": "MIT Sloan",
+      "framework_id": "MIT_SLOAN",
+      "license_status": "YELLOW",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-GOV-0003",
+        "ATLAS-GOV-0006",
+        "ATLAS-OPS-0130"
+      ],
+      "categories_affected": [
+        "GOV",
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - educational content is copyrighted",
+      "restrictions": "Academic content is copyrighted. Commercial use restricted."
+    },
+    {
+      "framework": "Monte Carlo Data",
+      "framework_id": "MONTE_CARLO_DATA",
+      "license_status": "YELLOW",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-DSM-0071",
+        "ATLAS-ENG-0038",
+        "ATLAS-ENG-0039"
+      ],
+      "categories_affected": [
+        "DSM",
+        "ENG"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Unknown",
+      "restrictions": "Unknown"
+    },
+    {
+      "framework": "ODSC",
+      "framework_id": "ODSC",
+      "license_status": "YELLOW",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-ENG-0048",
+        "ATLAS-NICHE-0185",
+        "ATLAS-NICHE-0186"
+      ],
+      "categories_affected": [
+        "ENG",
+        "NICHE"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - educational content is copyrighted",
+      "restrictions": "Platform content is copyrighted. Commercial use restricted."
+    },
+    {
+      "framework": "Practitioner Community",
+      "framework_id": "PRACTITIONER_COMMUNITY",
+      "license_status": "YELLOW",
+      "role_mapping_count": 47,
+      "roles_referencing": [
+        "ATLAS-ANL-0100",
+        "ATLAS-DEV-0053",
+        "ATLAS-DEV-0054",
+        "ATLAS-DEV-0055",
+        "ATLAS-DEV-0057",
+        "ATLAS-DEV-0058",
+        "ATLAS-DEV-0059",
+        "ATLAS-DEV-0060",
+        "ATLAS-DEV-0062",
+        "ATLAS-DSM-0080",
+        "ATLAS-DSM-0081",
+        "ATLAS-DSM-0082",
+        "ATLAS-ENG-0030",
+        "ATLAS-ENG-0036",
+        "ATLAS-ENG-0038",
+        "ATLAS-ENG-0039",
+        "ATLAS-ENG-0042",
+        "ATLAS-ENG-0043",
+        "ATLAS-ENG-0044",
+        "ATLAS-ENG-0045",
+        "ATLAS-ENG-0046",
+        "ATLAS-ENG-0047",
+        "ATLAS-ENG-0049",
+        "ATLAS-ENG-0050",
+        "ATLAS-GOV-0005",
+        "ATLAS-LDR-0149",
+        "ATLAS-LDR-0152",
+        "ATLAS-LDR-0158",
+        "ATLAS-LDR-0159",
+        "ATLAS-LDR-0160",
+        "ATLAS-LDR-0162",
+        "ATLAS-LDR-0164",
+        "ATLAS-LDR-0168",
+        "ATLAS-LDR-0170",
+        "ATLAS-NICHE-0179",
+        "ATLAS-NICHE-0180",
+        "ATLAS-NICHE-0182",
+        "ATLAS-NICHE-0184",
+        "ATLAS-OPS-0130",
+        "ATLAS-OPS-0131",
+        "ATLAS-OPS-0135",
+        "ATLAS-OPS-0137",
+        "ATLAS-OPS-0138",
+        "ATLAS-RSK-0106",
+        "ATLAS-RSK-0115",
+        "ATLAS-RSK-0123",
+        "ATLAS-RSK-0124"
+      ],
+      "categories_affected": [
+        "ANL",
+        "DEV",
+        "DSM",
+        "ENG",
+        "GOV",
+        "LDR",
+        "NICHE",
+        "OPS",
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Unknown",
+      "restrictions": "Unknown"
+    },
+    {
+      "framework": "Scale AI",
+      "framework_id": "SCALE_AI",
+      "license_status": "YELLOW",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-DEV-0061",
+        "ATLAS-NICHE-0183",
+        "ATLAS-OPS-0133"
+      ],
+      "categories_affected": [
+        "DEV",
+        "NICHE",
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Unknown",
+      "restrictions": "Unknown"
+    },
+    {
+      "framework": "Stanford HAI",
+      "framework_id": "STANFORD_HAI",
+      "license_status": "YELLOW",
+      "role_mapping_count": 2,
+      "roles_referencing": [
+        "ATLAS-DEV-0058",
+        "ATLAS-RSK-0114"
+      ],
+      "categories_affected": [
+        "DEV",
+        "RSK"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - academic research is copyrighted",
+      "restrictions": "Academic research is copyrighted. Commercial use restricted."
+    },
+    {
+      "framework": "TDWI",
+      "framework_id": "TDWI",
+      "license_status": "YELLOW",
+      "role_mapping_count": 3,
+      "roles_referencing": [
+        "ATLAS-DSM-0070",
+        "ATLAS-ENG-0037",
+        "ATLAS-LDR-0165"
+      ],
+      "categories_affected": [
+        "DSM",
+        "ENG",
+        "LDR"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - educational content is copyrighted",
+      "restrictions": "Educational and research content is copyrighted. Commercial use restricted."
+    },
+    {
+      "framework": "Thoughtworks",
+      "framework_id": "THOUGHTWORKS",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-OPS-0134"
+      ],
+      "categories_affected": [
+        "OPS"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "No - consulting research is proprietary",
+      "restrictions": "Thoughtworks research and frameworks are proprietary. Commercial use restricted."
+    },
+    {
+      "framework": "Vellum",
+      "framework_id": "VELLUM",
+      "license_status": "YELLOW",
+      "role_mapping_count": 1,
+      "roles_referencing": [
+        "ATLAS-ENG-0049"
+      ],
+      "categories_affected": [
+        "ENG"
+      ],
+      "ksa_structural_dependencies": 0,
+      "dependency_depth": "CITATION",
+      "evidence": "Framework is referenced in role source citations but no KSA content derives from framework.",
+      "replaceability": "HIGH",
+      "recommended_action": "license-conditional",
+      "commercial_derivatives": "Unknown",
+      "restrictions": "Unknown"
+    }
+  ],
+  "green_frameworks": [
+    {
+      "framework": "80000 Hours",
+      "framework_id": "80000_HOURS",
+      "role_mapping_count": 1
+    },
+    {
+      "framework": "ATLAS",
+      "framework_id": "ATLAS",
+      "role_mapping_count": 4
+    },
+    {
+      "framework": "BLS-SOC",
+      "framework_id": "BLS_SOC",
+      "role_mapping_count": 3
+    },
+    {
+      "framework": "Data Mesh",
+      "framework_id": "DATA_MESH",
+      "role_mapping_count": 10
+    },
+    {
+      "framework": "dbt Labs",
+      "framework_id": "DBT_LABS",
+      "role_mapping_count": 1
+    },
+    {
+      "framework": "DCWF",
+      "framework_id": "DCWF",
+      "role_mapping_count": 15
+    },
+    {
+      "framework": "DDaT",
+      "framework_id": "DDAT",
+      "role_mapping_count": 8
+    },
+    {
+      "framework": "EU AI Act",
+      "framework_id": "EU_AI_ACT",
+      "role_mapping_count": 10
+    },
+    {
+      "framework": "Evidence Act",
+      "framework_id": "EVIDENCE_ACT",
+      "role_mapping_count": 3
+    },
+    {
+      "framework": "Executive Order",
+      "framework_id": "EXECUTIVE_ORDER",
+      "role_mapping_count": 2
+    },
+    {
+      "framework": "FDA",
+      "framework_id": "FDA",
+      "role_mapping_count": 2
+    },
+    {
+      "framework": "Fed SR 11-7",
+      "framework_id": "FED_SR_11_7",
+      "role_mapping_count": 4
+    },
+    {
+      "framework": "GDPR",
+      "framework_id": "GDPR",
+      "role_mapping_count": 2
+    },
+    {
+      "framework": "HIPAA",
+      "framework_id": "HIPAA",
+      "role_mapping_count": 1
+    },
+    {
+      "framework": "NIST AI RMF",
+      "framework_id": "NIST_AI_RMF",
+      "role_mapping_count": 6
+    },
+    {
+      "framework": "NIST NICE",
+      "framework_id": "NIST_NICE",
+      "role_mapping_count": 4
+    },
+    {
+      "framework": "O*NET",
+      "framework_id": "O*NET",
+      "role_mapping_count": 24
+    },
+    {
+      "framework": "OCC",
+      "framework_id": "OCC",
+      "role_mapping_count": 1
+    },
+    {
+      "framework": "Singapore MAIG",
+      "framework_id": "SINGAPORE_MAIG",
+      "role_mapping_count": 1
+    }
+  ],
+  "summary": {
+    "red_citation_only": 21,
+    "red_structural": 0,
+    "red_hybrid": 0,
+    "safe_to_exclude_without_data_loss": [
+      "BCG",
+      "CDO Magazine",
+      "CMMI-DMM",
+      "COBIT-2019",
+      "DAMA-DMBOK",
+      "Deloitte",
+      "Forrester",
+      "Gartner",
+      "HBR",
+      "IDC",
+      "ISACA",
+      "ISO-23894",
+      "ISO-27001",
+      "ISO-27701",
+      "ISO-38505",
+      "ISO-42001",
+      "ISO-5338",
+      "ISO-8000",
+      "KPMG",
+      "McKinsey",
+      "WEF"
+    ],
+    "require_licensing_or_rewrite": [
+      "DAMA-DMBOK",
+      "Gartner"
+    ],
+    "practitioner_community_assessment": "The Practitioner Community (47 role refs) represents aggregated industry practice, not proprietary framework.",
+    "critical_findings": [
+      "All 21 RED framework dependencies are CITATION-ONLY",
+      "All 322 KSAs are ATLAS-originated (no framework content reuse)",
+      "Role definitions authored by ATLAS; frameworks are post-hoc reference mappings",
+      "Can exclude all RED frameworks with zero content impact",
+      "DAMA-DMBOK (26 refs) and Gartner (14 refs) are highest-value targets for licensing if retention desired"
+    ]
+  }
+}
