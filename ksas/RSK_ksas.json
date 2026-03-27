@@ -1,10 +1,10 @@
 {
   "dataset_id": "ATLAS-KSAS",
   "category_code": "RSK",
-  "ksa_count": 35,
-  "knowledge_count": 14,
-  "skill_count": 8,
-  "task_count": 13,
+  "ksa_count": 44,
+  "knowledge_count": 18,
+  "skill_count": 10,
+  "task_count": 16,
   "schema_version": "1.0.0",
   "ksas": [
     {
@@ -251,6 +251,69 @@
       "statement": "Track data compliance remediation activities, including milestone monitoring, blocker escalation, and closure verification with evidence.",
       "origin_framework": "ATLAS",
       "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "RSK-06.05-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of model risk management regulatory requirements, including Federal Reserve SR 11-7, OCC Bulletin 2011-12, and their supervisory expectations for model definition, materiality thresholds, model governance, and independent validation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "RSK-06.05-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of model validation methodologies, including conceptual soundness review, outcomes analysis, benchmarking, sensitivity analysis, back-testing, and the distinction between challenger model and champion model approaches.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "RSK-06.05-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of model inventory management practices, including model tiering by materiality and complexity, risk classification, lifecycle tracking from development through retirement, and the documentation standards required at each stage.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "RSK-06.05-K-004",
+      "type": "Knowledge",
+      "statement": "Knowledge of AI and machine learning-specific model risk considerations, including data drift, concept drift, black-box explainability requirements, and how traditional model risk frameworks must adapt for non-parametric, ensemble, and foundation models.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "RSK-06.05-S-001",
+      "type": "Skill",
+      "statement": "Skill in designing and maintaining a model risk governance framework, including policy development, role and responsibility definition, escalation protocols, exception management, and board-level model risk reporting.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "RSK-06.05-S-002",
+      "type": "Skill",
+      "statement": "Skill in evaluating model validation findings and remediation plans, assessing whether identified model limitations are acceptable given the model's use case, materiality, and the organization's risk appetite.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "RSK-06.05-T-001",
+      "type": "Task",
+      "statement": "Establish and maintain the enterprise model inventory, ensuring all models \u2014 including AI/ML models, vendor models, and end-user computing models \u2014 are registered, tiered by risk, and subject to appropriate validation cadence.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "RSK-06.05-T-002",
+      "type": "Task",
+      "statement": "Conduct or oversee periodic model risk assessments, produce aggregate model risk reporting for senior management and the board, and ensure timely escalation of material model risk findings to appropriate governance bodies.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "RSK-06.05-T-003",
+      "type": "Task",
+      "statement": "Define and enforce model development standards, including documentation requirements, testing protocols, approval gates, ongoing monitoring expectations, and the criteria for model retirement or replacement.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
     }
   ]
 }

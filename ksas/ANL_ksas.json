@@ -1,10 +1,10 @@
 {
   "dataset_id": "ATLAS-KSAS",
   "category_code": "ANL",
-  "ksa_count": 30,
-  "knowledge_count": 12,
-  "skill_count": 8,
-  "task_count": 10,
+  "ksa_count": 38,
+  "knowledge_count": 15,
+  "skill_count": 10,
+  "task_count": 13,
   "schema_version": "1.0.0",
   "ksas": [
     {
@@ -216,6 +216,62 @@
       "statement": "Produce analytical documentation that meets the evidence standard required for regulatory, audit, or executive decision support contexts.",
       "origin_framework": "ATLAS",
       "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ANL-05.05-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of clinical data management principles, including Good Clinical Practice requirements, ICH E6(R2) guidelines, and the regulatory expectations for data integrity, audit trails, and traceability in clinical trial submissions.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ANL-05.05-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of electronic data capture systems and clinical data management platforms, including database design, edit check programming, query management workflows, and the validation requirements for 21 CFR Part 11 and Annex 11 compliance.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ANL-05.05-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of clinical data standards, including CDISC standards (CDASH, SDTM, ADaM), MedDRA coding conventions, WHO Drug Dictionary, and the submission dataset requirements for FDA and EMA regulatory filings.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ANL-05.05-S-001",
+      "type": "Skill",
+      "statement": "Skill in designing clinical trial databases, including case report form development, edit check logic specification, data validation rules, and the traceability documentation required for regulatory inspection and audit.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ANL-05.05-S-002",
+      "type": "Skill",
+      "statement": "Skill in managing clinical data quality processes, including medical coding review, query resolution, discrepancy management, and the reconciliation of clinical data across electronic data capture, safety databases, and central laboratory systems.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ANL-05.05-T-001",
+      "type": "Task",
+      "statement": "Design, build, and validate clinical trial databases in electronic data capture systems, including CRF specifications, edit check logic, user acceptance testing, and documentation of compliance with study protocol and applicable regulatory requirements.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ANL-05.05-T-002",
+      "type": "Task",
+      "statement": "Manage ongoing data quality during clinical trials, including query generation and resolution, serious adverse event reconciliation, medical coding review, and database lock preparation with documented clean-point verification.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ANL-05.05-T-003",
+      "type": "Task",
+      "statement": "Produce clinical data management documentation, including data management plans, data review plans, CRF completion guidelines, and database lock reports required for regulatory submission packages.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
     }
   ]
 }

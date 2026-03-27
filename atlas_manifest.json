@@ -1,7 +1,7 @@
 {
   "dataset_id": "ATLAS-DATASET",
   "dataset_title": "ATLAS — A Workforce Framework for Talent, Leadership, and Skills in Data and AI",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "schema_version": "1.0.0",
   "status": "development",
   "created_date": "2026-03-26",
@@ -51,7 +51,7 @@
       "description": "Independent KSA entities by category. Each KSA has a stable ksa_id and exists independent of any role.",
       "files": {
         "ANL_ksas.json": {
-          "ksa_count": 30
+          "ksa_count": 38
         },
         "DEV_ksas.json": {
           "ksa_count": 46
@@ -60,10 +60,10 @@
           "ksa_count": 38
         },
         "ENG_ksas.json": {
-          "ksa_count": 53
+          "ksa_count": 69
         },
         "GOV_ksas.json": {
-          "ksa_count": 73
+          "ksa_count": 82
         },
         "LDR_ksas.json": {
           "ksa_count": 24
@@ -72,7 +72,7 @@
           "ksa_count": 23
         },
         "RSK_ksas.json": {
-          "ksa_count": 35
+          "ksa_count": 44
         }
       }
     },
@@ -298,7 +298,7 @@
           "mapping_count": 1
         },
         "role_ksa_ANL.json": {
-          "relationship_count": 30
+          "relationship_count": 38
         },
         "role_ksa_DEV.json": {
           "relationship_count": 46
@@ -307,10 +307,10 @@
           "relationship_count": 38
         },
         "role_ksa_ENG.json": {
-          "relationship_count": 53
+          "relationship_count": 69
         },
         "role_ksa_GOV.json": {
-          "relationship_count": 73
+          "relationship_count": 82
         },
         "role_ksa_LDR.json": {
           "relationship_count": 24
@@ -319,7 +319,7 @@
           "relationship_count": 23
         },
         "role_ksa_RSK.json": {
-          "relationship_count": 35
+          "relationship_count": 44
         }
       }
     },
@@ -356,6 +356,9 @@
         },
         "check_consistency.py": {
           "description": "Pre-commit consistency validation — checks manifest accuracy, framework consistency, cross-references, CHANGELOG currency, and ADR statuses"
+        },
+        "r08_author_gap_ksas.py": {
+          "description": "R08 Priority KSA Authoring — authors 42 KSAs for 5 gap roles and creates role-KSA mappings"
         }
       }
     },
@@ -437,6 +440,12 @@
             },
             "R24-ksa-consistency-audit.json": {
               "description": "R24 audit data and consistency metrics"
+            },
+            "R08-priority-ksa-authoring.md": {
+              "description": "R08 Priority KSA Authoring — 42 KSAs authored for 5 gap roles, PE archetype coverage 92.2% → 100%"
+            },
+            "R08-priority-ksa-authoring.json": {
+              "description": "R08 machine-readable results with per-role KSA counts and impact metrics"
             }
           },
           "adr": {
@@ -514,14 +523,14 @@
   },
   "statistics": {
     "total_roles": 187,
-    "total_ksas": 322,
-    "total_role_ksa_relationships": 322,
+    "total_ksas": 364,
+    "total_role_ksa_relationships": 364,
     "total_frameworks": 70,
     "categories": {
       "ANL": {
         "role_count": 14,
-        "ksa_count": 30,
-        "role_ksa_count": 30
+        "ksa_count": 38,
+        "role_ksa_count": 38
       },
       "DEV": {
         "role_count": 15,
@@ -535,13 +544,13 @@
       },
       "ENG": {
         "role_count": 25,
-        "ksa_count": 53,
-        "role_ksa_count": 53
+        "ksa_count": 69,
+        "role_ksa_count": 69
       },
       "GOV": {
         "role_count": 25,
-        "ksa_count": 73,
-        "role_ksa_count": 73
+        "ksa_count": 82,
+        "role_ksa_count": 82
       },
       "LDR": {
         "role_count": 31,
@@ -565,8 +574,8 @@
       },
       "RSK": {
         "role_count": 24,
-        "ksa_count": 35,
-        "role_ksa_count": 35
+        "ksa_count": 44,
+        "role_ksa_count": 44
       }
     }
   }

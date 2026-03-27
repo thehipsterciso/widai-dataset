@@ -3,6 +3,19 @@
 All notable changes to the ATLAS dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.4.3] - 2026-03-27
+
+### R08 — Priority KSA Authoring for Gap Roles
+- **42 KSAs authored** across 5 roles identified by R01 as PE archetype coverage gaps
+- Model Risk Manager (RSK-0108): 9 KSAs — SR 11-7/OCC model governance, AI/ML model risk adaptation
+- MLOps Engineer (ENG-0041): 8 KSAs — ML pipeline automation, model deployment, drift monitoring
+- DataOps Engineer (ENG-0037): 8 KSAs — pipeline testing, data observability, environment management
+- Data Protection Officer (GOV-0016): 9 KSAs — GDPR Art 37-39, DPIAs, privacy-by-design, supervisory authority liaison
+- Clinical Data Manager (ANL-0092): 8 KSAs — GCP/ICH, CDISC standards, EDC systems, regulatory submissions
+- **PE archetype KSA coverage: 92.2% → 100%** (all 64 archetype roles now fully assessable)
+- Total ATLAS KSAs: 322 → 364
+- Authored via AI-assisted workflow validated by R02 (4.26/5 quality standard)
+
 ## [0.4.2] - 2026-03-27
 
 ### Phase 1 — First Product (R04)

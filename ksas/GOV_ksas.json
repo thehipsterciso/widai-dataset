@@ -1,10 +1,10 @@
 {
   "dataset_id": "ATLAS-KSAS",
   "category_code": "GOV",
-  "ksa_count": 73,
-  "knowledge_count": 25,
-  "skill_count": 16,
-  "task_count": 24,
+  "ksa_count": 82,
+  "knowledge_count": 29,
+  "skill_count": 18,
+  "task_count": 27,
   "schema_version": "1.0.0",
   "ksas": [
     {
@@ -388,7 +388,7 @@
     {
       "ksa_id": "GOV-01.05-A-001",
       "type": "Ability",
-      "statement": "Ability to apply consistent governance standards across heterogeneous AI systems — from simple rule-based automation to large language models — without treating all systems identically.",
+      "statement": "Ability to apply consistent governance standards across heterogeneous AI systems \u2014 from simple rule-based automation to large language models \u2014 without treating all systems identically.",
       "origin_framework": "ATLAS",
       "origin_version": "0.3.0"
     },
@@ -517,6 +517,70 @@
       "statement": "Review and approve data access requests, data sharing agreements, and data use authorizations for data assets within the assigned domain.",
       "origin_framework": "ATLAS",
       "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "GOV-01.07-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of data protection law, including GDPR, CCPA/CPRA, and sector-specific privacy regulations, with emphasis on the legal bases for processing, data subject rights, cross-border transfer mechanisms, and enforcement precedent.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "GOV-01.07-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of the Data Protection Officer's statutory role, responsibilities, and independence requirements under GDPR Articles 37-39, including reporting lines, conflict-of-interest prohibitions, and the distinction between advisory and decision-making authority.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "GOV-01.07-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of Data Protection Impact Assessment methodology, including the conditions that make assessments mandatory, techniques for evaluating risk to individuals, and how to document residual risk and mitigation measures to supervisory authority standards.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "GOV-01.07-K-004",
+      "type": "Knowledge",
+      "statement": "Knowledge of privacy-by-design and privacy-by-default principles, including their application to system architecture, data minimization, purpose limitation, storage limitation, and consent management design patterns.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "GOV-01.07-S-001",
+      "type": "Skill",
+      "statement": "Skill in conducting and reviewing Data Protection Impact Assessments, identifying processing activities that present high risk to individuals, and recommending proportionate technical and organizational measures to mitigate identified risks.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "GOV-01.07-S-002",
+      "type": "Skill",
+      "statement": "Skill in advising on data processing agreements, standard contractual clauses, binding corporate rules, and other cross-border data transfer mechanisms, ensuring compliance with applicable jurisdictional requirements and supervisory guidance.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "GOV-01.07-T-001",
+      "type": "Task",
+      "statement": "Monitor organizational compliance with data protection obligations, conduct internal audits of processing activities, maintain the register of processing activities, and report compliance posture to senior management and supervisory authorities as required.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "GOV-01.07-T-002",
+      "type": "Task",
+      "statement": "Serve as the designated point of contact for supervisory authorities and data subjects exercising their rights, managing inquiries, access requests, erasure requests, and complaints within statutory timeframes.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "GOV-01.07-T-003",
+      "type": "Task",
+      "statement": "Advise on data protection implications of new projects, systems, and processing activities, ensuring privacy considerations are integrated into design and procurement decisions before processing begins.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
     }
-  ]
+  ],
+  "ability_count": 8
 }

@@ -1,10 +1,10 @@
 {
   "dataset_id": "ATLAS-KSAS",
   "category_code": "ENG",
-  "ksa_count": 53,
-  "knowledge_count": 20,
-  "skill_count": 12,
-  "task_count": 17,
+  "ksa_count": 69,
+  "knowledge_count": 27,
+  "skill_count": 16,
+  "task_count": 22,
   "schema_version": "1.0.0",
   "ksas": [
     {
@@ -377,6 +377,119 @@
       "statement": "Manage data platform access controls, including role definitions, permission grants, access reviews, and privilege escalation procedures.",
       "origin_framework": "ATLAS",
       "origin_version": "0.3.0"
+    },
+    {
+      "ksa_id": "ENG-02.06-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of ML pipeline orchestration tools and patterns, including feature stores, experiment tracking, model registries, and the architectural trade-offs between managed and self-hosted ML platforms.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.06-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of model deployment strategies, including batch inference, real-time serving, edge deployment, A/B testing, canary releases, and shadow deployments, and the infrastructure requirements and failure modes of each.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.06-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of model monitoring requirements, including data drift detection, prediction drift, performance degradation metrics, and the alerting thresholds and retraining triggers appropriate for different model types and serving patterns.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.06-K-004",
+      "type": "Knowledge",
+      "statement": "Knowledge of containerization and infrastructure-as-code as applied to ML workloads, including GPU resource management, distributed training job scheduling, and reproducible environment management across development and production.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.06-S-001",
+      "type": "Skill",
+      "statement": "Skill in designing and implementing CI/CD pipelines for ML models, including automated testing at unit, integration, and model quality levels, artifact versioning, and deployment automation with rollback capability.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.06-S-002",
+      "type": "Skill",
+      "statement": "Skill in diagnosing and resolving ML infrastructure failures, including training job crashes, serving latency spikes, resource contention across shared clusters, and data pipeline breakdowns that affect model inputs.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.06-T-001",
+      "type": "Task",
+      "statement": "Build and maintain automated ML pipelines from feature engineering through model training, validation, deployment, and monitoring, ensuring reproducibility and auditability at every stage.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.06-T-002",
+      "type": "Task",
+      "statement": "Implement model monitoring and observability systems that detect data drift, prediction drift, and performance degradation, triggering alerts or automated retraining workflows when defined thresholds are exceeded.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.07-K-001",
+      "type": "Knowledge",
+      "statement": "Knowledge of DataOps principles and practices, including pipeline automation, environment management, data testing strategies, configuration-as-code, and the distinction between DataOps, DevOps, and MLOps as complementary disciplines.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.07-K-002",
+      "type": "Knowledge",
+      "statement": "Knowledge of data pipeline orchestration tools and scheduling patterns, including dependency graph management, failure handling, retry strategies, idempotency requirements, and SLA-driven monitoring.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.07-K-003",
+      "type": "Knowledge",
+      "statement": "Knowledge of data quality testing frameworks, including schema validation, data contract enforcement, freshness checks, volume anomaly detection, and referential integrity verification within automated pipelines.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.07-S-001",
+      "type": "Skill",
+      "statement": "Skill in implementing automated data pipeline testing \u2014 unit tests for individual transformations, integration tests for end-to-end data flows, and regression tests that validate output consistency across pipeline changes.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.07-S-002",
+      "type": "Skill",
+      "statement": "Skill in designing data pipeline observability systems, including lineage tracking, execution monitoring, cost attribution, and root-cause analysis tooling for pipeline failures and data quality incidents.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.07-T-001",
+      "type": "Task",
+      "statement": "Build and maintain automated data pipelines with version-controlled transformations, automated testing, environment parity between development and production, and deployment processes that enable rapid iteration without production risk.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.07-T-002",
+      "type": "Task",
+      "statement": "Implement and operate data observability infrastructure that provides pipeline lineage, execution history, data quality metrics, and proactive alerting for anomalies and SLA violations.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
+    },
+    {
+      "ksa_id": "ENG-02.07-T-003",
+      "type": "Task",
+      "statement": "Manage data environment provisioning and configuration, ensuring development, staging, and production environments maintain parity and that pipeline promotions follow defined testing and approval workflows.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.4.2"
     }
-  ]
+  ],
+  "ability_count": 4
 }
