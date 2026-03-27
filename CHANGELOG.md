@@ -3,6 +3,23 @@
 All notable changes to the ATLAS dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.4.2] - 2026-03-27
+
+### Phase 1 — First Product (R04)
+- **R04 (PE Assessment Methodology):** Complete product specification for PE Workforce Due Diligence Assessment
+- Scoring model: 4-dimension model (Coverage, Capability, Criticality, Concentration Risk) → 3 composite indices (TCI, KPRS, GSI) → single Workforce Readiness Score (WRS, 0-100)
+- Engagement workflow: 30-day, 5-phase process designed for PE deal timelines
+- 4 deliverables defined: Executive Summary, Workforce Capability Map, Gap Analysis & Hiring Priority Plan, Key Person Risk Assessment
+- 5 reference architectures by company profile (Early-Stage through Enterprise)
+- Compensation modeling intentionally deferred as modular add-on (no Lightcast dependency)
+- ADR-011: PE Assessment Scoring Model Design — documents key design decisions and alternatives considered
+
+### Commit Discipline
+- Added CONTRIBUTING.md: Pre-commit checklist specific to ATLAS (update, create, verify phases)
+- Added scripts/check_consistency.py: Automated validation of manifest accuracy, framework consistency, cross-references, CHANGELOG currency
+- Added .github/workflows/consistency.yml: CI gate running consistency checks on every push/PR
+- Fixed documentation drift from Phase 0 (CHANGELOG, README, manifest, ADR-003, ADR-005 all synced)
+
 ## [0.4.1] - 2026-03-26
 
 ### Roadmap & Strategy

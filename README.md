@@ -64,11 +64,11 @@ Every roadmap item has been scored on impact, overlooked probability, and depend
   <img src="docs/assets/roadmap-timeline.svg" alt="Roadmap from validation to scale — five phases, dependency-driven" width="100%"/>
 </p>
 
-The full roadmap contains 25 scored items organized into dependency tiers, each with documented rationale. Ten Architectural Decision Records capture the reasoning behind every major decision — what was chosen, what was considered, and what the consequences are.
+The full roadmap contains 25 scored items organized into dependency tiers, each with documented rationale. Eleven Architectural Decision Records capture the reasoning behind every major decision — what was chosen, what was considered, and what the consequences are.
 
 **Phase 0 — Validate (Weeks 1–2).** Completed 2026-03-26. Four parallel tests executed with results: R01 (Coverage Gap Test) PASS — 92.2% KSA coverage across 5 archetypes validates current data supports a pilot assessment. R02 (AI-Assisted KSA Quality Test) PASS — 4.26/5 average quality score validates AI-assisted authoring can match manual quality. R05 (License Audit) CONDITIONAL — 19 frameworks GREEN for commercial use, all others citation-only, establishes commercial pathway. R24 (Consistency Audit) PASS WITH CONDITIONS — 8.2/10 consistency score across existing KSAs establishes authoring standards. All assumptions validated. See detailed results: [`docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
 
-**Phase 1 — First Product (Weeks 3–8).** Build the PE workforce due diligence assessment — scoring model, engagement workflow, deliverable templates. Identify and engage a pilot partner. Begin populating regulatory context fields for governance and risk roles. Document the methodology.
+**Phase 1 — First Product (Weeks 3–8).** In progress. R04 (PE Assessment Methodology) complete: 4-dimension scoring model (Coverage, Capability, Criticality, Concentration Risk) producing three composite indices and a single Workforce Readiness Score (0-100). 30-day engagement workflow. Four deliverable specifications. Five reference architectures by company profile. See [`methodology/`](methodology/) and [ADR-011](docs/roadmap/adr/ADR-011-pe-assessment-scoring-model.md). Remaining: pilot partner engagement (R03), regulatory context population (R07), priority KSA authoring (R08), methodology documentation expansion (R12).
 
 **Phase 2 — Compliance + Validation (Weeks 9–16).** EU AI Act obligation-to-role mapping ships before August 2026 enforcement. Cross-regulatory role coverage analysis produces the killer feature. Regulatory practitioners validate the mappings. The quick assessment interface makes the methodology repeatable.
 
@@ -82,15 +82,17 @@ The full roadmap contains 25 scored items organized into dependency tiers, each 
 
 ## Current State — Honest Assessment
 
-ATLAS is in active development at version 0.4.1. Transparency about where things stand is not a weakness; it is the credibility this project is built on.
+ATLAS is in active development at version 0.4.2. Transparency about where things stand is not a weakness; it is the credibility this project is built on.
 
 **What exists today:** 187 roles defined across 10 categories. 322 KSAs mapped. 70+ source frameworks with provenance. 333 role-to-framework mappings. Entity-separated architecture designed for graph database ingestion. Schema supporting regulatory context, cross-framework mapping, and quantified assessment.
 
 **Phase 0 Validation: Complete.** The validation sprint has executed with all tests passing or passing-with-conditions. Coverage validation (R01) confirmed 92.2% KSA coverage across 5 archetypes, supporting mid-market team assessments. Quality validation (R02) confirmed AI-assisted authoring can match manual quality (4.26/5 average), reducing KSA completion timeline from 6–12 months to 4–8 weeks. License audit (R05) confirms that 19 GREEN frameworks permit commercial use without restriction; 28 additional frameworks require attribution; all 70 frameworks are citation-only at minimum. The hypothesis — that current coverage is sufficient for a PE assessment pilot — is validated with measurable evidence. Phase 1 (First Product) is cleared for execution.
 
+**Phase 1 First Product: R04 complete.** The PE Workforce Due Diligence Assessment methodology is fully specified — a 4-dimension scoring model producing a single Workforce Readiness Score (0-100), a 30-day engagement workflow, four deliverable templates, and five reference architectures by company profile. Every score traces to observable evidence against ATLAS KSA requirements. The methodology is designed to survive challenge from target company management and be explainable to an investment committee in under five minutes.
+
 **Commercial viability confirmed for GREEN frameworks.** The commercial_status classification established in R05 produces a clean subset of 19 frameworks with unrestricted commercial application. The AI-assisted authoring pathway (validated by R02) enables rapid KSA expansion to additional roles as commercial features are prioritized. Provenance tagging ensures transparency about which KSAs were human-authored versus AI-assisted.
 
-**What does not exist yet:** Full KSA coverage (37 of 187 roles have complete KSAs, but 150 scaffold-only roles can now be authored via AI-assisted workflow). Populated regulatory context fields (in progress for EU AI Act, Phase 2). A shipped assessment product. A completed pilot engagement. An API.
+**What does not exist yet:** Full KSA coverage (37 of 187 roles have complete KSAs, but 150 scaffold-only roles can now be authored via AI-assisted workflow). Populated regulatory context fields (in progress for EU AI Act, Phase 2). A pilot engagement partner (R03). An API.
 
 **What the research says:** The gap between current state and first product has been empirically validated. Results: [`docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
 
@@ -112,6 +114,7 @@ This project does not operate on intuition. The roadmap was produced through a s
 | Schema modifications before enrichment | [ADR-008](docs/roadmap/adr/ADR-008-schema-modifications-before-enrichment.md) | Don't populate fields that will change. Modify the schema first. |
 | Agentic AI as Tier 3 first-mover play | [ADR-009](docs/roadmap/adr/ADR-009-agentic-ai-roles-first-mover.md) | First-mover advantage is real but only holds if definitions are credible. Credibility comes from the beachhead. |
 | Validate before building | [ADR-010](docs/roadmap/adr/ADR-010-validation-sprint-before-product-build.md) | Four tests executed: R01 PASS (92.2% coverage), R02 PASS (4.26/5 quality), R05 CONDITIONAL (19 GREEN frameworks), R24 PASS WITH CONDITIONS (8.2/10 consistency). Go decision for Phase 1 product build. |
+| PE assessment scoring model design | [ADR-011](docs/roadmap/adr/ADR-011-pe-assessment-scoring-model.md) | Evidence-based scoring against ATLAS KSAs, deal-specific criticality, four deliverables without compensation data, reference architectures by company profile, single WRS composite score. |
 
 ---
 
@@ -144,11 +147,12 @@ The executive narrative above tells you why ATLAS exists and where it's going. T
 | [Field-by-Field Assessment](docs/field-by-field-assessment.md) | Use case analysis and modification verdicts for every schema field |
 | [Gap Analysis](docs/gap-analysis.md) | 187-role inventory with coverage status against source frameworks |
 | [Roadmap Analysis](docs/roadmap/ensemble-brainstorm-atlas.md) | Full five-pass strategic analysis with research citations |
-| [Architectural Decision Records](docs/roadmap/adr/) | 10 ADRs documenting rationale for every major roadmap decision |
+| [Architectural Decision Records](docs/roadmap/adr/) | 11 ADRs documenting rationale for every major roadmap decision |
+| [PE Assessment Methodology](methodology/R04-pe-assessment-methodology.md) | Scoring model, engagement workflow, and deliverable specifications for the PE workforce due diligence product |
 | [NICE Boundary Scoping](docs/nice-boundary-scoping.md) | How ATLAS relates to NIST NICE for cybersecurity boundary roles |
 
 ---
 
 <p align="center">
-  <sub>Version 0.4.0 · Copyright 2026 Thomas Jones · All rights reserved</sub>
+  <sub>Version 0.4.2 · Copyright 2026 Thomas Jones · All rights reserved</sub>
 </p>

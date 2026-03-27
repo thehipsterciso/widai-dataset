@@ -1,7 +1,7 @@
 {
   "dataset_id": "ATLAS-DATASET",
   "dataset_title": "ATLAS — A Workforce Framework for Talent, Leadership, and Skills in Data and AI",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "schema_version": "1.0.0",
   "status": "development",
   "created_date": "2026-03-26",
@@ -353,6 +353,26 @@
         },
         "update_framework_licensing.py": {
           "description": "R05 Licensing Update — applies commercial_status classification and citation requirements to frameworks"
+        },
+        "check_consistency.py": {
+          "description": "Pre-commit consistency validation — checks manifest accuracy, framework consistency, cross-references, CHANGELOG currency, and ADR statuses"
+        }
+      }
+    },
+    "methodology": {
+      "description": "Product methodology specifications — scoring models, engagement workflows, deliverable templates, and human-readable methodology documents.",
+      "files": {
+        "pe-assessment-scoring-model.json": {
+          "description": "R04 PE Assessment Scoring Model — 4 dimensions (Coverage, Capability, Criticality, Concentration Risk), 3 composite indices (TCI, KPRS, GSI), single Workforce Readiness Score (WRS, 0-100)"
+        },
+        "pe-assessment-workflow.json": {
+          "description": "R04 PE Assessment Engagement Workflow — 30-day, 5-phase process designed for PE deal timelines with phase gates and deliverable milestones"
+        },
+        "pe-assessment-deliverables.json": {
+          "description": "R04 PE Assessment Deliverables — 4 deliverable specifications (Executive Summary, Workforce Capability Map, Gap Analysis & Hiring Priority Plan, Key Person Risk Assessment)"
+        },
+        "R04-pe-assessment-methodology.md": {
+          "description": "R04 PE Assessment Methodology — human-readable methodology document for PE operating partners describing the complete assessment approach"
         }
       }
     },
@@ -420,7 +440,7 @@
             }
           },
           "adr": {
-            "description": "Architectural Decision Records — 10 ADRs documenting rationale, alternatives, and consequences for major roadmap decisions",
+            "description": "Architectural Decision Records — 11 ADRs documenting rationale, alternatives, and consequences for major roadmap decisions",
             "files": {
               "README.md": {
                 "description": "ADR index and overview"
@@ -454,6 +474,9 @@
               },
               "ADR-010-validation-sprint-before-product-build.md": {
                 "description": "Validate before building — Phase 0 validation sprint completed with all tests passing or conditional passing"
+              },
+              "ADR-011-pe-assessment-scoring-model.md": {
+                "description": "PE Assessment Scoring Model Design — documents 5 key design choices for the R04 scoring methodology, alternatives considered, and consequences"
               }
             }
           }
@@ -466,6 +489,16 @@
       "description": "Framework Licensing Attribution — per-framework licensing notices, commercial_status classification, and required citations for R05 GREEN/YELLOW/RED frameworks",
       "date_created": "2026-03-26",
       "related_to": "R05 Source Framework License Audit"
+    },
+    "CONTRIBUTING.md": {
+      "description": "Pre-commit discipline checklist — Section A (Update 9 doc surfaces), Section B (Create 7 new doc types), Section C (Verify via check_consistency.py). Commit message convention with roadmap and ADR references.",
+      "date_created": "2026-03-27",
+      "related_to": "Commit discipline system"
+    },
+    ".github/workflows/consistency.yml": {
+      "description": "CI gate — runs check_consistency.py on every push and PR to main/develop",
+      "date_created": "2026-03-27",
+      "related_to": "Commit discipline system"
     }
   },
   "commercial_audit": {
