@@ -3,6 +3,38 @@
 All notable changes to the ATLAS dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.5.3] - 2026-03-31
+
+### Phase 1B: Framework Prioritization
+
+**Framework prioritization complete** — 70 source frameworks assessed for STRM eligibility.
+
+**What changed:**
+- 34 frameworks classified as STRM-eligible (define KSA-equivalent concepts)
+- 36 frameworks classified as not eligible (job aggregators, consultancy research, vendor docs, publications)
+- 4-tier prioritized execution sequence established: Tier 1 (O*NET, NIST NICE, DCWF, DDAT), Tier 2 (EU AI Act, NIST AI RMF, FED SR 11-7, GDPR, DAMA DMBOK), Tier 3 (7 frameworks), Tier 4 (18 specialized)
+- Governs ADR-014 Phase 1C execution order
+
+### Phase 1C: STRM-001 — O*NET Database 30.2 (ADR-015)
+
+**First STRM complete** — O*NET Content Model 30.2 mapped against ATLAS KSA Pool v0.5.2.
+
+**Why:** O*NET is the largest occupational competency database (923 occupations, 169 content model elements). First STRM establishes methodology rhythm and validates baseline KSA pool against the broadest general-purpose competency taxonomy available.
+
+**What changed:**
+- 126 in-scope O*NET Focal Document Elements evaluated exhaustively against 497 ATLAS KSAs
+- Relationship distribution: 82 Intersects with (65%), 23 No relationship (18%), 17 Superset of (14%), 4 Equal (3%)
+- Mean Strength of Relationship: 5.2/10
+- 6 gap signals identified (foundational communication, continuous learning, service orientation, project management, conflict resolution, ethical reasoning foundations)
+- Gap signals cluster in foundational professional skills, not domain-specific technical areas — validating Phase 1A enrichment quality
+- QA/QC: PASS on all criteria
+
+**New files:** `sources/onet_30_2_citation.json`, `sources/onet_30_2/` (raw database), `strm/onet/use_case.json`, `strm/onet/strm_mapping.json`, `strm/onet/qa_qc_report.json`, `strm/issues/STRM-001-ONET-gaps.json`
+
+**New ADRs:** ADR-015 (STRM — O*NET Database 30.2)
+
+**New documentation:** `docs/roadmap/phase-1b-framework-prioritization.md`
+
 ## [0.5.2] - 2026-03-31
 
 ### Phase 1A: Baseline KSA Enrichment

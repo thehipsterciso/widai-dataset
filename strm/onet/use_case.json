@@ -1,0 +1,94 @@
+{
+  "strm_id": "STRM-001-ONET",
+  "framework_id": "O*NET",
+  "framework_version": "30.2",
+  "atlas_ksa_pool_version": "0.5.2",
+  "atlas_ksa_pool_size": 497,
+  "execution_date": "2026-03-31",
+  "priority": 1,
+  "tier": 1,
+
+  "use_case_per_ir8477_section3": {
+    "target_audience": "ATLAS framework developers, PE assessment practitioners, and data/AI workforce planners who need to understand how ATLAS KSAs relate to the U.S. government's most comprehensive occupational competency database. Secondary audience: stakeholders evaluating ATLAS methodological rigor.",
+
+    "why_this_mapping": "O*NET is the largest occupational competency database in existence (923 occupations, 169 leaf-level content model elements). It is referenced by 25 ATLAS roles — the highest reference count of any framework. This STRM serves three purposes: (1) validate ATLAS KSA pool completeness against a comprehensive general-purpose competency taxonomy, (2) identify gaps where O*NET defines competencies relevant to data/AI work that ATLAS does not yet cover, (3) establish the STRM methodology rhythm — O*NET as first framework sets the quality standard for all subsequent STRMs.",
+
+    "concept_types_mapped": {
+      "focal_document": {
+        "source": "O*NET Content Model 30.2",
+        "concept_types": [
+          "Knowledge areas (2.C.*) — 33 elements",
+          "Basic Skills (2.A.*) — 10 elements",
+          "Cross-Functional Skills (2.B.*) — 25 elements",
+          "Abilities (1.A.*) — 52 elements (21 cognitive in scope, 31 physical/psychomotor/sensory excluded)",
+          "Generalized Work Activities (4.A.*) — 41 elements"
+        ],
+        "total_fdes_in_scope": 130,
+        "total_fdes_excluded": 39,
+        "exclusion_rationale": "O*NET Psychomotor Abilities (1.A.2.*: 12 elements), Physical Abilities (1.A.3.*: 9 elements), and Sensory Abilities (1.A.4.*: 12 elements) are excluded. ATLAS covers data and AI workforce roles — knowledge work occupations where physical, psychomotor, and sensory abilities are not differentiating competencies. Excluding these prevents diluting the STRM with 39 'No relationship' results that carry no analytical value. Physical work activities (4.A.3.a.*: 4 elements) are similarly excluded."
+      },
+      "reference_document": {
+        "source": "ATLAS KSA Pool v0.5.2",
+        "concept_types": [
+          "Knowledge (K) — domain-organized",
+          "Skills (S) — domain-organized",
+          "Tasks (T) — domain-organized",
+          "Abilities (A) — domain-organized"
+        ],
+        "total_reference_elements": 497,
+        "domains": 12
+      }
+    },
+
+    "direction_of_mapping": "Focal → Reference. Each O*NET content model element (focal) is evaluated against the ATLAS KSA pool (reference). An O*NET element with 'No relationship' to any ATLAS KSA indicates a potential gap in ATLAS coverage.",
+
+    "exhaustiveness_level": "Exhaustive within scope. Every in-scope O*NET FDE is evaluated. For each FDE, the most relevant ATLAS KSA is identified (best match). Where multiple ATLAS KSAs relate to a single O*NET element, the strongest relationship is recorded as primary with secondary relationships noted in rationale.",
+
+    "rationale_type": "Semantic (primary). O*NET and ATLAS use different vocabularies to describe overlapping competency domains. O*NET uses occupation-general language ('Knowledge of business and management principles...'); ATLAS uses role-specific language within data/AI context ('Knowledge of data governance policy frameworks...'). Syntactic matching would undercount relationships due to vocabulary divergence. Functional rationale is used as secondary where semantic comparison is insufficient — particularly for Work Activities where the functional outcome matters more than the descriptive language.",
+
+    "rationale_justification": "O*NET is a general-purpose occupational taxonomy. ATLAS is a domain-specific workforce framework for data and AI. The concept overlap is real but the language diverges significantly. Semantic rationale allows evaluating whether two differently-worded concepts describe the same underlying competency. This is the standard SCF approach for cross-framework STRM where vocabulary differs but domain overlaps."
+  },
+
+  "scope_decisions": {
+    "abilities_in_scope": [
+      {"id": "1.A.1.a.1", "name": "Oral Comprehension"},
+      {"id": "1.A.1.a.2", "name": "Written Comprehension"},
+      {"id": "1.A.1.a.3", "name": "Oral Expression"},
+      {"id": "1.A.1.a.4", "name": "Written Expression"},
+      {"id": "1.A.1.b.1", "name": "Fluency of Ideas"},
+      {"id": "1.A.1.b.2", "name": "Originality"},
+      {"id": "1.A.1.b.3", "name": "Problem Sensitivity"},
+      {"id": "1.A.1.b.4", "name": "Deductive Reasoning"},
+      {"id": "1.A.1.b.5", "name": "Inductive Reasoning"},
+      {"id": "1.A.1.b.6", "name": "Information Ordering"},
+      {"id": "1.A.1.b.7", "name": "Category Flexibility"},
+      {"id": "1.A.1.c.1", "name": "Mathematical Reasoning"},
+      {"id": "1.A.1.c.2", "name": "Number Facility"},
+      {"id": "1.A.1.d.1", "name": "Memorization"},
+      {"id": "1.A.1.e.1", "name": "Speed of Closure"},
+      {"id": "1.A.1.e.2", "name": "Flexibility of Closure"},
+      {"id": "1.A.1.e.3", "name": "Perceptual Speed"},
+      {"id": "1.A.1.f.1", "name": "Spatial Orientation"},
+      {"id": "1.A.1.f.2", "name": "Visualization"},
+      {"id": "1.A.1.g.1", "name": "Selective Attention"},
+      {"id": "1.A.1.g.2", "name": "Time Sharing"}
+    ],
+    "abilities_excluded": {
+      "psychomotor": ["1.A.2.a.1", "1.A.2.a.2", "1.A.2.a.3", "1.A.2.b.1", "1.A.2.b.2", "1.A.2.b.3", "1.A.2.b.4", "1.A.2.c.1", "1.A.2.c.2", "1.A.2.c.3"],
+      "physical": ["1.A.3.a.1", "1.A.3.a.2", "1.A.3.a.3", "1.A.3.a.4", "1.A.3.b.1", "1.A.3.c.1", "1.A.3.c.2", "1.A.3.c.3", "1.A.3.c.4"],
+      "sensory": ["1.A.4.a.1", "1.A.4.a.2", "1.A.4.a.3", "1.A.4.a.4", "1.A.4.a.5", "1.A.4.a.6", "1.A.4.a.7", "1.A.4.b.1", "1.A.4.b.2", "1.A.4.b.3", "1.A.4.b.4", "1.A.4.b.5"]
+    },
+    "work_activities_excluded": ["4.A.3.a.1", "4.A.3.a.2", "4.A.3.a.3", "4.A.3.a.4"],
+    "work_activities_exclusion_note": "Physical work activities (Performing General Physical Activities, Handling and Moving Objects, Controlling Machines and Processes, Operating Vehicles) excluded for same rationale as physical abilities."
+  },
+
+  "fde_count_summary": {
+    "knowledge": 33,
+    "basic_skills": 10,
+    "cross_functional_skills": 25,
+    "cognitive_abilities": 21,
+    "work_activities": 37,
+    "total_in_scope": 126,
+    "excluded_physical_psychomotor_sensory": 43
+  }
+}

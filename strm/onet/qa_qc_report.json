@@ -1,0 +1,89 @@
+{
+  "strm_id": "STRM-001-ONET",
+  "qa_date": "2026-03-31",
+  "reviewer": "Thomas Jones / The Hipster CISO",
+  "status": "PASS",
+
+  "completeness_check": {
+    "total_fdes_in_scope": 126,
+    "total_fdes_mapped": 126,
+    "fdes_with_blank_relationship": 0,
+    "fdes_with_blank_rationale": 0,
+    "result": "PASS — All 126 in-scope FDEs evaluated. Zero blanks."
+  },
+
+  "rationale_consistency_check": {
+    "default_rationale": "Semantic",
+    "semantic_count": 85,
+    "functional_count": 41,
+    "syntactic_count": 0,
+    "rationale_type_justification": "Semantic used as default per use case (vocabulary divergence between general-purpose O*NET and domain-specific ATLAS). Functional used for 41 FDEs where the outcome/activity matters more than vocabulary similarity — particularly for Abilities (cognitive traits) and Work Activities (behavioral descriptions). No syntactic matches expected given vocabulary divergence.",
+    "result": "PASS — Rationale types consistently applied per use case justification."
+  },
+
+  "relationship_distribution": {
+    "intersects_with": {"count": 82, "pct": 65.1},
+    "no_relationship": {"count": 23, "pct": 18.3},
+    "superset_of": {"count": 17, "pct": 13.5},
+    "equal": {"count": 4, "pct": 3.2},
+    "subset_of": {"count": 0, "pct": 0.0},
+    "analysis": "Distribution is consistent with expectations for a general-purpose framework (O*NET) mapped against a domain-specific framework (ATLAS). High 'Intersects with' rate (65%) reflects O*NET's broader scope intersecting with ATLAS's deeper domain coverage. 'Superset of' (14%) correctly identifies where O*NET defines broader competencies that encompass specific ATLAS KSAs. 'Equal' (3%) found only for work activities with direct ATLAS equivalents (data analysis, strategy development, team building, coaching). Zero 'Subset of' is correct — O*NET elements are always equal to or broader than individual ATLAS KSAs due to O*NET's occupation-general scope.",
+    "result": "PASS — Distribution is analytically coherent."
+  },
+
+  "strength_distribution": {
+    "n": 103,
+    "mean": 5.2,
+    "median": 5,
+    "min": 3,
+    "max": 9,
+    "band_1_3": {"count": 13, "pct": 12.6},
+    "band_4_5": {"count": 50, "pct": 48.5},
+    "band_6_7": {"count": 35, "pct": 34.0},
+    "band_8_10": {"count": 5, "pct": 4.9},
+    "analysis": "Mean strength of 5.2 reflects the vocabulary and scope gap between a general-purpose taxonomy and a domain-specific framework. Strongest matches (8-9) are in areas where O*NET work activities directly map to ATLAS core activities (data analysis, compliance evaluation, coaching, team development, strategy development). Weakest matches (3) are where O*NET physical-world concepts have only metaphorical data-world parallels.",
+    "result": "PASS — Strength scores are analytically defensible."
+  },
+
+  "gap_issue_quality": {
+    "total_gap_signals": 6,
+    "all_have_triggering_fdes": true,
+    "all_have_domains_searched": true,
+    "all_have_nearest_miss": true,
+    "all_have_synthesis_recommendation": true,
+    "severity_distribution": {"moderate": 3, "low": 3},
+    "analysis": "Six thematic gap clusters identified from 8 individual FDE gap signals. All gap issues include required fields per ADR-014 Step 4. Gaps are appropriately categorized: foundational skills gaps (communication, project management, continuous learning) vs. dispositional gaps (service orientation, conflict resolution) vs. foundational knowledge gaps (ethical reasoning). Synthesis recommendations correctly defer resolution and identify cross-framework validation criteria.",
+    "result": "PASS — Gap issues are complete and appropriately scoped."
+  },
+
+  "no_relationship_audit": {
+    "total_no_relationship": 23,
+    "intentionally_out_of_scope": 23,
+    "in_scope_gaps": 0,
+    "categories": {
+      "physical_science_knowledge": ["Physics", "Chemistry", "Biology", "Geography"],
+      "physical_domain_knowledge": ["Food Production", "Building and Construction", "Mechanical", "Transportation"],
+      "healthcare": ["Medicine and Dentistry", "Therapy and Counseling"],
+      "general_office": ["Administrative", "Performing Administrative Activities"],
+      "commercial": ["Sales and Marketing"],
+      "arts_humanities": ["Foreign Language", "Fine Arts", "History and Archeology"],
+      "cognitive_baseline": ["Memorization", "Selective Attention", "Time Sharing", "Spatial Orientation"],
+      "physical_activities": ["Repairing and Maintaining Mechanical Equipment"],
+      "public_facing": ["Assisting and Caring for Others", "Performing for or Working Directly with the Public"]
+    },
+    "analysis": "All 23 'No relationship' findings are correctly identified as intentionally out of ATLAS scope. No false negatives detected — every No relationship element is either a physical-world competency, a domain unrelated to data/AI work, a basic cognitive trait not differentiating for professionals, or a general office/commercial skill. None represent gaps in ATLAS coverage.",
+    "result": "PASS — All No relationship findings are justified."
+  },
+
+  "overall_assessment": {
+    "result": "PASS",
+    "summary": "STRM-001-ONET meets all QA/QC criteria. 126 FDEs exhaustively evaluated with documented rationale. Relationship types and strength scores are analytically coherent. Six gap signals identified with complete issue context and synthesis recommendations. The O*NET STRM successfully validates ATLAS's core domain coverage while identifying targeted enrichment opportunities in foundational professional skills.",
+    "key_findings": [
+      "ATLAS has strong coverage of O*NET's data-relevant competencies — 103 of 126 FDEs have documented relationships.",
+      "The 'Intersects with' dominance (65%) correctly reflects the general-vs-specific framework relationship.",
+      "Four 'Equal' relationships confirm ATLAS covers core work activities (data analysis, strategy, team development, coaching) at equivalent depth.",
+      "Gap signals cluster around foundational professional skills (communication, project management, continuous learning) rather than domain-specific technical gaps — suggesting the v0.5.2 domain pool is technically comprehensive.",
+      "No ATLAS KSA domains were found to be systematically underrepresented in the O*NET mapping."
+    ]
+  }
+}
