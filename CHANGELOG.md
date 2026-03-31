@@ -3,6 +3,26 @@
 All notable changes to the ATLAS dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.5.1] - 2026-03-31
+
+### STRM-Based KSA Enrichment Methodology (ADR-014)
+
+**Methodology redesign** — KSA enrichment approach replaced from bulk AI-assisted authoring to NIST IR 8477 Set Theory Relationship Mapping (STRM) framework-by-framework evidence-based methodology.
+
+**Why:** Adversarial review on 2026-03-31 identified that bulk KSA authoring — even with the Adversarial Quality Gate (AQG-v1) — produces KSAs without provenance chain, identifies gaps by intuition rather than systematic framework comparison, and determines cross-cutting KSAs by assumption rather than multi-framework evidence. The KSA pool is the core intellectual property of ATLAS. Every commercial product scores against it. It requires the same methodological rigor as the roadmap itself.
+
+**What changed:**
+- ADR-014 adopted: STRM-based enrichment supersedes ADR-012 Section 4 (Dataset Enrichment Sprint)
+- Roadmap Phase 1 restructured into four sub-phases: 1A (Baseline Enrichment), 1B (Framework Prioritization), 1C (Per-Framework STRM Cycle), 1D (Synthesis)
+- STRM deliverable format defined: NIST IR 8477 Table 5 six-column structure + Strength of Relationship (ATLAS extension from SCF practice)
+- Seven deliverables per framework: canonical source, use case, STRM mapping data, per-FDE rationale files, gap issue register, QA/QC report, ADR
+- New repo directories planned: `sources/`, `strm/`, `strm/issues/`
+- Synthesis rules intentionally deferred until all framework STRMs are complete — rules emerge from evidence, not before it
+
+**New ADRs:** ADR-014 (STRM-Based KSA Enrichment Methodology)
+
+**Roadmap impact:** R03 (Pilot Engagement) remains blocked until enrichment completes via post-STRM synthesis. R08 (KSA Authoring) superseded — authoring now driven by STRM evidence. Phase 2 (First Product + Compliance) follows Phase 1D (Synthesis).
+
 ## [0.5.0] - 2026-03-27
 
 ### BREAKING: Shared-Pool KSA Architecture (ADR-013)

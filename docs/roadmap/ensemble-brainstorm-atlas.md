@@ -412,17 +412,104 @@ Analysis of typical mid-market data/AI team (11-30 people):
 
 ## ROADMAP SUMMARY
 
-### Phase 0: Validation Sprint (Weeks 1-2)
+### Phase 0: Validation Sprint (Weeks 1-2) — ✅ COMPLETE
 Run R01, R02, R05, R24 in parallel. These four items determine the shape of everything that follows. If R01 shows current data supports a pilot, we build toward UC1 immediately. If R02 shows AI-assisted authoring works, the KSA completion timeline compresses. If R05 finds licensing issues, the commercial model changes. If R24 finds quality inconsistencies, we fix before scaling.
 
-### Phase 1: First Product (Weeks 3-8)
-Build the PE assessment methodology (R04) while populating regulatory context (R07) and documenting the methodology (R12). Identify and engage the pilot partner (R03). Author priority KSAs informed by the gap test (R08). This phase produces: a shippable PE workforce due diligence assessment backed by ATLAS data.
+**Result:** All four tests passed. Go decision for Phase 1. KSA depth deficiency discovered post-sprint (ADR-012), leading to architectural correction (ADR-013, v0.5.0) and methodology redesign (ADR-014).
 
-### Phase 2: Compliance + Validation (Weeks 9-16)
-EU AI Act obligation mapping (R06) and cross-regulatory analysis (R11) while the PE pilot runs. Regulatory practitioner validation (R14). Quick assessment interface (R25). This phase produces: EU AI Act compliance role mapping product + pilot results from UC1.
+### Phase 1: KSA Enrichment via STRM (Revised 2026-03-31, ADR-014)
 
-### Phase 3: Expansion (Weeks 17-24)
-SR 11-7 org design (R09), agentic AI roles (R10), CDAIO toolkit (R15). Informed by pilot feedback and compliance market validation. This phase produces: three additional products built on validated foundations.
+Phase 1 was originally scoped as "First Product (Weeks 3-8)" with direct KSA authoring (R08). ADR-012 identified a depth deficiency. ADR-014 supersedes the enrichment approach with NIST IR 8477 Set Theory Relationship Mapping, replacing bulk authoring with a framework-by-framework evidence-based methodology.
 
-### Phase 4: Scale (Weeks 25+)
-API, graph database, full KSA coverage, analyst engagement. Funded by Phase 1-3 revenue.
+**Phase 1 is now four sub-phases:**
+
+#### Phase 1A: Baseline KSA Enrichment
+First-pass enrichment of the 12 domain KSA pools from current depth (5-19 KSAs/role, 363 total) to a reasonable baseline using domain expertise. This pass is explicitly pre-validation — STRM will validate, correct, and refine. The goal is sufficient pool depth for STRM to produce meaningful signal (not overwhelmingly "No relationship").
+
+**Parallel work (not blocked by STRM):**
+- R04: PE Assessment Methodology — ✅ COMPLETE
+- R07: Regulatory context population (GOV, RSK categories)
+- R12: Methodology documentation
+
+#### Phase 1B: Framework Prioritization
+Assess which of the 70+ ATLAS source frameworks contain KSA-equivalent concept types at sufficient granularity for STRM. Not all do — many are role-level references only (e.g., LinkedIn job postings, Glassdoor titles). Produce a prioritized execution sequence.
+
+**Criteria:** KSA-equivalent concept types, machine-readable data availability, ATLAS role coverage breadth, strategic relevance to use cases.
+
+**Deliverable:** Prioritized framework list documented here.
+
+#### Phase 1C: Per-Framework STRM Cycle
+For each framework in priority order, execute the full STRM cycle:
+
+1. **Use case documentation** (NIST IR 8477 Section 3) — audience, purpose, concept types, rationale type, direction, exhaustiveness
+2. **Canonical source acquisition** — exact version stored in `sources/` or version-pinned citation
+3. **STRM mapping execution** — every focal document element mapped against ATLAS KSA pool per Table 5 format + Strength column (ATLAS extension)
+4. **Per-FDE rationale files** — independent file objects preserving full reasoning at mapping-level resolution
+5. **Gap issue registration** — every "No relationship" logged with context (nearest miss, suggested domain, authoring guidance)
+6. **QA/QC gate** — complete review before proceeding to next framework
+7. **ADR documentation** — summary statistics, key findings, anomalies, gap thematic analysis
+
+**Seven deliverables per framework. No framework STRM proceeds until the prior one is QA'd and committed.**
+
+**STRM format** (per NIST IR 8477 Table 5 + ATLAS extension):
+
+| Column | Source |
+|--------|--------|
+| Focal Document Element (ID) | NIST IR 8477 |
+| Focal Document Element Description | NIST IR 8477 |
+| Rationale (Syntactic / Semantic / Functional) | NIST IR 8477 |
+| Relationship (Subset of / Intersects with / Equal / Superset of / No relationship) | NIST IR 8477 |
+| Reference Document Element (ID) — ATLAS KSA ID | NIST IR 8477 |
+| Reference Document Element Description — ATLAS KSA Statement | NIST IR 8477 |
+| Strength of Relationship (1-10) | ATLAS extension (from SCF practice) |
+
+**Principles governing Phase 1C:**
+- No synthesis before all frameworks are mapped
+- No rushing through framework evaluations — quality over motion
+- No deviation from NIST IR 8477 methodology
+- Rationale preserved at full resolution (independent file objects)
+- Every enriched KSA must trace to STRM evidence
+
+#### Phase 1D: Synthesis
+After all framework STRMs are complete and QA'd:
+
+- Accumulated gap issues analyzed across all frameworks
+- Cross-cutting KSAs identified from multi-framework alignment evidence
+- Synthesis rules defined from observed evidence patterns — **not before**
+- Enriched KSA pool constructed from synthesis findings
+- Cross-STRM consistency validated (transitivity checks)
+- Synthesis methodology documented in its own ADR
+
+**The synthesis rules are intentionally undefined at this stage.** Defining them before evidence collection would bias the STRM evaluation. The rules emerge from the data.
+
+**Phase 1 produces:** An externally validated, STRM-backed KSA pool at industry-standard depth with full provenance chain from every KSA to its source framework evidence.
+
+### Phase 2: First Product + Compliance (Post-Synthesis)
+PE pilot engagement (R03 — unblocked by enrichment completion). EU AI Act obligation mapping (R06). Cross-regulatory analysis (R11). Regulatory practitioner validation (R14). Quick assessment interface (R25). R04 Coverage dimension recalibrated against enriched pool.
+
+### Phase 3: Expansion
+SR 11-7 org design (R09), agentic AI roles (R10), CDAIO toolkit (R15). Informed by pilot feedback and compliance market validation.
+
+### Phase 4: Scale
+API, graph database, full KSA coverage, analyst engagement. Funded by Phase 2-3 revenue.
+
+### New Repository Structure (Phase 1C onward)
+
+```
+atlas-dataset/
+├── sources/                          # Canonical source documents (version-pinned)
+├── strm/                             # STRM deliverables
+│   ├── {framework}/
+│   │   ├── use_case.json             # IR 8477 Section 3 documentation
+│   │   ├── strm_mapping.json         # Table 5 + Strength mapping data
+│   │   ├── rationale/                # Per-FDE reasoning files
+│   │   └── qa_qc_report.json         # QA/QC evidence
+│   └── issues/                       # Accumulated gap issues across all STRMs
+├── ksas/                             # Domain-based KSA pools (enriched post-synthesis)
+├── mappings/                         # Role-KSA mappings (rebuilt post-synthesis)
+├── roles/                            # Role definitions
+├── frameworks/                       # Framework metadata
+├── methodology/                      # R04, R12 methodology docs
+├── docs/roadmap/adr/                 # Architectural Decision Records
+└── ...
+```
