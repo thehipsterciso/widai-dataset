@@ -12,7 +12,7 @@ These Architectural Decision Records document the reasoning behind every major r
 
 The ADRs are derived from a systematic five-pass analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping) conducted against ATLAS's six priority use cases, supported by five parallel research briefs covering PE due diligence, EU AI Act compliance, model risk governance, agentic AI workforce design, and competitive taxonomy landscape.
 
-**Status:** All ADRs are Proposed. They are presented for review before any build work begins.
+**Status:** ADRs 001–010 are Proposed (pre-Phase 0). ADRs 011–015 are Accepted and executed.
 
 ---
 
@@ -33,6 +33,8 @@ The ADRs are derived from a systematic five-pass analysis (Forward Decomposition
 | [ADR-011](ADR-011-pe-assessment-scoring-model.md) | PE Assessment Scoring Model Design | 4-dimension scoring model (Coverage, Capability, Criticality, Concentration Risk) → WRS 0-100 | Accepted |
 | [ADR-012](ADR-012-ksa-depth-correction.md) | KSA Depth Correction | External benchmarking, DCI metric, adversarial quality gate — corrects R02 validation gap | Accepted |
 | [ADR-013](ADR-013-shared-pool-ksa-architecture.md) | Shared-Pool KSA Architecture | Domain-based KSA pool with many-to-many role mappings — replaces role-centric model | Accepted |
+| [ADR-014](ADR-014-strm-based-ksa-enrichment.md) | STRM-Based KSA Enrichment Methodology | NIST IR 8477 Set Theory Relationship Mapping for evidence-based KSA pool enrichment | Accepted |
+| [ADR-015](ADR-015-strm-onet.md) | STRM — O*NET Database 30.2 | First framework STRM: 126 FDEs mapped, 6 gap signals, QA/QC PASS | Accepted |
 
 ---
 
@@ -43,8 +45,8 @@ The ADRs collectively define the logic of the phased roadmap:
 **Phase 0: Validation Sprint (Weeks 1-2)** — Governed by ADR-010
 Run R01, R02, R05, R24. Results may reshape ADR-003 (data coverage) and ADR-005 (AI authoring).
 
-**Phase 1: First Product (Weeks 3-8)** — Governed by ADR-002, ADR-003, ADR-007
-Build PE assessment methodology. Ship on current data. Position as service.
+**Phase 1: First Product (Weeks 3-8)** — Governed by ADR-002, ADR-003, ADR-007, ADR-012, ADR-013, ADR-014
+Build PE assessment methodology. Ship on current data. Position as service. KSA depth correction (ADR-012) → shared-pool architecture (ADR-013) → STRM-based enrichment (ADR-014). Framework STRMs execute per ADR-014 Phase 1C, documented individually (ADR-015+).
 
 **Phase 2: Compliance + Validation (Weeks 9-16)** — Governed by ADR-004, ADR-006
 EU AI Act role mapping. Cross-regulatory analysis. Practitioner validation.
@@ -59,6 +61,6 @@ API, graph database, full coverage. Informed by all prior phases.
 
 ## How to Read These
 
-Start with ADR-001 (roadmap sequencing logic) and ADR-010 (validation sprint). These frame the overall approach. Then read the use-case-specific ADRs (002, 004, 009) and the cross-cutting decisions (003, 005, 006, 007, 008) in any order.
+Start with ADR-001 (roadmap sequencing logic) and ADR-010 (validation sprint). These frame the overall approach. Then read the use-case-specific ADRs (002, 004, 009) and the cross-cutting decisions (003, 005, 006, 007, 008) in any order. ADR-012 through ADR-015 document the KSA enrichment methodology evolution — read these in sequence.
 
 Each ADR is self-contained but references other ADRs where decisions interact. The supporting analysis lives in [ensemble-brainstorm-atlas.md](../ensemble-brainstorm-atlas.md).

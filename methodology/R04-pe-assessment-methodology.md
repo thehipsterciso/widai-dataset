@@ -353,7 +353,7 @@ Every deliverable notes confidence levels so you know where to weight the findin
 
 ## Who We Are
 
-ATLAS is a curated dataset of 187 data/AI workforce roles and 322 KSAs (knowledge, skills, abilities), synthesized from NICE, O*NET, SFIA, DAMA, and other authoritative frameworks. We created the PE assessment methodology to translate ATLAS into actionable business value for PE firms evaluating data/AI teams.
+ATLAS is a curated dataset of 187 data/AI workforce roles and 497 KSAs (knowledge, skills, abilities, and tasks) across 12 knowledge domains, synthesized from NICE, O*NET, SFIA, DAMA, and other authoritative frameworks. We created the PE assessment methodology to translate ATLAS into actionable business value for PE firms evaluating data/AI teams.
 
 We're not recruiting firms, consultants, or organizational design experts. We're data and workforce taxonomy experts who built a methodology to answer three specific PE questions. We partner with your CHRO, integration team, and recruiting partners—not replace them.
 

@@ -29,20 +29,20 @@ KSAs are organized into 12 knowledge domains, each representing a coherent area 
 
 | Code | Domain | KSA Count |
 |------|--------|-----------|
-| DG | Data Governance & Policy | 40 |
-| DA | Data Architecture & Infrastructure | 40 |
-| DQ | Data Quality & Management | 47 |
 | AI | AI/ML Foundations | 72 |
-| AG | AI Governance & Ethics | 31 |
-| SP | Security & Privacy | 29 |
-| AB | Analytics & BI | 29 |
-| LS | Leadership & Strategy | 19 |
-| OP | Operations & Enablement | 16 |
-| RC | Regulatory & Compliance | 7 |
-| RM | Risk Management | 26 |
-| TF | Technical Foundations | 7 |
+| DQ | Data Quality & Management | 51 |
+| RC | Regulatory & Compliance | 42 |
+| LS | Leadership & Strategy | 41 |
+| DA | Data Architecture & Infrastructure | 40 |
+| DG | Data Governance & Policy | 40 |
+| AG | AI Governance & Ethics | 37 |
+| TF | Technical Foundations | 37 |
+| SP | Security & Privacy | 36 |
+| OP | Operations & Enablement | 35 |
+| AB | Analytics & BI | 34 |
+| RM | Risk Management | 32 |
 
-Total: 363 unique KSAs across 12 domains (schema version 2.0.0).
+Total: 497 unique KSAs across 12 domains (schema version 2.0.0).
 
 ---
 
@@ -53,18 +53,18 @@ atlas-dataset/
 ├── roles/                  One JSON file per category_code
 │   └── 10 files            187 roles (GOV, ENG, DEV, DSM, ANL, RSK, OPS, LDR, REG, NICHE)
 ├── ksas/                   Shared KSA pool organized by knowledge domain
-│   ├── DG_ksas.json        Data Governance & Policy (40)
-│   ├── DA_ksas.json        Data Architecture & Infrastructure (40)
-│   ├── DQ_ksas.json        Data Quality & Management (47)
 │   ├── AI_ksas.json        AI/ML Foundations (72)
-│   ├── AG_ksas.json        AI Governance & Ethics (31)
-│   ├── SP_ksas.json        Security & Privacy (29)
-│   ├── AB_ksas.json        Analytics & BI (29)
-│   ├── LS_ksas.json        Leadership & Strategy (19)
-│   ├── OP_ksas.json        Operations & Enablement (16)
-│   ├── RC_ksas.json        Regulatory & Compliance (7)
-│   ├── RM_ksas.json        Risk Management (26)
-│   ├── TF_ksas.json        Technical Foundations (7)
+│   ├── DQ_ksas.json        Data Quality & Management (51)
+│   ├── RC_ksas.json        Regulatory & Compliance (42)
+│   ├── LS_ksas.json        Leadership & Strategy (41)
+│   ├── DA_ksas.json        Data Architecture & Infrastructure (40)
+│   ├── DG_ksas.json        Data Governance & Policy (40)
+│   ├── AG_ksas.json        AI Governance & Ethics (37)
+│   ├── TF_ksas.json        Technical Foundations (37)
+│   ├── SP_ksas.json        Security & Privacy (36)
+│   ├── OP_ksas.json        Operations & Enablement (35)
+│   ├── AB_ksas.json        Analytics & BI (34)
+│   ├── RM_ksas.json        Risk Management (32)
 │   └── _legacy_id_map.json Audit trail: old role-coupled IDs → new domain-based IDs
 ├── frameworks/             Reference data for source frameworks
 │   └── frameworks.json     70 framework definitions with commercial_status
@@ -78,8 +78,13 @@ atlas-dataset/
 │   └── pe-assessment-deliverables.json
 ├── schema/                 JSON Schema definitions
 │   └── role_record.json    Master schema (25+ fields, nested objects)
+├── sources/                Canonical source citations for STRM framework mapping
+│   └── onet_30_2_citation.json  O*NET 30.2 version-pinned citation
+├── strm/                   NIST IR 8477 Set Theory Relationship Mappings (ADR-014)
+│   ├── onet/               STRM-001: O*NET 30.2 (use case, mapping, QA/QC)
+│   └── issues/             Gap issue register across all STRMs
 ├── docs/                   Architecture decisions and research
-│   ├── roadmap/            Strategic roadmap, ADRs (13), validation results
+│   ├── roadmap/            Strategic roadmap, ADRs (15), validation results
 │   ├── assets/             SVG graphics for documentation
 │   └── *.md                Technical documentation
 ├── scripts/                Validation and quality gates
@@ -221,6 +226,9 @@ All framework mappings include source provenance. The complete framework list wi
 
 | Version | Date | Architecture | Key Change |
 |---------|------|-------------|------------|
+| 0.5.3 | 2026-03-31 | Shared-pool + STRM | Phase 1B framework prioritization, STRM-001 O*NET complete (ADR-015) |
+| 0.5.2 | 2026-03-31 | Shared-pool KSA | Phase 1A baseline enrichment — 363 → 497 KSAs, all 12 domains expanded |
+| 0.5.1 | 2026-03-31 | Shared-pool KSA | STRM enrichment methodology adopted (ADR-014) |
 | 0.5.0 | 2026-03-27 | Shared-pool KSA (ADR-013) | Domain-based KSA pool, many-to-many mappings, schema v2.0.0 |
 | 0.4.3 | 2026-03-27 | Role-centric (SUPERSEDED) | R08 gap KSAs — valid statements, invalid architecture |
 | 0.4.2 | 2026-03-27 | Role-centric | R04 PE Assessment Methodology, commit discipline |
