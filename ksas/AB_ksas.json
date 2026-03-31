@@ -2,11 +2,11 @@
   "dataset_id": "ATLAS-KSAS",
   "domain_code": "AB",
   "domain_title": "Analytics & BI",
-  "ksa_count": 29,
-  "knowledge_count": 9,
-  "skill_count": 9,
+  "ksa_count": 34,
+  "knowledge_count": 10,
+  "skill_count": 10,
   "task_count": 11,
-  "ability_count": 0,
+  "ability_count": 3,
   "schema_version": "2.0.0",
   "ksas": [
     {
@@ -356,6 +356,56 @@
       "legacy_ids": [
         "OPS-07.04-T-001"
       ]
+    },
+    {
+      "ksa_id": "AB-K-010",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of embedded analytics and augmented analytics concepts, including AI-assisted insight generation, natural language querying, automated anomaly detection, and their impact on self-service BI adoption.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "AB-S-010",
+      "type": "Skill",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Skill in designing and executing segmentation analyses that produce actionable customer, product, or market groupings with clear business application and measurable differentiation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "AB-A-001",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to identify and communicate when analytical findings challenge prevailing business narratives, presenting disconfirming evidence constructively and with appropriate context.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "AB-A-002",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to select the appropriate analytical method for a given business question, balancing statistical rigor, time constraints, data availability, and audience comprehension capacity.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "AB-A-003",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to distinguish between correlation and causation in analytical findings, communicating the distinction and its implications for decision-making clearly to business audiences.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
     }
   ]
 }

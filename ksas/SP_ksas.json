@@ -2,11 +2,11 @@
   "dataset_id": "ATLAS-KSAS",
   "domain_code": "SP",
   "domain_title": "Security & Privacy",
-  "ksa_count": 29,
+  "ksa_count": 36,
   "knowledge_count": 14,
-  "skill_count": 4,
+  "skill_count": 8,
   "task_count": 10,
-  "ability_count": 1,
+  "ability_count": 4,
   "schema_version": "2.0.0",
   "ksas": [
     {
@@ -356,6 +356,76 @@
       "legacy_ids": [
         "RSK-06.02-T-003"
       ]
+    },
+    {
+      "ksa_id": "SP-S-005",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in designing and implementing data anonymization and pseudonymization techniques appropriate to the intended use, including k-anonymity, differential privacy, and synthetic data generation approaches.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "SP-S-006",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in conducting privacy engineering reviews of data systems, evaluating data flows, access patterns, and retention practices against privacy requirements and privacy-by-design principles.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "SP-S-007",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in designing data classification frameworks and implementing classification controls that enforce handling, access, and retention requirements based on data sensitivity and regulatory classification.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "SP-S-008",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in conducting security assessments of data platforms and AI systems, including vulnerability identification, penetration testing coordination, and security architecture review.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "SP-A-002",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to design security and privacy architectures that enable data utility and AI innovation while maintaining protection levels appropriate to the data sensitivity and regulatory context.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "SP-A-003",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to assess and communicate the security implications of emerging AI technologies, including foundation models, autonomous agents, and AI-generated content, to both technical and executive audiences.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "SP-A-004",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to navigate the tension between data sharing for organizational value creation and data protection requirements, finding practical approaches that satisfy both objectives.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "dataset_id": "ATLAS-DATASET",
   "dataset_title": "ATLAS — A Workforce Framework for Talent, Leadership, and Skills in Data and AI",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "schema_version": "2.0.0",
   "status": "development",
   "created_date": "2026-03-26",
@@ -48,18 +48,18 @@
     "ksas": {
       "description": "Shared KSA pool organized by knowledge domain. Each KSA has a domain-based ID and can be referenced by any role. Schema version 2.0.0.",
       "files": {
-        "AB_ksas.json": { "domain": "Analytics & BI", "ksa_count": 29 },
-        "AG_ksas.json": { "domain": "AI Governance & Ethics", "ksa_count": 31 },
+        "AB_ksas.json": { "domain": "Analytics & BI", "ksa_count": 34 },
+        "AG_ksas.json": { "domain": "AI Governance & Ethics", "ksa_count": 37 },
         "AI_ksas.json": { "domain": "AI/ML Foundations", "ksa_count": 72 },
         "DA_ksas.json": { "domain": "Data Architecture & Infrastructure", "ksa_count": 40 },
         "DG_ksas.json": { "domain": "Data Governance & Policy", "ksa_count": 40 },
-        "DQ_ksas.json": { "domain": "Data Quality & Management", "ksa_count": 47 },
-        "LS_ksas.json": { "domain": "Leadership & Strategy", "ksa_count": 19 },
-        "OP_ksas.json": { "domain": "Operations & Enablement", "ksa_count": 16 },
-        "RC_ksas.json": { "domain": "Regulatory & Compliance", "ksa_count": 7 },
-        "RM_ksas.json": { "domain": "Risk Management", "ksa_count": 26 },
-        "SP_ksas.json": { "domain": "Security & Privacy", "ksa_count": 29 },
-        "TF_ksas.json": { "domain": "Technical Foundations", "ksa_count": 7 },
+        "DQ_ksas.json": { "domain": "Data Quality & Management", "ksa_count": 51 },
+        "LS_ksas.json": { "domain": "Leadership & Strategy", "ksa_count": 41 },
+        "OP_ksas.json": { "domain": "Operations & Enablement", "ksa_count": 35 },
+        "RC_ksas.json": { "domain": "Regulatory & Compliance", "ksa_count": 42 },
+        "RM_ksas.json": { "domain": "Risk Management", "ksa_count": 32 },
+        "SP_ksas.json": { "domain": "Security & Privacy", "ksa_count": 36 },
+        "TF_ksas.json": { "domain": "Technical Foundations", "ksa_count": 37 },
         "_legacy_id_map.json": { "description": "Maps old role-coupled KSA IDs (v0.4.x) to new domain-based IDs (v0.5.0) for audit trail" }
       }
     },
@@ -134,16 +134,16 @@
   },
   "statistics": {
     "total_roles": 187,
-    "total_unique_ksas": 363,
+    "total_unique_ksas": 497,
     "total_role_ksa_relationships": 364,
     "total_frameworks": 70,
     "ksa_domains": 12,
     "roles_with_ksa_mappings": 42,
     "ksa_architecture": "shared-pool (ADR-013)",
     "domain_distribution": {
-      "AB": 29, "AG": 31, "AI": 72, "DA": 40, "DG": 40,
-      "DQ": 47, "LS": 19, "OP": 16, "RC": 7, "RM": 26,
-      "SP": 29, "TF": 7
+      "AB": 34, "AG": 37, "AI": 72, "DA": 40, "DG": 40,
+      "DQ": 51, "LS": 41, "OP": 35, "RC": 42, "RM": 32,
+      "SP": 36, "TF": 37
     }
   }
 }

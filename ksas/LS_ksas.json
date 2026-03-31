@@ -2,25 +2,13 @@
   "dataset_id": "ATLAS-KSAS",
   "domain_code": "LS",
   "domain_title": "Leadership & Strategy",
-  "ksa_count": 19,
-  "knowledge_count": 7,
-  "skill_count": 7,
-  "task_count": 4,
-  "ability_count": 1,
+  "ksa_count": 41,
+  "knowledge_count": 13,
+  "skill_count": 13,
+  "task_count": 10,
+  "ability_count": 5,
   "schema_version": "2.0.0",
   "ksas": [
-    {
-      "ksa_id": "LS-A-001",
-      "type": "Ability",
-      "domain": "Leadership & Strategy",
-      "domain_code": "LS",
-      "statement": "Ability to lead through organizational resistance to data and AI transformation, including navigating political dynamics, competing stakeholder interests, and cultural inertia.",
-      "origin_framework": "ATLAS",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.01-A-003"
-      ]
-    },
     {
       "ksa_id": "LS-K-001",
       "type": "Knowledge",
@@ -104,6 +92,66 @@
       "legacy_ids": [
         "LDR-08.04-K-002"
       ]
+    },
+    {
+      "ksa_id": "LS-K-008",
+      "type": "Knowledge",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Knowledge of data and AI strategy development approaches, including strategy formulation methods, alignment with enterprise business strategy, competitive positioning through data capabilities, and strategy communication frameworks.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-K-009",
+      "type": "Knowledge",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Knowledge of talent management practices for data and AI organizations, including workforce planning methodologies, skills gap analysis, hiring strategy, retention approaches, career path development, and succession planning.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-K-010",
+      "type": "Knowledge",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Knowledge of data and AI governance structures at the board and executive committee level, including oversight responsibilities, reporting cadences, decision rights allocation, and escalation frameworks.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-K-011",
+      "type": "Knowledge",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Knowledge of the data and AI vendor ecosystem, including major platform providers, emerging technology categories, vendor lock-in risks, open-source alternatives, and strategic partnership evaluation criteria.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-K-012",
+      "type": "Knowledge",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Knowledge of data and AI due diligence frameworks for mergers, acquisitions, and private equity transactions, including data asset valuation, technical debt assessment, key person risk evaluation, and integration complexity analysis.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-K-013",
+      "type": "Knowledge",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Knowledge of data monetization models and data product strategy, including internal data products, external data licensing, data-enabled services, and data marketplace design principles.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
     },
     {
       "ksa_id": "LS-S-001",
@@ -190,6 +238,66 @@
       ]
     },
     {
+      "ksa_id": "LS-S-008",
+      "type": "Skill",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Skill in developing enterprise data and AI strategies that connect organizational business objectives to data capabilities, AI initiatives, governance requirements, and measurable value outcomes.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-S-009",
+      "type": "Skill",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Skill in building and developing high-performing data and AI teams, including talent acquisition, onboarding design, performance management, career development planning, and succession preparation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-S-010",
+      "type": "Skill",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Skill in presenting data and AI strategy, risk, and value to board-level audiences, translating technical complexity into governance-appropriate language and decision frameworks.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-S-011",
+      "type": "Skill",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Skill in evaluating emerging data and AI technologies for strategic relevance, assessing maturity, organizational fit, competitive impact, and integration requirements before recommending investment.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-S-012",
+      "type": "Skill",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Skill in managing data and AI investment portfolios across multiple concurrent initiatives, including prioritization frameworks, resource allocation, portfolio performance tracking, and initiative rebalancing.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-S-013",
+      "type": "Skill",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Skill in negotiating strategic vendor partnerships for data and AI platforms, including commercial terms, roadmap alignment, dependency management, and exit strategy planning.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
       "ksa_id": "LS-T-001",
       "type": "Task",
       "domain": "Leadership & Strategy",
@@ -236,6 +344,118 @@
       "legacy_ids": [
         "LDR-08.02-T-002"
       ]
+    },
+    {
+      "ksa_id": "LS-T-005",
+      "type": "Task",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Develop and maintain the enterprise data and AI strategy, including vision articulation, strategic priority identification, capability roadmap construction, and annual strategy refresh.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-T-006",
+      "type": "Task",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Conduct data and AI workforce planning, including current-state skills assessment, future-state requirements modeling, gap analysis, and talent acquisition and development strategy formulation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-T-007",
+      "type": "Task",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Manage the data and AI investment portfolio, including initiative prioritization, funding allocation, performance tracking against value hypotheses, and portfolio rebalancing based on realized outcomes.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-T-008",
+      "type": "Task",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Conduct data and AI due diligence assessments for M&A and investment transactions, including data asset evaluation, technical architecture review, key person risk assessment, and integration planning.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-T-009",
+      "type": "Task",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Establish and operate data and AI governance committees, including charter development, membership selection, decision authority definition, and meeting cadence and agenda management.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-T-010",
+      "type": "Task",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Build organizational data culture through executive sponsorship, success story amplification, recognition programs, and visible leadership commitment to data-informed decision-making.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-A-001",
+      "type": "Ability",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Ability to lead through organizational resistance to data and AI transformation, including navigating political dynamics, competing stakeholder interests, and cultural inertia.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-A-003"
+      ]
+    },
+    {
+      "ksa_id": "LS-A-002",
+      "type": "Ability",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Ability to align diverse stakeholder interests around a shared data and AI vision, building coalitions that sustain transformation momentum through organizational changes and competing priorities.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-A-003",
+      "type": "Ability",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Ability to make strategic resource allocation decisions under uncertainty, balancing proven approaches with experimental initiatives and adjusting course as evidence emerges.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-A-004",
+      "type": "Ability",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Ability to identify and develop data and AI leadership talent within the organization, recognizing potential across diverse backgrounds and building leadership pipelines that strengthen organizational capability.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-A-005",
+      "type": "Ability",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Ability to synthesize market trends, competitive intelligence, technology evolution, and organizational capability into coherent strategic recommendations that inform executive decision-making.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
     }
   ]
 }

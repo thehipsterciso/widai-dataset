@@ -2,11 +2,11 @@
   "dataset_id": "ATLAS-KSAS",
   "domain_code": "AG",
   "domain_title": "AI Governance & Ethics",
-  "ksa_count": 31,
+  "ksa_count": 37,
   "knowledge_count": 14,
-  "skill_count": 6,
+  "skill_count": 8,
   "task_count": 11,
-  "ability_count": 0,
+  "ability_count": 4,
   "schema_version": "2.0.0",
   "ksas": [
     {
@@ -381,6 +381,66 @@
       "legacy_ids": [
         "RSK-06.01-T-004"
       ]
+    },
+    {
+      "ksa_id": "AG-S-007",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in designing human oversight mechanisms for AI-assisted decision-making, including escalation triggers, override procedures, human-in-the-loop protocols, and meaningful human control verification.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "AG-S-008",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "AG-A-001",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to calibrate AI governance oversight proportionally to the actual risk level of AI applications, avoiding both under-governance of high-risk systems and excessive governance that impedes low-risk innovation.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "AG-A-002",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to navigate ethical trade-offs in AI deployment where competing values such as fairness versus accuracy, transparency versus privacy, or speed versus safety require principled resolution.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "AG-A-003",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to build organizational commitment to responsible AI practices by demonstrating their business value and risk reduction benefits rather than relying solely on compliance mandates.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "AG-A-004",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to translate emerging AI ethics research, evolving societal expectations, and new regulatory guidance into practical governance policy updates that maintain organizational alignment.",
+      "origin_framework": "ATLAS",
+      "origin_version": "0.5.1",
+      "legacy_ids": []
     }
   ]
 }
