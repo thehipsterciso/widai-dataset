@@ -22,8 +22,7 @@
     "files_missing_rationale": 0,
     "invalid_json_files": 0,
     "status": "PASS",
-    "note": "Every rationale file validated as well-formed JSON with complete method coverage. All 1,720 scored files contain STS primary + 4 secondary methods (BERTScore, NLI, Bi-Encoder, Jaccard). All 428 no-relationship files have methodology field documenting the exclusion rationale.",
-    "significance_quality": "All rationale files regenerated with content-specific significance. Each method's significance references actual shared vocabulary, NICE-only terms, WIDAI-only terms, word counts, and concept-level reasoning. No templated or score-range-derived language — every significance field is unique to the scored pair's content."
+    "note": "Every rationale file validated as well-formed JSON with complete method coverage. All 1,720 scored files contain STS primary + 4 secondary methods (BERTScore, NLI, Bi-Encoder, Jaccard). All 428 no-relationship files have methodology field documenting the exclusion rationale."
   },
 
   "relationship_type_consistency": {
