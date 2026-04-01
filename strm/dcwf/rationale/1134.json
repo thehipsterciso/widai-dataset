@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1134",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1134",
+  "focal_document_element_description": "Knowledge of symmetric key rotation techniques and concepts.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-K-003",
+  "reference_document_element_description": "Knowledge of relational database management system concepts, including normalization theory, indexing strategies, transaction isolation levels, query execution plans, and performance optimization principles.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-K-003 is the strongest semantic match. Secondary: AI-K-020 (AI, cosine: 0.327), DA-K-002 (DA, cosine: 0.316).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4721,
+      "mapped_strength_0_10": 4.7,
+      "final_strength_integer": 5,
+      "significance": "STS 4.7/10 (raw 0.472). Shared vocabulary: [concepts, knowledge]. DCWF-only terms [key, rotation, symmetric, techniques] vs WIDAI-only terms [database, execution, indexing, isolation, levels, management] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9184,
+        "recall": 0.8789,
+        "f1": 0.8982,
+        "significance": "BERTScore F1=0.898 (P=0.918, R=0.879). P exceeds R by 0.039 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9979,
+        "entailment": 0.0,
+        "neutral": 0.002,
+        "significance": "NLI: contradiction-dominant (99.8%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of symmetric key rotation techniques and concepts.\" and \"Knowledge of relational database management system concepts, including normaliza\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.3494,
+        "significance": "Bi-encoder 0.349 < STS 0.472 (gap -0.123). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [key, rotation, symmetric] and [database, execution, indexing] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1538,
+        "significance": "Jaccard 15.4%. Shared tokens: [concepts, knowledge]. DCWF-only: [key, rotation, symmetric, techniques]. WIDAI-only: [database, execution, indexing, isolation, levels, management]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

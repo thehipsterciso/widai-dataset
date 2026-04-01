@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "521A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "521A",
+  "focal_document_element_description": "Implement and enforce local network usage policies and procedures.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-002",
+  "reference_document_element_description": "Author, maintain, and enforce the enterprise data policy library, ensuring policies are current, accessible, enforced, and aligned with regulatory requirements.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-T-002 is the strongest semantic match. Secondary: SP-T-005 (SP, cosine: 0.435), TF-K-013 (TF, cosine: 0.385).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4422,
+      "mapped_strength_0_10": 4.4,
+      "final_strength_integer": 4,
+      "significance": "STS 4.4/10 (raw 0.442). Shared vocabulary: [enforce, policies]. DCWF-only terms [implement, local, network, procedures, usage] vs WIDAI-only terms [accessible, aligned, author, current, data, enforced] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.898,
+        "recall": 0.8755,
+        "f1": 0.8866,
+        "significance": "BERTScore F1=0.887 (P=0.898, R=0.875). P exceeds R by 0.023 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0006,
+        "entailment": 0.0003,
+        "neutral": 0.999,
+        "significance": "NLI: neutral-dominant (99.9%). \"Implement and enforce local network usage policies and procedures.\" and \"Author, maintain, and enforce the enterprise data policy library, ensuring polic\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4564,
+        "significance": "Bi-encoder 0.456 \u2248 STS 0.442 (gap 0.014). Independent encoding and cross-attention agree. Shared terms [enforce, policies] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.125,
+        "significance": "Jaccard 12.5%. Shared tokens: [enforce, policies]. DCWF-only: [implement, local, network, procedures, usage]. WIDAI-only: [accessible, aligned, author, current, data, enforced]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

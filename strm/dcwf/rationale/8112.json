@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8112",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8112",
+  "focal_document_element_description": "Identify targets of opportunity in order to influence operational planning.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-T-009",
+  "reference_document_element_description": "Manage operational budgets for data and AI programs, including cost forecasting, expenditure tracking, variance analysis, and cost optimization recommendations.",
+  "comments": "DCWF task intersects with WIDAI OP domain. OP-T-009 is the strongest semantic match. Secondary: LS-A-003 (LS, cosine: 0.484), RM-S-008 (RM, cosine: 0.477).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4059,
+      "mapped_strength_0_10": 4.1,
+      "final_strength_integer": 4,
+      "significance": "STS 4.1/10 (raw 0.406). Shared vocabulary: [operational]. DCWF-only terms [identify, influence, opportunity, order, planning, targets] vs WIDAI-only terms [ai, analysis, budgets, cost, data, expenditure] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8921,
+        "recall": 0.876,
+        "f1": 0.884,
+        "significance": "BERTScore F1=0.884 (P=0.892, R=0.876). Balanced P/R \u2014 the 10-word DCWF element and 19-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9964,
+        "entailment": 0.0002,
+        "neutral": 0.0034,
+        "significance": "NLI: contradiction-dominant (99.6%). Despite 'Intersects with' classification, the model detects semantic tension between \"Identify targets of opportunity in order to influence operational planning.\" and \"Manage operational budgets for data and AI programs, including cost forecasting,\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5069,
+        "significance": "Bi-encoder 0.507 > STS 0.406 (gap +0.101). Independent encoding finds more similarity than cross-attention. Shared surface terms [operational] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0385,
+        "significance": "Jaccard 3.9%. Shared tokens: [operational]. DCWF-only: [identify, influence, opportunity, order, planning, targets]. WIDAI-only: [ai, analysis, budgets, cost, data, expenditure]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

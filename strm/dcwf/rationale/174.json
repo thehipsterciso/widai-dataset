@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "174",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "174",
+  "focal_document_element_description": "Skill in creating programs that validate and process multiple inputs including command line arguments, environmental variables, and input streams.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-S-008",
+  "reference_document_element_description": "Skill in writing shell scripts to automate data operations, including file manipulation, job scheduling, environment configuration, log processing, and pipeline orchestration on Linux systems.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-S-008 is the strongest semantic match. Secondary: TF-S-005 (TF, cosine: 0.482), AI-S-010 (AI, cosine: 0.478).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6024,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.602). Shared vocabulary: [skill]. DCWF-only terms [arguments, command, creating, environmental, input, inputs] vs WIDAI-only terms [automate, configuration, data, environment, file, job] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8999,
+        "recall": 0.8902,
+        "f1": 0.895,
+        "significance": "BERTScore F1=0.895 (P=0.900, R=0.890). Balanced P/R \u2014 the 19-word DCWF element and 24-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0009,
+        "entailment": 0.0012,
+        "neutral": 0.9979,
+        "significance": "NLI: neutral-dominant (99.8%). \"Skill in creating programs that validate and process multiple inputs including c\" and \"Skill in writing shell scripts to automate data operations, including file manip\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4876,
+        "significance": "Bi-encoder 0.488 < STS 0.602 (gap -0.115). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [arguments, command, creating] and [automate, configuration, data] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1053,
+        "significance": "Jaccard 10.5%. Shared tokens: [skill]. DCWF-only: [arguments, command, creating, environmental, input, inputs]. WIDAI-only: [automate, configuration, data, environment, file, job]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

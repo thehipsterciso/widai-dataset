@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "973A",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "973A",
+  "focal_document_element_description": "Skill in using code analysis tools.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AI-S-005",
+  "reference_document_element_description": "Skill in refactoring research-quality data science code into production-grade, tested, documented, and deployable ML systems.",
+  "comments": "DCWF ksa superset of WIDAI AI domain. AI-S-005 is the strongest semantic match. Secondary: AB-S-004 (AB, cosine: 0.544), TF-T-006 (TF, cosine: 0.542).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5072,
+      "mapped_strength_0_10": 5.1,
+      "final_strength_integer": 5,
+      "significance": "STS 5.1/10 (raw 0.507). Shared vocabulary: [code, skill]. DCWF-only terms [analysis, tools, using] vs WIDAI-only terms [data, deployable, documented, grade, ml, production] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9232,
+        "recall": 0.8508,
+        "f1": 0.8855,
+        "significance": "BERTScore F1=0.885 (P=0.923, R=0.851). P exceeds R by 0.072 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 15 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0044,
+        "entailment": 0.0006,
+        "neutral": 0.995,
+        "significance": "NLI: neutral-dominant (99.5%). \"Skill in using code analysis tools.\" and \"Skill in refactoring research-quality data science code into production-grade, t\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5612,
+        "significance": "Bi-encoder 0.561 > STS 0.507 (gap +0.054). Independent encoding finds more similarity than cross-attention. Shared surface terms [code, skill] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.15,
+        "significance": "Jaccard 15.0%. Shared tokens: [code, skill]. DCWF-only: [analysis, tools, using]. WIDAI-only: [data, deployable, documented, grade, ml, production]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

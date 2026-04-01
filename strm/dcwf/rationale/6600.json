@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6600",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6600",
+  "focal_document_element_description": "Skill in managing test assets, test resources, and test personnel to ensure effective completion of test events.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-S-005",
+  "reference_document_element_description": "Skill in writing automated tests for data applications, including unit tests for transformation logic, integration tests for pipeline components, and data validation tests using appropriate testing frameworks.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-S-005 is the strongest semantic match. Secondary: LS-S-009 (LS, cosine: 0.522), LS-K-009 (LS, cosine: 0.474).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5475,
+      "mapped_strength_0_10": 5.5,
+      "final_strength_integer": 6,
+      "significance": "STS 5.5/10 (raw 0.547). Shared vocabulary: [skill]. DCWF-only terms [assets, completion, effective, ensure, events, managing] vs WIDAI-only terms [applications, appropriate, automated, components, data, frameworks] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8933,
+        "recall": 0.8714,
+        "f1": 0.8822,
+        "significance": "BERTScore F1=0.882 (P=0.893, R=0.871). P exceeds R by 0.022 \u2014 the DCWF element's 17 words are well-captured by the WIDAI KSA's 27 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.23,
+        "entailment": 0.0013,
+        "neutral": 0.7688,
+        "significance": "NLI: mixed signal (E:0.1%, N:76.9%, C:23.0%). No dominant classification for \"Skill in managing test assets, test resources, and test personnel to ensure effe\" vs \"Skill in writing automated tests for data applications, including unit tests for\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5294,
+        "significance": "Bi-encoder 0.529 \u2248 STS 0.547 (gap 0.018). Independent encoding and cross-attention agree. Shared terms [skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0938,
+        "significance": "Jaccard 9.4%. Shared tokens: [skill]. DCWF-only: [assets, completion, effective, ensure, events, managing]. WIDAI-only: [applications, appropriate, automated, components, data, frameworks]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

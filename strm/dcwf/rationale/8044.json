@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8044",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8044",
+  "focal_document_element_description": "Contribute to cyberspace base plans (BPLANs), concept plans (CONPLANs).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-T-001",
+  "reference_document_element_description": "Develop and maintain program plans for data and AI initiatives, including scope definition, workstream structure, milestone schedule, resource plan, and risk register.",
+  "comments": "DCWF task intersects with WIDAI OP domain. OP-T-001 is the strongest semantic match. Secondary: DG-A-005 (DG, cosine: 0.424), LS-S-013 (LS, cosine: 0.412).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4475,
+      "mapped_strength_0_10": 4.5,
+      "final_strength_integer": 4,
+      "significance": "STS 4.5/10 (raw 0.448). Shared vocabulary: [plans]. DCWF-only terms [base, bplans, concept, conplans, contribute, cyberspace] vs WIDAI-only terms [ai, data, definition, develop, initiatives, maintain] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8272,
+        "recall": 0.837,
+        "f1": 0.8321,
+        "significance": "BERTScore F1=0.832 (P=0.827, R=0.837). Balanced P/R \u2014 the 9-word DCWF element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9906,
+        "entailment": 0.0001,
+        "neutral": 0.0094,
+        "significance": "NLI: contradiction-dominant (99.1%). Despite 'Intersects with' classification, the model detects semantic tension between \"Contribute to cyberspace base plans (BPLANs), concept plans (CONPLANs).\" and \"Develop and maintain program plans for data and AI initiatives, including scope\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4862,
+        "significance": "Bi-encoder 0.486 \u2248 STS 0.448 (gap 0.039). Independent encoding and cross-attention agree. Shared terms [plans] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.037,
+        "significance": "Jaccard 3.7%. Shared tokens: [plans]. DCWF-only: [base, bplans, concept, conplans, contribute, cyberspace]. WIDAI-only: [ai, data, definition, develop, initiatives, maintain]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "954",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "954",
+  "focal_document_element_description": "Knowledge of import/export control regulations and responsible agencies for the purposes of reducing supply chain risk.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "SP-K-013",
+  "reference_document_element_description": "Knowledge of model supply chain security, including risks in open-source model adoption, fine-tuning pipeline integrity, third-party dataset provenance, and model registry security controls.",
+  "comments": "DCWF ksa superset of WIDAI SP domain. SP-K-013 is the strongest semantic match. Secondary: RC-K-007 (RC, cosine: 0.578), RC-K-008 (RC, cosine: 0.571).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4292,
+      "mapped_strength_0_10": 4.3,
+      "final_strength_integer": 4,
+      "significance": "STS 4.3/10 (raw 0.429). Shared vocabulary: [chain, knowledge, supply]. DCWF-only terms [agencies, control, export, import, purposes, reducing] vs WIDAI-only terms [adoption, controls, dataset, fine, integrity, model] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8903,
+        "recall": 0.863,
+        "f1": 0.8764,
+        "significance": "BERTScore F1=0.876 (P=0.890, R=0.863). P exceeds R by 0.027 \u2014 the DCWF element's 16 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0341,
+        "entailment": 0.0008,
+        "neutral": 0.9652,
+        "significance": "NLI: neutral-dominant (96.5%). \"Knowledge of import/export control regulations and responsible agencies for the\" and \"Knowledge of model supply chain security, including risks in open-source model a\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6105,
+        "significance": "Bi-encoder 0.611 > STS 0.429 (gap +0.181). Independent encoding finds more similarity than cross-attention. Shared surface terms [chain, knowledge, supply] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1471,
+        "significance": "Jaccard 14.7%. Shared tokens: [chain, knowledge, supply]. DCWF-only: [agencies, control, export, import, purposes, reducing]. WIDAI-only: [adoption, controls, dataset, fine, integrity, model]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

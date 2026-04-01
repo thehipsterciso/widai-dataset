@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8009",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8009",
+  "focal_document_element_description": "Analyze, modify, develop, debug, and document software and applications which run in user space.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-A-002",
+  "reference_document_element_description": "Ability to diagnose and resolve technical issues that span multiple system layers, tracing problems across application code, data pipelines, databases, networks, and infrastructure to identify and remediate root causes.",
+  "comments": "DCWF task superset of WIDAI TF domain. TF-A-002 is the strongest semantic match. Secondary: TF-S-012 (TF, cosine: 0.556), TF-K-012 (TF, cosine: 0.520).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5752,
+      "mapped_strength_0_10": 5.8,
+      "final_strength_integer": 6,
+      "significance": "STS 5.8/10 (raw 0.575). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [analyze, applications, debug, develop, document, modify] vs WIDAI-only terms [ability, across, application, causes, code, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.876,
+        "recall": 0.8422,
+        "f1": 0.8588,
+        "significance": "BERTScore F1=0.859 (P=0.876, R=0.842). P exceeds R by 0.034 \u2014 the DCWF element's 14 words are well-captured by the WIDAI KSA's 29 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0908,
+        "neutral": 0.909,
+        "significance": "NLI: neutral-dominant (90.9%). \"Analyze, modify, develop, debug, and document software and applications which ru\" and \"Ability to diagnose and resolve technical issues that span multiple system layer\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.564,
+        "significance": "Bi-encoder 0.564 \u2248 STS 0.575 (gap 0.011). Independent encoding and cross-attention agree. Shared terms [none] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0263,
+        "significance": "Jaccard 2.6%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [analyze, applications, debug, develop, document, modify]. WIDAI terms: [ability, across, application, causes, code, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

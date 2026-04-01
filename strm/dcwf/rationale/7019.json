@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "7019",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "7019",
+  "focal_document_element_description": "Knowledge of data security roles and responsibilities.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DA-K-012",
+  "reference_document_element_description": "Knowledge of data platform security controls, including network isolation, encryption at rest and in transit, identity and access management, and audit logging.",
+  "comments": "DCWF ksa superset of WIDAI DA domain. DA-K-012 is the strongest semantic match. Secondary: SP-K-004 (SP, cosine: 0.639), SP-K-014 (SP, cosine: 0.610).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5962,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.596). Shared vocabulary: [data, knowledge, security]. DCWF-only terms [responsibilities, roles] vs WIDAI-only terms [access, audit, controls, encryption, identity, isolation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.918,
+        "recall": 0.8746,
+        "f1": 0.8958,
+        "significance": "BERTScore F1=0.896 (P=0.918, R=0.875). P exceeds R by 0.043 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0004,
+        "neutral": 0.9995,
+        "significance": "NLI: neutral-dominant (100.0%). \"Knowledge of data security roles and responsibilities.\" and \"Knowledge of data platform security controls, including network isolation, encry\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7022,
+        "significance": "Bi-encoder 0.702 > STS 0.596 (gap +0.106). Independent encoding finds more similarity than cross-attention. Shared surface terms [data, knowledge, security] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2273,
+        "significance": "Jaccard 22.7%. Shared tokens: [data, knowledge, security]. DCWF-only: [responsibilities, roles]. WIDAI-only: [access, audit, controls, encryption, identity, isolation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "808A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "808A",
+  "focal_document_element_description": "Provide input to implementation plans and standard operating procedures as they relate to information systems security.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "OP-T-010",
+  "reference_document_element_description": "Develop and maintain operational documentation for data systems, including standard operating procedures, runbooks, escalation matrices, and knowledge base articles.",
+  "comments": "DCWF task superset of WIDAI OP domain. OP-T-010 is the strongest semantic match. Secondary: RC-A-005 (RC, cosine: 0.559), DG-T-015 (DG, cosine: 0.528).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5599,
+      "mapped_strength_0_10": 5.6,
+      "final_strength_integer": 6,
+      "significance": "STS 5.6/10 (raw 0.560). Shared vocabulary: [operating, procedures, standard, systems]. DCWF-only terms [implementation, information, input, plans, provide, relate] vs WIDAI-only terms [articles, base, data, develop, documentation, escalation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8894,
+        "recall": 0.8672,
+        "f1": 0.8781,
+        "significance": "BERTScore F1=0.878 (P=0.889, R=0.867). P exceeds R by 0.022 \u2014 the DCWF element's 16 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0004,
+        "neutral": 0.9991,
+        "significance": "NLI: neutral-dominant (99.9%). \"Provide input to implementation plans and standard operating procedures as they\" and \"Develop and maintain operational documentation for data systems, including stand\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6151,
+        "significance": "Bi-encoder 0.615 > STS 0.560 (gap +0.055). Independent encoding finds more similarity than cross-attention. Shared surface terms [operating, procedures, standard, systems] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1786,
+        "significance": "Jaccard 17.9%. Shared tokens: [operating, procedures, standard, systems]. DCWF-only: [implementation, information, input, plans, provide, relate]. WIDAI-only: [articles, base, data, develop, documentation, escalation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

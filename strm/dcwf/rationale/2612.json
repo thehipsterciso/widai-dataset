@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2612",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2612",
+  "focal_document_element_description": "Operate and maintain automated systems for gaining and maintaining access to target systems.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AG-T-005",
+  "reference_document_element_description": "Maintain the enterprise AI system inventory, ensuring all AI applications are registered, risk-tiered, owned, and subject to appropriate review and monitoring.",
+  "comments": "DCWF task superset of WIDAI AG domain. AG-T-005 is the strongest semantic match. Secondary: OP-T-010 (OP, cosine: 0.526), AG-T-002 (AG, cosine: 0.522).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5044,
+      "mapped_strength_0_10": 5.0,
+      "final_strength_integer": 5,
+      "significance": "STS 5.0/10 (raw 0.504). Shared vocabulary: [maintain]. DCWF-only terms [access, automated, gaining, maintaining, operate, systems] vs WIDAI-only terms [ai, applications, appropriate, ensuring, enterprise, inventory] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.887,
+        "recall": 0.8562,
+        "f1": 0.8713,
+        "significance": "BERTScore F1=0.871 (P=0.887, R=0.856). P exceeds R by 0.031 \u2014 the DCWF element's 13 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0115,
+        "entailment": 0.0029,
+        "neutral": 0.9856,
+        "significance": "NLI: neutral-dominant (98.6%). \"Operate and maintain automated systems for gaining and maintaining access to tar\" and \"Maintain the enterprise AI system inventory, ensuring all AI applications are re\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5601,
+        "significance": "Bi-encoder 0.560 > STS 0.504 (gap +0.056). Independent encoding finds more similarity than cross-attention. Shared surface terms [maintain] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1071,
+        "significance": "Jaccard 10.7%. Shared tokens: [maintain]. DCWF-only: [access, automated, gaining, maintaining, operate, systems]. WIDAI-only: [ai, applications, appropriate, ensuring, enterprise, inventory]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

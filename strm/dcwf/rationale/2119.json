@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2119",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2119",
+  "focal_document_element_description": "Conduct network scouting and vulnerability analyses of systems within a network.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-S-008",
+  "reference_document_element_description": "Skill in conducting security assessments of data platforms and AI systems, including vulnerability identification, penetration testing coordination, and security architecture review.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-S-008 is the strongest semantic match. Secondary: TF-A-002 (TF, cosine: 0.435), RM-T-002 (RM, cosine: 0.413).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6895,
+      "mapped_strength_0_10": 6.9,
+      "final_strength_integer": 7,
+      "significance": "STS 6.9/10 (raw 0.690). Shared vocabulary: [systems, vulnerability]. DCWF-only terms [analyses, conduct, network, scouting, within] vs WIDAI-only terms [ai, architecture, assessments, conducting, coordination, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9082,
+        "recall": 0.8853,
+        "f1": 0.8966,
+        "significance": "BERTScore F1=0.897 (P=0.908, R=0.885). P exceeds R by 0.023 \u2014 the DCWF element's 11 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0029,
+        "neutral": 0.997,
+        "significance": "NLI: neutral-dominant (99.7%). \"Conduct network scouting and vulnerability analyses of systems within a network.\" and \"Skill in conducting security assessments of data platforms and AI systems, inclu\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.446,
+        "significance": "Bi-encoder 0.446 < STS 0.690 (gap -0.243). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [analyses, conduct, network] and [ai, architecture, assessments] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.16,
+        "significance": "Jaccard 16.0%. Shared tokens: [systems, vulnerability]. DCWF-only: [analyses, conduct, network, scouting, within]. WIDAI-only: [ai, architecture, assessments, conducting, coordination, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

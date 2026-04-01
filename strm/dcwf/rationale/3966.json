@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3966",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3966",
+  "focal_document_element_description": "Skill to anticipate intelligence capability employment requirements.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "LS-S-009",
+  "reference_document_element_description": "Skill in building and developing high-performing data and AI teams, including talent acquisition, onboarding design, performance management, career development planning, and succession preparation.",
+  "comments": "DCWF ksa superset of WIDAI LS domain. LS-S-009 is the strongest semantic match. Secondary: LS-T-006 (LS, cosine: 0.598), LS-A-004 (LS, cosine: 0.577).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5819,
+      "mapped_strength_0_10": 5.8,
+      "final_strength_integer": 6,
+      "significance": "STS 5.8/10 (raw 0.582). Shared vocabulary: [skill]. DCWF-only terms [anticipate, capability, employment, intelligence, requirements] vs WIDAI-only terms [acquisition, ai, building, career, data, design] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8937,
+        "recall": 0.8474,
+        "f1": 0.87,
+        "significance": "BERTScore F1=0.870 (P=0.894, R=0.847). P exceeds R by 0.046 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0017,
+        "entailment": 0.004,
+        "neutral": 0.9944,
+        "significance": "NLI: neutral-dominant (99.4%). \"Skill to anticipate intelligence capability employment requirements.\" and \"Skill in building and developing high-performing data and AI teams, including ta\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6223,
+        "significance": "Bi-encoder 0.622 \u2248 STS 0.582 (gap 0.040). Independent encoding and cross-attention agree. Shared terms [skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0357,
+        "significance": "Jaccard 3.6%. Shared tokens: [skill]. DCWF-only: [anticipate, capability, employment, intelligence, requirements]. WIDAI-only: [acquisition, ai, building, career, data, design]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

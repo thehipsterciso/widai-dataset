@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3353",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3353",
+  "focal_document_element_description": "Knowledge of the Risk Management Framework Assessment Methodology.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "RM-K-001",
+  "reference_document_element_description": "Knowledge of risk quantification frameworks, including Value at Risk, expected loss models, Monte Carlo simulation, and sensitivity analysis methods.",
+  "comments": "DCWF ksa equal WIDAI RM domain. RM-K-001 is the strongest semantic match. Secondary: DG-K-002 (DG, cosine: 0.656), RM-S-006 (RM, cosine: 0.641).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6358,
+      "mapped_strength_0_10": 6.4,
+      "final_strength_integer": 6,
+      "significance": "STS 6.4/10 (raw 0.636). Shared vocabulary: [knowledge, risk]. DCWF-only terms [assessment, framework, management, methodology] vs WIDAI-only terms [analysis, carlo, expected, frameworks, loss, methods] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9231,
+        "recall": 0.8739,
+        "f1": 0.8979,
+        "significance": "BERTScore F1=0.898 (P=0.923, R=0.874). P exceeds R by 0.049 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0008,
+        "entailment": 0.0002,
+        "neutral": 0.999,
+        "significance": "NLI: neutral-dominant (99.9%). \"Knowledge of the Risk Management Framework Assessment Methodology.\" and \"Knowledge of risk quantification frameworks, including Value at Risk, expected l\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7165,
+        "significance": "Bi-encoder 0.717 > STS 0.636 (gap +0.081). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, risk] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1304,
+        "significance": "Jaccard 13.0%. Shared tokens: [knowledge, risk]. DCWF-only: [assessment, framework, management, methodology]. WIDAI-only: [analysis, carlo, expected, frameworks, loss, methods]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

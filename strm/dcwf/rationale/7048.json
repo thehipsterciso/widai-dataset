@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "7048",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "7048",
+  "focal_document_element_description": "Knowledge of the benefits and limitations of AI capabilities.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AI-K-029",
+  "reference_document_element_description": "Knowledge of AI capability landscape, including current capabilities and limitations of generative AI, predictive AI, and autonomous systems as applied to enterprise business problems.",
+  "comments": "DCWF ksa superset of WIDAI AI domain. AI-K-029 is the strongest semantic match. Secondary: AG-K-004 (AG, cosine: 0.617), AI-S-018 (AI, cosine: 0.616).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.7008,
+      "mapped_strength_0_10": 7.0,
+      "final_strength_integer": 7,
+      "significance": "STS 7.0/10 (raw 0.701). Shared vocabulary: [ai, capabilities, knowledge, limitations]. DCWF-only terms [benefits] vs WIDAI-only terms [applied, autonomous, business, capability, current, enterprise] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9528,
+        "recall": 0.895,
+        "f1": 0.923,
+        "significance": "BERTScore F1=0.923 (P=0.953, R=0.895). P exceeds R by 0.058 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 24 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.0011,
+        "neutral": 0.9988,
+        "significance": "NLI: neutral-dominant (99.9%). \"Knowledge of the benefits and limitations of AI capabilities.\" and \"Knowledge of AI capability landscape, including current capabilities and limitat\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7164,
+        "significance": "Bi-encoder 0.716 \u2248 STS 0.701 (gap 0.016). Independent encoding and cross-attention agree. Shared terms [ai, capabilities, knowledge, limitations] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2727,
+        "significance": "Jaccard 27.3%. Shared tokens: [ai, capabilities, knowledge, limitations]. DCWF-only: [benefits]. WIDAI-only: [applied, autonomous, business, capability, current, enterprise]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

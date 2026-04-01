@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "659A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "659A",
+  "focal_document_element_description": "Implement designs for new or existing system(s).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-T-006",
+  "reference_document_element_description": "Design and build LLM-based application systems, including system prompt design, tool integration, retrieval pipeline, output validation, and failure mode documentation.",
+  "comments": "DCWF task intersects with WIDAI AI domain. AI-T-006 is the strongest semantic match. Secondary: LS-K-005 (LS, cosine: 0.462), OP-T-010 (OP, cosine: 0.437).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5415,
+      "mapped_strength_0_10": 5.4,
+      "final_strength_integer": 5,
+      "significance": "STS 5.4/10 (raw 0.541). Shared vocabulary: [system]. DCWF-only terms [designs, existing, implement, new, s] vs WIDAI-only terms [application, based, build, design, documentation, failure] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8442,
+        "recall": 0.8476,
+        "f1": 0.8459,
+        "significance": "BERTScore F1=0.846 (P=0.844, R=0.848). Balanced P/R \u2014 the 7-word DCWF element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0004,
+        "neutral": 0.9994,
+        "significance": "NLI: neutral-dominant (99.9%). \"Implement designs for new or existing system(s).\" and \"Design and build LLM-based application systems, including system prompt design,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4683,
+        "significance": "Bi-encoder 0.468 < STS 0.541 (gap -0.073). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [designs, existing, implement] and [application, based, build] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0385,
+        "significance": "Jaccard 3.9%. Shared tokens: [system]. DCWF-only: [designs, existing, implement, new, s]. WIDAI-only: [application, based, build, design, documentation, failure]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

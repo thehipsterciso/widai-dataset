@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4244",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4244",
+  "focal_document_element_description": "Ability to enumerate a network.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-K-013",
+  "reference_document_element_description": "Knowledge of networking fundamentals relevant to data systems, including TCP/IP, DNS resolution, HTTP/HTTPS protocols, firewall and security group configurations, load balancing, and how network architecture affects data pipeline design and performance.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-K-013 is the strongest semantic match. Secondary: TF-A-001 (TF, cosine: 0.327), TF-A-002 (TF, cosine: 0.321).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4519,
+      "mapped_strength_0_10": 4.5,
+      "final_strength_integer": 4,
+      "significance": "STS 4.5/10 (raw 0.452). Shared vocabulary: [network]. DCWF-only terms [ability, enumerate] vs WIDAI-only terms [affects, architecture, balancing, configurations, data, design] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.899,
+        "recall": 0.8319,
+        "f1": 0.8641,
+        "significance": "BERTScore F1=0.864 (P=0.899, R=0.832). P exceeds R by 0.067 \u2014 the DCWF element's 5 words are well-captured by the WIDAI KSA's 31 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0008,
+        "entailment": 0.0054,
+        "neutral": 0.9938,
+        "significance": "NLI: neutral-dominant (99.4%). \"Ability to enumerate a network.\" and \"Knowledge of networking fundamentals relevant to data systems, including TCP/IP,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4061,
+        "significance": "Bi-encoder 0.406 \u2248 STS 0.452 (gap 0.046). Independent encoding and cross-attention agree. Shared terms [network] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0606,
+        "significance": "Jaccard 6.1%. Shared tokens: [network]. DCWF-only: [ability, enumerate]. WIDAI-only: [affects, architecture, balancing, configurations, data, design]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

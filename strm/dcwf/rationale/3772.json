@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3772",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3772",
+  "focal_document_element_description": "Skill in evaluating information for reliability, validity, and relevance.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DQ-S-001",
+  "reference_document_element_description": "Skill in identifying and communicating data quality issues that affect analytical conclusions, including null handling, outlier treatment, and source system reliability caveats.",
+  "comments": "DCWF ksa superset of WIDAI DQ domain. DQ-S-001 is the strongest semantic match. Secondary: DQ-K-004 (DQ, cosine: 0.539), AB-A-002 (AB, cosine: 0.537).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4831,
+      "mapped_strength_0_10": 4.8,
+      "final_strength_integer": 5,
+      "significance": "STS 4.8/10 (raw 0.483). Shared vocabulary: [reliability, skill]. DCWF-only terms [evaluating, information, relevance, validity] vs WIDAI-only terms [affect, analytical, caveats, communicating, conclusions, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9121,
+        "recall": 0.8613,
+        "f1": 0.886,
+        "significance": "BERTScore F1=0.886 (P=0.912, R=0.861). P exceeds R by 0.051 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0051,
+        "entailment": 0.0006,
+        "neutral": 0.9944,
+        "significance": "NLI: neutral-dominant (99.4%). \"Skill in evaluating information for reliability, validity, and relevance.\" and \"Skill in identifying and communicating data quality issues that affect analytica\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5645,
+        "significance": "Bi-encoder 0.565 > STS 0.483 (gap +0.081). Independent encoding finds more similarity than cross-attention. Shared surface terms [reliability, skill] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1538,
+        "significance": "Jaccard 15.4%. Shared tokens: [reliability, skill]. DCWF-only: [evaluating, information, relevance, validity]. WIDAI-only: [affect, analytical, caveats, communicating, conclusions, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

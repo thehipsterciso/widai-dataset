@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5360",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5360",
+  "focal_document_element_description": "Establish manpower, personnel, and qualification data element standards to support cyber workforce management and reporting requirements.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-T-010",
+  "reference_document_element_description": "Develop and maintain AI security standards for the enterprise, including training data provenance requirements, model registry controls, and LLM application security requirements.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-T-010 is the strongest semantic match. Secondary: SP-S-004 (SP, cosine: 0.529), TF-A-003 (TF, cosine: 0.524).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4743,
+      "mapped_strength_0_10": 4.7,
+      "final_strength_integer": 5,
+      "significance": "STS 4.7/10 (raw 0.474). Shared vocabulary: [data, requirements, standards]. DCWF-only terms [cyber, element, establish, management, manpower, personnel] vs WIDAI-only terms [ai, application, controls, develop, enterprise, llm] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8745,
+        "recall": 0.8643,
+        "f1": 0.8694,
+        "significance": "BERTScore F1=0.869 (P=0.875, R=0.864). Balanced P/R \u2014 the 16-word DCWF element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9992,
+        "entailment": 0.0,
+        "neutral": 0.0007,
+        "significance": "NLI: contradiction-dominant (99.9%). Despite 'Intersects with' classification, the model detects semantic tension between \"Establish manpower, personnel, and qualification data element standards to suppo\" and \"Develop and maintain AI security standards for the enterprise, including trainin\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5385,
+        "significance": "Bi-encoder 0.538 > STS 0.474 (gap +0.064). Independent encoding finds more similarity than cross-attention. Shared surface terms [data, requirements, standards] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1333,
+        "significance": "Jaccard 13.3%. Shared tokens: [data, requirements, standards]. DCWF-only: [cyber, element, establish, management, manpower, personnel]. WIDAI-only: [ai, application, controls, develop, enterprise, llm]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8160",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8160",
+  "focal_document_element_description": "Provide analysis and support for combat assessments.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-011",
+  "reference_document_element_description": "Coordinate regulatory examination responses, including information request fulfillment, examiner access management, findings response preparation, and corrective action plan development.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-T-011 is the strongest semantic match. Secondary: AG-S-005 (AG, cosine: 0.454), SP-S-003 (SP, cosine: 0.442).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3304,
+      "mapped_strength_0_10": 3.3,
+      "final_strength_integer": 3,
+      "significance": "STS 3.3/10 (raw 0.330). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [analysis, assessments, combat, provide, support] vs WIDAI-only terms [access, action, coordinate, corrective, development, examination] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8989,
+        "recall": 0.8562,
+        "f1": 0.877,
+        "significance": "BERTScore F1=0.877 (P=0.899, R=0.856). P exceeds R by 0.043 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9018,
+        "entailment": 0.0005,
+        "neutral": 0.0977,
+        "significance": "NLI: contradiction-dominant (90.2%). Despite 'Intersects with' classification, the model detects semantic tension between \"Provide analysis and support for combat assessments.\" and \"Coordinate regulatory examination responses, including information request fulfi\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4849,
+        "significance": "Bi-encoder 0.485 > STS 0.330 (gap +0.154). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.04,
+        "significance": "Jaccard 4.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [analysis, assessments, combat, provide, support]. WIDAI terms: [access, action, coordinate, corrective, development, examination]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

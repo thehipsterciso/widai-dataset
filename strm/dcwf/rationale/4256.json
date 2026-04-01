@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4256",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4256",
+  "focal_document_element_description": "Ability to evaluate rogue/unauthorized systems on a network",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-A-002",
+  "reference_document_element_description": "Ability to diagnose and resolve technical issues that span multiple system layers, tracing problems across application code, data pipelines, databases, networks, and infrastructure to identify and remediate root causes.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-A-002 is the strongest semantic match. Secondary: DA-K-012 (DA, cosine: 0.421), DA-T-009 (DA, cosine: 0.418).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5326,
+      "mapped_strength_0_10": 5.3,
+      "final_strength_integer": 5,
+      "significance": "STS 5.3/10 (raw 0.533). Shared vocabulary: [ability]. DCWF-only terms [evaluate, network, rogue, systems, unauthorized] vs WIDAI-only terms [across, application, causes, code, data, databases] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8694,
+        "recall": 0.8469,
+        "f1": 0.858,
+        "significance": "BERTScore F1=0.858 (P=0.869, R=0.847). P exceeds R by 0.022 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 29 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.0249,
+        "neutral": 0.9751,
+        "significance": "NLI: neutral-dominant (97.5%). \"Ability to evaluate rogue/unauthorized systems on a network\" and \"Ability to diagnose and resolve technical issues that span multiple system layer\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4578,
+        "significance": "Bi-encoder 0.458 < STS 0.533 (gap -0.075). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [evaluate, network, rogue] and [across, application, causes] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0606,
+        "significance": "Jaccard 6.1%. Shared tokens: [ability]. DCWF-only: [evaluate, network, rogue, systems, unauthorized]. WIDAI-only: [across, application, causes, code, data, databases]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

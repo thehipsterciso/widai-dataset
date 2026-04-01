@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5020",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5020",
+  "focal_document_element_description": "Advocate for adequate funding for cyber training resources, to include both internal and industry-provided courses, instructors, and related materials.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-T-004",
+  "reference_document_element_description": "Design, develop, and deliver data and AI training programs for defined organizational audiences, including needs assessment, curriculum development, delivery execution, and effectiveness measurement.",
+  "comments": "DCWF task intersects with WIDAI OP domain. OP-T-004 is the strongest semantic match. Secondary: OP-T-006 (OP, cosine: 0.375), OP-S-010 (OP, cosine: 0.371).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2989,
+      "mapped_strength_0_10": 3.0,
+      "final_strength_integer": 3,
+      "significance": "STS 3.0/10 (raw 0.299). Shared vocabulary: [training]. DCWF-only terms [adequate, advocate, courses, cyber, funding, include] vs WIDAI-only terms [ai, assessment, audiences, curriculum, data, defined] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8771,
+        "recall": 0.8597,
+        "f1": 0.8683,
+        "significance": "BERTScore F1=0.868 (P=0.877, R=0.860). Balanced P/R \u2014 the 19-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9906,
+        "entailment": 0.0014,
+        "neutral": 0.008,
+        "significance": "NLI: contradiction-dominant (99.1%). Despite 'Intersects with' classification, the model detects semantic tension between \"Advocate for adequate funding for cyber training resources, to include both inte\" and \"Design, develop, and deliver data and AI training programs for defined organizat\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4086,
+        "significance": "Bi-encoder 0.409 > STS 0.299 (gap +0.110). Independent encoding finds more similarity than cross-attention. Shared surface terms [training] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0833,
+        "significance": "Jaccard 8.3%. Shared tokens: [training]. DCWF-only: [adequate, advocate, courses, cyber, funding, include]. WIDAI-only: [ai, assessment, audiences, curriculum, data, defined]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

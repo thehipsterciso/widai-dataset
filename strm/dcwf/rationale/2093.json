@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2093",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2093",
+  "focal_document_element_description": "Collaborate with customer to define information requirements.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DQ-T-010",
+  "reference_document_element_description": "Define and maintain the data product roadmap, including consumer prioritization, capability dependencies, delivery milestones, and deprecation plans.",
+  "comments": "DCWF task intersects with WIDAI DQ domain. DQ-T-010 is the strongest semantic match. Secondary: DG-A-005 (DG, cosine: 0.509), SP-A-004 (SP, cosine: 0.507).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5745,
+      "mapped_strength_0_10": 5.8,
+      "final_strength_integer": 6,
+      "significance": "STS 5.8/10 (raw 0.575). Shared vocabulary: [define]. DCWF-only terms [collaborate, customer, information, requirements] vs WIDAI-only terms [capability, consumer, data, delivery, dependencies, deprecation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8864,
+        "recall": 0.8625,
+        "f1": 0.8743,
+        "significance": "BERTScore F1=0.874 (P=0.886, R=0.863). P exceeds R by 0.024 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 17 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.1834,
+        "entailment": 0.0016,
+        "neutral": 0.8151,
+        "significance": "NLI: neutral-dominant (81.5%). \"Collaborate with customer to define information requirements.\" and \"Define and maintain the data product roadmap, including consumer prioritization,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5118,
+        "significance": "Bi-encoder 0.512 < STS 0.575 (gap -0.063). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [collaborate, customer, information] and [capability, consumer, data] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0455,
+        "significance": "Jaccard 4.5%. Shared tokens: [define]. DCWF-only: [collaborate, customer, information, requirements]. WIDAI-only: [capability, consumer, data, delivery, dependencies, deprecation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

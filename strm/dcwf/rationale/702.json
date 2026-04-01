@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "702",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "702",
+  "focal_document_element_description": "Manage the compilation, cataloging, caching, distribution, and retrieval of data.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "DQ-S-006",
+  "reference_document_element_description": "Skill in operating a data catalog platform, including configuring connectors, reviewing harvested metadata, curating business context, and managing access.",
+  "comments": "DCWF task equal WIDAI DQ domain. DQ-S-006 is the strongest semantic match. Secondary: DG-T-006 (DG, cosine: 0.643), DQ-K-011 (DQ, cosine: 0.617).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6673,
+      "mapped_strength_0_10": 6.7,
+      "final_strength_integer": 7,
+      "significance": "STS 6.7/10 (raw 0.667). Shared vocabulary: [data]. DCWF-only terms [caching, cataloging, compilation, distribution, manage, retrieval] vs WIDAI-only terms [access, business, catalog, configuring, connectors, context] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9139,
+        "recall": 0.8888,
+        "f1": 0.9012,
+        "significance": "BERTScore F1=0.901 (P=0.914, R=0.889). P exceeds R by 0.025 \u2014 the DCWF element's 10 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.3047,
+        "neutral": 0.6953,
+        "significance": "NLI: mixed signal (E:30.5%, N:69.5%, C:0.0%). No dominant classification for \"Manage the compilation, cataloging, caching, distribution, and retrieval of data\" vs \"Skill in operating a data catalog platform, including configuring connectors, re\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6522,
+        "significance": "Bi-encoder 0.652 \u2248 STS 0.667 (gap 0.015). Independent encoding and cross-attention agree. Shared terms [data] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0741,
+        "significance": "Jaccard 7.4%. Shared tokens: [data]. DCWF-only: [caching, cataloging, compilation, distribution, manage, retrieval]. WIDAI-only: [access, business, catalog, configuring, connectors, context]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

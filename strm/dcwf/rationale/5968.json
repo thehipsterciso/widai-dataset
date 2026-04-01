@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5968",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5968",
+  "focal_document_element_description": "Lead integrated design team to achieve a finished product.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-T-004",
+  "reference_document_element_description": "Lead complex cross-functional analytical projects, coordinating data access, methodology alignment, and stakeholder communication across business units.",
+  "comments": "DCWF task superset of WIDAI AB domain. AB-T-004 is the strongest semantic match. Secondary: LS-T-003 (LS, cosine: 0.560), LS-T-002 (LS, cosine: 0.513).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2259,
+      "mapped_strength_0_10": 2.3,
+      "final_strength_integer": 2,
+      "significance": "STS 2.3/10 (raw 0.226). Shared vocabulary: [lead]. DCWF-only terms [achieve, design, finished, integrated, product, team] vs WIDAI-only terms [access, across, alignment, analytical, business, communication] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8715,
+        "recall": 0.8503,
+        "f1": 0.8608,
+        "significance": "BERTScore F1=0.861 (P=0.872, R=0.850). P exceeds R by 0.021 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 16 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9729,
+        "entailment": 0.0001,
+        "neutral": 0.027,
+        "significance": "NLI: contradiction-dominant (97.3%). Despite 'Superset of' classification, the model detects semantic tension between \"Lead integrated design team to achieve a finished product.\" and \"Lead complex cross-functional analytical projects, coordinating data access, met\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5939,
+        "significance": "Bi-encoder 0.594 > STS 0.226 (gap +0.368). Independent encoding finds more similarity than cross-attention. Shared surface terms [lead] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.04,
+        "significance": "Jaccard 4.0%. Shared tokens: [lead]. DCWF-only: [achieve, design, finished, integrated, product, team]. WIDAI-only: [access, across, alignment, analytical, business, communication]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

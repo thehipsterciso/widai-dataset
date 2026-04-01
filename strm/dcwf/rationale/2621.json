@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2621",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2621",
+  "focal_document_element_description": "Provide SME and support to planning/developmental forums and working groups as appropriate.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-S-010",
+  "reference_document_element_description": "Skill in facilitating data and AI communities of practice, including knowledge sharing forums, best practice documentation, cross-team collaboration initiatives, and capability building activities.",
+  "comments": "DCWF task intersects with WIDAI OP domain. OP-S-010 is the strongest semantic match. Secondary: TF-A-003 (TF, cosine: 0.414), LS-T-003 (LS, cosine: 0.413).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5039,
+      "mapped_strength_0_10": 5.0,
+      "final_strength_integer": 5,
+      "significance": "STS 5.0/10 (raw 0.504). Shared vocabulary: [forums]. DCWF-only terms [appropriate, developmental, groups, planning, provide, sme] vs WIDAI-only terms [activities, ai, best, building, capability, collaboration] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8462,
+        "recall": 0.8462,
+        "f1": 0.8462,
+        "significance": "BERTScore F1=0.846 (P=0.846, R=0.846). Balanced P/R \u2014 the 12-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0022,
+        "neutral": 0.9975,
+        "significance": "NLI: neutral-dominant (99.8%). \"Provide SME and support to planning/developmental forums and working groups as a\" and \"Skill in facilitating data and AI communities of practice, including knowledge s\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4523,
+        "significance": "Bi-encoder 0.452 < STS 0.504 (gap -0.052). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [appropriate, developmental, groups] and [activities, ai, best] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0625,
+        "significance": "Jaccard 6.2%. Shared tokens: [forums]. DCWF-only: [appropriate, developmental, groups, planning, provide, sme]. WIDAI-only: [activities, ai, best, building, capability, collaboration]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4546",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4546",
+  "focal_document_element_description": "Knowledge of task and project management tools used for software development (e.g. Jira, Confluence, Trac, MediaWiki, etc.).",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-K-008",
+  "reference_document_element_description": "Knowledge of software version control concepts and Git workflows, including branching strategies, merge and rebase operations, conflict resolution, pull request processes, and collaborative development practices.",
+  "comments": "DCWF ksa superset of WIDAI TF domain. TF-K-008 is the strongest semantic match. Secondary: OP-K-001 (OP, cosine: 0.507), DA-K-009 (DA, cosine: 0.505).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5209,
+      "mapped_strength_0_10": 5.2,
+      "final_strength_integer": 5,
+      "significance": "STS 5.2/10 (raw 0.521). Shared vocabulary: [development, knowledge, software]. DCWF-only terms [confluence, etc, jira, management, mediawiki, project] vs WIDAI-only terms [branching, collaborative, concepts, conflict, control, git] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8735,
+        "recall": 0.8734,
+        "f1": 0.8734,
+        "significance": "BERTScore F1=0.873 (P=0.874, R=0.873). Balanced P/R \u2014 the 17-word DCWF element and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0095,
+        "entailment": 0.0037,
+        "neutral": 0.9868,
+        "significance": "NLI: neutral-dominant (98.7%). \"Knowledge of task and project management tools used for software development (e.\" and \"Knowledge of software version control concepts and Git workflows, including bran\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5898,
+        "significance": "Bi-encoder 0.590 > STS 0.521 (gap +0.069). Independent encoding finds more similarity than cross-attention. Shared surface terms [development, knowledge, software] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1389,
+        "significance": "Jaccard 13.9%. Shared tokens: [development, knowledge, software]. DCWF-only: [confluence, etc, jira, management, mediawiki, project]. WIDAI-only: [branching, collaborative, concepts, conflict, control, git]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

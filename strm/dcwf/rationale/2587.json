@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2587",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2587",
+  "focal_document_element_description": "Modify collection requirements as necessary.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DQ-T-009",
+  "reference_document_element_description": "Document and maintain data lineage for critical data elements and high-risk data flows, ensuring lineage is current and accessible to authorized consumers.",
+  "comments": "DCWF task intersects with WIDAI DQ domain. DQ-T-009 is the strongest semantic match. Secondary: RC-K-012 (RC, cosine: 0.327), RM-T-008 (RM, cosine: 0.316).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3062,
+      "mapped_strength_0_10": 3.1,
+      "final_strength_integer": 3,
+      "significance": "STS 3.1/10 (raw 0.306). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [collection, modify, necessary, requirements] vs WIDAI-only terms [accessible, authorized, consumers, critical, current, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8774,
+        "recall": 0.8481,
+        "f1": 0.8625,
+        "significance": "BERTScore F1=0.863 (P=0.877, R=0.848). P exceeds R by 0.029 \u2014 the DCWF element's 5 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.001,
+        "entailment": 0.0003,
+        "neutral": 0.9987,
+        "significance": "NLI: neutral-dominant (99.9%). \"Modify collection requirements as necessary.\" and \"Document and maintain data lineage for critical data elements and high-risk data\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.3646,
+        "significance": "Bi-encoder 0.365 > STS 0.306 (gap +0.058). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0,
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [collection, modify, necessary, requirements]. WIDAI terms: [accessible, authorized, consumers, critical, current, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5904",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5904",
+  "focal_document_element_description": "Perform risk assessment on AI applications to identify technical, societal, organizational, and mission risks.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "RM-S-001",
+  "reference_document_element_description": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+  "comments": "DCWF task equal WIDAI RM domain. RM-S-001 is the strongest semantic match. Secondary: RC-T-012 (RC, cosine: 0.694), AG-S-005 (AG, cosine: 0.687).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6203,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.620). Shared vocabulary: [ai, risk, technical]. DCWF-only terms [applications, assessment, identify, mission, organizational, perform] vs WIDAI-only terms [audiences, business, communicating, findings, impact, measures] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.895,
+        "recall": 0.8823,
+        "f1": 0.8886,
+        "significance": "BERTScore F1=0.889 (P=0.895, R=0.882). Balanced P/R \u2014 the 14-word DCWF element and 19-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0007,
+        "entailment": 0.002,
+        "neutral": 0.9973,
+        "significance": "NLI: neutral-dominant (99.7%). \"Perform risk assessment on AI applications to identify technical, societal, orga\" and \"Skill in communicating AI risk findings to technical and non-technical audiences\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7273,
+        "significance": "Bi-encoder 0.727 > STS 0.620 (gap +0.107). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, risk, technical] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1852,
+        "significance": "Jaccard 18.5%. Shared tokens: [ai, risk, technical]. DCWF-only: [applications, assessment, identify, mission, organizational, perform]. WIDAI-only: [audiences, business, communicating, findings, impact, measures]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

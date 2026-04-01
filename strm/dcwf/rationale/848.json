@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "848",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "848",
+  "focal_document_element_description": "Recommend policy and coordinate review and approval.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-002",
+  "reference_document_element_description": "Author, maintain, and enforce the enterprise data policy library, ensuring policies are current, accessible, enforced, and aligned with regulatory requirements.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-T-002 is the strongest semantic match. Secondary: AG-S-004 (AG, cosine: 0.440), RC-T-008 (RC, cosine: 0.437).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3216,
+      "mapped_strength_0_10": 3.2,
+      "final_strength_integer": 3,
+      "significance": "STS 3.2/10 (raw 0.322). Shared vocabulary: [policy]. DCWF-only terms [approval, coordinate, recommend, review] vs WIDAI-only terms [accessible, aligned, author, current, data, enforce] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8796,
+        "recall": 0.8495,
+        "f1": 0.8642,
+        "significance": "BERTScore F1=0.864 (P=0.880, R=0.850). P exceeds R by 0.030 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0006,
+        "entailment": 0.0002,
+        "neutral": 0.9992,
+        "significance": "NLI: neutral-dominant (99.9%). \"Recommend policy and coordinate review and approval.\" and \"Author, maintain, and enforce the enterprise data policy library, ensuring polic\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4609,
+        "significance": "Bi-encoder 0.461 > STS 0.322 (gap +0.139). Independent encoding finds more similarity than cross-attention. Shared surface terms [policy] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.087,
+        "significance": "Jaccard 8.7%. Shared tokens: [policy]. DCWF-only: [approval, coordinate, recommend, review]. WIDAI-only: [accessible, aligned, author, current, data, enforce]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

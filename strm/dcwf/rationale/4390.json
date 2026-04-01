@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4390",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4390",
+  "focal_document_element_description": "Knowledge of active directory federated services.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DG-K-003",
+  "reference_document_element_description": "Knowledge of data governance operating models, including federated, centralized, and hub-and-spoke structures, and the organizational conditions under which each model is appropriate.",
+  "comments": "DCWF ksa superset of WIDAI DG domain. DG-K-003 is the strongest semantic match. Secondary: DQ-K-015 (DQ, cosine: 0.487), LS-K-004 (LS, cosine: 0.462).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.48,
+      "mapped_strength_0_10": 4.8,
+      "final_strength_integer": 5,
+      "significance": "STS 4.8/10 (raw 0.480). Shared vocabulary: [federated, knowledge]. DCWF-only terms [active, directory, services] vs WIDAI-only terms [appropriate, centralized, conditions, data, governance, hub] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9108,
+        "recall": 0.8535,
+        "f1": 0.8812,
+        "significance": "BERTScore F1=0.881 (P=0.911, R=0.854). P exceeds R by 0.057 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0017,
+        "entailment": 0.0001,
+        "neutral": 0.9982,
+        "significance": "NLI: neutral-dominant (99.8%). \"Knowledge of active directory federated services.\" and \"Knowledge of data governance operating models, including federated, centralized,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5879,
+        "significance": "Bi-encoder 0.588 > STS 0.480 (gap +0.108). Independent encoding finds more similarity than cross-attention. Shared surface terms [federated, knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.12,
+        "significance": "Jaccard 12.0%. Shared tokens: [federated, knowledge]. DCWF-only: [active, directory, services]. WIDAI-only: [appropriate, centralized, conditions, data, governance, hub]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

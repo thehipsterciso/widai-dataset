@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1122",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1122",
+  "focal_document_element_description": "Ability to apply supply chain risk management standards.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RM-K-009",
+  "reference_document_element_description": "Knowledge of model risk management regulatory requirements, including Federal Reserve SR 11-7, OCC Bulletin 2011-12, and their supervisory expectations for model definition, materiality thresholds, model governance, and independent validation.",
+  "comments": "DCWF ksa intersects with WIDAI RM domain. RM-K-009 is the strongest semantic match. Secondary: SP-K-013 (SP, cosine: 0.541), RC-A-003 (RC, cosine: 0.518).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3387,
+      "mapped_strength_0_10": 3.4,
+      "final_strength_integer": 3,
+      "significance": "STS 3.4/10 (raw 0.339). Shared vocabulary: [management, risk]. DCWF-only terms [ability, apply, chain, standards, supply] vs WIDAI-only terms [11, 12, 2011, 7, bulletin, definition] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9108,
+        "recall": 0.8321,
+        "f1": 0.8697,
+        "significance": "BERTScore F1=0.870 (P=0.911, R=0.832). P exceeds R by 0.079 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 29 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0006,
+        "entailment": 0.0014,
+        "neutral": 0.998,
+        "significance": "NLI: neutral-dominant (99.8%). \"Ability to apply supply chain risk management standards.\" and \"Knowledge of model risk management regulatory requirements, including Federal Re\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.545,
+        "significance": "Bi-encoder 0.545 > STS 0.339 (gap +0.206). Independent encoding finds more similarity than cross-attention. Shared surface terms [management, risk] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0588,
+        "significance": "Jaccard 5.9%. Shared tokens: [management, risk]. DCWF-only: [ability, apply, chain, standards, supply]. WIDAI-only: [11, 12, 2011, 7, bulletin, definition]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

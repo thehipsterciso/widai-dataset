@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "958",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "958",
+  "focal_document_element_description": "Use cyber defense tools for continual monitoring and analysis of system activity to identify malicious activity.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-T-017",
+  "reference_document_element_description": "Implement model monitoring and observability systems that detect data drift, prediction drift, and performance degradation, triggering alerts or automated retraining workflows when defined thresholds are exceeded.",
+  "comments": "DCWF task intersects with WIDAI AI domain. AI-T-017 is the strongest semantic match. Secondary: DA-T-009 (DA, cosine: 0.435), AI-T-004 (AI, cosine: 0.423).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4406,
+      "mapped_strength_0_10": 4.4,
+      "final_strength_integer": 4,
+      "significance": "STS 4.4/10 (raw 0.441). Shared vocabulary: [monitoring]. DCWF-only terms [activity, analysis, continual, cyber, defense, identify] vs WIDAI-only terms [alerts, automated, data, defined, degradation, detect] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8852,
+        "recall": 0.856,
+        "f1": 0.8703,
+        "significance": "BERTScore F1=0.870 (P=0.885, R=0.856). P exceeds R by 0.029 \u2014 the DCWF element's 16 words are well-captured by the WIDAI KSA's 26 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0002,
+        "neutral": 0.9997,
+        "significance": "NLI: neutral-dominant (100.0%). \"Use cyber defense tools for continual monitoring and analysis of system activity\" and \"Implement model monitoring and observability systems that detect data drift, pre\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4653,
+        "significance": "Bi-encoder 0.465 \u2248 STS 0.441 (gap 0.025). Independent encoding and cross-attention agree. Shared terms [monitoring] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0541,
+        "significance": "Jaccard 5.4%. Shared tokens: [monitoring]. DCWF-only: [activity, analysis, continual, cyber, defense, identify]. WIDAI-only: [alerts, automated, data, defined, degradation, detect]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

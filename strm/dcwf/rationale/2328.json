@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2328",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2328",
+  "focal_document_element_description": "Develop, maintain, and assess cyber cooperation security agreements with external partners.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-A-003",
+  "reference_document_element_description": "Ability to build cross-functional operational partnerships between data teams, IT infrastructure, business units, and vendor organizations to maintain effective data service delivery.",
+  "comments": "DCWF task intersects with WIDAI OP domain. OP-A-003 is the strongest semantic match. Secondary: LS-S-013 (LS, cosine: 0.460), SP-T-010 (SP, cosine: 0.433).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5857,
+      "mapped_strength_0_10": 5.9,
+      "final_strength_integer": 6,
+      "significance": "STS 5.9/10 (raw 0.586). Shared vocabulary: [maintain]. DCWF-only terms [agreements, assess, cooperation, cyber, develop, external] vs WIDAI-only terms [ability, build, business, cross, data, delivery] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8828,
+        "recall": 0.852,
+        "f1": 0.8671,
+        "significance": "BERTScore F1=0.867 (P=0.883, R=0.852). P exceeds R by 0.031 \u2014 the DCWF element's 11 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.581,
+        "neutral": 0.4189,
+        "significance": "NLI: entailment-dominant (58.1%). The model interprets \"Develop, maintain, and assess cyber cooperation security agreements with externa\" as logically implying aspects of \"Ability to build cross-functional operational partnerships between data teams, I\" \u2014 directional semantic containment consistent with 'Intersects with' classification."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4794,
+        "significance": "Bi-encoder 0.479 < STS 0.586 (gap -0.106). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [agreements, assess, cooperation] and [ability, build, business] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0667,
+        "significance": "Jaccard 6.7%. Shared tokens: [maintain]. DCWF-only: [agreements, assess, cooperation, cyber, develop, external]. WIDAI-only: [ability, build, business, cross, data, delivery]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

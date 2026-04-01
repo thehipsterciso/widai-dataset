@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8115",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8115",
+  "focal_document_element_description": "Identify tools/hardware used to extract/analyze/capture memory and disk images.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-K-013",
+  "reference_document_element_description": "Knowledge of computer vision task taxonomy, including image classification, object detection, segmentation, pose estimation, and generation, and the architectures appropriate for each.",
+  "comments": "DCWF task intersects with WIDAI AI domain. AI-K-013 is the strongest semantic match. Secondary: TF-K-012 (TF, cosine: 0.370), DQ-K-011 (DQ, cosine: 0.365).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3724,
+      "mapped_strength_0_10": 3.7,
+      "final_strength_integer": 4,
+      "significance": "STS 3.7/10 (raw 0.372). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [analyze, capture, disk, extract, hardware, identify] vs WIDAI-only terms [appropriate, architectures, classification, computer, detection, estimation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8406,
+        "recall": 0.8425,
+        "f1": 0.8415,
+        "significance": "BERTScore F1=0.842 (P=0.841, R=0.843). Balanced P/R \u2014 the 9-word DCWF element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0153,
+        "neutral": 0.9843,
+        "significance": "NLI: neutral-dominant (98.4%). \"Identify tools/hardware used to extract/analyze/capture memory and disk images.\" and \"Knowledge of computer vision task taxonomy, including image classification, obje\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.3892,
+        "significance": "Bi-encoder 0.389 \u2248 STS 0.372 (gap 0.017). Independent encoding and cross-attention agree. Shared terms [none] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0312,
+        "significance": "Jaccard 3.1%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [analyze, capture, disk, extract, hardware, identify]. WIDAI terms: [appropriate, architectures, classification, computer, detection, estimation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

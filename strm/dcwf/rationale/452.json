@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "452",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "452",
+  "focal_document_element_description": "Conduct functional and connectivity testing to ensure continuing operability.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-003",
+  "reference_document_element_description": "Conduct periodic data compliance assessments, documenting findings, evidence, risk ratings, and remediation assignments.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-T-003 is the strongest semantic match. Secondary: AI-T-003 (AI, cosine: 0.386), RC-T-011 (RC, cosine: 0.373).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4574,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.457). Shared vocabulary: [conduct]. DCWF-only terms [connectivity, continuing, ensure, functional, operability, testing] vs WIDAI-only terms [assessments, assignments, compliance, data, documenting, evidence] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8827,
+        "recall": 0.8682,
+        "f1": 0.8754,
+        "significance": "BERTScore F1=0.875 (P=0.883, R=0.868). Balanced P/R \u2014 the 9-word DCWF element and 13-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0708,
+        "entailment": 0.0003,
+        "neutral": 0.9289,
+        "significance": "NLI: neutral-dominant (92.9%). \"Conduct functional and connectivity testing to ensure continuing operability.\" and \"Conduct periodic data compliance assessments, documenting findings, evidence, ri\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.393,
+        "significance": "Bi-encoder 0.393 < STS 0.457 (gap -0.064). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [connectivity, continuing, ensure] and [assessments, assignments, compliance] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1,
+        "significance": "Jaccard 10.0%. Shared tokens: [conduct]. DCWF-only: [connectivity, continuing, ensure, functional, operability, testing]. WIDAI-only: [assessments, assignments, compliance, data, documenting, evidence]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

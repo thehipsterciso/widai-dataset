@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6918",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6918",
+  "focal_document_element_description": "Ability to apply cybersecurity strategy to cloud\u00a0computing service and\u00a0deployment\u00a0models,\u00a0identifying\u00a0proper architecture for different operating environments.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-S-007",
+  "reference_document_element_description": "Skill in provisioning and configuring cloud platform data services, including compute resources, managed databases, object storage, and analytics services, with attention to cost optimization and security configuration.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-S-007 is the strongest semantic match. Secondary: SP-S-008 (SP, cosine: 0.514), AI-T-015 (AI, cosine: 0.501).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.7149,
+      "mapped_strength_0_10": 7.2,
+      "final_strength_integer": 7,
+      "significance": "STS 7.2/10 (raw 0.715). Shared vocabulary: [cloud]. DCWF-only terms [ability, apply, architecture, computing, cybersecurity, deployment] vs WIDAI-only terms [analytics, attention, compute, configuration, configuring, cost] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8238,
+        "recall": 0.868,
+        "f1": 0.8453,
+        "significance": "BERTScore F1=0.845 (P=0.824, R=0.868). R exceeds P by 0.044 \u2014 the WIDAI KSA's 27 words are well-captured by the DCWF element's 19 words, but the DCWF element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0028,
+        "neutral": 0.997,
+        "significance": "NLI: neutral-dominant (99.7%). \"Ability to apply cybersecurity strategy to cloud\u00a0computing service and\u00a0deploymen\" and \"Skill in provisioning and configuring cloud platform data services, including co\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5363,
+        "significance": "Bi-encoder 0.536 < STS 0.715 (gap -0.179). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [ability, apply, architecture] and [analytics, attention, compute] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0769,
+        "significance": "Jaccard 7.7%. Shared tokens: [cloud]. DCWF-only: [ability, apply, architecture, computing, cybersecurity, deployment]. WIDAI-only: [analytics, attention, compute, configuration, configuring, cost]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

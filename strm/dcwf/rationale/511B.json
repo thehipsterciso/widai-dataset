@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "511B",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "511B",
+  "focal_document_element_description": "Define baseline security requirements in accordance with applicable guidelines.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-K-010",
+  "reference_document_element_description": "Knowledge of Data Protection Impact Assessment requirements, including regulatory triggers that mandate a DPIA, mandatory assessment elements, supervisory authority consultation obligations, and documentation standards.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-K-010 is the strongest semantic match. Secondary: SP-K-014 (SP, cosine: 0.475), RC-T-007 (RC, cosine: 0.467).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.37,
+      "mapped_strength_0_10": 3.7,
+      "final_strength_integer": 4,
+      "significance": "STS 3.7/10 (raw 0.370). Shared vocabulary: [requirements]. DCWF-only terms [accordance, applicable, baseline, define, guidelines, security] vs WIDAI-only terms [assessment, authority, consultation, data, documentation, dpia] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8865,
+        "recall": 0.8508,
+        "f1": 0.8683,
+        "significance": "BERTScore F1=0.868 (P=0.886, R=0.851). P exceeds R by 0.036 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 24 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.1074,
+        "entailment": 0.042,
+        "neutral": 0.8507,
+        "significance": "NLI: neutral-dominant (85.1%). \"Define baseline security requirements in accordance with applicable guidelines.\" and \"Knowledge of Data Protection Impact Assessment requirements, including regulator\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4797,
+        "significance": "Bi-encoder 0.480 > STS 0.370 (gap +0.110). Independent encoding finds more similarity than cross-attention. Shared surface terms [requirements] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0323,
+        "significance": "Jaccard 3.2%. Shared tokens: [requirements]. DCWF-only: [accordance, applicable, baseline, define, guidelines, security]. WIDAI-only: [assessment, authority, consultation, data, documentation, dpia]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

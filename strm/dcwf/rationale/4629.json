@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4629",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4629",
+  "focal_document_element_description": "Skill in executing post publication processes IAW organization standards/Policy",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-004",
+  "reference_document_element_description": "Manage regulatory data reporting obligations, including data submission preparation, accuracy verification, submission execution, and confirmation documentation.",
+  "comments": "DCWF ksa intersects with WIDAI RC domain. RC-T-004 is the strongest semantic match. Secondary: SP-T-006 (SP, cosine: 0.517), LS-S-006 (LS, cosine: 0.506).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2736,
+      "mapped_strength_0_10": 2.7,
+      "final_strength_integer": 3,
+      "significance": "STS 2.7/10 (raw 0.274). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [executing, iaw, organization, policy, post, processes] vs WIDAI-only terms [accuracy, confirmation, data, documentation, execution, manage] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8419,
+        "recall": 0.8541,
+        "f1": 0.8479,
+        "significance": "BERTScore F1=0.848 (P=0.842, R=0.854). Balanced P/R \u2014 the 9-word DCWF element and 16-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0027,
+        "neutral": 0.9971,
+        "significance": "NLI: neutral-dominant (99.7%). \"Skill in executing post publication processes IAW organization standards/Policy\" and \"Manage regulatory data reporting obligations, including data submission preparat\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5289,
+        "significance": "Bi-encoder 0.529 > STS 0.274 (gap +0.255). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0,
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [executing, iaw, organization, policy, post, processes]. WIDAI terms: [accuracy, confirmation, data, documentation, execution, manage]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

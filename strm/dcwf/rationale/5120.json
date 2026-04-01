@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5120",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5120",
+  "focal_document_element_description": "Conduct hypothesis testing using statistical processes.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-T-005",
+  "reference_document_element_description": "Design and analyze controlled experiments (A/B tests), including hypothesis specification, randomization oversight, results interpretation, and recommendation delivery.",
+  "comments": "DCWF task intersects with WIDAI AB domain. AB-T-005 is the strongest semantic match. Secondary: AI-K-002 (AI, cosine: 0.513), AB-K-005 (AB, cosine: 0.480).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5212,
+      "mapped_strength_0_10": 5.2,
+      "final_strength_integer": 5,
+      "significance": "STS 5.2/10 (raw 0.521). Shared vocabulary: [hypothesis]. DCWF-only terms [conduct, processes, statistical, testing, using] vs WIDAI-only terms [analyze, b, controlled, delivery, design, experiments] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8957,
+        "recall": 0.8474,
+        "f1": 0.8709,
+        "significance": "BERTScore F1=0.871 (P=0.896, R=0.847). P exceeds R by 0.048 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 17 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0041,
+        "entailment": 0.0032,
+        "neutral": 0.9927,
+        "significance": "NLI: neutral-dominant (99.3%). \"Conduct hypothesis testing using statistical processes.\" and \"Design and analyze controlled experiments (A/B tests), including hypothesis spec\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5215,
+        "significance": "Bi-encoder 0.521 \u2248 STS 0.521 (gap 0.000). Independent encoding and cross-attention agree. Shared terms [hypothesis] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0455,
+        "significance": "Jaccard 4.5%. Shared tokens: [hypothesis]. DCWF-only: [conduct, processes, statistical, testing, using]. WIDAI-only: [analyze, b, controlled, delivery, design, experiments]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

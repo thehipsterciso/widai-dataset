@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6760",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6760",
+  "focal_document_element_description": "Skill in writing scripts using R, Python, PIG, HIVE, SQL, etc.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-S-008",
+  "reference_document_element_description": "Skill in writing shell scripts to automate data operations, including file manipulation, job scheduling, environment configuration, log processing, and pipeline orchestration on Linux systems.",
+  "comments": "DCWF ksa superset of WIDAI TF domain. TF-S-008 is the strongest semantic match. Secondary: TF-S-001 (TF, cosine: 0.621), AI-S-003 (AI, cosine: 0.577).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5281,
+      "mapped_strength_0_10": 5.3,
+      "final_strength_integer": 5,
+      "significance": "STS 5.3/10 (raw 0.528). Shared vocabulary: [scripts, skill, writing]. DCWF-only terms [etc, hive, pig, python, r, sql] vs WIDAI-only terms [automate, configuration, data, environment, file, job] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8906,
+        "recall": 0.8806,
+        "f1": 0.8856,
+        "significance": "BERTScore F1=0.886 (P=0.891, R=0.881). Balanced P/R \u2014 the 11-word DCWF element and 24-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0002,
+        "neutral": 0.9995,
+        "significance": "NLI: neutral-dominant (100.0%). \"Skill in writing scripts using R, Python, PIG, HIVE, SQL, etc.\" and \"Skill in writing shell scripts to automate data operations, including file manip\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6809,
+        "significance": "Bi-encoder 0.681 > STS 0.528 (gap +0.153). Independent encoding finds more similarity than cross-attention. Shared surface terms [scripts, skill, writing] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.129,
+        "significance": "Jaccard 12.9%. Shared tokens: [scripts, skill, writing]. DCWF-only: [etc, hive, pig, python, r, sql]. WIDAI-only: [automate, configuration, data, environment, file, job]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

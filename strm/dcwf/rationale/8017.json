@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8017",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8017",
+  "focal_document_element_description": "As authorized, train cyberspace operators at one\u2019s certification level or below.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-T-010",
+  "reference_document_element_description": "Develop and maintain AI security standards for the enterprise, including training data provenance requirements, model registry controls, and LLM application security requirements.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-T-010 is the strongest semantic match. Secondary: RC-T-010 (RC, cosine: 0.415), DA-S-004 (DA, cosine: 0.410).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2436,
+      "mapped_strength_0_10": 2.4,
+      "final_strength_integer": 2,
+      "significance": "STS 2.4/10 (raw 0.244). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [authorized, certification, cyberspace, level, one, operators] vs WIDAI-only terms [ai, application, controls, data, develop, enterprise] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8495,
+        "recall": 0.846,
+        "f1": 0.8477,
+        "significance": "BERTScore F1=0.848 (P=0.850, R=0.846). Balanced P/R \u2014 the 11-word DCWF element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.3756,
+        "entailment": 0.0005,
+        "neutral": 0.6239,
+        "significance": "NLI: mixed signal (E:0.1%, N:62.4%, C:37.6%). No dominant classification for \"As authorized, train cyberspace operators at one\u2019s certification level or below.\" vs \"Develop and maintain AI security standards for the enterprise, including trainin\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4222,
+        "significance": "Bi-encoder 0.422 > STS 0.244 (gap +0.179). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0,
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [authorized, certification, cyberspace, level, one, operators]. WIDAI terms: [ai, application, controls, data, develop, enterprise]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8229",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8229",
+  "focal_document_element_description": "Maintain consistent operational logs to facilitate deconfliction and sanitization.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-T-007",
+  "reference_document_element_description": "Manage data pipeline operations, including monitoring execution schedules, investigating failures, coordinating remediation, verifying recovery, and documenting root cause analysis for recurring issues.",
+  "comments": "DCWF task intersects with WIDAI OP domain. OP-T-007 is the strongest semantic match. Secondary: RC-T-005 (RC, cosine: 0.464), TF-A-002 (TF, cosine: 0.461).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4717,
+      "mapped_strength_0_10": 4.7,
+      "final_strength_integer": 5,
+      "significance": "STS 4.7/10 (raw 0.472). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [consistent, deconfliction, facilitate, logs, maintain, operational] vs WIDAI-only terms [analysis, cause, coordinating, data, documenting, execution] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8805,
+        "recall": 0.8659,
+        "f1": 0.8731,
+        "significance": "BERTScore F1=0.873 (P=0.880, R=0.866). Balanced P/R \u2014 the 9-word DCWF element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0005,
+        "entailment": 0.0016,
+        "neutral": 0.9979,
+        "significance": "NLI: neutral-dominant (99.8%). \"Maintain consistent operational logs to facilitate deconfliction and sanitizatio\" and \"Manage data pipeline operations, including monitoring execution schedules, inves\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4823,
+        "significance": "Bi-encoder 0.482 \u2248 STS 0.472 (gap 0.011). Independent encoding and cross-attention agree. Shared terms [none] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0333,
+        "significance": "Jaccard 3.3%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [consistent, deconfliction, facilitate, logs, maintain, operational]. WIDAI terms: [analysis, cause, coordinating, data, documenting, execution]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

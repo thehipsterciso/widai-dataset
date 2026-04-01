@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4406",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4406",
+  "focal_document_element_description": "Knowledge of Collateral Effects Estimation.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-K-009",
+  "reference_document_element_description": "Knowledge of causal inference methods, including difference-in-differences, instrumental variables, regression discontinuity, propensity score matching, and their identification assumptions.",
+  "comments": "DCWF ksa superset of WIDAI AB domain. AB-K-009 is the strongest semantic match. Secondary: LS-K-012 (LS, cosine: 0.506), RM-K-001 (RM, cosine: 0.452).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4992,
+      "mapped_strength_0_10": 5.0,
+      "final_strength_integer": 5,
+      "significance": "STS 5.0/10 (raw 0.499). Shared vocabulary: [knowledge]. DCWF-only terms [collateral, effects, estimation] vs WIDAI-only terms [assumptions, causal, difference, differences, discontinuity, identification] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8965,
+        "recall": 0.8388,
+        "f1": 0.8667,
+        "significance": "BERTScore F1=0.867 (P=0.896, R=0.839). P exceeds R by 0.058 \u2014 the DCWF element's 5 words are well-captured by the WIDAI KSA's 18 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0057,
+        "entailment": 0.0031,
+        "neutral": 0.9912,
+        "significance": "NLI: neutral-dominant (99.1%). \"Knowledge of Collateral Effects Estimation.\" and \"Knowledge of causal inference methods, including difference-in-differences, inst\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5616,
+        "significance": "Bi-encoder 0.562 > STS 0.499 (gap +0.062). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.087,
+        "significance": "Jaccard 8.7%. Shared tokens: [knowledge]. DCWF-only: [collateral, effects, estimation]. WIDAI-only: [assumptions, causal, difference, differences, discontinuity, identification]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

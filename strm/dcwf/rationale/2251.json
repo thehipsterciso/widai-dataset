@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2251",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2251",
+  "focal_document_element_description": "Apply analytic techniques to gain more target information.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-A-002",
+  "reference_document_element_description": "Ability to select the appropriate analytical method for a given business question, balancing statistical rigor, time constraints, data availability, and audience comprehension capacity.",
+  "comments": "DCWF task intersects with WIDAI AB domain. AB-A-002 is the strongest semantic match. Secondary: AB-A-003 (AB, cosine: 0.471), AB-S-007 (AB, cosine: 0.471).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5138,
+      "mapped_strength_0_10": 5.1,
+      "final_strength_integer": 5,
+      "significance": "STS 5.1/10 (raw 0.514). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [analytic, apply, gain, information, more, target] vs WIDAI-only terms [ability, analytical, appropriate, audience, availability, balancing] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8835,
+        "recall": 0.8514,
+        "f1": 0.8672,
+        "significance": "BERTScore F1=0.867 (P=0.883, R=0.851). P exceeds R by 0.032 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.001,
+        "neutral": 0.9988,
+        "significance": "NLI: neutral-dominant (99.9%). \"Apply analytic techniques to gain more target information.\" and \"Ability to select the appropriate analytical method for a given business questio\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5309,
+        "significance": "Bi-encoder 0.531 \u2248 STS 0.514 (gap 0.017). Independent encoding and cross-attention agree. Shared terms [none] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0333,
+        "significance": "Jaccard 3.3%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [analytic, apply, gain, information, more, target]. WIDAI terms: [ability, analytical, appropriate, audience, availability, balancing]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

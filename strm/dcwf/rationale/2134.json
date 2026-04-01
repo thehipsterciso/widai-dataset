@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2134",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2134",
+  "focal_document_element_description": "Conduct target research and analysis.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-T-006",
+  "reference_document_element_description": "Conduct data and AI workforce planning, including current-state skills assessment, future-state requirements modeling, gap analysis, and talent acquisition and development strategy formulation.",
+  "comments": "DCWF task intersects with WIDAI LS domain. LS-T-006 is the strongest semantic match. Secondary: DG-T-014 (DG, cosine: 0.510), AI-T-018 (AI, cosine: 0.483).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5211,
+      "mapped_strength_0_10": 5.2,
+      "final_strength_integer": 5,
+      "significance": "STS 5.2/10 (raw 0.521). Shared vocabulary: [analysis, conduct]. DCWF-only terms [research, target] vs WIDAI-only terms [acquisition, ai, assessment, current, data, development] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9184,
+        "recall": 0.8481,
+        "f1": 0.8819,
+        "significance": "BERTScore F1=0.882 (P=0.918, R=0.848). P exceeds R by 0.070 \u2014 the DCWF element's 5 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0019,
+        "entailment": 0.0027,
+        "neutral": 0.9954,
+        "significance": "NLI: neutral-dominant (99.5%). \"Conduct target research and analysis.\" and \"Conduct data and AI workforce planning, including current-state skills assessmen\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5109,
+        "significance": "Bi-encoder 0.511 \u2248 STS 0.521 (gap 0.010). Independent encoding and cross-attention agree. Shared terms [analysis, conduct] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1304,
+        "significance": "Jaccard 13.0%. Shared tokens: [analysis, conduct]. DCWF-only: [research, target]. WIDAI-only: [acquisition, ai, assessment, current, data, development]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

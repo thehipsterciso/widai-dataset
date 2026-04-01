@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2532",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2532",
+  "focal_document_element_description": "Lead and coordinate intelligence support to operational planning.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "LS-T-002",
+  "reference_document_element_description": "Design and lead enterprise data and AI transformation programs, including operating model redesign, capability development roadmaps, and organizational change management.",
+  "comments": "DCWF task superset of WIDAI LS domain. LS-T-002 is the strongest semantic match. Secondary: DG-T-003 (DG, cosine: 0.562), AB-T-004 (AB, cosine: 0.556).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6203,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.620). Shared vocabulary: [lead]. DCWF-only terms [coordinate, intelligence, operational, planning, support] vs WIDAI-only terms [ai, capability, change, data, design, development] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9003,
+        "recall": 0.8673,
+        "f1": 0.8835,
+        "significance": "BERTScore F1=0.883 (P=0.900, R=0.867). P exceeds R by 0.033 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0035,
+        "entailment": 0.0017,
+        "neutral": 0.9948,
+        "significance": "NLI: neutral-dominant (99.5%). \"Lead and coordinate intelligence support to operational planning.\" and \"Design and lead enterprise data and AI transformation programs, including operat\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5861,
+        "significance": "Bi-encoder 0.586 \u2248 STS 0.620 (gap 0.034). Independent encoding and cross-attention agree. Shared terms [lead] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0833,
+        "significance": "Jaccard 8.3%. Shared tokens: [lead]. DCWF-only: [coordinate, intelligence, operational, planning, support]. WIDAI-only: [ai, capability, change, data, design, development]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

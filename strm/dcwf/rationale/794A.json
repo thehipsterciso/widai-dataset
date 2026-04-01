@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "794A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "794A",
+  "focal_document_element_description": "Promote knowledge sharing between information owners/users through an organization\u2019s operational processes and systems.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-A-004",
+  "reference_document_element_description": "Ability to navigate the tension between data sharing for organizational value creation and data protection requirements, finding practical approaches that satisfy both objectives.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-A-004 is the strongest semantic match. Secondary: OP-A-003 (OP, cosine: 0.481), OP-T-010 (OP, cosine: 0.473).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4109,
+      "mapped_strength_0_10": 4.1,
+      "final_strength_integer": 4,
+      "significance": "STS 4.1/10 (raw 0.411). Shared vocabulary: [sharing]. DCWF-only terms [information, knowledge, operational, organization, owners, processes] vs WIDAI-only terms [ability, approaches, creation, data, finding, navigate] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8782,
+        "recall": 0.872,
+        "f1": 0.8751,
+        "significance": "BERTScore F1=0.875 (P=0.878, R=0.872). Balanced P/R \u2014 the 13-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.002,
+        "entailment": 0.0079,
+        "neutral": 0.9901,
+        "significance": "NLI: neutral-dominant (99.0%). \"Promote knowledge sharing between information owners/users through an organizati\" and \"Ability to navigate the tension between data sharing for organizational value cr\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5224,
+        "significance": "Bi-encoder 0.522 > STS 0.411 (gap +0.111). Independent encoding finds more similarity than cross-attention. Shared surface terms [sharing] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0882,
+        "significance": "Jaccard 8.8%. Shared tokens: [sharing]. DCWF-only: [information, knowledge, operational, organization, owners, processes]. WIDAI-only: [ability, approaches, creation, data, finding, navigate]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

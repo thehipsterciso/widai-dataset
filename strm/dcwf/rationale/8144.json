@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8144",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8144",
+  "focal_document_element_description": "Perform code review and analysis to inform OPSEC analysis and application (attribution, sanitization, etc.)",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-T-006",
+  "reference_document_element_description": "Conduct code reviews for data application changes, evaluating code quality, test coverage, performance implications, documentation completeness, and adherence to team coding standards.",
+  "comments": "DCWF task intersects with WIDAI TF domain. TF-T-006 is the strongest semantic match. Secondary: AB-T-001 (AB, cosine: 0.464), RC-A-005 (RC, cosine: 0.456).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6346,
+      "mapped_strength_0_10": 6.3,
+      "final_strength_integer": 6,
+      "significance": "STS 6.3/10 (raw 0.635). Shared vocabulary: [application, code]. DCWF-only terms [analysis, attribution, etc, inform, opsec, perform] vs WIDAI-only terms [adherence, changes, coding, completeness, conduct, coverage] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8671,
+        "recall": 0.8707,
+        "f1": 0.8689,
+        "significance": "BERTScore F1=0.869 (P=0.867, R=0.871). Balanced P/R \u2014 the 14-word DCWF element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0004,
+        "neutral": 0.9995,
+        "significance": "NLI: neutral-dominant (100.0%). \"Perform code review and analysis to inform OPSEC analysis and application (attri\" and \"Conduct code reviews for data application changes, evaluating code quality, test\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5452,
+        "significance": "Bi-encoder 0.545 < STS 0.635 (gap -0.089). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [analysis, attribution, etc] and [adherence, changes, coding] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1379,
+        "significance": "Jaccard 13.8%. Shared tokens: [application, code]. DCWF-only: [analysis, attribution, etc, inform, opsec, perform]. WIDAI-only: [adherence, changes, coding, completeness, conduct, coverage]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

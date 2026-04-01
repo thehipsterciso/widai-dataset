@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "963",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "963",
+  "focal_document_element_description": "Ensure plans of actions and milestones or remediation plans are in place for vulnerabilities identified during risk assessments, audits, inspections, etc.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-T-005",
+  "reference_document_element_description": "Track data compliance remediation activities, including milestone monitoring, blocker escalation, and closure verification with evidence.",
+  "comments": "DCWF task superset of WIDAI RC domain. RC-T-005 is the strongest semantic match. Secondary: OP-T-001 (OP, cosine: 0.531), RM-S-007 (RM, cosine: 0.524).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5595,
+      "mapped_strength_0_10": 5.6,
+      "final_strength_integer": 6,
+      "significance": "STS 5.6/10 (raw 0.559). Shared vocabulary: [remediation]. DCWF-only terms [actions, assessments, audits, ensure, etc, identified] vs WIDAI-only terms [activities, blocker, closure, compliance, data, escalation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8641,
+        "recall": 0.8671,
+        "f1": 0.8656,
+        "significance": "BERTScore F1=0.866 (P=0.864, R=0.867). Balanced P/R \u2014 the 21-word DCWF element and 15-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0009,
+        "neutral": 0.9988,
+        "significance": "NLI: neutral-dominant (99.9%). \"Ensure plans of actions and milestones or remediation plans are in place for vul\" and \"Track data compliance remediation activities, including milestone monitoring, bl\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.627,
+        "significance": "Bi-encoder 0.627 > STS 0.559 (gap +0.068). Independent encoding finds more similarity than cross-attention. Shared surface terms [remediation] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0606,
+        "significance": "Jaccard 6.1%. Shared tokens: [remediation]. DCWF-only: [actions, assessments, audits, ensure, etc, identified]. WIDAI-only: [activities, blocker, closure, compliance, data, escalation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

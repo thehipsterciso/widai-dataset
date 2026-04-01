@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1143A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1143A",
+  "focal_document_element_description": "Conduct import/export reviews for acquiring systems and software.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-T-008",
+  "reference_document_element_description": "Conduct vendor evaluations for data and AI platforms, including requirements definition, proof-of-concept design and execution, technical and commercial assessment, and selection recommendation.",
+  "comments": "DCWF task intersects with WIDAI OP domain. OP-T-008 is the strongest semantic match. Secondary: TF-T-006 (TF, cosine: 0.455), AB-T-001 (AB, cosine: 0.431).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4734,
+      "mapped_strength_0_10": 4.7,
+      "final_strength_integer": 5,
+      "significance": "STS 4.7/10 (raw 0.473). Shared vocabulary: [conduct]. DCWF-only terms [acquiring, export, import, reviews, software, systems] vs WIDAI-only terms [ai, assessment, commercial, concept, data, definition] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8991,
+        "recall": 0.8499,
+        "f1": 0.8738,
+        "significance": "BERTScore F1=0.874 (P=0.899, R=0.850). P exceeds R by 0.049 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0039,
+        "entailment": 0.0005,
+        "neutral": 0.9957,
+        "significance": "NLI: neutral-dominant (99.6%). \"Conduct import/export reviews for acquiring systems and software.\" and \"Conduct vendor evaluations for data and AI platforms, including requirements def\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4701,
+        "significance": "Bi-encoder 0.470 \u2248 STS 0.473 (gap 0.003). Independent encoding and cross-attention agree. Shared terms [conduct] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1111,
+        "significance": "Jaccard 11.1%. Shared tokens: [conduct]. DCWF-only: [acquiring, export, import, reviews, software, systems]. WIDAI-only: [ai, assessment, commercial, concept, data, definition]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

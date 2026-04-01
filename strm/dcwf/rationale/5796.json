@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5796",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5796",
+  "focal_document_element_description": "Participate in the implementation and ongoing compliance monitoring of all trading partner and business associate agreements, to ensure all privacy concerns, requirements, and responsibilities are addressed.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "SP-T-006",
+  "reference_document_element_description": "Monitor organizational compliance with data protection obligations, conduct internal audits of processing activities, maintain the register of processing activities, and report compliance posture to senior management and supervisory authorities as required.",
+  "comments": "DCWF task superset of WIDAI SP domain. SP-T-006 is the strongest semantic match. Secondary: RC-A-002 (RC, cosine: 0.561), SP-S-004 (SP, cosine: 0.527).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5043,
+      "mapped_strength_0_10": 5.0,
+      "final_strength_integer": 5,
+      "significance": "STS 5.0/10 (raw 0.504). Shared vocabulary: [compliance]. DCWF-only terms [addressed, agreements, associate, business, concerns, ensure] vs WIDAI-only terms [activities, audits, authorities, conduct, data, internal] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8805,
+        "recall": 0.8603,
+        "f1": 0.8703,
+        "significance": "BERTScore F1=0.870 (P=0.880, R=0.860). P exceeds R by 0.020 \u2014 the DCWF element's 26 words are well-captured by the WIDAI KSA's 31 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.0002,
+        "neutral": 0.9998,
+        "significance": "NLI: neutral-dominant (100.0%). \"Participate in the implementation and ongoing compliance monitoring of all tradi\" and \"Monitor organizational compliance with data protection obligations, conduct inte\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6132,
+        "significance": "Bi-encoder 0.613 > STS 0.504 (gap +0.109). Independent encoding finds more similarity than cross-attention. Shared surface terms [compliance] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1136,
+        "significance": "Jaccard 11.4%. Shared tokens: [compliance]. DCWF-only: [addressed, agreements, associate, business, concerns, ensure]. WIDAI-only: [activities, audits, authorities, conduct, data, internal]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

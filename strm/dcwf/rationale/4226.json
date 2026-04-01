@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4226",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4226",
+  "focal_document_element_description": "Ability to create baselines/PPS documents and to compare current state against documentation.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-T-010",
+  "reference_document_element_description": "Produce analytical documentation that meets the evidence standard required for regulatory, audit, or executive decision support contexts.",
+  "comments": "DCWF ksa superset of WIDAI AB domain. AB-T-010 is the strongest semantic match. Secondary: AB-S-002 (AB, cosine: 0.556), OP-T-010 (OP, cosine: 0.543).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4938,
+      "mapped_strength_0_10": 4.9,
+      "final_strength_integer": 5,
+      "significance": "STS 4.9/10 (raw 0.494). Shared vocabulary: [documentation]. DCWF-only terms [ability, against, baselines, compare, create, current] vs WIDAI-only terms [analytical, audit, contexts, decision, evidence, executive] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8644,
+        "recall": 0.8468,
+        "f1": 0.8555,
+        "significance": "BERTScore F1=0.856 (P=0.864, R=0.847). Balanced P/R \u2014 the 12-word DCWF element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0006,
+        "neutral": 0.9992,
+        "significance": "NLI: neutral-dominant (99.9%). \"Ability to create baselines/PPS documents and to compare current state against d\" and \"Produce analytical documentation that meets the evidence standard required for r\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5819,
+        "significance": "Bi-encoder 0.582 > STS 0.494 (gap +0.088). Independent encoding finds more similarity than cross-attention. Shared surface terms [documentation] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0357,
+        "significance": "Jaccard 3.6%. Shared tokens: [documentation]. DCWF-only: [ability, against, baselines, compare, create, current]. WIDAI-only: [analytical, audit, contexts, decision, evidence, executive]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6320",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6320",
+  "focal_document_element_description": "Knowledge of media production, communication, and dissemination techniques and methods, including alternative ways to inform via written, oral, and visual media.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-S-005",
+  "reference_document_element_description": "Skill in communicating research findings to both technical and non-technical audiences, including paper writing, conference presentation, and internal briefing formats.",
+  "comments": "DCWF ksa intersects with WIDAI LS domain. LS-S-005 is the strongest semantic match. Secondary: DQ-K-010 (DQ, cosine: 0.465), SP-K-004 (SP, cosine: 0.404).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.548,
+      "mapped_strength_0_10": 5.5,
+      "final_strength_integer": 6,
+      "significance": "STS 5.5/10 (raw 0.548). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [alternative, communication, dissemination, inform, knowledge, media] vs WIDAI-only terms [audiences, briefing, communicating, conference, findings, formats] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8795,
+        "recall": 0.8713,
+        "f1": 0.8754,
+        "significance": "BERTScore F1=0.875 (P=0.879, R=0.871). Balanced P/R \u2014 the 21-word DCWF element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.016,
+        "entailment": 0.0002,
+        "neutral": 0.9838,
+        "significance": "NLI: neutral-dominant (98.4%). \"Knowledge of media production, communication, and dissemination techniques and m\" and \"Skill in communicating research findings to both technical and non-technical aud\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5054,
+        "significance": "Bi-encoder 0.505 \u2248 STS 0.548 (gap 0.043). Independent encoding and cross-attention agree. Shared terms [none] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0882,
+        "significance": "Jaccard 8.8%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [alternative, communication, dissemination, inform, knowledge, media]. WIDAI terms: [audiences, briefing, communicating, conference, findings, formats]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

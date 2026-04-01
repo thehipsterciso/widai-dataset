@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4295",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4295",
+  "focal_document_element_description": "Ability to integrate information security requirements into the acquisition process, using applicable baseline security controls as one of the sources for security requirements, and ensuring a robust software quality control process.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-T-010",
+  "reference_document_element_description": "Develop and maintain AI security standards for the enterprise, including training data provenance requirements, model registry controls, and LLM application security requirements.",
+  "comments": "DCWF ksa intersects with WIDAI SP domain. SP-T-010 is the strongest semantic match. Secondary: SP-K-014 (SP, cosine: 0.525), RC-A-005 (RC, cosine: 0.521).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.549,
+      "mapped_strength_0_10": 5.5,
+      "final_strength_integer": 6,
+      "significance": "STS 5.5/10 (raw 0.549). Shared vocabulary: [controls, requirements, security]. DCWF-only terms [ability, acquisition, applicable, baseline, control, ensuring] vs WIDAI-only terms [ai, application, data, develop, enterprise, llm] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.868,
+        "recall": 0.8763,
+        "f1": 0.8721,
+        "significance": "BERTScore F1=0.872 (P=0.868, R=0.876). Balanced P/R \u2014 the 31-word DCWF element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0618,
+        "entailment": 0.0019,
+        "neutral": 0.9363,
+        "significance": "NLI: neutral-dominant (93.6%). \"Ability to integrate information security requirements into the acquisition proc\" and \"Develop and maintain AI security standards for the enterprise, including trainin\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5282,
+        "significance": "Bi-encoder 0.528 \u2248 STS 0.549 (gap 0.021). Independent encoding and cross-attention agree. Shared terms [controls, requirements, security] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1538,
+        "significance": "Jaccard 15.4%. Shared tokens: [controls, requirements, security]. DCWF-only: [ability, acquisition, applicable, baseline, control, ensuring]. WIDAI-only: [ai, application, data, develop, enterprise, llm]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

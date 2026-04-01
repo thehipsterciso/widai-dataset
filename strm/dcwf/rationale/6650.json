@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6650",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6650",
+  "focal_document_element_description": "Skill in developing machine understandable semantic ontologies.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-S-005",
+  "reference_document_element_description": "Skill in designing BI semantic models that are performant, reusable, and understandable by business users without requiring technical knowledge.",
+  "comments": "DCWF ksa superset of WIDAI AB domain. AB-S-005 is the strongest semantic match. Secondary: OP-S-004 (OP, cosine: 0.459), DQ-K-011 (DQ, cosine: 0.452).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6847,
+      "mapped_strength_0_10": 6.8,
+      "final_strength_integer": 7,
+      "significance": "STS 6.8/10 (raw 0.685). Shared vocabulary: [semantic, skill, understandable]. DCWF-only terms [developing, machine, ontologies] vs WIDAI-only terms [bi, business, designing, knowledge, models, performant] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.921,
+        "recall": 0.8643,
+        "f1": 0.8917,
+        "significance": "BERTScore F1=0.892 (P=0.921, R=0.864). P exceeds R by 0.057 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0116,
+        "neutral": 0.9883,
+        "significance": "NLI: neutral-dominant (98.8%). \"Skill in developing machine understandable semantic ontologies.\" and \"Skill in designing BI semantic models that are performant, reusable, and underst\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5841,
+        "significance": "Bi-encoder 0.584 < STS 0.685 (gap -0.101). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [developing, machine, ontologies] and [bi, business, designing] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1818,
+        "significance": "Jaccard 18.2%. Shared tokens: [semantic, skill, understandable]. DCWF-only: [developing, machine, ontologies]. WIDAI-only: [bi, business, designing, knowledge, models, performant]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

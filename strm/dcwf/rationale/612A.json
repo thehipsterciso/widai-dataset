@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "612A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "612A",
+  "focal_document_element_description": "Evaluate the impact of changes to laws, regulations, policies, standards, or procedures.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-S-005",
+  "reference_document_element_description": "Skill in regulatory horizon scanning, including monitoring legislative developments across relevant jurisdictions, assessing organizational impact of proposed and enacted regulations, and planning compliance adaptation timelines.",
+  "comments": "DCWF task superset of WIDAI RC domain. RC-S-005 is the strongest semantic match. Secondary: RC-A-005 (RC, cosine: 0.564), RC-T-008 (RC, cosine: 0.563).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6732,
+      "mapped_strength_0_10": 6.7,
+      "final_strength_integer": 7,
+      "significance": "STS 6.7/10 (raw 0.673). Shared vocabulary: [impact, regulations]. DCWF-only terms [changes, evaluate, laws, policies, procedures, standards] vs WIDAI-only terms [across, adaptation, assessing, compliance, developments, enacted] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8792,
+        "recall": 0.8683,
+        "f1": 0.8737,
+        "significance": "BERTScore F1=0.874 (P=0.879, R=0.868). Balanced P/R \u2014 the 12-word DCWF element and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0093,
+        "neutral": 0.9906,
+        "significance": "NLI: neutral-dominant (99.1%). \"Evaluate the impact of changes to laws, regulations, policies, standards, or pro\" and \"Skill in regulatory horizon scanning, including monitoring legislative developme\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.62,
+        "significance": "Bi-encoder 0.620 < STS 0.673 (gap -0.053). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [changes, evaluate, laws] and [across, adaptation, assessing] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0909,
+        "significance": "Jaccard 9.1%. Shared tokens: [impact, regulations]. DCWF-only: [changes, evaluate, laws, policies, procedures, standards]. WIDAI-only: [across, adaptation, assessing, compliance, developments, enacted]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

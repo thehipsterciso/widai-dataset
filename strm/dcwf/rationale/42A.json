@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "42A",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "42A",
+  "focal_document_element_description": "Knowledge of engineering concepts as applied to computer architecture and associated computer hardware/software.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DQ-K-014",
+  "reference_document_element_description": "Knowledge of data product design principles, including data product definition, consumer segmentation, interface design (APIs, subscriptions, files), SLA definition, and data product lifecycle.",
+  "comments": "DCWF ksa intersects with WIDAI DQ domain. DQ-K-014 is the strongest semantic match. Secondary: LS-K-005 (LS, cosine: 0.470), DA-K-002 (DA, cosine: 0.453).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4596,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.460). Shared vocabulary: [knowledge]. DCWF-only terms [applied, architecture, associated, computer, concepts, engineering] vs WIDAI-only terms [apis, consumer, data, definition, design, files] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8808,
+        "recall": 0.8515,
+        "f1": 0.8659,
+        "significance": "BERTScore F1=0.866 (P=0.881, R=0.852). P exceeds R by 0.029 \u2014 the DCWF element's 13 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.327,
+        "entailment": 0.0023,
+        "neutral": 0.6707,
+        "significance": "NLI: mixed signal (E:0.2%, N:67.1%, C:32.7%). No dominant classification for \"Knowledge of engineering concepts as applied to computer architecture and associ\" vs \"Knowledge of data product design principles, including data product definition,\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4789,
+        "significance": "Bi-encoder 0.479 \u2248 STS 0.460 (gap 0.019). Independent encoding and cross-attention agree. Shared terms [knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1111,
+        "significance": "Jaccard 11.1%. Shared tokens: [knowledge]. DCWF-only: [applied, architecture, associated, computer, concepts, engineering]. WIDAI-only: [apis, consumer, data, definition, design, files]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

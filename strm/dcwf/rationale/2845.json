@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2845",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2845",
+  "focal_document_element_description": "Synchronize the integrated employment of all available organic and partner intelligence collection assets using available collaboration capabilities and techniques.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-K-011",
+  "reference_document_element_description": "Knowledge of the data and AI vendor ecosystem, including major platform providers, emerging technology categories, vendor lock-in risks, open-source alternatives, and strategic partnership evaluation criteria.",
+  "comments": "DCWF task intersects with WIDAI LS domain. LS-K-011 is the strongest semantic match. Secondary: LS-S-013 (LS, cosine: 0.488), LS-S-012 (LS, cosine: 0.475).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3768,
+      "mapped_strength_0_10": 3.8,
+      "final_strength_integer": 4,
+      "significance": "STS 3.8/10 (raw 0.377). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [assets, available, capabilities, collaboration, collection, employment] vs WIDAI-only terms [ai, alternatives, categories, criteria, data, ecosystem] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8435,
+        "recall": 0.8507,
+        "f1": 0.8471,
+        "significance": "BERTScore F1=0.847 (P=0.844, R=0.851). Balanced P/R \u2014 the 19-word DCWF element and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0009,
+        "entailment": 0.0012,
+        "neutral": 0.9978,
+        "significance": "NLI: neutral-dominant (99.8%). \"Synchronize the integrated employment of all available organic and partner intel\" and \"Knowledge of the data and AI vendor ecosystem, including major platform provider\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4889,
+        "significance": "Bi-encoder 0.489 > STS 0.377 (gap +0.112). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0769,
+        "significance": "Jaccard 7.7%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [assets, available, capabilities, collaboration, collection, employment]. WIDAI terms: [ai, alternatives, categories, criteria, data, ecosystem]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

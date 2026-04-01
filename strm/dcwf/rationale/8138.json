@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8138",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8138",
+  "focal_document_element_description": "Mitigate collection gaps",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-K-009",
+  "reference_document_element_description": "Knowledge of retrieval-augmented generation (RAG) architecture patterns, including vector store design, chunking strategies, retrieval evaluation, and hallucination mitigation approaches.",
+  "comments": "DCWF task intersects with WIDAI AI domain. AI-K-009 is the strongest semantic match. Secondary: DQ-T-009 (DQ, cosine: 0.304), RM-K-007 (RM, cosine: 0.279).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4177,
+      "mapped_strength_0_10": 4.2,
+      "final_strength_integer": 4,
+      "significance": "STS 4.2/10 (raw 0.418). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [collection, gaps, mitigate] vs WIDAI-only terms [approaches, architecture, augmented, chunking, design, evaluation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8692,
+        "recall": 0.8233,
+        "f1": 0.8456,
+        "significance": "BERTScore F1=0.846 (P=0.869, R=0.823). P exceeds R by 0.046 \u2014 the DCWF element's 3 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0094,
+        "entailment": 0.0137,
+        "neutral": 0.9769,
+        "significance": "NLI: neutral-dominant (97.7%). \"Mitigate collection gaps\" and \"Knowledge of retrieval-augmented generation (RAG) architecture patterns, includi\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.3397,
+        "significance": "Bi-encoder 0.340 < STS 0.418 (gap -0.078). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [collection, gaps, mitigate] and [approaches, architecture, augmented] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0,
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [collection, gaps, mitigate]. WIDAI terms: [approaches, architecture, augmented, chunking, design, evaluation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

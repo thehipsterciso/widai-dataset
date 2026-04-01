@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "321A",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "321A",
+  "focal_document_element_description": "Knowledge of industry technologies and how differences affect exploitation/vulnerabilities.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "LS-K-011",
+  "reference_document_element_description": "Knowledge of the data and AI vendor ecosystem, including major platform providers, emerging technology categories, vendor lock-in risks, open-source alternatives, and strategic partnership evaluation criteria.",
+  "comments": "DCWF ksa superset of WIDAI LS domain. LS-K-011 is the strongest semantic match. Secondary: SP-K-013 (SP, cosine: 0.528), OP-K-002 (OP, cosine: 0.522).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4574,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.457). Shared vocabulary: [knowledge]. DCWF-only terms [affect, differences, exploitation, industry, technologies, vulnerabilities] vs WIDAI-only terms [ai, alternatives, categories, criteria, data, ecosystem] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8835,
+        "recall": 0.8717,
+        "f1": 0.8776,
+        "significance": "BERTScore F1=0.878 (P=0.883, R=0.872). Balanced P/R \u2014 the 9-word DCWF element and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0002,
+        "neutral": 0.9996,
+        "significance": "NLI: neutral-dominant (100.0%). \"Knowledge of industry technologies and how differences affect exploitation/vulne\" and \"Knowledge of the data and AI vendor ecosystem, including major platform provider\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5587,
+        "significance": "Bi-encoder 0.559 > STS 0.457 (gap +0.101). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0938,
+        "significance": "Jaccard 9.4%. Shared tokens: [knowledge]. DCWF-only: [affect, differences, exploitation, industry, technologies, vulnerabilities]. WIDAI-only: [ai, alternatives, categories, criteria, data, ecosystem]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

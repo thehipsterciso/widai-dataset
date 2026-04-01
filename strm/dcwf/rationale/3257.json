@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3257",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3257",
+  "focal_document_element_description": "Knowledge of target and threat organization structures, critical capabilities, and critical vulnerabilities.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RM-K-005",
+  "reference_document_element_description": "Knowledge of AI-specific attack taxonomy, including adversarial examples, model evasion, model extraction, model inversion, membership inference, data poisoning, and prompt injection.",
+  "comments": "DCWF ksa superset of WIDAI RM domain. RM-K-005 is the strongest semantic match. Secondary: SP-K-012 (SP, cosine: 0.550), AG-K-003 (AG, cosine: 0.532).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5131,
+      "mapped_strength_0_10": 5.1,
+      "final_strength_integer": 5,
+      "significance": "STS 5.1/10 (raw 0.513). Shared vocabulary: [knowledge]. DCWF-only terms [capabilities, critical, organization, structures, target, threat] vs WIDAI-only terms [adversarial, ai, attack, data, evasion, examples] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.889,
+        "recall": 0.8505,
+        "f1": 0.8693,
+        "significance": "BERTScore F1=0.869 (P=0.889, R=0.851). P exceeds R by 0.038 \u2014 the DCWF element's 12 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0453,
+        "entailment": 0.0001,
+        "neutral": 0.9546,
+        "significance": "NLI: neutral-dominant (95.5%). \"Knowledge of target and threat organization structures, critical capabilities, a\" and \"Knowledge of AI-specific attack taxonomy, including adversarial examples, model\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5534,
+        "significance": "Bi-encoder 0.553 \u2248 STS 0.513 (gap 0.040). Independent encoding and cross-attention agree. Shared terms [knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1111,
+        "significance": "Jaccard 11.1%. Shared tokens: [knowledge]. DCWF-only: [capabilities, critical, organization, structures, target, threat]. WIDAI-only: [adversarial, ai, attack, data, evasion, examples]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

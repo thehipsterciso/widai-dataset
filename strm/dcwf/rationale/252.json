@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "252",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "252",
+  "focal_document_element_description": "Knowledge of and experience in Insider Threat investigations, reporting, investigative tools and laws/regulations.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-K-014",
+  "reference_document_element_description": "Knowledge of regulatory examination and audit processes, including common examination scopes, documentation expectations, evidence standards, examiner interaction protocols, and typical findings for data and AI regulatory reviews.",
+  "comments": "DCWF ksa intersects with WIDAI RC domain. RC-K-014 is the strongest semantic match. Secondary: RC-K-011 (RC, cosine: 0.493), SP-S-003 (SP, cosine: 0.472).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4395,
+      "mapped_strength_0_10": 4.4,
+      "final_strength_integer": 4,
+      "significance": "STS 4.4/10 (raw 0.440). Shared vocabulary: [knowledge]. DCWF-only terms [experience, insider, investigations, investigative, laws, regulations] vs WIDAI-only terms [ai, audit, common, data, documentation, evidence] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8821,
+        "recall": 0.8596,
+        "f1": 0.8707,
+        "significance": "BERTScore F1=0.871 (P=0.882, R=0.860). P exceeds R by 0.022 \u2014 the DCWF element's 13 words are well-captured by the WIDAI KSA's 27 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0478,
+        "entailment": 0.0002,
+        "neutral": 0.952,
+        "significance": "NLI: neutral-dominant (95.2%). \"Knowledge of and experience in Insider Threat investigations, reporting, investi\" and \"Knowledge of regulatory examination and audit processes, including common examin\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4936,
+        "significance": "Bi-encoder 0.494 > STS 0.440 (gap +0.054). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0909,
+        "significance": "Jaccard 9.1%. Shared tokens: [knowledge]. DCWF-only: [experience, insider, investigations, investigative, laws, regulations]. WIDAI-only: [ai, audit, common, data, documentation, evidence]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

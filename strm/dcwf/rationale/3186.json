@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3186",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3186",
+  "focal_document_element_description": "Knowledge of computer based training and e-learning services.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-K-004",
+  "reference_document_element_description": "Knowledge of adult learning design principles, including learning objectives, instructional design methods, knowledge retention research, and blended learning delivery models.",
+  "comments": "DCWF ksa intersects with WIDAI OP domain. OP-K-004 is the strongest semantic match. Secondary: AI-K-017 (AI, cosine: 0.435), AI-T-011 (AI, cosine: 0.413).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3174,
+      "mapped_strength_0_10": 3.2,
+      "final_strength_integer": 3,
+      "significance": "STS 3.2/10 (raw 0.317). Shared vocabulary: [knowledge, learning]. DCWF-only terms [based, computer, services, training] vs WIDAI-only terms [adult, blended, delivery, design, instructional, methods] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9166,
+        "recall": 0.8825,
+        "f1": 0.8992,
+        "significance": "BERTScore F1=0.899 (P=0.917, R=0.882). P exceeds R by 0.034 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0283,
+        "entailment": 0.0016,
+        "neutral": 0.9701,
+        "significance": "NLI: neutral-dominant (97.0%). \"Knowledge of computer based training and e-learning services.\" and \"Knowledge of adult learning design principles, including learning objectives, in\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4724,
+        "significance": "Bi-encoder 0.472 > STS 0.317 (gap +0.155). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, learning] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1905,
+        "significance": "Jaccard 19.1%. Shared tokens: [knowledge, learning]. DCWF-only: [based, computer, services, training]. WIDAI-only: [adult, blended, delivery, design, instructional, methods]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

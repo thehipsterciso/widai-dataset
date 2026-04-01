@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4662",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4662",
+  "focal_document_element_description": "Skill in releasing serialized and time-sensitive reports",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-006",
+  "reference_document_element_description": "Maintain Records of Processing Activities, including processing purposes, data categories, recipient categories, transfer records, retention periods, and technical and organizational security measures descriptions.",
+  "comments": "DCWF ksa intersects with WIDAI RC domain. RC-T-006 is the strongest semantic match. Secondary: RC-T-004 (RC, cosine: 0.467), TF-S-002 (TF, cosine: 0.452).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.1969,
+      "mapped_strength_0_10": 2.0,
+      "final_strength_integer": 2,
+      "significance": "STS 2.0/10 (raw 0.197). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [releasing, reports, sensitive, serialized, skill, time] vs WIDAI-only terms [activities, categories, data, descriptions, maintain, measures] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8695,
+        "recall": 0.8387,
+        "f1": 0.8538,
+        "significance": "BERTScore F1=0.854 (P=0.870, R=0.839). P exceeds R by 0.031 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9821,
+        "entailment": 0.007,
+        "neutral": 0.0109,
+        "significance": "NLI: contradiction-dominant (98.2%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in releasing serialized and time-sensitive reports\" and \"Maintain Records of Processing Activities, including processing purposes, data c\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5286,
+        "significance": "Bi-encoder 0.529 > STS 0.197 (gap +0.332). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0385,
+        "significance": "Jaccard 3.9%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [releasing, reports, sensitive, serialized, skill, time]. WIDAI terms: [activities, categories, data, descriptions, maintain, measures]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

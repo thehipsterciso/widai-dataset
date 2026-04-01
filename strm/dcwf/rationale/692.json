@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "692",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "692",
+  "focal_document_element_description": "Maintain knowledge of applicable cyber defense policies, regulations, and compliance documents specifically related to cyber defense auditing.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-K-014",
+  "reference_document_element_description": "Knowledge of regulatory examination and audit processes, including common examination scopes, documentation expectations, evidence standards, examiner interaction protocols, and typical findings for data and AI regulatory reviews.",
+  "comments": "DCWF task superset of WIDAI RC domain. RC-K-014 is the strongest semantic match. Secondary: DG-K-008 (DG, cosine: 0.543), SP-K-006 (SP, cosine: 0.538).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6216,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.622). Shared vocabulary: [knowledge]. DCWF-only terms [applicable, auditing, compliance, cyber, defense, documents] vs WIDAI-only terms [ai, audit, common, data, documentation, evidence] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8866,
+        "recall": 0.8683,
+        "f1": 0.8774,
+        "significance": "BERTScore F1=0.877 (P=0.887, R=0.868). Balanced P/R \u2014 the 17-word DCWF element and 27-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.7131,
+        "entailment": 0.0003,
+        "neutral": 0.2867,
+        "significance": "NLI: contradiction-dominant (71.3%). Despite 'Superset of' classification, the model detects semantic tension between \"Maintain knowledge of applicable cyber defense policies, regulations, and compli\" and \"Knowledge of regulatory examination and audit processes, including common examin\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.567,
+        "significance": "Bi-encoder 0.567 < STS 0.622 (gap -0.055). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [applicable, auditing, compliance] and [ai, audit, common] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0857,
+        "significance": "Jaccard 8.6%. Shared tokens: [knowledge]. DCWF-only: [applicable, auditing, compliance, cyber, defense, documents]. WIDAI-only: [ai, audit, common, data, documentation, evidence]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

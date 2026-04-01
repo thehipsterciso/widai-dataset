@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3977",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3977",
+  "focal_document_element_description": "Skill to articulate a needs statement/requirement and integrate new and emerging collection capabilities, accesses and/or processes into collection operations.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DQ-S-007",
+  "reference_document_element_description": "Skill in conducting data consumer discovery, translating consumer data needs into data product requirements with defined quality, freshness, and access standards.",
+  "comments": "DCWF ksa superset of WIDAI DQ domain. DQ-S-007 is the strongest semantic match. Secondary: DQ-S-006 (DQ, cosine: 0.557), TF-A-003 (TF, cosine: 0.519).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6878,
+      "mapped_strength_0_10": 6.9,
+      "final_strength_integer": 7,
+      "significance": "STS 6.9/10 (raw 0.688). Shared vocabulary: [needs, skill]. DCWF-only terms [accesses, articulate, capabilities, collection, emerging, integrate] vs WIDAI-only terms [access, conducting, consumer, data, defined, discovery] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8726,
+        "recall": 0.8814,
+        "f1": 0.877,
+        "significance": "BERTScore F1=0.877 (P=0.873, R=0.881). Balanced P/R \u2014 the 19-word DCWF element and 21-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0022,
+        "entailment": 0.0002,
+        "neutral": 0.9975,
+        "significance": "NLI: neutral-dominant (99.8%). \"Skill to articulate a needs statement/requirement and integrate new and emerging\" and \"Skill in conducting data consumer discovery, translating consumer data needs int\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5619,
+        "significance": "Bi-encoder 0.562 < STS 0.688 (gap -0.126). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [accesses, articulate, capabilities] and [access, conducting, consumer] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.125,
+        "significance": "Jaccard 12.5%. Shared tokens: [needs, skill]. DCWF-only: [accesses, articulate, capabilities, collection, emerging, integrate]. WIDAI-only: [access, conducting, consumer, data, defined, discovery]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

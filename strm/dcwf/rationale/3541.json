@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3541",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3541",
+  "focal_document_element_description": "Knowledge of the available tools and applications associated with collection requirements and collection management.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DQ-K-010",
+  "reference_document_element_description": "Knowledge of metadata types (business, technical, operational, process) and the systems and methods used to collect, store, and maintain each type.",
+  "comments": "DCWF ksa intersects with WIDAI DQ domain. DQ-K-010 is the strongest semantic match. Secondary: RM-K-011 (RM, cosine: 0.500), DG-K-011 (DG, cosine: 0.494).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6038,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.604). Shared vocabulary: [knowledge]. DCWF-only terms [applications, associated, available, collection, management, requirements] vs WIDAI-only terms [business, collect, maintain, metadata, methods, operational] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9159,
+        "recall": 0.8746,
+        "f1": 0.8948,
+        "significance": "BERTScore F1=0.895 (P=0.916, R=0.875). P exceeds R by 0.041 \u2014 the DCWF element's 14 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0049,
+        "entailment": 0.0192,
+        "neutral": 0.9758,
+        "significance": "NLI: neutral-dominant (97.6%). \"Knowledge of the available tools and applications associated with collection req\" and \"Knowledge of metadata types (business, technical, operational, process) and the\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5113,
+        "significance": "Bi-encoder 0.511 < STS 0.604 (gap -0.093). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [applications, associated, available] and [business, collect, maintain] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1481,
+        "significance": "Jaccard 14.8%. Shared tokens: [knowledge]. DCWF-only: [applications, associated, available, collection, management, requirements]. WIDAI-only: [business, collect, maintain, metadata, methods, operational]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

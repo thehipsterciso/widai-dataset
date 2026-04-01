@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "410A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "410A",
+  "focal_document_element_description": "Analyze organizational cyber policy.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-008",
+  "reference_document_element_description": "Monitor and analyze regulatory developments, enforcement actions, and supervisory authority guidance relevant to organizational data and AI activities, producing impact assessments and recommended responses.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-T-008 is the strongest semantic match. Secondary: SP-T-005 (SP, cosine: 0.450), DG-K-008 (DG, cosine: 0.426).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4925,
+      "mapped_strength_0_10": 4.9,
+      "final_strength_integer": 5,
+      "significance": "STS 4.9/10 (raw 0.492). Shared vocabulary: [analyze, organizational]. DCWF-only terms [cyber, policy] vs WIDAI-only terms [actions, activities, ai, assessments, authority, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9098,
+        "recall": 0.8497,
+        "f1": 0.8787,
+        "significance": "BERTScore F1=0.879 (P=0.910, R=0.850). P exceeds R by 0.060 \u2014 the DCWF element's 4 words are well-captured by the WIDAI KSA's 24 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0012,
+        "entailment": 0.0013,
+        "neutral": 0.9975,
+        "significance": "NLI: neutral-dominant (99.8%). \"Analyze organizational cyber policy.\" and \"Monitor and analyze regulatory developments, enforcement actions, and supervisor\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5149,
+        "significance": "Bi-encoder 0.515 \u2248 STS 0.492 (gap 0.022). Independent encoding and cross-attention agree. Shared terms [analyze, organizational] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.087,
+        "significance": "Jaccard 8.7%. Shared tokens: [analyze, organizational]. DCWF-only: [cyber, policy]. WIDAI-only: [actions, activities, ai, assessments, authority, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "748A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "748A",
+  "focal_document_element_description": "Perform developmental testing on systems under development.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-S-005",
+  "reference_document_element_description": "Skill in writing automated tests for data applications, including unit tests for transformation logic, integration tests for pipeline components, and data validation tests using appropriate testing frameworks.",
+  "comments": "DCWF task intersects with WIDAI TF domain. TF-S-005 is the strongest semantic match. Secondary: RM-T-003 (RM, cosine: 0.452), SP-T-009 (SP, cosine: 0.406).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5907,
+      "mapped_strength_0_10": 5.9,
+      "final_strength_integer": 6,
+      "significance": "STS 5.9/10 (raw 0.591). Shared vocabulary: [testing]. DCWF-only terms [development, developmental, perform, systems] vs WIDAI-only terms [applications, appropriate, automated, components, data, frameworks] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8821,
+        "recall": 0.8594,
+        "f1": 0.8706,
+        "significance": "BERTScore F1=0.871 (P=0.882, R=0.859). P exceeds R by 0.023 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 27 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0108,
+        "neutral": 0.9888,
+        "significance": "NLI: neutral-dominant (98.9%). \"Perform developmental testing on systems under development.\" and \"Skill in writing automated tests for data applications, including unit tests for\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4613,
+        "significance": "Bi-encoder 0.461 < STS 0.591 (gap -0.129). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [development, developmental, perform] and [applications, appropriate, automated] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.037,
+        "significance": "Jaccard 3.7%. Shared tokens: [testing]. DCWF-only: [development, developmental, perform, systems]. WIDAI-only: [applications, appropriate, automated, components, data, frameworks]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

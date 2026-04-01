@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8070",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8070",
+  "focal_document_element_description": "Develop detailed operational and tactical plans and orders supporting cyberspace operations requirements at the tactical levels of warfare.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-K-023",
+  "reference_document_element_description": "Knowledge of model deployment strategies, including batch inference, real-time serving, edge deployment, A/B testing, canary releases, and shadow deployments, and the infrastructure requirements and failure modes of each.",
+  "comments": "DCWF task intersects with WIDAI AI domain. AI-K-023 is the strongest semantic match. Secondary: DG-T-007 (DG, cosine: 0.434), DG-S-009 (DG, cosine: 0.399).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3246,
+      "mapped_strength_0_10": 3.2,
+      "final_strength_integer": 3,
+      "significance": "STS 3.2/10 (raw 0.325). Shared vocabulary: [requirements]. DCWF-only terms [cyberspace, detailed, develop, levels, operational, operations] vs WIDAI-only terms [b, batch, canary, deployment, deployments, edge] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8632,
+        "recall": 0.8294,
+        "f1": 0.8459,
+        "significance": "BERTScore F1=0.846 (P=0.863, R=0.829). P exceeds R by 0.034 \u2014 the DCWF element's 18 words are well-captured by the WIDAI KSA's 28 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0007,
+        "entailment": 0.0018,
+        "neutral": 0.9975,
+        "significance": "NLI: neutral-dominant (99.8%). \"Develop detailed operational and tactical plans and orders supporting cyberspace\" and \"Knowledge of model deployment strategies, including batch inference, real-time s\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4436,
+        "significance": "Bi-encoder 0.444 > STS 0.325 (gap +0.119). Independent encoding finds more similarity than cross-attention. Shared surface terms [requirements] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1053,
+        "significance": "Jaccard 10.5%. Shared tokens: [requirements]. DCWF-only: [cyberspace, detailed, develop, levels, operational, operations]. WIDAI-only: [b, batch, canary, deployment, deployments, edge]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

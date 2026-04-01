@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3734",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3734",
+  "focal_document_element_description": "Ability to design valid and reliable assessments.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AI-A-001",
+  "reference_document_element_description": "Ability to distinguish between problems that require machine learning and problems that can be solved more simply and reliably with rule-based logic or statistical methods.",
+  "comments": "DCWF ksa superset of WIDAI AI domain. AI-A-001 is the strongest semantic match. Secondary: DA-A-001 (DA, cosine: 0.548), AB-S-007 (AB, cosine: 0.529).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3271,
+      "mapped_strength_0_10": 3.3,
+      "final_strength_integer": 3,
+      "significance": "STS 3.3/10 (raw 0.327). Shared vocabulary: [ability]. DCWF-only terms [assessments, design, reliable, valid] vs WIDAI-only terms [based, distinguish, learning, logic, machine, methods] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9192,
+        "recall": 0.8623,
+        "f1": 0.8898,
+        "significance": "BERTScore F1=0.890 (P=0.919, R=0.862). P exceeds R by 0.057 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 25 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0027,
+        "neutral": 0.9971,
+        "significance": "NLI: neutral-dominant (99.7%). \"Ability to design valid and reliable assessments.\" and \"Ability to distinguish between problems that require machine learning and proble\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5563,
+        "significance": "Bi-encoder 0.556 > STS 0.327 (gap +0.229). Independent encoding finds more similarity than cross-attention. Shared surface terms [ability] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1111,
+        "significance": "Jaccard 11.1%. Shared tokens: [ability]. DCWF-only: [assessments, design, reliable, valid]. WIDAI-only: [based, distinguish, learning, logic, machine, methods]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

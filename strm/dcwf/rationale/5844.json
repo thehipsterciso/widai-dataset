@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5844",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5844",
+  "focal_document_element_description": "Apply data acquisition, cleaning, transformation, and ingestion best practices for machine learning data conduits.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "AI-T-005",
+  "reference_document_element_description": "Build and maintain ML training pipelines, including data ingestion, preprocessing, training, evaluation, and model registration steps.",
+  "comments": "DCWF task equal WIDAI AI domain. AI-T-005 is the strongest semantic match. Secondary: SP-K-011 (SP, cosine: 0.558), AI-S-005 (AI, cosine: 0.551).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6252,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.625). Shared vocabulary: [data, ingestion]. DCWF-only terms [acquisition, apply, best, cleaning, conduits, learning] vs WIDAI-only terms [build, evaluation, maintain, ml, model, pipelines] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8982,
+        "recall": 0.8858,
+        "f1": 0.892,
+        "significance": "BERTScore F1=0.892 (P=0.898, R=0.886). Balanced P/R \u2014 the 14-word DCWF element and 16-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.001,
+        "entailment": 0.0121,
+        "neutral": 0.9869,
+        "significance": "NLI: neutral-dominant (98.7%). \"Apply data acquisition, cleaning, transformation, and ingestion best practices f\" and \"Build and maintain ML training pipelines, including data ingestion, preprocessin\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6654,
+        "significance": "Bi-encoder 0.665 \u2248 STS 0.625 (gap 0.040). Independent encoding and cross-attention agree. Shared terms [data, ingestion] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.125,
+        "significance": "Jaccard 12.5%. Shared tokens: [data, ingestion]. DCWF-only: [acquisition, apply, best, cleaning, conduits, learning]. WIDAI-only: [build, evaluation, maintain, ml, model, pipelines]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

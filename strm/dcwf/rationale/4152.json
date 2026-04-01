@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4152",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4152",
+  "focal_document_element_description": "Knowledge of specialized target language (e.g., acronyms, jargon, technical terminology, codewords).",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DQ-K-010",
+  "reference_document_element_description": "Knowledge of metadata types (business, technical, operational, process) and the systems and methods used to collect, store, and maintain each type.",
+  "comments": "DCWF ksa superset of WIDAI DQ domain. DQ-K-010 is the strongest semantic match. Secondary: AI-K-011 (AI, cosine: 0.549), DG-K-011 (DG, cosine: 0.535).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2198,
+      "mapped_strength_0_10": 2.2,
+      "final_strength_integer": 2,
+      "significance": "STS 2.2/10 (raw 0.220). Shared vocabulary: [knowledge, technical]. DCWF-only terms [acronyms, codewords, jargon, language, specialized, target] vs WIDAI-only terms [business, collect, maintain, metadata, methods, operational] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8547,
+        "recall": 0.8696,
+        "f1": 0.8621,
+        "significance": "BERTScore F1=0.862 (P=0.855, R=0.870). Balanced P/R \u2014 the 11-word DCWF element and 21-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0239,
+        "entailment": 0.0011,
+        "neutral": 0.9751,
+        "significance": "NLI: neutral-dominant (97.5%). \"Knowledge of specialized target language (e.g., acronyms, jargon, technical term\" and \"Knowledge of metadata types (business, technical, operational, process) and the\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6001,
+        "significance": "Bi-encoder 0.600 > STS 0.220 (gap +0.380). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, technical] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1071,
+        "significance": "Jaccard 10.7%. Shared tokens: [knowledge, technical]. DCWF-only: [acronyms, codewords, jargon, language, specialized, target]. WIDAI-only: [business, collect, maintain, metadata, methods, operational]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3689",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3689",
+  "focal_document_element_description": "Skill in applying various analytical methods, tools, and techniques (e.g., competing hypotheses; chain of reasoning; scenario methods; denial and deception detection; high impact-low probability; network/association or link analysis; Bayesian, Delphi, and Pattern analyses).",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-S-007",
+  "reference_document_element_description": "Skill in designing analytical studies that produce defensible causal or correlational conclusions, with appropriate documentation of assumptions and limitations.",
+  "comments": "DCWF ksa superset of WIDAI AB domain. AB-S-007 is the strongest semantic match. Secondary: AI-K-002 (AI, cosine: 0.587), AB-S-003 (AB, cosine: 0.562).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5977,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.598). Shared vocabulary: [analytical, skill]. DCWF-only terms [analyses, analysis, applying, association, bayesian, chain] vs WIDAI-only terms [appropriate, assumptions, causal, conclusions, correlational, defensible] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8215,
+        "recall": 0.8655,
+        "f1": 0.8429,
+        "significance": "BERTScore F1=0.843 (P=0.822, R=0.866). R exceeds P by 0.044 \u2014 the WIDAI KSA's 19 words are well-captured by the DCWF element's 33 words, but the DCWF element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0005,
+        "neutral": 0.9991,
+        "significance": "NLI: neutral-dominant (99.9%). \"Skill in applying various analytical methods, tools, and techniques (e.g., compe\" and \"Skill in designing analytical studies that produce defensible causal or correlat\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5996,
+        "significance": "Bi-encoder 0.600 \u2248 STS 0.598 (gap 0.002). Independent encoding and cross-attention agree. Shared terms [analytical, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1304,
+        "significance": "Jaccard 13.0%. Shared tokens: [analytical, skill]. DCWF-only: [analyses, analysis, applying, association, bayesian, chain]. WIDAI-only: [appropriate, assumptions, causal, conclusions, correlational, defensible]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

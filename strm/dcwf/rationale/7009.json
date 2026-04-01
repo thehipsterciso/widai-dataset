@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "7009",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "7009",
+  "focal_document_element_description": "Knowledge of coding and scripting in languages that support AI development and use.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AG-K-009",
+  "reference_document_element_description": "Knowledge of AI literacy concepts, including what AI is and is not, how ML models work at a conceptual level, AI limitations and failure modes, and responsible AI principles for non-technical audiences.",
+  "comments": "DCWF ksa intersects with WIDAI AG domain. AG-K-009 is the strongest semantic match. Secondary: AI-K-010 (AI, cosine: 0.533), AG-K-013 (AG, cosine: 0.508).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3772,
+      "mapped_strength_0_10": 3.8,
+      "final_strength_integer": 4,
+      "significance": "STS 3.8/10 (raw 0.377). Shared vocabulary: [ai, knowledge]. DCWF-only terms [coding, development, languages, scripting, support, use] vs WIDAI-only terms [audiences, concepts, conceptual, failure, level, limitations] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8828,
+        "recall": 0.8618,
+        "f1": 0.8722,
+        "significance": "BERTScore F1=0.872 (P=0.883, R=0.862). P exceeds R by 0.021 \u2014 the DCWF element's 13 words are well-captured by the WIDAI KSA's 32 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.7864,
+        "entailment": 0.0003,
+        "neutral": 0.2133,
+        "significance": "NLI: contradiction-dominant (78.6%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of coding and scripting in languages that support AI development and u\" and \"Knowledge of AI literacy concepts, including what AI is and is not, how ML model\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5487,
+        "significance": "Bi-encoder 0.549 > STS 0.377 (gap +0.171). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1143,
+        "significance": "Jaccard 11.4%. Shared tokens: [ai, knowledge]. DCWF-only: [coding, development, languages, scripting, support, use]. WIDAI-only: [audiences, concepts, conceptual, failure, level, limitations]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

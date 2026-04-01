@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "718",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "718",
+  "focal_document_element_description": "Monitor network capacity and performance.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-T-007",
+  "reference_document_element_description": "Monitor and optimize data application performance, including resource utilization analysis, query performance profiling, bottleneck identification, and capacity planning for growth.",
+  "comments": "DCWF task superset of WIDAI TF domain. TF-T-007 is the strongest semantic match. Secondary: OP-T-012 (OP, cosine: 0.490), TF-K-013 (TF, cosine: 0.447).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4773,
+      "mapped_strength_0_10": 4.8,
+      "final_strength_integer": 5,
+      "significance": "STS 4.8/10 (raw 0.477). Shared vocabulary: [capacity, monitor, performance]. DCWF-only terms [network] vs WIDAI-only terms [analysis, application, bottleneck, data, growth, identification] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9374,
+        "recall": 0.8794,
+        "f1": 0.9075,
+        "significance": "BERTScore F1=0.907 (P=0.937, R=0.879). P exceeds R by 0.058 \u2014 the DCWF element's 5 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.001,
+        "neutral": 0.999,
+        "significance": "NLI: neutral-dominant (99.9%). \"Monitor network capacity and performance.\" and \"Monitor and optimize data application performance, including resource utilizatio\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5695,
+        "significance": "Bi-encoder 0.570 > STS 0.477 (gap +0.092). Independent encoding finds more similarity than cross-attention. Shared surface terms [capacity, monitor, performance] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2105,
+        "significance": "Jaccard 21.1%. Shared tokens: [capacity, monitor, performance]. DCWF-only: [network]. WIDAI-only: [analysis, application, bottleneck, data, growth, identification]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

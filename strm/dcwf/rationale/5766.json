@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5766",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5766",
+  "focal_document_element_description": "Assure that the use of technologies maintain, and do not erode, privacy protections on use, collection and disclosure of personal information.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "SP-T-005",
+  "reference_document_element_description": "Establish, communicate, and enforce enterprise-wide data and AI policies covering quality, privacy, security, ethics, and responsible use.",
+  "comments": "DCWF task superset of WIDAI SP domain. SP-T-005 is the strongest semantic match. Secondary: SP-A-001 (SP, cosine: 0.528), SP-T-008 (SP, cosine: 0.521).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4497,
+      "mapped_strength_0_10": 4.5,
+      "final_strength_integer": 4,
+      "significance": "STS 4.5/10 (raw 0.450). Shared vocabulary: [privacy, use]. DCWF-only terms [assure, collection, disclosure, erode, information, maintain] vs WIDAI-only terms [ai, communicate, covering, data, enforce, enterprise] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8775,
+        "recall": 0.8778,
+        "f1": 0.8777,
+        "significance": "BERTScore F1=0.878 (P=0.877, R=0.878). Balanced P/R \u2014 the 21-word DCWF element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.0014,
+        "neutral": 0.9986,
+        "significance": "NLI: neutral-dominant (99.9%). \"Assure that the use of technologies maintain, and do not erode, privacy protecti\" and \"Establish, communicate, and enforce enterprise-wide data and AI policies coverin\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5577,
+        "significance": "Bi-encoder 0.558 > STS 0.450 (gap +0.108). Independent encoding finds more similarity than cross-attention. Shared surface terms [privacy, use] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0968,
+        "significance": "Jaccard 9.7%. Shared tokens: [privacy, use]. DCWF-only: [assure, collection, disclosure, erode, information, maintain]. WIDAI-only: [ai, communicate, covering, data, enforce, enterprise]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

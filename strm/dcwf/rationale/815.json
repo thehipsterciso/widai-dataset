@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "815",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "815",
+  "focal_document_element_description": "Provide recommendations on new database technologies and architectures.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AI-K-020",
+  "reference_document_element_description": "Knowledge of data storage technologies, including columnar storage formats (Parquet, ORC), transactional databases, NoSQL stores, object storage, and their appropriate use cases.",
+  "comments": "DCWF task superset of WIDAI AI domain. AI-K-020 is the strongest semantic match. Secondary: TF-K-003 (TF, cosine: 0.546), DA-T-001 (DA, cosine: 0.545).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5883,
+      "mapped_strength_0_10": 5.9,
+      "final_strength_integer": 6,
+      "significance": "STS 5.9/10 (raw 0.588). Shared vocabulary: [technologies]. DCWF-only terms [architectures, database, new, provide, recommendations] vs WIDAI-only terms [appropriate, cases, columnar, data, databases, formats] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9057,
+        "recall": 0.8581,
+        "f1": 0.8813,
+        "significance": "BERTScore F1=0.881 (P=0.906, R=0.858). P exceeds R by 0.048 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.0033,
+        "neutral": 0.9967,
+        "significance": "NLI: neutral-dominant (99.7%). \"Provide recommendations on new database technologies and architectures.\" and \"Knowledge of data storage technologies, including columnar storage formats (Parq\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5771,
+        "significance": "Bi-encoder 0.577 \u2248 STS 0.588 (gap 0.011). Independent encoding and cross-attention agree. Shared terms [technologies] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0769,
+        "significance": "Jaccard 7.7%. Shared tokens: [technologies]. DCWF-only: [architectures, database, new, provide, recommendations]. WIDAI-only: [appropriate, cases, columnar, data, databases, formats]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

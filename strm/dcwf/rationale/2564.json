@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2564",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2564",
+  "focal_document_element_description": "Maintain situational awareness to determine if changes to the operating environment require review of the plan.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-A-005",
+  "reference_document_element_description": "Ability to evaluate the regulatory implications of proposed data processing activities, AI system deployments, or business model changes, providing compliance risk assessment before implementation.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-A-005 is the strongest semantic match. Secondary: RC-T-008 (RC, cosine: 0.457), OP-T-002 (OP, cosine: 0.455).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4827,
+      "mapped_strength_0_10": 4.8,
+      "final_strength_integer": 5,
+      "significance": "STS 4.8/10 (raw 0.483). Shared vocabulary: [changes]. DCWF-only terms [awareness, determine, environment, maintain, operating, plan] vs WIDAI-only terms [ability, activities, ai, assessment, business, compliance] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8895,
+        "recall": 0.867,
+        "f1": 0.8781,
+        "significance": "BERTScore F1=0.878 (P=0.889, R=0.867). P exceeds R by 0.022 \u2014 the DCWF element's 16 words are well-captured by the WIDAI KSA's 24 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0011,
+        "entailment": 0.013,
+        "neutral": 0.9859,
+        "significance": "NLI: neutral-dominant (98.6%). \"Maintain situational awareness to determine if changes to the operating environm\" and \"Ability to evaluate the regulatory implications of proposed data processing acti\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4631,
+        "significance": "Bi-encoder 0.463 \u2248 STS 0.483 (gap 0.020). Independent encoding and cross-attention agree. Shared terms [changes] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1176,
+        "significance": "Jaccard 11.8%. Shared tokens: [changes]. DCWF-only: [awareness, determine, environment, maintain, operating, plan]. WIDAI-only: [ability, activities, ai, assessment, business, compliance]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

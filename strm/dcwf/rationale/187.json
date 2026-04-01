@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "187",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "187",
+  "focal_document_element_description": "Skill in developing data models.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DA-K-002",
+  "reference_document_element_description": "Knowledge of data modeling techniques including conceptual, logical, and physical modeling, entity-relationship modeling, dimensional modeling, and data vault methodology.",
+  "comments": "DCWF ksa superset of WIDAI DA domain. DA-K-002 is the strongest semantic match. Secondary: AI-S-002 (AI, cosine: 0.575), OP-K-005 (OP, cosine: 0.566).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6397,
+      "mapped_strength_0_10": 6.4,
+      "final_strength_integer": 6,
+      "significance": "STS 6.4/10 (raw 0.640). Shared vocabulary: [data]. DCWF-only terms [developing, models, skill] vs WIDAI-only terms [conceptual, dimensional, entity, knowledge, logical, methodology] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9361,
+        "recall": 0.8582,
+        "f1": 0.8955,
+        "significance": "BERTScore F1=0.895 (P=0.936, R=0.858). P exceeds R by 0.078 \u2014 the DCWF element's 5 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0016,
+        "neutral": 0.9983,
+        "significance": "NLI: neutral-dominant (99.8%). \"Skill in developing data models.\" and \"Knowledge of data modeling techniques including conceptual, logical, and physica\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6121,
+        "significance": "Bi-encoder 0.612 \u2248 STS 0.640 (gap 0.028). Independent encoding and cross-attention agree. Shared terms [data] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0526,
+        "significance": "Jaccard 5.3%. Shared tokens: [data]. DCWF-only: [developing, models, skill]. WIDAI-only: [conceptual, dimensional, entity, knowledge, logical, methodology]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

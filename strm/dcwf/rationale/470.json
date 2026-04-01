@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "470",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "470",
+  "focal_document_element_description": "Coordinate and provide expert technical support to enterprise-wide cyber defense technicians to resolve cyber defense incidents.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-T-010",
+  "reference_document_element_description": "Develop and maintain AI security standards for the enterprise, including training data provenance requirements, model registry controls, and LLM application security requirements.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-T-010 is the strongest semantic match. Secondary: TF-S-011 (TF, cosine: 0.466), DG-T-007 (DG, cosine: 0.462).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3931,
+      "mapped_strength_0_10": 3.9,
+      "final_strength_integer": 4,
+      "significance": "STS 3.9/10 (raw 0.393). Shared vocabulary: [enterprise]. DCWF-only terms [coordinate, cyber, defense, expert, incidents, provide] vs WIDAI-only terms [ai, application, controls, data, develop, llm] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8775,
+        "recall": 0.856,
+        "f1": 0.8666,
+        "significance": "BERTScore F1=0.867 (P=0.877, R=0.856). P exceeds R by 0.021 \u2014 the DCWF element's 16 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.997,
+        "entailment": 0.0001,
+        "neutral": 0.0029,
+        "significance": "NLI: contradiction-dominant (99.7%). Despite 'Intersects with' classification, the model detects semantic tension between \"Coordinate and provide expert technical support to enterprise-wide cyber defense\" and \"Develop and maintain AI security standards for the enterprise, including trainin\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4965,
+        "significance": "Bi-encoder 0.496 > STS 0.393 (gap +0.103). Independent encoding finds more similarity than cross-attention. Shared surface terms [enterprise] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0645,
+        "significance": "Jaccard 6.5%. Shared tokens: [enterprise]. DCWF-only: [coordinate, cyber, defense, expert, incidents, provide]. WIDAI-only: [ai, application, controls, data, develop, llm]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2063",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2063",
+  "focal_document_element_description": "Assist in the coordination, validation, and management of all-source collection requirements, plans, and/or activities.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DG-T-006",
+  "reference_document_element_description": "Establish and maintain the enterprise data catalog, business glossary, and metadata management program, ensuring discoverability, lineage visibility, and classification currency.",
+  "comments": "DCWF task superset of WIDAI DG domain. DG-T-006 is the strongest semantic match. Secondary: OP-T-002 (OP, cosine: 0.544), SP-T-003 (SP, cosine: 0.542).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4165,
+      "mapped_strength_0_10": 4.2,
+      "final_strength_integer": 4,
+      "significance": "STS 4.2/10 (raw 0.416). Shared vocabulary: [management]. DCWF-only terms [activities, assist, collection, coordination, plans, requirements] vs WIDAI-only terms [business, catalog, classification, currency, data, discoverability] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8696,
+        "recall": 0.8597,
+        "f1": 0.8646,
+        "significance": "BERTScore F1=0.865 (P=0.870, R=0.860). Balanced P/R \u2014 the 14-word DCWF element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0007,
+        "neutral": 0.999,
+        "significance": "NLI: neutral-dominant (99.9%). \"Assist in the coordination, validation, and management of all-source collection\" and \"Establish and maintain the enterprise data catalog, business glossary, and metad\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.556,
+        "significance": "Bi-encoder 0.556 > STS 0.416 (gap +0.140). Independent encoding finds more similarity than cross-attention. Shared surface terms [management] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1,
+        "significance": "Jaccard 10.0%. Shared tokens: [management]. DCWF-only: [activities, assist, collection, coordination, plans, requirements]. WIDAI-only: [business, catalog, classification, currency, data, discoverability]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

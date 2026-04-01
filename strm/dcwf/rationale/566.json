@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "566",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "566",
+  "focal_document_element_description": "Draft statements of preliminary or residual security risks for system operation.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-K-001",
+  "reference_document_element_description": "Knowledge of AI application security risks, including prompt injection, jailbreaking, data exfiltration via LLM outputs, and model supply chain vulnerabilities.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-K-001 is the strongest semantic match. Secondary: SP-T-009 (SP, cosine: 0.456), RC-A-005 (RC, cosine: 0.438).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.304,
+      "mapped_strength_0_10": 3.0,
+      "final_strength_integer": 3,
+      "significance": "STS 3.0/10 (raw 0.304). Shared vocabulary: [risks, security]. DCWF-only terms [draft, operation, preliminary, residual, statements, system] vs WIDAI-only terms [ai, application, chain, data, exfiltration, injection] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8774,
+        "recall": 0.8482,
+        "f1": 0.8626,
+        "significance": "BERTScore F1=0.863 (P=0.877, R=0.848). P exceeds R by 0.029 \u2014 the DCWF element's 11 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9805,
+        "entailment": 0.0006,
+        "neutral": 0.0189,
+        "significance": "NLI: contradiction-dominant (98.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Draft statements of preliminary or residual security risks for system operation.\" and \"Knowledge of AI application security risks, including prompt injection, jailbrea\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.522,
+        "significance": "Bi-encoder 0.522 > STS 0.304 (gap +0.218). Independent encoding finds more similarity than cross-attention. Shared surface terms [risks, security] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1071,
+        "significance": "Jaccard 10.7%. Shared tokens: [risks, security]. DCWF-only: [draft, operation, preliminary, residual, statements, system]. WIDAI-only: [ai, application, chain, data, exfiltration, injection]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

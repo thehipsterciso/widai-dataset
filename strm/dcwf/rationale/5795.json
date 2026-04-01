@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5795",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5795",
+  "focal_document_element_description": "Oversee, direct, deliver or ensure delivery of initial privacy training and orientation to all employees, volunteers, contractors, alliances, business associates and other appropriate third parties.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-T-008",
+  "reference_document_element_description": "Advise on data protection implications of new projects, systems, and processing activities, ensuring privacy considerations are integrated into design and procurement decisions before processing begins.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-T-008 is the strongest semantic match. Secondary: RC-T-007 (RC, cosine: 0.503), RC-T-010 (RC, cosine: 0.501).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5993,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.599). Shared vocabulary: [privacy]. DCWF-only terms [alliances, appropriate, associates, business, contractors, deliver] vs WIDAI-only terms [activities, advise, begins, considerations, data, decisions] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8371,
+        "recall": 0.8535,
+        "f1": 0.8452,
+        "significance": "BERTScore F1=0.845 (P=0.837, R=0.854). Balanced P/R \u2014 the 25-word DCWF element and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0021,
+        "neutral": 0.9978,
+        "significance": "NLI: neutral-dominant (99.8%). \"Oversee, direct, deliver or ensure delivery of initial privacy training and orie\" and \"Advise on data protection implications of new projects, systems, and processing\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5218,
+        "significance": "Bi-encoder 0.522 < STS 0.599 (gap -0.078). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [alliances, appropriate, associates] and [activities, advise, begins] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0682,
+        "significance": "Jaccard 6.8%. Shared tokens: [privacy]. DCWF-only: [alliances, appropriate, associates, business, contractors, deliver]. WIDAI-only: [activities, advise, begins, considerations, data, decisions]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

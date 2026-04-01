@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "219A",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "219A",
+  "focal_document_element_description": "Skill in operating system administration.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DQ-S-006",
+  "reference_document_element_description": "Skill in operating a data catalog platform, including configuring connectors, reviewing harvested metadata, curating business context, and managing access.",
+  "comments": "DCWF ksa superset of WIDAI DQ domain. DQ-S-006 is the strongest semantic match. Secondary: TF-S-008 (TF, cosine: 0.582), TF-K-012 (TF, cosine: 0.569).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6383,
+      "mapped_strength_0_10": 6.4,
+      "final_strength_integer": 6,
+      "significance": "STS 6.4/10 (raw 0.638). Shared vocabulary: [operating, skill]. DCWF-only terms [administration, system] vs WIDAI-only terms [access, business, catalog, configuring, connectors, context] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9352,
+        "recall": 0.8619,
+        "f1": 0.897,
+        "significance": "BERTScore F1=0.897 (P=0.935, R=0.862). P exceeds R by 0.073 \u2014 the DCWF element's 5 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.005,
+        "entailment": 0.0032,
+        "neutral": 0.9918,
+        "significance": "NLI: neutral-dominant (99.2%). \"Skill in operating system administration.\" and \"Skill in operating a data catalog platform, including configuring connectors, re\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6047,
+        "significance": "Bi-encoder 0.605 \u2248 STS 0.638 (gap 0.034). Independent encoding and cross-attention agree. Shared terms [operating, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1429,
+        "significance": "Jaccard 14.3%. Shared tokens: [operating, skill]. DCWF-only: [administration, system]. WIDAI-only: [access, business, catalog, configuring, connectors, context]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

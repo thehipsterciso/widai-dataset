@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8006",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8006",
+  "focal_document_element_description": "Analyze, modify, develop, debug, and document software and applications using assembly languages.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-T-006",
+  "reference_document_element_description": "Design and build LLM-based application systems, including system prompt design, tool integration, retrieval pipeline, output validation, and failure mode documentation.",
+  "comments": "DCWF task intersects with WIDAI AI domain. AI-T-006 is the strongest semantic match. Secondary: AI-T-013 (AI, cosine: 0.433), TF-S-012 (TF, cosine: 0.431).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5315,
+      "mapped_strength_0_10": 5.3,
+      "final_strength_integer": 5,
+      "significance": "STS 5.3/10 (raw 0.531). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [analyze, applications, assembly, debug, develop, document] vs WIDAI-only terms [application, based, build, design, documentation, failure] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8902,
+        "recall": 0.8618,
+        "f1": 0.8757,
+        "significance": "BERTScore F1=0.876 (P=0.890, R=0.862). P exceeds R by 0.028 \u2014 the DCWF element's 12 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.1691,
+        "entailment": 0.0735,
+        "neutral": 0.7575,
+        "significance": "NLI: mixed signal (E:7.3%, N:75.8%, C:16.9%). No dominant classification for \"Analyze, modify, develop, debug, and document software and applications using as\" vs \"Design and build LLM-based application systems, including system prompt design,\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4496,
+        "significance": "Bi-encoder 0.450 < STS 0.531 (gap -0.082). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [analyze, applications, assembly] and [application, based, build] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0345,
+        "significance": "Jaccard 3.5%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [analyze, applications, assembly, debug, develop, document]. WIDAI terms: [application, based, build, design, documentation, failure]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

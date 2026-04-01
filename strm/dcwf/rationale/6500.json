@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6500",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6500",
+  "focal_document_element_description": "Skill in conducting Test Readiness Reviews.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-T-006",
+  "reference_document_element_description": "Conduct code reviews for data application changes, evaluating code quality, test coverage, performance implications, documentation completeness, and adherence to team coding standards.",
+  "comments": "DCWF ksa superset of WIDAI TF domain. TF-T-006 is the strongest semantic match. Secondary: RC-T-011 (RC, cosine: 0.507), RC-S-006 (RC, cosine: 0.488).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5988,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.599). Shared vocabulary: [reviews, test]. DCWF-only terms [conducting, readiness, skill] vs WIDAI-only terms [adherence, application, changes, code, coding, completeness] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8945,
+        "recall": 0.8451,
+        "f1": 0.8691,
+        "significance": "BERTScore F1=0.869 (P=0.894, R=0.845). P exceeds R by 0.049 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0076,
+        "entailment": 0.0008,
+        "neutral": 0.9916,
+        "significance": "NLI: neutral-dominant (99.2%). \"Skill in conducting Test Readiness Reviews.\" and \"Conduct code reviews for data application changes, evaluating code quality, test\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5659,
+        "significance": "Bi-encoder 0.566 \u2248 STS 0.599 (gap 0.033). Independent encoding and cross-attention agree. Shared terms [reviews, test] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.08,
+        "significance": "Jaccard 8.0%. Shared tokens: [reviews, test]. DCWF-only: [conducting, readiness, skill]. WIDAI-only: [adherence, application, changes, code, coding, completeness]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4577",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4577",
+  "focal_document_element_description": "Knowledge of the SIGINT enterprise and its capabilities, limitations, and contributions to cyberspace operations missions.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-K-017",
+  "reference_document_element_description": "Knowledge of MLOps principles and practices, including CI/CD for ML, automated retraining pipelines, model versioning, A/B testing infrastructure, and canary deployment patterns.",
+  "comments": "DCWF ksa intersects with WIDAI AI domain. AI-K-017 is the strongest semantic match. Secondary: AI-K-023 (AI, cosine: 0.438), SP-T-010 (SP, cosine: 0.437).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.1979,
+      "mapped_strength_0_10": 2.0,
+      "final_strength_integer": 2,
+      "significance": "STS 2.0/10 (raw 0.198). Shared vocabulary: [knowledge]. DCWF-only terms [capabilities, contributions, cyberspace, enterprise, limitations, missions] vs WIDAI-only terms [automated, b, canary, cd, ci, deployment] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8759,
+        "recall": 0.8399,
+        "f1": 0.8575,
+        "significance": "BERTScore F1=0.858 (P=0.876, R=0.840). P exceeds R by 0.036 \u2014 the DCWF element's 15 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9996,
+        "entailment": 0.0,
+        "neutral": 0.0004,
+        "significance": "NLI: contradiction-dominant (100.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of the SIGINT enterprise and its capabilities, limitations, and contri\" and \"Knowledge of MLOps principles and practices, including CI/CD for ML, automated r\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4563,
+        "significance": "Bi-encoder 0.456 > STS 0.198 (gap +0.258). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0882,
+        "significance": "Jaccard 8.8%. Shared tokens: [knowledge]. DCWF-only: [capabilities, contributions, cyberspace, enterprise, limitations, missions]. WIDAI-only: [automated, b, canary, cd, ci, deployment]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

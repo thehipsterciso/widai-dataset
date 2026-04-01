@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3508",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3508",
+  "focal_document_element_description": "Knowledge of structure, approach, and strategy of exploitation tools (e.g., sniffers, keyloggers) and techniques (e.g., gaining backdoor access, collecting/exfiltrating data, conducting vulnerability analysis of other systems in the network).",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DA-K-012",
+  "reference_document_element_description": "Knowledge of data platform security controls, including network isolation, encryption at rest and in transit, identity and access management, and audit logging.",
+  "comments": "DCWF ksa superset of WIDAI DA domain. DA-K-012 is the strongest semantic match. Secondary: SP-T-001 (SP, cosine: 0.542), TF-A-002 (TF, cosine: 0.534).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5421,
+      "mapped_strength_0_10": 5.4,
+      "final_strength_integer": 5,
+      "significance": "STS 5.4/10 (raw 0.542). Shared vocabulary: [access, data, knowledge, network]. DCWF-only terms [analysis, approach, backdoor, collecting, conducting, exfiltrating] vs WIDAI-only terms [audit, controls, encryption, identity, isolation, logging] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8451,
+        "recall": 0.8778,
+        "f1": 0.8611,
+        "significance": "BERTScore F1=0.861 (P=0.845, R=0.878). R exceeds P by 0.033 \u2014 the WIDAI KSA's 22 words are well-captured by the DCWF element's 29 words, but the DCWF element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9999,
+        "entailment": 0.0,
+        "neutral": 0.0001,
+        "significance": "NLI: contradiction-dominant (100.0%). Despite 'Superset of' classification, the model detects semantic tension between \"Knowledge of structure, approach, and strategy of exploitation tools (e.g., snif\" and \"Knowledge of data platform security controls, including network isolation, encry\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6317,
+        "significance": "Bi-encoder 0.632 > STS 0.542 (gap +0.090). Independent encoding finds more similarity than cross-attention. Shared surface terms [access, data, knowledge, network] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.175,
+        "significance": "Jaccard 17.5%. Shared tokens: [access, data, knowledge, network]. DCWF-only: [analysis, approach, backdoor, collecting, conducting, exfiltrating]. WIDAI-only: [audit, controls, encryption, identity, isolation, logging]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

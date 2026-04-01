@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "155",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "155",
+  "focal_document_element_description": "Skill in applying and incorporating information technologies into proposed solutions.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-S-004",
+  "reference_document_element_description": "Skill in designing and executing applied research projects with clear organizational relevance, balancing research rigor with practical applicability.",
+  "comments": "DCWF ksa intersects with WIDAI LS domain. LS-S-004 is the strongest semantic match. Secondary: TF-A-003 (TF, cosine: 0.541), LS-S-011 (LS, cosine: 0.529).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6638,
+      "mapped_strength_0_10": 6.6,
+      "final_strength_integer": 7,
+      "significance": "STS 6.6/10 (raw 0.664). Shared vocabulary: [skill]. DCWF-only terms [applying, incorporating, information, proposed, solutions, technologies] vs WIDAI-only terms [applicability, applied, balancing, clear, designing, executing] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9018,
+        "recall": 0.8627,
+        "f1": 0.8818,
+        "significance": "BERTScore F1=0.882 (P=0.902, R=0.863). P exceeds R by 0.039 \u2014 the DCWF element's 10 words are well-captured by the WIDAI KSA's 18 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0051,
+        "neutral": 0.9947,
+        "significance": "NLI: neutral-dominant (99.5%). \"Skill in applying and incorporating information technologies into proposed solut\" and \"Skill in designing and executing applied research projects with clear organizati\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5486,
+        "significance": "Bi-encoder 0.549 < STS 0.664 (gap -0.115). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [applying, incorporating, information] and [applicability, applied, balancing] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1304,
+        "significance": "Jaccard 13.0%. Shared tokens: [skill]. DCWF-only: [applying, incorporating, information, proposed, solutions, technologies]. WIDAI-only: [applicability, applied, balancing, clear, designing, executing]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

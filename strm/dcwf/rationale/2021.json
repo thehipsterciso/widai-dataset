@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2021",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2021",
+  "focal_document_element_description": "Analyze plans, directives, guidance and policy for factors that would influence collection management's operational structure and requirement s (e.g., duration, scope, communication requirements, interagency/international agreements).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RM-K-011",
+  "reference_document_element_description": "Knowledge of model inventory management practices, including model tiering by materiality and complexity, risk classification, lifecycle tracking from development through retirement, and the documentation standards required at each stage.",
+  "comments": "DCWF task intersects with WIDAI RM domain. RM-K-011 is the strongest semantic match. Secondary: AB-T-001 (AB, cosine: 0.500), TF-T-002 (TF, cosine: 0.476).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.403,
+      "mapped_strength_0_10": 4.0,
+      "final_strength_integer": 4,
+      "significance": "STS 4.0/10 (raw 0.403). Shared vocabulary: [management]. DCWF-only terms [agreements, analyze, collection, communication, directives, duration] vs WIDAI-only terms [classification, complexity, development, documentation, inventory, knowledge] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8445,
+        "recall": 0.8528,
+        "f1": 0.8487,
+        "significance": "BERTScore F1=0.849 (P=0.845, R=0.853). Balanced P/R \u2014 the 25-word DCWF element and 29-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.8471,
+        "entailment": 0.0012,
+        "neutral": 0.1517,
+        "significance": "NLI: contradiction-dominant (84.7%). Despite 'Intersects with' classification, the model detects semantic tension between \"Analyze plans, directives, guidance and policy for factors that would influence\" and \"Knowledge of model inventory management practices, including model tiering by ma\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.516,
+        "significance": "Bi-encoder 0.516 > STS 0.403 (gap +0.113). Independent encoding finds more similarity than cross-attention. Shared surface terms [management] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0392,
+        "significance": "Jaccard 3.9%. Shared tokens: [management]. DCWF-only: [agreements, analyze, collection, communication, directives, duration]. WIDAI-only: [classification, complexity, development, documentation, inventory, knowledge]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

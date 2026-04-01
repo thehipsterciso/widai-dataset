@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5950",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5950",
+  "focal_document_element_description": "Develop and deploy software using continuous integration methods, processes, and tools, including test case writing against completion criteria (for each release, capability, micro-service, or component), build automation, and build processes.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-T-004",
+  "reference_document_element_description": "Configure and maintain CI/CD pipelines for data and AI projects, including build automation, test execution, artifact management, deployment workflows, and pipeline failure triage.",
+  "comments": "DCWF task superset of WIDAI TF domain. TF-T-004 is the strongest semantic match. Secondary: TF-K-009 (TF, cosine: 0.548), AI-S-016 (AI, cosine: 0.543).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6586,
+      "mapped_strength_0_10": 6.6,
+      "final_strength_integer": 7,
+      "significance": "STS 6.6/10 (raw 0.659). Shared vocabulary: [automation, build, test]. DCWF-only terms [against, capability, case, completion, component, continuous] vs WIDAI-only terms [ai, artifact, cd, ci, configure, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8694,
+        "recall": 0.8782,
+        "f1": 0.8738,
+        "significance": "BERTScore F1=0.874 (P=0.869, R=0.878). Balanced P/R \u2014 the 30-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0007,
+        "entailment": 0.0052,
+        "neutral": 0.994,
+        "significance": "NLI: neutral-dominant (99.4%). \"Develop and deploy software using continuous integration methods, processes, and\" and \"Configure and maintain CI/CD pipelines for data and AI projects, including build\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.55,
+        "significance": "Bi-encoder 0.550 < STS 0.659 (gap -0.109). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [against, capability, case] and [ai, artifact, cd] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1395,
+        "significance": "Jaccard 14.0%. Shared tokens: [automation, build, test]. DCWF-only: [against, capability, case, completion, component, continuous]. WIDAI-only: [ai, artifact, cd, ci, configure, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

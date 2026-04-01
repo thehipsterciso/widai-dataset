@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3463",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3463",
+  "focal_document_element_description": "Knowledge of required intelligence planning products associated with cyber operational planning.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-K-008",
+  "reference_document_element_description": "Knowledge of data and AI strategy development approaches, including strategy formulation methods, alignment with enterprise business strategy, competitive positioning through data capabilities, and strategy communication frameworks.",
+  "comments": "DCWF ksa intersects with WIDAI LS domain. LS-K-008 is the strongest semantic match. Secondary: DG-S-009 (DG, cosine: 0.538), AG-K-006 (AG, cosine: 0.513).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5325,
+      "mapped_strength_0_10": 5.3,
+      "final_strength_integer": 5,
+      "significance": "STS 5.3/10 (raw 0.532). Shared vocabulary: [knowledge]. DCWF-only terms [associated, cyber, intelligence, operational, planning, products] vs WIDAI-only terms [ai, alignment, approaches, business, capabilities, communication] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8863,
+        "recall": 0.8696,
+        "f1": 0.8779,
+        "significance": "BERTScore F1=0.878 (P=0.886, R=0.870). Balanced P/R \u2014 the 11-word DCWF element and 26-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9787,
+        "entailment": 0.0014,
+        "neutral": 0.0199,
+        "significance": "NLI: contradiction-dominant (97.9%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of required intelligence planning products associated with cyber opera\" and \"Knowledge of data and AI strategy development approaches, including strategy for\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5459,
+        "significance": "Bi-encoder 0.546 \u2248 STS 0.532 (gap 0.013). Independent encoding and cross-attention agree. Shared terms [knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1071,
+        "significance": "Jaccard 10.7%. Shared tokens: [knowledge]. DCWF-only: [associated, cyber, intelligence, operational, planning, products]. WIDAI-only: [ai, alignment, approaches, business, capabilities, communication]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6180",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6180",
+  "focal_document_element_description": "Ability to use data visualization tools (e.g., Flare, HighCharts, AmCharts, D3.js, Processing, Google Visualization API, Tableau, Raphael.js).",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-K-002",
+  "reference_document_element_description": "Knowledge of data visualization best practices, including chart type selection, cognitive load principles, color accessibility, and the difference between exploratory and explanatory visualization.",
+  "comments": "DCWF ksa superset of WIDAI AB domain. AB-K-002 is the strongest semantic match. Secondary: TF-A-001 (TF, cosine: 0.475), DA-K-004 (DA, cosine: 0.435).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4909,
+      "mapped_strength_0_10": 4.9,
+      "final_strength_integer": 5,
+      "significance": "STS 4.9/10 (raw 0.491). Shared vocabulary: [data, visualization]. DCWF-only terms [ability, amcharts, api, d3, flare, google] vs WIDAI-only terms [accessibility, best, chart, cognitive, color, difference] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8376,
+        "recall": 0.8538,
+        "f1": 0.8456,
+        "significance": "BERTScore F1=0.846 (P=0.838, R=0.854). Balanced P/R \u2014 the 17-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0039,
+        "entailment": 0.0003,
+        "neutral": 0.9959,
+        "significance": "NLI: neutral-dominant (99.6%). \"Ability to use data visualization tools (e.g., Flare, HighCharts, AmCharts, D3.j\" and \"Knowledge of data visualization best practices, including chart type selection,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6325,
+        "significance": "Bi-encoder 0.632 > STS 0.491 (gap +0.142). Independent encoding finds more similarity than cross-attention. Shared surface terms [data, visualization] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0541,
+        "significance": "Jaccard 5.4%. Shared tokens: [data, visualization]. DCWF-only: [ability, amcharts, api, d3, flare, google]. WIDAI-only: [accessibility, best, chart, cognitive, color, difference]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

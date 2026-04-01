@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "7006A",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "7006A",
+  "focal_document_element_description": "Knowledge of best practices from industry and academia in test design activities for verification and validation of systems.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-K-001",
+  "reference_document_element_description": "Knowledge of compliance assessment methodologies, including control testing, evidence gathering, gap analysis, and findings documentation standards.",
+  "comments": "DCWF ksa superset of WIDAI RC domain. RC-K-001 is the strongest semantic match. Secondary: TF-S-005 (TF, cosine: 0.528), DQ-K-018 (DQ, cosine: 0.528).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.62,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.620). Shared vocabulary: [knowledge]. DCWF-only terms [academia, activities, best, design, industry, practices] vs WIDAI-only terms [analysis, assessment, compliance, control, documentation, evidence] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8836,
+        "recall": 0.8701,
+        "f1": 0.8768,
+        "significance": "BERTScore F1=0.877 (P=0.884, R=0.870). Balanced P/R \u2014 the 18-word DCWF element and 16-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.8218,
+        "entailment": 0.0002,
+        "neutral": 0.178,
+        "significance": "NLI: contradiction-dominant (82.2%). Despite 'Superset of' classification, the model detects semantic tension between \"Knowledge of best practices from industry and academia in test design activities\" and \"Knowledge of compliance assessment methodologies, including control testing, evi\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.576,
+        "significance": "Bi-encoder 0.576 \u2248 STS 0.620 (gap 0.044). Independent encoding and cross-attention agree. Shared terms [knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1034,
+        "significance": "Jaccard 10.3%. Shared tokens: [knowledge]. DCWF-only: [academia, activities, best, design, industry, practices]. WIDAI-only: [analysis, assessment, compliance, control, documentation, evidence]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

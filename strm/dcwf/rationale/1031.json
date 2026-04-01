@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1031",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1031",
+  "focal_document_element_description": "Serve as technical expert and liaison to law enforcement personnel and explain incident details as required.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-S-002",
+  "reference_document_element_description": "Skill in interpreting regulatory text, supervisory guidance, and enforcement decisions, translating legal requirements into operational controls and measurable organizational obligations.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-S-002 is the strongest semantic match. Secondary: SP-T-007 (SP, cosine: 0.514), SP-S-004 (SP, cosine: 0.474).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4046,
+      "mapped_strength_0_10": 4.0,
+      "final_strength_integer": 4,
+      "significance": "STS 4.0/10 (raw 0.405). Shared vocabulary: [enforcement]. DCWF-only terms [details, expert, explain, incident, law, liaison] vs WIDAI-only terms [controls, decisions, guidance, interpreting, legal, measurable] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8697,
+        "recall": 0.8634,
+        "f1": 0.8665,
+        "significance": "BERTScore F1=0.867 (P=0.870, R=0.863). Balanced P/R \u2014 the 16-word DCWF element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0911,
+        "neutral": 0.9088,
+        "significance": "NLI: neutral-dominant (90.9%). \"Serve as technical expert and liaison to law enforcement personnel and explain i\" and \"Skill in interpreting regulatory text, supervisory guidance, and enforcement dec\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5327,
+        "significance": "Bi-encoder 0.533 > STS 0.405 (gap +0.128). Independent encoding finds more similarity than cross-attention. Shared surface terms [enforcement] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0645,
+        "significance": "Jaccard 6.5%. Shared tokens: [enforcement]. DCWF-only: [details, expert, explain, incident, law, liaison]. WIDAI-only: [controls, decisions, guidance, interpreting, legal, measurable]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2029A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2029A",
+  "focal_document_element_description": "Apply and utilize authorized cyber capabilities to enable access to targeted networks.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-T-005",
+  "reference_document_element_description": "Establish, communicate, and enforce enterprise-wide data and AI policies covering quality, privacy, security, ethics, and responsible use.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-T-005 is the strongest semantic match. Secondary: SP-T-010 (SP, cosine: 0.413), DA-K-012 (DA, cosine: 0.405).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2073,
+      "mapped_strength_0_10": 2.1,
+      "final_strength_integer": 2,
+      "significance": "STS 2.1/10 (raw 0.207). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [access, apply, authorized, capabilities, cyber, enable] vs WIDAI-only terms [ai, communicate, covering, data, enforce, enterprise] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8753,
+        "recall": 0.8482,
+        "f1": 0.8615,
+        "significance": "BERTScore F1=0.862 (P=0.875, R=0.848). P exceeds R by 0.027 \u2014 the DCWF element's 12 words are well-captured by the WIDAI KSA's 17 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9879,
+        "entailment": 0.0,
+        "neutral": 0.012,
+        "significance": "NLI: contradiction-dominant (98.8%). Despite 'Intersects with' classification, the model detects semantic tension between \"Apply and utilize authorized cyber capabilities to enable access to targeted net\" and \"Establish, communicate, and enforce enterprise-wide data and AI policies coverin\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4145,
+        "significance": "Bi-encoder 0.414 > STS 0.207 (gap +0.207). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0385,
+        "significance": "Jaccard 3.9%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [access, apply, authorized, capabilities, cyber, enable]. WIDAI terms: [ai, communicate, covering, data, enforce, enterprise]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

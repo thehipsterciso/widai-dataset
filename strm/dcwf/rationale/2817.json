@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2817",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2817",
+  "focal_document_element_description": "Revise collection matrix based on availability of optimal assets and resources.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-T-007",
+  "reference_document_element_description": "Maintain and optimize existing BI assets, including performance tuning, data model updates, and deprecation of unused content.",
+  "comments": "DCWF task intersects with WIDAI AB domain. AB-T-007 is the strongest semantic match. Secondary: LS-T-007 (LS, cosine: 0.360), LS-S-012 (LS, cosine: 0.340).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2814,
+      "mapped_strength_0_10": 2.8,
+      "final_strength_integer": 3,
+      "significance": "STS 2.8/10 (raw 0.281). Shared vocabulary: [assets]. DCWF-only terms [availability, based, collection, matrix, optimal, resources] vs WIDAI-only terms [bi, content, data, deprecation, existing, maintain] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8853,
+        "recall": 0.8636,
+        "f1": 0.8743,
+        "significance": "BERTScore F1=0.874 (P=0.885, R=0.864). P exceeds R by 0.022 \u2014 the DCWF element's 11 words are well-captured by the WIDAI KSA's 17 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9996,
+        "entailment": 0.0,
+        "neutral": 0.0004,
+        "significance": "NLI: contradiction-dominant (100.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Revise collection matrix based on availability of optimal assets and resources.\" and \"Maintain and optimize existing BI assets, including performance tuning, data mod\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4598,
+        "significance": "Bi-encoder 0.460 > STS 0.281 (gap +0.178). Independent encoding finds more similarity than cross-attention. Shared surface terms [assets] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.125,
+        "significance": "Jaccard 12.5%. Shared tokens: [assets]. DCWF-only: [availability, based, collection, matrix, optimal, resources]. WIDAI-only: [bi, content, data, deprecation, existing, maintain]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

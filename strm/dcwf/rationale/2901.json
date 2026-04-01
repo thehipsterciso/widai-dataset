@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2901",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2901",
+  "focal_document_element_description": "Perform quality review and provide feedback on transcribed or translated materials.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DQ-T-013",
+  "reference_document_element_description": "Implement and maintain data quality validation checks within pipelines, documenting quality rules, threshold definitions, and remediation procedures.",
+  "comments": "DCWF task intersects with WIDAI DQ domain. DQ-T-013 is the strongest semantic match. Secondary: DQ-K-021 (DQ, cosine: 0.462), TF-T-006 (TF, cosine: 0.453).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4519,
+      "mapped_strength_0_10": 4.5,
+      "final_strength_integer": 4,
+      "significance": "STS 4.5/10 (raw 0.452). Shared vocabulary: [quality]. DCWF-only terms [feedback, materials, perform, provide, review, transcribed] vs WIDAI-only terms [checks, data, definitions, documenting, implement, maintain] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8786,
+        "recall": 0.8746,
+        "f1": 0.8766,
+        "significance": "BERTScore F1=0.877 (P=0.879, R=0.875). Balanced P/R \u2014 the 11-word DCWF element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0013,
+        "entailment": 0.0024,
+        "neutral": 0.9964,
+        "significance": "NLI: neutral-dominant (99.6%). \"Perform quality review and provide feedback on transcribed or translated materia\" and \"Implement and maintain data quality validation checks within pipelines, document\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4676,
+        "significance": "Bi-encoder 0.468 \u2248 STS 0.452 (gap 0.016). Independent encoding and cross-attention agree. Shared terms [quality] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0833,
+        "significance": "Jaccard 8.3%. Shared tokens: [quality]. DCWF-only: [feedback, materials, perform, provide, review, transcribed]. WIDAI-only: [checks, data, definitions, documenting, implement, maintain]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

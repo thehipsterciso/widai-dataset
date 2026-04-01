@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "656",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "656",
+  "focal_document_element_description": "Implement new system design procedures, test procedures, and quality standards.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RM-T-008",
+  "reference_document_element_description": "Define and enforce model development standards, including documentation requirements, testing protocols, approval gates, ongoing monitoring expectations, and the criteria for model retirement or replacement.",
+  "comments": "DCWF task superset of WIDAI RM domain. RM-T-008 is the strongest semantic match. Secondary: DQ-T-015 (DQ, cosine: 0.555), DQ-T-013 (DQ, cosine: 0.544).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6312,
+      "mapped_strength_0_10": 6.3,
+      "final_strength_integer": 6,
+      "significance": "STS 6.3/10 (raw 0.631). Shared vocabulary: [standards]. DCWF-only terms [design, implement, new, procedures, quality, system] vs WIDAI-only terms [approval, criteria, define, development, documentation, enforce] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9219,
+        "recall": 0.8789,
+        "f1": 0.8998,
+        "significance": "BERTScore F1=0.900 (P=0.922, R=0.879). P exceeds R by 0.043 \u2014 the DCWF element's 10 words are well-captured by the WIDAI KSA's 24 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9957,
+        "entailment": 0.0001,
+        "neutral": 0.0041,
+        "significance": "NLI: contradiction-dominant (99.6%). Despite 'Superset of' classification, the model detects semantic tension between \"Implement new system design procedures, test procedures, and quality standards.\" and \"Define and enforce model development standards, including documentation requirem\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6079,
+        "significance": "Bi-encoder 0.608 \u2248 STS 0.631 (gap 0.023). Independent encoding and cross-attention agree. Shared terms [standards] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.069,
+        "significance": "Jaccard 6.9%. Shared tokens: [standards]. DCWF-only: [design, implement, new, procedures, quality, system]. WIDAI-only: [approval, criteria, define, development, documentation, enforce]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1062",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1062",
+  "focal_document_element_description": "Knowledge of software reverse engineering techniques.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-K-008",
+  "reference_document_element_description": "Knowledge of software version control concepts and Git workflows, including branching strategies, merge and rebase operations, conflict resolution, pull request processes, and collaborative development practices.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-K-008 is the strongest semantic match. Secondary: DQ-K-006 (DQ, cosine: 0.463), DA-K-002 (DA, cosine: 0.448).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6089,
+      "mapped_strength_0_10": 6.1,
+      "final_strength_integer": 6,
+      "significance": "STS 6.1/10 (raw 0.609). Shared vocabulary: [knowledge, software]. DCWF-only terms [engineering, reverse, techniques] vs WIDAI-only terms [branching, collaborative, concepts, conflict, control, development] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9264,
+        "recall": 0.8608,
+        "f1": 0.8924,
+        "significance": "BERTScore F1=0.892 (P=0.926, R=0.861). P exceeds R by 0.066 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 25 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9996,
+        "entailment": 0.0,
+        "neutral": 0.0004,
+        "significance": "NLI: contradiction-dominant (100.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of software reverse engineering techniques.\" and \"Knowledge of software version control concepts and Git workflows, including bran\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.478,
+        "significance": "Bi-encoder 0.478 < STS 0.609 (gap -0.131). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [engineering, reverse, techniques] and [branching, collaborative, concepts] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1154,
+        "significance": "Jaccard 11.5%. Shared tokens: [knowledge, software]. DCWF-only: [engineering, reverse, techniques]. WIDAI-only: [branching, collaborative, concepts, conflict, control, development]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

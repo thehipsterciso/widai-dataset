@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6943",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6943",
+  "focal_document_element_description": "Skill in identifying and investigating \"abnormal\" control system operations based on what specific mission/business functions look like.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AG-S-007",
+  "reference_document_element_description": "Skill in designing human oversight mechanisms for AI-assisted decision-making, including escalation triggers, override procedures, human-in-the-loop protocols, and meaningful human control verification.",
+  "comments": "DCWF ksa intersects with WIDAI AG domain. AG-S-007 is the strongest semantic match. Secondary: TF-A-002 (TF, cosine: 0.511), RC-T-008 (RC, cosine: 0.506).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3321,
+      "mapped_strength_0_10": 3.3,
+      "final_strength_integer": 3,
+      "significance": "STS 3.3/10 (raw 0.332). Shared vocabulary: [control, skill]. DCWF-only terms [abnormal, based, business, functions, identifying, investigating] vs WIDAI-only terms [ai, assisted, decision, designing, escalation, human] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8635,
+        "recall": 0.8575,
+        "f1": 0.8605,
+        "significance": "BERTScore F1=0.861 (P=0.864, R=0.858). Balanced P/R \u2014 the 17-word DCWF element and 21-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.5498,
+        "entailment": 0.002,
+        "neutral": 0.4482,
+        "significance": "NLI: contradiction-dominant (55.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in identifying and investigating \"abnormal\" control system operations base\" and \"Skill in designing human oversight mechanisms for AI-assisted decision-making, i\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5416,
+        "significance": "Bi-encoder 0.542 > STS 0.332 (gap +0.209). Independent encoding finds more similarity than cross-attention. Shared surface terms [control, skill] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1081,
+        "significance": "Jaccard 10.8%. Shared tokens: [control, skill]. DCWF-only: [abnormal, based, business, functions, identifying, investigating]. WIDAI-only: [ai, assisted, decision, designing, escalation, human]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

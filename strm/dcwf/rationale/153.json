@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "153",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "153",
+  "focal_document_element_description": "Skill of identifying, capturing, containing, and reporting malware.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-T-001",
+  "reference_document_element_description": "Implement AI application security controls, including prompt injection defenses, output filtering, access controls, and audit logging.",
+  "comments": "DCWF ksa intersects with WIDAI SP domain. SP-T-001 is the strongest semantic match. Secondary: TF-A-002 (TF, cosine: 0.454), DQ-S-006 (DQ, cosine: 0.439).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3825,
+      "mapped_strength_0_10": 3.8,
+      "final_strength_integer": 4,
+      "significance": "STS 3.8/10 (raw 0.383). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [capturing, containing, identifying, malware, reporting, skill] vs WIDAI-only terms [access, ai, application, audit, controls, defenses] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8969,
+        "recall": 0.8559,
+        "f1": 0.8759,
+        "significance": "BERTScore F1=0.876 (P=0.897, R=0.856). P exceeds R by 0.041 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 16 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.4213,
+        "entailment": 0.0011,
+        "neutral": 0.5775,
+        "significance": "NLI: mixed signal (E:0.1%, N:57.8%, C:42.1%). No dominant classification for \"Skill of identifying, capturing, containing, and reporting malware.\" vs \"Implement AI application security controls, including prompt injection defenses,\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.468,
+        "significance": "Bi-encoder 0.468 > STS 0.383 (gap +0.086). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0455,
+        "significance": "Jaccard 4.5%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [capturing, containing, identifying, malware, reporting, skill]. WIDAI terms: [access, ai, application, audit, controls, defenses]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

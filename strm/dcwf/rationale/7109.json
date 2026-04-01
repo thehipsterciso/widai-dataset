@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "7109",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "7109",
+  "focal_document_element_description": "Knowledge of usability testing.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-K-005",
+  "reference_document_element_description": "Knowledge of A/B testing and experimentation design, including sample size calculation, randomization methods, guardrail metric selection, and statistical significance interpretation.",
+  "comments": "DCWF ksa intersects with WIDAI AB domain. AB-K-005 is the strongest semantic match. Secondary: RM-K-002 (RM, cosine: 0.428), RM-K-004 (RM, cosine: 0.420).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5686,
+      "mapped_strength_0_10": 5.7,
+      "final_strength_integer": 6,
+      "significance": "STS 5.7/10 (raw 0.569). Shared vocabulary: [knowledge, testing]. DCWF-only terms [usability] vs WIDAI-only terms [b, calculation, design, experimentation, guardrail, interpretation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9499,
+        "recall": 0.8645,
+        "f1": 0.9052,
+        "significance": "BERTScore F1=0.905 (P=0.950, R=0.865). P exceeds R by 0.085 \u2014 the DCWF element's 4 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9947,
+        "entailment": 0.0001,
+        "neutral": 0.0052,
+        "significance": "NLI: contradiction-dominant (99.5%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of usability testing.\" and \"Knowledge of A/B testing and experimentation design, including sample size calcu\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.438,
+        "significance": "Bi-encoder 0.438 < STS 0.569 (gap -0.131). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [usability] and [b, calculation, design] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1429,
+        "significance": "Jaccard 14.3%. Shared tokens: [knowledge, testing]. DCWF-only: [usability]. WIDAI-only: [b, calculation, design, experimentation, guardrail, interpretation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

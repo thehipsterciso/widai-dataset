@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4646",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4646",
+  "focal_document_element_description": "Skill in performing data fusion from all-source intelligence for network analysis and reconstruction (e.g., Single Table Inheritance (STIs), network maps).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-S-010",
+  "reference_document_element_description": "Skill in facilitating data and AI communities of practice, including knowledge sharing forums, best practice documentation, cross-team collaboration initiatives, and capability building activities.",
+  "comments": "DCWF ksa intersects with WIDAI OP domain. OP-S-010 is the strongest semantic match. Secondary: DA-S-001 (DA, cosine: 0.442), LS-S-009 (LS, cosine: 0.431).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4837,
+      "mapped_strength_0_10": 4.8,
+      "final_strength_integer": 5,
+      "significance": "STS 4.8/10 (raw 0.484). Shared vocabulary: [data, skill]. DCWF-only terms [analysis, fusion, inheritance, intelligence, maps, network] vs WIDAI-only terms [activities, ai, best, building, capability, collaboration] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8373,
+        "recall": 0.8518,
+        "f1": 0.8445,
+        "significance": "BERTScore F1=0.845 (P=0.837, R=0.852). Balanced P/R \u2014 the 20-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.2391,
+        "entailment": 0.0003,
+        "neutral": 0.7606,
+        "significance": "NLI: mixed signal (E:0.0%, N:76.1%, C:23.9%). No dominant classification for \"Skill in performing data fusion from all-source intelligence for network analysi\" vs \"Skill in facilitating data and AI communities of practice, including knowledge s\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4858,
+        "significance": "Bi-encoder 0.486 \u2248 STS 0.484 (gap 0.002). Independent encoding and cross-attention agree. Shared terms [data, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1026,
+        "significance": "Jaccard 10.3%. Shared tokens: [data, skill]. DCWF-only: [analysis, fusion, inheritance, intelligence, maps, network]. WIDAI-only: [activities, ai, best, building, capability, collaboration]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

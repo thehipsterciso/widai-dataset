@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "754",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "754",
+  "focal_document_element_description": "Perform cybersecurity testing of developed applications and/or systems.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "SP-T-009",
+  "reference_document_element_description": "Execute security testing for AI systems prior to production deployment, including adversarial robustness testing, prompt injection testing, and supply chain verification.",
+  "comments": "DCWF task superset of WIDAI SP domain. SP-T-009 is the strongest semantic match. Secondary: SP-T-001 (SP, cosine: 0.546), SP-S-008 (SP, cosine: 0.525).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6296,
+      "mapped_strength_0_10": 6.3,
+      "final_strength_integer": 6,
+      "significance": "STS 6.3/10 (raw 0.630). Shared vocabulary: [systems, testing]. DCWF-only terms [applications, cybersecurity, developed, perform] vs WIDAI-only terms [adversarial, ai, chain, deployment, execute, injection] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.91,
+        "recall": 0.8826,
+        "f1": 0.8961,
+        "significance": "BERTScore F1=0.896 (P=0.910, R=0.883). P exceeds R by 0.027 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0001,
+        "neutral": 0.9997,
+        "significance": "NLI: neutral-dominant (100.0%). \"Perform cybersecurity testing of developed applications and/or systems.\" and \"Execute security testing for AI systems prior to production deployment, includin\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5574,
+        "significance": "Bi-encoder 0.557 < STS 0.630 (gap -0.072). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [applications, cybersecurity, developed] and [adversarial, ai, chain] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.12,
+        "significance": "Jaccard 12.0%. Shared tokens: [systems, testing]. DCWF-only: [applications, cybersecurity, developed, perform]. WIDAI-only: [adversarial, ai, chain, deployment, execute, injection]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "391A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "391A",
+  "focal_document_element_description": "Acquire and manage the necessary resources, including leadership support, financial resources, infrastructure, and key personnel, to support AI innovation adoption goals and objectives.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "TF-A-003",
+  "reference_document_element_description": "Ability to evaluate and adopt new technologies, frameworks, and tools for data and AI work, assessing maturity, community support, integration requirements, and organizational fit before recommending adoption.",
+  "comments": "DCWF task equal WIDAI TF domain. TF-A-003 is the strongest semantic match. Secondary: AI-T-018 (AI, cosine: 0.656), DG-T-002 (DG, cosine: 0.654).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5164,
+      "mapped_strength_0_10": 5.2,
+      "final_strength_integer": 5,
+      "significance": "STS 5.2/10 (raw 0.516). Shared vocabulary: [adoption, ai, support]. DCWF-only terms [acquire, financial, goals, infrastructure, innovation, key] vs WIDAI-only terms [ability, adopt, assessing, community, data, evaluate] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8783,
+        "recall": 0.8803,
+        "f1": 0.8793,
+        "significance": "BERTScore F1=0.879 (P=0.878, R=0.880). Balanced P/R \u2014 the 23-word DCWF element and 27-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0026,
+        "entailment": 0.0484,
+        "neutral": 0.9491,
+        "significance": "NLI: neutral-dominant (94.9%). \"Acquire and manage the necessary resources, including leadership support, financ\" and \"Ability to evaluate and adopt new technologies, frameworks, and tools for data a\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6668,
+        "significance": "Bi-encoder 0.667 > STS 0.516 (gap +0.150). Independent encoding finds more similarity than cross-attention. Shared surface terms [adoption, ai, support] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1316,
+        "significance": "Jaccard 13.2%. Shared tokens: [adoption, ai, support]. DCWF-only: [acquire, financial, goals, infrastructure, innovation, key]. WIDAI-only: [ability, adopt, assessing, community, data, evaluate]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

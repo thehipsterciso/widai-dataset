@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "861",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "861",
+  "focal_document_element_description": "Track and document cyber defense incidents from initial detection through final resolution.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RM-T-002",
+  "reference_document_element_description": "Conduct threat model assessments for AI systems, identifying AI-specific attack surfaces, threat actors, and applicable mitigating controls.",
+  "comments": "DCWF task intersects with WIDAI RM domain. RM-T-002 is the strongest semantic match. Secondary: DG-T-007 (DG, cosine: 0.400), RC-T-005 (RC, cosine: 0.369).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4619,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.462). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [cyber, defense, detection, document, final, incidents] vs WIDAI-only terms [actors, ai, applicable, assessments, attack, conduct] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8656,
+        "recall": 0.8648,
+        "f1": 0.8652,
+        "significance": "BERTScore F1=0.865 (P=0.866, R=0.865). Balanced P/R \u2014 the 12-word DCWF element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.006,
+        "entailment": 0.0007,
+        "neutral": 0.9933,
+        "significance": "NLI: neutral-dominant (99.3%). \"Track and document cyber defense incidents from initial detection through final\" and \"Conduct threat model assessments for AI systems, identifying AI-specific attack\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4075,
+        "significance": "Bi-encoder 0.407 < STS 0.462 (gap -0.054). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [cyber, defense, detection] and [actors, ai, applicable] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.037,
+        "significance": "Jaccard 3.7%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [cyber, defense, detection, document, final, incidents]. WIDAI terms: [actors, ai, applicable, assessments, attack, conduct]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

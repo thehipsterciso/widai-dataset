@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3585",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3585",
+  "focal_document_element_description": "Knowledge of accepted organization planning systems.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-K-002",
+  "reference_document_element_description": "Knowledge of organizational change management principles as applied to large-scale data and AI transformation programs, including adoption barriers, culture change levers, and executive sponsorship requirements.",
+  "comments": "DCWF ksa intersects with WIDAI LS domain. LS-K-002 is the strongest semantic match. Secondary: LS-K-003 (LS, cosine: 0.436), DG-K-007 (DG, cosine: 0.434).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5013,
+      "mapped_strength_0_10": 5.0,
+      "final_strength_integer": 5,
+      "significance": "STS 5.0/10 (raw 0.501). Shared vocabulary: [knowledge]. DCWF-only terms [accepted, organization, planning, systems] vs WIDAI-only terms [adoption, ai, applied, barriers, change, culture] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9384,
+        "recall": 0.8675,
+        "f1": 0.9016,
+        "significance": "BERTScore F1=0.902 (P=0.938, R=0.868). P exceeds R by 0.071 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 25 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9938,
+        "entailment": 0.0,
+        "neutral": 0.0062,
+        "significance": "NLI: contradiction-dominant (99.4%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of accepted organization planning systems.\" and \"Knowledge of organizational change management principles as applied to large-sca\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.437,
+        "significance": "Bi-encoder 0.437 < STS 0.501 (gap -0.064). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [accepted, organization, planning] and [adoption, ai, applied] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0714,
+        "significance": "Jaccard 7.1%. Shared tokens: [knowledge]. DCWF-only: [accepted, organization, planning, systems]. WIDAI-only: [adoption, ai, applied, barriers, change, culture]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2910",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2910",
+  "focal_document_element_description": "Perform foreign language and dialect identification in initial source data.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-S-011",
+  "reference_document_element_description": "Skill in fine-tuning pre-trained language models for domain-specific tasks, including dataset preparation, training configuration, and evaluation design.",
+  "comments": "DCWF task intersects with WIDAI AI domain. AI-S-011 is the strongest semantic match. Secondary: AI-K-012 (AI, cosine: 0.427), OP-S-004 (OP, cosine: 0.369).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4548,
+      "mapped_strength_0_10": 4.5,
+      "final_strength_integer": 4,
+      "significance": "STS 4.5/10 (raw 0.455). Shared vocabulary: [language]. DCWF-only terms [data, dialect, foreign, identification, initial, perform] vs WIDAI-only terms [configuration, dataset, design, domain, evaluation, fine] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8803,
+        "recall": 0.8625,
+        "f1": 0.8713,
+        "significance": "BERTScore F1=0.871 (P=0.880, R=0.863). Balanced P/R \u2014 the 10-word DCWF element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0049,
+        "entailment": 0.0038,
+        "neutral": 0.9913,
+        "significance": "NLI: neutral-dominant (99.1%). \"Perform foreign language and dialect identification in initial source data.\" and \"Skill in fine-tuning pre-trained language models for domain-specific tasks, incl\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.49,
+        "significance": "Bi-encoder 0.490 \u2248 STS 0.455 (gap 0.035). Independent encoding and cross-attention agree. Shared terms [language] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1111,
+        "significance": "Jaccard 11.1%. Shared tokens: [language]. DCWF-only: [data, dialect, foreign, identification, initial, perform]. WIDAI-only: [configuration, dataset, design, domain, evaluation, fine]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "870",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "870",
+  "focal_document_element_description": "Capture and analyze network traffic associated with malicious activities using network monitoring tools.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-T-004",
+  "reference_document_element_description": "Implement model monitoring dashboards and alerting, including performance degradation thresholds, drift detection, and incident response procedures.",
+  "comments": "DCWF task intersects with WIDAI AI domain. AI-T-004 is the strongest semantic match. Secondary: DA-T-009 (DA, cosine: 0.353), AI-K-007 (AI, cosine: 0.332).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3811,
+      "mapped_strength_0_10": 3.8,
+      "final_strength_integer": 4,
+      "significance": "STS 3.8/10 (raw 0.381). Shared vocabulary: [monitoring]. DCWF-only terms [activities, analyze, associated, capture, malicious, network] vs WIDAI-only terms [alerting, dashboards, degradation, detection, drift, implement] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8761,
+        "recall": 0.8657,
+        "f1": 0.8708,
+        "significance": "BERTScore F1=0.871 (P=0.876, R=0.866). Balanced P/R \u2014 the 13-word DCWF element and 16-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0007,
+        "entailment": 0.0002,
+        "neutral": 0.999,
+        "significance": "NLI: neutral-dominant (99.9%). \"Capture and analyze network traffic associated with malicious activities using n\" and \"Implement model monitoring dashboards and alerting, including performance degrad\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.3544,
+        "significance": "Bi-encoder 0.354 \u2248 STS 0.381 (gap 0.027). Independent encoding and cross-attention agree. Shared terms [monitoring] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.08,
+        "significance": "Jaccard 8.0%. Shared tokens: [monitoring]. DCWF-only: [activities, analyze, associated, capture, malicious, network]. WIDAI-only: [alerting, dashboards, degradation, detection, drift, implement]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

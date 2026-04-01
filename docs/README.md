@@ -45,7 +45,7 @@ WIDAI is a unified workforce framework that maps roles across the CDAIO domain, 
 
 **[Phase 1B Framework Prioritization](roadmap/phase-1b-framework-prioritization.md)** — 70 frameworks assessed for STRM eligibility. 4-tier prioritized execution sequence.
 
-**[Architectural Decision Records](roadmap/adr/)** — 16 ADRs documenting rationale for every major roadmap and methodology decision.
+**[Architectural Decision Records](roadmap/adr/)** — 17 ADRs documenting rationale for every major roadmap and methodology decision.
 
 ### Methodology
 
@@ -68,6 +68,8 @@ widai-dataset/
 ├── sources/                  Canonical source citations and raw framework data
 ├── strm/                     Per-framework STRM mappings and rationale
 │   ├── onet/                 O*NET 30.2 STRM (complete)
+│   ├── nice/                 NICE v2.1.0 STRM (complete)
+│   ├── dcwf/                 DCWF v5.1 STRM (complete)
 │   └── issues/               Gap issue registers across all STRMs
 ├── methodology/              Assessment and scoring methodologies
 ├── schema/                   JSON Schema definitions
@@ -99,7 +101,8 @@ All four validation tests passed. Go decision for Phase 1.
 | Tier | Framework | Status | ADR |
 |------|-----------|--------|-----|
 | 1 | O*NET 30.2 | Complete | [ADR-015](roadmap/adr/ADR-015-strm-onet.md) |
-| 1 | NIST NICE / DCWF | Queued | — |
+| 1 | NIST NICE v2.1.0 | Complete | [ADR-016](roadmap/adr/ADR-016-strm-nice.md) |
+| 1 | DoD DCWF v5.1 | Complete | [ADR-017](roadmap/adr/ADR-017-strm-dcwf.md) |
 | 1 | DDAT | Queued | — |
 | 2 | EU AI Act | Queued | — |
 | 2 | NIST AI RMF | Queued | — |

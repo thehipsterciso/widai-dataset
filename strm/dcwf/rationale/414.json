@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "414",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "414",
+  "focal_document_element_description": "Analyze user needs and software requirements to determine feasibility of design within time and cost constraints.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-A-004",
+  "reference_document_element_description": "Ability to design technical implementations that balance immediate delivery requirements with long-term maintainability, scalability, and operational sustainability.",
+  "comments": "DCWF task intersects with WIDAI TF domain. TF-A-004 is the strongest semantic match. Secondary: DA-A-001 (DA, cosine: 0.460), DQ-A-004 (DQ, cosine: 0.457).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4446,
+      "mapped_strength_0_10": 4.5,
+      "final_strength_integer": 4,
+      "significance": "STS 4.5/10 (raw 0.445). Shared vocabulary: [design, requirements]. DCWF-only terms [analyze, constraints, cost, determine, feasibility, needs] vs WIDAI-only terms [ability, balance, delivery, immediate, implementations, long] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8836,
+        "recall": 0.8659,
+        "f1": 0.8747,
+        "significance": "BERTScore F1=0.875 (P=0.884, R=0.866). Balanced P/R \u2014 the 16-word DCWF element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0017,
+        "entailment": 0.357,
+        "neutral": 0.6414,
+        "significance": "NLI: mixed signal (E:35.7%, N:64.1%, C:0.2%). No dominant classification for \"Analyze user needs and software requirements to determine feasibility of design\" vs \"Ability to design technical implementations that balance immediate delivery requ\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.511,
+        "significance": "Bi-encoder 0.511 > STS 0.445 (gap +0.066). Independent encoding finds more similarity than cross-attention. Shared surface terms [design, requirements] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1379,
+        "significance": "Jaccard 13.8%. Shared tokens: [design, requirements]. DCWF-only: [analyze, constraints, cost, determine, feasibility, needs]. WIDAI-only: [ability, balance, delivery, immediate, implementations, long]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

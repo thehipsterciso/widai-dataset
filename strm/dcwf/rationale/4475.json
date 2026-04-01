@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4475",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4475",
+  "focal_document_element_description": "Knowledge of joint doctrine for information activities (JP 3-04).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DQ-K-008",
+  "reference_document_element_description": "Knowledge of entity resolution methods, including deterministic matching rules, probabilistic matching, and ML-based matching, and the precision-recall trade-offs involved.",
+  "comments": "DCWF ksa intersects with WIDAI DQ domain. DQ-K-008 is the strongest semantic match. Secondary: RC-K-007 (RC, cosine: 0.410), DQ-K-015 (DQ, cosine: 0.401).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2487,
+      "mapped_strength_0_10": 2.5,
+      "final_strength_integer": 2,
+      "significance": "STS 2.5/10 (raw 0.249). Shared vocabulary: [knowledge]. DCWF-only terms [04, 3, activities, doctrine, information, joint] vs WIDAI-only terms [based, deterministic, entity, involved, matching, methods] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8682,
+        "recall": 0.8375,
+        "f1": 0.8526,
+        "significance": "BERTScore F1=0.853 (P=0.868, R=0.838). P exceeds R by 0.031 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.917,
+        "entailment": 0.0095,
+        "neutral": 0.0735,
+        "significance": "NLI: contradiction-dominant (91.7%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of joint doctrine for information activities (JP 3-04).\" and \"Knowledge of entity resolution methods, including deterministic matching rules,\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4198,
+        "significance": "Bi-encoder 0.420 > STS 0.249 (gap +0.171). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0741,
+        "significance": "Jaccard 7.4%. Shared tokens: [knowledge]. DCWF-only: [04, 3, activities, doctrine, information, joint]. WIDAI-only: [based, deterministic, entity, involved, matching, methods]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

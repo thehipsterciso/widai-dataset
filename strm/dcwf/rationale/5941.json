@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5941",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5941",
+  "focal_document_element_description": "Utilize tools and techniques like risk assessment, threat modeling, and cybersecurity to detect and analyze the threats.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RM-S-002",
+  "reference_document_element_description": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+  "comments": "DCWF task superset of WIDAI RM domain. RM-S-002 is the strongest semantic match. Secondary: RM-T-002 (RM, cosine: 0.549), SP-S-003 (SP, cosine: 0.512).",
+  "strength_of_relationship": 8,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.7628,
+      "mapped_strength_0_10": 7.6,
+      "final_strength_integer": 8,
+      "significance": "STS 7.6/10 (raw 0.763). Shared vocabulary: [modeling, threat]. DCWF-only terms [analyze, assessment, cybersecurity, detect, like, risk] vs WIDAI-only terms [ai, analysis, assessments, attack, conducting, control] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9082,
+        "recall": 0.8919,
+        "f1": 0.9,
+        "significance": "BERTScore F1=0.900 (P=0.908, R=0.892). Balanced P/R \u2014 the 17-word DCWF element and 19-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0009,
+        "entailment": 0.0075,
+        "neutral": 0.9916,
+        "significance": "NLI: neutral-dominant (99.2%). \"Utilize tools and techniques like risk assessment, threat modeling, and cybersec\" and \"Skill in conducting AI security assessments, including threat modeling for AI sy\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5541,
+        "significance": "Bi-encoder 0.554 < STS 0.763 (gap -0.209). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [analyze, assessment, cybersecurity] and [ai, analysis, assessments] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1,
+        "significance": "Jaccard 10.0%. Shared tokens: [modeling, threat]. DCWF-only: [analyze, assessment, cybersecurity, detect, like, risk]. WIDAI-only: [ai, analysis, assessments, attack, conducting, control]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

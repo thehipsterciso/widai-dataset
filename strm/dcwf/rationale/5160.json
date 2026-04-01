@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5160",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5160",
+  "focal_document_element_description": "Coordinate with internal and external subject matter experts to ensure existing qualification standards reflect organizational functional requirements and meet industry standards.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DA-S-003",
+  "reference_document_element_description": "Skill in defining and enforcing enterprise data modeling standards, naming conventions, and structural patterns across engineering teams.",
+  "comments": "DCWF task intersects with WIDAI DA domain. DA-S-003 is the strongest semantic match. Secondary: SP-S-004 (SP, cosine: 0.516), RC-S-002 (RC, cosine: 0.508).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3884,
+      "mapped_strength_0_10": 3.9,
+      "final_strength_integer": 4,
+      "significance": "STS 3.9/10 (raw 0.388). Shared vocabulary: [standards]. DCWF-only terms [coordinate, ensure, existing, experts, external, functional] vs WIDAI-only terms [across, conventions, data, defining, enforcing, engineering] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8629,
+        "recall": 0.8841,
+        "f1": 0.8734,
+        "significance": "BERTScore F1=0.873 (P=0.863, R=0.884). R exceeds P by 0.021 \u2014 the WIDAI KSA's 17 words are well-captured by the DCWF element's 21 words, but the DCWF element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0008,
+        "neutral": 0.9989,
+        "significance": "NLI: neutral-dominant (99.9%). \"Coordinate with internal and external subject matter experts to ensure existing\" and \"Skill in defining and enforcing enterprise data modeling standards, naming conve\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.548,
+        "significance": "Bi-encoder 0.548 > STS 0.388 (gap +0.160). Independent encoding finds more similarity than cross-attention. Shared surface terms [standards] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0606,
+        "significance": "Jaccard 6.1%. Shared tokens: [standards]. DCWF-only: [coordinate, ensure, existing, experts, external, functional]. WIDAI-only: [across, conventions, data, defining, enforcing, engineering]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

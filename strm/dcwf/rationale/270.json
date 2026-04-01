@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "270",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "270",
+  "focal_document_element_description": "Knowledge of common adversary tactics, techniques, and procedures in assigned area of responsibility (i.e., historical country-specific tactics, techniques, and procedures; emerging capabilities).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RM-S-002",
+  "reference_document_element_description": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+  "comments": "DCWF ksa intersects with WIDAI RM domain. RM-S-002 is the strongest semantic match. Secondary: AG-K-004 (AG, cosine: 0.495), RM-K-005 (RM, cosine: 0.494).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.332,
+      "mapped_strength_0_10": 3.3,
+      "final_strength_integer": 3,
+      "significance": "STS 3.3/10 (raw 0.332). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [adversary, area, assigned, capabilities, common, country] vs WIDAI-only terms [ai, analysis, assessments, attack, conducting, control] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8636,
+        "recall": 0.8607,
+        "f1": 0.8621,
+        "significance": "BERTScore F1=0.862 (P=0.864, R=0.861). Balanced P/R \u2014 the 22-word DCWF element and 19-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0015,
+        "entailment": 0.0016,
+        "neutral": 0.9968,
+        "significance": "NLI: neutral-dominant (99.7%). \"Knowledge of common adversary tactics, techniques, and procedures in assigned ar\" and \"Skill in conducting AI security assessments, including threat modeling for AI sy\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5059,
+        "significance": "Bi-encoder 0.506 > STS 0.332 (gap +0.174). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0571,
+        "significance": "Jaccard 5.7%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [adversary, area, assigned, capabilities, common, country]. WIDAI terms: [ai, analysis, assessments, attack, conducting, control]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1133",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1133",
+  "focal_document_element_description": "Knowledge of service management concepts for networks and related standards (e.g., Information Technology Infrastructure Library, current version [ITIL]).",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "OP-K-007",
+  "reference_document_element_description": "Knowledge of IT service management principles as applied to data services, including service catalog design, service level management, incident and problem management, and continual service improvement.",
+  "comments": "DCWF ksa equal WIDAI OP domain. OP-K-007 is the strongest semantic match. Secondary: TF-K-013 (TF, cosine: 0.543), AI-K-015 (AI, cosine: 0.483).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6037,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.604). Shared vocabulary: [knowledge, management, service]. DCWF-only terms [concepts, current, information, infrastructure, itil, library] vs WIDAI-only terms [applied, catalog, continual, data, design, improvement] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8601,
+        "recall": 0.8867,
+        "f1": 0.8732,
+        "significance": "BERTScore F1=0.873 (P=0.860, R=0.887). R exceeds P by 0.027 \u2014 the WIDAI KSA's 26 words are well-captured by the DCWF element's 18 words, but the DCWF element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0008,
+        "entailment": 0.0003,
+        "neutral": 0.9989,
+        "significance": "NLI: neutral-dominant (99.9%). \"Knowledge of service management concepts for networks and related standards (e.g\" and \"Knowledge of IT service management principles as applied to data services, inclu\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7329,
+        "significance": "Bi-encoder 0.733 > STS 0.604 (gap +0.129). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, management, service] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1471,
+        "significance": "Jaccard 14.7%. Shared tokens: [knowledge, management, service]. DCWF-only: [concepts, current, information, infrastructure, itil, library]. WIDAI-only: [applied, catalog, continual, data, design, improvement]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

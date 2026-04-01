@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "129A",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "129A",
+  "focal_document_element_description": "Knowledge of system life cycle management principles.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RM-K-011",
+  "reference_document_element_description": "Knowledge of model inventory management practices, including model tiering by materiality and complexity, risk classification, lifecycle tracking from development through retirement, and the documentation standards required at each stage.",
+  "comments": "DCWF ksa superset of WIDAI RM domain. RM-K-011 is the strongest semantic match. Secondary: DG-K-006 (DG, cosine: 0.544), OP-K-007 (OP, cosine: 0.512).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5834,
+      "mapped_strength_0_10": 5.8,
+      "final_strength_integer": 6,
+      "significance": "STS 5.8/10 (raw 0.583). Shared vocabulary: [knowledge, management]. DCWF-only terms [cycle, life, principles, system] vs WIDAI-only terms [classification, complexity, development, documentation, inventory, lifecycle] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.945,
+        "recall": 0.8649,
+        "f1": 0.9032,
+        "significance": "BERTScore F1=0.903 (P=0.945, R=0.865). P exceeds R by 0.080 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 29 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0027,
+        "entailment": 0.0002,
+        "neutral": 0.9971,
+        "significance": "NLI: neutral-dominant (99.7%). \"Knowledge of system life cycle management principles.\" and \"Knowledge of model inventory management practices, including model tiering by ma\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5545,
+        "significance": "Bi-encoder 0.554 \u2248 STS 0.583 (gap 0.029). Independent encoding and cross-attention agree. Shared terms [knowledge, management] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0968,
+        "significance": "Jaccard 9.7%. Shared tokens: [knowledge, management]. DCWF-only: [cycle, life, principles, system]. WIDAI-only: [classification, complexity, development, documentation, inventory, lifecycle]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

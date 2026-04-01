@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3277",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3277",
+  "focal_document_element_description": "Knowledge of general SCADA system components.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RM-K-008",
+  "reference_document_element_description": "Knowledge of AI system documentation standards, including model cards, system cards, datasheets for datasets, and the evaluation evidence standards required for regulatory conformity assessment.",
+  "comments": "DCWF ksa intersects with WIDAI RM domain. RM-K-008 is the strongest semantic match. Secondary: OP-K-007 (OP, cosine: 0.402), AG-K-006 (AG, cosine: 0.394).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4718,
+      "mapped_strength_0_10": 4.7,
+      "final_strength_integer": 5,
+      "significance": "STS 4.7/10 (raw 0.472). Shared vocabulary: [knowledge, system]. DCWF-only terms [components, general, scada] vs WIDAI-only terms [ai, assessment, cards, conformity, datasets, datasheets] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9103,
+        "recall": 0.8425,
+        "f1": 0.8751,
+        "significance": "BERTScore F1=0.875 (P=0.910, R=0.843). P exceeds R by 0.068 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 24 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9978,
+        "entailment": 0.0002,
+        "neutral": 0.002,
+        "significance": "NLI: contradiction-dominant (99.8%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of general SCADA system components.\" and \"Knowledge of AI system documentation standards, including model cards, system ca\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4049,
+        "significance": "Bi-encoder 0.405 < STS 0.472 (gap -0.067). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [components, general, scada] and [ai, assessment, cards] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1304,
+        "significance": "Jaccard 13.0%. Shared tokens: [knowledge, system]. DCWF-only: [components, general, scada]. WIDAI-only: [ai, assessment, cards, conformity, datasets, datasheets]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

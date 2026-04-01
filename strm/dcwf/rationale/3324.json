@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3324",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3324",
+  "focal_document_element_description": "Knowledge of information and collateral intelligence sources.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-K-012",
+  "reference_document_element_description": "Knowledge of data and AI due diligence frameworks for mergers, acquisitions, and private equity transactions, including data asset valuation, technical debt assessment, key person risk evaluation, and integration complexity analysis.",
+  "comments": "DCWF ksa intersects with WIDAI LS domain. LS-K-012 is the strongest semantic match. Secondary: RC-K-005 (RC, cosine: 0.507), LS-K-010 (LS, cosine: 0.475).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5703,
+      "mapped_strength_0_10": 5.7,
+      "final_strength_integer": 6,
+      "significance": "STS 5.7/10 (raw 0.570). Shared vocabulary: [knowledge]. DCWF-only terms [collateral, information, intelligence, sources] vs WIDAI-only terms [acquisitions, ai, analysis, assessment, asset, complexity] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8813,
+        "recall": 0.8256,
+        "f1": 0.8526,
+        "significance": "BERTScore F1=0.853 (P=0.881, R=0.826). P exceeds R by 0.056 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 30 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0055,
+        "entailment": 0.001,
+        "neutral": 0.9935,
+        "significance": "NLI: neutral-dominant (99.4%). \"Knowledge of information and collateral intelligence sources.\" and \"Knowledge of data and AI due diligence frameworks for mergers, acquisitions, and\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5446,
+        "significance": "Bi-encoder 0.545 \u2248 STS 0.570 (gap 0.026). Independent encoding and cross-attention agree. Shared terms [knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0968,
+        "significance": "Jaccard 9.7%. Shared tokens: [knowledge]. DCWF-only: [collateral, information, intelligence, sources]. WIDAI-only: [acquisitions, ai, analysis, assessment, asset, complexity]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

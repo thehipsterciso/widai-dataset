@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8135",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8135",
+  "focal_document_element_description": "Make use of compiler attributes and platform-specific features.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DA-S-007",
+  "reference_document_element_description": "Skill in deploying, configuring, and scaling data platform components using infrastructure-as-code with version control and automated testing.",
+  "comments": "DCWF task intersects with WIDAI DA domain. DA-S-007 is the strongest semantic match. Secondary: AI-T-013 (AI, cosine: 0.445), AI-T-006 (AI, cosine: 0.407).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5405,
+      "mapped_strength_0_10": 5.4,
+      "final_strength_integer": 5,
+      "significance": "STS 5.4/10 (raw 0.540). Shared vocabulary: [platform]. DCWF-only terms [attributes, compiler, features, make, specific, use] vs WIDAI-only terms [automated, code, components, configuring, control, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8899,
+        "recall": 0.8563,
+        "f1": 0.8728,
+        "significance": "BERTScore F1=0.873 (P=0.890, R=0.856). P exceeds R by 0.034 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 17 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0008,
+        "neutral": 0.9991,
+        "significance": "NLI: neutral-dominant (99.9%). \"Make use of compiler attributes and platform-specific features.\" and \"Skill in deploying, configuring, and scaling data platform components using infr\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4662,
+        "significance": "Bi-encoder 0.466 < STS 0.540 (gap -0.074). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [attributes, compiler, features] and [automated, code, components] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.08,
+        "significance": "Jaccard 8.0%. Shared tokens: [platform]. DCWF-only: [attributes, compiler, features, make, specific, use]. WIDAI-only: [automated, code, components, configuring, control, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

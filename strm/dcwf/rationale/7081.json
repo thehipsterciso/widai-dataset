@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "7081",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "7081",
+  "focal_document_element_description": "Knowledge of vulnerabilities of various encryption systems.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-K-012",
+  "reference_document_element_description": "Knowledge of LLM-specific security vulnerabilities, including the OWASP Top 10 for LLM Applications (prompt injection, insecure output handling, training data poisoning, model theft, excessive agency).",
+  "comments": "DCWF ksa intersects with WIDAI SP domain. SP-K-012 is the strongest semantic match. Secondary: DA-K-012 (DA, cosine: 0.525), SP-K-001 (SP, cosine: 0.495).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4208,
+      "mapped_strength_0_10": 4.2,
+      "final_strength_integer": 4,
+      "significance": "STS 4.2/10 (raw 0.421). Shared vocabulary: [knowledge, vulnerabilities]. DCWF-only terms [encryption, systems, various] vs WIDAI-only terms [10, agency, applications, data, excessive, handling] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9143,
+        "recall": 0.8339,
+        "f1": 0.8723,
+        "significance": "BERTScore F1=0.872 (P=0.914, R=0.834). P exceeds R by 0.080 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 25 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.3747,
+        "entailment": 0.0001,
+        "neutral": 0.6253,
+        "significance": "NLI: mixed signal (E:0.0%, N:62.5%, C:37.5%). No dominant classification for \"Knowledge of vulnerabilities of various encryption systems.\" vs \"Knowledge of LLM-specific security vulnerabilities, including the OWASP Top 10 f\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5264,
+        "significance": "Bi-encoder 0.526 > STS 0.421 (gap +0.106). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, vulnerabilities] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1071,
+        "significance": "Jaccard 10.7%. Shared tokens: [knowledge, vulnerabilities]. DCWF-only: [encryption, systems, various]. WIDAI-only: [10, agency, applications, data, excessive, handling]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

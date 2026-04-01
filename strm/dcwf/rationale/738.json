@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "738",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "738",
+  "focal_document_element_description": "Perform analysis of log files from a variety of sources (e.g., individual host logs, network traffic logs, firewall logs, and intrusion detection system [IDS] logs) to identify possible threats to network security.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-T-001",
+  "reference_document_element_description": "Implement AI application security controls, including prompt injection defenses, output filtering, access controls, and audit logging.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-T-001 is the strongest semantic match. Secondary: TF-S-012 (TF, cosine: 0.502), TF-A-002 (TF, cosine: 0.493).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4365,
+      "mapped_strength_0_10": 4.4,
+      "final_strength_integer": 4,
+      "significance": "STS 4.4/10 (raw 0.436). Shared vocabulary: [security]. DCWF-only terms [analysis, detection, files, firewall, host, identify] vs WIDAI-only terms [access, ai, application, audit, controls, defenses] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8622,
+        "recall": 0.8749,
+        "f1": 0.8685,
+        "significance": "BERTScore F1=0.869 (P=0.862, R=0.875). Balanced P/R \u2014 the 32-word DCWF element and 16-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.8628,
+        "entailment": 0.0007,
+        "neutral": 0.1365,
+        "significance": "NLI: contradiction-dominant (86.3%). Despite 'Intersects with' classification, the model detects semantic tension between \"Perform analysis of log files from a variety of sources (e.g., individual host l\" and \"Implement AI application security controls, including prompt injection defenses,\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5301,
+        "significance": "Bi-encoder 0.530 > STS 0.436 (gap +0.094). Independent encoding finds more similarity than cross-attention. Shared surface terms [security] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.05,
+        "significance": "Jaccard 5.0%. Shared tokens: [security]. DCWF-only: [analysis, detection, files, firewall, host, identify]. WIDAI-only: [access, ai, application, audit, controls, defenses]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

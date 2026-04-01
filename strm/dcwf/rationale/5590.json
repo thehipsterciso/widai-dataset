@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5590",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5590",
+  "focal_document_element_description": "Review and apply cyber career field qualification standards.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DQ-K-002",
+  "reference_document_element_description": "Knowledge of electronic data capture systems and clinical data management platforms, including database design, edit check programming, query management workflows, and the validation requirements for 21 CFR Part 11 and Annex 11 compliance.",
+  "comments": "DCWF task intersects with WIDAI DQ domain. DQ-K-002 is the strongest semantic match. Secondary: SP-S-001 (SP, cosine: 0.418), SP-S-004 (SP, cosine: 0.410).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.1623,
+      "mapped_strength_0_10": 1.6,
+      "final_strength_integer": 2,
+      "significance": "STS 1.6/10 (raw 0.162). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [apply, career, cyber, field, qualification, review] vs WIDAI-only terms [11, 21, annex, capture, cfr, check] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8634,
+        "recall": 0.8253,
+        "f1": 0.844,
+        "significance": "BERTScore F1=0.844 (P=0.863, R=0.825). P exceeds R by 0.038 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 33 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0009,
+        "entailment": 0.0008,
+        "neutral": 0.9984,
+        "significance": "NLI: neutral-dominant (99.8%). \"Review and apply cyber career field qualification standards.\" and \"Knowledge of electronic data capture systems and clinical data management platfo\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4207,
+        "significance": "Bi-encoder 0.421 > STS 0.162 (gap +0.258). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0286,
+        "significance": "Jaccard 2.9%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [apply, career, cyber, field, qualification, review]. WIDAI terms: [11, 21, annex, capture, cfr, check]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

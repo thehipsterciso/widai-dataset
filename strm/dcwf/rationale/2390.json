@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2390",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2390",
+  "focal_document_element_description": "Evaluate security architectures and designs to determine the adequacy of security design and architecture proposed or provided in response to requirements contained in acquisition documents.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-A-002",
+  "reference_document_element_description": "Ability to design security and privacy architectures that enable data utility and AI innovation while maintaining protection levels appropriate to the data sensitivity and regulatory context.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-A-002 is the strongest semantic match. Secondary: SP-S-008 (SP, cosine: 0.494), SP-K-005 (SP, cosine: 0.481).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6394,
+      "mapped_strength_0_10": 6.4,
+      "final_strength_integer": 6,
+      "significance": "STS 6.4/10 (raw 0.639). Shared vocabulary: [architectures, design, security]. DCWF-only terms [acquisition, adequacy, architecture, contained, designs, determine] vs WIDAI-only terms [ability, ai, appropriate, context, data, enable] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8675,
+        "recall": 0.8557,
+        "f1": 0.8616,
+        "significance": "BERTScore F1=0.862 (P=0.868, R=0.856). Balanced P/R \u2014 the 25-word DCWF element and 26-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0051,
+        "neutral": 0.9945,
+        "significance": "NLI: neutral-dominant (99.5%). \"Evaluate security architectures and designs to determine the adequacy of securit\" and \"Ability to design security and privacy architectures that enable data utility an\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5296,
+        "significance": "Bi-encoder 0.530 < STS 0.639 (gap -0.110). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [acquisition, adequacy, architecture] and [ability, ai, appropriate] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1622,
+        "significance": "Jaccard 16.2%. Shared tokens: [architectures, design, security]. DCWF-only: [acquisition, adequacy, architecture, contained, designs, determine]. WIDAI-only: [ability, ai, appropriate, context, data, enable]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

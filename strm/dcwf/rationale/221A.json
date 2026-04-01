@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "221A",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "221A",
+  "focal_document_element_description": "Skill in configuring and validating network workstations and peripherals in accordance with approved standards and/or specifications.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-S-011",
+  "reference_document_element_description": "Skill in writing technical documentation for data systems, including architecture diagrams, API specifications, operational runbooks, data dictionaries, and troubleshooting guides that enable team independence.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-S-011 is the strongest semantic match. Secondary: DA-S-002 (DA, cosine: 0.500), RC-S-010 (RC, cosine: 0.491).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4079,
+      "mapped_strength_0_10": 4.1,
+      "final_strength_integer": 4,
+      "significance": "STS 4.1/10 (raw 0.408). Shared vocabulary: [skill, specifications]. DCWF-only terms [accordance, approved, configuring, network, peripherals, standards] vs WIDAI-only terms [api, architecture, data, diagrams, dictionaries, documentation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8638,
+        "recall": 0.8603,
+        "f1": 0.862,
+        "significance": "BERTScore F1=0.862 (P=0.864, R=0.860). Balanced P/R \u2014 the 16-word DCWF element and 24-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0353,
+        "entailment": 0.0002,
+        "neutral": 0.9646,
+        "significance": "NLI: neutral-dominant (96.5%). \"Skill in configuring and validating network workstations and peripherals in acco\" and \"Skill in writing technical documentation for data systems, including architectur\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5159,
+        "significance": "Bi-encoder 0.516 > STS 0.408 (gap +0.108). Independent encoding finds more similarity than cross-attention. Shared surface terms [skill, specifications] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1212,
+        "significance": "Jaccard 12.1%. Shared tokens: [skill, specifications]. DCWF-only: [accordance, approved, configuring, network, peripherals, standards]. WIDAI-only: [api, architecture, data, diagrams, dictionaries, documentation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

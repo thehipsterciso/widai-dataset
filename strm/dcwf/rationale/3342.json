@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3342",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3342",
+  "focal_document_element_description": "Knowledge of intelligence support to planning, execution, and assessment.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AG-K-004",
+  "reference_document_element_description": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+  "comments": "DCWF ksa superset of WIDAI AG domain. AG-K-004 is the strongest semantic match. Secondary: AG-S-005 (AG, cosine: 0.555), LS-S-009 (LS, cosine: 0.555).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6168,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.617). Shared vocabulary: [assessment, knowledge]. DCWF-only terms [execution, intelligence, planning, support] vs WIDAI-only terms [ai, explainability, fairness, human, impact, methodologies] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9049,
+        "recall": 0.8531,
+        "f1": 0.8782,
+        "significance": "BERTScore F1=0.878 (P=0.905, R=0.853). P exceeds R by 0.052 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0004,
+        "neutral": 0.9995,
+        "significance": "NLI: neutral-dominant (100.0%). \"Knowledge of intelligence support to planning, execution, and assessment.\" and \"Knowledge of responsible AI principles and their operationalization, including f\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5845,
+        "significance": "Bi-encoder 0.585 \u2248 STS 0.617 (gap 0.032). Independent encoding and cross-attention agree. Shared terms [assessment, knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1667,
+        "significance": "Jaccard 16.7%. Shared tokens: [assessment, knowledge]. DCWF-only: [execution, intelligence, planning, support]. WIDAI-only: [ai, explainability, fairness, human, impact, methodologies]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

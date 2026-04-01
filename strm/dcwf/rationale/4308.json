@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4308",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4308",
+  "focal_document_element_description": "Ability to operate automated systems to interact with target environment",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RM-T-003",
+  "reference_document_element_description": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+  "comments": "DCWF ksa intersects with WIDAI RM domain. RM-T-003 is the strongest semantic match. Secondary: TF-A-001 (TF, cosine: 0.473), AI-K-010 (AI, cosine: 0.466).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4572,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.457). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [ability, automated, environment, interact, operate, systems] vs WIDAI-only terms [ai, deployment, design, documented, evaluation, execute] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8609,
+        "recall": 0.8472,
+        "f1": 0.854,
+        "significance": "BERTScore F1=0.854 (P=0.861, R=0.847). Balanced P/R \u2014 the 10-word DCWF element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0009,
+        "neutral": 0.9988,
+        "significance": "NLI: neutral-dominant (99.9%). \"Ability to operate automated systems to interact with target environment\" and \"Design and execute AI system test and evaluation programs, producing documented\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4915,
+        "significance": "Bi-encoder 0.491 \u2248 STS 0.457 (gap 0.034). Independent encoding and cross-attention agree. Shared terms [none] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0,
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [ability, automated, environment, interact, operate, systems]. WIDAI terms: [ai, deployment, design, documented, evaluation, execute]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

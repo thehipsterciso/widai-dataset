@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "492B",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "492B",
+  "focal_document_element_description": "Design and integrate an AI adoption strategy that supports the organization's vision, mission, and goals.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "OP-T-005",
+  "reference_document_element_description": "Manage the data and AI adoption program, including stakeholder engagement plans, adoption milestone tracking, barrier identification, and intervention deployment.",
+  "comments": "DCWF task equal WIDAI OP domain. OP-T-005 is the strongest semantic match. Secondary: TF-A-003 (TF, cosine: 0.645), AI-T-018 (AI, cosine: 0.644).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5651,
+      "mapped_strength_0_10": 5.7,
+      "final_strength_integer": 6,
+      "significance": "STS 5.7/10 (raw 0.565). Shared vocabulary: [adoption, ai]. DCWF-only terms [design, goals, integrate, mission, organization, s] vs WIDAI-only terms [barrier, data, deployment, engagement, identification, intervention] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9033,
+        "recall": 0.8863,
+        "f1": 0.8947,
+        "significance": "BERTScore F1=0.895 (P=0.903, R=0.886). Balanced P/R \u2014 the 15-word DCWF element and 19-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0012,
+        "neutral": 0.9987,
+        "significance": "NLI: neutral-dominant (99.9%). \"Design and integrate an AI adoption strategy that supports the organization's vi\" and \"Manage the data and AI adoption program, including stakeholder engagement plans,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7191,
+        "significance": "Bi-encoder 0.719 > STS 0.565 (gap +0.154). Independent encoding finds more similarity than cross-attention. Shared surface terms [adoption, ai] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1429,
+        "significance": "Jaccard 14.3%. Shared tokens: [adoption, ai]. DCWF-only: [design, goals, integrate, mission, organization, s]. WIDAI-only: [barrier, data, deployment, engagement, identification, intervention]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

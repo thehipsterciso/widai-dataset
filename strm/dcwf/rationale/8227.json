@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8227",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8227",
+  "focal_document_element_description": "Conduct shaping activities in order to scope and execute red team operations.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-T-003",
+  "reference_document_element_description": "Build and lead cross-functional transformation teams, establishing shared objectives, working norms, and accountability structures across organizational boundaries.",
+  "comments": "DCWF task intersects with WIDAI LS domain. LS-T-003 is the strongest semantic match. Secondary: OP-A-002 (OP, cosine: 0.462), RC-T-008 (RC, cosine: 0.448).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4631,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.463). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [activities, conduct, execute, operations, order, red] vs WIDAI-only terms [accountability, across, boundaries, build, cross, establishing] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8781,
+        "recall": 0.8649,
+        "f1": 0.8715,
+        "significance": "BERTScore F1=0.872 (P=0.878, R=0.865). Balanced P/R \u2014 the 12-word DCWF element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0017,
+        "entailment": 0.0025,
+        "neutral": 0.9959,
+        "significance": "NLI: neutral-dominant (99.6%). \"Conduct shaping activities in order to scope and execute red team operations.\" and \"Build and lead cross-functional transformation teams, establishing shared object\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5199,
+        "significance": "Bi-encoder 0.520 > STS 0.463 (gap +0.057). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0357,
+        "significance": "Jaccard 3.6%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [activities, conduct, execute, operations, order, red]. WIDAI terms: [accountability, across, boundaries, build, cross, establishing]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -3,6 +3,39 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.5.5] - 2026-04-01
+
+### Phase 1C: STRM-003 — DoD Cyber Workforce Framework (DCWF) v5.1 (ADR-017)
+
+**Third STRM complete** — DoD DCWF v5.1 mapped against WIDAI KSA Pool v0.5.2. Highest match rate of any framework to date.
+
+**Why:** DCWF is the US federal government's authoritative cyber workforce framework — and the only Tier 1 framework with a dedicated Data/AI workforce element containing 11 work roles. At 2,945 KSAT elements across 75 work roles in 7 workforce elements (IT, Cybersecurity, Cyber Effects, Intelligence, Enablers, Software Engineering, Data/AI), this STRM validates WIDAI against the framework most likely to define federal data/AI workforce requirements.
+
+**What changed:**
+- 2,945 DCWF KSAT elements (1,277 tasks, 1,668 KSAs) evaluated exhaustively
+- Relationship distribution: 1,836 Intersects with (62.3%), 990 Superset of (33.6%), 109 Equal (3.7%), 10 No relationship (0.3%)
+- 99.7% match rate — highest of any STRM. Only 10 elements (all tactical military/forensic operations) classified as No relationship
+- Mean strength (scored only): 4.79/10 — between STRM-001 (4.18, general-purpose) and STRM-002 (5.12, cybersecurity-specific), reflecting DCWF's mixed domain composition
+- 4 gap signals identified: data/AI incident response (moderate, corroborates NICE-GAP-002), workforce planning/organizational design (moderate, partial corroboration of ONET-GAP-004), supply chain integrity (low, corroborates NICE-GAP-005), test and evaluation methodology (low, new)
+- 3 of 4 gap signals corroborate existing gaps — cross-framework evidence accumulation continues
+- DCWF Data/AI workforce element validates WIDAI's core domain model with consistent 5–8 strength range
+- QA/QC: PASS on all 7 criteria
+
+**Scoring methodology — identical to STRM-001-ONET and STRM-002-NICE:**
+- Bi-encoder candidate identification (2,945 × 497 = 1.46M pairs) via all-MiniLM-L6-v2 to establish DCWF→WIDAI pairings
+- Full multi-method scoring pipeline (STS primary + 4 secondary) for all 2,935 scored pairs — same models, same rigor
+- 2,945 per-FDE rationale files with content-specific significance: shared vocabulary, unique terms per side, concept-level analysis
+- Every significance field references actual text content — no templated or score-derived language
+
+**WIDAI domain coverage from DCWF:**
+- TF (Technical Foundations): 463 mappings — highest, confirming technical overlap
+- SP (Security & Privacy): 443 | OP (Operations): 282 | AI: 272
+- LS: 245 | DA: 232 | RC: 208 | RM: 200 | DQ: 198 | AB: 186 | DG: 130 | AG: 76
+
+**New files:** `sources/dcwf/` (DCWF Work Role Tool v5.1, extracted elements, citation, candidate screening), `strm/dcwf/use_case.json`, `strm/dcwf/strm_mapping.json`, `strm/dcwf/strm_scoring_pipeline.py`, `strm/dcwf/scoring_summary.json`, `strm/dcwf/qa_qc_report.json`, `strm/dcwf/rationale/*.json` (2,945 files), `strm/issues/STRM-003-DCWF-gaps.json`
+
+**New ADRs:** ADR-017 (STRM — DoD DCWF v5.1)
+
 ## [0.5.4] - 2026-04-01
 
 ### Phase 1C: STRM-002 — NIST NICE Framework v2.1.0 (ADR-016)

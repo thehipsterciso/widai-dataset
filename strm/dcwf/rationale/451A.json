@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "451A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "451A",
+  "focal_document_element_description": "Conduct framing of pleadings to properly identify alleged violations of law, regulations, or policy/guidance.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-S-002",
+  "reference_document_element_description": "Skill in interpreting regulatory text, supervisory guidance, and enforcement decisions, translating legal requirements into operational controls and measurable organizational obligations.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-S-002 is the strongest semantic match. Secondary: RC-S-006 (RC, cosine: 0.459), RC-S-005 (RC, cosine: 0.458).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4385,
+      "mapped_strength_0_10": 4.4,
+      "final_strength_integer": 4,
+      "significance": "STS 4.4/10 (raw 0.439). Shared vocabulary: [guidance]. DCWF-only terms [alleged, conduct, framing, identify, law, pleadings] vs WIDAI-only terms [controls, decisions, enforcement, interpreting, legal, measurable] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.859,
+        "recall": 0.864,
+        "f1": 0.8615,
+        "significance": "BERTScore F1=0.862 (P=0.859, R=0.864). Balanced P/R \u2014 the 14-word DCWF element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0045,
+        "entailment": 0.026,
+        "neutral": 0.9695,
+        "significance": "NLI: neutral-dominant (97.0%). \"Conduct framing of pleadings to properly identify alleged violations of law, reg\" and \"Skill in interpreting regulatory text, supervisory guidance, and enforcement dec\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4875,
+        "significance": "Bi-encoder 0.487 \u2248 STS 0.439 (gap 0.049). Independent encoding and cross-attention agree. Shared terms [guidance] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0312,
+        "significance": "Jaccard 3.1%. Shared tokens: [guidance]. DCWF-only: [alleged, conduct, framing, identify, law, pleadings]. WIDAI-only: [controls, decisions, enforcement, interpreting, legal, measurable]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

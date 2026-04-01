@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2549",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2549",
+  "focal_document_element_description": "Maintain incident tracking and solution database.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-T-006",
+  "reference_document_element_description": "Maintain Records of Processing Activities, including processing purposes, data categories, recipient categories, transfer records, retention periods, and technical and organizational security measures descriptions.",
+  "comments": "DCWF task superset of WIDAI RC domain. RC-T-006 is the strongest semantic match. Secondary: RC-T-005 (RC, cosine: 0.546), DQ-T-016 (DQ, cosine: 0.525).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3697,
+      "mapped_strength_0_10": 3.7,
+      "final_strength_integer": 4,
+      "significance": "STS 3.7/10 (raw 0.370). Shared vocabulary: [maintain]. DCWF-only terms [database, incident, solution, tracking] vs WIDAI-only terms [activities, categories, data, descriptions, measures, organizational] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8955,
+        "recall": 0.851,
+        "f1": 0.8727,
+        "significance": "BERTScore F1=0.873 (P=0.895, R=0.851). P exceeds R by 0.044 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0101,
+        "entailment": 0.0048,
+        "neutral": 0.9851,
+        "significance": "NLI: neutral-dominant (98.5%). \"Maintain incident tracking and solution database.\" and \"Maintain Records of Processing Activities, including processing purposes, data c\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5559,
+        "significance": "Bi-encoder 0.556 > STS 0.370 (gap +0.186). Independent encoding finds more similarity than cross-attention. Shared surface terms [maintain] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.087,
+        "significance": "Jaccard 8.7%. Shared tokens: [maintain]. DCWF-only: [database, incident, solution, tracking]. WIDAI-only: [activities, categories, data, descriptions, measures, organizational]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

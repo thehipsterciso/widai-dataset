@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2905",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2905",
+  "focal_document_element_description": "Identify target communications within the global network.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-K-013",
+  "reference_document_element_description": "Knowledge of networking fundamentals relevant to data systems, including TCP/IP, DNS resolution, HTTP/HTTPS protocols, firewall and security group configurations, load balancing, and how network architecture affects data pipeline design and performance.",
+  "comments": "DCWF task intersects with WIDAI TF domain. TF-K-013 is the strongest semantic match. Secondary: DA-T-009 (DA, cosine: 0.323), AI-K-007 (AI, cosine: 0.300).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4333,
+      "mapped_strength_0_10": 4.3,
+      "final_strength_integer": 4,
+      "significance": "STS 4.3/10 (raw 0.433). Shared vocabulary: [network]. DCWF-only terms [communications, global, identify, target, within] vs WIDAI-only terms [affects, architecture, balancing, configurations, data, design] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8897,
+        "recall": 0.8259,
+        "f1": 0.8566,
+        "significance": "BERTScore F1=0.857 (P=0.890, R=0.826). P exceeds R by 0.064 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 31 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0011,
+        "entailment": 0.014,
+        "neutral": 0.9849,
+        "significance": "NLI: neutral-dominant (98.5%). \"Identify target communications within the global network.\" and \"Knowledge of networking fundamentals relevant to data systems, including TCP/IP,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.3547,
+        "significance": "Bi-encoder 0.355 < STS 0.433 (gap -0.079). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [communications, global, identify] and [affects, architecture, balancing] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0278,
+        "significance": "Jaccard 2.8%. Shared tokens: [network]. DCWF-only: [communications, global, identify, target, within]. WIDAI-only: [affects, architecture, balancing, configurations, data, design]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

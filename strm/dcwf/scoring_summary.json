@@ -1,0 +1,87 @@
+{
+  "pipeline_run_date": "2026-04-01",
+  "strm_id": "STRM-003-DCWF",
+  "framework": "DCWF v5.1",
+  "methodology": {
+    "primary": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "role": "Generates strength_of_relationship integer (0-10)",
+      "mapping": "raw_score (0-1) \u00d7 10, rounded to nearest integer"
+    },
+    "secondary": [
+      {
+        "name": "BERTScore",
+        "model": "roberta-large",
+        "role": "Token-level audit trail"
+      },
+      {
+        "name": "NLI Cross-Encoder",
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "role": "Directional implication classification"
+      },
+      {
+        "name": "Bi-Encoder Cosine",
+        "model": "all-MiniLM-L6-v2",
+        "role": "Independent embedding cosine similarity"
+      },
+      {
+        "name": "Jaccard Token",
+        "model": null,
+        "role": "Lexical baseline"
+      }
+    ]
+  },
+  "statistics": {
+    "total_mappings": 2945,
+    "scored_mappings": 2935,
+    "no_relationship_mappings": 10,
+    "strength_distribution": {
+      "all": {
+        "mean": 4.77,
+        "median": 5.0,
+        "std": 1.37,
+        "min": 0.0,
+        "max": 8.0
+      },
+      "scored_only": {
+        "mean": 4.79,
+        "median": 5.0,
+        "std": 1.31,
+        "min": 0.9,
+        "max": 7.6
+      },
+      "by_relationship_type": {
+        "Equal": {
+          "count": 109,
+          "mean": 6.17,
+          "median": 6.3,
+          "min": 4.8,
+          "max": 7.6
+        },
+        "Intersects with": {
+          "count": 1836,
+          "mean": 4.32,
+          "median": 4.4,
+          "min": 0.9,
+          "max": 7.4
+        },
+        "No relationship": {
+          "count": 10,
+          "mean": 0,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "Superset of": {
+          "count": 990,
+          "mean": 5.51,
+          "median": 5.7,
+          "min": 2.1,
+          "max": 7.6
+        }
+      }
+    },
+    "rationale_files_generated": 2945
+  }
+}

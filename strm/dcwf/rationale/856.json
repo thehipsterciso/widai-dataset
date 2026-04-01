@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "856",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "856",
+  "focal_document_element_description": "Provide support to security/certification test and evaluation activities.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-A-005",
+  "reference_document_element_description": "Ability to evaluate the regulatory implications of proposed data processing activities, AI system deployments, or business model changes, providing compliance risk assessment before implementation.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-A-005 is the strongest semantic match. Secondary: SP-S-003 (SP, cosine: 0.527), RC-S-006 (RC, cosine: 0.517).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5044,
+      "mapped_strength_0_10": 5.0,
+      "final_strength_integer": 5,
+      "significance": "STS 5.0/10 (raw 0.504). Shared vocabulary: [activities]. DCWF-only terms [certification, evaluation, provide, security, support, test] vs WIDAI-only terms [ability, ai, assessment, business, changes, compliance] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8756,
+        "recall": 0.8646,
+        "f1": 0.8701,
+        "significance": "BERTScore F1=0.870 (P=0.876, R=0.865). Balanced P/R \u2014 the 8-word DCWF element and 24-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0022,
+        "neutral": 0.9977,
+        "significance": "NLI: neutral-dominant (99.8%). \"Provide support to security/certification test and evaluation activities.\" and \"Ability to evaluate the regulatory implications of proposed data processing acti\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5275,
+        "significance": "Bi-encoder 0.527 \u2248 STS 0.504 (gap 0.023). Independent encoding and cross-attention agree. Shared terms [activities] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0645,
+        "significance": "Jaccard 6.5%. Shared tokens: [activities]. DCWF-only: [certification, evaluation, provide, security, support, test]. WIDAI-only: [ability, ai, assessment, business, changes, compliance]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

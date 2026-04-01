@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5580",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5580",
+  "focal_document_element_description": "Provide criminal investigative support to trial counsel during the judicial process.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-011",
+  "reference_document_element_description": "Coordinate regulatory examination responses, including information request fulfillment, examiner access management, findings response preparation, and corrective action plan development.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-T-011 is the strongest semantic match. Secondary: RC-S-006 (RC, cosine: 0.381), SP-T-007 (SP, cosine: 0.381).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.1632,
+      "mapped_strength_0_10": 1.6,
+      "final_strength_integer": 2,
+      "significance": "STS 1.6/10 (raw 0.163). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [counsel, criminal, investigative, judicial, process, provide] vs WIDAI-only terms [access, action, coordinate, corrective, development, examination] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.882,
+        "recall": 0.8517,
+        "f1": 0.8666,
+        "significance": "BERTScore F1=0.867 (P=0.882, R=0.852). P exceeds R by 0.030 \u2014 the DCWF element's 11 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9999,
+        "entailment": 0.0,
+        "neutral": 0.0001,
+        "significance": "NLI: contradiction-dominant (100.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Provide criminal investigative support to trial counsel during the judicial proc\" and \"Coordinate regulatory examination responses, including information request fulfi\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.3863,
+        "significance": "Bi-encoder 0.386 > STS 0.163 (gap +0.223). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0,
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [counsel, criminal, investigative, judicial, process, provide]. WIDAI terms: [access, action, coordinate, corrective, development, examination]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

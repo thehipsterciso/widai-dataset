@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6150",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6150",
+  "focal_document_element_description": "Ability to optimize systems to meet enterprise performance requirements.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-A-002",
+  "reference_document_element_description": "Ability to design operational processes that scale with organizational growth, maintaining service quality as data volume, consumer count, and pipeline complexity increase.",
+  "comments": "DCWF ksa intersects with WIDAI OP domain. OP-A-002 is the strongest semantic match. Secondary: LS-T-005 (LS, cosine: 0.513), LS-A-005 (LS, cosine: 0.512).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5413,
+      "mapped_strength_0_10": 5.4,
+      "final_strength_integer": 5,
+      "significance": "STS 5.4/10 (raw 0.541). Shared vocabulary: [ability]. DCWF-only terms [enterprise, meet, optimize, performance, requirements, systems] vs WIDAI-only terms [complexity, consumer, count, data, design, growth] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9232,
+        "recall": 0.8737,
+        "f1": 0.8978,
+        "significance": "BERTScore F1=0.898 (P=0.923, R=0.874). P exceeds R by 0.049 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0033,
+        "entailment": 0.0046,
+        "neutral": 0.9921,
+        "significance": "NLI: neutral-dominant (99.2%). \"Ability to optimize systems to meet enterprise performance requirements.\" and \"Ability to design operational processes that scale with organizational growth, m\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5467,
+        "significance": "Bi-encoder 0.547 \u2248 STS 0.541 (gap 0.005). Independent encoding and cross-attention agree. Shared terms [ability] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0714,
+        "significance": "Jaccard 7.1%. Shared tokens: [ability]. DCWF-only: [enterprise, meet, optimize, performance, requirements, systems]. WIDAI-only: [complexity, consumer, count, data, design, growth]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

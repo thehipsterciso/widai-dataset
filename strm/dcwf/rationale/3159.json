@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3159",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3159",
+  "focal_document_element_description": "Knowledge of cyber operations support or enabling processes.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-K-017",
+  "reference_document_element_description": "Knowledge of MLOps principles and practices, including CI/CD for ML, automated retraining pipelines, model versioning, A/B testing infrastructure, and canary deployment patterns.",
+  "comments": "DCWF ksa intersects with WIDAI AI domain. AI-K-017 is the strongest semantic match. Secondary: OP-K-007 (OP, cosine: 0.500), AG-K-006 (AG, cosine: 0.493).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5034,
+      "mapped_strength_0_10": 5.0,
+      "final_strength_integer": 5,
+      "significance": "STS 5.0/10 (raw 0.503). Shared vocabulary: [knowledge]. DCWF-only terms [cyber, enabling, operations, processes, support] vs WIDAI-only terms [automated, b, canary, cd, ci, deployment] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.882,
+        "recall": 0.8302,
+        "f1": 0.8553,
+        "significance": "BERTScore F1=0.855 (P=0.882, R=0.830). P exceeds R by 0.052 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9615,
+        "entailment": 0.0016,
+        "neutral": 0.0369,
+        "significance": "NLI: contradiction-dominant (96.2%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of cyber operations support or enabling processes.\" and \"Knowledge of MLOps principles and practices, including CI/CD for ML, automated r\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5147,
+        "significance": "Bi-encoder 0.515 \u2248 STS 0.503 (gap 0.011). Independent encoding and cross-attention agree. Shared terms [knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.069,
+        "significance": "Jaccard 6.9%. Shared tokens: [knowledge]. DCWF-only: [cyber, enabling, operations, processes, support]. WIDAI-only: [automated, b, canary, cd, ci, deployment]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3971",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3971",
+  "focal_document_element_description": "Skill to apply analytical standards to evaluate intelligence products.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-S-003",
+  "reference_document_element_description": "Skill in designing and executing complex analytical projects independently, including scoping, methodology selection, execution, and executive-level communication of findings.",
+  "comments": "DCWF ksa superset of WIDAI AB domain. AB-S-003 is the strongest semantic match. Secondary: LS-S-006 (LS, cosine: 0.566), RC-S-008 (RC, cosine: 0.562).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5393,
+      "mapped_strength_0_10": 5.4,
+      "final_strength_integer": 5,
+      "significance": "STS 5.4/10 (raw 0.539). Shared vocabulary: [analytical, skill]. DCWF-only terms [apply, evaluate, intelligence, products, standards] vs WIDAI-only terms [communication, complex, designing, executing, execution, executive] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9043,
+        "recall": 0.8555,
+        "f1": 0.8792,
+        "significance": "BERTScore F1=0.879 (P=0.904, R=0.856). P exceeds R by 0.049 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0042,
+        "entailment": 0.0004,
+        "neutral": 0.9955,
+        "significance": "NLI: neutral-dominant (99.6%). \"Skill to apply analytical standards to evaluate intelligence products.\" and \"Skill in designing and executing complex analytical projects independently, incl\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5837,
+        "significance": "Bi-encoder 0.584 \u2248 STS 0.539 (gap 0.044). Independent encoding and cross-attention agree. Shared terms [analytical, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.08,
+        "significance": "Jaccard 8.0%. Shared tokens: [analytical, skill]. DCWF-only: [apply, evaluate, intelligence, products, standards]. WIDAI-only: [communication, complex, designing, executing, execution, executive]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

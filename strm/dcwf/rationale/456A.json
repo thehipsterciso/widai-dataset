@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "456A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "456A",
+  "focal_document_element_description": "Conduct periodic system maintenance including cleaning (both physically and electronically), disk checks, routine reboots, data dumps, and testing.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AI-T-021",
+  "reference_document_element_description": "Execute routine data platform maintenance tasks, including storage cleanup, job configuration updates, and operational documentation maintenance.",
+  "comments": "DCWF task superset of WIDAI AI domain. AI-T-021 is the strongest semantic match. Secondary: TF-A-002 (TF, cosine: 0.522), OP-T-007 (OP, cosine: 0.494).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6486,
+      "mapped_strength_0_10": 6.5,
+      "final_strength_integer": 6,
+      "significance": "STS 6.5/10 (raw 0.649). Shared vocabulary: [data, maintenance, routine]. DCWF-only terms [checks, cleaning, conduct, disk, dumps, electronically] vs WIDAI-only terms [cleanup, configuration, documentation, execute, job, operational] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8947,
+        "recall": 0.904,
+        "f1": 0.8993,
+        "significance": "BERTScore F1=0.899 (P=0.895, R=0.904). Balanced P/R \u2014 the 18-word DCWF element and 16-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0031,
+        "neutral": 0.9968,
+        "significance": "NLI: neutral-dominant (99.7%). \"Conduct periodic system maintenance including cleaning (both physically and elec\" and \"Execute routine data platform maintenance tasks, including storage cleanup, job\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6473,
+        "significance": "Bi-encoder 0.647 \u2248 STS 0.649 (gap 0.001). Independent encoding and cross-attention agree. Shared terms [data, maintenance, routine] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1852,
+        "significance": "Jaccard 18.5%. Shared tokens: [data, maintenance, routine]. DCWF-only: [checks, cleaning, conduct, disk, dumps, electronically]. WIDAI-only: [cleanup, configuration, documentation, execute, job, operational]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

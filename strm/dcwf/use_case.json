@@ -1,0 +1,64 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "framework_id": "DCWF",
+  "framework_version": "5.1",
+  "framework_date": "2025-07-25",
+  "framework_source": "DoD Cyber Workforce Framework Work Role Tool v5.1",
+  "widai_ksa_pool_version": "0.5.2",
+  "widai_ksa_pool_size": 497,
+  "execution_date": "2026-04-01",
+  "priority": 3,
+  "tier": 1,
+  "use_case_per_ir8477_section3": {
+    "target_audience": "WIDAI framework developers, DoD workforce planners, PE operating partners evaluating organizations with federal/defense data and AI programs, and CDAIOs building workforce competency programs aligned with DoD requirements.",
+    "why_this_mapping": "DCWF is the US federal government's authoritative cyber workforce framework with a dedicated Data/AI workforce element containing 11 work roles. It directly overlaps with WIDAI's scope — both frameworks define data, AI, and governance workforce competencies. This STRM validates WIDAI against the framework most likely to be cited in federal data/AI workforce requirements and identifies where DoD-specific competencies extend beyond WIDAI's current coverage.",
+    "concept_types_mapped": {
+      "focal_document": {
+        "source": "DCWF Work Role Tool v5.1",
+        "concept_types": [
+          "Task statements — 1,277 elements",
+          "KSA statements (Knowledge, Skills, Abilities combined) — 1,668 elements"
+        ],
+        "total_fdes_in_scope": 2945,
+        "total_fdes_excluded": 0,
+        "exclusion_rationale": "No elements excluded. All 2,945 KSAT elements evaluated. DCWF spans cybersecurity, IT, intelligence, cyber effects, enablers, software engineering, and Data/AI. Elements outside WIDAI scope produce 'No relationship' results documenting the boundary."
+      },
+      "reference_document": {
+        "source": "WIDAI KSA Pool v0.5.2",
+        "concept_types": [
+          "Knowledge (K) — domain-organized",
+          "Skills (S) — domain-organized",
+          "Tasks (T) — domain-organized",
+          "Abilities (A) — domain-organized"
+        ],
+        "total_reference_elements": 497,
+        "domains": 12
+      },
+      "structural_note": "DCWF uses KSAT (Knowledge, Skills, Abilities, Tasks) building blocks derived from NICE Framework. The DCWF Work Role Tool v5.1 combines K, S, and A into a single 'KSA' type with Tasks separate. WIDAI uses KSA with distinct type labels. This structural difference is cosmetic — the mapping evaluates semantic content regardless of element type labels."
+    },
+    "direction_of_mapping": "Focal → Reference. Each DCWF KSAT element (focal) is evaluated against the WIDAI KSA pool (reference). A DCWF element with 'No relationship' to any WIDAI KSA indicates either (a) a tactical cybersecurity/intelligence competency outside WIDAI scope, or (b) a potential gap in WIDAI coverage.",
+    "exhaustiveness_level": "Exhaustive. Every DCWF KSAT element (2,945) is evaluated. For each element, the most semantically relevant WIDAI KSA is identified via bi-encoder candidate identification, then scored through the full multi-method pipeline (identical to STRM-001-ONET and STRM-002-NICE).",
+    "rationale_type": "Semantic (primary). DCWF and WIDAI share significant vocabulary overlap — both define data, AI, governance, and management competencies. Semantic rationale evaluates whether concepts describe the same or overlapping competencies.",
+    "rationale_justification": "DCWF is a federal cyber workforce framework that includes a Data/AI workforce element. WIDAI is a data and AI workforce framework. The domain overlap is substantial — both frameworks define competencies for data officers, data architects, data stewards, AI specialists, and risk/ethics practitioners. Semantic rationale captures both the direct overlap and the boundary where DCWF extends into cybersecurity-specific territory."
+  },
+  "scope_decisions": {
+    "all_ksat_in_scope": true,
+    "note": "All 2,945 KSAT elements evaluated without categorical exclusions. The 10 'No relationship' results are analytically valuable — they identify the small number of purely tactical cybersecurity/intelligence elements with zero WIDAI relevance.",
+    "structural_elements_excluded": {
+      "work_roles": "75 work roles are structural containers, not FDEs. Work roles group KSAT elements; the KSAT elements themselves are the mappable concepts.",
+      "workforce_elements": "7 workforce element categories are organizational groupings."
+    }
+  },
+  "fde_count_summary": {
+    "tasks": 1277,
+    "ksas": 1668,
+    "total_in_scope": 2945,
+    "excluded": 0
+  },
+  "candidate_identification": {
+    "description": "Due to the volume of elements (2,945 × 497 = 1.46M potential pairs), bi-encoder embeddings (all-MiniLM-L6-v2) were used to identify the most semantically relevant WIDAI KSA candidate for each DCWF element. This is a preprocessing step for pairing, not a scoring method. Once pairs were established, every mapped pair was scored through the identical multi-method pipeline used in STRM-001-ONET and STRM-002-NICE.",
+    "model": "all-MiniLM-L6-v2",
+    "candidate_data": "sources/dcwf/dcwf_ksat_candidates.json",
+    "note": "Candidate identification determines which WIDAI KSA each DCWF element is paired with. All scoring, classification, and significance generation is performed by the STRM scoring pipeline (strm/dcwf/strm_scoring_pipeline.py), methodologically identical to STRM-001 and STRM-002."
+  }
+}

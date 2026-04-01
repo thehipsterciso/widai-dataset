@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3113",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3113",
+  "focal_document_element_description": "Knowledge of target intelligence gathering and operational preparation techniques and life cycles.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-K-023",
+  "reference_document_element_description": "Knowledge of model deployment strategies, including batch inference, real-time serving, edge deployment, A/B testing, canary releases, and shadow deployments, and the infrastructure requirements and failure modes of each.",
+  "comments": "DCWF ksa intersects with WIDAI AI domain. AI-K-023 is the strongest semantic match. Secondary: DG-K-006 (DG, cosine: 0.493), DG-T-007 (DG, cosine: 0.493).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3688,
+      "mapped_strength_0_10": 3.7,
+      "final_strength_integer": 4,
+      "significance": "STS 3.7/10 (raw 0.369). Shared vocabulary: [knowledge]. DCWF-only terms [cycles, gathering, intelligence, life, operational, preparation] vs WIDAI-only terms [b, batch, canary, deployment, deployments, edge] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8965,
+        "recall": 0.8417,
+        "f1": 0.8682,
+        "significance": "BERTScore F1=0.868 (P=0.896, R=0.842). P exceeds R by 0.055 \u2014 the DCWF element's 12 words are well-captured by the WIDAI KSA's 28 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9537,
+        "entailment": 0.0002,
+        "neutral": 0.0461,
+        "significance": "NLI: contradiction-dominant (95.4%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of target intelligence gathering and operational preparation technique\" and \"Knowledge of model deployment strategies, including batch inference, real-time s\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4957,
+        "significance": "Bi-encoder 0.496 > STS 0.369 (gap +0.127). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0882,
+        "significance": "Jaccard 8.8%. Shared tokens: [knowledge]. DCWF-only: [cycles, gathering, intelligence, life, operational, preparation]. WIDAI-only: [b, batch, canary, deployment, deployments, edge]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

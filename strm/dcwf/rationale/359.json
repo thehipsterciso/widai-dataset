@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "359",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "359",
+  "focal_document_element_description": "Skill in developing and executing technical training programs and curricula.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-S-011",
+  "reference_document_element_description": "Skill in writing technical documentation for data systems, including architecture diagrams, API specifications, operational runbooks, data dictionaries, and troubleshooting guides that enable team independence.",
+  "comments": "DCWF ksa superset of WIDAI TF domain. TF-S-011 is the strongest semantic match. Secondary: LS-S-009 (LS, cosine: 0.544), AB-S-004 (AB, cosine: 0.529).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5492,
+      "mapped_strength_0_10": 5.5,
+      "final_strength_integer": 6,
+      "significance": "STS 5.5/10 (raw 0.549). Shared vocabulary: [skill, technical]. DCWF-only terms [curricula, developing, executing, programs, training] vs WIDAI-only terms [api, architecture, data, diagrams, dictionaries, documentation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9012,
+        "recall": 0.862,
+        "f1": 0.8812,
+        "significance": "BERTScore F1=0.881 (P=0.901, R=0.862). P exceeds R by 0.039 \u2014 the DCWF element's 10 words are well-captured by the WIDAI KSA's 24 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.8694,
+        "entailment": 0.0001,
+        "neutral": 0.1304,
+        "significance": "NLI: contradiction-dominant (86.9%). Despite 'Superset of' classification, the model detects semantic tension between \"Skill in developing and executing technical training programs and curricula.\" and \"Skill in writing technical documentation for data systems, including architectur\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5535,
+        "significance": "Bi-encoder 0.553 \u2248 STS 0.549 (gap 0.004). Independent encoding and cross-attention agree. Shared terms [skill, technical] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1429,
+        "significance": "Jaccard 14.3%. Shared tokens: [skill, technical]. DCWF-only: [curricula, developing, executing, programs, training]. WIDAI-only: [api, architecture, data, diagrams, dictionaries, documentation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2611",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2611",
+  "focal_document_element_description": "Notify designated managers, cyber incident responders, and cybersecurity service provider team members of suspected cyber incidents and articulate the event's history, status, and potential impact for further action in accordance with the organization's cyber incident response plan.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-008",
+  "reference_document_element_description": "Monitor and analyze regulatory developments, enforcement actions, and supervisory authority guidance relevant to organizational data and AI activities, producing impact assessments and recommended responses.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-T-008 is the strongest semantic match. Secondary: SP-T-007 (SP, cosine: 0.444), RC-K-011 (RC, cosine: 0.392).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5437,
+      "mapped_strength_0_10": 5.4,
+      "final_strength_integer": 5,
+      "significance": "STS 5.4/10 (raw 0.544). Shared vocabulary: [impact]. DCWF-only terms [accordance, action, articulate, cyber, cybersecurity, designated] vs WIDAI-only terms [actions, activities, ai, analyze, assessments, authority] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8566,
+        "recall": 0.8644,
+        "f1": 0.8605,
+        "significance": "BERTScore F1=0.861 (P=0.857, R=0.864). Balanced P/R \u2014 the 37-word DCWF element and 24-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.979,
+        "entailment": 0.0001,
+        "neutral": 0.0208,
+        "significance": "NLI: contradiction-dominant (97.9%). Despite 'Intersects with' classification, the model detects semantic tension between \"Notify designated managers, cyber incident responders, and cybersecurity service\" and \"Monitor and analyze regulatory developments, enforcement actions, and supervisor\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4592,
+        "significance": "Bi-encoder 0.459 < STS 0.544 (gap -0.084). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [accordance, action, articulate] and [actions, activities, ai] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0392,
+        "significance": "Jaccard 3.9%. Shared tokens: [impact]. DCWF-only: [accordance, action, articulate, cyber, cybersecurity, designated]. WIDAI-only: [actions, activities, ai, analyze, assessments, authority]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

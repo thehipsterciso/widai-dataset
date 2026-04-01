@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3611",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3611",
+  "focal_document_element_description": "Knowledge of the relationships of operational objectives, intelligence requirements, and intelligence production tasks.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DG-S-002",
+  "reference_document_element_description": "Skill in aligning data and AI program objectives to organizational strategy, translating business priorities into data and AI capability requirements with measurable outcomes.",
+  "comments": "DCWF ksa superset of WIDAI DG domain. DG-S-002 is the strongest semantic match. Secondary: AG-K-004 (AG, cosine: 0.553), LS-K-008 (LS, cosine: 0.553).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6294,
+      "mapped_strength_0_10": 6.3,
+      "final_strength_integer": 6,
+      "significance": "STS 6.3/10 (raw 0.629). Shared vocabulary: [objectives, requirements]. DCWF-only terms [intelligence, knowledge, operational, production, relationships, tasks] vs WIDAI-only terms [ai, aligning, business, capability, data, measurable] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9028,
+        "recall": 0.8734,
+        "f1": 0.8879,
+        "significance": "BERTScore F1=0.888 (P=0.903, R=0.873). P exceeds R by 0.029 \u2014 the DCWF element's 13 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.065,
+        "neutral": 0.9349,
+        "significance": "NLI: neutral-dominant (93.5%). \"Knowledge of the relationships of operational objectives, intelligence requireme\" and \"Skill in aligning data and AI program objectives to organizational strategy, tra\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5949,
+        "significance": "Bi-encoder 0.595 \u2248 STS 0.629 (gap 0.034). Independent encoding and cross-attention agree. Shared terms [objectives, requirements] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1071,
+        "significance": "Jaccard 10.7%. Shared tokens: [objectives, requirements]. DCWF-only: [intelligence, knowledge, operational, production, relationships, tasks]. WIDAI-only: [ai, aligning, business, capability, data, measurable]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

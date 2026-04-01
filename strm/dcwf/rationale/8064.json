@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8064",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8064",
+  "focal_document_element_description": "Develop and lead exercises",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-T-004",
+  "reference_document_element_description": "Lead complex cross-functional analytical projects, coordinating data access, methodology alignment, and stakeholder communication across business units.",
+  "comments": "DCWF task intersects with WIDAI AB domain. AB-T-004 is the strongest semantic match. Secondary: LS-T-003 (LS, cosine: 0.392), LS-T-002 (LS, cosine: 0.392).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4675,
+      "mapped_strength_0_10": 4.7,
+      "final_strength_integer": 5,
+      "significance": "STS 4.7/10 (raw 0.468). Shared vocabulary: [lead]. DCWF-only terms [develop, exercises] vs WIDAI-only terms [access, across, alignment, analytical, business, communication] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8676,
+        "recall": 0.834,
+        "f1": 0.8505,
+        "significance": "BERTScore F1=0.851 (P=0.868, R=0.834). P exceeds R by 0.034 \u2014 the DCWF element's 4 words are well-captured by the WIDAI KSA's 16 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0012,
+        "entailment": 0.0016,
+        "neutral": 0.9972,
+        "significance": "NLI: neutral-dominant (99.7%). \"Develop and lead exercises\" and \"Lead complex cross-functional analytical projects, coordinating data access, met\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4019,
+        "significance": "Bi-encoder 0.402 < STS 0.468 (gap -0.066). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [develop, exercises] and [access, across, alignment] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1053,
+        "significance": "Jaccard 10.5%. Shared tokens: [lead]. DCWF-only: [develop, exercises]. WIDAI-only: [access, across, alignment, analytical, business, communication]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

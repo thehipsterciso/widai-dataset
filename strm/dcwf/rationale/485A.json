@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "485A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "485A",
+  "focal_document_element_description": "Define and integrate current and future mission environments.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-T-005",
+  "reference_document_element_description": "Manage development, staging, and production environments for data applications, including environment configuration, dependency specification, secrets management, and environment parity maintenance.",
+  "comments": "DCWF task intersects with WIDAI TF domain. TF-T-005 is the strongest semantic match. Secondary: TF-T-001 (TF, cosine: 0.463), TF-K-009 (TF, cosine: 0.459).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5292,
+      "mapped_strength_0_10": 5.3,
+      "final_strength_integer": 5,
+      "significance": "STS 5.3/10 (raw 0.529). Shared vocabulary: [environments]. DCWF-only terms [current, define, future, integrate, mission] vs WIDAI-only terms [applications, configuration, data, dependency, development, environment] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8861,
+        "recall": 0.8534,
+        "f1": 0.8694,
+        "significance": "BERTScore F1=0.869 (P=0.886, R=0.853). P exceeds R by 0.033 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0005,
+        "entailment": 0.0024,
+        "neutral": 0.9971,
+        "significance": "NLI: neutral-dominant (99.7%). \"Define and integrate current and future mission environments.\" and \"Manage development, staging, and production environments for data applications,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5256,
+        "significance": "Bi-encoder 0.526 \u2248 STS 0.529 (gap 0.004). Independent encoding and cross-attention agree. Shared terms [environments] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.087,
+        "significance": "Jaccard 8.7%. Shared tokens: [environments]. DCWF-only: [current, define, future, integrate, mission]. WIDAI-only: [applications, configuration, data, dependency, development, environment]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

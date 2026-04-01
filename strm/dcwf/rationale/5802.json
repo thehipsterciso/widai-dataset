@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5802",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5802",
+  "focal_document_element_description": "Report on a periodic basis regarding the status of the privacy program to the Board, CEO or other responsible individual or committee.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-T-001",
+  "reference_document_element_description": "Report to the board, audit committee, and executive leadership on data and AI risk posture, program maturity, regulatory compliance status, and value realization.",
+  "comments": "DCWF task intersects with WIDAI LS domain. LS-T-001 is the strongest semantic match. Secondary: DG-T-010 (DG, cosine: 0.506), RC-T-007 (RC, cosine: 0.459).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.525,
+      "mapped_strength_0_10": 5.2,
+      "final_strength_integer": 5,
+      "significance": "STS 5.2/10 (raw 0.525). Shared vocabulary: [board, committee, program, report, status]. DCWF-only terms [basis, ceo, individual, periodic, privacy, regarding] vs WIDAI-only terms [ai, audit, compliance, data, executive, leadership] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8741,
+        "recall": 0.8773,
+        "f1": 0.8757,
+        "significance": "BERTScore F1=0.876 (P=0.874, R=0.877). Balanced P/R \u2014 the 22-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0011,
+        "entailment": 0.0003,
+        "neutral": 0.9985,
+        "significance": "NLI: neutral-dominant (99.9%). \"Report on a periodic basis regarding the status of the privacy program to the Bo\" and \"Report to the board, audit committee, and executive leadership on data and AI ri\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5273,
+        "significance": "Bi-encoder 0.527 \u2248 STS 0.525 (gap 0.002). Independent encoding and cross-attention agree. Shared terms [board, committee, program, report, status] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.25,
+        "significance": "Jaccard 25.0%. Shared tokens: [board, committee, program, report, status]. DCWF-only: [basis, ceo, individual, periodic, privacy, regarding]. WIDAI-only: [ai, audit, compliance, data, executive, leadership]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

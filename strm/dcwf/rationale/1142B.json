@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1142B",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1142B",
+  "focal_document_element_description": "Skill in applying security models (e.g., Bell-LaPadula model, Biba integrity model, Clark-Wilson integrity model).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RM-S-006",
+  "reference_document_element_description": "Skill in designing and maintaining a model risk governance framework, including policy development, role and responsibility definition, escalation protocols, exception management, and board-level model risk reporting.",
+  "comments": "DCWF ksa intersects with WIDAI RM domain. RM-S-006 is the strongest semantic match. Secondary: AG-K-001 (AG, cosine: 0.478), RM-S-002 (RM, cosine: 0.470).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5442,
+      "mapped_strength_0_10": 5.4,
+      "final_strength_integer": 5,
+      "significance": "STS 5.4/10 (raw 0.544). Shared vocabulary: [model, skill]. DCWF-only terms [applying, bell, biba, clark, integrity, lapadula] vs WIDAI-only terms [board, definition, designing, development, escalation, exception] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8322,
+        "recall": 0.8649,
+        "f1": 0.8482,
+        "significance": "BERTScore F1=0.848 (P=0.832, R=0.865). R exceeds P by 0.033 \u2014 the WIDAI KSA's 26 words are well-captured by the DCWF element's 14 words, but the DCWF element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9965,
+        "entailment": 0.0,
+        "neutral": 0.0035,
+        "significance": "NLI: contradiction-dominant (99.7%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in applying security models (e.g., Bell-LaPadula model, Biba integrity mod\" and \"Skill in designing and maintaining a model risk governance framework, including\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4829,
+        "significance": "Bi-encoder 0.483 < STS 0.544 (gap -0.061). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [applying, bell, biba] and [board, definition, designing] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0882,
+        "significance": "Jaccard 8.8%. Shared tokens: [model, skill]. DCWF-only: [applying, bell, biba, clark, integrity, lapadula]. WIDAI-only: [board, definition, designing, development, escalation, exception]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

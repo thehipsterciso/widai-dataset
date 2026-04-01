@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1120",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1120",
+  "focal_document_element_description": "Ability to interpret and incorporate data from multiple tool sources.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-T-001",
+  "reference_document_element_description": "Execute analytical requests from business stakeholders, including data extraction, transformation, analysis, and delivery of findings with documented methodology.",
+  "comments": "DCWF ksa superset of WIDAI AB domain. AB-T-001 is the strongest semantic match. Secondary: AB-S-002 (AB, cosine: 0.579), DQ-S-006 (DQ, cosine: 0.566).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.589,
+      "mapped_strength_0_10": 5.9,
+      "final_strength_integer": 6,
+      "significance": "STS 5.9/10 (raw 0.589). Shared vocabulary: [data]. DCWF-only terms [ability, incorporate, interpret, multiple, sources, tool] vs WIDAI-only terms [analysis, analytical, business, delivery, documented, execute] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8899,
+        "recall": 0.8791,
+        "f1": 0.8845,
+        "significance": "BERTScore F1=0.884 (P=0.890, R=0.879). Balanced P/R \u2014 the 10-word DCWF element and 18-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.001,
+        "neutral": 0.9989,
+        "significance": "NLI: neutral-dominant (99.9%). \"Ability to interpret and incorporate data from multiple tool sources.\" and \"Execute analytical requests from business stakeholders, including data extractio\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5793,
+        "significance": "Bi-encoder 0.579 \u2248 STS 0.589 (gap 0.010). Independent encoding and cross-attention agree. Shared terms [data] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.12,
+        "significance": "Jaccard 12.0%. Shared tokens: [data]. DCWF-only: [ability, incorporate, interpret, multiple, sources, tool]. WIDAI-only: [analysis, analytical, business, delivery, documented, execute]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

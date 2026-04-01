@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4482",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4482",
+  "focal_document_element_description": "Knowledge of malware triage.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-K-001",
+  "reference_document_element_description": "Knowledge of AI application security risks, including prompt injection, jailbreaking, data exfiltration via LLM outputs, and model supply chain vulnerabilities.",
+  "comments": "DCWF ksa intersects with WIDAI SP domain. SP-K-001 is the strongest semantic match. Secondary: SP-T-001 (SP, cosine: 0.435), SP-K-011 (SP, cosine: 0.419).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3789,
+      "mapped_strength_0_10": 3.8,
+      "final_strength_integer": 4,
+      "significance": "STS 3.8/10 (raw 0.379). Shared vocabulary: [knowledge]. DCWF-only terms [malware, triage] vs WIDAI-only terms [ai, application, chain, data, exfiltration, injection] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.917,
+        "recall": 0.8504,
+        "f1": 0.8825,
+        "significance": "BERTScore F1=0.882 (P=0.917, R=0.850). P exceeds R by 0.067 \u2014 the DCWF element's 4 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.8809,
+        "entailment": 0.0002,
+        "neutral": 0.1189,
+        "significance": "NLI: contradiction-dominant (88.1%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of malware triage.\" and \"Knowledge of AI application security risks, including prompt injection, jailbrea\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4733,
+        "significance": "Bi-encoder 0.473 > STS 0.379 (gap +0.094). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0909,
+        "significance": "Jaccard 9.1%. Shared tokens: [knowledge]. DCWF-only: [malware, triage]. WIDAI-only: [ai, application, chain, data, exfiltration, injection]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

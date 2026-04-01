@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6938",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6938",
+  "focal_document_element_description": "* Knowledge of cloud computing deployment\u00a0models in private, public, and hybrid\u00a0environment\u00a0and\u00a0the difference between\u00a0on-premises and off-premises\u00a0environments.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AI-K-023",
+  "reference_document_element_description": "Knowledge of model deployment strategies, including batch inference, real-time serving, edge deployment, A/B testing, canary releases, and shadow deployments, and the infrastructure requirements and failure modes of each.",
+  "comments": "DCWF ksa superset of WIDAI AI domain. AI-K-023 is the strongest semantic match. Secondary: AI-K-015 (AI, cosine: 0.540), AI-K-021 (AI, cosine: 0.537).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6004,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.600). Shared vocabulary: [deployment, knowledge]. DCWF-only terms [cloud, computing, difference, environment, environments, hybrid] vs WIDAI-only terms [b, batch, canary, deployments, edge, failure] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8256,
+        "recall": 0.856,
+        "f1": 0.8405,
+        "significance": "BERTScore F1=0.841 (P=0.826, R=0.856). R exceeds P by 0.030 \u2014 the WIDAI KSA's 28 words are well-captured by the DCWF element's 21 words, but the DCWF element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0007,
+        "entailment": 0.0004,
+        "neutral": 0.9989,
+        "significance": "NLI: neutral-dominant (99.9%). \"* Knowledge of cloud computing deployment\u00a0models in private, public, and hybrid\" and \"Knowledge of model deployment strategies, including batch inference, real-time s\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.584,
+        "significance": "Bi-encoder 0.584 \u2248 STS 0.600 (gap 0.016). Independent encoding and cross-attention agree. Shared terms [deployment, knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.125,
+        "significance": "Jaccard 12.5%. Shared tokens: [deployment, knowledge]. DCWF-only: [cloud, computing, difference, environment, environments, hybrid]. WIDAI-only: [b, batch, canary, deployments, edge, failure]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

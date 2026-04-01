@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2015",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2015",
+  "focal_document_element_description": "Analyze feedback to determine extent to which collection products and services are meeting requirements.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-T-006",
+  "reference_document_element_description": "Design, build, and publish BI dashboards and reports that meet defined consumer requirements for content, performance, accessibility, and refresh frequency.",
+  "comments": "DCWF task intersects with WIDAI AB domain. AB-T-006 is the strongest semantic match. Secondary: DQ-K-016 (DQ, cosine: 0.514), DQ-S-008 (DQ, cosine: 0.486).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3778,
+      "mapped_strength_0_10": 3.8,
+      "final_strength_integer": 4,
+      "significance": "STS 3.8/10 (raw 0.378). Shared vocabulary: [requirements]. DCWF-only terms [analyze, collection, determine, extent, feedback, meeting] vs WIDAI-only terms [accessibility, bi, build, consumer, content, dashboards] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8612,
+        "recall": 0.8511,
+        "f1": 0.8561,
+        "significance": "BERTScore F1=0.856 (P=0.861, R=0.851). Balanced P/R \u2014 the 14-word DCWF element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9981,
+        "entailment": 0.0,
+        "neutral": 0.0019,
+        "significance": "NLI: contradiction-dominant (99.8%). Despite 'Intersects with' classification, the model detects semantic tension between \"Analyze feedback to determine extent to which collection products and services a\" and \"Design, build, and publish BI dashboards and reports that meet defined consumer\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5182,
+        "significance": "Bi-encoder 0.518 > STS 0.378 (gap +0.140). Independent encoding finds more similarity than cross-attention. Shared surface terms [requirements] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.069,
+        "significance": "Jaccard 6.9%. Shared tokens: [requirements]. DCWF-only: [analyze, collection, determine, extent, feedback, meeting]. WIDAI-only: [accessibility, bi, build, consumer, content, dashboards]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

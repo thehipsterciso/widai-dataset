@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "7070A",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "7070A",
+  "focal_document_element_description": "Skill in integrating software Test & Evaluation frameworks into test strategies for specific projects.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-S-005",
+  "reference_document_element_description": "Skill in writing automated tests for data applications, including unit tests for transformation logic, integration tests for pipeline components, and data validation tests using appropriate testing frameworks.",
+  "comments": "DCWF ksa superset of WIDAI TF domain. TF-S-005 is the strongest semantic match. Secondary: RM-K-002 (RM, cosine: 0.504), AB-S-003 (AB, cosine: 0.484).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.7075,
+      "mapped_strength_0_10": 7.1,
+      "final_strength_integer": 7,
+      "significance": "STS 7.1/10 (raw 0.708). Shared vocabulary: [frameworks, skill]. DCWF-only terms [evaluation, integrating, projects, software, specific, strategies] vs WIDAI-only terms [applications, appropriate, automated, components, data, integration] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.901,
+        "recall": 0.8848,
+        "f1": 0.8928,
+        "significance": "BERTScore F1=0.893 (P=0.901, R=0.885). Balanced P/R \u2014 the 14-word DCWF element and 27-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0108,
+        "neutral": 0.9888,
+        "significance": "NLI: neutral-dominant (98.9%). \"Skill in integrating software Test & Evaluation frameworks into test strategies\" and \"Skill in writing automated tests for data applications, including unit tests for\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6308,
+        "significance": "Bi-encoder 0.631 < STS 0.708 (gap -0.077). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [evaluation, integrating, projects] and [applications, appropriate, automated] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1379,
+        "significance": "Jaccard 13.8%. Shared tokens: [frameworks, skill]. DCWF-only: [evaluation, integrating, projects, software, specific, strategies]. WIDAI-only: [applications, appropriate, automated, components, data, integration]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

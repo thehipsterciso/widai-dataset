@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2070",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2070",
+  "focal_document_element_description": "Enable synchronization of intelligence support plans across partner organizations as required.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AG-A-003",
+  "reference_document_element_description": "Ability to build organizational commitment to responsible AI practices by demonstrating their business value and risk reduction benefits rather than relying solely on compliance mandates.",
+  "comments": "DCWF task intersects with WIDAI AG domain. AG-A-003 is the strongest semantic match. Secondary: LS-T-005 (LS, cosine: 0.488), OP-A-003 (OP, cosine: 0.486).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4351,
+      "mapped_strength_0_10": 4.3,
+      "final_strength_integer": 4,
+      "significance": "STS 4.3/10 (raw 0.435). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [across, enable, intelligence, organizations, partner, plans] vs WIDAI-only terms [ability, ai, benefits, build, business, commitment] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8801,
+        "recall": 0.8427,
+        "f1": 0.861,
+        "significance": "BERTScore F1=0.861 (P=0.880, R=0.843). P exceeds R by 0.037 \u2014 the DCWF element's 11 words are well-captured by the WIDAI KSA's 25 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.2084,
+        "entailment": 0.0007,
+        "neutral": 0.7909,
+        "significance": "NLI: mixed signal (E:0.1%, N:79.1%, C:20.8%). No dominant classification for \"Enable synchronization of intelligence support plans across partner organization\" vs \"Ability to build organizational commitment to responsible AI practices by demons\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4914,
+        "significance": "Bi-encoder 0.491 > STS 0.435 (gap +0.056). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0,
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [across, enable, intelligence, organizations, partner, plans]. WIDAI terms: [ability, ai, benefits, build, business, commitment]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

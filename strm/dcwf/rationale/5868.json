@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5868",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5868",
+  "focal_document_element_description": "Define and/or implement policies and procedures to enable an AI risk assessment process and assess risk mitigation efforts.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "RC-T-012",
+  "reference_document_element_description": "Conduct AI system risk classification under the EU AI Act, documenting risk category determination, applicable requirements identification, and conformity assessment pathway selection.",
+  "comments": "DCWF task equal WIDAI RC domain. RC-T-012 is the strongest semantic match. Secondary: AG-S-005 (AG, cosine: 0.729), RC-S-008 (RC, cosine: 0.688).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5768,
+      "mapped_strength_0_10": 5.8,
+      "final_strength_integer": 6,
+      "significance": "STS 5.8/10 (raw 0.577). Shared vocabulary: [ai, assessment, risk]. DCWF-only terms [assess, define, efforts, enable, implement, mitigation] vs WIDAI-only terms [act, applicable, category, classification, conduct, conformity] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8669,
+        "recall": 0.8799,
+        "f1": 0.8734,
+        "significance": "BERTScore F1=0.873 (P=0.867, R=0.880). Balanced P/R \u2014 the 18-word DCWF element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0007,
+        "entailment": 0.0015,
+        "neutral": 0.9978,
+        "significance": "NLI: neutral-dominant (99.8%). \"Define and/or implement policies and procedures to enable an AI risk assessment\" and \"Conduct AI system risk classification under the EU AI Act, documenting risk cate\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7413,
+        "significance": "Bi-encoder 0.741 > STS 0.577 (gap +0.164). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, assessment, risk] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.125,
+        "significance": "Jaccard 12.5%. Shared tokens: [ai, assessment, risk]. DCWF-only: [assess, define, efforts, enable, implement, mitigation]. WIDAI-only: [act, applicable, category, classification, conduct, conformity]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

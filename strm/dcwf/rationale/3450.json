@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3450",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3450",
+  "focal_document_element_description": "Knowledge of principles and practices related to target development such as target knowledge, associations, communication systems, and infrastructure.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-K-017",
+  "reference_document_element_description": "Knowledge of MLOps principles and practices, including CI/CD for ML, automated retraining pipelines, model versioning, A/B testing infrastructure, and canary deployment patterns.",
+  "comments": "DCWF ksa intersects with WIDAI AI domain. AI-K-017 is the strongest semantic match. Secondary: AI-K-026 (AI, cosine: 0.514), LS-K-008 (LS, cosine: 0.514).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5819,
+      "mapped_strength_0_10": 5.8,
+      "final_strength_integer": 6,
+      "significance": "STS 5.8/10 (raw 0.582). Shared vocabulary: [infrastructure, knowledge, practices, principles]. DCWF-only terms [associations, communication, development, related, systems, target] vs WIDAI-only terms [automated, b, canary, cd, ci, deployment] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9086,
+        "recall": 0.8562,
+        "f1": 0.8816,
+        "significance": "BERTScore F1=0.882 (P=0.909, R=0.856). P exceeds R by 0.052 \u2014 the DCWF element's 18 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.7951,
+        "entailment": 0.0008,
+        "neutral": 0.2042,
+        "significance": "NLI: contradiction-dominant (79.5%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of principles and practices related to target development such as targ\" and \"Knowledge of MLOps principles and practices, including CI/CD for ML, automated r\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.519,
+        "significance": "Bi-encoder 0.519 < STS 0.582 (gap -0.063). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [associations, communication, development] and [automated, b, canary] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1875,
+        "significance": "Jaccard 18.8%. Shared tokens: [infrastructure, knowledge, practices, principles]. DCWF-only: [associations, communication, development, related, systems, target]. WIDAI-only: [automated, b, canary, cd, ci, deployment]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

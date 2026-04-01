@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5849",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5849",
+  "focal_document_element_description": "Assess value of implemented AI projects based on organizational metrics.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AI-T-018",
+  "reference_document_element_description": "Design and execute research projects that advance organizational AI capability, including hypothesis formulation, experimental design, execution, and findings documentation.",
+  "comments": "DCWF task superset of WIDAI AI domain. AI-T-018 is the strongest semantic match. Secondary: AI-S-018 (AI, cosine: 0.628), DG-T-002 (DG, cosine: 0.606).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4385,
+      "mapped_strength_0_10": 4.4,
+      "final_strength_integer": 4,
+      "significance": "STS 4.4/10 (raw 0.439). Shared vocabulary: [ai, organizational, projects]. DCWF-only terms [assess, based, implemented, metrics, value] vs WIDAI-only terms [advance, capability, design, documentation, execute, execution] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9063,
+        "recall": 0.8612,
+        "f1": 0.8832,
+        "significance": "BERTScore F1=0.883 (P=0.906, R=0.861). P exceeds R by 0.045 \u2014 the DCWF element's 10 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0636,
+        "entailment": 0.0009,
+        "neutral": 0.9355,
+        "significance": "NLI: neutral-dominant (93.5%). \"Assess value of implemented AI projects based on organizational metrics.\" and \"Design and execute research projects that advance organizational AI capability,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6329,
+        "significance": "Bi-encoder 0.633 > STS 0.439 (gap +0.194). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, organizational, projects] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.125,
+        "significance": "Jaccard 12.5%. Shared tokens: [ai, organizational, projects]. DCWF-only: [assess, based, implemented, metrics, value]. WIDAI-only: [advance, capability, design, documentation, execute, execution]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

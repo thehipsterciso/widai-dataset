@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5370",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5370",
+  "focal_document_element_description": "Establish, resource, implement, and assess cyber workforce management programs in accordance with organizational requirements.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-T-004",
+  "reference_document_element_description": "Design, develop, and deliver data and AI training programs for defined organizational audiences, including needs assessment, curriculum development, delivery execution, and effectiveness measurement.",
+  "comments": "DCWF task intersects with WIDAI OP domain. OP-T-004 is the strongest semantic match. Secondary: TF-A-003 (TF, cosine: 0.460), AI-T-018 (AI, cosine: 0.435).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.494,
+      "mapped_strength_0_10": 4.9,
+      "final_strength_integer": 5,
+      "significance": "STS 4.9/10 (raw 0.494). Shared vocabulary: [organizational, programs]. DCWF-only terms [accordance, assess, cyber, establish, implement, management] vs WIDAI-only terms [ai, assessment, audiences, curriculum, data, defined] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8945,
+        "recall": 0.8775,
+        "f1": 0.8859,
+        "significance": "BERTScore F1=0.886 (P=0.894, R=0.877). Balanced P/R \u2014 the 14-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0118,
+        "entailment": 0.2537,
+        "neutral": 0.7345,
+        "significance": "NLI: mixed signal (E:25.4%, N:73.5%, C:1.2%). No dominant classification for \"Establish, resource, implement, and assess cyber workforce management programs i\" vs \"Design, develop, and deliver data and AI training programs for defined organizat\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4965,
+        "significance": "Bi-encoder 0.496 \u2248 STS 0.494 (gap 0.003). Independent encoding and cross-attention agree. Shared terms [organizational, programs] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0938,
+        "significance": "Jaccard 9.4%. Shared tokens: [organizational, programs]. DCWF-only: [accordance, assess, cyber, establish, implement, management]. WIDAI-only: [ai, assessment, audiences, curriculum, data, defined]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

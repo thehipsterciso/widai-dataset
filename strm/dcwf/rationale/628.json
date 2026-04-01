@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "628",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "628",
+  "focal_document_element_description": "Identify alternative information security strategies to address organizational security objective.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-A-004",
+  "reference_document_element_description": "Ability to navigate the tension between data sharing for organizational value creation and data protection requirements, finding practical approaches that satisfy both objectives.",
+  "comments": "DCWF task intersects with WIDAI SP domain. SP-A-004 is the strongest semantic match. Secondary: SP-A-002 (SP, cosine: 0.441), SP-K-012 (SP, cosine: 0.440).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6043,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.604). Shared vocabulary: [organizational]. DCWF-only terms [address, alternative, identify, information, objective, security] vs WIDAI-only terms [ability, approaches, creation, data, finding, navigate] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8928,
+        "recall": 0.8673,
+        "f1": 0.8799,
+        "significance": "BERTScore F1=0.880 (P=0.893, R=0.867). P exceeds R by 0.026 \u2014 the DCWF element's 10 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0006,
+        "entailment": 0.0085,
+        "neutral": 0.9909,
+        "significance": "NLI: neutral-dominant (99.1%). \"Identify alternative information security strategies to address organizational s\" and \"Ability to navigate the tension between data sharing for organizational value cr\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4436,
+        "significance": "Bi-encoder 0.444 < STS 0.604 (gap -0.161). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [address, alternative, identify] and [ability, approaches, creation] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.069,
+        "significance": "Jaccard 6.9%. Shared tokens: [organizational]. DCWF-only: [address, alternative, identify, information, objective, security]. WIDAI-only: [ability, approaches, creation, data, finding, navigate]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5928",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5928",
+  "focal_document_element_description": "Identify, define, and document system security requirements and recommend solutions to management.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-T-010",
+  "reference_document_element_description": "Develop and maintain operational documentation for data systems, including standard operating procedures, runbooks, escalation matrices, and knowledge base articles.",
+  "comments": "DCWF task intersects with WIDAI OP domain. OP-T-010 is the strongest semantic match. Secondary: DA-K-012 (DA, cosine: 0.516), SP-T-010 (SP, cosine: 0.512).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5237,
+      "mapped_strength_0_10": 5.2,
+      "final_strength_integer": 5,
+      "significance": "STS 5.2/10 (raw 0.524). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [define, document, identify, management, recommend, requirements] vs WIDAI-only terms [articles, base, data, develop, documentation, escalation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8847,
+        "recall": 0.8493,
+        "f1": 0.8667,
+        "significance": "BERTScore F1=0.867 (P=0.885, R=0.849). P exceeds R by 0.035 \u2014 the DCWF element's 12 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0006,
+        "entailment": 0.0003,
+        "neutral": 0.9991,
+        "significance": "NLI: neutral-dominant (99.9%). \"Identify, define, and document system security requirements and recommend soluti\" and \"Develop and maintain operational documentation for data systems, including stand\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5168,
+        "significance": "Bi-encoder 0.517 \u2248 STS 0.524 (gap 0.007). Independent encoding and cross-attention agree. Shared terms [none] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0357,
+        "significance": "Jaccard 3.6%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [define, document, identify, management, recommend, requirements]. WIDAI terms: [articles, base, data, develop, documentation, escalation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

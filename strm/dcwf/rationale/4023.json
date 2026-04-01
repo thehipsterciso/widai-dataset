@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4023",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4023",
+  "focal_document_element_description": "Skill to graphically depict decision support materials containing intelligence and partner capability estimates.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-A-001",
+  "reference_document_element_description": "Ability to select appropriate technical tools, languages, and platforms for data and AI requirements, evaluating trade-offs between performance, maintainability, team capability, ecosystem maturity, and cost.",
+  "comments": "DCWF ksa superset of WIDAI TF domain. TF-A-001 is the strongest semantic match. Secondary: DG-S-009 (DG, cosine: 0.555), LS-S-013 (LS, cosine: 0.538).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3203,
+      "mapped_strength_0_10": 3.2,
+      "final_strength_integer": 3,
+      "significance": "STS 3.2/10 (raw 0.320). Shared vocabulary: [capability]. DCWF-only terms [containing, decision, depict, estimates, graphically, intelligence] vs WIDAI-only terms [ability, ai, appropriate, cost, data, ecosystem] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8639,
+        "recall": 0.8473,
+        "f1": 0.8555,
+        "significance": "BERTScore F1=0.856 (P=0.864, R=0.847). Balanced P/R \u2014 the 13-word DCWF element and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0363,
+        "entailment": 0.0013,
+        "neutral": 0.9624,
+        "significance": "NLI: neutral-dominant (96.2%). \"Skill to graphically depict decision support materials containing intelligence a\" and \"Ability to select appropriate technical tools, languages, and platforms for data\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5566,
+        "significance": "Bi-encoder 0.557 > STS 0.320 (gap +0.236). Independent encoding finds more similarity than cross-attention. Shared surface terms [capability] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0882,
+        "significance": "Jaccard 8.8%. Shared tokens: [capability]. DCWF-only: [containing, decision, depict, estimates, graphically, intelligence]. WIDAI-only: [ability, ai, appropriate, cost, data, ecosystem]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

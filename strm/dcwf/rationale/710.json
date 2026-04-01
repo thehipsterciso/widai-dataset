@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "710",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "710",
+  "focal_document_element_description": "Monitor and evaluate a system's compliance with information technology (IT) security, resilience, and dependability requirements.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-A-005",
+  "reference_document_element_description": "Ability to evaluate the regulatory implications of proposed data processing activities, AI system deployments, or business model changes, providing compliance risk assessment before implementation.",
+  "comments": "DCWF task superset of WIDAI RC domain. RC-A-005 is the strongest semantic match. Secondary: SP-T-006 (SP, cosine: 0.621), RC-A-002 (RC, cosine: 0.591).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.688,
+      "mapped_strength_0_10": 6.9,
+      "final_strength_integer": 7,
+      "significance": "STS 6.9/10 (raw 0.688). Shared vocabulary: [compliance, evaluate, system]. DCWF-only terms [dependability, information, monitor, requirements, resilience, s] vs WIDAI-only terms [ability, activities, ai, assessment, business, changes] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8761,
+        "recall": 0.8746,
+        "f1": 0.8754,
+        "significance": "BERTScore F1=0.875 (P=0.876, R=0.875). Balanced P/R \u2014 the 15-word DCWF element and 24-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0042,
+        "neutral": 0.9954,
+        "significance": "NLI: neutral-dominant (99.5%). \"Monitor and evaluate a system's compliance with information technology (IT) secu\" and \"Ability to evaluate the regulatory implications of proposed data processing acti\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6681,
+        "significance": "Bi-encoder 0.668 \u2248 STS 0.688 (gap 0.020). Independent encoding and cross-attention agree. Shared terms [compliance, evaluate, system] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0833,
+        "significance": "Jaccard 8.3%. Shared tokens: [compliance, evaluate, system]. DCWF-only: [dependability, information, monitor, requirements, resilience, s]. WIDAI-only: [ability, activities, ai, assessment, business, changes]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3348",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3348",
+  "focal_document_element_description": "Knowledge of intrusion detection systems and signature development.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-T-017",
+  "reference_document_element_description": "Implement model monitoring and observability systems that detect data drift, prediction drift, and performance degradation, triggering alerts or automated retraining workflows when defined thresholds are exceeded.",
+  "comments": "DCWF ksa intersects with WIDAI AI domain. AI-T-017 is the strongest semantic match. Secondary: SP-K-012 (SP, cosine: 0.404), AI-K-024 (AI, cosine: 0.398).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3641,
+      "mapped_strength_0_10": 3.6,
+      "final_strength_integer": 4,
+      "significance": "STS 3.6/10 (raw 0.364). Shared vocabulary: [systems]. DCWF-only terms [detection, development, intrusion, knowledge, signature] vs WIDAI-only terms [alerts, automated, data, defined, degradation, detect] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8865,
+        "recall": 0.8469,
+        "f1": 0.8662,
+        "significance": "BERTScore F1=0.866 (P=0.886, R=0.847). P exceeds R by 0.040 \u2014 the DCWF element's 8 words are well-captured by the WIDAI KSA's 26 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0009,
+        "entailment": 0.0002,
+        "neutral": 0.9989,
+        "significance": "NLI: neutral-dominant (99.9%). \"Knowledge of intrusion detection systems and signature development.\" and \"Implement model monitoring and observability systems that detect data drift, pre\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4048,
+        "significance": "Bi-encoder 0.405 \u2248 STS 0.364 (gap 0.041). Independent encoding and cross-attention agree. Shared terms [systems] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0667,
+        "significance": "Jaccard 6.7%. Shared tokens: [systems]. DCWF-only: [detection, development, intrusion, knowledge, signature]. WIDAI-only: [alerts, automated, data, defined, degradation, detect]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

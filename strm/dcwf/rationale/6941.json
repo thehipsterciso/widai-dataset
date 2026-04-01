@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6941",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6941",
+  "focal_document_element_description": "Skill in architecting compensating security controls to reduce risk for control systems and control system components that do not have adequate or compliant security capabilities.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RM-S-002",
+  "reference_document_element_description": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+  "comments": "DCWF ksa superset of WIDAI RM domain. RM-S-002 is the strongest semantic match. Secondary: SP-S-008 (SP, cosine: 0.591), RM-S-006 (RM, cosine: 0.559).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4184,
+      "mapped_strength_0_10": 4.2,
+      "final_strength_integer": 4,
+      "significance": "STS 4.2/10 (raw 0.418). Shared vocabulary: [control, security, skill, systems]. DCWF-only terms [adequate, architecting, capabilities, compensating, compliant, components] vs WIDAI-only terms [ai, analysis, assessments, attack, conducting, gap] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8773,
+        "recall": 0.8851,
+        "f1": 0.8812,
+        "significance": "BERTScore F1=0.881 (P=0.877, R=0.885). Balanced P/R \u2014 the 25-word DCWF element and 19-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0196,
+        "entailment": 0.0014,
+        "neutral": 0.979,
+        "significance": "NLI: neutral-dominant (97.9%). \"Skill in architecting compensating security controls to reduce risk for control\" and \"Skill in conducting AI security assessments, including threat modeling for AI sy\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6379,
+        "significance": "Bi-encoder 0.638 > STS 0.418 (gap +0.220). Independent encoding finds more similarity than cross-attention. Shared surface terms [control, security, skill, systems] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2059,
+        "significance": "Jaccard 20.6%. Shared tokens: [control, security, skill, systems]. DCWF-only: [adequate, architecting, capabilities, compensating, compliant, components]. WIDAI-only: [ai, analysis, assessments, attack, conducting, gap]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

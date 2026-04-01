@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4514",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4514",
+  "focal_document_element_description": "Knowledge of Political, Military, Economic, Social, PMESII and Counter-Terrorism Analytical Framework  analytical constructs and their use in assessing the operational environment.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-K-001",
+  "reference_document_element_description": "Knowledge of program management frameworks (PMI, SAFe, Agile) and how they are adapted for data and AI programs that involve technical uncertainty, iterative development, and cross-functional dependencies.",
+  "comments": "DCWF ksa intersects with WIDAI OP domain. OP-K-001 is the strongest semantic match. Secondary: LS-K-008 (LS, cosine: 0.440), AB-S-003 (AB, cosine: 0.430).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3318,
+      "mapped_strength_0_10": 3.3,
+      "final_strength_integer": 3,
+      "significance": "STS 3.3/10 (raw 0.332). Shared vocabulary: [knowledge]. DCWF-only terms [analytical, assessing, constructs, counter, economic, environment] vs WIDAI-only terms [adapted, agile, ai, cross, data, dependencies] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8544,
+        "recall": 0.8537,
+        "f1": 0.854,
+        "significance": "BERTScore F1=0.854 (P=0.854, R=0.854). Balanced P/R \u2014 the 21-word DCWF element and 27-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.6742,
+        "entailment": 0.0001,
+        "neutral": 0.3257,
+        "significance": "NLI: contradiction-dominant (67.4%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of Political, Military, Economic, Social, PMESII and Counter-Terrorism\" and \"Knowledge of program management frameworks (PMI, SAFe, Agile) and how they are a\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4757,
+        "significance": "Bi-encoder 0.476 > STS 0.332 (gap +0.144). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0698,
+        "significance": "Jaccard 7.0%. Shared tokens: [knowledge]. DCWF-only: [analytical, assessing, constructs, counter, economic, environment]. WIDAI-only: [adapted, agile, ai, cross, data, dependencies]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

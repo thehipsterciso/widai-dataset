@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1036",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1036",
+  "focal_document_element_description": "Knowledge of applicable laws (e.g., Electronic Communications Privacy Act, Foreign Intelligence Surveillance Act, Protect America Act, search and seizure laws, civil liberties and privacy laws), statutes (e.g., in Titles 10, 18, 32, 50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures relevant to work performed.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "SP-K-007",
+  "reference_document_element_description": "Knowledge of data protection law, including GDPR, CCPA/CPRA, and sector-specific privacy regulations, with emphasis on the legal bases for processing, data subject rights, cross-border transfer mechanisms, and enforcement precedent.",
+  "comments": "DCWF ksa superset of WIDAI SP domain. SP-K-007 is the strongest semantic match. Secondary: RC-K-005 (RC, cosine: 0.597), RC-K-002 (RC, cosine: 0.590).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6094,
+      "mapped_strength_0_10": 6.1,
+      "final_strength_integer": 6,
+      "significance": "STS 6.1/10 (raw 0.609). Shared vocabulary: [knowledge, legal, privacy]. DCWF-only terms [10, 18, 32, 50, act, administrative] vs WIDAI-only terms [bases, border, ccpa, cpra, cross, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8352,
+        "recall": 0.8569,
+        "f1": 0.8459,
+        "significance": "BERTScore F1=0.846 (P=0.835, R=0.857). R exceeds P by 0.022 \u2014 the WIDAI KSA's 29 words are well-captured by the DCWF element's 51 words, but the DCWF element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0047,
+        "neutral": 0.995,
+        "significance": "NLI: neutral-dominant (99.5%). \"Knowledge of applicable laws (e.g., Electronic Communications Privacy Act, Forei\" and \"Knowledge of data protection law, including GDPR, CCPA/CPRA, and sector-specific\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6227,
+        "significance": "Bi-encoder 0.623 \u2248 STS 0.609 (gap 0.013). Independent encoding and cross-attention agree. Shared terms [knowledge, legal, privacy] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0725,
+        "significance": "Jaccard 7.2%. Shared tokens: [knowledge, legal, privacy]. DCWF-only: [10, 18, 32, 50, act, administrative]. WIDAI-only: [bases, border, ccpa, cpra, cross, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

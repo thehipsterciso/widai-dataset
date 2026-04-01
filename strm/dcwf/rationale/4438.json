@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4438",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4438",
+  "focal_document_element_description": "Knowledge of different types of log subscriptions (e.g. push vs pull, MS Windows event forwarding, winlogbeat, syslog).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DA-K-004",
+  "reference_document_element_description": "Knowledge of data integration patterns including ETL, ELT, event streaming, CDC (change data capture), API-based integration, and data virtualization.",
+  "comments": "DCWF ksa intersects with WIDAI DA domain. DA-K-004 is the strongest semantic match. Secondary: DA-T-009 (DA, cosine: 0.404), AI-K-024 (AI, cosine: 0.396).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2694,
+      "mapped_strength_0_10": 2.7,
+      "final_strength_integer": 3,
+      "significance": "STS 2.7/10 (raw 0.269). Shared vocabulary: [event, knowledge]. DCWF-only terms [different, forwarding, log, ms, pull, push] vs WIDAI-only terms [api, based, capture, cdc, change, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8655,
+        "recall": 0.868,
+        "f1": 0.8667,
+        "significance": "BERTScore F1=0.867 (P=0.866, R=0.868). Balanced P/R \u2014 the 17-word DCWF element and 19-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9908,
+        "entailment": 0.0,
+        "neutral": 0.0092,
+        "significance": "NLI: contradiction-dominant (99.1%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of different types of log subscriptions (e.g. push vs pull, MS Windows\" and \"Knowledge of data integration patterns including ETL, ELT, event streaming, CDC\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4085,
+        "significance": "Bi-encoder 0.408 > STS 0.269 (gap +0.139). Independent encoding finds more similarity than cross-attention. Shared surface terms [event, knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0968,
+        "significance": "Jaccard 9.7%. Shared tokens: [event, knowledge]. DCWF-only: [different, forwarding, log, ms, pull, push]. WIDAI-only: [api, based, capture, cdc, change, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

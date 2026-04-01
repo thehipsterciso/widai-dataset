@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4338",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4338",
+  "focal_document_element_description": "Ability to provide instruction on technical cyber capabilities, tools, and methods.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-A-001",
+  "reference_document_element_description": "Ability to select appropriate technical tools, languages, and platforms for data and AI requirements, evaluating trade-offs between performance, maintainability, team capability, ecosystem maturity, and cost.",
+  "comments": "DCWF ksa superset of WIDAI TF domain. TF-A-001 is the strongest semantic match. Secondary: TF-S-011 (TF, cosine: 0.525), OP-S-004 (OP, cosine: 0.490).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4629,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.463). Shared vocabulary: [ability, technical, tools]. DCWF-only terms [capabilities, cyber, instruction, methods, provide] vs WIDAI-only terms [ai, appropriate, capability, cost, data, ecosystem] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9164,
+        "recall": 0.8684,
+        "f1": 0.8917,
+        "significance": "BERTScore F1=0.892 (P=0.916, R=0.868). P exceeds R by 0.048 \u2014 the DCWF element's 11 words are well-captured by the WIDAI KSA's 25 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.3536,
+        "entailment": 0.0004,
+        "neutral": 0.646,
+        "significance": "NLI: mixed signal (E:0.0%, N:64.6%, C:35.4%). No dominant classification for \"Ability to provide instruction on technical cyber capabilities, tools, and metho\" vs \"Ability to select appropriate technical tools, languages, and platforms for data\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5826,
+        "significance": "Bi-encoder 0.583 > STS 0.463 (gap +0.120). Independent encoding finds more similarity than cross-attention. Shared surface terms [ability, technical, tools] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1667,
+        "significance": "Jaccard 16.7%. Shared tokens: [ability, technical, tools]. DCWF-only: [capabilities, cyber, instruction, methods, provide]. WIDAI-only: [ai, appropriate, capability, cost, data, ecosystem]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

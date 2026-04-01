@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6930",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6930",
+  "focal_document_element_description": "Knowledge of cyber competitions as a way of developing skills by providing hands-on experience in simulated, real-world situations.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-S-010",
+  "reference_document_element_description": "Skill in facilitating data and AI communities of practice, including knowledge sharing forums, best practice documentation, cross-team collaboration initiatives, and capability building activities.",
+  "comments": "DCWF ksa intersects with WIDAI OP domain. OP-S-010 is the strongest semantic match. Secondary: RM-S-005 (RM, cosine: 0.445), DG-S-001 (DG, cosine: 0.426).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4555,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.456). Shared vocabulary: [knowledge]. DCWF-only terms [competitions, cyber, developing, experience, hands, providing] vs WIDAI-only terms [activities, ai, best, building, capability, collaboration] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8507,
+        "recall": 0.851,
+        "f1": 0.8509,
+        "significance": "BERTScore F1=0.851 (P=0.851, R=0.851). Balanced P/R \u2014 the 18-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.3783,
+        "entailment": 0.0259,
+        "neutral": 0.5958,
+        "significance": "NLI: mixed signal (E:2.6%, N:59.6%, C:37.8%). No dominant classification for \"Knowledge of cyber competitions as a way of developing skills by providing hands\" vs \"Skill in facilitating data and AI communities of practice, including knowledge s\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4775,
+        "significance": "Bi-encoder 0.477 \u2248 STS 0.456 (gap 0.022). Independent encoding and cross-attention agree. Shared terms [knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0789,
+        "significance": "Jaccard 7.9%. Shared tokens: [knowledge]. DCWF-only: [competitions, cyber, developing, experience, hands, providing]. WIDAI-only: [activities, ai, best, building, capability, collaboration]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

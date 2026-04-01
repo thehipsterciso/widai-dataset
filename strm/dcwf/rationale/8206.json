@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8206",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8206",
+  "focal_document_element_description": "Understand TTPs and methodologies to enable access ops or access vector opportunities.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DA-K-016",
+  "reference_document_element_description": "Knowledge of data platform access management processes, including access request intake, provisioning workflows, access review cycles, and deprovisioning procedures.",
+  "comments": "DCWF task intersects with WIDAI DA domain. DA-K-016 is the strongest semantic match. Secondary: DG-T-015 (DG, cosine: 0.440), DA-T-010 (DA, cosine: 0.430).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5971,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.597). Shared vocabulary: [access]. DCWF-only terms [enable, methodologies, opportunities, ops, ttps, understand] vs WIDAI-only terms [cycles, data, deprovisioning, intake, knowledge, management] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8759,
+        "recall": 0.8602,
+        "f1": 0.868,
+        "significance": "BERTScore F1=0.868 (P=0.876, R=0.860). Balanced P/R \u2014 the 12-word DCWF element and 19-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0027,
+        "neutral": 0.9969,
+        "significance": "NLI: neutral-dominant (99.7%). \"Understand TTPs and methodologies to enable access ops or access vector opportun\" and \"Knowledge of data platform access management processes, including access request\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5182,
+        "significance": "Bi-encoder 0.518 < STS 0.597 (gap -0.079). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [enable, methodologies, opportunities] and [cycles, data, deprovisioning] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0769,
+        "significance": "Jaccard 7.7%. Shared tokens: [access]. DCWF-only: [enable, methodologies, opportunities, ops, ttps, understand]. WIDAI-only: [cycles, data, deprovisioning, intake, knowledge, management]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

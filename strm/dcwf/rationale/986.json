@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "986",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "986",
+  "focal_document_element_description": "Knowledge of organizational information technology (IT) user security policies (e.g., account creation, password rules, access control).",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DG-K-008",
+  "reference_document_element_description": "Knowledge of data policy authoring, including policy structure standards, enforcement mechanisms, exception handling processes, and policy lifecycle management.",
+  "comments": "DCWF ksa superset of WIDAI DG domain. DG-K-008 is the strongest semantic match. Secondary: DA-K-012 (DA, cosine: 0.575), SP-K-006 (SP, cosine: 0.575).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4413,
+      "mapped_strength_0_10": 4.4,
+      "final_strength_integer": 4,
+      "significance": "STS 4.4/10 (raw 0.441). Shared vocabulary: [knowledge]. DCWF-only terms [access, account, control, creation, information, organizational] vs WIDAI-only terms [authoring, data, enforcement, exception, handling, lifecycle] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8677,
+        "recall": 0.8863,
+        "f1": 0.8769,
+        "significance": "BERTScore F1=0.877 (P=0.868, R=0.886). Balanced P/R \u2014 the 16-word DCWF element and 18-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.6195,
+        "entailment": 0.0009,
+        "neutral": 0.3796,
+        "significance": "NLI: contradiction-dominant (62.0%). Despite 'Superset of' classification, the model detects semantic tension between \"Knowledge of organizational information technology (IT) user security policies (\" and \"Knowledge of data policy authoring, including policy structure standards, enforc\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6219,
+        "significance": "Bi-encoder 0.622 > STS 0.441 (gap +0.181). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0645,
+        "significance": "Jaccard 6.5%. Shared tokens: [knowledge]. DCWF-only: [access, account, control, creation, information, organizational]. WIDAI-only: [authoring, data, enforcement, exception, handling, lifecycle]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

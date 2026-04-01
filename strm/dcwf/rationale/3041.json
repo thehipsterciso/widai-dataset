@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3041",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3041",
+  "focal_document_element_description": "Ability to effectively collaborate via virtual teams.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "OP-S-010",
+  "reference_document_element_description": "Skill in facilitating data and AI communities of practice, including knowledge sharing forums, best practice documentation, cross-team collaboration initiatives, and capability building activities.",
+  "comments": "DCWF ksa intersects with WIDAI OP domain. OP-S-010 is the strongest semantic match. Secondary: TF-A-001 (TF, cosine: 0.505), OP-A-003 (OP, cosine: 0.488).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6355,
+      "mapped_strength_0_10": 6.4,
+      "final_strength_integer": 6,
+      "significance": "STS 6.4/10 (raw 0.635). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [ability, collaborate, effectively, teams, via, virtual] vs WIDAI-only terms [activities, ai, best, building, capability, collaboration] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8952,
+        "recall": 0.8524,
+        "f1": 0.8733,
+        "significance": "BERTScore F1=0.873 (P=0.895, R=0.852). P exceeds R by 0.043 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.004,
+        "neutral": 0.9958,
+        "significance": "NLI: neutral-dominant (99.6%). \"Ability to effectively collaborate via virtual teams.\" and \"Skill in facilitating data and AI communities of practice, including knowledge s\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5325,
+        "significance": "Bi-encoder 0.532 < STS 0.635 (gap -0.103). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [ability, collaborate, effectively] and [activities, ai, best] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0,
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [ability, collaborate, effectively, teams, via, virtual]. WIDAI terms: [activities, ai, best, building, capability, collaboration]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

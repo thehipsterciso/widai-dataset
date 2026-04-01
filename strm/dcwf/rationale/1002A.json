@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "1002A",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1002A",
+  "focal_document_element_description": "Skill in conducting reviews of systems.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AG-S-004",
+  "reference_document_element_description": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+  "comments": "DCWF ksa superset of WIDAI AG domain. AG-S-004 is the strongest semantic match. Secondary: AB-S-002 (AB, cosine: 0.521), TF-T-006 (TF, cosine: 0.504).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6109,
+      "mapped_strength_0_10": 6.1,
+      "final_strength_integer": 6,
+      "significance": "STS 6.1/10 (raw 0.611). Shared vocabulary: [skill]. DCWF-only terms [conducting, reviews, systems] vs WIDAI-only terms [ai, assessment, coordination, decision, documentation, execution] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9413,
+        "recall": 0.8584,
+        "f1": 0.8979,
+        "significance": "BERTScore F1=0.898 (P=0.941, R=0.858). P exceeds R by 0.083 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 17 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0008,
+        "neutral": 0.9989,
+        "significance": "NLI: neutral-dominant (99.9%). \"Skill in conducting reviews of systems.\" and \"Skill in managing AI governance review processes, including intake, triage, stak\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5593,
+        "significance": "Bi-encoder 0.559 < STS 0.611 (gap -0.052). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [conducting, reviews, systems] and [ai, assessment, coordination] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0952,
+        "significance": "Jaccard 9.5%. Shared tokens: [skill]. DCWF-only: [conducting, reviews, systems]. WIDAI-only: [ai, assessment, coordination, decision, documentation, execution]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

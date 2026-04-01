@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6630",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6630",
+  "focal_document_element_description": "Skill in preparing Test & Evaluation reports.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-S-002",
+  "reference_document_element_description": "Skill in producing analysis documentation that is reproducible, clearly reasoned, and accessible to a non-technical business audience.",
+  "comments": "DCWF ksa superset of WIDAI AB domain. AB-S-002 is the strongest semantic match. Secondary: TF-S-005 (TF, cosine: 0.595), RC-S-006 (RC, cosine: 0.592).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5124,
+      "mapped_strength_0_10": 5.1,
+      "final_strength_integer": 5,
+      "significance": "STS 5.1/10 (raw 0.512). Shared vocabulary: [skill]. DCWF-only terms [evaluation, preparing, reports, test] vs WIDAI-only terms [accessible, analysis, audience, business, clearly, documentation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9207,
+        "recall": 0.8615,
+        "f1": 0.8901,
+        "significance": "BERTScore F1=0.890 (P=0.921, R=0.862). P exceeds R by 0.059 \u2014 the DCWF element's 7 words are well-captured by the WIDAI KSA's 17 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0005,
+        "entailment": 0.001,
+        "neutral": 0.9985,
+        "significance": "NLI: neutral-dominant (99.9%). \"Skill in preparing Test & Evaluation reports.\" and \"Skill in producing analysis documentation that is reproducible, clearly reasoned\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6077,
+        "significance": "Bi-encoder 0.608 > STS 0.512 (gap +0.095). Independent encoding finds more similarity than cross-attention. Shared surface terms [skill] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0909,
+        "significance": "Jaccard 9.1%. Shared tokens: [skill]. DCWF-only: [evaluation, preparing, reports, test]. WIDAI-only: [accessible, analysis, audience, business, clearly, documentation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

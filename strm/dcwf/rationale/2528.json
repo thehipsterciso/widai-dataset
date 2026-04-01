@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "2528",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2528",
+  "focal_document_element_description": "Interpret environment preparations assessments to determine a course of action.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-T-011",
+  "reference_document_element_description": "Coordinate regulatory examination responses, including information request fulfillment, examiner access management, findings response preparation, and corrective action plan development.",
+  "comments": "DCWF task intersects with WIDAI RC domain. RC-T-011 is the strongest semantic match. Secondary: RC-T-003 (RC, cosine: 0.483), RC-K-001 (RC, cosine: 0.456).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3589,
+      "mapped_strength_0_10": 3.6,
+      "final_strength_integer": 4,
+      "significance": "STS 3.6/10 (raw 0.359). Shared vocabulary: [action]. DCWF-only terms [assessments, course, determine, environment, interpret, preparations] vs WIDAI-only terms [access, coordinate, corrective, development, examination, examiner] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8834,
+        "recall": 0.8499,
+        "f1": 0.8663,
+        "significance": "BERTScore F1=0.866 (P=0.883, R=0.850). P exceeds R by 0.033 \u2014 the DCWF element's 10 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.4456,
+        "entailment": 0.0026,
+        "neutral": 0.5518,
+        "significance": "NLI: mixed signal (E:0.3%, N:55.2%, C:44.6%). No dominant classification for \"Interpret environment preparations assessments to determine a course of action.\" vs \"Coordinate regulatory examination responses, including information request fulfi\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4911,
+        "significance": "Bi-encoder 0.491 > STS 0.359 (gap +0.132). Independent encoding finds more similarity than cross-attention. Shared surface terms [action] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0357,
+        "significance": "Jaccard 3.6%. Shared tokens: [action]. DCWF-only: [assessments, course, determine, environment, interpret, preparations]. WIDAI-only: [access, coordinate, corrective, development, examination, examiner]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

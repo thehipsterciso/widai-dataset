@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "204",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "204",
+  "focal_document_element_description": "Skill in identifying possible causes of degradation of system performance or availability and initiating actions needed to mitigate this degradation.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "TF-A-002",
+  "reference_document_element_description": "Ability to diagnose and resolve technical issues that span multiple system layers, tracing problems across application code, data pipelines, databases, networks, and infrastructure to identify and remediate root causes.",
+  "comments": "DCWF ksa superset of WIDAI TF domain. TF-A-002 is the strongest semantic match. Secondary: AI-S-017 (AI, cosine: 0.566), AI-T-004 (AI, cosine: 0.560).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6695,
+      "mapped_strength_0_10": 6.7,
+      "final_strength_integer": 7,
+      "significance": "STS 6.7/10 (raw 0.669). Shared vocabulary: [causes, system]. DCWF-only terms [actions, availability, degradation, identifying, initiating, mitigate] vs WIDAI-only terms [ability, across, application, code, data, databases] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8838,
+        "recall": 0.8598,
+        "f1": 0.8716,
+        "significance": "BERTScore F1=0.872 (P=0.884, R=0.860). P exceeds R by 0.024 \u2014 the DCWF element's 20 words are well-captured by the WIDAI KSA's 29 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.002,
+        "neutral": 0.998,
+        "significance": "NLI: neutral-dominant (99.8%). \"Skill in identifying possible causes of degradation of system performance or ava\" and \"Ability to diagnose and resolve technical issues that span multiple system layer\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6358,
+        "significance": "Bi-encoder 0.636 \u2248 STS 0.669 (gap 0.034). Independent encoding and cross-attention agree. Shared terms [causes, system] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1,
+        "significance": "Jaccard 10.0%. Shared tokens: [causes, system]. DCWF-only: [actions, availability, degradation, identifying, initiating, mitigate]. WIDAI-only: [ability, across, application, code, data, databases]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

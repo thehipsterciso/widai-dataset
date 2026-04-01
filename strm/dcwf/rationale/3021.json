@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "3021",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "3021",
+  "focal_document_element_description": "Ability to collaborate effectively with others.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-A-004",
+  "reference_document_element_description": "Ability to identify and develop data and AI leadership talent within the organization, recognizing potential across diverse backgrounds and building leadership pipelines that strengthen organizational capability.",
+  "comments": "DCWF ksa intersects with WIDAI LS domain. LS-A-004 is the strongest semantic match. Secondary: OP-S-010 (OP, cosine: 0.541), LS-S-009 (LS, cosine: 0.474).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3833,
+      "mapped_strength_0_10": 3.8,
+      "final_strength_integer": 4,
+      "significance": "STS 3.8/10 (raw 0.383). Shared vocabulary: [ability]. DCWF-only terms [collaborate, effectively, others] vs WIDAI-only terms [across, ai, backgrounds, building, capability, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8947,
+        "recall": 0.8438,
+        "f1": 0.8685,
+        "significance": "BERTScore F1=0.869 (P=0.895, R=0.844). P exceeds R by 0.051 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 26 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0008,
+        "entailment": 0.0088,
+        "neutral": 0.9904,
+        "significance": "NLI: neutral-dominant (99.0%). \"Ability to collaborate effectively with others.\" and \"Ability to identify and develop data and AI leadership talent within the organiz\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5426,
+        "significance": "Bi-encoder 0.543 > STS 0.383 (gap +0.159). Independent encoding finds more similarity than cross-attention. Shared surface terms [ability] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0741,
+        "significance": "Jaccard 7.4%. Shared tokens: [ability]. DCWF-only: [collaborate, effectively, others]. WIDAI-only: [across, ai, backgrounds, building, capability, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

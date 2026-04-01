@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4310",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4310",
+  "focal_document_element_description": "Ability to operate the tools to enumerate a system",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-A-001",
+  "reference_document_element_description": "Ability to select appropriate technical tools, languages, and platforms for data and AI requirements, evaluating trade-offs between performance, maintainability, team capability, ecosystem maturity, and cost.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-A-001 is the strongest semantic match. Secondary: RM-T-004 (RM, cosine: 0.402), OP-T-010 (OP, cosine: 0.394).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3468,
+      "mapped_strength_0_10": 3.5,
+      "final_strength_integer": 4,
+      "significance": "STS 3.5/10 (raw 0.347). Shared vocabulary: [ability, tools]. DCWF-only terms [enumerate, operate, system] vs WIDAI-only terms [ai, appropriate, capability, cost, data, ecosystem] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8971,
+        "recall": 0.8449,
+        "f1": 0.8702,
+        "significance": "BERTScore F1=0.870 (P=0.897, R=0.845). P exceeds R by 0.052 \u2014 the DCWF element's 9 words are well-captured by the WIDAI KSA's 25 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0016,
+        "neutral": 0.998,
+        "significance": "NLI: neutral-dominant (99.8%). \"Ability to operate the tools to enumerate a system\" and \"Ability to select appropriate technical tools, languages, and platforms for data\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4406,
+        "significance": "Bi-encoder 0.441 > STS 0.347 (gap +0.094). Independent encoding finds more similarity than cross-attention. Shared surface terms [ability, tools] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1034,
+        "significance": "Jaccard 10.3%. Shared tokens: [ability, tools]. DCWF-only: [enumerate, operate, system]. WIDAI-only: [ai, appropriate, capability, cost, data, ecosystem]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

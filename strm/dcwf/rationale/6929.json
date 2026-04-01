@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "6929",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "6929",
+  "focal_document_element_description": "Knowledge of control system technologies, such as Programmable Logic Controllers (PLCs), Supervisory Control and Data Acquisition (SCADA) software, Distributed Control Systems (DCS) and Operational Technology (OT).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DQ-K-010",
+  "reference_document_element_description": "Knowledge of metadata types (business, technical, operational, process) and the systems and methods used to collect, store, and maintain each type.",
+  "comments": "DCWF ksa intersects with WIDAI DQ domain. DQ-K-010 is the strongest semantic match. Secondary: AG-K-006 (AG, cosine: 0.492), RM-K-008 (RM, cosine: 0.481).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3586,
+      "mapped_strength_0_10": 3.6,
+      "final_strength_integer": 4,
+      "significance": "STS 3.6/10 (raw 0.359). Shared vocabulary: [knowledge, operational, systems]. DCWF-only terms [acquisition, control, controllers, data, dcs, distributed] vs WIDAI-only terms [business, collect, maintain, metadata, methods, process] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8249,
+        "recall": 0.869,
+        "f1": 0.8464,
+        "significance": "BERTScore F1=0.846 (P=0.825, R=0.869). R exceeds P by 0.044 \u2014 the WIDAI KSA's 21 words are well-captured by the DCWF element's 26 words, but the DCWF element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.4019,
+        "entailment": 0.0024,
+        "neutral": 0.5958,
+        "significance": "NLI: mixed signal (E:0.2%, N:59.6%, C:40.2%). No dominant classification for \"Knowledge of control system technologies, such as Programmable Logic Controllers\" vs \"Knowledge of metadata types (business, technical, operational, process) and the\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5066,
+        "significance": "Bi-encoder 0.507 > STS 0.359 (gap +0.148). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, operational, systems] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1351,
+        "significance": "Jaccard 13.5%. Shared tokens: [knowledge, operational, systems]. DCWF-only: [acquisition, control, controllers, data, dcs, distributed]. WIDAI-only: [business, collect, maintain, metadata, methods, process]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

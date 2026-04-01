@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "5783",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "5783",
+  "focal_document_element_description": "Ensure that the company maintains appropriate privacy and confidentiality notices, consent and authorization forms, and materials.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-T-007",
+  "reference_document_element_description": "Execute data subject rights requests within regulatory timelines, including identity verification, request scope determination, response preparation, exemption assessment, and fulfillment documentation.",
+  "comments": "DCWF task superset of WIDAI RC domain. RC-T-007 is the strongest semantic match. Secondary: SP-T-008 (SP, cosine: 0.532), SP-T-003 (SP, cosine: 0.506).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3104,
+      "mapped_strength_0_10": 3.1,
+      "final_strength_integer": 3,
+      "significance": "STS 3.1/10 (raw 0.310). No substantive shared vocabulary \u2014 relationship is purely semantic. DCWF-only terms [appropriate, authorization, company, confidentiality, consent, ensure] vs WIDAI-only terms [assessment, data, determination, documentation, execute, exemption] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8739,
+        "recall": 0.8481,
+        "f1": 0.8608,
+        "significance": "BERTScore F1=0.861 (P=0.874, R=0.848). P exceeds R by 0.026 \u2014 the DCWF element's 16 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.11,
+        "entailment": 0.0006,
+        "neutral": 0.8895,
+        "significance": "NLI: neutral-dominant (88.9%). \"Ensure that the company maintains appropriate privacy and confidentiality notice\" and \"Execute data subject rights requests within regulatory timelines, including iden\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5515,
+        "significance": "Bi-encoder 0.551 > STS 0.310 (gap +0.241). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0294,
+        "significance": "Jaccard 2.9%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DCWF terms: [appropriate, authorization, company, confidentiality, consent, ensure]. WIDAI terms: [assessment, data, determination, documentation, execute, exemption]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

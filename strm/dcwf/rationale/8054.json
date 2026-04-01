@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8054",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8054",
+  "focal_document_element_description": "Describe the most likely cause of an error and recommend a list of possible solutions given the description of error or system crash.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-A-002",
+  "reference_document_element_description": "Ability to diagnose and resolve technical issues that span multiple system layers, tracing problems across application code, data pipelines, databases, networks, and infrastructure to identify and remediate root causes.",
+  "comments": "DCWF task intersects with WIDAI TF domain. TF-A-002 is the strongest semantic match. Secondary: DQ-K-006 (DQ, cosine: 0.423), TF-S-012 (TF, cosine: 0.421).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4911,
+      "mapped_strength_0_10": 4.9,
+      "final_strength_integer": 5,
+      "significance": "STS 4.9/10 (raw 0.491). Shared vocabulary: [system]. DCWF-only terms [cause, crash, describe, description, error, given] vs WIDAI-only terms [ability, across, application, causes, code, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.856,
+        "recall": 0.8444,
+        "f1": 0.8501,
+        "significance": "BERTScore F1=0.850 (P=0.856, R=0.844). Balanced P/R \u2014 the 23-word DCWF element and 29-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0306,
+        "neutral": 0.9691,
+        "significance": "NLI: neutral-dominant (96.9%). \"Describe the most likely cause of an error and recommend a list of possible solu\" and \"Ability to diagnose and resolve technical issues that span multiple system layer\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5155,
+        "significance": "Bi-encoder 0.515 \u2248 STS 0.491 (gap 0.024). Independent encoding and cross-attention agree. Shared terms [system] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0465,
+        "significance": "Jaccard 4.7%. Shared tokens: [system]. DCWF-only: [cause, crash, describe, description, error, given]. WIDAI-only: [ability, across, application, causes, code, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

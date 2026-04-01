@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4608",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4608",
+  "focal_document_element_description": "Skill in assessing target security posture.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RM-S-002",
+  "reference_document_element_description": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+  "comments": "DCWF ksa superset of WIDAI RM domain. RM-S-002 is the strongest semantic match. Secondary: SP-S-008 (SP, cosine: 0.562), SP-S-003 (SP, cosine: 0.516).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6528,
+      "mapped_strength_0_10": 6.5,
+      "final_strength_integer": 6,
+      "significance": "STS 6.5/10 (raw 0.653). Shared vocabulary: [security, skill]. DCWF-only terms [assessing, posture, target] vs WIDAI-only terms [ai, analysis, assessments, attack, conducting, control] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9281,
+        "recall": 0.8785,
+        "f1": 0.9026,
+        "significance": "BERTScore F1=0.903 (P=0.928, R=0.878). P exceeds R by 0.050 \u2014 the DCWF element's 6 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0011,
+        "entailment": 0.0006,
+        "neutral": 0.9983,
+        "significance": "NLI: neutral-dominant (99.8%). \"Skill in assessing target security posture.\" and \"Skill in conducting AI security assessments, including threat modeling for AI sy\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6207,
+        "significance": "Bi-encoder 0.621 \u2248 STS 0.653 (gap 0.032). Independent encoding and cross-attention agree. Shared terms [security, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1429,
+        "significance": "Jaccard 14.3%. Shared tokens: [security, skill]. DCWF-only: [assessing, posture, target]. WIDAI-only: [ai, analysis, assessments, attack, conducting, control]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

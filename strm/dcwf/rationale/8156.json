@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "8156",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "8156",
+  "focal_document_element_description": "Produce artifacts to inform risk analysis, acceptance testing, and legal review.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-S-006",
+  "reference_document_element_description": "Skill in preparing regulatory examination evidence packages, including control narratives, policy documentation, audit trails, and supporting artifacts that demonstrate compliance to examiner standards.",
+  "comments": "DCWF task superset of WIDAI RC domain. RC-S-006 is the strongest semantic match. Secondary: AB-T-010 (AB, cosine: 0.608), SP-T-004 (SP, cosine: 0.582).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6192,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.619). Shared vocabulary: [artifacts]. DCWF-only terms [acceptance, analysis, inform, legal, produce, review] vs WIDAI-only terms [audit, compliance, control, demonstrate, documentation, evidence] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8931,
+        "recall": 0.8612,
+        "f1": 0.8768,
+        "significance": "BERTScore F1=0.877 (P=0.893, R=0.861). P exceeds R by 0.032 \u2014 the DCWF element's 11 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0026,
+        "neutral": 0.9972,
+        "significance": "NLI: neutral-dominant (99.7%). \"Produce artifacts to inform risk analysis, acceptance testing, and legal review.\" and \"Skill in preparing regulatory examination evidence packages, including control n\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6093,
+        "significance": "Bi-encoder 0.609 \u2248 STS 0.619 (gap 0.010). Independent encoding and cross-attention agree. Shared terms [artifacts] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0968,
+        "significance": "Jaccard 9.7%. Shared tokens: [artifacts]. DCWF-only: [acceptance, analysis, inform, legal, produce, review]. WIDAI-only: [audit, compliance, control, demonstrate, documentation, evidence]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "4",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4",
+  "focal_document_element_description": "Ability to identify systemic security issues based on the analysis of vulnerability and configuration data.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-A-002",
+  "reference_document_element_description": "Ability to diagnose and resolve technical issues that span multiple system layers, tracing problems across application code, data pipelines, databases, networks, and infrastructure to identify and remediate root causes.",
+  "comments": "DCWF ksa intersects with WIDAI TF domain. TF-A-002 is the strongest semantic match. Secondary: TF-S-012 (TF, cosine: 0.465), DQ-A-002 (DQ, cosine: 0.465).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5867,
+      "mapped_strength_0_10": 5.9,
+      "final_strength_integer": 6,
+      "significance": "STS 5.9/10 (raw 0.587). Shared vocabulary: [ability, data, identify, issues]. DCWF-only terms [analysis, based, configuration, security, systemic, vulnerability] vs WIDAI-only terms [across, application, causes, code, databases, diagnose] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9015,
+        "recall": 0.8676,
+        "f1": 0.8843,
+        "significance": "BERTScore F1=0.884 (P=0.901, R=0.868). P exceeds R by 0.034 \u2014 the DCWF element's 15 words are well-captured by the WIDAI KSA's 29 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.2053,
+        "entailment": 0.0054,
+        "neutral": 0.7892,
+        "significance": "NLI: mixed signal (E:0.5%, N:78.9%, C:20.5%). No dominant classification for \"Ability to identify systemic security issues based on the analysis of vulnerabil\" vs \"Ability to diagnose and resolve technical issues that span multiple system layer\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5258,
+        "significance": "Bi-encoder 0.526 < STS 0.587 (gap -0.061). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [analysis, based, configuration] and [across, application, causes] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1714,
+        "significance": "Jaccard 17.1%. Shared tokens: [ability, data, identify, issues]. DCWF-only: [analysis, based, configuration, security, systemic, vulnerability]. WIDAI-only: [across, application, causes, code, databases, diagnose]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

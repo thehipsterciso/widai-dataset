@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "655A",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "655A",
+  "focal_document_element_description": "Facilitate implementation of new or revised laws, regulations, executive orders, policies, standards, or procedures.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-A-004",
+  "reference_document_element_description": "Ability to adapt compliance programs to evolving regulatory landscapes, maintaining organizational readiness as new regulations emerge, existing requirements change, or enforcement priorities shift.",
+  "comments": "DCWF task superset of WIDAI RC domain. RC-A-004 is the strongest semantic match. Secondary: RC-A-001 (RC, cosine: 0.618), RC-S-005 (RC, cosine: 0.583).",
+  "strength_of_relationship": 8,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.7493,
+      "mapped_strength_0_10": 7.5,
+      "final_strength_integer": 8,
+      "significance": "STS 7.5/10 (raw 0.749). Shared vocabulary: [new, regulations]. DCWF-only terms [executive, facilitate, implementation, laws, orders, policies] vs WIDAI-only terms [ability, adapt, change, compliance, emerge, enforcement] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8562,
+        "recall": 0.8511,
+        "f1": 0.8537,
+        "significance": "BERTScore F1=0.854 (P=0.856, R=0.851). Balanced P/R \u2014 the 14-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.0029,
+        "neutral": 0.9971,
+        "significance": "NLI: neutral-dominant (99.7%). \"Facilitate implementation of new or revised laws, regulations, executive orders,\" and \"Ability to adapt compliance programs to evolving regulatory landscapes, maintain\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6278,
+        "significance": "Bi-encoder 0.628 < STS 0.749 (gap -0.121). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [executive, facilitate, implementation] and [ability, adapt, change] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0938,
+        "significance": "Jaccard 9.4%. Shared tokens: [new, regulations]. DCWF-only: [executive, facilitate, implementation, laws, orders, policies]. WIDAI-only: [ability, adapt, change, compliance, emerge, enforcement]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

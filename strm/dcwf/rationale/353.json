@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "353",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "353",
+  "focal_document_element_description": "Skill in collecting data from a variety of cyber defense resources.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "SP-S-008",
+  "reference_document_element_description": "Skill in conducting security assessments of data platforms and AI systems, including vulnerability identification, penetration testing coordination, and security architecture review.",
+  "comments": "DCWF ksa superset of WIDAI SP domain. SP-S-008 is the strongest semantic match. Secondary: RM-S-002 (RM, cosine: 0.577), OP-S-010 (OP, cosine: 0.539).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4452,
+      "mapped_strength_0_10": 4.5,
+      "final_strength_integer": 4,
+      "significance": "STS 4.5/10 (raw 0.445). Shared vocabulary: [data, skill]. DCWF-only terms [collecting, cyber, defense, resources, variety] vs WIDAI-only terms [ai, architecture, assessments, conducting, coordination, identification] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9033,
+        "recall": 0.8695,
+        "f1": 0.8861,
+        "significance": "BERTScore F1=0.886 (P=0.903, R=0.870). P exceeds R by 0.034 \u2014 the DCWF element's 11 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the DCWF element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9801,
+        "entailment": 0.0003,
+        "neutral": 0.0196,
+        "significance": "NLI: contradiction-dominant (98.0%). Despite 'Superset of' classification, the model detects semantic tension between \"Skill in collecting data from a variety of cyber defense resources.\" and \"Skill in conducting security assessments of data platforms and AI systems, inclu\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5791,
+        "significance": "Bi-encoder 0.579 > STS 0.445 (gap +0.134). Independent encoding finds more similarity than cross-attention. Shared surface terms [data, skill] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1538,
+        "significance": "Jaccard 15.4%. Shared tokens: [data, skill]. DCWF-only: [collecting, cyber, defense, resources, variety]. WIDAI-only: [ai, architecture, assessments, conducting, coordination, identification]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

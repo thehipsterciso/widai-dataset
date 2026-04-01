@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-003-DCWF",
+  "fde_id": "381",
+  "fde_type": "ksa",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "381",
+  "focal_document_element_description": "Skill in using forensic tool suites (e.g., EnCase, Sleuthkit, FTK).",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RC-S-006",
+  "reference_document_element_description": "Skill in preparing regulatory examination evidence packages, including control narratives, policy documentation, audit trails, and supporting artifacts that demonstrate compliance to examiner standards.",
+  "comments": "DCWF ksa intersects with WIDAI RC domain. RC-S-006 is the strongest semantic match. Secondary: DQ-S-006 (DQ, cosine: 0.487), AB-S-008 (AB, cosine: 0.479).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4848,
+      "mapped_strength_0_10": 4.8,
+      "final_strength_integer": 5,
+      "significance": "STS 4.8/10 (raw 0.485). Shared vocabulary: [skill]. DCWF-only terms [encase, forensic, ftk, sleuthkit, suites, tool] vs WIDAI-only terms [artifacts, audit, compliance, control, demonstrate, documentation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.841,
+        "recall": 0.8483,
+        "f1": 0.8446,
+        "significance": "BERTScore F1=0.845 (P=0.841, R=0.848). Balanced P/R \u2014 the 10-word DCWF element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9991,
+        "entailment": 0.0,
+        "neutral": 0.0009,
+        "significance": "NLI: contradiction-dominant (99.9%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in using forensic tool suites (e.g., EnCase, Sleuthkit, FTK).\" and \"Skill in preparing regulatory examination evidence packages, including control n\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4979,
+        "significance": "Bi-encoder 0.498 \u2248 STS 0.485 (gap 0.013). Independent encoding and cross-attention agree. Shared terms [skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0625,
+        "significance": "Jaccard 6.2%. Shared tokens: [skill]. DCWF-only: [encase, forensic, ftk, sleuthkit, suites, tool]. WIDAI-only: [artifacts, audit, compliance, control, demonstrate, documentation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}
