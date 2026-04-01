@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-114",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-114",
+  "focal_document_element_description": "Managing decisions and risks involves making and justify decisions characterised by high levels of risk, impact and complexity; build consensus between organisations (private or public) or highly independent and diverse stakeholders; being trusted by senior risk owners as an expert in security; apply risk methodologies at the most complex levels of risk.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RM-S-006",
+  "reference_document_element_description": "Skill in designing and maintaining a model risk governance framework, including policy development, role and responsibility definition, escalation protocols, exception management, and board-level model risk reporting.",
+  "comments": "DDaT skill superset of WIDAI RM domain. RM-S-006 is the strongest semantic match. Secondary: RM-T-007 (RM, cosine: 0.550), DG-K-002 (DG, cosine: 0.536).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.515,
+      "mapped_strength_0_10": 5.2,
+      "final_strength_integer": 5,
+      "significance": "STS 5.2/10 (raw 0.515). Shared vocabulary: [risk]. DDaT-only terms [apply, build, characterised, complex, complexity, consensus] vs WIDAI-only terms [board, definition, designing, development, escalation, exception] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8316,
+        "recall": 0.8547,
+        "f1": 0.843,
+        "significance": "BERTScore F1=0.843 (P=0.832, R=0.855). R exceeds P by 0.023 \u2014 the WIDAI KSA's 26 words are well-captured by the DDaT element's 52 words, but the DDaT element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0013,
+        "entailment": 0.0088,
+        "neutral": 0.9898,
+        "significance": "NLI: neutral-dominant (99.0%). \"Managing decisions and risks involves making and justify decisions characterised\" and \"Skill in designing and maintaining a model risk governance framework, including\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.636,
+        "significance": "Bi-encoder 0.636 > STS 0.515 (gap +0.121). Independent encoding finds more similarity than cross-attention. Shared surface terms [risk] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0492,
+        "significance": "Jaccard 4.9%. Shared tokens: [risk]. DDaT-only: [apply, build, characterised, complex, complexity, consensus]. WIDAI-only: [board, definition, designing, development, escalation, exception]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-072",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-072",
+  "focal_document_element_description": "Designing and executing tests involves applying appropriate test types and techniques to create and run tests that align to user needs and requirements.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-S-005",
+  "reference_document_element_description": "Skill in writing automated tests for data applications, including unit tests for transformation logic, integration tests for pipeline components, and data validation tests using appropriate testing frameworks.",
+  "comments": "DDaT skill intersects with WIDAI TF domain. TF-S-005 is the strongest semantic match. Secondary: RM-S-004 (RM, cosine: 0.501), RM-T-003 (RM, cosine: 0.455).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6148,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.615). Shared vocabulary: [appropriate, tests]. DDaT-only terms [align, applying, create, designing, executing, involves] vs WIDAI-only terms [applications, automated, components, data, frameworks, integration] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.881,
+        "recall": 0.8801,
+        "f1": 0.8806,
+        "significance": "BERTScore F1=0.881 (P=0.881, R=0.880). Balanced P/R \u2014 the 23-word DDaT element and 27-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.021,
+        "neutral": 0.9787,
+        "significance": "NLI: neutral-dominant (97.9%). \"Designing and executing tests involves applying appropriate test types and techn\" and \"Skill in writing automated tests for data applications, including unit tests for\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5961,
+        "significance": "Bi-encoder 0.596 \u2248 STS 0.615 (gap 0.019). Independent encoding and cross-attention agree. Shared terms [appropriate, tests] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0833,
+        "significance": "Jaccard 8.3%. Shared tokens: [appropriate, tests]. DDaT-only: [align, applying, create, designing, executing, involves]. WIDAI-only: [applications, automated, components, data, frameworks, integration]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

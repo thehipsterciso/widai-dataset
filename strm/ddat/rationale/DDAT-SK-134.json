@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-134",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-134",
+  "focal_document_element_description": "Programming and build (frontend developer) involves advising on the right way to apply standards and methods to ensure compliance; provide technical advice to stakeholders and set team-based standards for programming tools and techniques; collaborate with others when required to review specifications; using specifications to build, test and document user interfaces of high complexity, using the appropriate standards and tools.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-T-006",
+  "reference_document_element_description": "Design and build LLM-based application systems, including system prompt design, tool integration, retrieval pipeline, output validation, and failure mode documentation.",
+  "comments": "DDaT skill intersects with WIDAI AI domain. AI-T-006 is the strongest semantic match. Secondary: AI-S-008 (AI, cosine: 0.433), OP-T-001 (OP, cosine: 0.428).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4598,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.460). Shared vocabulary: [based, build]. DDaT-only terms [advice, advising, apply, appropriate, collaborate, complexity] vs WIDAI-only terms [application, design, documentation, failure, integration, llm] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8402,
+        "recall": 0.8572,
+        "f1": 0.8486,
+        "significance": "BERTScore F1=0.849 (P=0.840, R=0.857). Balanced P/R \u2014 the 59-word DDaT element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9917,
+        "entailment": 0.001,
+        "neutral": 0.0073,
+        "significance": "NLI: contradiction-dominant (99.2%). Despite 'Intersects with' classification, the model detects semantic tension between \"Programming and build (frontend developer) involves advising on the right way to\" and \"Design and build LLM-based application systems, including system prompt design,\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4945,
+        "significance": "Bi-encoder 0.494 \u2248 STS 0.460 (gap 0.035). Independent encoding and cross-attention agree. Shared terms [based, build] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0508,
+        "significance": "Jaccard 5.1%. Shared tokens: [based, build]. DDaT-only: [advice, advising, apply, appropriate, collaborate, complexity]. WIDAI-only: [application, design, documentation, failure, integration, llm]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

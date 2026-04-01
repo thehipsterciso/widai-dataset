@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-108",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-108",
+  "focal_document_element_description": "Delivery management involves improving the speed and efficiency with which products and services are developed.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-A-004",
+  "reference_document_element_description": "Ability to design technical implementations that balance immediate delivery requirements with long-term maintainability, scalability, and operational sustainability.",
+  "comments": "DDaT skill intersects with WIDAI TF domain. TF-A-004 is the strongest semantic match. Secondary: DQ-T-011 (DQ, cosine: 0.442), DQ-T-010 (DQ, cosine: 0.397).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4474,
+      "mapped_strength_0_10": 4.5,
+      "final_strength_integer": 4,
+      "significance": "STS 4.5/10 (raw 0.447). Shared vocabulary: [delivery]. DDaT-only terms [developed, efficiency, improving, involves, management, products] vs WIDAI-only terms [ability, balance, design, immediate, implementations, long] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8741,
+        "recall": 0.856,
+        "f1": 0.865,
+        "significance": "BERTScore F1=0.865 (P=0.874, R=0.856). Balanced P/R \u2014 the 15-word DDaT element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0007,
+        "entailment": 0.0283,
+        "neutral": 0.9709,
+        "significance": "NLI: neutral-dominant (97.1%). \"Delivery management involves improving the speed and efficiency with which produ\" and \"Ability to design technical implementations that balance immediate delivery requ\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4383,
+        "significance": "Bi-encoder 0.438 \u2248 STS 0.447 (gap 0.009). Independent encoding and cross-attention agree. Shared terms [delivery] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1034,
+        "significance": "Jaccard 10.3%. Shared tokens: [delivery]. DDaT-only: [developed, efficiency, improving, involves, management, products]. WIDAI-only: [ability, balance, design, immediate, implementations, long]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

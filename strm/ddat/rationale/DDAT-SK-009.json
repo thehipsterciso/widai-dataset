@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-009",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-009",
+  "focal_document_element_description": "Analysis and synthesis involves helping an organisation to adopt a wide range of analysis and synthesis techniques, and to continually assure, improve and innovate their practices to generate clear and valuable findings.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-T-004",
+  "reference_document_element_description": "Translate research findings into production-applicable methods, working with engineering teams to operationalize novel approaches.",
+  "comments": "DDaT skill intersects with WIDAI LS domain. LS-T-004 is the strongest semantic match. Secondary: AB-S-003 (AB, cosine: 0.501), AB-T-001 (AB, cosine: 0.458).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6361,
+      "mapped_strength_0_10": 6.4,
+      "final_strength_integer": 6,
+      "significance": "STS 6.4/10 (raw 0.636). Shared vocabulary: [findings]. DDaT-only terms [adopt, analysis, assure, clear, continually, generate] vs WIDAI-only terms [applicable, approaches, engineering, methods, novel, operationalize] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8529,
+        "recall": 0.8621,
+        "f1": 0.8575,
+        "significance": "BERTScore F1=0.858 (P=0.853, R=0.862). Balanced P/R \u2014 the 32-word DDaT element and 14-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0021,
+        "entailment": 0.0091,
+        "neutral": 0.9888,
+        "significance": "NLI: neutral-dominant (98.9%). \"Analysis and synthesis involves helping an organisation to adopt a wide range of\" and \"Translate research findings into production-applicable methods, working with eng\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5287,
+        "significance": "Bi-encoder 0.529 < STS 0.636 (gap -0.107). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [adopt, analysis, assure] and [applicable, approaches, engineering] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0541,
+        "significance": "Jaccard 5.4%. Shared tokens: [findings]. DDaT-only: [adopt, analysis, assure, clear, continually, generate]. WIDAI-only: [applicable, approaches, engineering, methods, novel, operationalize]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

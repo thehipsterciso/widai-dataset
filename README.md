@@ -108,7 +108,7 @@ Every roadmap item has been scored on impact, overlooked probability, and depend
 
 **Phase 0 — Validate (Complete).** Four parallel tests executed: coverage gap (PASS, 92.2%), AI-assisted KSA quality (PASS, 4.26/5), license audit (CONDITIONAL, 19 frameworks GREEN), consistency audit (PASS, 8.2/10). All assumptions validated. Phase 1 cleared for execution. [Full results →](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
 
-**Phase 1 — First Product (In Progress).** PE assessment methodology fully specified. KSA architecture restructured from role-centric to shared domain pool (12 knowledge domains, many-to-many mappings). STRM framework mapping cycle active — each framework produces per-element rationale files with multi-method computational scoring. Three frameworks complete: O\*NET 30.2 (126 elements), NIST NICE v2.1.0 (2,148 elements), and DoD DCWF v5.1 (2,945 elements). Cross-framework corroboration accumulating across gap signals. [STRM progress →](docs/README.md)
+**Phase 1 — First Product (In Progress).** PE assessment methodology fully specified. KSA architecture restructured from role-centric to shared domain pool (12 knowledge domains, many-to-many mappings). STRM framework mapping cycle active — each framework produces per-element rationale files with multi-method computational scoring. Four Tier 1 frameworks complete: O\*NET 30.2 (126 elements), NIST NICE v2.1.0 (2,148 elements), DoD DCWF v5.1 (2,945 elements), and UK DDaT (189 elements). 5,408 total elements scored across US and international frameworks. 18 gap signals with cross-framework corroboration accumulating. [STRM progress →](docs/README.md)
 
 **Phase 2 — Compliance + Validation.** EU AI Act obligation-to-role mapping ships before August 2026 enforcement. Cross-regulatory role coverage analysis produces the differentiating feature. Regulatory practitioners validate the mappings.
 
@@ -116,15 +116,15 @@ Every roadmap item has been scored on impact, overlooked probability, and depend
 
 **Phase 4 — Scale.** API. Graph database. Full KSA coverage. Funded by Phases 1–3 revenue.
 
-> Seventeen Architectural Decision Records document the reasoning behind every major decision — what was chosen, what was considered, and what the consequences are. [Full roadmap analysis and ADRs →](docs/roadmap/)
+> Eighteen Architectural Decision Records document the reasoning behind every major decision — what was chosen, what was considered, and what the consequences are. [Full roadmap analysis and ADRs →](docs/roadmap/)
 
 ---
 
 ## Current State — Honest Assessment
 
-WIDAI is in active development at version 0.5.5. Transparency about where things stand is a feature, not a disclaimer.
+WIDAI is in active development at version 0.5.6. Transparency about where things stand is a feature, not a disclaimer.
 
-**What exists today:** 187 roles defined across 10 categories. KSAs organized across 12 domain pools with active enrichment through STRM framework mappings. 70+ source frameworks with provenance. Shared-pool KSA architecture with many-to-many role mappings. Entity-separated architecture designed for graph database ingestion. Multi-method computational scoring pipeline producing per-element rationale files. Three framework STRMs complete: O\*NET 30.2 (126 rationale files), NIST NICE v2.1.0 (2,148 rationale files), and DoD DCWF v5.1 (2,945 rationale files). 15 gap signals registered across three STRMs with cross-framework corroboration accumulating.
+**What exists today:** 187 roles defined across 10 categories. KSAs organized across 12 domain pools with active enrichment through STRM framework mappings. 70+ source frameworks with provenance. Shared-pool KSA architecture with many-to-many role mappings. Entity-separated architecture designed for graph database ingestion. Multi-method computational scoring pipeline producing per-element rationale files. Four Tier 1 framework STRMs complete: O\*NET 30.2 (126 rationale files), NIST NICE v2.1.0 (2,148 rationale files), DoD DCWF v5.1 (2,945 rationale files), and UK DDaT (189 rationale files). 5,408 total rationale files. 18 gap signals registered across four STRMs with cross-framework corroboration accumulating.
 
 **What has been validated:** Phase 0 testing confirmed that current coverage supports a PE assessment pilot (92.2% KSA coverage across 5 archetypes), that AI-assisted authoring meets quality standards (4.26/5), and that a clean commercial pathway exists (19 frameworks GREEN for commercial use). The hypothesis is tested, not assumed.
 
@@ -152,8 +152,9 @@ This project does not operate on intuition. The roadmap was produced through a s
 | STRM — O\*NET 30.2 complete | [ADR-015](docs/roadmap/adr/ADR-015-strm-onet.md) | Multi-method scoring pipeline established. |
 | STRM — NIST NICE v2.1.0 complete | [ADR-016](docs/roadmap/adr/ADR-016-strm-nice.md) | 2,148 elements scored. Cybersecurity boundary defined. |
 | STRM — DoD DCWF v5.1 complete | [ADR-017](docs/roadmap/adr/ADR-017-strm-dcwf.md) | 2,945 elements scored. Federal data/AI workforce validated. |
+| STRM — UK DDaT complete | [ADR-018](docs/roadmap/adr/ADR-018-strm-ddat.md) | 189 elements scored. International cross-validation. Tier 1 complete. |
 
-> All 17 ADRs with full context, rationale, and alternatives considered: [`docs/roadmap/adr/`](docs/roadmap/adr/)
+> All 18 ADRs with full context, rationale, and alternatives considered: [`docs/roadmap/adr/`](docs/roadmap/adr/)
 
 ---
 
@@ -196,5 +197,5 @@ WIDAI is built by [Thomas Jones](https://www.linkedin.com/in/yourprofilehere) �
 ---
 
 <p align="center">
-  <sub>Version 0.5.5 · Copyright 2026 Thomas Jones · All rights reserved</sub>
+  <sub>Version 0.5.6 · Copyright 2026 Thomas Jones · All rights reserved</sub>
 </p>

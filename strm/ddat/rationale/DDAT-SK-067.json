@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-067",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-067",
+  "focal_document_element_description": "Data visualisation involves translating business requirements into accessible data visualisations that communicate data, such as tables, charts and graphs.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "AB-K-002",
+  "reference_document_element_description": "Knowledge of data visualization best practices, including chart type selection, cognitive load principles, color accessibility, and the difference between exploratory and explanatory visualization.",
+  "comments": "DDaT skill equal WIDAI AB domain. AB-K-002 is the strongest semantic match. Secondary: OP-K-005 (OP, cosine: 0.570), AB-T-002 (AB, cosine: 0.528).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5369,
+      "mapped_strength_0_10": 5.4,
+      "final_strength_integer": 5,
+      "significance": "STS 5.4/10 (raw 0.537). Shared vocabulary: [data]. DDaT-only terms [accessible, business, charts, communicate, graphs, involves] vs WIDAI-only terms [accessibility, best, chart, cognitive, color, difference] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8839,
+        "recall": 0.8538,
+        "f1": 0.8686,
+        "significance": "BERTScore F1=0.869 (P=0.884, R=0.854). P exceeds R by 0.030 \u2014 the DDaT element's 19 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the DDaT element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0019,
+        "neutral": 0.998,
+        "significance": "NLI: neutral-dominant (99.8%). \"Data visualisation involves translating business requirements into accessible da\" and \"Knowledge of data visualization best practices, including chart type selection,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7248,
+        "significance": "Bi-encoder 0.725 > STS 0.537 (gap +0.188). Independent encoding finds more similarity than cross-attention. Shared surface terms [data] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0556,
+        "significance": "Jaccard 5.6%. Shared tokens: [data]. DDaT-only: [accessible, business, charts, communicate, graphs, involves]. WIDAI-only: [accessibility, best, chart, cognitive, color, difference]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

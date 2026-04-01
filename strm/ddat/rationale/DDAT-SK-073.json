@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-073",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-073",
+  "focal_document_element_description": "Designing for everyone involves measurably improving the practice of inclusive, accessible and environmentally sustainable design in multiple teams or across your organisation; helping others understand and mitigate the influence of privilege and power on the design and delivery of content and services.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-T-003",
+  "reference_document_element_description": "Build and lead cross-functional transformation teams, establishing shared objectives, working norms, and accountability structures across organizational boundaries.",
+  "comments": "DDaT skill intersects with WIDAI LS domain. LS-T-003 is the strongest semantic match. Secondary: AB-S-003 (AB, cosine: 0.326), LS-S-004 (LS, cosine: 0.310).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3963,
+      "mapped_strength_0_10": 4.0,
+      "final_strength_integer": 4,
+      "significance": "STS 4.0/10 (raw 0.396). Shared vocabulary: [across, teams]. DDaT-only terms [accessible, content, delivery, design, designing, environmentally] vs WIDAI-only terms [accountability, boundaries, build, cross, establishing, functional] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.844,
+        "recall": 0.8639,
+        "f1": 0.8538,
+        "significance": "BERTScore F1=0.854 (P=0.844, R=0.864). Balanced P/R \u2014 the 42-word DDaT element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0033,
+        "neutral": 0.9962,
+        "significance": "NLI: neutral-dominant (99.6%). \"Designing for everyone involves measurably improving the practice of inclusive,\" and \"Build and lead cross-functional transformation teams, establishing shared object\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4413,
+        "significance": "Bi-encoder 0.441 \u2248 STS 0.396 (gap 0.045). Independent encoding and cross-attention agree. Shared terms [across, teams] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0638,
+        "significance": "Jaccard 6.4%. Shared tokens: [across, teams]. DDaT-only: [accessible, content, delivery, design, designing, environmentally]. WIDAI-only: [accountability, boundaries, build, cross, establishing, functional]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

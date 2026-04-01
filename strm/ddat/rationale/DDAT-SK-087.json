@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-087",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-087",
+  "focal_document_element_description": "Evaluation planning and strategy involves working with stakeholders to develop plans for monitoring and evaluating products and services, and gaining support for effective evaluation.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-T-001",
+  "reference_document_element_description": "Execute analytical requests from business stakeholders, including data extraction, transformation, analysis, and delivery of findings with documented methodology.",
+  "comments": "DDaT skill intersects with WIDAI AB domain. AB-T-001 is the strongest semantic match. Secondary: LS-T-004 (LS, cosine: 0.479), OP-T-008 (OP, cosine: 0.476).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4558,
+      "mapped_strength_0_10": 4.6,
+      "final_strength_integer": 5,
+      "significance": "STS 4.6/10 (raw 0.456). Shared vocabulary: [stakeholders]. DDaT-only terms [develop, effective, evaluating, evaluation, gaining, involves] vs WIDAI-only terms [analysis, analytical, business, data, delivery, documented] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8783,
+        "recall": 0.8795,
+        "f1": 0.8789,
+        "significance": "BERTScore F1=0.879 (P=0.878, R=0.879). Balanced P/R \u2014 the 24-word DDaT element and 18-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0067,
+        "entailment": 0.0014,
+        "neutral": 0.9919,
+        "significance": "NLI: neutral-dominant (99.2%). \"Evaluation planning and strategy involves working with stakeholders to develop p\" and \"Execute analytical requests from business stakeholders, including data extractio\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5692,
+        "significance": "Bi-encoder 0.569 > STS 0.456 (gap +0.113). Independent encoding finds more similarity than cross-attention. Shared surface terms [stakeholders] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0882,
+        "significance": "Jaccard 8.8%. Shared tokens: [stakeholders]. DDaT-only: [develop, effective, evaluating, evaluation, gaining, involves]. WIDAI-only: [analysis, analytical, business, data, delivery, documented]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -3,6 +3,33 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.5.6] - 2026-04-01
+
+### Phase 1C: STRM-004 — UK Government DDaT Capability Framework (ADR-018)
+
+**Fourth STRM complete — Tier 1 complete.** DDaT Capability Framework mapped against WIDAI KSA Pool v0.5.2. First international framework. First 100% match rate.
+
+**Why:** DDaT is the UK government's authoritative digital/data workforce framework — 52 roles across 8 role families with 189 skills. As the first non-US framework in the STRM sequence, DDaT provides cross-jurisdictional validation: does a workforce framework developed under entirely different institutional context confirm WIDAI's KSA coverage patterns?
+
+**What changed:**
+- 189 DDaT skills evaluated exhaustively across all 8 role families
+- Relationship distribution: 123 Intersects with (65.1%), 55 Superset of (29.1%), 11 Equal (5.8%), 0 No relationship (0.0%)
+- 100% match rate — first STRM with zero no-relationship classifications
+- Mean strength (scored): 4.72/10 — between STRM-001 (4.18, general-purpose) and STRM-003 (4.79, federal), reflecting DDaT's broad scope
+- 39 DDaT skills with empty source descriptions resolved through proficiency-level text synthesis, fully tagged and validated
+- 3 gap signals identified: foundational communication skills (moderate, corroborates ONET-GAP-001), workforce planning/financial management (low, corroborates DCWF-GAP-002), IT security management boundary (low, new)
+- 2 of 3 gap signals corroborate existing gaps — cross-framework evidence accumulation continues
+- Tier 1 complete: 4 frameworks, 5,408 elements scored, 5,408 rationale files, 18 gap signals
+- QA/QC: PASS on all 7 criteria
+
+**Scoring methodology — identical to STRM-001 through STRM-003:**
+- Bi-encoder candidate identification (189 × 497 = 93,933 pairs) via all-MiniLM-L6-v2
+- Full multi-method scoring pipeline (STS primary + 4 secondary) for all 189 scored pairs
+- 189 per-FDE rationale files with content-specific significance
+- Every significance field references actual text content — no templated or score-derived language
+
+**New files:** `strm/ddat/` (strm_mapping.json, scoring_summary.json, strm_scoring_pipeline.py, qa_qc_report.json, 189 rationale files), `strm/issues/STRM-004-DDAT-gaps.json`, `sources/ddat/` (ddat_roles_skills.csv, ddat_skills_az.csv, ddat_elements.json, ddat_citation.json, ddat_skill_candidates.json), `docs/roadmap/adr/ADR-018-strm-ddat.md`
+
 ## [0.5.5] - 2026-04-01
 
 ### Phase 1C: STRM-003 — DoD Cyber Workforce Framework (DCWF) v5.1 (ADR-017)

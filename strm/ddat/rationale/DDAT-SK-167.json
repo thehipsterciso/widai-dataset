@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-167",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-167",
+  "focal_document_element_description": "Technical understanding (user-centred design) involves demonstrating knowledge of the technologies used to build and operate digital services; collaborate closely with colleagues in different digital disciplines.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-S-004",
+  "reference_document_element_description": "Skill in communicating model findings and limitations to non-technical business stakeholders in terms of business impact rather than technical metrics.",
+  "comments": "DDaT skill intersects with WIDAI AI domain. AI-S-004 is the strongest semantic match. Secondary: OP-S-004 (OP, cosine: 0.474), AB-S-002 (AB, cosine: 0.467).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.249,
+      "mapped_strength_0_10": 2.5,
+      "final_strength_integer": 2,
+      "significance": "STS 2.5/10 (raw 0.249). Shared vocabulary: [technical]. DDaT-only terms [build, centred, closely, collaborate, colleagues, demonstrating] vs WIDAI-only terms [business, communicating, findings, impact, limitations, metrics] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8543,
+        "recall": 0.8634,
+        "f1": 0.8588,
+        "significance": "BERTScore F1=0.859 (P=0.854, R=0.863). Balanced P/R \u2014 the 25-word DDaT element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9979,
+        "entailment": 0.0,
+        "neutral": 0.0021,
+        "significance": "NLI: contradiction-dominant (99.8%). Despite 'Intersects with' classification, the model detects semantic tension between \"Technical understanding (user-centred design) involves demonstrating knowledge o\" and \"Skill in communicating model findings and limitations to non-technical business\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4926,
+        "significance": "Bi-encoder 0.493 > STS 0.249 (gap +0.244). Independent encoding finds more similarity than cross-attention. Shared surface terms [technical] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1316,
+        "significance": "Jaccard 13.2%. Shared tokens: [technical]. DDaT-only: [build, centred, closely, collaborate, colleagues, demonstrating]. WIDAI-only: [business, communicating, findings, impact, limitations, metrics]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

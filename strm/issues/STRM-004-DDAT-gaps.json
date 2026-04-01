@@ -1,0 +1,64 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "framework_id": "DDaT",
+  "framework_version": "Current as of 2026-03-23",
+  "widai_version": "0.5.2",
+  "assessment_date": "2026-04-01",
+  "total_gap_signals": 3,
+  "note": "Gap signals are thematic clusters derived from DDaT STRM analysis. DDaT is the first framework with a 100% match rate — all gap signals emerge from weak-strength patterns (strength ≤2) rather than no-relationship boundaries. 16 very-weak elements analyzed thematically. The majority are expected out-of-scope for a data/AI workforce framework (accessibility, UX/service design, IT security). Three signals warrant registration: one corroborates an existing O*NET gap, one strengthens accumulating DCWF evidence, and one provides a new boundary-zone observation. Per ADR-014, gaps are registered here and resolved during Phase 1D Synthesis.",
+
+  "gaps": [
+    {
+      "gap_id": "DDAT-GAP-001",
+      "title": "Foundational Communication Skills for Data/AI Professionals",
+      "severity": "moderate",
+      "triggering_fdes": [
+        {"id": "DDAT-SK-016", "name": "Communication (data governance manager)", "strength": 0},
+        {"id": "DDAT-SK-033", "name": "Communication (IT operations)", "strength": 1},
+        {"id": "DDAT-SK-071", "name": "Communication (data scientist/engineer)", "strength": 1}
+      ],
+      "domains_searched": ["OP", "LS", "DG"],
+      "nearest_miss": "OP-S-004 (translating technical concepts for non-technical audiences), LS-S-008 (executive communication)",
+      "description": "DDaT defines 'Communication' as a skill across multiple role families — data governance manager, IT operations, and data science/engineering roles. WIDAI covers technical communication (OP-S-004) and executive communication (LS-S-008) but lacks foundational professional communication competencies: stakeholder engagement techniques, written documentation standards, meeting facilitation, active listening, cross-functional communication protocols, and tailoring communication to different organizational levels. The very low scores (0-1) confirm that DDaT's communication skills — which emphasize 'conveying information using the most effective medium' — find minimal overlap with WIDAI's more specialized communication KSAs.",
+      "corroborates": "ONET-GAP-001 (Foundational Communication Skills)",
+      "cross_strm_evidence": "Second framework (after O*NET) to independently surface foundational communication as a WIDAI gap. O*NET surfaced it via general professional competencies (Active Listening, Oral/Written Communication). DDaT surfaces it via role-specific communication requirements across data governance, operations, and data science contexts. The cross-jurisdictional corroboration (US general labor market + UK government digital/data framework) strengthens the case: communication skills are universal workforce competencies that WIDAI's domain-specific focus currently underserves.",
+      "suggested_domain": "OP",
+      "authoring_guidance": "See ONET-GAP-001 authoring guidance. The DDaT corroboration adds specificity: communication is needed at all organizational levels within data/AI functions, not just executive-level. Consider both Knowledge KSAs (communication theory for technical contexts) and Skill KSAs (stakeholder engagement, documentation, facilitation).",
+      "synthesis_recommendation": "Upgraded to moderate priority based on dual-framework corroboration (O*NET + DDaT). Cross-jurisdictional evidence from an international framework strengthens the case. Communication is a foundational professional competency that every WIDAI role exercises daily."
+    },
+    {
+      "gap_id": "DDAT-GAP-002",
+      "title": "Workforce Planning, Organizational Design, and Financial Management for Data/AI Functions",
+      "severity": "low",
+      "triggering_fdes": [
+        {"id": "DDAT-SK-027", "name": "Commercial management", "strength": 2},
+        {"id": "DDAT-SK-092", "name": "Financial ownership", "strength": 1},
+        {"id": "DDAT-SK-152", "name": "Strategic ownership", "strength": 2}
+      ],
+      "domains_searched": ["LS", "OP", "DG"],
+      "nearest_miss": "LS-S-001 (multi-year strategy execution), LS-K-008 (workforce planning), DG-K-009 (data governance funding models)",
+      "description": "DDaT defines commercial management, financial ownership, and strategic ownership as workforce competencies for digital/data leaders. WIDAI covers strategic planning (LS-S-001) and workforce planning at a high level (LS-K-008) but lacks operational management competencies: budget management for data/AI programs, commercial/vendor management, procurement strategy, and the financial ownership dimension of CDAIO leadership. These are daily operational competencies for CDOs/CDAIOs that sit between WIDAI's strategic leadership KSAs and its operational process KSAs.",
+      "corroborates": "DCWF-GAP-002 (Workforce Planning, Budgeting, and Organizational Design for Data/AI Functions)",
+      "cross_strm_evidence": "Third framework to surface workforce planning/organizational management as a boundary-zone gap. O*NET surfaced project/time management (ONET-GAP-004), DCWF surfaced workforce planning and budgeting (DCWF-GAP-002), DDaT now surfaces commercial management and financial ownership. The accumulating evidence across three frameworks — US general labor market, US federal cyber workforce, and UK government digital/data workforce — points to a consistent underservice of operational management competencies in WIDAI's LS domain.",
+      "suggested_domain": "LS",
+      "authoring_guidance": "See DCWF-GAP-002 authoring guidance. DDaT adds the commercial/financial dimension. Consider KSAs covering: data/AI program budgeting and financial justification, vendor/contractor strategy for data services, organizational design patterns for data/AI functions, and commercial management of data products and services.",
+      "synthesis_recommendation": "Low priority as standalone DDaT signal, but this is now the third framework to surface operational management competencies. Cumulative evidence (O*NET + DCWF + DDaT) across three independent frameworks should trigger evaluation during Phase 1D synthesis for potential LS domain expansion."
+    },
+    {
+      "gap_id": "DDAT-GAP-003",
+      "title": "IT Security Management as Data/AI Boundary Competency",
+      "severity": "low",
+      "triggering_fdes": [
+        {"id": "DDAT-SK-179", "name": "Security management", "strength": 1}
+      ],
+      "domains_searched": ["SP", "RM", "OP"],
+      "nearest_miss": "SP-K-001 (security architecture principles), RM-K-003 (third-party risk assessment)",
+      "description": "DDaT defines 'Security management' as a skill for IT operations roles — identifying and protecting organizational assets, understanding security practices, implementing access control, and managing security incidents. WIDAI covers security architecture (SP domain) and risk management (RM domain) at the data/AI governance level but lacks operational IT security management competencies that data/AI teams interact with daily: access control implementation, security incident coordination from the data team perspective, security policy compliance for data platforms, and security operations collaboration. This is a boundary-zone observation: WIDAI intentionally defers to NICE for cybersecurity competencies, but data/AI professionals need working-level security management knowledge that sits between full cybersecurity expertise and zero security awareness.",
+      "corroborates": null,
+      "cross_strm_evidence": "First framework to surface IT security management as a distinct boundary observation. Prior STRMs (NICE, DCWF) surfaced incident response as a gap (NICE-GAP-002, DCWF-GAP-001), which is related but narrower. DDaT's framing is broader: it defines security management as a general IT operations competency that every digital/data professional should possess, not just a cybersecurity specialist skill. This aligns with WIDAI's boundary methodology — security management may be a cross-cutting competency that WIDAI roles exercise even though cybersecurity is out of scope.",
+      "suggested_domain": "SP",
+      "authoring_guidance": "Evaluate whether WIDAI's SP domain should include working-level security management KSAs for data/AI professionals (as distinct from NICE-level cybersecurity competencies). Consider: 'Knowledge of IT security management principles relevant to data and AI operations, including access control implementation, security incident coordination, security policy compliance for data platforms, and security operations collaboration.' This would serve data engineers, data architects, and AI operations roles.",
+      "synthesis_recommendation": "Low priority. Monitor for corroboration from SFIA (which defines IT security management as a skill) and EU AI Act (which requires security measures for AI systems). If both corroborate, this may warrant a small set of working-level security KSAs in the SP domain — designed to complement rather than duplicate NICE competencies."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-033",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-033",
+  "focal_document_element_description": "Communication involves conveying information using the most effective medium and language for the audience.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-A-001",
+  "reference_document_element_description": "Ability to identify and resolve conflicts between data monetization objectives and data protection, privacy, and ethical obligations.",
+  "comments": "DDaT skill intersects with WIDAI SP domain. SP-A-001 is the strongest semantic match. Secondary: DQ-S-009 (DQ, cosine: 0.474), SP-A-004 (SP, cosine: 0.447).",
+  "strength_of_relationship": 1,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.1375,
+      "mapped_strength_0_10": 1.4,
+      "final_strength_integer": 1,
+      "significance": "STS 1.4/10 (raw 0.138). No substantive shared vocabulary \u2014 relationship is purely semantic. DDaT-only terms [audience, communication, conveying, effective, information, involves] vs WIDAI-only terms [ability, conflicts, data, ethical, identify, monetization] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8525,
+        "recall": 0.8529,
+        "f1": 0.8527,
+        "significance": "BERTScore F1=0.853 (P=0.853, R=0.853). Balanced P/R \u2014 the 14-word DDaT element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9765,
+        "entailment": 0.0193,
+        "neutral": 0.0042,
+        "significance": "NLI: contradiction-dominant (97.7%). Despite 'Intersects with' classification, the model detects semantic tension between \"Communication involves conveying information using the most effective medium and\" and \"Ability to identify and resolve conflicts between data monetization objectives a\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.1253,
+        "significance": "Bi-encoder 0.125 \u2248 STS 0.138 (gap 0.012). Independent encoding and cross-attention agree. Shared terms [none] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0385,
+        "significance": "Jaccard 3.9%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DDaT terms: [audience, communication, conveying, effective, information, involves]. WIDAI terms: [ability, conflicts, data, ethical, identify, monetization]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

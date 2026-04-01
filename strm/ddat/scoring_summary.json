@@ -1,0 +1,80 @@
+{
+  "pipeline_run_date": "2026-04-01",
+  "strm_id": "STRM-004-DDAT",
+  "framework": "DDaT Capability Framework",
+  "methodology": {
+    "primary": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "role": "Generates strength_of_relationship integer (0-10)",
+      "mapping": "raw_score (0-1) x 10, rounded to nearest integer"
+    },
+    "secondary": [
+      {
+        "name": "BERTScore",
+        "model": "roberta-large",
+        "role": "Token-level audit trail"
+      },
+      {
+        "name": "NLI Cross-Encoder",
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "role": "Directional implication classification"
+      },
+      {
+        "name": "Bi-Encoder Cosine",
+        "model": "all-MiniLM-L6-v2",
+        "role": "Independent embedding cosine similarity"
+      },
+      {
+        "name": "Jaccard Token",
+        "model": null,
+        "role": "Lexical baseline"
+      }
+    ]
+  },
+  "statistics": {
+    "total_mappings": 189,
+    "scored_mappings": 189,
+    "no_relationship_mappings": 0,
+    "strength_distribution": {
+      "all": {
+        "mean": 4.72,
+        "median": 5.0,
+        "std": 1.34,
+        "min": 0.0,
+        "max": 7.0
+      },
+      "scored_only": {
+        "mean": 4.72,
+        "median": 5.0,
+        "std": 1.29,
+        "min": 0.4,
+        "max": 7.1
+      },
+      "by_relationship_type": {
+        "Equal": {
+          "count": 11,
+          "mean": 5.38,
+          "median": 5.4,
+          "min": 4.6,
+          "max": 6.0
+        },
+        "Intersects with": {
+          "count": 123,
+          "mean": 4.32,
+          "median": 4.6,
+          "min": 0.4,
+          "max": 6.6
+        },
+        "Superset of": {
+          "count": 55,
+          "mean": 5.5,
+          "median": 5.5,
+          "min": 3.2,
+          "max": 7.1
+        }
+      }
+    },
+    "rationale_files_generated": 189
+  }
+}

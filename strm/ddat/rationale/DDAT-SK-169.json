@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-169",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-169",
+  "focal_document_element_description": "You can:\n- evaluate the advantages and disadvantages of a wide range of significant previous, current and potential technologies\n- assess if the organisation has the most appropriate technologies to achieve its goals\n- quickly assess unfamiliar technology for potential use in your organisation\nExamples of leadership using this skill:\n- building credibility with people at all levels of your organisation by demonstrating your knowledge of different technologies\n- effectively explaining benefits and risks of unfamiliar technology so that technical and non-technical stakeholders can make informed decisions\n- guiding decisions on technology solutions made by stakeholders with different agendas and different levels of technical understanding",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-A-003",
+  "reference_document_element_description": "Ability to evaluate and adopt new technologies, frameworks, and tools for data and AI work, assessing maturity, community support, integration requirements, and organizational fit before recommending adoption.",
+  "comments": "DDaT skill intersects with WIDAI TF domain. TF-A-003 is the strongest semantic match. Secondary: LS-S-011 (LS, cosine: 0.493), DA-S-002 (DA, cosine: 0.475).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5583,
+      "mapped_strength_0_10": 5.6,
+      "final_strength_integer": 6,
+      "significance": "STS 5.6/10 (raw 0.558). Shared vocabulary: [evaluate, technologies]. DDaT-only terms [achieve, advantages, agendas, appropriate, assess, benefits] vs WIDAI-only terms [ability, adopt, adoption, ai, assessing, community] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.821,
+        "recall": 0.8564,
+        "f1": 0.8383,
+        "significance": "BERTScore F1=0.838 (P=0.821, R=0.856). R exceeds P by 0.035 \u2014 the WIDAI KSA's 27 words are well-captured by the DDaT element's 105 words, but the DDaT element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.0013,
+        "neutral": 0.9987,
+        "significance": "NLI: neutral-dominant (99.9%). \"You can:\n- evaluate the advantages and disadvantages of a wide range of signific\" and \"Ability to evaluate and adopt new technologies, frameworks, and tools for data a\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4827,
+        "significance": "Bi-encoder 0.483 < STS 0.558 (gap -0.076). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [achieve, advantages, agendas] and [ability, adopt, adoption] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0581,
+        "significance": "Jaccard 5.8%. Shared tokens: [evaluate, technologies]. DDaT-only: [achieve, advantages, agendas, appropriate, assess, benefits]. WIDAI-only: [ability, adopt, adoption, ai, assessing, community]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

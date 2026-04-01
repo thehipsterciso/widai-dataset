@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-141",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-141",
+  "focal_document_element_description": "Security technology involves understanding security architectures and identifying vulnerabilities to prevent and respond to cyber breaches.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-S-008",
+  "reference_document_element_description": "Skill in conducting security assessments of data platforms and AI systems, including vulnerability identification, penetration testing coordination, and security architecture review.",
+  "comments": "DDaT skill intersects with WIDAI SP domain. SP-S-008 is the strongest semantic match. Secondary: SP-K-001 (SP, cosine: 0.502), SP-A-003 (SP, cosine: 0.500).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6576,
+      "mapped_strength_0_10": 6.6,
+      "final_strength_integer": 7,
+      "significance": "STS 6.6/10 (raw 0.658). Shared vocabulary: [security]. DDaT-only terms [architectures, breaches, cyber, identifying, involves, prevent] vs WIDAI-only terms [ai, architecture, assessments, conducting, coordination, data] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8895,
+        "recall": 0.8818,
+        "f1": 0.8857,
+        "significance": "BERTScore F1=0.886 (P=0.889, R=0.882). Balanced P/R \u2014 the 16-word DDaT element and 21-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0021,
+        "neutral": 0.9978,
+        "significance": "NLI: neutral-dominant (99.8%). \"Security technology involves understanding security architectures and identifyin\" and \"Skill in conducting security assessments of data platforms and AI systems, inclu\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5622,
+        "significance": "Bi-encoder 0.562 < STS 0.658 (gap -0.095). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [architectures, breaches, cyber] and [ai, architecture, assessments] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0667,
+        "significance": "Jaccard 6.7%. Shared tokens: [security]. DDaT-only: [architectures, breaches, cyber, identifying, involves, prevent]. WIDAI-only: [ai, architecture, assessments, conducting, coordination, data]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

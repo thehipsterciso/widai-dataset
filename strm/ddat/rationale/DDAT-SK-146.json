@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-146",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-146",
+  "focal_document_element_description": "Stakeholder relationship management involves building trust, managing stakeholder expectations and communications, and remaining focused on user needs.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DG-A-005",
+  "reference_document_element_description": "Ability to serve as an effective bridge between business stakeholders who generate and consume data and technical stakeholders who store and process it.",
+  "comments": "DDaT skill intersects with WIDAI DG domain. DG-A-005 is the strongest semantic match. Secondary: AB-T-004 (AB, cosine: 0.437), DQ-S-009 (DQ, cosine: 0.431).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3744,
+      "mapped_strength_0_10": 3.7,
+      "final_strength_integer": 4,
+      "significance": "STS 3.7/10 (raw 0.374). No substantive shared vocabulary \u2014 relationship is purely semantic. DDaT-only terms [building, communications, expectations, focused, involves, management] vs WIDAI-only terms [ability, bridge, business, consume, data, effective] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8729,
+        "recall": 0.8657,
+        "f1": 0.8693,
+        "significance": "BERTScore F1=0.869 (P=0.873, R=0.866). Balanced P/R \u2014 the 17-word DDaT element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0007,
+        "entailment": 0.011,
+        "neutral": 0.9883,
+        "significance": "NLI: neutral-dominant (98.8%). \"Stakeholder relationship management involves building trust, managing stakeholde\" and \"Ability to serve as an effective bridge between business stakeholders who genera\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4586,
+        "significance": "Bi-encoder 0.459 > STS 0.374 (gap +0.084). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0303,
+        "significance": "Jaccard 3.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DDaT terms: [building, communications, expectations, focused, involves, management]. WIDAI terms: [ability, bridge, business, consume, data, effective]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

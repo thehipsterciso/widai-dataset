@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-100",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-100",
+  "focal_document_element_description": "IT infrastructure involves ensuring systems and processes are available, adaptable, reliable and secure.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AI-T-015",
+  "reference_document_element_description": "Provision, configure, and maintain the data platform infrastructure, including compute environments, storage systems, networking, and security controls.",
+  "comments": "DDaT skill superset of WIDAI AI domain. AI-T-015 is the strongest semantic match. Secondary: OP-A-003 (OP, cosine: 0.551), DA-S-007 (DA, cosine: 0.470).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5664,
+      "mapped_strength_0_10": 5.7,
+      "final_strength_integer": 6,
+      "significance": "STS 5.7/10 (raw 0.566). Shared vocabulary: [infrastructure, systems]. DDaT-only terms [adaptable, available, ensuring, involves, processes, reliable] vs WIDAI-only terms [compute, configure, controls, data, environments, maintain] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8826,
+        "recall": 0.8852,
+        "f1": 0.8839,
+        "significance": "BERTScore F1=0.884 (P=0.883, R=0.885). Balanced P/R \u2014 the 13-word DDaT element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0,
+        "entailment": 0.9928,
+        "neutral": 0.0072,
+        "significance": "NLI: entailment-dominant (99.3%). The model interprets \"IT infrastructure involves ensuring systems and processes are available, adaptab\" as logically implying aspects of \"Provision, configure, and maintain the data platform infrastructure, including c\" \u2014 directional semantic containment consistent with 'Superset of' classification."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6009,
+        "significance": "Bi-encoder 0.601 \u2248 STS 0.566 (gap 0.034). Independent encoding and cross-attention agree. Shared terms [infrastructure, systems] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.12,
+        "significance": "Jaccard 12.0%. Shared tokens: [infrastructure, systems]. DDaT-only: [adaptable, available, ensuring, involves, processes, reliable]. WIDAI-only: [compute, configure, controls, data, environments, maintain]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

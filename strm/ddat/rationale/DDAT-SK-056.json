@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-056",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-056",
+  "focal_document_element_description": "Data integration design involves designing systems, APIs and data models to enable secure and efficient interoperability across services.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DA-K-004",
+  "reference_document_element_description": "Knowledge of data integration patterns including ETL, ELT, event streaming, CDC (change data capture), API-based integration, and data virtualization.",
+  "comments": "DDaT skill superset of WIDAI DA domain. DA-K-004 is the strongest semantic match. Secondary: DA-T-004 (DA, cosine: 0.609), DA-T-001 (DA, cosine: 0.609).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5604,
+      "mapped_strength_0_10": 5.6,
+      "final_strength_integer": 6,
+      "significance": "STS 5.6/10 (raw 0.560). Shared vocabulary: [data, integration]. DDaT-only terms [across, apis, design, designing, efficient, enable] vs WIDAI-only terms [api, based, capture, cdc, change, elt] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8817,
+        "recall": 0.8612,
+        "f1": 0.8713,
+        "significance": "BERTScore F1=0.871 (P=0.882, R=0.861). P exceeds R by 0.021 \u2014 the DDaT element's 18 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the DDaT element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0006,
+        "entailment": 0.0034,
+        "neutral": 0.996,
+        "significance": "NLI: neutral-dominant (99.6%). \"Data integration design involves designing systems, APIs and data models to enab\" and \"Knowledge of data integration patterns including ETL, ELT, event streaming, CDC\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6566,
+        "significance": "Bi-encoder 0.657 > STS 0.560 (gap +0.096). Independent encoding finds more similarity than cross-attention. Shared surface terms [data, integration] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1,
+        "significance": "Jaccard 10.0%. Shared tokens: [data, integration]. DDaT-only: [across, apis, design, designing, efficient, enable]. WIDAI-only: [api, based, capture, cdc, change, elt]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

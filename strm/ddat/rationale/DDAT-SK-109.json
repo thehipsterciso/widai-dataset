@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-109",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-109",
+  "focal_document_element_description": "Making and guiding decisions involves making and justify decisions characterised by high levels of risk, impact and complexity; build consensus between organisations (private or public) or highly independent and diverse stakeholders.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-T-009",
+  "reference_document_element_description": "Design and execute quantitative analyses for high-stakes business decisions, including methodology selection, sensitivity analysis, and uncertainty quantification.",
+  "comments": "DDaT skill intersects with WIDAI AB domain. AB-T-009 is the strongest semantic match. Secondary: RM-S-006 (RM, cosine: 0.470), LS-S-010 (LS, cosine: 0.464).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.471,
+      "mapped_strength_0_10": 4.7,
+      "final_strength_integer": 5,
+      "significance": "STS 4.7/10 (raw 0.471). Shared vocabulary: [decisions, high]. DDaT-only terms [build, characterised, complexity, consensus, diverse, guiding] vs WIDAI-only terms [analyses, analysis, business, design, execute, methodology] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8353,
+        "recall": 0.8596,
+        "f1": 0.8473,
+        "significance": "BERTScore F1=0.847 (P=0.835, R=0.860). R exceeds P by 0.024 \u2014 the WIDAI KSA's 17 words are well-captured by the DDaT element's 31 words, but the DDaT element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0113,
+        "entailment": 0.0013,
+        "neutral": 0.9874,
+        "significance": "NLI: neutral-dominant (98.7%). \"Making and guiding decisions involves making and justify decisions characterised\" and \"Design and execute quantitative analyses for high-stakes business decisions, inc\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.51,
+        "significance": "Bi-encoder 0.510 \u2248 STS 0.471 (gap 0.039). Independent encoding and cross-attention agree. Shared terms [decisions, high] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0769,
+        "significance": "Jaccard 7.7%. Shared tokens: [decisions, high]. DDaT-only: [build, characterised, complexity, consensus, diverse, guiding]. WIDAI-only: [analyses, analysis, business, design, execute, methodology]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

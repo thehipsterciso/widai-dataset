@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-015",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-015",
+  "focal_document_element_description": "Architect for the whole context involves assessing how trends in society and industry practices might impact the organisation; working with people outside of your organisation to inform policies, strategies and standards; anticipating changes to policy and build resilience through your architectural work; coaching others in identifying important trends.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DA-S-004",
+  "reference_document_element_description": "Skill in designing ML training and serving infrastructure that scales from prototype to production without requiring architectural rework.",
+  "comments": "DDaT skill intersects with WIDAI DA domain. DA-S-004 is the strongest semantic match. Secondary: DQ-K-007 (DQ, cosine: 0.346), AG-S-002 (AG, cosine: 0.337).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.1709,
+      "mapped_strength_0_10": 1.7,
+      "final_strength_integer": 2,
+      "significance": "STS 1.7/10 (raw 0.171). Shared vocabulary: [architectural]. DDaT-only terms [anticipating, architect, assessing, build, changes, coaching] vs WIDAI-only terms [designing, infrastructure, ml, production, prototype, requiring] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8289,
+        "recall": 0.8426,
+        "f1": 0.8357,
+        "significance": "BERTScore F1=0.836 (P=0.829, R=0.843). Balanced P/R \u2014 the 48-word DDaT element and 18-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9997,
+        "entailment": 0.0,
+        "neutral": 0.0002,
+        "significance": "NLI: contradiction-dominant (100.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Architect for the whole context involves assessing how trends in society and ind\" and \"Skill in designing ML training and serving infrastructure that scales from proto\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.3762,
+        "significance": "Bi-encoder 0.376 > STS 0.171 (gap +0.205). Independent encoding finds more similarity than cross-attention. Shared surface terms [architectural] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0741,
+        "significance": "Jaccard 7.4%. Shared tokens: [architectural]. DDaT-only: [anticipating, architect, assessing, build, changes, coaching]. WIDAI-only: [designing, infrastructure, ml, production, prototype, requiring]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

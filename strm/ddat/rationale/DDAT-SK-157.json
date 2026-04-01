@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-157",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-157",
+  "focal_document_element_description": "Systems design involves creating the specification and design of systems to meet defined business needs.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-T-010",
+  "reference_document_element_description": "Design and build computer vision systems for defined business applications, including dataset preparation, model training, evaluation, deployment, and performance monitoring.",
+  "comments": "DDaT skill intersects with WIDAI AI domain. AI-T-010 is the strongest semantic match. Secondary: AI-T-008 (AI, cosine: 0.447), AI-T-006 (AI, cosine: 0.421).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.642,
+      "mapped_strength_0_10": 6.4,
+      "final_strength_integer": 6,
+      "significance": "STS 6.4/10 (raw 0.642). Shared vocabulary: [business, defined, design, systems]. DDaT-only terms [creating, involves, meet, needs, specification] vs WIDAI-only terms [applications, build, computer, dataset, deployment, evaluation] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8967,
+        "recall": 0.8738,
+        "f1": 0.8851,
+        "significance": "BERTScore F1=0.885 (P=0.897, R=0.874). P exceeds R by 0.023 \u2014 the DDaT element's 15 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the DDaT element."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0002,
+        "neutral": 0.9996,
+        "significance": "NLI: neutral-dominant (100.0%). \"Systems design involves creating the specification and design of systems to meet\" and \"Design and build computer vision systems for defined business applications, incl\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5209,
+        "significance": "Bi-encoder 0.521 < STS 0.642 (gap -0.121). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [creating, involves, meet] and [applications, build, computer] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1852,
+        "significance": "Jaccard 18.5%. Shared tokens: [business, defined, design, systems]. DDaT-only: [creating, involves, meet, needs, specification]. WIDAI-only: [applications, build, computer, dataset, deployment, evaluation]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-150",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-150",
+  "focal_document_element_description": "You can:\n- develop an organisational data strategy that supports the organisation\u2019s objectives\n- identify underlying causes of data challenges faced by other leaders and make strategic recommendations to resolve them\n- decide what data technologies and changes are needed to better support organisational strategy\nExamples of leadership using this skill:\n- aligning the data strategy and organisational strategy to create shared direction and increased trust\n- changing operations in the organisation to be more aware of, and driven by, data\n- changing the organisation\u2019s view of data so it is viewed as an asset, not a risk or liability",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DG-K-001",
+  "reference_document_element_description": "Knowledge of enterprise data strategy frameworks, including data governance operating models, data architecture principles, and the organizational interdependencies that determine data program effectiveness.",
+  "comments": "DDaT skill superset of WIDAI DG domain. DG-K-001 is the strongest semantic match. Secondary: LS-T-010 (LS, cosine: 0.595), DG-A-002 (DG, cosine: 0.589).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6027,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.603). Shared vocabulary: [data, strategy]. DDaT-only terms [aligning, asset, aware, better, causes, challenges] vs WIDAI-only terms [architecture, determine, effectiveness, enterprise, frameworks, governance] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8309,
+        "recall": 0.8695,
+        "f1": 0.8497,
+        "significance": "BERTScore F1=0.850 (P=0.831, R=0.870). R exceeds P by 0.039 \u2014 the WIDAI KSA's 23 words are well-captured by the DDaT element's 100 words, but the DDaT element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0097,
+        "neutral": 0.9902,
+        "significance": "NLI: neutral-dominant (99.0%). \"You can:\n- develop an organisational data strategy that supports the organisatio\" and \"Knowledge of enterprise data strategy frameworks, including data governance oper\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5724,
+        "significance": "Bi-encoder 0.572 \u2248 STS 0.603 (gap 0.030). Independent encoding and cross-attention agree. Shared terms [data, strategy] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0741,
+        "significance": "Jaccard 7.4%. Shared tokens: [data, strategy]. DDaT-only: [aligning, asset, aware, better, causes, challenges]. WIDAI-only: [architecture, determine, effectiveness, enterprise, frameworks, governance]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

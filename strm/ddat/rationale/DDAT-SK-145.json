@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-145",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-145",
+  "focal_document_element_description": "You can:\n- ensure digital, data and technology shapes the organisation\u2019s strategy\n- lead digital, data and technology thinking, processes and practices, and integrate them into organisational decision making\n- ensure digital, data and technology meets user needs and enables the organisation's outcomes\nExamples of leadership using this skill:\n- creating partnerships across the organisation to build trust as a recognised strategic leader\n- increasing understanding amongst senior leaders so that everyone shares the value of using digital, data and technology to shape the organisation\u2019s strategy\n- rooting conversations on the organisation\u2019s strategy in user needs and challenging strategic decisions made without understanding the user's context",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DQ-S-009",
+  "reference_document_element_description": "Skill in communicating data quality and data trust issues to non-technical executive stakeholders in terms of business risk and operational impact.",
+  "comments": "DDaT skill superset of WIDAI DQ domain. DQ-S-009 is the strongest semantic match. Secondary: LS-T-010 (LS, cosine: 0.536), OP-A-003 (OP, cosine: 0.516).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.6123,
+      "mapped_strength_0_10": 6.1,
+      "final_strength_integer": 6,
+      "significance": "STS 6.1/10 (raw 0.612). Shared vocabulary: [data, skill, trust]. DDaT-only terms [across, amongst, build, challenging, context, conversations] vs WIDAI-only terms [business, communicating, executive, impact, issues, non] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8196,
+        "recall": 0.8568,
+        "f1": 0.8378,
+        "significance": "BERTScore F1=0.838 (P=0.820, R=0.857). R exceeds P by 0.037 \u2014 the WIDAI KSA's 21 words are well-captured by the DDaT element's 106 words, but the DDaT element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0006,
+        "neutral": 0.9991,
+        "significance": "NLI: neutral-dominant (99.9%). \"You can:\n- ensure digital, data and technology shapes the organisation\u2019s strateg\" and \"Skill in communicating data quality and data trust issues to non-technical execu\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5379,
+        "significance": "Bi-encoder 0.538 < STS 0.612 (gap -0.074). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [across, amongst, build] and [business, communicating, executive] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0921,
+        "significance": "Jaccard 9.2%. Shared tokens: [data, skill, trust]. DDaT-only: [across, amongst, build, challenging, context, conversations]. WIDAI-only: [business, communicating, executive, impact, issues, non]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

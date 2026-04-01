@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-160",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-160",
+  "focal_document_element_description": "Systems integration (frontend developer) involves defining the static assets build; co-ordinating all aspects of the integration and take responsibility for the tests around the user interface; configure the part of the system that uses the network and test that it works as expected.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AI-T-006",
+  "reference_document_element_description": "Design and build LLM-based application systems, including system prompt design, tool integration, retrieval pipeline, output validation, and failure mode documentation.",
+  "comments": "DDaT skill intersects with WIDAI AI domain. AI-T-006 is the strongest semantic match. Secondary: OP-A-003 (OP, cosine: 0.430), DA-S-007 (DA, cosine: 0.420).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4009,
+      "mapped_strength_0_10": 4.0,
+      "final_strength_integer": 4,
+      "significance": "STS 4.0/10 (raw 0.401). Shared vocabulary: [build, integration, system, systems]. DDaT-only terms [around, aspects, assets, co, configure, defining] vs WIDAI-only terms [application, based, design, documentation, failure, llm] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8417,
+        "recall": 0.8619,
+        "f1": 0.8517,
+        "significance": "BERTScore F1=0.852 (P=0.842, R=0.862). R exceeds P by 0.020 \u2014 the WIDAI KSA's 20 words are well-captured by the DDaT element's 43 words, but the DDaT element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.9984,
+        "entailment": 0.0004,
+        "neutral": 0.0012,
+        "significance": "NLI: contradiction-dominant (99.8%). Despite 'Intersects with' classification, the model detects semantic tension between \"Systems integration (frontend developer) involves defining the static assets bui\" and \"Design and build LLM-based application systems, including system prompt design,\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4455,
+        "significance": "Bi-encoder 0.446 \u2248 STS 0.401 (gap 0.045). Independent encoding and cross-attention agree. Shared terms [build, integration, system, systems] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1042,
+        "significance": "Jaccard 10.4%. Shared tokens: [build, integration, system, systems]. DDaT-only: [around, aspects, assets, co, configure, defining]. WIDAI-only: [application, based, design, documentation, failure, llm]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

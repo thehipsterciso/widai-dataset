@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-162",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-162",
+  "focal_document_element_description": "Technical design throughout the life cycle involves creating technical designs characterised by high risk, impact, and complexity; leading and guide others in creating technical designs that achieve organisational objectives; using feedback to optimise and refine standards for technical designs throughout the life cycle.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "TF-A-004",
+  "reference_document_element_description": "Ability to design technical implementations that balance immediate delivery requirements with long-term maintainability, scalability, and operational sustainability.",
+  "comments": "DDaT skill intersects with WIDAI TF domain. TF-A-004 is the strongest semantic match. Secondary: LS-T-004 (LS, cosine: 0.464), AI-S-008 (AI, cosine: 0.434).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5578,
+      "mapped_strength_0_10": 5.6,
+      "final_strength_integer": 6,
+      "significance": "STS 5.6/10 (raw 0.558). Shared vocabulary: [design, technical]. DDaT-only terms [achieve, characterised, complexity, creating, cycle, designs] vs WIDAI-only terms [ability, balance, delivery, immediate, implementations, long] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8539,
+        "recall": 0.8637,
+        "f1": 0.8588,
+        "significance": "BERTScore F1=0.859 (P=0.854, R=0.864). Balanced P/R \u2014 the 43-word DDaT element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0055,
+        "neutral": 0.9942,
+        "significance": "NLI: neutral-dominant (99.4%). \"Technical design throughout the life cycle involves creating technical designs c\" and \"Ability to design technical implementations that balance immediate delivery requ\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5323,
+        "significance": "Bi-encoder 0.532 \u2248 STS 0.558 (gap 0.025). Independent encoding and cross-attention agree. Shared terms [design, technical] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1136,
+        "significance": "Jaccard 11.4%. Shared tokens: [design, technical]. DDaT-only: [achieve, characterised, complexity, creating, cycle, designs]. WIDAI-only: [ability, balance, delivery, immediate, implementations, long]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

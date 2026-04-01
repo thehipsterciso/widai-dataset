@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-129",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-129",
+  "focal_document_element_description": "Product leadership involves advocating for product management, encouraging a user-focussed, product-led approach and contributing to a self-sustaining product community.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DQ-K-016",
+  "reference_document_element_description": "Knowledge of product management practices as applied to data products, including roadmap prioritization, consumer discovery, feedback loops, and value measurement.",
+  "comments": "DDaT skill intersects with WIDAI DQ domain. DQ-K-016 is the strongest semantic match. Secondary: DQ-T-010 (DQ, cosine: 0.380), DQ-T-011 (DQ, cosine: 0.368).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.3254,
+      "mapped_strength_0_10": 3.2,
+      "final_strength_integer": 3,
+      "significance": "STS 3.2/10 (raw 0.325). Shared vocabulary: [management, product]. DDaT-only terms [advocating, approach, community, contributing, encouraging, focussed] vs WIDAI-only terms [applied, consumer, data, discovery, feedback, knowledge] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8711,
+        "recall": 0.8769,
+        "f1": 0.874,
+        "significance": "BERTScore F1=0.874 (P=0.871, R=0.877). Balanced P/R \u2014 the 19-word DDaT element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0009,
+        "neutral": 0.9986,
+        "significance": "NLI: neutral-dominant (99.9%). \"Product leadership involves advocating for product management, encouraging a use\" and \"Knowledge of product management practices as applied to data products, including\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5444,
+        "significance": "Bi-encoder 0.544 > STS 0.325 (gap +0.219). Independent encoding finds more similarity than cross-attention. Shared surface terms [management, product] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1176,
+        "significance": "Jaccard 11.8%. Shared tokens: [management, product]. DDaT-only: [advocating, approach, community, contributing, encouraging, focussed]. WIDAI-only: [applied, consumer, data, discovery, feedback, knowledge]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

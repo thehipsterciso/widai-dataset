@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-093",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-093",
+  "focal_document_element_description": "Governance and assurance involves ensuring appropriate and proportionate governance and assurance is in place to support delivery.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RM-S-006",
+  "reference_document_element_description": "Skill in designing and maintaining a model risk governance framework, including policy development, role and responsibility definition, escalation protocols, exception management, and board-level model risk reporting.",
+  "comments": "DDaT skill intersects with WIDAI RM domain. RM-S-006 is the strongest semantic match. Secondary: DG-T-004 (DG, cosine: 0.471), DG-K-007 (DG, cosine: 0.462).",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4281,
+      "mapped_strength_0_10": 4.3,
+      "final_strength_integer": 4,
+      "significance": "STS 4.3/10 (raw 0.428). Shared vocabulary: [governance]. DDaT-only terms [appropriate, assurance, delivery, ensuring, involves, place] vs WIDAI-only terms [board, definition, designing, development, escalation, exception] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8614,
+        "recall": 0.8459,
+        "f1": 0.8536,
+        "significance": "BERTScore F1=0.854 (P=0.861, R=0.846). Balanced P/R \u2014 the 17-word DDaT element and 26-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0008,
+        "entailment": 0.0025,
+        "neutral": 0.9967,
+        "significance": "NLI: neutral-dominant (99.7%). \"Governance and assurance involves ensuring appropriate and proportionate governa\" and \"Skill in designing and maintaining a model risk governance framework, including\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5394,
+        "significance": "Bi-encoder 0.539 > STS 0.428 (gap +0.111). Independent encoding finds more similarity than cross-attention. Shared surface terms [governance] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0909,
+        "significance": "Jaccard 9.1%. Shared tokens: [governance]. DDaT-only: [appropriate, assurance, delivery, ensuring, involves, place]. WIDAI-only: [board, definition, designing, development, escalation, exception]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

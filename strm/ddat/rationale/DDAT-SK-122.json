@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-122",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-122",
+  "focal_document_element_description": "You can:\n- ensure that technology and data architecture optimises how the organisation delivers outcomes\n- oversee the development and performance of technology and data standards to support the changing landscape whilst ensuring inclusivity, security and ethical practices\n- ensure interoperability in technology and data to support organisational and cross-government delivery\nExamples of leadership using this skill:\n- increasing the board\u2019s understanding of the technology and data architecture needed to make use of emerging technologies in the changing digital, data and technology landscape\n- providing thought leadership and building partnerships in cross-government and external networks to increase and support interoperability\n- setting the agenda for reusability and sustainability in digital, data and technology",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "DA-T-001",
+  "reference_document_element_description": "Design and document the enterprise data architecture, including platform topology, data domain structure, integration patterns, and data lifecycle policies.",
+  "comments": "DDaT skill superset of WIDAI DA domain. DA-T-001 is the strongest semantic match. Secondary: OP-A-003 (OP, cosine: 0.599), DG-K-007 (DG, cosine: 0.596).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5448,
+      "mapped_strength_0_10": 5.5,
+      "final_strength_integer": 6,
+      "significance": "STS 5.5/10 (raw 0.545). Shared vocabulary: [architecture, data]. DDaT-only terms [agenda, board, building, changing, cross, delivers] vs WIDAI-only terms [design, document, domain, enterprise, integration, lifecycle] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8113,
+        "recall": 0.8631,
+        "f1": 0.8364,
+        "significance": "BERTScore F1=0.836 (P=0.811, R=0.863). R exceeds P by 0.052 \u2014 the WIDAI KSA's 19 words are well-captured by the DDaT element's 113 words, but the DDaT element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0032,
+        "neutral": 0.9967,
+        "significance": "NLI: neutral-dominant (99.7%). \"You can:\n- ensure that technology and data architecture optimises how the organi\" and \"Design and document the enterprise data architecture, including platform topolog\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5594,
+        "significance": "Bi-encoder 0.559 \u2248 STS 0.545 (gap 0.015). Independent encoding and cross-attention agree. Shared terms [architecture, data] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0541,
+        "significance": "Jaccard 5.4%. Shared tokens: [architecture, data]. DDaT-only: [agenda, board, building, changing, cross, delivers]. WIDAI-only: [design, document, domain, enterprise, integration, lifecycle]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

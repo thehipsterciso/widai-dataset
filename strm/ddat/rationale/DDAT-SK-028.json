@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-028",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-028",
+  "focal_document_element_description": "Commercial management involves exploring commercial opportunities whilst complying with the regulations on how we conduct and manage both internal and third party relationships.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-S-013",
+  "reference_document_element_description": "Skill in negotiating strategic vendor partnerships for data and AI platforms, including commercial terms, roadmap alignment, dependency management, and exit strategy planning.",
+  "comments": "DDaT skill intersects with WIDAI LS domain. LS-S-013 is the strongest semantic match. Secondary: AI-S-004 (AI, cosine: 0.387), AB-A-001 (AB, cosine: 0.386).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4794,
+      "mapped_strength_0_10": 4.8,
+      "final_strength_integer": 5,
+      "significance": "STS 4.8/10 (raw 0.479). Shared vocabulary: [commercial, management]. DDaT-only terms [complying, conduct, exploring, internal, involves, manage] vs WIDAI-only terms [ai, alignment, data, dependency, exit, negotiating] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8683,
+        "recall": 0.8647,
+        "f1": 0.8665,
+        "significance": "BERTScore F1=0.867 (P=0.868, R=0.865). Balanced P/R \u2014 the 23-word DDaT element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0012,
+        "entailment": 0.0017,
+        "neutral": 0.9971,
+        "significance": "NLI: neutral-dominant (99.7%). \"Commercial management involves exploring commercial opportunities whilst complyi\" and \"Skill in negotiating strategic vendor partnerships for data and AI platforms, in\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4223,
+        "significance": "Bi-encoder 0.422 < STS 0.479 (gap -0.057). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [complying, conduct, exploring] and [ai, alignment, data] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0769,
+        "significance": "Jaccard 7.7%. Shared tokens: [commercial, management]. DDaT-only: [complying, conduct, exploring, internal, involves, manage]. WIDAI-only: [ai, alignment, data, dependency, exit, negotiating]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

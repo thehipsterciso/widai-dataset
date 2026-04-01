@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-177",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-177",
+  "focal_document_element_description": "Understanding analysis across the product life cycle involves developing sustainable support models; identifying and deal with potential risks across or between all stages of the product life cycle; coaching others; contribute to the assessment of other teams, providing guidance and support as they move through the product life cycle phases.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-K-003",
+  "reference_document_element_description": "Knowledge of common analytical frameworks, including cohort analysis, funnel analysis, segmentation, time series analysis, and A/B test result interpretation.",
+  "comments": "DDaT skill intersects with WIDAI AB domain. AB-K-003 is the strongest semantic match. Secondary: LS-T-004 (LS, cosine: 0.491), AB-T-001 (AB, cosine: 0.485).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4891,
+      "mapped_strength_0_10": 4.9,
+      "final_strength_integer": 5,
+      "significance": "STS 4.9/10 (raw 0.489). Shared vocabulary: [analysis]. DDaT-only terms [across, assessment, coaching, contribute, cycle, deal] vs WIDAI-only terms [analytical, b, cohort, common, frameworks, funnel] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8232,
+        "recall": 0.8461,
+        "f1": 0.8345,
+        "significance": "BERTScore F1=0.835 (P=0.823, R=0.846). R exceeds P by 0.023 \u2014 the WIDAI KSA's 19 words are well-captured by the DDaT element's 50 words, but the DDaT element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0015,
+        "entailment": 0.0056,
+        "neutral": 0.9928,
+        "significance": "NLI: neutral-dominant (99.3%). \"Understanding analysis across the product life cycle involves developing sustain\" and \"Knowledge of common analytical frameworks, including cohort analysis, funnel ana\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4957,
+        "significance": "Bi-encoder 0.496 \u2248 STS 0.489 (gap 0.007). Independent encoding and cross-attention agree. Shared terms [analysis] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0577,
+        "significance": "Jaccard 5.8%. Shared tokens: [analysis]. DDaT-only: [across, assessment, coaching, contribute, cycle, deal]. WIDAI-only: [analytical, b, cohort, common, frameworks, funnel]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

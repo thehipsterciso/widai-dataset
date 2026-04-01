@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-003",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-003",
+  "focal_document_element_description": "Agile and Lean practices involves encouraging teams to build incrementally, test and iterate their work based on regular feedback and other useful data.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "DA-T-011",
+  "reference_document_element_description": "Build and maintain automated data pipelines with version-controlled transformations, automated testing, environment parity between development and production, and deployment processes that enable rapid iteration without production risk.",
+  "comments": "DDaT skill intersects with WIDAI DA domain. DA-T-011 is the strongest semantic match. Secondary: LS-T-004 (LS, cosine: 0.372), LS-T-003 (LS, cosine: 0.364).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.59,
+      "mapped_strength_0_10": 5.9,
+      "final_strength_integer": 6,
+      "significance": "STS 5.9/10 (raw 0.590). Shared vocabulary: [build, data]. DDaT-only terms [agile, based, encouraging, feedback, incrementally, involves] vs WIDAI-only terms [automated, controlled, deployment, development, enable, environment] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8626,
+        "recall": 0.8555,
+        "f1": 0.859,
+        "significance": "BERTScore F1=0.859 (P=0.863, R=0.856). Balanced P/R \u2014 the 23-word DDaT element and 27-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0003,
+        "entailment": 0.0016,
+        "neutral": 0.9981,
+        "significance": "NLI: neutral-dominant (99.8%). \"Agile and Lean practices involves encouraging teams to build incrementally, test\" and \"Build and maintain automated data pipelines with version-controlled transformati\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.437,
+        "significance": "Bi-encoder 0.437 < STS 0.590 (gap -0.153). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [agile, based, encouraging] and [automated, controlled, deployment] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0714,
+        "significance": "Jaccard 7.1%. Shared tokens: [build, data]. DDaT-only: [agile, based, encouraging, feedback, incrementally, involves]. WIDAI-only: [automated, controlled, deployment, development, enable, environment]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

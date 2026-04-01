@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-184",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-184",
+  "focal_document_element_description": "User focus involves understanding the user needs to develop a detailed understanding of the problems that need to be solved.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-A-002",
+  "reference_document_element_description": "Ability to select the appropriate analytical method for a given business question, balancing statistical rigor, time constraints, data availability, and audience comprehension capacity.",
+  "comments": "DDaT skill intersects with WIDAI AB domain. AB-A-002 is the strongest semantic match. Secondary: DG-S-001 (DG, cosine: 0.340), AB-S-006 (AB, cosine: 0.338).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.1996,
+      "mapped_strength_0_10": 2.0,
+      "final_strength_integer": 2,
+      "significance": "STS 2.0/10 (raw 0.200). No substantive shared vocabulary \u2014 relationship is purely semantic. DDaT-only terms [detailed, develop, focus, involves, needs, problems] vs WIDAI-only terms [ability, analytical, appropriate, audience, availability, balancing] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8643,
+        "recall": 0.8511,
+        "f1": 0.8576,
+        "significance": "BERTScore F1=0.858 (P=0.864, R=0.851). Balanced P/R \u2014 the 20-word DDaT element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0058,
+        "entailment": 0.0207,
+        "neutral": 0.9734,
+        "significance": "NLI: neutral-dominant (97.3%). \"User focus involves understanding the user needs to develop a detailed understan\" and \"Ability to select the appropriate analytical method for a given business questio\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.382,
+        "significance": "Bi-encoder 0.382 > STS 0.200 (gap +0.182). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0833,
+        "significance": "Jaccard 8.3%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DDaT terms: [detailed, develop, focus, involves, needs, problems]. WIDAI terms: [ability, analytical, appropriate, audience, availability, balancing]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-130",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-130",
+  "focal_document_element_description": "Product management involves making sure that products provide value and drive the right outcomes, whilst balancing user and business needs. This is achieved by working with other professions in your team to frame the problem and make decisions on priorities for your delivery teams.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "DQ-K-016",
+  "reference_document_element_description": "Knowledge of product management practices as applied to data products, including roadmap prioritization, consumer discovery, feedback loops, and value measurement.",
+  "comments": "DDaT skill equal WIDAI DQ domain. DQ-K-016 is the strongest semantic match. Secondary: DQ-T-011 (DQ, cosine: 0.455), DQ-T-010 (DQ, cosine: 0.437).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5122,
+      "mapped_strength_0_10": 5.1,
+      "final_strength_integer": 5,
+      "significance": "STS 5.1/10 (raw 0.512). Shared vocabulary: [management, product, products, value]. DDaT-only terms [achieved, balancing, business, decisions, delivery, drive] vs WIDAI-only terms [applied, consumer, data, discovery, feedback, knowledge] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8543,
+        "recall": 0.8753,
+        "f1": 0.8647,
+        "significance": "BERTScore F1=0.865 (P=0.854, R=0.875). R exceeds P by 0.021 \u2014 the WIDAI KSA's 20 words are well-captured by the DDaT element's 44 words, but the DDaT element contains broader scope not fully reflected in the matched WIDAI KSA."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0004,
+        "entailment": 0.0005,
+        "neutral": 0.9992,
+        "significance": "NLI: neutral-dominant (99.9%). \"Product management involves making sure that products provide value and drive th\" and \"Knowledge of product management practices as applied to data products, including\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6655,
+        "significance": "Bi-encoder 0.665 > STS 0.512 (gap +0.153). Independent encoding finds more similarity than cross-attention. Shared surface terms [management, product, products, value] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1111,
+        "significance": "Jaccard 11.1%. Shared tokens: [management, product, products, value]. DDaT-only: [achieved, balancing, business, decisions, delivery, drive]. WIDAI-only: [applied, consumer, data, discovery, feedback, knowledge]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

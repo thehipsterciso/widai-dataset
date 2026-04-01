@@ -1,7 +1,7 @@
 {
   "dataset_id": "WIDAI-DATASET",
   "dataset_title": "WIDAI — A Workforce Framework for Talent, Leadership, and Skills in Data and AI",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "schema_version": "2.0.0",
   "status": "development",
   "created_date": "2026-03-26",
@@ -113,7 +113,7 @@
     },
     "docs": {
       "description": "Architecture decisions, research, and assessments.",
-      "adr_count": 17
+      "adr_count": 18
     },
     "sources": {
       "description": "Canonical source citations and working copies for STRM framework mapping.",
@@ -121,12 +121,13 @@
         "onet_30_2_citation.json": { "description": "O*NET 30.2 canonical source citation" },
         "onet_30_2/": { "description": "O*NET 30.2 raw database (CC BY 4.0)" },
         "nice_framework/": { "description": "NICE Framework v2.1.0 source data (NIST JSON, XLSX, citation, candidate screening, build scripts)" },
-        "dcwf/": { "description": "DCWF v5.1 source data (Work Role Tool XLSX, extracted elements, citation, candidate screening)" }
+        "dcwf/": { "description": "DCWF v5.1 source data (Work Role Tool XLSX, extracted elements, citation, candidate screening)" },
+        "ddat/": { "description": "DDaT Capability Framework source data (CSV exports, extracted elements, citation, candidate screening)" }
       }
     },
     "strm": {
       "description": "NIST IR 8477 Set Theory Relationship Mapping deliverables per ADR-014.",
-      "completed_strms": 3,
+      "completed_strms": 4,
       "frameworks": {
         "onet": {
           "strm_id": "STRM-001-ONET",
@@ -148,6 +149,13 @@
           "fdes_evaluated": 2945,
           "status": "complete",
           "adr": "ADR-017"
+        },
+        "ddat": {
+          "strm_id": "STRM-004-DDAT",
+          "framework_version": "2026-03-23",
+          "fdes_evaluated": 189,
+          "status": "complete",
+          "adr": "ADR-018"
         }
       },
       "issues_directory": "strm/issues/"

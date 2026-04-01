@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-074",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-074",
+  "focal_document_element_description": "Designing secure systems involves leading design and review solutions to complex problems with system architectures by defining and challenging patterns and principles; create precedents and set direction.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "SP-K-010",
+  "reference_document_element_description": "Knowledge of privacy-by-design and privacy-by-default principles, including their application to system architecture, data minimization, purpose limitation, storage limitation, and consent management design patterns.",
+  "comments": "DDaT skill intersects with WIDAI SP domain. SP-K-010 is the strongest semantic match. Secondary: SP-A-002 (SP, cosine: 0.459), SP-K-003 (SP, cosine: 0.457).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4974,
+      "mapped_strength_0_10": 5.0,
+      "final_strength_integer": 5,
+      "significance": "STS 5.0/10 (raw 0.497). Shared vocabulary: [design, patterns, principles, system]. DDaT-only terms [architectures, challenging, complex, create, defining, designing] vs WIDAI-only terms [application, architecture, consent, data, default, knowledge] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8444,
+        "recall": 0.85,
+        "f1": 0.8472,
+        "significance": "BERTScore F1=0.847 (P=0.844, R=0.850). Balanced P/R \u2014 the 27-word DDaT element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0007,
+        "entailment": 0.0018,
+        "neutral": 0.9975,
+        "significance": "NLI: neutral-dominant (99.8%). \"Designing secure systems involves leading design and review solutions to complex\" and \"Knowledge of privacy-by-design and privacy-by-default principles, including thei\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.4847,
+        "significance": "Bi-encoder 0.485 \u2248 STS 0.497 (gap 0.013). Independent encoding and cross-attention agree. Shared terms [design, patterns, principles, system] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1795,
+        "significance": "Jaccard 17.9%. Shared tokens: [design, patterns, principles, system]. DDaT-only: [architectures, challenging, complex, create, defining, designing]. WIDAI-only: [application, architecture, consent, data, default, knowledge]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

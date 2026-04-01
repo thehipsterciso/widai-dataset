@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-008",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-008",
+  "focal_document_element_description": "Analysis and insight involves examining, interpreting and analysing data to help make informed decisions.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-A-003",
+  "reference_document_element_description": "Ability to distinguish between correlation and causation in analytical findings, communicating the distinction and its implications for decision-making clearly to business audiences.",
+  "comments": "DDaT skill superset of WIDAI AB domain. AB-A-003 is the strongest semantic match. Secondary: AB-T-001 (AB, cosine: 0.526), AB-S-002 (AB, cosine: 0.524).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4737,
+      "mapped_strength_0_10": 4.7,
+      "final_strength_integer": 5,
+      "significance": "STS 4.7/10 (raw 0.474). No substantive shared vocabulary \u2014 relationship is purely semantic. DDaT-only terms [analysing, analysis, data, decisions, examining, help] vs WIDAI-only terms [ability, analytical, audiences, business, causation, clearly] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8719,
+        "recall": 0.8593,
+        "f1": 0.8656,
+        "significance": "BERTScore F1=0.866 (P=0.872, R=0.859). Balanced P/R \u2014 the 14-word DDaT element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0002,
+        "entailment": 0.0006,
+        "neutral": 0.9991,
+        "significance": "NLI: neutral-dominant (99.9%). \"Analysis and insight involves examining, interpreting and analysing data to help\" and \"Ability to distinguish between correlation and causation in analytical findings,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.552,
+        "significance": "Bi-encoder 0.552 > STS 0.474 (gap +0.078). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0625,
+        "significance": "Jaccard 6.2%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DDaT terms: [analysing, analysis, data, decisions, examining, help]. WIDAI terms: [ability, analytical, audiences, business, causation, clearly]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

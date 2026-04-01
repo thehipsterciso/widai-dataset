@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-029",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-029",
+  "focal_document_element_description": "Communicating analysis and insight involves communicating relevant, compelling stories using the most appropriate medium; making complex recommendations at a tactical and strategic level.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "AB-A-001",
+  "reference_document_element_description": "Ability to identify and communicate when analytical findings challenge prevailing business narratives, presenting disconfirming evidence constructively and with appropriate context.",
+  "comments": "DDaT skill superset of WIDAI AB domain. AB-A-001 is the strongest semantic match. Secondary: AB-S-002 (AB, cosine: 0.583), LS-S-005 (LS, cosine: 0.579).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5022,
+      "mapped_strength_0_10": 5.0,
+      "final_strength_integer": 5,
+      "significance": "STS 5.0/10 (raw 0.502). Shared vocabulary: [appropriate]. DDaT-only terms [analysis, communicating, compelling, complex, insight, involves] vs WIDAI-only terms [ability, analytical, business, challenge, communicate, constructively] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8699,
+        "recall": 0.8649,
+        "f1": 0.8674,
+        "significance": "BERTScore F1=0.867 (P=0.870, R=0.865). Balanced P/R \u2014 the 23-word DDaT element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0009,
+        "entailment": 0.0046,
+        "neutral": 0.9945,
+        "significance": "NLI: neutral-dominant (99.5%). \"Communicating analysis and insight involves communicating relevant, compelling s\" and \"Ability to identify and communicate when analytical findings challenge prevailin\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6197,
+        "significance": "Bi-encoder 0.620 > STS 0.502 (gap +0.118). Independent encoding finds more similarity than cross-attention. Shared surface terms [appropriate] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0526,
+        "significance": "Jaccard 5.3%. Shared tokens: [appropriate]. DDaT-only: [analysis, communicating, compelling, complex, insight, involves]. WIDAI-only: [ability, analytical, business, challenge, communicate, constructively]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

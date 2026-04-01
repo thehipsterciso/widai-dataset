@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-065",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-065",
+  "focal_document_element_description": "Data science involves examining data through statistical analysis and data mining, to identify patterns and uncover insights that can inform decision-making.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "OP-K-005",
+  "reference_document_element_description": "Knowledge of data literacy concepts, including reading and interpreting charts, understanding data sources, recognizing misleading visualizations, and applying basic statistical reasoning.",
+  "comments": "DDaT skill superset of WIDAI OP domain. OP-K-005 is the strongest semantic match. Secondary: AI-S-005 (AI, cosine: 0.508), DG-K-001 (DG, cosine: 0.495).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5211,
+      "mapped_strength_0_10": 5.2,
+      "final_strength_integer": 5,
+      "significance": "STS 5.2/10 (raw 0.521). Shared vocabulary: [data, statistical]. DDaT-only terms [analysis, decision, examining, identify, inform, insights] vs WIDAI-only terms [applying, basic, charts, concepts, interpreting, knowledge] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8776,
+        "recall": 0.8686,
+        "f1": 0.8731,
+        "significance": "BERTScore F1=0.873 (P=0.878, R=0.869). Balanced P/R \u2014 the 21-word DDaT element and 21-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0034,
+        "entailment": 0.0129,
+        "neutral": 0.9837,
+        "significance": "NLI: neutral-dominant (98.4%). \"Data science involves examining data through statistical analysis and data minin\" and \"Knowledge of data literacy concepts, including reading and interpreting charts,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5775,
+        "significance": "Bi-encoder 0.578 > STS 0.521 (gap +0.056). Independent encoding finds more similarity than cross-attention. Shared surface terms [data, statistical] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0857,
+        "significance": "Jaccard 8.6%. Shared tokens: [data, statistical]. DDaT-only: [analysis, decision, examining, identify, inform, insights]. WIDAI-only: [applying, basic, charts, concepts, interpreting, knowledge]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-081",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-081",
+  "focal_document_element_description": "Inclusion involves including everyone to incorporate disparate views and requirements, whether developing products and services or internal policies.",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-A-003",
+  "reference_document_element_description": "Ability to distinguish between correlation and causation in analytical findings, communicating the distinction and its implications for decision-making clearly to business audiences.",
+  "comments": "DDaT skill intersects with WIDAI AB domain. AB-A-003 is the strongest semantic match. Secondary: LS-A-002 (LS, cosine: 0.347), LS-T-003 (LS, cosine: 0.345).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.2372,
+      "mapped_strength_0_10": 2.4,
+      "final_strength_integer": 2,
+      "significance": "STS 2.4/10 (raw 0.237). No substantive shared vocabulary \u2014 relationship is purely semantic. DDaT-only terms [developing, disparate, everyone, inclusion, incorporate, internal] vs WIDAI-only terms [ability, analytical, audiences, business, causation, clearly] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8511,
+        "recall": 0.8463,
+        "f1": 0.8487,
+        "significance": "BERTScore F1=0.849 (P=0.851, R=0.846). Balanced P/R \u2014 the 18-word DDaT element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0008,
+        "entailment": 0.0033,
+        "neutral": 0.9959,
+        "significance": "NLI: neutral-dominant (99.6%). \"Inclusion involves including everyone to incorporate disparate views and require\" and \"Ability to distinguish between correlation and causation in analytical findings,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.2863,
+        "significance": "Bi-encoder 0.286 \u2248 STS 0.237 (gap 0.049). Independent encoding and cross-attention agree. Shared terms [none] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0556,
+        "significance": "Jaccard 5.6%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. DDaT terms: [developing, disparate, everyone, inclusion, incorporate, internal]. WIDAI terms: [ability, analytical, audiences, business, causation, clearly]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

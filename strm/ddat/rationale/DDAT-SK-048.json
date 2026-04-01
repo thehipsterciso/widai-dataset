@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-048",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-048",
+  "focal_document_element_description": "Data compliance and security involves ensuring data handling practices at all stages of the data life cycle meet legal, regulatory, technical, ethical and organisation requirements to protect the data, data subjects and organisation.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "SP-K-014",
+  "reference_document_element_description": "Knowledge of data protection regulatory requirements, including GDPR, CCPA, HIPAA, SOX data requirements, and sector-specific data regulations, and the specific data management obligations each creates.",
+  "comments": "DDaT skill equal WIDAI SP domain. SP-K-014 is the strongest semantic match. Secondary: SP-T-006 (SP, cosine: 0.652), RC-A-005 (RC, cosine: 0.640).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.5127,
+      "mapped_strength_0_10": 5.1,
+      "final_strength_integer": 5,
+      "significance": "STS 5.1/10 (raw 0.513). Shared vocabulary: [data, regulatory, requirements]. DDaT-only terms [compliance, cycle, ensuring, ethical, handling, involves] vs WIDAI-only terms [ccpa, creates, gdpr, hipaa, knowledge, management] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8603,
+        "recall": 0.8634,
+        "f1": 0.8618,
+        "significance": "BERTScore F1=0.862 (P=0.860, R=0.863). Balanced P/R \u2014 the 33-word DDaT element and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0001,
+        "entailment": 0.0012,
+        "neutral": 0.9987,
+        "significance": "NLI: neutral-dominant (99.9%). \"Data compliance and security involves ensuring data handling practices at all st\" and \"Knowledge of data protection regulatory requirements, including GDPR, CCPA, HIPA\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6883,
+        "significance": "Bi-encoder 0.688 > STS 0.513 (gap +0.176). Independent encoding finds more similarity than cross-attention. Shared surface terms [data, regulatory, requirements] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1538,
+        "significance": "Jaccard 15.4%. Shared tokens: [data, regulatory, requirements]. DDaT-only: [compliance, cycle, ensuring, ethical, handling, involves]. WIDAI-only: [ccpa, creates, gdpr, hipaa, knowledge, management]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

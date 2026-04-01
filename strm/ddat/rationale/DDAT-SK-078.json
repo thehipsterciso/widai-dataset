@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-004-DDAT",
+  "fde_id": "DDAT-SK-078",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "DDAT-SK-078",
+  "focal_document_element_description": "Training and capability improvement involves identifying and advocating ways to develop the skills, knowledge and performance of individuals or organisations.",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "OP-S-002",
+  "reference_document_element_description": "Skill in designing data and AI training programs for diverse organizational audiences, from executives to operational staff, with role-appropriate content and delivery formats.",
+  "comments": "DDaT skill superset of WIDAI OP domain. OP-S-002 is the strongest semantic match. Secondary: LS-S-008 (LS, cosine: 0.601), DG-S-006 (DG, cosine: 0.599).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark.",
+      "raw_score_0_1": 0.4792,
+      "mapped_strength_0_10": 4.8,
+      "final_strength_integer": 5,
+      "significance": "STS 4.8/10 (raw 0.479). Shared vocabulary: [training]. DDaT-only terms [advocating, capability, develop, identifying, improvement, individuals] vs WIDAI-only terms [ai, appropriate, audiences, content, data, delivery] define the semantic distance between the descriptions."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8821,
+        "recall": 0.8661,
+        "f1": 0.874,
+        "significance": "BERTScore F1=0.874 (P=0.882, R=0.866). Balanced P/R \u2014 the 20-word DDaT element and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification.",
+        "contradiction": 0.0029,
+        "entailment": 0.0012,
+        "neutral": 0.9959,
+        "significance": "NLI: neutral-dominant (99.6%). \"Training and capability improvement involves identifying and advocating ways to\" and \"Skill in designing data and AI training programs for diverse organizational audi\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.5001,
+        "significance": "Bi-encoder 0.500 \u2248 STS 0.479 (gap 0.021). Independent encoding and cross-attention agree. Shared terms [training] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.0789,
+        "significance": "Jaccard 7.9%. Shared tokens: [training]. DDaT-only: [advocating, capability, develop, identifying, improvement, individuals]. WIDAI-only: [ai, appropriate, audiences, content, data, delivery]."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}
