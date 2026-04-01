@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.3605,
       "mapped_strength_0_10": 3.6,
       "final_strength_integer": 4,
-      "significance": "Weak similarity (3.6/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+      "significance": "STS 3.6/10 (raw 0.360). Shared vocabulary: [service]. NICE-only terms [actions, corrective, initiate, issues, performance, variances] vs WIDAI-only terms [ability, complexity, consumer, count, data, design] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8462,
         "recall": 0.8426,
         "f1": 0.8444,
-        "significance": "Lower token-level alignment (F1=0.844). The concepts share limited contextual embedding similarity at the token level, consistent with cross-domain vocabulary divergence."
+        "significance": "BERTScore F1=0.844 (P=0.846, R=0.843). Balanced P/R \u2014 the 9-word NICE element and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0004,
         "entailment": 0.0052,
         "neutral": 0.9944,
-        "significance": "Neutral-dominant (99.4%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.4%). \"Initiate corrective actions to service performance issues and variances\" and \"Ability to design operational processes that scale with organizational growth, m\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4576,
-        "significance": "Bi-encoder (0.458) exceeds STS (0.360). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.458 > STS 0.360 (gap +0.097). Independent encoding finds more similarity than cross-attention. Shared surface terms [service] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.1071,
-        "significance": "Low lexical overlap (10.7%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 10.7%. Shared tokens: [service]. NICE-only: [actions, corrective, initiate, issues, performance, variances]. WIDAI-only: [ability, complexity, consumer, count, data, design]."
       }
     }
   },

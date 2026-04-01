@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.5162,
       "mapped_strength_0_10": 5.2,
       "final_strength_integer": 5,
-      "significance": "Moderate similarity (5.2/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 5.2/10 (raw 0.516). Shared vocabulary: [security, skill]. NICE-only terms [awareness, participation, program, verifying] vs WIDAI-only terms [ai, architecture, assessments, conducting, coordination, data] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9051,
         "recall": 0.8643,
         "f1": 0.8843,
-        "significance": "Moderate token-level alignment (F1=0.884). Precision exceeds Recall (P=0.905 > R=0.864), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.884 (P=0.905, R=0.864). P exceeds R by 0.041 \u2014 the NICE element's 9 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9712,
         "entailment": 0.0006,
         "neutral": 0.0282,
-        "significance": "Contradiction-dominant (97.1%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (97.1%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in verifying participation in a security awareness program\" and \"Skill in conducting security assessments of data platforms and AI systems, inclu\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5341,
-        "significance": "Bi-encoder (0.534) closely tracks STS (0.516). The small gap (0.018) indicates the relationship is capturable through independent encoding \u2014 shared surface semantics align with cross-attention analysis."
+        "significance": "Bi-encoder 0.534 \u2248 STS 0.516 (gap 0.018). Independent encoding and cross-attention agree. Shared terms [security, skill] are sufficient for independent encoding to detect the match."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.125,
-        "significance": "Low lexical overlap (12.5%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 12.5%. Shared tokens: [security, skill]. NICE-only: [awareness, participation, program, verifying]. WIDAI-only: [ai, architecture, assessments, conducting, coordination, data]."
       }
     }
   },

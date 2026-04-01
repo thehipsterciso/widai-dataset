@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.4089,
       "mapped_strength_0_10": 4.1,
       "final_strength_integer": 4,
-      "significance": "Moderate similarity (4.1/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 4.1/10 (raw 0.409). Shared vocabulary: [acquisition, skill]. NICE-only terms [deadbox] vs WIDAI-only terms [ai, building, career, data, design, developing] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.881,
         "recall": 0.8355,
         "f1": 0.8576,
-        "significance": "Moderate token-level alignment (F1=0.858). Precision exceeds Recall (P=0.881 > R=0.836), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.858 (P=0.881, R=0.836). P exceeds R by 0.045 \u2014 the NICE element's 4 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9876,
         "entailment": 0.0004,
         "neutral": 0.012,
-        "significance": "Contradiction-dominant (98.8%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (98.8%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in deadbox acquisition\" and \"Skill in building and developing high-performing data and AI teams, including ta\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.49,
-        "significance": "Bi-encoder (0.490) exceeds STS (0.409). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.490 > STS 0.409 (gap +0.081). Independent encoding finds more similarity than cross-attention. Shared surface terms [acquisition, skill] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.1304,
-        "significance": "Low lexical overlap (13.0%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 13.0%. Shared tokens: [acquisition, skill]. NICE-only: [deadbox]. WIDAI-only: [ai, building, career, data, design, developing]."
       }
     }
   },

@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.4324,
       "mapped_strength_0_10": 4.3,
       "final_strength_integer": 4,
-      "significance": "Moderate similarity (4.3/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 4.3/10 (raw 0.432). No substantive shared vocabulary \u2014 relationship is purely semantic. NICE-only terms [considerations, designed, identifying, security, skill, systems] vs WIDAI-only terms [access, architectural, classification, controls, data, design] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8834,
         "recall": 0.8625,
         "f1": 0.8728,
-        "significance": "Moderate token-level alignment (F1=0.873). Precision exceeds Recall (P=0.883 > R=0.863), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.873 (P=0.883, R=0.863). P exceeds R by 0.021 \u2014 the NICE element's 8 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9935,
         "entailment": 0.0008,
         "neutral": 0.0056,
-        "significance": "Contradiction-dominant (99.4%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (99.4%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in identifying systems designed without security considerations\" and \"Knowledge of data classification, sensitivity labeling, and the architectural co\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5016,
-        "significance": "Bi-encoder (0.502) exceeds STS (0.432). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.502 > STS 0.432 (gap +0.069). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0,
-        "significance": "Near-zero lexical overlap (0.0%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. NICE terms: [considerations, designed, identifying, security, skill, systems]. WIDAI terms: [access, architectural, classification, controls, data, design]."
       }
     }
   },

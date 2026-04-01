@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.3533,
       "mapped_strength_0_10": 3.5,
       "final_strength_integer": 4,
-      "significance": "Weak similarity (3.5/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+      "significance": "STS 3.5/10 (raw 0.353). No substantive shared vocabulary \u2014 relationship is purely semantic. NICE-only terms [career, cybersecurity, establish, organizational, pathways] vs WIDAI-only terms [ai, architecture, assessments, conducting, coordination, data] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8687,
         "recall": 0.8431,
         "f1": 0.8557,
-        "significance": "Moderate token-level alignment (F1=0.856). Precision exceeds Recall (P=0.869 > R=0.843), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.856 (P=0.869, R=0.843). P exceeds R by 0.026 \u2014 the NICE element's 5 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0001,
         "entailment": 0.0029,
         "neutral": 0.997,
-        "significance": "Neutral-dominant (99.7%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.7%). \"Establish organizational cybersecurity career pathways\" and \"Skill in conducting security assessments of data platforms and AI systems, inclu\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4505,
-        "significance": "Bi-encoder (0.451) exceeds STS (0.353). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.451 > STS 0.353 (gap +0.097). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0,
-        "significance": "Near-zero lexical overlap (0.0%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+        "significance": "Jaccard 0.0%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. NICE terms: [career, cybersecurity, establish, organizational, pathways]. WIDAI terms: [ai, architecture, assessments, conducting, coordination, data]."
       }
     }
   },

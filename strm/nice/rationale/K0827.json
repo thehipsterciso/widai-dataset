@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.3502,
       "mapped_strength_0_10": 3.5,
       "final_strength_integer": 4,
-      "significance": "Weak similarity (3.5/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+      "significance": "STS 3.5/10 (raw 0.350). Shared vocabulary: [knowledge, quality]. NICE-only terms [assurance, practices, principles, software, sqa] vs WIDAI-only terms [analysis, cause, data, failure, failures, identification] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8836,
         "recall": 0.8727,
         "f1": 0.8781,
-        "significance": "Moderate token-level alignment (F1=0.878). Balanced P/R (0.884/0.873) indicating symmetric token-level overlap."
+        "significance": "BERTScore F1=0.878 (P=0.884, R=0.873). Balanced P/R \u2014 the 9-word NICE element and 21-word WIDAI KSA cover each other's token-level semantic content symmetrically."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0609,
         "entailment": 0.0054,
         "neutral": 0.9337,
-        "significance": "Neutral-dominant (93.4%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (93.4%). \"Knowledge of software quality assurance (SQA) principles and practices\" and \"Knowledge of root cause analysis methods for data quality failures, including so\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5563,
-        "significance": "Bi-encoder (0.556) exceeds STS (0.350). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.556 > STS 0.350 (gap +0.206). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, quality] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.16,
-        "significance": "Moderate lexical overlap (16.0% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 16.0%. Shared tokens: [knowledge, quality]. NICE-only: [assurance, practices, principles, software, sqa]. WIDAI-only: [analysis, cause, data, failure, failures, identification]."
       }
     }
   },

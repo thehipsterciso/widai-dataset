@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.5708,
       "mapped_strength_0_10": 5.7,
       "final_strength_integer": 6,
-      "significance": "Moderate similarity (5.7/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 5.7/10 (raw 0.571). Shared vocabulary: [infrastructure, maintain]. NICE-only terms [devices, hardware, network, software] vs WIDAI-only terms [compute, configure, controls, data, environments, networking] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9143,
         "recall": 0.891,
         "f1": 0.9025,
-        "significance": "High token-level alignment (F1=0.902). Strong contextual embedding overlap at the token level."
+        "significance": "BERTScore F1=0.902 (P=0.914, R=0.891). P exceeds R by 0.023 \u2014 the NICE element's 8 words are well-captured by the WIDAI KSA's 17 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0,
         "entailment": 0.009,
         "neutral": 0.9909,
-        "significance": "Neutral-dominant (99.1%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.1%). \"Maintain network infrastructure, including software and hardware devices\" and \"Provision, configure, and maintain the data platform infrastructure, including c\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5708,
-        "significance": "Bi-encoder (0.571) closely tracks STS (0.571). The small gap (0.000) indicates the relationship is capturable through independent encoding \u2014 shared surface semantics align with cross-attention analysis."
+        "significance": "Bi-encoder 0.571 \u2248 STS 0.571 (gap 0.000). Independent encoding and cross-attention agree. Shared terms [infrastructure, maintain] are sufficient for independent encoding to detect the match."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.2,
-        "significance": "Moderate lexical overlap (20.0% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 20.0%. Shared tokens: [infrastructure, maintain]. NICE-only: [devices, hardware, network, software]. WIDAI-only: [compute, configure, controls, data, environments, networking]."
       }
     }
   },

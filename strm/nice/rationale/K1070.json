@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.4107,
       "mapped_strength_0_10": 4.1,
       "final_strength_integer": 4,
-      "significance": "Moderate similarity (4.1/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 4.1/10 (raw 0.411). Shared vocabulary: [knowledge, privacy]. NICE-only terms [disclosure, laws, regulations, statement] vs WIDAI-only terms [application, architecture, consent, data, default, design] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8658,
         "recall": 0.836,
         "f1": 0.8506,
-        "significance": "Moderate token-level alignment (F1=0.851). Precision exceeds Recall (P=0.866 > R=0.836), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.851 (P=0.866, R=0.836). P exceeds R by 0.030 \u2014 the NICE element's 8 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9368,
         "entailment": 0.0017,
         "neutral": 0.0615,
-        "significance": "Contradiction-dominant (93.7%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (93.7%). Despite 'Superset of' classification, the model detects semantic tension between \"Knowledge of privacy disclosure statement laws and regulations\" and \"Knowledge of privacy-by-design and privacy-by-default principles, including thei\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5889,
-        "significance": "Bi-encoder (0.589) exceeds STS (0.411). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.589 > STS 0.411 (gap +0.178). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, privacy] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.1538,
-        "significance": "Moderate lexical overlap (15.4% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 15.4%. Shared tokens: [knowledge, privacy]. NICE-only: [disclosure, laws, regulations, statement]. WIDAI-only: [application, architecture, consent, data, default, design]."
       }
     }
   },

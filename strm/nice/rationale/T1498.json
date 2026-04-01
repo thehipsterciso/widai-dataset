@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.1611,
       "mapped_strength_0_10": 1.6,
       "final_strength_integer": 2,
-      "significance": "Minimal similarity (1.6/10). Near-zero cross-encoder score indicates the concepts share little semantic content despite being mapped as related."
+      "significance": "STS 1.6/10 (raw 0.161). No substantive shared vocabulary \u2014 relationship is purely semantic. NICE-only terms [contracts, cybersecurity, delivered, determine, included, requirements] vs WIDAI-only terms [agreements, border, clauses, compliance, controller, cross] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8477,
         "recall": 0.8513,
         "f1": 0.8495,
-        "significance": "Lower token-level alignment (F1=0.850). The concepts share limited contextual embedding similarity at the token level, consistent with cross-domain vocabulary divergence."
+        "significance": "BERTScore F1=0.850 (P=0.848, R=0.851). Balanced P/R \u2014 the 9-word NICE element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0002,
         "entailment": 0.0145,
         "neutral": 0.9853,
-        "significance": "Neutral-dominant (98.5%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (98.5%). \"Determine if cybersecurity requirements included in contracts are delivered\" and \"Skill in drafting and reviewing data processing agreements, including controller\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4533,
-        "significance": "Bi-encoder (0.453) exceeds STS (0.161). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.453 > STS 0.161 (gap +0.292). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0345,
-        "significance": "Near-zero lexical overlap (3.5%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+        "significance": "Jaccard 3.5%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. NICE terms: [contracts, cybersecurity, delivered, determine, included, requirements]. WIDAI terms: [agreements, border, clauses, compliance, controller, cross]."
       }
     }
   },

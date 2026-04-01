@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.5685,
       "mapped_strength_0_10": 5.7,
       "final_strength_integer": 6,
-      "significance": "Moderate similarity (5.7/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 5.7/10 (raw 0.569). Shared vocabulary: [attack, knowledge]. NICE-only terms [cyber, techniques, tools] vs WIDAI-only terms [adversarial, ai, data, evasion, examples, extraction] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9039,
         "recall": 0.8356,
         "f1": 0.8684,
-        "significance": "Moderate token-level alignment (F1=0.868). Precision exceeds Recall (P=0.904 > R=0.836), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.868 (P=0.904, R=0.836). P exceeds R by 0.068 \u2014 the NICE element's 6 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9097,
         "entailment": 0.002,
         "neutral": 0.0883,
-        "significance": "Contradiction-dominant (91.0%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (91.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of cyber-attack tools and techniques\" and \"Knowledge of AI-specific attack taxonomy, including adversarial examples, model\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4771,
-        "significance": "Bi-encoder (0.477) trails STS (0.569). Cross-attention captures semantic relationships that independent encoding misses \u2014 typical for cross-domain pairs where shared meaning exists beneath divergent vocabulary."
+        "significance": "Bi-encoder 0.477 < STS 0.569 (gap -0.091). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [cyber, techniques, tools] and [adversarial, ai, data] that bi-encoders structurally cannot capture."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.1739,
-        "significance": "Moderate lexical overlap (17.4% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 17.4%. Shared tokens: [attack, knowledge]. NICE-only: [cyber, techniques, tools]. WIDAI-only: [adversarial, ai, data, evasion, examples, extraction]."
       }
     }
   },

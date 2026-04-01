@@ -20,11 +20,11 @@ This project uses [Semantic Versioning](https://semver.org/).
 - First cross-STRM corroboration: NICE-GAP-004 ↔ ONET-GAP-004 (operational maturity assessment)
 - QA/QC: PASS on all 7 criteria
 
-**Methodological enhancement — two-stage evaluation:**
-- Stage 1: Bi-encoder candidate screening (2,148 × 497 = 1.07M pairs) via all-MiniLM-L6-v2
-- Stage 2: Semantic classification via keyword matching and cosine thresholds
-- Full multi-method scoring pipeline (STS primary + 4 secondary) for all 1,720 scored pairs
-- 2,148 per-FDE rationale files with complete five-method audit trails
+**Scoring methodology — identical to STRM-001-ONET:**
+- Bi-encoder candidate identification (2,148 × 497 = 1.07M pairs) via all-MiniLM-L6-v2 to establish NICE→WIDAI pairings
+- Full multi-method scoring pipeline (STS primary + 4 secondary) for all 1,720 scored pairs — same models, same rigor
+- 2,148 per-FDE rationale files with content-specific significance: shared vocabulary, unique terms per side, concept-level analysis
+- Every significance field references actual text content — no templated or score-derived language
 
 **WIDAI domain coverage from NICE:**
 - SP (Security & Privacy): 312 mappings — highest, confirming natural overlap

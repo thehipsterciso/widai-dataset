@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.4496,
       "mapped_strength_0_10": 4.5,
       "final_strength_integer": 4,
-      "significance": "Moderate similarity (4.5/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 4.5/10 (raw 0.450). Shared vocabulary: [monitoring]. NICE-only terms [continuous, establish, grading, metrics, scoring] vs WIDAI-only terms [alerting, dashboards, degradation, detection, drift, implement] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8901,
         "recall": 0.8764,
         "f1": 0.8832,
-        "significance": "Moderate token-level alignment (F1=0.883). Balanced P/R (0.890/0.876) indicating symmetric token-level overlap."
+        "significance": "BERTScore F1=0.883 (P=0.890, R=0.876). Balanced P/R \u2014 the 7-word NICE element and 16-word WIDAI KSA cover each other's token-level semantic content symmetrically."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0047,
         "entailment": 0.004,
         "neutral": 0.9913,
-        "significance": "Neutral-dominant (99.1%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.1%). \"Establish continuous monitoring scoring and grading metrics\" and \"Implement model monitoring dashboards and alerting, including performance degrad\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5132,
-        "significance": "Bi-encoder (0.513) exceeds STS (0.450). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.513 > STS 0.450 (gap +0.064). Independent encoding finds more similarity than cross-attention. Shared surface terms [monitoring] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.1,
-        "significance": "Low lexical overlap (10.0%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 10.0%. Shared tokens: [monitoring]. NICE-only: [continuous, establish, grading, metrics, scoring]. WIDAI-only: [alerting, dashboards, degradation, detection, drift, implement]."
       }
     }
   },

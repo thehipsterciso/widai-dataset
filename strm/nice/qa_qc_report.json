@@ -22,7 +22,8 @@
     "files_missing_rationale": 0,
     "invalid_json_files": 0,
     "status": "PASS",
-    "note": "Every rationale file validated as well-formed JSON with complete method coverage. All 1,720 scored files contain STS primary + 4 secondary methods (BERTScore, NLI, Bi-Encoder, Jaccard). All 428 no-relationship files have methodology field documenting the exclusion rationale."
+    "note": "Every rationale file validated as well-formed JSON with complete method coverage. All 1,720 scored files contain STS primary + 4 secondary methods (BERTScore, NLI, Bi-Encoder, Jaccard). All 428 no-relationship files have methodology field documenting the exclusion rationale.",
+    "significance_quality": "All rationale files regenerated with content-specific significance. Each method's significance references actual shared vocabulary, NICE-only terms, WIDAI-only terms, word counts, and concept-level reasoning. No templated or score-range-derived language — every significance field is unique to the scored pair's content."
   },
 
   "relationship_type_consistency": {
@@ -131,7 +132,7 @@
 
   "overall_assessment": {
     "status": "PASS",
-    "summary": "STRM-002-NICE completed with full coverage of 2,148 NICE TKS elements. Multi-method scoring pipeline processed 1,720 scored pairs and generated 2,148 rationale files. All validation checks pass. Relationship type distribution is logically consistent. Strength scores are appropriately lower than STRM-001 due to cross-domain vocabulary divergence. Five gap signals identified — two moderate, three low — with one cross-framework corroboration (NICE-GAP-004 ↔ ONET-GAP-004). Deliverable is ready for ADR documentation and commit.",
+    "summary": "STRM-002-NICE completed with full coverage of 2,148 NICE TKS elements. Multi-method scoring pipeline (identical to STRM-001-ONET: STS primary + 4 secondary) processed 1,720 scored pairs and generated 2,148 rationale files with content-specific significance — each referencing actual shared vocabulary, unique terms, and concept-level analysis. All validation checks pass. Relationship type distribution is logically consistent. Strength scores are appropriately lower than STRM-001 due to cross-domain vocabulary divergence. Five gap signals identified — two moderate, three low — with one cross-framework corroboration (NICE-GAP-004 ↔ ONET-GAP-004).",
     "checks_passed": 7,
     "checks_failed": 0,
     "checks_total": 7

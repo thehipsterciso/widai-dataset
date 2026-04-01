@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.4,
       "mapped_strength_0_10": 4.0,
       "final_strength_integer": 4,
-      "significance": "Moderate similarity (4.0/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 4.0/10 (raw 0.400). Shared vocabulary: [design, system]. NICE-only terms [components, determine, meet, requirements] vs WIDAI-only terms [application, based, build, documentation, failure, integration] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8537,
         "recall": 0.8507,
         "f1": 0.8522,
-        "significance": "Moderate token-level alignment (F1=0.852). Balanced P/R (0.854/0.851) indicating symmetric token-level overlap."
+        "significance": "BERTScore F1=0.852 (P=0.854, R=0.851). Balanced P/R \u2014 the 7-word NICE element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0011,
         "entailment": 0.0049,
         "neutral": 0.994,
-        "significance": "Neutral-dominant (99.4%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.4%). \"Determine if design components meet system requirements\" and \"Design and build LLM-based application systems, including system prompt design,\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4736,
-        "significance": "Bi-encoder (0.474) exceeds STS (0.400). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.474 > STS 0.400 (gap +0.074). Independent encoding finds more similarity than cross-attention. Shared surface terms [design, system] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0833,
-        "significance": "Low lexical overlap (8.3%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 8.3%. Shared tokens: [design, system]. NICE-only: [components, determine, meet, requirements]. WIDAI-only: [application, based, build, documentation, failure, integration]."
       }
     }
   },

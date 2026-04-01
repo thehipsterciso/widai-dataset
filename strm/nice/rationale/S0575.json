@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.2074,
       "mapped_strength_0_10": 2.1,
       "final_strength_integer": 2,
-      "significance": "Weak similarity (2.1/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+      "significance": "STS 2.1/10 (raw 0.207). Shared vocabulary: [skill]. NICE-only terms [contingency, developing, infrastructure, network, plans, recovery] vs WIDAI-only terms [ai, alignment, commercial, data, dependency, exit] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8978,
         "recall": 0.8751,
         "f1": 0.8863,
-        "significance": "Moderate token-level alignment (F1=0.886). Precision exceeds Recall (P=0.898 > R=0.875), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.886 (P=0.898, R=0.875). P exceeds R by 0.023 \u2014 the NICE element's 9 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9971,
         "entailment": 0.0,
         "neutral": 0.0029,
-        "significance": "Contradiction-dominant (99.7%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (99.7%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in developing network infrastructure contingency and recovery plans\" and \"Skill in negotiating strategic vendor partnerships for data and AI platforms, in\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4332,
-        "significance": "Bi-encoder (0.433) exceeds STS (0.207). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.433 > STS 0.207 (gap +0.226). Independent encoding finds more similarity than cross-attention. Shared surface terms [skill] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.1111,
-        "significance": "Low lexical overlap (11.1%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 11.1%. Shared tokens: [skill]. NICE-only: [contingency, developing, infrastructure, network, plans, recovery]. WIDAI-only: [ai, alignment, commercial, data, dependency, exit]."
       }
     }
   },

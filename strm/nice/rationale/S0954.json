@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.5598,
       "mapped_strength_0_10": 5.6,
       "final_strength_integer": 6,
-      "significance": "Moderate similarity (5.6/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 5.6/10 (raw 0.560). Shared vocabulary: [test]. NICE-only terms [data, dividing, sets, skill, training, validation] vs WIDAI-only terms [avoid, case, construction, contamination, coverage, dataset] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8906,
         "recall": 0.8633,
         "f1": 0.8768,
-        "significance": "Moderate token-level alignment (F1=0.877). Precision exceeds Recall (P=0.891 > R=0.863), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.877 (P=0.891, R=0.863). P exceeds R by 0.027 \u2014 the NICE element's 11 words are well-captured by the WIDAI KSA's 23 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0003,
         "entailment": 0.0018,
         "neutral": 0.9979,
-        "significance": "Neutral-dominant (99.8%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.8%). \"Skill in dividing data into training, validation, and test data sets\" and \"Knowledge of evaluation dataset design, including test set construction to avoid\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5039,
-        "significance": "Bi-encoder (0.504) trails STS (0.560). Cross-attention captures semantic relationships that independent encoding misses \u2014 typical for cross-domain pairs where shared meaning exists beneath divergent vocabulary."
+        "significance": "Bi-encoder 0.504 < STS 0.560 (gap -0.056). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [data, dividing, sets] and [avoid, case, construction] that bi-encoders structurally cannot capture."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.069,
-        "significance": "Low lexical overlap (6.9%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 6.9%. Shared tokens: [test]. NICE-only: [data, dividing, sets, skill, training, validation]. WIDAI-only: [avoid, case, construction, contamination, coverage, dataset]."
       }
     }
   },

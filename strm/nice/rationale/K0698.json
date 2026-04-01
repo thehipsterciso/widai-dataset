@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.3725,
       "mapped_strength_0_10": 3.7,
       "final_strength_integer": 4,
-      "significance": "Weak similarity (3.7/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+      "significance": "STS 3.7/10 (raw 0.372). Shared vocabulary: [knowledge, management, principles]. NICE-only terms [cryptographic, key, practices] vs WIDAI-only terms [architectures, construction, data, definition, domain, golden] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9123,
         "recall": 0.8553,
         "f1": 0.8829,
-        "significance": "Moderate token-level alignment (F1=0.883). Precision exceeds Recall (P=0.912 > R=0.855), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.883 (P=0.912, R=0.855). P exceeds R by 0.057 \u2014 the NICE element's 8 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9999,
         "entailment": 0.0,
         "neutral": 0.0001,
-        "significance": "Contradiction-dominant (100.0%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (100.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of cryptographic key management principles and practices\" and \"Knowledge of master data management (MDM) principles, including golden record co\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4787,
-        "significance": "Bi-encoder (0.479) exceeds STS (0.372). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.479 > STS 0.372 (gap +0.106). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, management, principles] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.2381,
-        "significance": "Moderate lexical overlap (23.8% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 23.8%. Shared tokens: [knowledge, management, principles]. NICE-only: [cryptographic, key, practices]. WIDAI-only: [architectures, construction, data, definition, domain, golden]."
       }
     }
   },

@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.3993,
       "mapped_strength_0_10": 4.0,
       "final_strength_integer": 4,
-      "significance": "Moderate similarity (4.0/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 4.0/10 (raw 0.399). Shared vocabulary: [knowledge, management]. NICE-only terms [learning, lms, software, system, systems] vs WIDAI-only terms [architectures, construction, data, definition, domain, golden] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9004,
         "recall": 0.86,
         "f1": 0.8797,
-        "significance": "Moderate token-level alignment (F1=0.880). Precision exceeds Recall (P=0.900 > R=0.860), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.880 (P=0.900, R=0.860). P exceeds R by 0.040 \u2014 the NICE element's 9 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.2033,
         "entailment": 0.0011,
         "neutral": 0.7956,
-        "significance": "Neutral-dominant (79.6%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: mixed signal (E:0.1%, N:79.6%, C:20.3%). No dominant classification for \"Knowledge of learning management system (LMS) systems and software\" vs \"Knowledge of master data management (MDM) principles, including golden record co\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4945,
-        "significance": "Bi-encoder (0.494) exceeds STS (0.399). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.494 > STS 0.399 (gap +0.095). Independent encoding finds more similarity than cross-attention. Shared surface terms [knowledge, management] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.1739,
-        "significance": "Moderate lexical overlap (17.4% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 17.4%. Shared tokens: [knowledge, management]. NICE-only: [learning, lms, software, system, systems]. WIDAI-only: [architectures, construction, data, definition, domain, golden]."
       }
     }
   },

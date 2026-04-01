@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.173,
       "mapped_strength_0_10": 1.7,
       "final_strength_integer": 2,
-      "significance": "Minimal similarity (1.7/10). Near-zero cross-encoder score indicates the concepts share little semantic content despite being mapped as related."
+      "significance": "STS 1.7/10 (raw 0.173). No substantive shared vocabulary \u2014 relationship is purely semantic. NICE-only terms [asset, hardware, knowledge, management, practices, principles] vs WIDAI-only terms [assets, bi, content, data, deprecation, existing] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8634,
         "recall": 0.8504,
         "f1": 0.8569,
-        "significance": "Moderate token-level alignment (F1=0.857). Balanced P/R (0.863/0.850) indicating symmetric token-level overlap."
+        "significance": "BERTScore F1=0.857 (P=0.863, R=0.850). Balanced P/R \u2014 the 8-word NICE element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9954,
         "entailment": 0.0001,
         "neutral": 0.0045,
-        "significance": "Contradiction-dominant (99.5%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (99.5%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of hardware asset management principles and practices\" and \"Maintain and optimize existing BI assets, including performance tuning, data mod\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.475,
-        "significance": "Bi-encoder (0.475) exceeds STS (0.173). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.475 > STS 0.173 (gap +0.302). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0909,
-        "significance": "Low lexical overlap (9.1%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 9.1%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. NICE terms: [asset, hardware, knowledge, management, practices, principles]. WIDAI terms: [assets, bi, content, data, deprecation, existing]."
       }
     }
   },

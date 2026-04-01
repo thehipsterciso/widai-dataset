@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.2796,
       "mapped_strength_0_10": 2.8,
       "final_strength_integer": 3,
-      "significance": "Weak similarity (2.8/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+      "significance": "STS 2.8/10 (raw 0.280). Shared vocabulary: [products]. NICE-only terms [pricing, skill] vs WIDAI-only terms [applied, consumer, data, discovery, feedback, knowledge] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8981,
         "recall": 0.8598,
         "f1": 0.8785,
-        "significance": "Moderate token-level alignment (F1=0.878). Precision exceeds Recall (P=0.898 > R=0.860), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.878 (P=0.898, R=0.860). P exceeds R by 0.038 \u2014 the NICE element's 4 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9924,
         "entailment": 0.0002,
         "neutral": 0.0073,
-        "significance": "Contradiction-dominant (99.2%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (99.2%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in pricing products\" and \"Knowledge of product management practices as applied to data products, including\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4581,
-        "significance": "Bi-encoder (0.458) exceeds STS (0.280). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.458 > STS 0.280 (gap +0.178). Independent encoding finds more similarity than cross-attention. Shared surface terms [products] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0435,
-        "significance": "Near-zero lexical overlap (4.3%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+        "significance": "Jaccard 4.3%. Shared tokens: [products]. NICE-only: [pricing, skill]. WIDAI-only: [applied, consumer, data, discovery, feedback, knowledge]."
       }
     }
   },

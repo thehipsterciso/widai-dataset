@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.3263,
       "mapped_strength_0_10": 3.3,
       "final_strength_integer": 3,
-      "significance": "Weak similarity (3.3/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+      "significance": "STS 3.3/10 (raw 0.326). Shared vocabulary: [rights]. NICE-only terms [access, consumer, information, oversee] vs WIDAI-only terms [assessment, data, determination, documentation, execute, exemption] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8698,
         "recall": 0.8372,
         "f1": 0.8532,
-        "significance": "Moderate token-level alignment (F1=0.853). Precision exceeds Recall (P=0.870 > R=0.837), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.853 (P=0.870, R=0.837). P exceeds R by 0.033 \u2014 the NICE element's 5 words are well-captured by the WIDAI KSA's 21 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0003,
         "entailment": 0.001,
         "neutral": 0.9987,
-        "significance": "Neutral-dominant (99.9%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.9%). \"Oversee consumer information access rights\" and \"Execute data subject rights requests within regulatory timelines, including iden\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5496,
-        "significance": "Bi-encoder (0.550) exceeds STS (0.326). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.550 > STS 0.326 (gap +0.223). Independent encoding finds more similarity than cross-attention. Shared surface terms [rights] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.04,
-        "significance": "Near-zero lexical overlap (4.0%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+        "significance": "Jaccard 4.0%. Shared tokens: [rights]. NICE-only: [access, consumer, information, oversee]. WIDAI-only: [assessment, data, determination, documentation, execute, exemption]."
       }
     }
   },

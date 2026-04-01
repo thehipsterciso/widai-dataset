@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.6952,
       "mapped_strength_0_10": 7.0,
       "final_strength_integer": 7,
-      "significance": "Strong similarity (7.0/10). The cross-encoder detects substantial semantic alignment between these concepts, indicating they describe closely related competencies despite domain-specific vocabulary."
+      "significance": "STS 7.0/10 (raw 0.695). Shared vocabulary: [security]. NICE-only terms [cybersecurity, designs, develop, multilevel, networks, requirements] vs WIDAI-only terms [ability, ai, appropriate, architectures, context, data] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.864,
         "recall": 0.8632,
         "f1": 0.8636,
-        "significance": "Moderate token-level alignment (F1=0.864). Balanced P/R (0.864/0.863) indicating symmetric token-level overlap."
+        "significance": "BERTScore F1=0.864 (P=0.864, R=0.863). Balanced P/R \u2014 the 11-word NICE element and 26-word WIDAI KSA cover each other's token-level semantic content symmetrically."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0,
         "entailment": 0.0022,
         "neutral": 0.9977,
-        "significance": "Neutral-dominant (99.8%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.8%). \"Develop cybersecurity designs for systems and networks with multilevel security\" and \"Ability to design security and privacy architectures that enable data utility an\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4642,
-        "significance": "Bi-encoder (0.464) trails STS (0.695). Cross-attention captures semantic relationships that independent encoding misses \u2014 typical for cross-domain pairs where shared meaning exists beneath divergent vocabulary."
+        "significance": "Bi-encoder 0.464 < STS 0.695 (gap -0.231). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [cybersecurity, designs, develop] and [ability, ai, appropriate] that bi-encoders structurally cannot capture."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0645,
-        "significance": "Low lexical overlap (6.5%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 6.5%. Shared tokens: [security]. NICE-only: [cybersecurity, designs, develop, multilevel, networks, requirements]. WIDAI-only: [ability, ai, appropriate, architectures, context, data]."
       }
     }
   },

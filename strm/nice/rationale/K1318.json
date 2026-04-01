@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.6342,
       "mapped_strength_0_10": 6.3,
       "final_strength_integer": 6,
-      "significance": "Moderate similarity (6.3/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 6.3/10 (raw 0.634). Shared vocabulary: [ai, knowledge, model]. NICE-only terms [development, processes] vs WIDAI-only terms [criteria, decommissioning, detection, drift, lifecycle, management] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9424,
         "recall": 0.878,
         "f1": 0.909,
-        "significance": "High token-level alignment (F1=0.909). Strong contextual embedding overlap at the token level."
+        "significance": "BERTScore F1=0.909 (P=0.942, R=0.878). P exceeds R by 0.064 \u2014 the NICE element's 6 words are well-captured by the WIDAI KSA's 18 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.3806,
         "entailment": 0.0023,
         "neutral": 0.6172,
-        "significance": "Neutral-dominant (61.7%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: mixed signal (E:0.2%, N:61.7%, C:38.1%). No dominant classification for \"Knowledge of AI model development processes\" vs \"Knowledge of AI model lifecycle management, including model versioning, drift de\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.6942,
-        "significance": "Bi-encoder (0.694) exceeds STS (0.634). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.694 > STS 0.634 (gap +0.060). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, knowledge, model] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.2105,
-        "significance": "Moderate lexical overlap (21.1% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 21.1%. Shared tokens: [ai, knowledge, model]. NICE-only: [development, processes]. WIDAI-only: [criteria, decommissioning, detection, drift, lifecycle, management]."
       }
     }
   },

@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.6999,
       "mapped_strength_0_10": 7.0,
       "final_strength_integer": 7,
-      "significance": "Strong similarity (7.0/10). The cross-encoder detects substantial semantic alignment between these concepts, indicating they describe closely related competencies despite domain-specific vocabulary."
+      "significance": "STS 7.0/10 (raw 0.700). Shared vocabulary: [security, skill]. NICE-only terms [applying, models] vs WIDAI-only terms [ai, analysis, assessments, attack, conducting, control] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9317,
         "recall": 0.8768,
         "f1": 0.9034,
-        "significance": "High token-level alignment (F1=0.903). Strong contextual embedding overlap at the token level."
+        "significance": "BERTScore F1=0.903 (P=0.932, R=0.877). P exceeds R by 0.055 \u2014 the NICE element's 5 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0001,
         "entailment": 0.0007,
         "neutral": 0.9992,
-        "significance": "Neutral-dominant (99.9%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.9%). \"Skill in applying security models\" and \"Skill in conducting AI security assessments, including threat modeling for AI sy\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.6058,
-        "significance": "Bi-encoder (0.606) trails STS (0.700). Cross-attention captures semantic relationships that independent encoding misses \u2014 typical for cross-domain pairs where shared meaning exists beneath divergent vocabulary."
+        "significance": "Bi-encoder 0.606 < STS 0.700 (gap -0.094). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [applying, models] and [ai, analysis, assessments] that bi-encoders structurally cannot capture."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.15,
-        "significance": "Moderate lexical overlap (15.0% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 15.0%. Shared tokens: [security, skill]. NICE-only: [applying, models]. WIDAI-only: [ai, analysis, assessments, attack, conducting, control]."
       }
     }
   },

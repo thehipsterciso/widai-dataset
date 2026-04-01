@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.6294,
       "mapped_strength_0_10": 6.3,
       "final_strength_integer": 6,
-      "significance": "Moderate similarity (6.3/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 6.3/10 (raw 0.629). Shared vocabulary: [knowledge, learning]. NICE-only terms [assessment, techniques, tools] vs WIDAI-only terms [adult, blended, delivery, design, instructional, methods] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.91,
         "recall": 0.8821,
         "f1": 0.8958,
-        "significance": "Moderate token-level alignment (F1=0.896). Precision exceeds Recall (P=0.910 > R=0.882), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.896 (P=0.910, R=0.882). P exceeds R by 0.028 \u2014 the NICE element's 7 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.6724,
         "entailment": 0.0013,
         "neutral": 0.3262,
-        "significance": "Contradiction-dominant (67.2%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (67.2%). Despite 'Intersects with' classification, the model detects semantic tension between \"Knowledge of learning assessment tools and techniques\" and \"Knowledge of adult learning design principles, including learning objectives, in\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5253,
-        "significance": "Bi-encoder (0.525) trails STS (0.629). Cross-attention captures semantic relationships that independent encoding misses \u2014 typical for cross-domain pairs where shared meaning exists beneath divergent vocabulary."
+        "significance": "Bi-encoder 0.525 < STS 0.629 (gap -0.104). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [assessment, techniques, tools] and [adult, blended, delivery] that bi-encoders structurally cannot capture."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.2105,
-        "significance": "Moderate lexical overlap (21.1% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 21.1%. Shared tokens: [knowledge, learning]. NICE-only: [assessment, techniques, tools]. WIDAI-only: [adult, blended, delivery, design, instructional, methods]."
       }
     }
   },

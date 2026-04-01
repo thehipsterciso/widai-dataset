@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.3074,
       "mapped_strength_0_10": 3.1,
       "final_strength_integer": 3,
-      "significance": "Weak similarity (3.1/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+      "significance": "STS 3.1/10 (raw 0.307). Shared vocabulary: [planning, workforce]. NICE-only terms [address, cyber, issues, management] vs WIDAI-only terms [acquisition, ai, analysis, assessment, conduct, current] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8982,
         "recall": 0.854,
         "f1": 0.8756,
-        "significance": "Moderate token-level alignment (F1=0.876). Precision exceeds Recall (P=0.898 > R=0.854), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.876 (P=0.898, R=0.854). P exceeds R by 0.044 \u2014 the NICE element's 7 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.4993,
         "entailment": 0.007,
         "neutral": 0.4936,
-        "significance": "Mixed signal (E:0.7%, N:49.4%, C:49.9%). No dominant classification \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
+        "significance": "NLI: mixed signal (E:0.7%, N:49.4%, C:49.9%). No dominant classification for \"Address cyber workforce planning and management issues\" vs \"Conduct data and AI workforce planning, including current-state skills assessmen\" \u2014 the relationship is genuinely ambiguous from a logical inference perspective."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4265,
-        "significance": "Bi-encoder (0.426) exceeds STS (0.307). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.426 > STS 0.307 (gap +0.119). Independent encoding finds more similarity than cross-attention. Shared surface terms [planning, workforce] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.12,
-        "significance": "Low lexical overlap (12.0%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 12.0%. Shared tokens: [planning, workforce]. NICE-only: [address, cyber, issues, management]. WIDAI-only: [acquisition, ai, analysis, assessment, conduct, current]."
       }
     }
   },

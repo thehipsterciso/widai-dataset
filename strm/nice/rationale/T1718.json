@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.2532,
       "mapped_strength_0_10": 2.5,
       "final_strength_integer": 2,
-      "significance": "Weak similarity (2.5/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+      "significance": "STS 2.5/10 (raw 0.253). No substantive shared vocabulary \u2014 relationship is purely semantic. NICE-only terms [changes, implement, planning, policies, procedures] vs WIDAI-only terms [ai, data, definition, develop, initiatives, maintain] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8816,
         "recall": 0.85,
         "f1": 0.8655,
-        "significance": "Moderate token-level alignment (F1=0.866). Precision exceeds Recall (P=0.882 > R=0.850), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.866 (P=0.882, R=0.850). P exceeds R by 0.032 \u2014 the NICE element's 7 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.988,
         "entailment": 0.0021,
         "neutral": 0.0099,
-        "significance": "Contradiction-dominant (98.8%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (98.8%). Despite 'Intersects with' classification, the model detects semantic tension between \"Implement changes to planning policies and procedures\" and \"Develop and maintain program plans for data and AI initiatives, including scope\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4989,
-        "significance": "Bi-encoder (0.499) exceeds STS (0.253). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.499 > STS 0.253 (gap +0.246). Independent encoding finds more similarity than cross-attention. Shared surface terms [none] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0385,
-        "significance": "Near-zero lexical overlap (3.9%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+        "significance": "Jaccard 3.9%. Zero substantive shared tokens. The entire relationship is semantic \u2014 no lexical trace. NICE terms: [changes, implement, planning, policies, procedures]. WIDAI terms: [ai, data, definition, develop, initiatives, maintain]."
       }
     }
   },

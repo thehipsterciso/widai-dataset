@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.4959,
       "mapped_strength_0_10": 5.0,
       "final_strength_integer": 5,
-      "significance": "Moderate similarity (5.0/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 5.0/10 (raw 0.496). Shared vocabulary: [develop, plans]. NICE-only terms [action, cybersecurity, milestones] vs WIDAI-only terms [ai, data, definition, initiatives, maintain, milestone] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9172,
         "recall": 0.861,
         "f1": 0.8882,
-        "significance": "Moderate token-level alignment (F1=0.888). Precision exceeds Recall (P=0.917 > R=0.861), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.888 (P=0.917, R=0.861). P exceeds R by 0.056 \u2014 the NICE element's 6 words are well-captured by the WIDAI KSA's 22 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9894,
         "entailment": 0.0002,
         "neutral": 0.0105,
-        "significance": "Contradiction-dominant (98.9%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (98.9%). Despite 'Intersects with' classification, the model detects semantic tension between \"Develop cybersecurity action plans and milestones\" and \"Develop and maintain program plans for data and AI initiatives, including scope\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5201,
-        "significance": "Bi-encoder (0.520) closely tracks STS (0.496). The small gap (0.024) indicates the relationship is capturable through independent encoding \u2014 shared surface semantics align with cross-attention analysis."
+        "significance": "Bi-encoder 0.520 \u2248 STS 0.496 (gap 0.024). Independent encoding and cross-attention agree. Shared terms [develop, plans] are sufficient for independent encoding to detect the match."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.1304,
-        "significance": "Low lexical overlap (13.0%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 13.0%. Shared tokens: [develop, plans]. NICE-only: [action, cybersecurity, milestones]. WIDAI-only: [ai, data, definition, initiatives, maintain, milestone]."
       }
     }
   },

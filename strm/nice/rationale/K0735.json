@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.6847,
       "mapped_strength_0_10": 6.8,
       "final_strength_integer": 7,
-      "significance": "Moderate similarity (6.8/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 6.8/10 (raw 0.685). Shared vocabulary: [frameworks, knowledge, models, risk]. NICE-only terms [management] vs WIDAI-only terms [analysis, carlo, expected, loss, methods, monte] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9468,
         "recall": 0.8868,
         "f1": 0.9158,
-        "significance": "High token-level alignment (F1=0.916). Strong contextual embedding overlap at the token level."
+        "significance": "BERTScore F1=0.916 (P=0.947, R=0.887). P exceeds R by 0.060 \u2014 the NICE element's 7 words are well-captured by the WIDAI KSA's 19 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0001,
         "entailment": 0.0004,
         "neutral": 0.9996,
-        "significance": "Neutral-dominant (100.0%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (100.0%). \"Knowledge of risk management models and frameworks\" and \"Knowledge of risk quantification frameworks, including Value at Risk, expected l\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.7631,
-        "significance": "Bi-encoder (0.763) exceeds STS (0.685). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+        "significance": "Bi-encoder 0.763 > STS 0.685 (gap +0.078). Independent encoding finds more similarity than cross-attention. Shared surface terms [frameworks, knowledge, models, risk] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.3158,
-        "significance": "Moderate lexical overlap (31.6% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 31.6%. Shared tokens: [frameworks, knowledge, models, risk]. NICE-only: [management]. WIDAI-only: [analysis, carlo, expected, loss, methods, monte]."
       }
     }
   },

@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.599,
       "mapped_strength_0_10": 6.0,
       "final_strength_integer": 6,
-      "significance": "Moderate similarity (6.0/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 6.0/10 (raw 0.599). Shared vocabulary: [automated]. NICE-only terms [capabilities, integrate, patching, software, system, updating] vs WIDAI-only terms [code, components, configuring, control, data, deploying] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8719,
         "recall": 0.8599,
         "f1": 0.8659,
-        "significance": "Moderate token-level alignment (F1=0.866). Balanced P/R (0.872/0.860) indicating symmetric token-level overlap."
+        "significance": "BERTScore F1=0.866 (P=0.872, R=0.860). Balanced P/R \u2014 the 9-word NICE element and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0001,
         "entailment": 0.9023,
         "neutral": 0.0976,
-        "significance": "Entailment-dominant (90.2%). The NICE element logically implies aspects of the WIDAI KSA, indicating directional semantic containment."
+        "significance": "NLI: entailment-dominant (90.2%). The model interprets \"Integrate automated capabilities for updating or patching system software\" as logically implying aspects of \"Skill in deploying, configuring, and scaling data platform components using infr\" \u2014 directional semantic containment consistent with 'Intersects with' classification."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.5396,
-        "significance": "Bi-encoder (0.540) trails STS (0.599). Cross-attention captures semantic relationships that independent encoding misses \u2014 typical for cross-domain pairs where shared meaning exists beneath divergent vocabulary."
+        "significance": "Bi-encoder 0.540 < STS 0.599 (gap -0.059). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning \u2014 concept-level mapping between [capabilities, integrate, patching] and [code, components, configuring] that bi-encoders structurally cannot capture."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0385,
-        "significance": "Near-zero lexical overlap (3.9%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+        "significance": "Jaccard 3.9%. Shared tokens: [automated]. NICE-only: [capabilities, integrate, patching, software, system, updating]. WIDAI-only: [code, components, configuring, control, data, deploying]."
       }
     }
   },

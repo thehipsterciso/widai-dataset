@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.6512,
       "mapped_strength_0_10": 6.5,
       "final_strength_integer": 6,
-      "significance": "Moderate similarity (6.5/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 6.5/10 (raw 0.651). Shared vocabulary: [communicating, skill, technical]. NICE-only terms [backgrounds, detail, levels, stakeholders, various, varying] vs WIDAI-only terms [audiences, briefing, conference, findings, formats, internal] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8903,
         "recall": 0.8756,
         "f1": 0.8829,
-        "significance": "Moderate token-level alignment (F1=0.883). Balanced P/R (0.890/0.876) indicating symmetric token-level overlap."
+        "significance": "BERTScore F1=0.883 (P=0.890, R=0.876). Balanced P/R \u2014 the 14-word NICE element and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0,
         "entailment": 0.0003,
         "neutral": 0.9996,
-        "significance": "Neutral-dominant (100.0%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (100.0%). \"Skill in communicating at varying levels of technical detail with stakeholders o\" and \"Skill in communicating research findings to both technical and non-technical aud\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.6812,
-        "significance": "Bi-encoder (0.681) closely tracks STS (0.651). The small gap (0.030) indicates the relationship is capturable through independent encoding \u2014 shared surface semantics align with cross-attention analysis."
+        "significance": "Bi-encoder 0.681 \u2248 STS 0.651 (gap 0.030). Independent encoding and cross-attention agree. Shared terms [communicating, skill, technical] are sufficient for independent encoding to detect the match."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.1429,
-        "significance": "Low lexical overlap (14.3%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+        "significance": "Jaccard 14.3%. Shared tokens: [communicating, skill, technical]. NICE-only: [backgrounds, detail, levels, stakeholders, various, varying]. WIDAI-only: [audiences, briefing, conference, findings, formats, internal]."
       }
     }
   },

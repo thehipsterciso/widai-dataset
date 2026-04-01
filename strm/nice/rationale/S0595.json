@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.4387,
       "mapped_strength_0_10": 4.4,
       "final_strength_integer": 4,
-      "significance": "Moderate similarity (4.4/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 4.4/10 (raw 0.439). Shared vocabulary: [system]. NICE-only terms [peripherals, repairing, skill] vs WIDAI-only terms [ability, across, application, causes, code, data] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.8991,
         "recall": 0.832,
         "f1": 0.8643,
-        "significance": "Moderate token-level alignment (F1=0.864). Precision exceeds Recall (P=0.899 > R=0.832), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+        "significance": "BERTScore F1=0.864 (P=0.899, R=0.832). P exceeds R by 0.067 \u2014 the NICE element's 5 words are well-captured by the WIDAI KSA's 29 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0,
         "entailment": 0.0114,
         "neutral": 0.9885,
-        "significance": "Neutral-dominant (98.9%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (98.9%). \"Skill in repairing system peripherals\" and \"Ability to diagnose and resolve technical issues that span multiple system layer\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4881,
-        "significance": "Bi-encoder (0.488) closely tracks STS (0.439). The small gap (0.049) indicates the relationship is capturable through independent encoding \u2014 shared surface semantics align with cross-attention analysis."
+        "significance": "Bi-encoder 0.488 \u2248 STS 0.439 (gap 0.049). Independent encoding and cross-attention agree. Shared terms [system] are sufficient for independent encoding to detect the match."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.0333,
-        "significance": "Near-zero lexical overlap (3.3%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+        "significance": "Jaccard 3.3%. Shared tokens: [system]. NICE-only: [peripherals, repairing, skill]. WIDAI-only: [ability, across, application, causes, code, data]."
       }
     }
   },

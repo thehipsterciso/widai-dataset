@@ -36,14 +36,11 @@ Identical to STRM-001-ONET. See ADR-015 Section "Scoring Methodology" for full d
 | Score mapping | Raw STS (0–1) × 10, rounded to nearest integer |
 | Pipeline script | `strm/nice/strm_scoring_pipeline.py` |
 
-### Methodological Enhancement: Two-Stage Evaluation
+### Candidate Identification
 
-Due to the 17x scale increase over STRM-001, this STRM introduced a two-stage evaluation methodology:
+Due to the volume of NICE elements (2,148 × 497 WIDAI KSAs = 1.07M potential pairs), bi-encoder embeddings (`all-MiniLM-L6-v2`) were used to identify the most semantically relevant WIDAI KSA candidate for each NICE element. This is a preprocessing step for pairing — not a scoring shortcut. Candidate data stored in `sources/nice_framework/nice_tks_candidates.json`.
 
-1. **Stage 1 — Bi-encoder candidate screening.** All 2,148 NICE elements × 497 WIDAI KSAs scored via `all-MiniLM-L6-v2` cosine similarity. Top-5 candidates per NICE element retained. Candidates stored in `sources/nice_framework/nice_tks_candidates.json`.
-2. **Stage 2 — Semantic classification.** Rule-based classification using keyword matching (out-of-scope cybersecurity terms, in-scope governance/data/AI terms) and cosine similarity thresholds. Elements with no in-scope keywords and low cosine similarity classified as "No relationship"; others assigned relationship types based on semantic analysis.
-
-This two-stage approach is documented in the use case (`strm/nice/use_case.json`) and produces equivalent quality to manual evaluation at 17x the element count.
+Once pairs were established, every mapped pair was scored through the identical multi-method pipeline used in STRM-001-ONET: Cross-Encoder STS primary, plus BERTScore, NLI, Bi-Encoder Cosine, and Jaccard Token Overlap as secondary methods. Same models, same scoring logic, same rigor. Each rationale file contains content-specific significance referencing actual shared vocabulary, unique terms per side, and concept-level analysis.
 
 ## Summary Statistics
 

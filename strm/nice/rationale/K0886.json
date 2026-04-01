@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.706,
       "mapped_strength_0_10": 7.1,
       "final_strength_integer": 7,
-      "significance": "Strong similarity (7.1/10). The cross-encoder detects substantial semantic alignment between these concepts, indicating they describe closely related competencies despite domain-specific vocabulary."
+      "significance": "STS 7.1/10 (raw 0.706). Shared vocabulary: [design, instructional, knowledge, models]. NICE-only terms [frameworks] vs WIDAI-only terms [adult, blended, delivery, learning, methods, objectives] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.94,
         "recall": 0.8943,
         "f1": 0.9166,
-        "significance": "High token-level alignment (F1=0.917). Strong contextual embedding overlap at the token level."
+        "significance": "BERTScore F1=0.917 (P=0.940, R=0.894). P exceeds R by 0.046 \u2014 the NICE element's 7 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.0001,
         "entailment": 0.0007,
         "neutral": 0.9992,
-        "significance": "Neutral-dominant (99.9%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+        "significance": "NLI: neutral-dominant (99.9%). \"Knowledge of instructional design models and frameworks\" and \"Knowledge of adult learning design principles, including learning objectives, in\" are related but neither implies nor contradicts the other. Standard result for cross-framework mapping where two independent frameworks describe overlapping competencies with independent vocabulary."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.6586,
-        "significance": "Bi-encoder (0.659) closely tracks STS (0.706). The small gap (0.047) indicates the relationship is capturable through independent encoding \u2014 shared surface semantics align with cross-attention analysis."
+        "significance": "Bi-encoder 0.659 \u2248 STS 0.706 (gap 0.047). Independent encoding and cross-attention agree. Shared terms [design, instructional, knowledge, models] are sufficient for independent encoding to detect the match."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.3529,
-        "significance": "Moderate lexical overlap (35.3% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 35.3%. Shared tokens: [design, instructional, knowledge, models]. NICE-only: [frameworks]. WIDAI-only: [adult, blended, delivery, learning, methods, objectives]."
       }
     }
   },

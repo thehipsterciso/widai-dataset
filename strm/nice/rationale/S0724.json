@@ -24,7 +24,7 @@
       "raw_score_0_1": 0.5303,
       "mapped_strength_0_10": 5.3,
       "final_strength_integer": 5,
-      "significance": "Moderate similarity (5.3/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+      "significance": "STS 5.3/10 (raw 0.530). Shared vocabulary: [managing, relationships, skill]. NICE-only terms [client] vs WIDAI-only terms [ai, consolidation, contract, data, escalation, issue] define the semantic distance between the descriptions."
     },
     "secondary_methods": {
       "bertscore": {
@@ -33,7 +33,7 @@
         "precision": 0.9447,
         "recall": 0.8722,
         "f1": 0.907,
-        "significance": "High token-level alignment (F1=0.907). Strong contextual embedding overlap at the token level."
+        "significance": "BERTScore F1=0.907 (P=0.945, R=0.872). P exceeds R by 0.073 \u2014 the NICE element's 5 words are well-captured by the WIDAI KSA's 20 words, but the KSA contains additional specificity not reflected in the NICE element."
       },
       "nli_cross_encoder": {
         "model": "cross-encoder/nli-deberta-v3-base",
@@ -41,18 +41,18 @@
         "contradiction": 0.9996,
         "entailment": 0.0,
         "neutral": 0.0004,
-        "significance": "Contradiction-dominant (100.0%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+        "significance": "NLI: contradiction-dominant (100.0%). Despite 'Intersects with' classification, the model detects semantic tension between \"Skill in managing client relationships\" and \"Skill in managing data and AI vendor relationships, including contract performan\". Indicates these concepts operate in adjacent but distinct professional domains \u2014 shared vocabulary, different application context."
       },
       "biencoder_cosine": {
         "model": "all-MiniLM-L6-v2",
         "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
         "cosine_similarity_0_1": 0.4806,
-        "significance": "Bi-encoder (0.481) closely tracks STS (0.530). The small gap (0.050) indicates the relationship is capturable through independent encoding \u2014 shared surface semantics align with cross-attention analysis."
+        "significance": "Bi-encoder 0.481 \u2248 STS 0.530 (gap 0.050). Independent encoding and cross-attention agree. Shared terms [managing, relationships, skill] are sufficient for independent encoding to detect the match."
       },
       "jaccard_token": {
         "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
         "similarity_0_1": 0.2105,
-        "significance": "Moderate lexical overlap (21.1% of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
+        "significance": "Jaccard 21.1%. Shared tokens: [managing, relationships, skill]. NICE-only: [client]. WIDAI-only: [ai, consolidation, contract, data, escalation, issue]."
       }
     }
   },
