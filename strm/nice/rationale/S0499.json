@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-002-NICE",
+  "fde_id": "S0499",
+  "fde_type": "skill",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "S0499",
+  "focal_document_element_description": "Skill in performing intelligence collection analysis",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "LS-S-009",
+  "reference_document_element_description": "Skill in building and developing high-performing data and AI teams, including talent acquisition, onboarding design, performance management, career development planning, and succession preparation.",
+  "comments": "NICE skill intersects with WIDAI LS domain. Skill LS-S-009 is the strongest semantic match. Secondary: OP-S-010 (OP, cosine: 0.504), LS-K-009 (LS, cosine: 0.500).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark. Both texts processed jointly through transformer; outputs calibrated 0-1 similarity score.",
+      "raw_score_0_1": 0.5097,
+      "mapped_strength_0_10": 5.1,
+      "final_strength_integer": 5,
+      "significance": "Moderate similarity (5.1/10). The cross-encoder finds meaningful but bounded overlap \u2014 consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching. Precision = FDE coverage of KSA tokens. Recall = KSA coverage by FDE tokens. F1 = harmonic mean.",
+        "precision": 0.8787,
+        "recall": 0.8445,
+        "f1": 0.8612,
+        "significance": "Moderate token-level alignment (F1=0.861). Precision exceeds Recall (P=0.879 > R=0.845), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference. Classifies text pair as entailment, neutral, or contradiction. Indicates directional implication strength.",
+        "contradiction": 0.9711,
+        "entailment": 0.0004,
+        "neutral": 0.0285,
+        "significance": "Contradiction-dominant (97.1%). The model detects scope divergence \u2014 the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
+        "cosine_similarity_0_1": 0.5272,
+        "significance": "Bi-encoder (0.527) closely tracks STS (0.510). The small gap (0.017) indicates the relationship is capturable through independent encoding \u2014 shared surface semantics align with cross-attention analysis."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
+        "similarity_0_1": 0.12,
+        "significance": "Low lexical overlap (12.0%). Limited shared vocabulary \u2014 the relationship is primarily semantic rather than terminological."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

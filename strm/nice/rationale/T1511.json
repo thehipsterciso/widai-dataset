@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-002-NICE",
+  "fde_id": "T1511",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "T1511",
+  "focal_document_element_description": "Identify alleged violations of law, regulations, policy, or guidance",
+  "rationale": "Semantic",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-S-002",
+  "reference_document_element_description": "Skill in interpreting regulatory text, supervisory guidance, and enforcement decisions, translating legal requirements into operational controls and measurable organizational obligations.",
+  "comments": "NICE task intersects with WIDAI RC domain. Skill RC-S-002 is the strongest semantic match. Secondary: RC-S-005 (RC, cosine: 0.595), RC-K-008 (RC, cosine: 0.584).",
+  "strength_of_relationship": 3,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark. Both texts processed jointly through transformer; outputs calibrated 0-1 similarity score.",
+      "raw_score_0_1": 0.2946,
+      "mapped_strength_0_10": 3.0,
+      "final_strength_integer": 3,
+      "significance": "Weak similarity (3.0/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching. Precision = FDE coverage of KSA tokens. Recall = KSA coverage by FDE tokens. F1 = harmonic mean.",
+        "precision": 0.8803,
+        "recall": 0.86,
+        "f1": 0.87,
+        "significance": "Moderate token-level alignment (F1=0.870). Precision exceeds Recall (P=0.880 > R=0.860), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference. Classifies text pair as entailment, neutral, or contradiction. Indicates directional implication strength.",
+        "contradiction": 0.0004,
+        "entailment": 0.91,
+        "neutral": 0.0896,
+        "significance": "Entailment-dominant (91.0%). The NICE element logically implies aspects of the WIDAI KSA, indicating directional semantic containment."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
+        "cosine_similarity_0_1": 0.5978,
+        "significance": "Bi-encoder (0.598) exceeds STS (0.295). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
+        "similarity_0_1": 0.037,
+        "significance": "Near-zero lexical overlap (3.7%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

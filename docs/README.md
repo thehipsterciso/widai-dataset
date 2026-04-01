@@ -1,6 +1,6 @@
 # WIDAI Documentation Index
 
-**Last Updated:** 2026-03-31
+**Last Updated:** 2026-04-01
 **Scope:** Chief Data and AI Officer (CDAIO) Domain Workforce Framework
 
 ---
@@ -45,7 +45,7 @@ WIDAI is a unified workforce framework that maps roles across the CDAIO domain, 
 
 **[Phase 1B Framework Prioritization](roadmap/phase-1b-framework-prioritization.md)** — 70 frameworks assessed for STRM eligibility. 4-tier prioritized execution sequence.
 
-**[Architectural Decision Records](roadmap/adr/)** — 15 ADRs documenting rationale for every major roadmap and methodology decision.
+**[Architectural Decision Records](roadmap/adr/)** — 16 ADRs documenting rationale for every major roadmap and methodology decision.
 
 ### Methodology
 

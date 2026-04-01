@@ -3,6 +3,38 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.5.4] - 2026-04-01
+
+### Phase 1C: STRM-002 — NIST NICE Framework v2.1.0 (ADR-016)
+
+**Second STRM complete** — NICE Workforce Framework for Cybersecurity v2.1.0 (SP 800-181) mapped against WIDAI KSA Pool v0.5.2.
+
+**Why:** NICE is the authoritative cybersecurity workforce framework. Mapping it defines the formal boundary between cybersecurity and data/AI professional domains — critical for positioning WIDAI as complementary to NICE. At 2,148 TKS elements, this is 17x the volume of STRM-001 and validates the scoring pipeline at production scale.
+
+**What changed:**
+- 2,148 NICE Focal Document Elements (946 tasks, 662 knowledge, 540 skills) evaluated exhaustively
+- Relationship distribution: 1,106 Intersects with (51.5%), 582 Superset of (27.1%), 428 No relationship (19.9%), 32 Equal (1.5%)
+- Mean strength (scored only): 5.12/10 — appropriately lower than STRM-001 (5.5) due to cross-domain vocabulary divergence
+- 5 gap signals identified: data de-identification (moderate), data/AI incident response (moderate), technical audit/compliance (low), process maturity assessment (low), supply chain integrity for data/AI (low)
+- Gap signals are boundary-zone (cybersecurity-data/AI overlap) rather than foundational (STRM-001 pattern)
+- First cross-STRM corroboration: NICE-GAP-004 ↔ ONET-GAP-004 (operational maturity assessment)
+- QA/QC: PASS on all 7 criteria
+
+**Methodological enhancement — two-stage evaluation:**
+- Stage 1: Bi-encoder candidate screening (2,148 × 497 = 1.07M pairs) via all-MiniLM-L6-v2
+- Stage 2: Semantic classification via keyword matching and cosine thresholds
+- Full multi-method scoring pipeline (STS primary + 4 secondary) for all 1,720 scored pairs
+- 2,148 per-FDE rationale files with complete five-method audit trails
+
+**WIDAI domain coverage from NICE:**
+- SP (Security & Privacy): 312 mappings — highest, confirming natural overlap
+- TF (Technical Foundations): 212 | RM (Risk Management): 187 | OP (Operations): 187
+- AI: 153 | DA: 131 | RC: 120 | DQ: 103 | LS: 102 | DG: 100 | AB: 80 | AG: 33
+
+**New files:** `sources/nice_framework/` (NIST JSON, XLSX, citation, candidate screening, build script), `strm/nice/use_case.json`, `strm/nice/strm_mapping.json`, `strm/nice/strm_scoring_pipeline.py`, `strm/nice/scoring_summary.json`, `strm/nice/qa_qc_report.json`, `strm/nice/rationale/*.json` (2,148 files), `strm/issues/STRM-002-NICE-gaps.json`
+
+**New ADRs:** ADR-016 (STRM — NIST NICE Framework v2.1.0)
+
 ## [0.5.3] - 2026-03-31
 
 ### Project Rename: ATLAS → WIDAI

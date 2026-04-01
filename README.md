@@ -108,7 +108,7 @@ Every roadmap item has been scored on impact, overlooked probability, and depend
 
 **Phase 0 — Validate (Complete).** Four parallel tests executed: coverage gap (PASS, 92.2%), AI-assisted KSA quality (PASS, 4.26/5), license audit (CONDITIONAL, 19 frameworks GREEN), consistency audit (PASS, 8.2/10). All assumptions validated. Phase 1 cleared for execution. [Full results →](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
 
-**Phase 1 — First Product (In Progress).** PE assessment methodology fully specified. KSA architecture restructured from role-centric to shared domain pool (12 knowledge domains, many-to-many mappings). STRM framework mapping cycle active — each framework produces per-element rationale files with multi-method computational scoring. First framework (O\*NET 30.2) complete. [STRM progress →](docs/README.md)
+**Phase 1 — First Product (In Progress).** PE assessment methodology fully specified. KSA architecture restructured from role-centric to shared domain pool (12 knowledge domains, many-to-many mappings). STRM framework mapping cycle active — each framework produces per-element rationale files with multi-method computational scoring. Two frameworks complete: O\*NET 30.2 (126 elements) and NIST NICE v2.1.0 (2,148 elements). First cross-framework corroboration identified. [STRM progress →](docs/README.md)
 
 **Phase 2 — Compliance + Validation.** EU AI Act obligation-to-role mapping ships before August 2026 enforcement. Cross-regulatory role coverage analysis produces the differentiating feature. Regulatory practitioners validate the mappings.
 
@@ -124,11 +124,11 @@ Every roadmap item has been scored on impact, overlooked probability, and depend
 
 WIDAI is in active development at version 0.5.3. Transparency about where things stand is a feature, not a disclaimer.
 
-**What exists today:** 187 roles defined across 10 categories. KSAs organized across 12 domain pools with active enrichment through STRM framework mappings. 70+ source frameworks with provenance. Shared-pool KSA architecture with many-to-many role mappings. Entity-separated architecture designed for graph database ingestion. Multi-method computational scoring pipeline producing per-element rationale files. First framework STRM (O\*NET 30.2) complete with 126 rationale files.
+**What exists today:** 187 roles defined across 10 categories. KSAs organized across 12 domain pools with active enrichment through STRM framework mappings. 70+ source frameworks with provenance. Shared-pool KSA architecture with many-to-many role mappings. Entity-separated architecture designed for graph database ingestion. Multi-method computational scoring pipeline producing per-element rationale files. Two framework STRMs complete: O\*NET 30.2 (126 rationale files) and NIST NICE v2.1.0 (2,148 rationale files). 11 gap signals registered across both STRMs with first cross-framework corroboration.
 
 **What has been validated:** Phase 0 testing confirmed that current coverage supports a PE assessment pilot (92.2% KSA coverage across 5 archetypes), that AI-assisted authoring meets quality standards (4.26/5), and that a clean commercial pathway exists (19 frameworks GREEN for commercial use). The hypothesis is tested, not assumed.
 
-**What does not exist yet:** Full role-KSA mappings at target depth — requires STRM completion across remaining frameworks and synthesis. Populated regulatory context fields. A pilot engagement partner. An API.
+**What does not exist yet:** Full role-KSA mappings at target depth — requires STRM completion across remaining Tier 1–4 frameworks and Phase 1D synthesis. Populated regulatory context fields. A pilot engagement partner. An API.
 
 The honest version is always the marketing version when the fundamentals are sound. And they are.
 
@@ -150,6 +150,7 @@ This project does not operate on intuition. The roadmap was produced through a s
 | Shared-pool KSA architecture | [ADR-013](docs/roadmap/adr/ADR-013-shared-pool-ksa-architecture.md) | Domain-based KSA pool with many-to-many role mappings. |
 | STRM-based KSA enrichment | [ADR-014](docs/roadmap/adr/ADR-014-strm-based-ksa-enrichment.md) | NIST IR 8477 adopted for evidence-based enrichment. |
 | STRM — O\*NET 30.2 complete | [ADR-015](docs/roadmap/adr/ADR-015-strm-onet.md) | Multi-method scoring pipeline established. |
+| STRM — NIST NICE v2.1.0 complete | [ADR-016](docs/roadmap/adr/ADR-016-strm-nice.md) | 2,148 elements scored. Cybersecurity boundary defined. |
 
 > All 15 ADRs with full context, rationale, and alternatives considered: [`docs/roadmap/adr/`](docs/roadmap/adr/)
 

@@ -1,0 +1,87 @@
+{
+  "pipeline_run_date": "2026-04-01",
+  "strm_id": "STRM-002-NICE",
+  "framework": "NIST NICE Framework v2.1.0",
+  "methodology": {
+    "primary": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "role": "Generates strength_of_relationship integer (0-10)",
+      "mapping": "raw_score (0-1) \u00d7 10, rounded to nearest integer"
+    },
+    "secondary": [
+      {
+        "name": "BERTScore",
+        "model": "roberta-large",
+        "role": "Token-level audit trail (Precision, Recall, F1)"
+      },
+      {
+        "name": "NLI Cross-Encoder",
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "role": "Directional implication classification (entailment/neutral/contradiction)"
+      },
+      {
+        "name": "Bi-Encoder Cosine",
+        "model": "all-MiniLM-L6-v2",
+        "role": "Independent embedding cosine similarity"
+      },
+      {
+        "name": "Jaccard Token",
+        "model": null,
+        "role": "Lexical baseline (word token intersection/union)"
+      }
+    ]
+  },
+  "statistics": {
+    "total_mappings": 2148,
+    "scored_mappings": 1720,
+    "no_relationship_mappings": 428,
+    "strength_distribution": {
+      "all": {
+        "mean": 4.1,
+        "median": 5.0,
+        "std": 2.34,
+        "min": 0.0,
+        "max": 8.0
+      },
+      "scored_only": {
+        "mean": 5.12,
+        "median": 5.3,
+        "std": 1.25,
+        "min": 1.1,
+        "max": 7.5
+      },
+      "by_relationship_type": {
+        "Equal": {
+          "count": 32,
+          "mean": 6.64,
+          "median": 6.7,
+          "min": 6.0,
+          "max": 7.5
+        },
+        "Intersects with": {
+          "count": 1106,
+          "mean": 4.73,
+          "median": 4.9,
+          "min": 1.1,
+          "max": 7.4
+        },
+        "No relationship": {
+          "count": 428,
+          "mean": 0,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "Superset of": {
+          "count": 582,
+          "mean": 5.78,
+          "median": 5.9,
+          "min": 2.2,
+          "max": 7.5
+        }
+      }
+    },
+    "rationale_files_generated": 2148
+  }
+}

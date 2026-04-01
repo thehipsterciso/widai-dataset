@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-002-NICE",
+  "fde_id": "K0658",
+  "fde_type": "knowledge",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "K0658",
+  "focal_document_element_description": "Knowledge of cognitive biases",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "AB-A-003",
+  "reference_document_element_description": "Ability to distinguish between correlation and causation in analytical findings, communicating the distinction and its implications for decision-making clearly to business audiences.",
+  "comments": "NICE knowledge intersects with WIDAI AB domain. Ability AB-A-003 is the strongest semantic match. Secondary: AB-K-009 (AB, cosine: 0.457), AI-K-002 (AI, cosine: 0.437).",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark. Both texts processed jointly through transformer; outputs calibrated 0-1 similarity score.",
+      "raw_score_0_1": 0.187,
+      "mapped_strength_0_10": 1.9,
+      "final_strength_integer": 2,
+      "significance": "Minimal similarity (1.9/10). Near-zero cross-encoder score indicates the concepts share little semantic content despite being mapped as related."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching. Precision = FDE coverage of KSA tokens. Recall = KSA coverage by FDE tokens. F1 = harmonic mean.",
+        "precision": 0.8751,
+        "recall": 0.848,
+        "f1": 0.8614,
+        "significance": "Moderate token-level alignment (F1=0.861). Precision exceeds Recall (P=0.875 > R=0.848), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference. Classifies text pair as entailment, neutral, or contradiction. Indicates directional implication strength.",
+        "contradiction": 0.0001,
+        "entailment": 0.0002,
+        "neutral": 0.9997,
+        "significance": "Neutral-dominant (100.0%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
+        "cosine_similarity_0_1": 0.482,
+        "significance": "Bi-encoder (0.482) exceeds STS (0.187). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
+        "similarity_0_1": 0.0,
+        "significance": "Near-zero lexical overlap (0.0%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

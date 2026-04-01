@@ -1,0 +1,62 @@
+{
+  "strm_id": "STRM-002-NICE",
+  "fde_id": "T1315",
+  "fde_type": "task",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "T1315",
+  "focal_document_element_description": "Track cyber defense incidents from initial detection through final resolution",
+  "rationale": "Semantic",
+  "relationship": "Intersects with",
+  "reference_document_element": "RM-T-002",
+  "reference_document_element_description": "Conduct threat model assessments for AI systems, identifying AI-specific attack surfaces, threat actors, and applicable mitigating controls.",
+  "comments": "NICE task intersects with WIDAI RM domain. Task RM-T-002 is the strongest semantic match.",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark. Both texts processed jointly through transformer; outputs calibrated 0-1 similarity score.",
+      "raw_score_0_1": 0.3674,
+      "mapped_strength_0_10": 3.7,
+      "final_strength_integer": 4,
+      "significance": "Weak similarity (3.7/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching. Precision = FDE coverage of KSA tokens. Recall = KSA coverage by FDE tokens. F1 = harmonic mean.",
+        "precision": 0.8431,
+        "recall": 0.8522,
+        "f1": 0.8476,
+        "significance": "Lower token-level alignment (F1=0.848). The concepts share limited contextual embedding similarity at the token level, consistent with cross-domain vocabulary divergence."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference. Classifies text pair as entailment, neutral, or contradiction. Indicates directional implication strength.",
+        "contradiction": 0.0006,
+        "entailment": 0.0024,
+        "neutral": 0.9971,
+        "significance": "Neutral-dominant (99.7%). The model finds the descriptions related but neither implying nor contradicting each other \u2014 typical for cross-domain framework mapping where concepts overlap without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
+        "cosine_similarity_0_1": 0.4512,
+        "significance": "Bi-encoder (0.451) exceeds STS (0.367). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
+        "similarity_0_1": 0.0,
+        "significance": "Near-zero lexical overlap (0.0%). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}
