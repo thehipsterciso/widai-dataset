@@ -56,7 +56,27 @@
       }
     }
   },
-  "gap_signal": null,
+  "gap_signal": {
+    "severity": "critical",
+    "criteria_triggered": [
+      "domain_mismatch"
+    ],
+    "signal_count": 1,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "critical",
+        "detail": "NLI contradiction 82.0% on Superset of classification. The matched KSA operates in a different professional domain than the obligation/competency requires. STS 0.568 passed the threshold but secondary signals contradict the match.",
+        "scores": {
+          "nli_contradiction": 0.8205,
+          "sts_raw": 0.5675,
+          "relationship": "Superset of"
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
   "evaluated_by": "AI-assisted (Claude) with human review",
   "evaluation_date": "2026-04-01"
 }

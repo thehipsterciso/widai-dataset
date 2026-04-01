@@ -56,7 +56,38 @@
       }
     }
   },
-  "gap_signal": null,
+  "gap_signal": {
+    "severity": "low",
+    "criteria_triggered": [
+      "threshold_fragility",
+      "vocabulary_inflation"
+    ],
+    "signal_count": 2,
+    "signals": [
+      {
+        "criterion": "threshold_fragility",
+        "severity": "low",
+        "detail": "STS 0.551 classified as Equal but closer to Superset threshold. Classification may be over-generous.",
+        "scores": {
+          "sts_raw": 0.5511,
+          "threshold": 0.65,
+          "margin": -0.0989
+        }
+      },
+      {
+        "criterion": "vocabulary_inflation",
+        "severity": "low",
+        "detail": "Bi-encoder/STS gap 0.127 suggests some vocabulary-driven inflation in candidate selection.",
+        "scores": {
+          "biencoder_cosine": 0.6784,
+          "sts_raw": 0.5511,
+          "gap": 0.1273
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
   "evaluated_by": "AI-assisted (Claude) with human review",
   "evaluation_date": "2026-04-01"
 }

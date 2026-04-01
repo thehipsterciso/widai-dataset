@@ -56,7 +56,27 @@
       }
     }
   },
-  "gap_signal": null,
+  "gap_signal": {
+    "severity": "moderate",
+    "criteria_triggered": [
+      "vocabulary_inflation"
+    ],
+    "signal_count": 1,
+    "signals": [
+      {
+        "criterion": "vocabulary_inflation",
+        "severity": "moderate",
+        "detail": "Bi-encoder/STS gap 0.217 with low STS 0.312. Candidate selection was likely driven by shared vocabulary rather than functional alignment. The functionally correct KSA may not have been in the top-5 candidates.",
+        "scores": {
+          "biencoder_cosine": 0.5288,
+          "sts_raw": 0.3121,
+          "gap": 0.2167
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
   "evaluated_by": "AI-assisted (Claude) with human review",
   "evaluation_date": "2026-04-01"
 }

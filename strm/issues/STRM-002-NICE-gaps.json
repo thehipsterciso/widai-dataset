@@ -6,6 +6,7 @@
   "assessment_date": "2026-04-01",
   "total_gap_signals": 5,
   "note": "Gap signals are thematic clusters derived from the NICE STRM analysis. Unlike O*NET (which surfaced foundational skill gaps), NICE surfaces boundary-zone gaps between cybersecurity and data/AI domains. All 428 'No relationship' elements are correctly classified as cybersecurity-specific. Gap signals here emerge from: (1) borderline no-rel items with legitimate WIDAI relevance, (2) weak-strength mappings revealing thin WIDAI coverage, and (3) thematic patterns in the cybersecurity-data/AI boundary. Per ADR-014, gaps are registered here and resolved during Phase 1D Synthesis.",
+  "gap_register_updated": "2026-04-01",
 
   "gaps": [
     {
@@ -84,5 +85,26 @@
       "authoring_guidance": "Consider KSAs such as: 'Knowledge of AI supply chain integrity principles, including training data provenance verification, pre-trained model sourcing evaluation, data vendor quality assurance, and AI component bill-of-materials (AI BOM) management' (Knowledge, AG domain). Counter-argument: this may be too early-stage — AI BOM and model supply chain are emerging concepts not yet standardized. Evaluate whether the EU AI Act STRM surfaces similar requirements (the Act includes supply chain documentation obligations).",
       "synthesis_recommendation": "Low priority as standalone. Likely to be corroborated by EU AI Act STRM (supply chain documentation requirements) and NIST AI RMF STRM (MAP function includes third-party AI component assessment). If corroborated, upgrade to moderate — this is a differentiator for WIDAI given few frameworks address data/AI supply chain as a workforce competency."
     }
-  ]
+  ],
+
+  "per_fde_gap_detection": {
+    "method": "Retroactive multi-method signal analysis (gap_detection.py)",
+    "criteria": [
+      "domain_mismatch: NLI contradiction >80% on Equal/Superset (critical) or >50% (moderate)",
+      "threshold_fragility: STS 0.50-0.55 on Superset/Equal (moderate)",
+      "vocabulary_inflation: bi-encoder/STS gap >0.15 with STS <0.60 (moderate) or >0.12 (low)"
+    ],
+    "total_flagged": 516,
+    "severity_counts": {
+      "critical": 23,
+      "moderate": 428,
+      "low": 65
+    },
+    "criterion_counts": {
+      "domain_mismatch": 139,
+      "threshold_fragility": 185,
+      "vocabulary_inflation": 330
+    },
+    "note": "Per-FDE gap signals are recorded in individual rationale files. This section summarizes the aggregate findings. Existing thematic gap analysis above is preserved and remains valid."
+  }
 }

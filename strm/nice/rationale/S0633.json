@@ -56,7 +56,49 @@
       }
     }
   },
-  "gap_signal": null,
+  "gap_signal": {
+    "severity": "moderate",
+    "criteria_triggered": [
+      "domain_mismatch",
+      "threshold_fragility",
+      "vocabulary_inflation"
+    ],
+    "signal_count": 3,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "moderate",
+        "detail": "NLI contradiction 60.9% suggests semantic tension between the FDE and matched KSA. The competency domains may be adjacent but not functionally aligned.",
+        "scores": {
+          "nli_contradiction": 0.6087,
+          "sts_raw": 0.4233,
+          "relationship": "Superset of"
+        }
+      },
+      {
+        "criterion": "threshold_fragility",
+        "severity": "moderate",
+        "detail": "STS 0.423 barely clears classification threshold for Superset of. This match is fragile and may indicate insufficient KSA coverage for this competency area.",
+        "scores": {
+          "sts_raw": 0.4233,
+          "threshold": 0.5,
+          "margin": -0.0767
+        }
+      },
+      {
+        "criterion": "vocabulary_inflation",
+        "severity": "low",
+        "detail": "Bi-encoder/STS gap 0.141 suggests some vocabulary-driven inflation in candidate selection.",
+        "scores": {
+          "biencoder_cosine": 0.5645,
+          "sts_raw": 0.4233,
+          "gap": 0.1412
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
   "evaluated_by": "AI-assisted (Claude) with human review",
   "evaluation_date": "2026-04-01"
 }

@@ -56,7 +56,38 @@
       }
     }
   },
-  "gap_signal": null,
+  "gap_signal": {
+    "severity": "critical",
+    "criteria_triggered": [
+      "domain_mismatch",
+      "vocabulary_inflation"
+    ],
+    "signal_count": 2,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "critical",
+        "detail": "NLI contradiction 97.1% on Superset of classification. The matched KSA operates in a different professional domain than the obligation/competency requires. STS 0.555 passed the threshold but secondary signals contradict the match.",
+        "scores": {
+          "nli_contradiction": 0.9711,
+          "sts_raw": 0.5547,
+          "relationship": "Superset of"
+        }
+      },
+      {
+        "criterion": "vocabulary_inflation",
+        "severity": "moderate",
+        "detail": "Bi-encoder/STS gap 0.189 with low STS 0.555. Candidate selection was likely driven by shared vocabulary rather than functional alignment. The functionally correct KSA may not have been in the top-5 candidates.",
+        "scores": {
+          "biencoder_cosine": 0.7438,
+          "sts_raw": 0.5547,
+          "gap": 0.1891
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
   "evaluated_by": "AI-assisted (Claude) with human review",
   "evaluation_date": "2026-04-01"
 }

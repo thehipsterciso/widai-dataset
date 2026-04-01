@@ -67,7 +67,27 @@
     "risk_category": "high-risk",
     "enforcement_date": "2026-08-02"
   },
-  "gap_signal": null,
+  "gap_signal": {
+    "severity": "critical",
+    "criteria_triggered": [
+      "domain_mismatch"
+    ],
+    "signal_count": 1,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "critical",
+        "detail": "NLI contradiction 97.9% on Superset of classification. The matched KSA operates in a different professional domain than the obligation/competency requires. STS 0.600 passed the threshold but secondary signals contradict the match.",
+        "scores": {
+          "nli_contradiction": 0.9785,
+          "sts_raw": 0.5997,
+          "relationship": "Superset of"
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
   "evaluated_by": "AI-assisted (Claude) with human review",
   "evaluation_date": "2026-04-01"
 }

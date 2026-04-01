@@ -56,7 +56,38 @@
       }
     }
   },
-  "gap_signal": null,
+  "gap_signal": {
+    "severity": "moderate",
+    "criteria_triggered": [
+      "domain_mismatch",
+      "vocabulary_inflation"
+    ],
+    "signal_count": 2,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "moderate",
+        "detail": "NLI contradiction 99.9% suggests semantic tension between the FDE and matched KSA. The competency domains may be adjacent but not functionally aligned.",
+        "scores": {
+          "nli_contradiction": 0.9989,
+          "sts_raw": 0.1345,
+          "relationship": "Intersects with"
+        }
+      },
+      {
+        "criterion": "vocabulary_inflation",
+        "severity": "moderate",
+        "detail": "Bi-encoder/STS gap 0.195 with low STS 0.135. Candidate selection was likely driven by shared vocabulary rather than functional alignment. The functionally correct KSA may not have been in the top-5 candidates.",
+        "scores": {
+          "biencoder_cosine": 0.329,
+          "sts_raw": 0.1345,
+          "gap": 0.1945
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
   "evaluated_by": "AI-assisted (Claude) with human review",
   "evaluation_date": "2026-04-01"
 }

@@ -6,6 +6,7 @@
   "assessment_date": "2026-03-31",
   "total_gap_signals": 6,
   "note": "Gap signals are thematic clusters, not per-FDE. Multiple O*NET FDEs may point to the same underlying WIDAI gap. Per ADR-014, gaps are registered here and resolved during Phase 1D Synthesis — not during STRM execution.",
+  "gap_register_updated": "2026-04-01",
 
   "gaps": [
     {
@@ -102,5 +103,26 @@
       "authoring_guidance": "Consider whether AG domain should include a Knowledge KSA like 'Knowledge of ethical reasoning frameworks (consequentialism, deontology, virtue ethics, care ethics) as foundations for navigating AI ethics decisions that cannot be resolved by technical fairness metrics alone.' This is relevant for senior governance roles but may be over-specified for engineering roles.",
       "synthesis_recommendation": "Evaluate against EU AI Act STRM (which requires AI literacy and ethical reasoning) and NIST AI RMF. If regulatory frameworks expect ethical reasoning foundations, WIDAI should define them."
     }
-  ]
+  ],
+
+  "per_fde_gap_detection": {
+    "method": "Retroactive multi-method signal analysis (gap_detection.py)",
+    "criteria": [
+      "domain_mismatch: NLI contradiction >80% on Equal/Superset (critical) or >50% (moderate)",
+      "threshold_fragility: STS 0.50-0.55 on Superset/Equal (moderate)",
+      "vocabulary_inflation: bi-encoder/STS gap >0.15 with STS <0.60 (moderate) or >0.12 (low)"
+    ],
+    "total_flagged": 25,
+    "severity_counts": {
+      "critical": 0,
+      "moderate": 24,
+      "low": 1
+    },
+    "criterion_counts": {
+      "domain_mismatch": 4,
+      "threshold_fragility": 18,
+      "vocabulary_inflation": 6
+    },
+    "note": "Per-FDE gap signals are recorded in individual rationale files. This section summarizes the aggregate findings. Existing thematic gap analysis above is preserved and remains valid."
+  }
 }

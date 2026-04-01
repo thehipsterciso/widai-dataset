@@ -99,10 +99,19 @@
 
   "gap_analysis": {
     "no_relationship_count": 0,
-    "gap_signals_registered": 0,
+    "gap_signals_registered": 24,
     "gap_register_file": "strm/issues/STRM-005-EU-AI-ACT-gaps.json",
-    "note": "Zero gap signals. All 62 EU AI Act elements mapped to at least one WIDAI KSA with strength ≥ 4. This indicates comprehensive coverage of the regulation's workforce requirements by the WIDAI KSA pool. This is the expected outcome for a Tier 2 regulatory framework whose workforce requirements were considered during Phase 1A baseline enrichment.",
-    "status": "PASS — No gaps detected"
+    "per_fde_detection": {
+      "total_flagged": 24,
+      "critical": 11,
+      "moderate": 8,
+      "low": 5,
+      "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)",
+      "criteria": "NLI domain mismatch, STS threshold fragility, bi-encoder vocabulary inflation"
+    },
+    "note": "Original assessment reported zero gaps — this was incorrect due to hardcoded null gap_signal in the scoring pipeline. Retroactive gap detection found 24 elements with gap signals (11 critical, 8 moderate, 5 low). The dominant pattern is AG-domain vocabulary inflation: regulatory language shares surface tokens with governance KSAs, causing the bi-encoder candidate selection to systematically prefer AG matches over functionally correct KSAs from DQ, AI, TF, and SP domains. All 62 elements still map to at least one WIDAI KSA with strength ≥ 4, but 11 of those matches are in the wrong functional domain.",
+    "status": "CORRECTED — 24 gap signals detected retroactively. Original PASS was incorrect.",
+    "correction_date": "2026-04-01"
   },
 
   "cross_strm_consistency": {
@@ -116,8 +125,10 @@
     "status": "PASS"
   },
 
-  "overall_status": "PASS — 7/7 checks pass",
-  "checks_passed": 7,
+  "overall_status": "CORRECTED — 6/7 checks pass, 1 corrected (gap_analysis). Original 7/7 PASS was incorrect.",
+  "checks_passed": 6,
+  "checks_corrected": 1,
   "checks_failed": 0,
-  "checks_total": 7
+  "checks_total": 7,
+  "correction_note": "Gap analysis originally reported PASS with zero gaps. Retroactive multi-method gap detection (2026-04-01) found 24 elements with gap signals including 11 critical domain mismatches. Gap register and rationale files updated. All other QA/QC checks remain valid."
 }

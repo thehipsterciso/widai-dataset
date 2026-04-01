@@ -6,6 +6,7 @@
   "assessment_date": "2026-04-01",
   "total_gap_signals": 4,
   "note": "Gap signals are thematic clusters derived from DCWF STRM analysis. DCWF is unique among Tier 1 frameworks: its 99.7% match rate means gap signals emerge almost entirely from weak-strength patterns (≤3) rather than no-relationship boundaries. 172 very-weak elements (strength ≤2) were analyzed thematically. The majority are cybersecurity/intelligence/forensic-specific with legitimate low scores. Four gap signals identified — three corroborate existing gaps from prior STRMs, one is new. Per ADR-014, gaps are registered here and resolved during Phase 1D Synthesis.",
+  "gap_register_updated": "2026-04-01",
 
   "gaps": [
     {
@@ -81,5 +82,26 @@
       "authoring_guidance": "Consider a Skill: 'Skill in designing and executing test and evaluation plans for data and AI systems, including operational readiness assessment, integration testing, conformity assessment against standards, and structured deficiency reporting with remediation tracking.' This would serve AI T&E Specialist, AI Risk and Ethics Specialist, and senior governance roles. Evaluate whether this is distinct enough from model validation (AI-S-015) to warrant a separate KSA.",
       "synthesis_recommendation": "Low priority as standalone. Evaluate against EU AI Act STRM (which requires conformity assessment capabilities for high-risk AI systems) and NIST AI RMF STRM (which defines testing expectations in the MAP and MEASURE functions). If regulatory frameworks confirm T&E as a distinct workforce competency beyond model validation, upgrade to moderate."
     }
-  ]
+  ],
+
+  "per_fde_gap_detection": {
+    "method": "Retroactive multi-method signal analysis (gap_detection.py)",
+    "criteria": [
+      "domain_mismatch: NLI contradiction >80% on Equal/Superset (critical) or >50% (moderate)",
+      "threshold_fragility: STS 0.50-0.55 on Superset/Equal (moderate)",
+      "vocabulary_inflation: bi-encoder/STS gap >0.15 with STS <0.60 (moderate) or >0.12 (low)"
+    ],
+    "total_flagged": 1178,
+    "severity_counts": {
+      "critical": 71,
+      "moderate": 965,
+      "low": 142
+    },
+    "criterion_counts": {
+      "domain_mismatch": 379,
+      "threshold_fragility": 482,
+      "vocabulary_inflation": 752
+    },
+    "note": "Per-FDE gap signals are recorded in individual rationale files. This section summarizes the aggregate findings. Existing thematic gap analysis above is preserved and remains valid."
+  }
 }

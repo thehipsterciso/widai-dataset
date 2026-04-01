@@ -6,6 +6,7 @@
   "assessment_date": "2026-04-01",
   "total_gap_signals": 3,
   "note": "Gap signals are thematic clusters derived from DDaT STRM analysis. DDaT is the first framework with a 100% match rate — all gap signals emerge from weak-strength patterns (strength ≤2) rather than no-relationship boundaries. 16 very-weak elements analyzed thematically. The majority are expected out-of-scope for a data/AI workforce framework (accessibility, UX/service design, IT security). Three signals warrant registration: one corroborates an existing O*NET gap, one strengthens accumulating DCWF evidence, and one provides a new boundary-zone observation. Per ADR-014, gaps are registered here and resolved during Phase 1D Synthesis.",
+  "gap_register_updated": "2026-04-01",
 
   "gaps": [
     {
@@ -60,5 +61,26 @@
       "authoring_guidance": "Evaluate whether WIDAI's SP domain should include working-level security management KSAs for data/AI professionals (as distinct from NICE-level cybersecurity competencies). Consider: 'Knowledge of IT security management principles relevant to data and AI operations, including access control implementation, security incident coordination, security policy compliance for data platforms, and security operations collaboration.' This would serve data engineers, data architects, and AI operations roles.",
       "synthesis_recommendation": "Low priority. Monitor for corroboration from SFIA (which defines IT security management as a skill) and EU AI Act (which requires security measures for AI systems). If both corroborate, this may warrant a small set of working-level security KSAs in the SP domain — designed to complement rather than duplicate NICE competencies."
     }
-  ]
+  ],
+
+  "per_fde_gap_detection": {
+    "method": "Retroactive multi-method signal analysis (gap_detection.py)",
+    "criteria": [
+      "domain_mismatch: NLI contradiction >80% on Equal/Superset (critical) or >50% (moderate)",
+      "threshold_fragility: STS 0.50-0.55 on Superset/Equal (moderate)",
+      "vocabulary_inflation: bi-encoder/STS gap >0.15 with STS <0.60 (moderate) or >0.12 (low)"
+    ],
+    "total_flagged": 76,
+    "severity_counts": {
+      "critical": 0,
+      "moderate": 64,
+      "low": 12
+    },
+    "criterion_counts": {
+      "domain_mismatch": 21,
+      "threshold_fragility": 36,
+      "vocabulary_inflation": 44
+    },
+    "note": "Per-FDE gap signals are recorded in individual rationale files. This section summarizes the aggregate findings. Existing thematic gap analysis above is preserved and remains valid."
+  }
 }

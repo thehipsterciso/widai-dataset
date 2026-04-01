@@ -56,7 +56,38 @@
       }
     }
   },
-  "gap_signal": null,
+  "gap_signal": {
+    "severity": "moderate",
+    "criteria_triggered": [
+      "threshold_fragility",
+      "vocabulary_inflation"
+    ],
+    "signal_count": 2,
+    "signals": [
+      {
+        "criterion": "threshold_fragility",
+        "severity": "moderate",
+        "detail": "STS 0.508 barely clears classification threshold for Superset of. This match is fragile and may indicate insufficient KSA coverage for this competency area.",
+        "scores": {
+          "sts_raw": 0.5079,
+          "threshold": 0.5,
+          "margin": 0.0079
+        }
+      },
+      {
+        "criterion": "vocabulary_inflation",
+        "severity": "moderate",
+        "detail": "Bi-encoder/STS gap 0.164 with low STS 0.508. Candidate selection was likely driven by shared vocabulary rather than functional alignment. The functionally correct KSA may not have been in the top-5 candidates.",
+        "scores": {
+          "biencoder_cosine": 0.6717,
+          "sts_raw": 0.5079,
+          "gap": 0.1638
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
   "evaluated_by": "AI-assisted (Claude) with human review",
   "evaluation_date": "2026-04-01"
 }

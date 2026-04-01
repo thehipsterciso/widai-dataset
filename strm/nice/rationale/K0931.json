@@ -56,7 +56,27 @@
       }
     }
   },
-  "gap_signal": null,
+  "gap_signal": {
+    "severity": "moderate",
+    "criteria_triggered": [
+      "domain_mismatch"
+    ],
+    "signal_count": 1,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "moderate",
+        "detail": "NLI contradiction 93.8% suggests semantic tension between the FDE and matched KSA. The competency domains may be adjacent but not functionally aligned.",
+        "scores": {
+          "nli_contradiction": 0.9375,
+          "sts_raw": 0.3705,
+          "relationship": "Intersects with"
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
   "evaluated_by": "AI-assisted (Claude) with human review",
   "evaluation_date": "2026-04-01"
 }
