@@ -60,6 +60,7 @@ STRM_DIRS = {
     "dcwf":       {"rationale": "dcwf/rationale",       "strm_id": "STRM-003-DCWF"},
     "ddat":       {"rationale": "ddat/rationale",       "strm_id": "STRM-004-DDAT"},
     "eu_ai_act":  {"rationale": "eu_ai_act/rationale",  "strm_id": "STRM-005-EU-AI-ACT"},
+    "nist_ai_rmf": {"rationale": "nist_ai_rmf/rationale", "strm_id": "STRM-006-NIST-AI-RMF"},
 }
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))

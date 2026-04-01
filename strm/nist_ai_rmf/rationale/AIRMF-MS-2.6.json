@@ -1,0 +1,74 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MS-2.6",
+  "fde_type": "outcome",
+  "function": "MEASURE",
+  "category": "MEASURE 2",
+  "subcategory_id": "MS-2.6",
+  "outcome_text": "The AI system is evaluated regularly for safety risks\u2014as identified in the MAP function. The AI system to be deployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics reflect system reliability and robustness, real-time monitoring, and response times for AI system failures.",
+  "scoring_text": "Skill in AI safety evaluation and safe failure design, including conducting regular safety risk assessments, demonstrating residual risk within tolerance, designing fail-safe mechanisms, establishing safety metrics for reliability, robustness, and response time, and implementing real-time safety monitoring.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MS-2.6",
+  "focal_document_element_description": "Skill in AI safety evaluation and safe failure design, including conducting regular safety risk assessments, demonstrating residual risk within tolerance, designing fail-safe mechanisms, establishing safety metrics for reliability, robustness, and response time, and implementing real-time safety monitoring.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AI-T-007",
+  "reference_document_element_description": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+  "comments": "NIST AI RMF MS-2.6 (MEASURE) equal WIDAI AI domain. AI-T-007 is the strongest match (STS: 0.741, cosine: 0.732). Secondary: AI-S-010 (AI, cosine: 0.716), AG-S-005 (AG, cosine: 0.704).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.7413,
+      "mapped_strength_0_10": 7.4,
+      "final_strength_integer": 7,
+      "significance": "STS 7.4/10 (raw 0.741). Shared vocabulary: [ai, failure, reliability, safety]. NIST AI RMF competency implication terms [assessments, conducting, demonstrating, design, designing, establishing] vs WIDAI terms [against, application, criteria, defined, documenting, evaluate] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8711,
+        "recall": 0.8916,
+        "f1": 0.8812,
+        "significance": "BERTScore F1=0.881 (P=0.871, R=0.892). R exceeds P by 0.020 \u2014 the WIDAI KSA's 18 words are well-captured by the competency implication's 37 words, but the competency implication contains broader scope."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0001,
+        "entailment": 0.9877,
+        "neutral": 0.0122,
+        "significance": "NLI: notable entailment (98.8%). \"Skill in AI safety evaluation and safe failure design, including conducting regu\" shows logical implication toward \"Evaluate AI application performance against defined quality, safety, and reliabi\" \u2014 stronger than typical for cross-framework competency pairs, reinforcing the STS-based relationship."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.732,
+        "significance": "Bi-encoder 0.732 \u2248 STS 0.741 (gap 0.009). Independent encoding and cross-attention agree. Shared terms [ai, failure, reliability, safety] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1163,
+        "significance": "Jaccard 11.6%. Shared tokens: [ai, failure, reliability, safety]. NIST AI RMF-only: [assessments, conducting, demonstrating, design, designing, establishing]. WIDAI-only: [against, application, criteria, defined, documenting, evaluate]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MEASURE",
+    "applies_to": [
+      "ai_development_team",
+      "ai_deployment_team"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

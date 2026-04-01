@@ -1,0 +1,104 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-GV-3.1",
+  "fde_type": "outcome",
+  "function": "GOVERN",
+  "category": "GOVERN 3",
+  "subcategory_id": "GV-3.1",
+  "outcome_text": "Decision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team (e.g., demographic diversity, disciplinary expertise, domain experience, and formal and informal training).",
+  "scoring_text": "Skill in building and managing diverse AI risk management teams, including assembling cross-disciplinary expertise, incorporating varied domain experience, ensuring demographic representation, and integrating diverse perspectives into AI risk decision-making processes.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-GV-3.1",
+  "focal_document_element_description": "Skill in building and managing diverse AI risk management teams, including assembling cross-disciplinary expertise, incorporating varied domain experience, ensuring demographic representation, and integrating diverse perspectives into AI risk decision-making processes.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "AG-S-005",
+  "reference_document_element_description": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+  "comments": "NIST AI RMF GV-3.1 (GOVERN) superset of WIDAI AG domain. AG-S-005 is the strongest match (STS: 0.577, cosine: 0.737). Secondary: RM-A-003 (RM, cosine: 0.677), RM-S-008 (RM, cosine: 0.677).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.5773,
+      "mapped_strength_0_10": 5.8,
+      "final_strength_integer": 6,
+      "significance": "STS 5.8/10 (raw 0.577). Shared vocabulary: [ai, risk, skill]. NIST AI RMF competency implication terms [assembling, building, cross, decision, demographic, disciplinary] vs WIDAI terms [assessments, bias, conducting, determination, documentation, evaluation] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8715,
+        "recall": 0.888,
+        "f1": 0.8797,
+        "significance": "BERTScore F1=0.880 (P=0.872, R=0.888). Balanced P/R \u2014 the 30-word competency implication and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.7595,
+        "entailment": 0.0026,
+        "neutral": 0.2379,
+        "significance": "NLI: contradiction-dominant (75.9%). Semantic tension between \"Skill in building and managing diverse AI risk management teams, including assem\" and \"Skill in conducting AI impact assessments, including risk tiering, harm identifi\". Despite STS-based 'Superset of' classification, these concepts may operate in adjacent but distinct professional domains."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7368,
+        "significance": "Bi-encoder 0.737 > STS 0.577 (gap +0.159). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, risk, skill] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1463,
+        "significance": "Jaccard 14.6%. Shared tokens: [ai, risk, skill]. NIST AI RMF-only: [assembling, building, cross, decision, demographic, disciplinary]. WIDAI-only: [assessments, bias, conducting, determination, documentation, evaluation]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "GOVERN",
+    "applies_to": [
+      "organization"
+    ]
+  },
+  "gap_signal": {
+    "severity": "moderate",
+    "criteria_triggered": [
+      "domain_mismatch",
+      "vocabulary_inflation"
+    ],
+    "signal_count": 2,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "moderate",
+        "detail": "NLI contradiction 75.9% suggests semantic tension between the FDE and matched KSA. The competency domains may be adjacent but not functionally aligned.",
+        "scores": {
+          "nli_contradiction": 0.7595,
+          "sts_raw": 0.5773,
+          "relationship": "Superset of"
+        }
+      },
+      {
+        "criterion": "vocabulary_inflation",
+        "severity": "moderate",
+        "detail": "Bi-encoder/STS gap 0.159 with low STS 0.577. Candidate selection was likely driven by shared vocabulary rather than functional alignment. The functionally correct KSA may not have been in the top-5 candidates.",
+        "scores": {
+          "biencoder_cosine": 0.7368,
+          "sts_raw": 0.5773,
+          "gap": 0.1595
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

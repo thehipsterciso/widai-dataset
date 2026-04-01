@@ -1,0 +1,74 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MG-4.1",
+  "fde_type": "outcome",
+  "function": "MANAGE",
+  "category": "MANAGE 4",
+  "subcategory_id": "MG-4.1",
+  "outcome_text": "Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management.",
+  "scoring_text": "Skill in post-deployment AI system monitoring and incident management, including implementing user feedback capture mechanisms, establishing appeal and override procedures, planning decommissioning protocols, designing incident response and recovery processes, and managing AI system changes throughout the operational lifecycle.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MG-4.1",
+  "focal_document_element_description": "Skill in post-deployment AI system monitoring and incident management, including implementing user feedback capture mechanisms, establishing appeal and override procedures, planning decommissioning protocols, designing incident response and recovery processes, and managing AI system changes throughout the operational lifecycle.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "DG-T-007",
+  "reference_document_element_description": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+  "comments": "NIST AI RMF MG-4.1 (MANAGE) equal WIDAI DG domain. DG-T-007 is the strongest match (STS: 0.672, cosine: 0.772). Secondary: RM-T-005 (RM, cosine: 0.672), RM-T-003 (RM, cosine: 0.653).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6722,
+      "mapped_strength_0_10": 6.7,
+      "final_strength_integer": 7,
+      "significance": "STS 6.7/10 (raw 0.672). Shared vocabulary: [ai, deployment, incident, monitoring, post, procedures, protocols]. NIST AI RMF competency implication terms [appeal, capture, changes, decommissioning, designing, establishing] vs WIDAI terms [definitions, detection, drift, establish, performance, remediation] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8965,
+        "recall": 0.9185,
+        "f1": 0.9074,
+        "significance": "BERTScore F1=0.907 (P=0.896, R=0.918). R exceeds P by 0.022 \u2014 the WIDAI KSA's 18 words are well-captured by the competency implication's 38 words, but the competency implication contains broader scope."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0001,
+        "entailment": 0.0119,
+        "neutral": 0.988,
+        "significance": "NLI: neutral-dominant (98.8%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7717,
+        "significance": "Bi-encoder 0.772 > STS 0.672 (gap +0.100). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, deployment, incident, monitoring, post] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2093,
+        "significance": "Jaccard 20.9%. Shared tokens: [ai, deployment, incident, monitoring, post, procedures, protocols]. NIST AI RMF-only: [appeal, capture, changes, decommissioning, designing, establishing]. WIDAI-only: [definitions, detection, drift, establish, performance, remediation]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MANAGE",
+    "applies_to": [
+      "ai_deployment_team",
+      "organization"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

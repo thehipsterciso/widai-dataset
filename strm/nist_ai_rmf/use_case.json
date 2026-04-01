@@ -1,0 +1,75 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "framework_id": "NIST AI RMF 1.0",
+  "framework_version": "1.0",
+  "framework_date": "2023-01-26",
+  "framework_source": "NIST AI 100-1: Artificial Intelligence Risk Management Framework",
+  "widai_ksa_pool_version": "0.5.6",
+  "widai_ksa_pool_size": 497,
+  "execution_date": "2026-04-01",
+  "priority": 6,
+  "tier": 2,
+  "use_case_per_ir8477_section3": {
+    "target_audience": "WIDAI framework developers, AI risk management practitioners, and stakeholders evaluating WIDAI's coverage of AI risk management workforce competencies. Secondary audience: organizations building AI governance programs aligned with NIST AI RMF.",
+
+    "why_this_mapping": "NIST AI RMF 1.0 is the US federal government's primary AI risk management framework. It is the second regulatory/standards framework in the STRM sequence (after EU AI Act) and provides US-centric risk management perspective complementing the EU regulatory perspective of STRM-005. The AI RMF defines organizational outcomes across four functions (GOVERN, MAP, MEASURE, MANAGE) that collectively describe the competencies needed for trustworthy AI risk management. This STRM validates WIDAI coverage against a framework that shares vocabulary with WIDAI's governance and risk management domains but approaches competency from an outcome-based rather than task-based perspective.",
+
+    "concept_types_mapped": {
+      "focal_document": {
+        "source": "NIST AI RMF 1.0 Core",
+        "concept_types": [
+          "Subcategory outcome statements across 4 functions and 19 categories — 70 elements"
+        ],
+        "total_fdes_in_scope": 70,
+        "total_fdes_excluded": 0,
+        "exclusion_rationale": "No elements excluded. All 70 subcategory outcome statements evaluated. The AI RMF Core is entirely within WIDAI's scope — every subcategory describes an outcome relevant to data/AI workforce competency."
+      },
+      "reference_document": {
+        "source": "WIDAI KSA Pool v0.5.6",
+        "concept_types": [
+          "Knowledge (K) — domain-organized",
+          "Skills (S) — domain-organized",
+          "Tasks (T) — domain-organized",
+          "Abilities (A) — domain-organized"
+        ],
+        "total_reference_elements": 497,
+        "domains": 12
+      },
+      "structural_note": "The NIST AI RMF uses a function / category / subcategory hierarchy where subcategories are outcome statements (e.g., 'Roles and responsibilities related to AI risks are documented and clear'). These outcome statements are more abstract than NICE/DCWF KSATs but more concrete than EU AI Act obligations. The competency_implication field translates each outcome into workforce competency language for scoring."
+    },
+
+    "direction_of_mapping": "Focal → Reference. Each NIST AI RMF subcategory outcome (focal) is evaluated against the WIDAI KSA pool (reference). A subcategory with 'No relationship' to any WIDAI KSA would indicate a gap in WIDAI's coverage of AI risk management workforce competencies.",
+
+    "exhaustiveness_level": "Exhaustive. Every NIST AI RMF subcategory outcome (70) is evaluated. For each element, the most semantically relevant WIDAI KSA is identified via bi-encoder candidate identification, then scored through the full multi-method pipeline (identical to STRM-001 through STRM-005).",
+
+    "rationale_type": "Functional (primary). The mapping direction is outcome→competency: what workforce capability is required to achieve this risk management outcome? This is a Functional question per NIST IR 8477 Section 4.3, consistent with the STRM-005 EU AI Act methodology.",
+
+    "rationale_justification": "The NIST AI RMF describes organizational outcomes, not workforce competencies directly. WIDAI defines workforce competencies. The question 'what competency achieves this outcome' is Functional — it asks about the results of executing the mapped concepts. The competency_implication field bridges the vocabulary gap between outcome language and competency language, enabling STS-based scoring."
+  },
+  "scope_decisions": {
+    "all_elements_in_scope": true,
+    "note": "All 70 subcategory outcomes evaluated without categorical exclusions. Zero 'No relationship' results — every NIST AI RMF subcategory maps to at least one WIDAI KSA, reflecting comprehensive coverage of AI risk management competencies by the WIDAI pool.",
+    "structural_elements_excluded": {
+      "functions": "Function-level descriptions (GOVERN, MAP, MEASURE, MANAGE) are organizational groupings, not FDEs.",
+      "categories": "Category-level descriptions are thematic groupings, not outcome statements.",
+      "informative_references": "The AI RMF Playbook's suggested actions and informative references are implementation guidance, not framework elements."
+    }
+  },
+  "fde_count_summary": {
+    "outcome_statements": 70,
+    "total_in_scope": 70,
+    "excluded": 0,
+    "by_function": {
+      "GOVERN": 19,
+      "MAP": 18,
+      "MEASURE": 21,
+      "MANAGE": 12
+    }
+  },
+  "candidate_identification": {
+    "description": "Bi-encoder embeddings (all-MiniLM-L6-v2) used to identify the most semantically relevant WIDAI KSA candidate for each NIST AI RMF outcome element. Preprocessing step for pairing, not a scoring method.",
+    "model": "all-MiniLM-L6-v2",
+    "candidate_data": "sources/nist_ai_rmf/nist_ai_rmf_candidates.json",
+    "note": "Candidate identification determines which WIDAI KSA each outcome element is paired with. All scoring, classification, and significance generation performed by strm/nist_ai_rmf/strm_scoring_pipeline.py, methodologically identical to STRM-001 through STRM-005."
+  }
+}

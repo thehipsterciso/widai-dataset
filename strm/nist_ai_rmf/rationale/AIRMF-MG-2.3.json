@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MG-2.3",
+  "fde_type": "outcome",
+  "function": "MANAGE",
+  "category": "MANAGE 2",
+  "subcategory_id": "MG-2.3",
+  "outcome_text": "Relevant AI actors are informed of and involved in the management of AI risks.",
+  "scoring_text": "Skill in AI risk management stakeholder engagement, including identifying and informing relevant AI actors about risk management activities, involving stakeholders in risk response decisions, and maintaining communication channels for ongoing risk management participation.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MG-2.3",
+  "focal_document_element_description": "Skill in AI risk management stakeholder engagement, including identifying and informing relevant AI actors about risk management activities, involving stakeholders in risk response decisions, and maintaining communication channels for ongoing risk management participation.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "AG-S-003",
+  "reference_document_element_description": "Skill in constructing and communicating AI risk assessments to non-technical executive and board audiences using business risk framing and financial impact language.",
+  "comments": "NIST AI RMF MG-2.3 (MANAGE) superset of WIDAI AG domain. AG-S-003 is the strongest match (STS: 0.626, cosine: 0.746). Secondary: RM-S-001 (RM, cosine: 0.707), AG-S-005 (AG, cosine: 0.702).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6265,
+      "mapped_strength_0_10": 6.3,
+      "final_strength_integer": 6,
+      "significance": "STS 6.3/10 (raw 0.626). Shared vocabulary: [ai, risk, skill]. NIST AI RMF competency implication terms [activities, actors, channels, communication, decisions, engagement] vs WIDAI terms [assessments, audiences, board, business, communicating, constructing] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8737,
+        "recall": 0.8762,
+        "f1": 0.875,
+        "significance": "BERTScore F1=0.875 (P=0.874, R=0.876). Balanced P/R \u2014 the 33-word competency implication and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0003,
+        "entailment": 0.0001,
+        "neutral": 0.9996,
+        "significance": "NLI: neutral-dominant (100.0%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7455,
+        "significance": "Bi-encoder 0.746 > STS 0.626 (gap +0.119). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, risk, skill] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.125,
+        "significance": "Jaccard 12.5%. Shared tokens: [ai, risk, skill]. NIST AI RMF-only: [activities, actors, channels, communication, decisions, engagement]. WIDAI-only: [assessments, audiences, board, business, communicating, constructing]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MANAGE",
+    "applies_to": [
+      "organization"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

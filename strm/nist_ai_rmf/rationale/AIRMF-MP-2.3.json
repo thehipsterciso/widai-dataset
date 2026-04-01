@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MP-2.3",
+  "fde_type": "outcome",
+  "function": "MAP",
+  "category": "MAP 2",
+  "subcategory_id": "MP-2.3",
+  "outcome_text": "Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection, data processing and data curation, bias, and the factors related to the assessment of the credibility and reliability of the AI technology being used or developed.",
+  "scoring_text": "Knowledge of AI scientific integrity and test, evaluation, verification, and validation (TEVV) methodology, including experimental design for AI systems, data collection and curation practices, bias identification and documentation, and credibility and reliability assessment of AI technologies.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MP-2.3",
+  "focal_document_element_description": "Knowledge of AI scientific integrity and test, evaluation, verification, and validation (TEVV) methodology, including experimental design for AI systems, data collection and curation practices, bias identification and documentation, and credibility and reliability assessment of AI technologies.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-K-007",
+  "reference_document_element_description": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+  "comments": "NIST AI RMF MP-2.3 (MAP) equal WIDAI AG domain. AG-K-007 is the strongest match (STS: 0.655, cosine: 0.679). Secondary: AG-K-004 (AG, cosine: 0.647), AG-S-006 (AG, cosine: 0.640).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6549,
+      "mapped_strength_0_10": 6.5,
+      "final_strength_integer": 6,
+      "significance": "STS 6.5/10 (raw 0.655). Shared vocabulary: [ai, bias, design, documentation, knowledge, test]. NIST AI RMF competency implication terms [assessment, collection, credibility, curation, data, evaluation] vs WIDAI terms [audit, explainability, fairness, human, methods, metric] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8711,
+        "recall": 0.9001,
+        "f1": 0.8853,
+        "significance": "BERTScore F1=0.885 (P=0.871, R=0.900). R exceeds P by 0.029 \u2014 the WIDAI KSA's 22 words are well-captured by the competency implication's 36 words, but the competency implication contains broader scope."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0004,
+        "entailment": 0.0007,
+        "neutral": 0.9989,
+        "significance": "NLI: neutral-dominant (99.9%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.679,
+        "significance": "Bi-encoder 0.679 \u2248 STS 0.655 (gap 0.024). Independent encoding and cross-attention agree. Shared terms [ai, bias, design, documentation, knowledge] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.225,
+        "significance": "Jaccard 22.5%. Shared tokens: [ai, bias, design, documentation, knowledge, test]. NIST AI RMF-only: [assessment, collection, credibility, curation, data, evaluation]. WIDAI-only: [audit, explainability, fairness, human, methods, metric]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MAP",
+    "applies_to": [
+      "ai_development_team"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

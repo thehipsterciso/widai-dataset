@@ -3,6 +3,47 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.5.8] - 2026-04-01
+
+### Phase 1C: STRM-006 — NIST AI Risk Management Framework 1.0 (NIST AI 100-1)
+
+**Sixth STRM complete — second Tier 2, second regulatory/standards framework.** NIST AI RMF 1.0 mapped against WIDAI KSA Pool v0.5.6. Second outcome→competency mapping using dual-provenance methodology. Functional rationale consistent with STRM-005.
+
+**Why:** The NIST AI RMF is the US federal government's primary AI risk management framework — the American counterpart to the EU AI Act. It defines organizational outcomes across four functions (GOVERN, MAP, MEASURE, MANAGE) that describe the competencies needed for trustworthy AI risk management. This STRM validates WIDAI coverage against a framework that shares vocabulary with WIDAI's governance and risk management domains but approaches competency from an outcome-based rather than task-based perspective.
+
+**What changed:**
+- 70 subcategory outcome elements extracted across 4 functions: GOVERN (19), MAP (18), MEASURE (21), MANAGE (12)
+- Each element preserves dual provenance: outcome_text (original NIST language) + competency_implication (workforce competency interpretation used for scoring)
+- Relationship distribution: 43 Equal (61.4%), 26 Superset of (37.1%), 1 Intersects with (1.4%), 0 No relationship (0.0%)
+- Mean strength (scored): 6.62/10 — highest across all STRMs, explained by narrow in-domain scope and dual-provenance competency-language scoring
+- By function: GOVERN (6.87), MANAGE (6.64), MAP (6.56), MEASURE (6.43) — GOVERN strongest reflecting WIDAI governance domain depth
+- 14 gap signals (7 critical, 3 moderate, 4 low) — 20.0% gap rate
+- AG gravity well pattern continues: 3 of 7 critical gaps matched to AG KSAs due to governance vocabulary overlap
+- 6 gap themes: AI risk tracking, measurement validation, risk response strategy, third-party AI contingency, AI testing/incident infrastructure, continuous improvement
+- Cross-STRM corroboration: AI incident response (STRM-002, STRM-005), third-party AI risk (STRM-002, STRM-003)
+- QA/QC: PASS on all 7 criteria
+- Gap detection ran at pipeline time (not retroactive) — gap_detection.py integrated into workflow
+- Cumulative: 6 frameworks, 5,540 elements scored, 5,540 rationale files, 32 gap signals
+
+**Scoring methodology — STS-primary, Functional rationale:**
+- Bi-encoder candidate identification (70 × 497 = 34,790 pairs) via all-MiniLM-L6-v2
+- Full multi-method scoring pipeline (STS primary + 4 secondary) for all 70 scored pairs
+- Functional rationale per NIST IR 8477 Section 4.3 — outcome→competency mapping direction
+- 70 per-FDE rationale files with content-specific significance and dual provenance
+
+**New deliverables:**
+- `sources/nist_ai_rmf/nist_ai_rmf_elements.json` — 70 elements with dual-provenance fields
+- `sources/nist_ai_rmf/nist_ai_rmf_citation.json` — canonical source citation
+- `sources/nist_ai_rmf/nist_ai_rmf_candidates.json` — bi-encoder candidate identifications
+- `sources/nist_ai_rmf/generate_candidates.py` — candidate generation script
+- `strm/nist_ai_rmf/strm_scoring_pipeline.py` — full scoring pipeline
+- `strm/nist_ai_rmf/strm_mapping.json` — STRM mapping data
+- `strm/nist_ai_rmf/rationale/*.json` — 70 per-FDE rationale files
+- `strm/nist_ai_rmf/scoring_summary.json` — scoring statistics
+- `strm/nist_ai_rmf/use_case.json` — NIST IR 8477 Section 3 use case
+- `strm/nist_ai_rmf/qa_qc_report.json` — 7/7 checks pass
+- `strm/issues/STRM-006-NIST-AI-RMF-gaps.json` — gap register (14 gaps, 7 critical)
+
 ## [0.5.7] - 2026-04-01
 
 ### Phase 1C: STRM-005 — EU AI Act (Regulation (EU) 2024/1689) (ADR-019)

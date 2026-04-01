@@ -1,0 +1,74 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MP-4.2",
+  "fde_type": "outcome",
+  "function": "MAP",
+  "category": "MAP 4",
+  "subcategory_id": "MP-4.2",
+  "outcome_text": "Internal risk controls for components of the AI system, including third-party AI technologies, are identified and documented.",
+  "scoring_text": "Skill in identifying and documenting internal risk controls for AI system components, including evaluating control effectiveness for third-party AI technologies, mapping control coverage across system architecture, and documenting control mechanisms and their operational parameters.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MP-4.2",
+  "focal_document_element_description": "Skill in identifying and documenting internal risk controls for AI system components, including evaluating control effectiveness for third-party AI technologies, mapping control coverage across system architecture, and documenting control mechanisms and their operational parameters.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-S-008",
+  "reference_document_element_description": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
+  "comments": "NIST AI RMF MP-4.2 (MAP) equal WIDAI AG domain. AG-S-008 is the strongest match (STS: 0.731, cosine: 0.741). Secondary: RC-S-008 (RC, cosine: 0.703), RM-S-002 (RM, cosine: 0.700).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.7313,
+      "mapped_strength_0_10": 7.3,
+      "final_strength_integer": 7,
+      "significance": "STS 7.3/10 (raw 0.731). Shared vocabulary: [ai, internal, skill, system]. NIST AI RMF competency implication terms [across, architecture, components, control, controls, coverage] vs WIDAI terms [assessment, cards, conformity, datasets, datasheets, developing] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8862,
+        "recall": 0.8755,
+        "f1": 0.8808,
+        "significance": "BERTScore F1=0.881 (P=0.886, R=0.875). Balanced P/R \u2014 the 34-word competency implication and 27-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0007,
+        "entailment": 0.0002,
+        "neutral": 0.9991,
+        "significance": "NLI: neutral-dominant (99.9%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7414,
+        "significance": "Bi-encoder 0.741 \u2248 STS 0.731 (gap 0.010). Independent encoding and cross-attention agree. Shared terms [ai, internal, skill, system] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.186,
+        "significance": "Jaccard 18.6%. Shared tokens: [ai, internal, skill, system]. NIST AI RMF-only: [across, architecture, components, control, controls, coverage]. WIDAI-only: [assessment, cards, conformity, datasets, datasheets, developing]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MAP",
+    "applies_to": [
+      "ai_development_team",
+      "ai_deployment_team"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

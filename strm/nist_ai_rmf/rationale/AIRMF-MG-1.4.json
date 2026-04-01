@@ -1,0 +1,74 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MG-1.4",
+  "fde_type": "outcome",
+  "function": "MANAGE",
+  "category": "MANAGE 1",
+  "subcategory_id": "MG-1.4",
+  "outcome_text": "Negative residual risks (remaining risks) to both downstream acquirers of AI systems and end users are documented.",
+  "scoring_text": "Skill in AI residual risk documentation, including identifying and characterizing negative residual risks after mitigation, documenting residual risks for downstream AI system acquirers and end users, and communicating remaining risk levels to stakeholders.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MG-1.4",
+  "focal_document_element_description": "Skill in AI residual risk documentation, including identifying and characterizing negative residual risks after mitigation, documenting residual risks for downstream AI system acquirers and end users, and communicating remaining risk levels to stakeholders.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-S-005",
+  "reference_document_element_description": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+  "comments": "NIST AI RMF MG-1.4 (MANAGE) equal WIDAI AG domain. AG-S-005 is the strongest match (STS: 0.731, cosine: 0.722). Secondary: AG-K-003 (AG, cosine: 0.664), RC-S-008 (RC, cosine: 0.652).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.7306,
+      "mapped_strength_0_10": 7.3,
+      "final_strength_integer": 7,
+      "significance": "STS 7.3/10 (raw 0.731). Shared vocabulary: [ai, documentation, residual, risk, skill]. NIST AI RMF competency implication terms [acquirers, characterizing, communicating, documenting, downstream, end] vs WIDAI terms [assessments, bias, conducting, determination, evaluation, harm] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8887,
+        "recall": 0.9031,
+        "f1": 0.8958,
+        "significance": "BERTScore F1=0.896 (P=0.889, R=0.903). Balanced P/R \u2014 the 33-word competency implication and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0056,
+        "entailment": 0.0007,
+        "neutral": 0.9937,
+        "significance": "NLI: neutral-dominant (99.4%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7224,
+        "significance": "Bi-encoder 0.722 \u2248 STS 0.731 (gap 0.008). Independent encoding and cross-attention agree. Shared terms [ai, documentation, residual, risk, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2162,
+        "significance": "Jaccard 21.6%. Shared tokens: [ai, documentation, residual, risk, skill]. NIST AI RMF-only: [acquirers, characterizing, communicating, documenting, downstream, end]. WIDAI-only: [assessments, bias, conducting, determination, evaluation, harm]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MANAGE",
+    "applies_to": [
+      "ai_development_team",
+      "ai_deployment_team"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

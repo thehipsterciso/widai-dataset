@@ -1,0 +1,94 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MS-4.1",
+  "fde_type": "outcome",
+  "function": "MEASURE",
+  "category": "MEASURE 4",
+  "subcategory_id": "MS-4.1",
+  "outcome_text": "Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended. Results are documented.",
+  "scoring_text": "Skill in AI measurement result validation and communication, including soliciting domain expert input on trustworthiness measurements, validating performance consistency across deployment contexts and lifecycle stages, and documenting validated measurement results for stakeholder communication.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MS-4.1",
+  "focal_document_element_description": "Skill in AI measurement result validation and communication, including soliciting domain expert input on trustworthiness measurements, validating performance consistency across deployment contexts and lifecycle stages, and documenting validated measurement results for stakeholder communication.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "LS-S-006",
+  "reference_document_element_description": "Skill in conducting organizational data and AI diagnostic assessments, including stakeholder interviews, artifact review, maturity scoring, and finding synthesis.",
+  "comments": "NIST AI RMF MS-4.1 (MEASURE) superset of WIDAI LS domain. LS-S-006 is the strongest match (STS: 0.583, cosine: 0.659). Secondary: AI-T-007 (AI, cosine: 0.654), AG-S-004 (AG, cosine: 0.625).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.5829,
+      "mapped_strength_0_10": 5.8,
+      "final_strength_integer": 6,
+      "significance": "STS 5.8/10 (raw 0.583). Shared vocabulary: [ai, skill, stakeholder]. NIST AI RMF competency implication terms [across, communication, consistency, contexts, deployment, documenting] vs WIDAI terms [artifact, assessments, conducting, data, diagnostic, finding] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8618,
+        "recall": 0.8876,
+        "f1": 0.8745,
+        "significance": "BERTScore F1=0.875 (P=0.862, R=0.888). R exceeds P by 0.026 \u2014 the WIDAI KSA's 19 words are well-captured by the competency implication's 33 words, but the competency implication contains broader scope."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.9809,
+        "entailment": 0.0002,
+        "neutral": 0.0188,
+        "significance": "NLI: contradiction-dominant (98.1%). Semantic tension between \"Skill in AI measurement result validation and communication, including solicitin\" and \"Skill in conducting organizational data and AI diagnostic assessments, including\". Despite STS-based 'Superset of' classification, these concepts may operate in adjacent but distinct professional domains."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6593,
+        "significance": "Bi-encoder 0.659 > STS 0.583 (gap +0.076). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, skill, stakeholder] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1463,
+        "significance": "Jaccard 14.6%. Shared tokens: [ai, skill, stakeholder]. NIST AI RMF-only: [across, communication, consistency, contexts, deployment, documenting]. WIDAI-only: [artifact, assessments, conducting, data, diagnostic, finding]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MEASURE",
+    "applies_to": [
+      "ai_deployment_team",
+      "organization"
+    ]
+  },
+  "gap_signal": {
+    "severity": "critical",
+    "criteria_triggered": [
+      "domain_mismatch"
+    ],
+    "signal_count": 1,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "critical",
+        "detail": "NLI contradiction 98.1% on Superset of classification. The matched KSA operates in a different professional domain than the obligation/competency requires. STS 0.583 passed the threshold but secondary signals contradict the match.",
+        "scores": {
+          "nli_contradiction": 0.9809,
+          "sts_raw": 0.5829,
+          "relationship": "Superset of"
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

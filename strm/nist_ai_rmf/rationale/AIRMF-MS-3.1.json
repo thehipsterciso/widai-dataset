@@ -1,0 +1,94 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MS-3.1",
+  "fde_type": "outcome",
+  "function": "MEASURE",
+  "category": "MEASURE 3",
+  "subcategory_id": "MS-3.1",
+  "outcome_text": "Approaches, personnel, and documentation are in place to regularly identify and track existing, unanticipated, and emergent AI risks based on factors such as intended and actual performance in deployed contexts.",
+  "scoring_text": "Skill in establishing AI risk tracking infrastructure, including designing approaches for identifying existing, unanticipated, and emergent risks, assigning tracking personnel and responsibilities, and maintaining documentation of risk evolution based on deployed system performance.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MS-3.1",
+  "focal_document_element_description": "Skill in establishing AI risk tracking infrastructure, including designing approaches for identifying existing, unanticipated, and emergent risks, assigning tracking personnel and responsibilities, and maintaining documentation of risk evolution based on deployed system performance.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-S-005",
+  "reference_document_element_description": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+  "comments": "NIST AI RMF MS-3.1 (MEASURE) equal WIDAI AG domain. AG-S-005 is the strongest match (STS: 0.689, cosine: 0.714). Secondary: RC-S-008 (RC, cosine: 0.666), RM-S-002 (RM, cosine: 0.660).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6892,
+      "mapped_strength_0_10": 6.9,
+      "final_strength_integer": 7,
+      "significance": "STS 6.9/10 (raw 0.689). Shared vocabulary: [ai, documentation, risk, skill]. NIST AI RMF competency implication terms [approaches, assigning, based, deployed, designing, emergent] vs WIDAI terms [assessments, bias, conducting, determination, evaluation, harm] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8766,
+        "recall": 0.9034,
+        "f1": 0.8898,
+        "significance": "BERTScore F1=0.890 (P=0.877, R=0.903). R exceeds P by 0.027 \u2014 the WIDAI KSA's 20 words are well-captured by the competency implication's 33 words, but the competency implication contains broader scope."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.9812,
+        "entailment": 0.0012,
+        "neutral": 0.0176,
+        "significance": "NLI: contradiction-dominant (98.1%). Semantic tension between \"Skill in establishing AI risk tracking infrastructure, including designing appro\" and \"Skill in conducting AI impact assessments, including risk tiering, harm identifi\". Despite STS-based 'Equal' classification, these concepts may operate in adjacent but distinct professional domains."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.714,
+        "significance": "Bi-encoder 0.714 \u2248 STS 0.689 (gap 0.025). Independent encoding and cross-attention agree. Shared terms [ai, documentation, risk, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1707,
+        "significance": "Jaccard 17.1%. Shared tokens: [ai, documentation, risk, skill]. NIST AI RMF-only: [approaches, assigning, based, deployed, designing, emergent]. WIDAI-only: [assessments, bias, conducting, determination, evaluation, harm]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MEASURE",
+    "applies_to": [
+      "ai_deployment_team",
+      "organization"
+    ]
+  },
+  "gap_signal": {
+    "severity": "critical",
+    "criteria_triggered": [
+      "domain_mismatch"
+    ],
+    "signal_count": 1,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "critical",
+        "detail": "NLI contradiction 98.1% on Equal classification. The matched KSA operates in a different professional domain than the obligation/competency requires. STS 0.689 passed the threshold but secondary signals contradict the match.",
+        "scores": {
+          "nli_contradiction": 0.9812,
+          "sts_raw": 0.6892,
+          "relationship": "Equal"
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

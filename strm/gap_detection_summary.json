@@ -6,11 +6,11 @@
     "description": "Retroactive per-FDE gap signal detection applied to all STRM rationale files. Criteria: (1) NLI domain mismatch, (2) STS threshold fragility, (3) bi-encoder vocabulary inflation."
   },
   "aggregate": {
-    "total_elements": 5470,
-    "total_gaps": 1819,
-    "total_critical": 105,
-    "total_moderate": 1489,
-    "total_low": 225
+    "total_elements": 5540,
+    "total_gaps": 1833,
+    "total_critical": 112,
+    "total_moderate": 1492,
+    "total_low": 229
   },
   "per_strm": [
     {
@@ -19833,6 +19833,149 @@
           "sts_raw": 0.5395,
           "nli_contradiction": 0.0012,
           "bienc_cosine": 0.6391
+        }
+      ]
+    },
+    {
+      "strm_id": "STRM-006-NIST-AI-RMF",
+      "total_elements": 70,
+      "elements_with_gaps": 14,
+      "gap_rate": 20.0,
+      "severity_counts": {
+        "critical": 7,
+        "moderate": 3,
+        "low": 4
+      },
+      "criterion_counts": {
+        "domain_mismatch": 9,
+        "threshold_fragility": 0,
+        "vocabulary_inflation": 8
+      },
+      "critical_elements": [
+        {
+          "fde_id": "AIRMF-MG-4.2",
+          "ref_id": "DG-K-006",
+          "relationship": "Superset of",
+          "severity": "critical",
+          "criteria": [
+            "domain_mismatch"
+          ],
+          "sts_raw": 0.5948,
+          "nli_contradiction": 0.9982,
+          "bienc_cosine": 0.6367
+        },
+        {
+          "fde_id": "AIRMF-MG-1.3",
+          "ref_id": "RC-T-012",
+          "relationship": "Superset of",
+          "severity": "critical",
+          "criteria": [
+            "domain_mismatch",
+            "vocabulary_inflation"
+          ],
+          "sts_raw": 0.5991,
+          "nli_contradiction": 0.9817,
+          "bienc_cosine": 0.7273
+        },
+        {
+          "fde_id": "AIRMF-MS-3.1",
+          "ref_id": "AG-S-005",
+          "relationship": "Equal",
+          "severity": "critical",
+          "criteria": [
+            "domain_mismatch"
+          ],
+          "sts_raw": 0.6892,
+          "nli_contradiction": 0.9812,
+          "bienc_cosine": 0.714
+        },
+        {
+          "fde_id": "AIRMF-MS-4.1",
+          "ref_id": "LS-S-006",
+          "relationship": "Superset of",
+          "severity": "critical",
+          "criteria": [
+            "domain_mismatch"
+          ],
+          "sts_raw": 0.5829,
+          "nli_contradiction": 0.9809,
+          "bienc_cosine": 0.6593
+        },
+        {
+          "fde_id": "AIRMF-MG-2.4",
+          "ref_id": "AG-S-004",
+          "relationship": "Equal",
+          "severity": "critical",
+          "criteria": [
+            "domain_mismatch"
+          ],
+          "sts_raw": 0.7174,
+          "nli_contradiction": 0.9778,
+          "bienc_cosine": 0.738
+        },
+        {
+          "fde_id": "AIRMF-GV-6.2",
+          "ref_id": "LS-S-013",
+          "relationship": "Superset of",
+          "severity": "critical",
+          "criteria": [
+            "domain_mismatch"
+          ],
+          "sts_raw": 0.6196,
+          "nli_contradiction": 0.9418,
+          "bienc_cosine": 0.642
+        },
+        {
+          "fde_id": "AIRMF-GV-4.3",
+          "ref_id": "AG-K-007",
+          "relationship": "Superset of",
+          "severity": "critical",
+          "criteria": [
+            "domain_mismatch"
+          ],
+          "sts_raw": 0.6155,
+          "nli_contradiction": 0.8382,
+          "bienc_cosine": 0.6684
+        }
+      ],
+      "moderate_elements": [
+        {
+          "fde_id": "AIRMF-MS-3.3",
+          "ref_id": "AG-T-009",
+          "relationship": "Intersects with",
+          "severity": "moderate",
+          "criteria": [
+            "domain_mismatch",
+            "vocabulary_inflation"
+          ],
+          "sts_raw": 0.4072,
+          "nli_contradiction": 0.9407,
+          "bienc_cosine": 0.6533
+        },
+        {
+          "fde_id": "AIRMF-GV-3.1",
+          "ref_id": "AG-S-005",
+          "relationship": "Superset of",
+          "severity": "moderate",
+          "criteria": [
+            "domain_mismatch",
+            "vocabulary_inflation"
+          ],
+          "sts_raw": 0.5773,
+          "nli_contradiction": 0.7595,
+          "bienc_cosine": 0.7368
+        },
+        {
+          "fde_id": "AIRMF-MG-2.2",
+          "ref_id": "RM-T-005",
+          "relationship": "Superset of",
+          "severity": "moderate",
+          "criteria": [
+            "vocabulary_inflation"
+          ],
+          "sts_raw": 0.5653,
+          "nli_contradiction": 0.0002,
+          "bienc_cosine": 0.7352
         }
       ]
     }

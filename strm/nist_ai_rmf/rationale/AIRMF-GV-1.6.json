@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-GV-1.6",
+  "fde_type": "outcome",
+  "function": "GOVERN",
+  "category": "GOVERN 1",
+  "subcategory_id": "GV-1.6",
+  "outcome_text": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities.",
+  "scoring_text": "Skill in designing and maintaining AI system inventory mechanisms, including cataloging deployed AI systems, tracking system attributes relevant to risk assessment, and allocating inventory resources according to organizational risk priorities.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-GV-1.6",
+  "focal_document_element_description": "Skill in designing and maintaining AI system inventory mechanisms, including cataloging deployed AI systems, tracking system attributes relevant to risk assessment, and allocating inventory resources according to organizational risk priorities.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-T-002",
+  "reference_document_element_description": "Establish and maintain the enterprise AI inventory, cataloging all AI systems in production with risk tier, owner, training data provenance, model version, and review status.",
+  "comments": "NIST AI RMF GV-1.6 (GOVERN) equal WIDAI AG domain. AG-T-002 is the strongest match (STS: 0.753, cosine: 0.748). Secondary: AG-T-005 (AG, cosine: 0.737), AG-K-002 (AG, cosine: 0.710).",
+  "strength_of_relationship": 8,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.7534,
+      "mapped_strength_0_10": 7.5,
+      "final_strength_integer": 8,
+      "significance": "STS 7.5/10 (raw 0.753). Shared vocabulary: [ai, cataloging, inventory, risk, systems]. NIST AI RMF competency implication terms [according, allocating, assessment, attributes, deployed, designing] vs WIDAI terms [data, enterprise, establish, maintain, model, owner] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9013,
+        "recall": 0.8899,
+        "f1": 0.8956,
+        "significance": "BERTScore F1=0.896 (P=0.901, R=0.890). Balanced P/R \u2014 the 30-word competency implication and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0001,
+        "entailment": 0.0129,
+        "neutral": 0.987,
+        "significance": "NLI: neutral-dominant (98.7%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7481,
+        "significance": "Bi-encoder 0.748 \u2248 STS 0.753 (gap 0.005). Independent encoding and cross-attention agree. Shared terms [ai, cataloging, inventory, risk, systems] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.175,
+        "significance": "Jaccard 17.5%. Shared tokens: [ai, cataloging, inventory, risk, systems]. NIST AI RMF-only: [according, allocating, assessment, attributes, deployed, designing]. WIDAI-only: [data, enterprise, establish, maintain, model, owner]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "GOVERN",
+    "applies_to": [
+      "organization"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

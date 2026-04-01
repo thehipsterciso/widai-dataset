@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-GV-1.5",
+  "fde_type": "outcome",
+  "function": "GOVERN",
+  "category": "GOVERN 1",
+  "subcategory_id": "GV-1.5",
+  "outcome_text": "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned, organizational roles and responsibilities are clearly defined, including determining the frequency of periodic review.",
+  "scoring_text": "Knowledge of AI risk management monitoring and review design, including defining organizational roles and responsibilities for risk oversight, establishing review frequency and methodology, and planning continuous monitoring activities for AI risk management effectiveness.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-GV-1.5",
+  "focal_document_element_description": "Knowledge of AI risk management monitoring and review design, including defining organizational roles and responsibilities for risk oversight, establishing review frequency and methodology, and planning continuous monitoring activities for AI risk management effectiveness.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-K-002",
+  "reference_document_element_description": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+  "comments": "NIST AI RMF GV-1.5 (GOVERN) equal WIDAI AG domain. AG-K-002 is the strongest match (STS: 0.699, cosine: 0.752). Secondary: AG-K-010 (AG, cosine: 0.715), AG-S-005 (AG, cosine: 0.705).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.699,
+      "mapped_strength_0_10": 7.0,
+      "final_strength_integer": 7,
+      "significance": "STS 7.0/10 (raw 0.699). Shared vocabulary: [ai, knowledge, management, organizational, oversight, risk]. NIST AI RMF competency implication terms [activities, continuous, defining, design, effectiveness, establishing] vs WIDAI terms [accountability, assignment, conditions, deployment, enable, governance] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8955,
+        "recall": 0.9055,
+        "f1": 0.9005,
+        "significance": "BERTScore F1=0.900 (P=0.895, R=0.905). Balanced P/R \u2014 the 33-word competency implication and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0097,
+        "entailment": 0.0359,
+        "neutral": 0.9543,
+        "significance": "NLI: neutral-dominant (95.4%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.752,
+        "significance": "Bi-encoder 0.752 > STS 0.699 (gap +0.053). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, knowledge, management, organizational, oversight] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2432,
+        "significance": "Jaccard 24.3%. Shared tokens: [ai, knowledge, management, organizational, oversight, risk]. NIST AI RMF-only: [activities, continuous, defining, design, effectiveness, establishing]. WIDAI-only: [accountability, assignment, conditions, deployment, enable, governance]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "GOVERN",
+    "applies_to": [
+      "organization"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

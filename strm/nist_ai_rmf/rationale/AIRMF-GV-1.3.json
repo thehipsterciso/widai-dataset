@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-GV-1.3",
+  "fde_type": "outcome",
+  "function": "GOVERN",
+  "category": "GOVERN 1",
+  "subcategory_id": "GV-1.3",
+  "outcome_text": "Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization's risk tolerance.",
+  "scoring_text": "Ability to design and implement risk management processes calibrated to organizational risk tolerance, including risk appetite definition, threshold-setting for AI systems, and escalation procedures that reflect the organization's acceptable risk levels.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-GV-1.3",
+  "focal_document_element_description": "Ability to design and implement risk management processes calibrated to organizational risk tolerance, including risk appetite definition, threshold-setting for AI systems, and escalation procedures that reflect the organization's acceptable risk levels.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "RM-S-008",
+  "reference_document_element_description": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+  "comments": "NIST AI RMF GV-1.3 (GOVERN) equal WIDAI RM domain. RM-S-008 is the strongest match (STS: 0.723, cosine: 0.711). Secondary: RM-A-001 (RM, cosine: 0.627), AG-K-010 (AG, cosine: 0.603).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.7231,
+      "mapped_strength_0_10": 7.2,
+      "final_strength_integer": 7,
+      "significance": "STS 7.2/10 (raw 0.723). Shared vocabulary: [ai, appetite, risk]. NIST AI RMF competency implication terms [ability, acceptable, calibrated, definition, design, escalation] vs WIDAI terms [accommodate, activities, business, cases, data, decisions] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8864,
+        "recall": 0.8707,
+        "f1": 0.8785,
+        "significance": "BERTScore F1=0.878 (P=0.886, R=0.871). Balanced P/R \u2014 the 31-word competency implication and 31-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0003,
+        "entailment": 0.0005,
+        "neutral": 0.9992,
+        "significance": "NLI: neutral-dominant (99.9%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7111,
+        "significance": "Bi-encoder 0.711 \u2248 STS 0.723 (gap 0.012). Independent encoding and cross-attention agree. Shared terms [ai, appetite, risk] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1458,
+        "significance": "Jaccard 14.6%. Shared tokens: [ai, appetite, risk]. NIST AI RMF-only: [ability, acceptable, calibrated, definition, design, escalation]. WIDAI-only: [accommodate, activities, business, cases, data, decisions]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "GOVERN",
+    "applies_to": [
+      "organization"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

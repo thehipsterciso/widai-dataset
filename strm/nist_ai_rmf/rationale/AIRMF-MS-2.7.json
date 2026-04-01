@@ -1,0 +1,74 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MS-2.7",
+  "fde_type": "outcome",
+  "function": "MEASURE",
+  "category": "MEASURE 2",
+  "subcategory_id": "MS-2.7",
+  "outcome_text": "AI system security and resilience\u2014as identified in the MAP function\u2014are evaluated and documented.",
+  "scoring_text": "Knowledge of AI system security and resilience evaluation, including assessing AI-specific attack surfaces, evaluating system resilience to adversarial inputs and operational disruptions, and documenting security posture against risks identified during the MAP function.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MS-2.7",
+  "focal_document_element_description": "Knowledge of AI system security and resilience evaluation, including assessing AI-specific attack surfaces, evaluating system resilience to adversarial inputs and operational disruptions, and documenting security posture against risks identified during the MAP function.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "RM-T-002",
+  "reference_document_element_description": "Conduct threat model assessments for AI systems, identifying AI-specific attack surfaces, threat actors, and applicable mitigating controls.",
+  "comments": "NIST AI RMF MS-2.7 (MEASURE) equal WIDAI RM domain. RM-T-002 is the strongest match (STS: 0.798, cosine: 0.701). Secondary: RM-S-002 (RM, cosine: 0.699), AG-K-003 (AG, cosine: 0.652).",
+  "strength_of_relationship": 8,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.7985,
+      "mapped_strength_0_10": 8.0,
+      "final_strength_integer": 8,
+      "significance": "STS 8.0/10 (raw 0.798). Shared vocabulary: [ai, attack, specific, surfaces]. NIST AI RMF competency implication terms [adversarial, against, assessing, disruptions, documenting, evaluating] vs WIDAI terms [actors, applicable, assessments, conduct, controls, identifying] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8887,
+        "recall": 0.9137,
+        "f1": 0.901,
+        "significance": "BERTScore F1=0.901 (P=0.889, R=0.914). R exceeds P by 0.025 \u2014 the WIDAI KSA's 17 words are well-captured by the competency implication's 33 words, but the competency implication contains broader scope."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0009,
+        "entailment": 0.5467,
+        "neutral": 0.4524,
+        "significance": "NLI: notable entailment (54.7%). \"Knowledge of AI system security and resilience evaluation, including assessing A\" shows logical implication toward \"Conduct threat model assessments for AI systems, identifying AI-specific attack\" \u2014 stronger than typical for cross-framework competency pairs, reinforcing the STS-based relationship."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7006,
+        "significance": "Bi-encoder 0.701 < STS 0.798 (gap -0.098). Cross-attention finds deeper alignment than independent encoding. The relationship depends on cross-text reasoning between [adversarial, against, assessing] and [actors, applicable, assessments] that bi-encoders structurally cannot capture."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1282,
+        "significance": "Jaccard 12.8%. Shared tokens: [ai, attack, specific, surfaces]. NIST AI RMF-only: [adversarial, against, assessing, disruptions, documenting, evaluating]. WIDAI-only: [actors, applicable, assessments, conduct, controls, identifying]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MEASURE",
+    "applies_to": [
+      "ai_development_team",
+      "ai_deployment_team"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

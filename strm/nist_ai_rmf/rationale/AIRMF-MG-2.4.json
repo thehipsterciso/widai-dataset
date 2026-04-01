@@ -1,0 +1,94 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-MG-2.4",
+  "fde_type": "outcome",
+  "function": "MANAGE",
+  "category": "MANAGE 2",
+  "subcategory_id": "MG-2.4",
+  "outcome_text": "Mechanisms are in place and applied, and approaches are documented, to enable AI actors to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation.",
+  "scoring_text": "Skill in designing AI feedback incorporation systems, including establishing adjudication mechanisms for stakeholder feedback, documenting feedback integration approaches, and ensuring regular incorporation of validated feedback into AI system design and implementation processes.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-MG-2.4",
+  "focal_document_element_description": "Skill in designing AI feedback incorporation systems, including establishing adjudication mechanisms for stakeholder feedback, documenting feedback integration approaches, and ensuring regular incorporation of validated feedback into AI system design and implementation processes.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-S-004",
+  "reference_document_element_description": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+  "comments": "NIST AI RMF MG-2.4 (MANAGE) equal WIDAI AG domain. AG-S-004 is the strongest match (STS: 0.717, cosine: 0.738). Secondary: LS-S-006 (LS, cosine: 0.674), RM-T-004 (RM, cosine: 0.649).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.7174,
+      "mapped_strength_0_10": 7.2,
+      "final_strength_integer": 7,
+      "significance": "STS 7.2/10 (raw 0.717). Shared vocabulary: [ai, processes, skill, stakeholder]. NIST AI RMF competency implication terms [adjudication, approaches, design, designing, documenting, ensuring] vs WIDAI terms [assessment, coordination, decision, documentation, execution, governance] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8901,
+        "recall": 0.908,
+        "f1": 0.899,
+        "significance": "BERTScore F1=0.899 (P=0.890, R=0.908). Balanced P/R \u2014 the 32-word competency implication and 17-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.9778,
+        "entailment": 0.0026,
+        "neutral": 0.0195,
+        "significance": "NLI: contradiction-dominant (97.8%). Semantic tension between \"Skill in designing AI feedback incorporation systems, including establishing adj\" and \"Skill in managing AI governance review processes, including intake, triage, stak\". Despite STS-based 'Equal' classification, these concepts may operate in adjacent but distinct professional domains."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.738,
+        "significance": "Bi-encoder 0.738 \u2248 STS 0.717 (gap 0.021). Independent encoding and cross-attention agree. Shared terms [ai, processes, skill, stakeholder] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1944,
+        "significance": "Jaccard 19.4%. Shared tokens: [ai, processes, skill, stakeholder]. NIST AI RMF-only: [adjudication, approaches, design, designing, documenting, ensuring]. WIDAI-only: [assessment, coordination, decision, documentation, execution, governance]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "MANAGE",
+    "applies_to": [
+      "ai_development_team",
+      "ai_deployment_team"
+    ]
+  },
+  "gap_signal": {
+    "severity": "critical",
+    "criteria_triggered": [
+      "domain_mismatch"
+    ],
+    "signal_count": 1,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "critical",
+        "detail": "NLI contradiction 97.8% on Equal classification. The matched KSA operates in a different professional domain than the obligation/competency requires. STS 0.717 passed the threshold but secondary signals contradict the match.",
+        "scores": {
+          "nli_contradiction": 0.9778,
+          "sts_raw": 0.7174,
+          "relationship": "Equal"
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

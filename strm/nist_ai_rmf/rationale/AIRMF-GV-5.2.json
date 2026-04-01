@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-GV-5.2",
+  "fde_type": "outcome",
+  "function": "GOVERN",
+  "category": "GOVERN 5",
+  "subcategory_id": "GV-5.2",
+  "outcome_text": "Mechanisms are established to enable AI actors to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation.",
+  "scoring_text": "Skill in designing feedback incorporation mechanisms for AI systems, including establishing adjudication processes for conflicting feedback, creating systematic channels for AI actor input, and integrating adjudicated feedback into ongoing AI system design and implementation cycles.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-GV-5.2",
+  "focal_document_element_description": "Skill in designing feedback incorporation mechanisms for AI systems, including establishing adjudication processes for conflicting feedback, creating systematic channels for AI actor input, and integrating adjudicated feedback into ongoing AI system design and implementation cycles.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-S-007",
+  "reference_document_element_description": "Skill in designing human oversight mechanisms for AI-assisted decision-making, including escalation triggers, override procedures, human-in-the-loop protocols, and meaningful human control verification.",
+  "comments": "NIST AI RMF GV-5.2 (GOVERN) equal WIDAI AG domain. AG-S-007 is the strongest match (STS: 0.669, cosine: 0.644). Secondary: AG-S-004 (AG, cosine: 0.631), AG-T-009 (AG, cosine: 0.592).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6691,
+      "mapped_strength_0_10": 6.7,
+      "final_strength_integer": 7,
+      "significance": "STS 6.7/10 (raw 0.669). Shared vocabulary: [ai, designing, mechanisms, skill]. NIST AI RMF competency implication terms [actor, adjudicated, adjudication, channels, conflicting, creating] vs WIDAI terms [assisted, control, decision, escalation, human, loop] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8782,
+        "recall": 0.8788,
+        "f1": 0.8785,
+        "significance": "BERTScore F1=0.878 (P=0.878, R=0.879). Balanced P/R \u2014 the 35-word competency implication and 21-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.044,
+        "entailment": 0.0026,
+        "neutral": 0.9534,
+        "significance": "NLI: neutral-dominant (95.3%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6438,
+        "significance": "Bi-encoder 0.644 \u2248 STS 0.669 (gap 0.025). Independent encoding and cross-attention agree. Shared terms [ai, designing, mechanisms, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.186,
+        "significance": "Jaccard 18.6%. Shared tokens: [ai, designing, mechanisms, skill]. NIST AI RMF-only: [actor, adjudicated, adjudication, channels, conflicting, creating]. WIDAI-only: [assisted, control, decision, escalation, human, loop]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "GOVERN",
+    "applies_to": [
+      "organization"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

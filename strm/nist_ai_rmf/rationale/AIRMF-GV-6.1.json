@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-GV-6.1",
+  "fde_type": "outcome",
+  "function": "GOVERN",
+  "category": "GOVERN 6",
+  "subcategory_id": "GV-6.1",
+  "outcome_text": "Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third-party's intellectual property or other rights.",
+  "scoring_text": "Knowledge of AI supply chain risk management, including assessing third-party AI component risks, evaluating intellectual property implications of third-party AI software and data, and establishing contractual and procedural safeguards for third-party AI relationships.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-GV-6.1",
+  "focal_document_element_description": "Knowledge of AI supply chain risk management, including assessing third-party AI component risks, evaluating intellectual property implications of third-party AI software and data, and establishing contractual and procedural safeguards for third-party AI relationships.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "DA-K-014",
+  "reference_document_element_description": "Knowledge of vendor and third-party risk management as it applies to data platform providers, AI model suppliers, cloud infrastructure vendors, and data service providers.",
+  "comments": "NIST AI RMF GV-6.1 (GOVERN) equal WIDAI DA domain. DA-K-014 is the strongest match (STS: 0.694, cosine: 0.738). Secondary: LS-K-011 (LS, cosine: 0.723), AG-T-002 (AG, cosine: 0.649).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6939,
+      "mapped_strength_0_10": 6.9,
+      "final_strength_integer": 7,
+      "significance": "STS 6.9/10 (raw 0.694). Shared vocabulary: [ai, data, knowledge, management, party, risk, third]. NIST AI RMF competency implication terms [assessing, chain, component, contractual, establishing, evaluating] vs WIDAI terms [applies, cloud, infrastructure, model, platform, providers] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.9015,
+        "recall": 0.9005,
+        "f1": 0.901,
+        "significance": "BERTScore F1=0.901 (P=0.901, R=0.900). Balanced P/R \u2014 the 33-word competency implication and 24-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0003,
+        "entailment": 0.002,
+        "neutral": 0.9976,
+        "significance": "NLI: neutral-dominant (99.8%). Standard result for cross-framework competency mapping \u2014 the NIST AI RMF element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7379,
+        "significance": "Bi-encoder 0.738 \u2248 STS 0.694 (gap 0.044). Independent encoding and cross-attention agree. Shared terms [ai, data, knowledge, management, party] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2308,
+        "significance": "Jaccard 23.1%. Shared tokens: [ai, data, knowledge, management, party, risk, third]. NIST AI RMF-only: [assessing, chain, component, contractual, establishing, evaluating]. WIDAI-only: [applies, cloud, infrastructure, model, platform, providers]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "GOVERN",
+    "applies_to": [
+      "organization"
+    ]
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

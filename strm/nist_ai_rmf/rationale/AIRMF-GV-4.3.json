@@ -1,0 +1,93 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "fde_id": "AIRMF-GV-4.3",
+  "fde_type": "outcome",
+  "function": "GOVERN",
+  "category": "GOVERN 4",
+  "subcategory_id": "GV-4.3",
+  "outcome_text": "Organizational practices are in place to enable AI testing, identification of incidents, and information sharing.",
+  "scoring_text": "Knowledge of AI testing and incident management infrastructure, including establishing testing environments and protocols, implementing AI incident identification and tracking mechanisms, and creating information-sharing practices for AI-related findings across organizational boundaries.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "AIRMF-GV-4.3",
+  "focal_document_element_description": "Knowledge of AI testing and incident management infrastructure, including establishing testing environments and protocols, implementing AI incident identification and tracking mechanisms, and creating information-sharing practices for AI-related findings across organizational boundaries.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "AG-K-007",
+  "reference_document_element_description": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+  "comments": "NIST AI RMF GV-4.3 (GOVERN) superset of WIDAI AG domain. AG-K-007 is the strongest match (STS: 0.615, cosine: 0.668). Secondary: AG-K-004 (AG, cosine: 0.666), AG-K-002 (AG, cosine: 0.665).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the risk management outcome) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6155,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.616). Shared vocabulary: [ai, knowledge, protocols]. NIST AI RMF competency implication terms [across, boundaries, creating, environments, establishing, findings] vs WIDAI terms [audit, bias, design, documentation, explainability, fairness] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.888,
+        "recall": 0.888,
+        "f1": 0.888,
+        "significance": "BERTScore F1=0.888 (P=0.888, R=0.888). Balanced P/R \u2014 the 31-word competency implication and 22-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.8382,
+        "entailment": 0.0003,
+        "neutral": 0.1615,
+        "significance": "NLI: contradiction-dominant (83.8%). Semantic tension between \"Knowledge of AI testing and incident management infrastructure, including establ\" and \"Knowledge of responsible AI principles and audit methods, including fairness met\". Despite STS-based 'Superset of' classification, these concepts may operate in adjacent but distinct professional domains."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6684,
+        "significance": "Bi-encoder 0.668 > STS 0.616 (gap +0.053). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, knowledge, protocols] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1463,
+        "significance": "Jaccard 14.6%. Shared tokens: [ai, knowledge, protocols]. NIST AI RMF-only: [across, boundaries, creating, environments, establishing, findings]. WIDAI-only: [audit, bias, design, documentation, explainability, fairness]."
+      }
+    }
+  },
+  "framework_context": {
+    "function": "GOVERN",
+    "applies_to": [
+      "organization"
+    ]
+  },
+  "gap_signal": {
+    "severity": "critical",
+    "criteria_triggered": [
+      "domain_mismatch"
+    ],
+    "signal_count": 1,
+    "signals": [
+      {
+        "criterion": "domain_mismatch",
+        "severity": "critical",
+        "detail": "NLI contradiction 83.8% on Superset of classification. The matched KSA operates in a different professional domain than the obligation/competency requires. STS 0.616 passed the threshold but secondary signals contradict the match.",
+        "scores": {
+          "nli_contradiction": 0.8382,
+          "sts_raw": 0.6155,
+          "relationship": "Superset of"
+        }
+      }
+    ],
+    "detection_date": "2026-04-01",
+    "detection_method": "Retroactive multi-method signal analysis (gap_detection.py)"
+  },
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}
