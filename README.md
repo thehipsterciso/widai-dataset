@@ -1,26 +1,30 @@
 <p align="center">
-  <img src="docs/assets/widai-at-a-glance.svg" alt="WIDAI at a glance — 187 roles, 12 KSA domains, 70+ frameworks, one standard" width="100%"/>
+  <img src="docs/assets/widai-at-a-glance.svg" alt="WIDAI — 187 roles, 12 KSA domains, 70+ frameworks, one standard" width="100%"/>
 </p>
 
-# WIDAI
+# WIDAI — Workforce Initiative for Data and AI
 
-**The first machine-readable, cross-framework workforce taxonomy for data and AI.**
+**The first machine-readable, cross-framework workforce taxonomy built specifically for data and AI.**
 
-WIDAI answers a question that every organization building with data and AI eventually faces but nobody has standardized: *who do we need, what should they know, and how do we measure the gap between where we are and where we need to be?*
+Here is the question every organization building with data and AI eventually runs into — and the one nobody has standardized an answer for: *who do we need, what should they know, and how do we measure the gap between where we are and where we need to be?*
 
-There are frameworks that describe cybersecurity roles. Frameworks that describe general occupations. Frameworks that describe IT skills. None of them were built for the data and AI profession — the discipline that now underpins every enterprise strategy but has no shared language for its workforce.
+There are frameworks that describe cybersecurity roles. Frameworks that describe general occupations. Frameworks that describe IT skills. Not one of them was built for the discipline that now underpins every enterprise strategy but has no shared language for its workforce. Think about that for a second. The labor market has had O\*NET for forty years. Cybersecurity has had NICE for a decade. Data and AI — the function that boards are betting their competitive future on — has nothing.
 
-WIDAI fills that gap. It defines 187 roles across the full data and AI organization, maps knowledge, skills, abilities, and tasks across 12 knowledge domains using a shared-pool model, and unifies 70+ source frameworks — NIST NICE, O\*NET, SFIA, DAMA DMBOK, ESCO, EU AI Act, ISO 42001, SR 11-7, and dozens more — into a single dataset with full source provenance. Every mapping traces back to where it came from. Every role carries context from every framework that describes it.
+WIDAI fills that gap. It defines 187 roles across the full data and AI organization, maps knowledge, skills, abilities, and tasks across 12 knowledge domains using a shared-pool model, and unifies 70+ source frameworks — NIST NICE, O\*NET, SFIA, DAMA DMBOK, ESCO, EU AI Act, ISO 42001, SR 11-7, and dozens more — into a single dataset with full source provenance.
 
-The result: one taxonomy that speaks every framework's language simultaneously.
+Every mapping traces back to where it came from. Every role carries context from every framework that describes it. One taxonomy that speaks every framework's language simultaneously.
 
 ---
 
-## The Problem Worth Solving
+## The Problem Nobody Talks About Honestly
 
-Organizations are making consequential workforce decisions — hiring, restructuring, assessing regulatory readiness, evaluating acquisition targets — using frameworks that were never designed for data and AI. They translate between NICE and O\*NET and SFIA manually. They map regulatory obligations to roles on whiteboards. They assess team capability against standards that exist only in someone's head.
+Organizations are making consequential workforce decisions — hiring data teams, restructuring AI functions, assessing regulatory readiness, evaluating acquisition targets — and they are doing it with frameworks that were never designed for this work. They translate between NICE and O\*NET and SFIA manually, on whiteboards, in spreadsheets that live on one person's laptop. They map regulatory obligations to roles in someone's head. They assess team capability against standards that do not exist in any formal sense.
 
-This is not a tooling gap. It is an infrastructure gap. The same infrastructure gap that O\*NET solved for the general labor market forty years ago, that NICE solved for cybersecurity a decade ago. Data and AI is the last major professional domain without a machine-readable workforce standard.
+This is not a tooling gap. It is an infrastructure gap. And the people closest to it — the CDIAOs, the CISOs, the PE operating partners running diligence on a data-heavy target — already know it. They just do not have a better option. So they do what everyone does when the standard does not exist: they build something ad hoc, it works well enough for this engagement, and then it dies on the vine because it was never designed to be reusable.
+
+What if someone built the reusable version? Not a product that locks you into a vendor's taxonomy. Not a consulting engagement that produces a deliverable and walks away. An open, evidence-based reference dataset that any tool, any methodology, any assessment can build on top of.
+
+That is what WIDAI is.
 
 <p align="center">
   <img src="docs/assets/market-opportunity.svg" alt="Market opportunity across PE, EU AI Act, Model Risk, and Agentic AI" width="100%"/>
@@ -28,31 +32,69 @@ This is not a tooling gap. It is an infrastructure gap. The same infrastructure 
 
 ---
 
-## What WIDAI Makes Possible
+## What Does This Actually Make Possible?
 
-**For PE operating partners evaluating acquisition targets:** A standardized assessment that maps the target's data/AI team against a reference taxonomy, produces a maturity score, identifies key-person risks, and models the Year 1–3 workforce investment. Delivered in 30 days, priced as deal-level trivial. No more gut feel and reference checks for the workforce that will determine whether the value creation plan succeeds.
+Let me be specific, because the last thing any of us need is another framework pitch that sounds impressive and delivers nothing.
 
-**For organizations navigating the EU AI Act:** A mapping between regulatory obligations and the people who must fulfill them — across EU AI Act, NIST AI RMF, and ISO 42001 simultaneously. Not a compliance workflow tool. A workforce blueprint that tells you which roles satisfy which obligations, and which two hires cover the most regulatory surface area if your budget is limited.
+### PE Workforce Due Diligence
 
-**For financial institutions governing AI models:** An organizational design framework for SR 11-7 model risk governance adapted for AI. Three lines of defense mapped to defined roles with independence requirements, staffing ratios, and cross-regulatory context. The reference architecture that consulting firms haven't published.
+You are an operating partner evaluating a data-heavy acquisition target. Today you assess the workforce through interviews, reference checks, and gut feel. The team that will determine whether the value creation plan succeeds or fails gets evaluated with less rigor than the financial model.
 
-**For anyone building with agentic AI:** The first structured role definitions for a workforce category that doesn't exist in any established framework. Agent Supervisor, Agent Orchestrator, AI Trust Engineer — roles that organizations are creating ad hoc, without a shared vocabulary. WIDAI provides the vocabulary.
+WIDAI enables a standardized assessment that maps the target's data/AI team against a reference taxonomy, produces a composite Workforce Readiness Score, identifies key-person risks, and models the Year 1–3 workforce investment — delivered in 30 days, priced as deal-level trivial.
 
-**For newly hired CDIAOs walking into a role on Monday:** A Week 1 assessment that maps the current team, identifies the three biggest gaps, and produces a hiring plan by end of Week 2. Not a 187-role taxonomy to study. A tool that produces answers on the timeline the operating partner expects.
+<p align="center">
+  <img src="docs/assets/example-assessment-output.svg" alt="Example PE assessment output — Workforce Readiness Score with dimension breakdowns" width="100%"/>
+</p>
+
+One PE firm adoption cascades to assessments across every portfolio company. No other use case has that multiplier.
+
+### EU AI Act Compliance — Before August 2026
+
+The EU AI Act enforcement deadline is five months away. Organizations that deploy high-risk AI systems need to demonstrate human oversight, risk management, and governance structures staffed by people with defined competencies. Most of them cannot answer the question: *which roles in my organization satisfy which obligations?*
+
+WIDAI maps regulatory obligations to the people who must fulfill them — across EU AI Act, NIST AI RMF, and ISO 42001 simultaneously. Not a compliance workflow tool. A workforce blueprint that tells you which two hires cover the most regulatory surface area if your budget is limited.
+
+### AI Model Risk Governance (SR 11-7)
+
+Financial institutions governing AI models under SR 11-7 need three lines of defense with independence requirements, but no published reference architecture maps the organizational design. WIDAI provides it — defined roles, staffing ratios, cross-regulatory context. The reference architecture that consulting firms charge seven figures to build custom, delivered as a reusable standard.
+
+### Agentic AI Workforce Design
+
+Agent Supervisor. Agent Orchestrator. AI Trust Engineer. Human-AI Teaming Specialist. These roles are being created ad hoc at enterprises right now, without a shared vocabulary, without defined competencies, without any framework reference. WIDAI provides the first structured role definitions for a workforce category that does not exist in any established framework. Zero other sources define these roles. That is not a claim — it is an observable fact.
+
+### CDAIO Week 1 Assessment
+
+You just got hired as a Chief Data and AI Officer. The operating partner expects a team assessment by Week 2 and a hiring plan by Week 3. You do not need a 187-role taxonomy to study. You need a tool that produces answers on the timeline you are accountable to. WIDAI's assessment methodology was designed for exactly this — map the current team, identify the three biggest gaps, produce the plan.
 
 ---
 
-## The Differentiator Nobody Else Can Provide
+## Why This Doesn't Already Exist
 
 <p align="center">
   <img src="docs/assets/competitive-position.svg" alt="Competitive positioning — WIDAI occupies a category of one" width="100%"/>
 </p>
 
-Lightcast processes billions of job postings and has compensation data updated biweekly. Eightfold builds proprietary organizational taxonomies for individual enterprises. NICE defines cybersecurity roles. O\*NET covers the general labor market. Each is excellent at what it does. None of them do what WIDAI does.
+Lightcast processes billions of job postings and has compensation data updated biweekly. Excellent at that. Eightfold builds proprietary organizational taxonomies for individual enterprises. Excellent at that too. NICE defines cybersecurity roles with granular KSAs. O\*NET covers the general labor market with standardized occupational data. Each does its thing extremely well.
 
-WIDAI is the only dataset that maps a single role to obligations under multiple regulatory and professional frameworks simultaneously. An AI Governance Manager in WIDAI carries context from EU AI Act Article 14, NIST AI RMF GOVERN functions, ISO 42001 controls, DAMA DMBOK knowledge areas, and SFIA skills — all in one record, all with source provenance.
+None of them maps a single role to obligations under multiple regulatory and professional frameworks simultaneously. That cross-framework mapping — where an AI Governance Manager carries context from EU AI Act Article 14, NIST AI RMF GOVERN functions, ISO 42001 controls, DAMA DMBOK knowledge areas, and SFIA skills, all in one record, all with source provenance — is the feature that does not exist anywhere else.
 
-That cross-framework mapping is the feature a CISO with budget for two hires and three regulatory obligations needs. It is the feature a PE operating partner assessing a regulated target needs. It is the feature that makes WIDAI citable by analysts and usable by practitioners. And it is genuinely difficult to replicate, because it requires not just data access but two decades of judgment about how these frameworks relate to each other.
+It is also genuinely difficult to replicate, because it requires not just data access but the kind of judgment about how these frameworks relate to each other that only comes from having worked across them for two decades. That is the moat. Not the data. The judgment encoded in the data.
+
+---
+
+## How The Scoring Actually Works
+
+Every claim in this dataset is evidence-based. WIDAI uses NIST IR 8477 Set Theory Relationship Mapping (STRM) as the formal methodology for mapping external frameworks against the KSA pool. Each framework element is scored computationally using a multi-method pipeline — not expert opinion, not manual classification, not vibes.
+
+<p align="center">
+  <img src="docs/assets/strm-methodology.svg" alt="STRM scoring methodology — multi-method computational pipeline" width="100%"/>
+</p>
+
+The primary method is Cross-Encoder Semantic Textual Similarity (STS), which processes both texts jointly through cross-attention — the current state of the art for semantic similarity in NLP research. Four secondary methods provide independent validation: BERTScore (token-level contextual matching with Precision/Recall/F1 directionality), NLI Cross-Encoder (entailment vs. contradiction probabilities), Bi-Encoder Cosine Similarity, and Jaccard Token Overlap as a lexical baseline.
+
+Every scored pair produces a rationale file with all five method scores, interpretive significance reasoning for each method, the NIST relationship type classification, and full source provenance. 126 rationale files for the first framework mapping alone. That is the level of evidentiary rigor this dataset is built on.
+
+Why does this matter? Because when a PE operating partner asks "how did you determine that this role maps to these obligations?", the answer is not "an expert said so." The answer is a traceable chain of computational evidence with multiple independent validation methods. That is the difference between a reference dataset and an opinion.
 
 ---
 
@@ -64,96 +106,90 @@ Every roadmap item has been scored on impact, overlooked probability, and depend
   <img src="docs/assets/roadmap-timeline.svg" alt="Roadmap from validation to scale — five phases, dependency-driven" width="100%"/>
 </p>
 
-The full roadmap contains 25 scored items organized into dependency tiers, each with documented rationale. Fifteen Architectural Decision Records capture the reasoning behind every major decision — what was chosen, what was considered, and what the consequences are.
+**Phase 0 — Validate (Complete).** Four parallel tests executed: coverage gap (PASS, 92.2%), AI-assisted KSA quality (PASS, 4.26/5), license audit (CONDITIONAL, 19 frameworks GREEN), consistency audit (PASS, 8.2/10). All assumptions validated. Phase 1 cleared for execution. [Full results →](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
 
-**Phase 0 — Validate (Weeks 1–2).** Completed 2026-03-26. Four parallel tests executed with results: R01 (Coverage Gap Test) PASS — 92.2% KSA coverage across 5 archetypes validates current data supports a pilot assessment. R02 (AI-Assisted KSA Quality Test) PASS — 4.26/5 average quality score validates AI-assisted authoring can match manual quality. R05 (License Audit) CONDITIONAL — 19 frameworks GREEN for commercial use, all others citation-only, establishes commercial pathway. R24 (Consistency Audit) PASS WITH CONDITIONS — 8.2/10 consistency score across existing KSAs establishes authoring standards. All assumptions validated. See detailed results: [`docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
+**Phase 1 — First Product (In Progress).** PE assessment methodology fully specified. KSA architecture restructured from role-centric to shared domain pool (12 knowledge domains, many-to-many mappings). STRM framework mapping cycle active — each framework produces per-element rationale files with multi-method computational scoring. First framework (O\*NET 30.2) complete. [STRM progress →](docs/README.md)
 
-**Phase 1 — First Product (Weeks 3–8).** In progress. R04 (PE Assessment Methodology) complete. **Critical correction applied:** KSA data model restructured from role-centric to shared domain pool ([ADR-013](docs/roadmap/adr/ADR-013-shared-pool-ksa-architecture.md)) after depth audit revealed significant shortfall versus established frameworks. Architecture now uses 12 knowledge domains with many-to-many role mappings. **KSA enrichment methodology established:** NIST IR 8477 Set Theory Relationship Mapping (STRM) adopted as the formal methodology for evidence-based KSA pool enrichment ([ADR-014](docs/roadmap/adr/ADR-014-strm-based-ksa-enrichment.md)). Phase 1A baseline enrichment complete. Phase 1B framework prioritization complete (34 of 70 frameworks STRM-eligible, 4-tier execution sequence). Phase 1C STRM cycle in progress — frameworks being mapped against the KSA pool one at a time, producing per-element rationale files with multi-method computational scoring. See [`docs/README.md`](docs/README.md) for STRM progress tracker. Pilot engagement (R03) blocked until enrichment synthesis completes.
+**Phase 2 — Compliance + Validation.** EU AI Act obligation-to-role mapping ships before August 2026 enforcement. Cross-regulatory role coverage analysis produces the differentiating feature. Regulatory practitioners validate the mappings.
 
-**Phase 2 — Compliance + Validation (Weeks 9–16).** EU AI Act obligation-to-role mapping ships before August 2026 enforcement. Cross-regulatory role coverage analysis produces the killer feature. Regulatory practitioners validate the mappings. The quick assessment interface makes the methodology repeatable.
+**Phase 3 — Expand.** Agentic AI role definitions. SR 11-7 organizational design patterns. CDAIO assessment toolkit. Built on the credibility established by a validated pilot and compliance market presence.
 
-**Phase 3 — Expand (Weeks 17–24).** Agentic AI role definitions. SR 11-7 organizational design patterns. CDAIO assessment toolkit. Built on the credibility established by a validated pilot and compliance market presence.
+**Phase 4 — Scale.** API. Graph database. Full KSA coverage. Funded by Phases 1–3 revenue.
 
-**Phase 4 — Scale (Weeks 25+).** API. Graph database. Full KSA coverage. Funded by Phases 1–3 revenue.
-
-> Full roadmap analysis, scoring methodology, and all 15 ADRs: [`docs/roadmap/`](docs/roadmap/)
+> Fifteen Architectural Decision Records document the reasoning behind every major decision — what was chosen, what was considered, and what the consequences are. [Full roadmap analysis and ADRs →](docs/roadmap/)
 
 ---
 
 ## Current State — Honest Assessment
 
-WIDAI is in active development at version 0.5.3. Transparency about where things stand is not a weakness; it is the credibility this project is built on.
+WIDAI is in active development at version 0.5.3. Transparency about where things stand is a feature, not a disclaimer.
 
-**What exists today:** 187 roles defined across 10 categories. KSAs organized across 12 domain pools (Knowledge, Skills, Tasks, Abilities) with active enrichment expanding depth through STRM framework mappings. 70+ source frameworks with provenance. Shared-pool KSA architecture with many-to-many role mappings. Entity-separated architecture designed for graph database ingestion. Schema supporting regulatory context, cross-framework mapping, and quantified assessment. STRM framework mapping infrastructure with multi-method computational scoring pipeline.
+**What exists today:** 187 roles defined across 10 categories. KSAs organized across 12 domain pools with active enrichment through STRM framework mappings. 70+ source frameworks with provenance. Shared-pool KSA architecture with many-to-many role mappings. Entity-separated architecture designed for graph database ingestion. Multi-method computational scoring pipeline producing per-element rationale files. First framework STRM (O\*NET 30.2) complete with 126 rationale files.
 
-**Phase 0 Validation: Complete.** Four parallel tests executed — coverage, quality, licensing, consistency — all passing or passing-with-conditions. The hypothesis that current coverage supports a PE assessment pilot is validated with measurable evidence. Phase 1 cleared for execution. Results: [`docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
+**What has been validated:** Phase 0 testing confirmed that current coverage supports a PE assessment pilot (92.2% KSA coverage across 5 archetypes), that AI-assisted authoring meets quality standards (4.26/5), and that a clean commercial pathway exists (19 frameworks GREEN for commercial use). The hypothesis is tested, not assumed.
 
-**Phase 1 First Product: In progress.** The PE Workforce Due Diligence Assessment methodology is fully specified (R04) — a 4-dimension scoring model producing a single Workforce Readiness Score (0-100), a 30-day engagement workflow, four deliverable templates, and five reference architectures by company profile. KSA enrichment is proceeding through the STRM framework mapping cycle — each framework produces per-element rationale files with multi-method computational scoring, gap identification, and cross-framework validation evidence. KSA pool depth and coverage statistics will stabilize after synthesis (Phase 1D).
+**What does not exist yet:** Full role-KSA mappings at target depth — requires STRM completion across remaining frameworks and synthesis. Populated regulatory context fields. A pilot engagement partner. An API.
 
-**Commercial viability confirmed.** License audit established a clean subset of frameworks with unrestricted commercial application. AI-assisted authoring pathway validated for rapid KSA expansion. Provenance tagging ensures transparency about which KSAs were human-authored versus AI-assisted.
-
-**What does not exist yet:** Full role-KSA mappings at target depth — requires STRM completion and role-KSA mapping rebuild (Phase 1D synthesis). Populated regulatory context fields (Phase 2). A pilot engagement partner (R03). An API.
+The honest version is always the marketing version when the fundamentals are sound. And they are.
 
 ---
 
 ## How Decisions Get Made
 
-This project does not operate on intuition. The roadmap was produced through a structured five-pass analysis — Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, and Second-Order Mapping — applied against six priority use cases with parallel research across five domains. Each major decision is documented as an Architectural Decision Record with context, rationale, alternatives considered, and consequences.
+This project does not operate on intuition. The roadmap was produced through a structured five-pass analysis — Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, and Second-Order Mapping — applied against six priority use cases.
 
 | Decision | Record | Core Reasoning |
 |----------|--------|----------------|
-| Sequence by dependencies, not priority | [ADR-001](docs/roadmap/adr/ADR-001-dependency-driven-roadmap-sequencing.md) | Priority rankings create serialization traps. Dependencies reveal the natural build order. |
-| PE due diligence as first product | [ADR-002](docs/roadmap/adr/ADR-002-pe-due-diligence-as-beachhead.md) | One PE firm adoption cascades to 8+ portfolio assessments. No other use case has this multiplier. |
-| Ship on current data, don't wait | [ADR-003](docs/roadmap/adr/ADR-003-ship-on-current-data-coverage.md) | Every month spent completing the dataset before piloting is a month of deferred market validation. |
-| EU AI Act as urgent parallel track | [ADR-004](docs/roadmap/adr/ADR-004-eu-ai-act-timeline-urgency.md) | August 2026 enforcement. Five months. The compliance window does not wait. |
-| AI-assisted authoring with quality gates | [ADR-005](docs/roadmap/adr/ADR-005-ai-assisted-ksa-authoring.md) | 3–5x speedup, shifting the bottleneck from production to review. Contingent on quality validation. |
-| Cross-regulatory mapping as differentiator | [ADR-006](docs/roadmap/adr/ADR-006-cross-regulatory-role-coverage.md) | One role satisfying multiple regulatory obligations is the feature nobody else provides. |
-| Assessment service, not dataset product | [ADR-007](docs/roadmap/adr/ADR-007-product-positioning-assessment-service.md) | Every buyer persona buys answers, not data access. The taxonomy is cost of goods. |
-| Schema modifications before enrichment | [ADR-008](docs/roadmap/adr/ADR-008-schema-modifications-before-enrichment.md) | Don't populate fields that will change. Modify the schema first. |
-| Agentic AI as Tier 3 first-mover play | [ADR-009](docs/roadmap/adr/ADR-009-agentic-ai-roles-first-mover.md) | First-mover advantage is real but only holds if definitions are credible. Credibility comes from the beachhead. |
-| Validate before building | [ADR-010](docs/roadmap/adr/ADR-010-validation-sprint-before-product-build.md) | Four tests executed: R01 PASS (92.2% coverage), R02 PASS (4.26/5 quality), R05 CONDITIONAL (19 GREEN frameworks), R24 PASS WITH CONDITIONS (8.2/10 consistency). Go decision for Phase 1 product build. |
-| PE assessment scoring model design | [ADR-011](docs/roadmap/adr/ADR-011-pe-assessment-scoring-model.md) | Evidence-based scoring against WIDAI KSAs, deal-specific criticality, four deliverables without compensation data, reference architectures by company profile, single WRS composite score. |
-| KSA depth correction | [ADR-012](docs/roadmap/adr/ADR-012-ksa-depth-correction.md) | External benchmarking revealed 14.9x depth shortfall. DCI metric, adversarial quality gate, and 40+ KSAs/role target established. |
-| Shared-pool KSA architecture | [ADR-013](docs/roadmap/adr/ADR-013-shared-pool-ksa-architecture.md) | Domain-based KSA pool with many-to-many role mappings replaces role-centric model. 12 knowledge domains. |
-| STRM-based KSA enrichment | [ADR-014](docs/roadmap/adr/ADR-014-strm-based-ksa-enrichment.md) | NIST IR 8477 Set Theory Relationship Mapping adopted for evidence-based enrichment. Four-phase execution. |
-| STRM — O\*NET 30.2 | [ADR-015](docs/roadmap/adr/ADR-015-strm-onet.md) | First framework STRM complete. Multi-method scoring pipeline established. Gap signals in foundational professional skills. |
+| Sequence by dependencies, not priority | [ADR-001](docs/roadmap/adr/ADR-001-dependency-driven-roadmap-sequencing.md) | Priority rankings create serialization traps. |
+| PE due diligence as first product | [ADR-002](docs/roadmap/adr/ADR-002-pe-due-diligence-as-beachhead.md) | One PE firm adoption cascades to 8+ portfolio assessments. |
+| Ship on current data, don't wait | [ADR-003](docs/roadmap/adr/ADR-003-ship-on-current-data-coverage.md) | Every month of deferred piloting is a month of deferred market validation. |
+| EU AI Act as urgent parallel track | [ADR-004](docs/roadmap/adr/ADR-004-eu-ai-act-timeline-urgency.md) | August 2026 enforcement. The compliance window does not wait. |
+| AI-assisted authoring with quality gates | [ADR-005](docs/roadmap/adr/ADR-005-ai-assisted-ksa-authoring.md) | 3–5x speedup. Contingent on quality validation. |
+| Cross-regulatory mapping as differentiator | [ADR-006](docs/roadmap/adr/ADR-006-cross-regulatory-role-coverage.md) | The feature nobody else provides. |
+| Assessment service, not dataset product | [ADR-007](docs/roadmap/adr/ADR-007-product-positioning-assessment-service.md) | Every buyer persona buys answers, not data access. |
+| Shared-pool KSA architecture | [ADR-013](docs/roadmap/adr/ADR-013-shared-pool-ksa-architecture.md) | Domain-based KSA pool with many-to-many role mappings. |
+| STRM-based KSA enrichment | [ADR-014](docs/roadmap/adr/ADR-014-strm-based-ksa-enrichment.md) | NIST IR 8477 adopted for evidence-based enrichment. |
+| STRM — O\*NET 30.2 complete | [ADR-015](docs/roadmap/adr/ADR-015-strm-onet.md) | Multi-method scoring pipeline established. |
+
+> All 15 ADRs with full context, rationale, and alternatives considered: [`docs/roadmap/adr/`](docs/roadmap/adr/)
 
 ---
 
-## For Collaborators
+## Who Should Be Paying Attention
 
-WIDAI is built by [Thomas Jones](https://www.linkedin.com/in/yourprofilehere) — The Hipster CISO. Twenty years of executive leadership spanning cybersecurity, data governance, and AI strategy. Carnegie Mellon CDAIO Program. Building at the intersection of enterprise protection and enterprise growth, because those are the same discipline viewed from different altitudes.
+**If you evaluate data/AI teams as part of PE deal diligence or portfolio management** — you are the user this was designed to serve first. A pilot engagement produces value for both sides: you get a structured assessment methodology backed by a reference taxonomy, WIDAI gets market validation. That is a trade worth making.
 
-The project welcomes collaborators who bring specific expertise the roadmap needs:
+**If you are navigating the EU AI Act and cannot answer which roles satisfy which obligations** — the compliance mapping ships before August 2026 enforcement. If your organization is in scope, this is the workforce blueprint that does not currently exist anywhere else.
 
-**Regulatory practitioners** — EU AI Act interpretation, SR 11-7 model risk governance, ISO 42001 implementation experience. The regulatory context mappings need validation by people who have been through examinations, not just people who have read the regulations.
+**If you are a CDAIO or CISO in the first 90 days of a new role** — you are building the assessment and organizational design that WIDAI is being built to support. Your feedback on what is useful, what is missing, and what is wrong is more valuable than any framework analysis.
 
-**PE operating partners and portfolio advisors** — If you assess data/AI teams as part of deal diligence or portfolio management, you are the user WIDAI was designed to serve first. A pilot engagement produces value for both sides: you get a structured assessment methodology, WIDAI gets market validation.
+**If you study workforce taxonomies, role evolution, or organizational design for data/AI teams** — the dataset is available for research collaboration.
 
-**CDIAOs and CISOs in the first 90 days of a new role** — You are building the assessment and organizational design that WIDAI is being built to support. Your feedback on what's useful, what's missing, and what's wrong is more valuable than any framework analysis.
-
-**Data and AI workforce researchers** — If you study role evolution, skills taxonomies, or organizational design for data/AI teams, WIDAI's dataset is available for research collaboration.
-
-> Interested? Open an issue, or reach out directly through [The Hipster CISO](https://thehipsterciso.substack.com).
+> Interested? Open an issue, or reach out through [The Hipster CISO](https://thehipsterciso.substack.com).
 
 ---
 
 ## Technical Documentation
 
-The executive narrative above tells you why WIDAI exists and where it's going. The technical documentation tells you how it's built.
+The narrative above tells you why WIDAI exists and where it is going. The technical documentation tells you how it is built.
 
 | Document | What It Covers |
 |----------|----------------|
-| [Architecture and Data Model](docs/TECHNICAL.md) | Entity-separated flat files, schema design, graph-ready structure, validation |
+| [Architecture and Data Model](docs/TECHNICAL.md) | Entity-separated flat files, schema design, graph-ready structure |
 | [Master Schema Design](docs/master-schema-design.md) | 25+ field JSON schema with nested regulatory and framework context |
-| [Field-by-Field Assessment](docs/field-by-field-assessment.md) | Use case analysis and modification verdicts for every schema field |
-| [Gap Analysis](docs/gap-analysis.md) | 187-role inventory with coverage status against source frameworks |
+| [STRM Framework Mappings](strm/) | NIST IR 8477 Set Theory Relationship Mappings with per-element rationale |
+| [PE Assessment Methodology](methodology/R04-pe-assessment-methodology.md) | Scoring model, engagement workflow, deliverable specifications |
+| [Framework Prioritization](docs/roadmap/phase-1b-framework-prioritization.md) | 70 frameworks assessed, 4-tier STRM execution sequence |
 | [Roadmap Analysis](docs/roadmap/ensemble-brainstorm-widai.md) | Full five-pass strategic analysis with research citations |
-| [Architectural Decision Records](docs/roadmap/adr/) | 15 ADRs documenting rationale for every major roadmap and methodology decision |
-| [PE Assessment Methodology](methodology/R04-pe-assessment-methodology.md) | Scoring model, engagement workflow, and deliverable specifications for the PE workforce due diligence product |
-| [NICE Boundary Scoping](docs/nice-boundary-scoping.md) | How WIDAI relates to NIST NICE for cybersecurity boundary roles |
-| [STRM Framework Mappings](strm/) | NIST IR 8477 Set Theory Relationship Mappings — per-framework evidence for KSA enrichment |
-| [Framework Prioritization](docs/roadmap/phase-1b-framework-prioritization.md) | 70 frameworks assessed for STRM eligibility, 4-tier execution sequence |
+| [All ADRs](docs/roadmap/adr/) | 15 Architectural Decision Records |
+
+---
+
+## About
+
+WIDAI is built by [Thomas Jones](https://www.linkedin.com/in/yourprofilehere) — The Hipster CISO. Twenty years of executive leadership spanning cybersecurity, data governance, and AI strategy. Carnegie Mellon CDAIO Program. The person who spent two decades protecting enterprise data is uniquely qualified to unlock its value — because security, data governance, and AI strategy are the same discipline viewed from different altitudes. That convergence is where this project lives.
+
+> [The Hipster CISO on Substack](https://thehipsterciso.substack.com) · [GitHub](https://github.com/thehipsterciso)
 
 ---
 
