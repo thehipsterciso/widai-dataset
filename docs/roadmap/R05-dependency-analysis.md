@@ -1,22 +1,22 @@
 # R05 Framework Dependency Analysis — Issue #26
 
 **Analysis Date:** 2026-03-26  
-**Dataset:** ATLAS v0.3.0+  
+**Dataset:** WIDAI v0.3.0+  
 **Scope:** All 70 source frameworks  
 **Analyst:** Claude Code
 
 ## Executive Summary
 
-The ATLAS dataset achieves a **low-risk licensing posture** through a critical architectural decision: **all ATLAS KSAs are ATLAS-originated, and external frameworks serve purely as reference citations in role source mappings.**
+The WIDAI dataset achieves a **low-risk licensing posture** through a critical architectural decision: **all WIDAI KSAs are WIDAI-originated, and external frameworks serve purely as reference citations in role source mappings.**
 
 ### Key Finding
 
 **100% of RED framework dependencies are CITATION-ONLY.** This means:
 
-- ATLAS can **exclude any RED framework** with **zero data loss** to KSAs or role definitions
+- WIDAI can **exclude any RED framework** with **zero data loss** to KSAs or role definitions
 - No role title or competency statement is derived from proprietary framework content
 - Role-to-framework mappings are post-hoc reference tables, not structural dependencies
-- The dataset architecture successfully isolates ATLAS content from external IP risk
+- The dataset architecture successfully isolates WIDAI content from external IP risk
 
 ### Risk Classification
 
@@ -30,17 +30,17 @@ The ATLAS dataset achieves a **low-risk licensing posture** through a critical a
 
 ### Framework Dependency Types
 
-All ATLAS frameworks fall into exactly ONE category:
+All WIDAI frameworks fall into exactly ONE category:
 
 **CITATION (100% of frameworks)**
 - Framework is referenced by name/ID in role `sources` arrays
-- No framework content is reproduced in ATLAS role definitions or KSA statements
+- No framework content is reproduced in WIDAI role definitions or KSA statements
 - This is factual reference—like citing a book's ISBN or publication date
-- Removing the framework does not require rewriting ATLAS content
+- Removing the framework does not require rewriting WIDAI content
 
 **STRUCTURAL (0% of frameworks)**
-- Not found: Framework content reproduced or closely paraphrased in ATLAS
-- Not found: Framework-specific competency definitions mapped 1:1 to ATLAS KSAs
+- Not found: Framework content reproduced or closely paraphrased in WIDAI
+- Not found: Framework-specific competency definitions mapped 1:1 to WIDAI KSAs
 - Not found: Framework control IDs embedded in role descriptions
 
 **HYBRID (0% of frameworks)**
@@ -48,17 +48,17 @@ All ATLAS frameworks fall into exactly ONE category:
 
 ### Evidence
 
-1. **KSA Origin Analysis**: All 322 KSAs have `origin_framework: "ATLAS"`
+1. **KSA Origin Analysis**: All 322 KSAs have `origin_framework: "WIDAI"`
    - Zero KSAs derived from DAMA-DMBOK, Gartner, NIST, or any external framework
-   - All KSA statements written for ATLAS, not adapted from source frameworks
+   - All KSA statements written for WIDAI, not adapted from source frameworks
 
-2. **Role Definition Analysis**: Role titles and descriptions are ATLAS-authored
+2. **Role Definition Analysis**: Role titles and descriptions are WIDAI-authored
    - Frameworks appear only in `sources` arrays (citations)
    - Role title examples: "Chief Data Officer", "Data Architect", "Analytics Engineer"—these are industry-standard titles, not proprietary framework definitions
 
 3. **Mapping Architecture**: Two separate tables
-   - `roles/` directory: Role definitions (ATLAS-originated)
-   - `mappings/roles_to_*.json` files: Cross-references mapping ATLAS roles to external frameworks
+   - `roles/` directory: Role definitions (WIDAI-originated)
+   - `mappings/roles_to_*.json` files: Cross-references mapping WIDAI roles to external frameworks
    - Framework content is not embedded or reproduced
 
 ## RED Framework Analysis
@@ -90,7 +90,7 @@ All ATLAS frameworks fall into exactly ONE category:
 - **Categories Affected:** ANL, DSM, ENG, GOV, LDR, RSK
 - **Dependency Depth:** CITATION
 - **Risk Assessment:** HIGH — proprietary framework, commercial derivatives prohibited
-- **Excludability:** YES — can remove with zero ATLAS content impact
+- **Excludability:** YES — can remove with zero WIDAI content impact
 - **Recommended Action:** EXCLUDE (unless licensing obtainable)
 
 
@@ -104,7 +104,7 @@ All ATLAS frameworks fall into exactly ONE category:
 - **Categories Affected:** ANL, DSM, ENG, GOV, LDR, OPS
 - **Dependency Depth:** CITATION
 - **Risk Assessment:** HIGH — proprietary framework, commercial derivatives prohibited
-- **Excludability:** YES — can remove with zero ATLAS content impact
+- **Excludability:** YES — can remove with zero WIDAI content impact
 - **Recommended Action:** EXCLUDE (unless licensing obtainable)
 
 
@@ -114,7 +114,7 @@ All ATLAS frameworks fall into exactly ONE category:
 
 1. Removing entries from mapping files (e.g., `roles_to_Gartner.json`)
 2. Removing framework names from role `sources` arrays
-3. **Impact to ATLAS core content:** ZERO
+3. **Impact to WIDAI core content:** ZERO
    - All role titles remain unchanged
    - All KSA definitions remain unchanged
    - All role-to-KSA mappings remain unchanged
@@ -156,7 +156,7 @@ The "Practitioner Community" framework represents aggregated industry practice, 
 - Cannot be licensed because it's not a single entity's property
 - Perfectly defensible to include in commercial products
 
-**Recommendation:** Reclassify to GREEN. This is the single most defensible framework in ATLAS—it represents what the industry actually needs, not what proprietary vendors say.
+**Recommendation:** Reclassify to GREEN. This is the single most defensible framework in WIDAI—it represents what the industry actually needs, not what proprietary vendors say.
 
 ### High-Impact YELLOW Frameworks (10+ role refs)
 
@@ -192,7 +192,7 @@ Includes:
 - U.S. Government frameworks (BLS-SOC, Evidence Act, DCWF, DDAT, FDA, FED SR 11-7, Executive Order)
 - International public frameworks (EU AI Act, GDPR, Singapore MAIG)
 - Open/research frameworks (O*NET, NIST AI RMF, NIST NICE, Data Mesh, DBT Labs)
-- ATLAS itself
+- WIDAI itself
 
 **Total GREEN role refs:** ~180 (safe for commercial use)
 
@@ -223,7 +223,7 @@ All 21 RED frameworks plus any YELLOW framework can be excluded from commercial 
 
 1. Removing mapping files for that framework
 2. Removing framework citations from role `sources` arrays
-3. **No rewriting of core ATLAS content required**
+3. **No rewriting of core WIDAI content required**
 
 ### Frameworks with High Retention Value
 
@@ -285,7 +285,7 @@ If licensing is available at reasonable cost:
 ### Long Term (Commercial Product Strategy)
 
 7. **Define derivative product licensing strategy**
-   - If ATLAS will be sold/licensed commercially, review all YELLOW frameworks
+   - If WIDAI will be sold/licensed commercially, review all YELLOW frameworks
    - Practitioner Community (47 roles) is core—ensure legal clearance
    - O*NET, NIST, BLS-SOC should be retained (no cost)
 
@@ -295,7 +295,7 @@ If licensing is available at reasonable cost:
 
 **Why Practitioner Community is the Foundation**
 
-The "Practitioner Community" framework with 47 role references represents the largest single source in ATLAS. This is **intentional and defensible**:
+The "Practitioner Community" framework with 47 role references represents the largest single source in WIDAI. This is **intentional and defensible**:
 
 ### Composition
 
@@ -321,7 +321,7 @@ A product based on "what the industry actually needs" (Practitioner Community) i
 
 ## Summary Recommendations
 
-### Can ATLAS Be Commercialized?
+### Can WIDAI Be Commercialized?
 
 **YES, with these conditions:**
 
@@ -367,7 +367,7 @@ A product based on "what the industry actually needs" (Practitioner Community) i
 ### Data Quality
 
 - **Analysis coverage:** 100% (all 70 frameworks, all 10 role files, all 8 KSA files)
-- **KSA origin verification:** All 322 KSAs confirmed as origin_framework='ATLAS'
+- **KSA origin verification:** All 322 KSAs confirmed as origin_framework='WIDAI'
 - **Role source audit:** All 224 role records examined for framework citations
 - **Mapping validation:** All 70 mapping files counted and categorized
 
@@ -393,7 +393,7 @@ A product based on "what the industry actually needs" (Practitioner Community) i
 
 ## Conclusion
 
-**ATLAS achieves a defensible licensing posture through disciplined architecture.** All external frameworks serve as references, not structural dependencies. The dataset can be commercially distributed by:
+**WIDAI achieves a defensible licensing posture through disciplined architecture.** All external frameworks serve as references, not structural dependencies. The dataset can be commercially distributed by:
 
 1. Retaining GREEN frameworks (19 frameworks, zero licensing cost)
 2. Excluding RED frameworks (21 frameworks, zero content loss)

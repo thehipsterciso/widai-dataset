@@ -1,0 +1,61 @@
+{
+  "strm_id": "STRM-001-ONET",
+  "fde_id": "1.A.1.a.1",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "1.A.1.a.1",
+  "focal_document_element_description": "The ability to listen to and understand information and ideas presented through spoken words and sentences.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "LS-S-005",
+  "reference_document_element_description": "Skill in identifying, mapping, and engaging stakeholders across the organization for data and AI initiatives, including influence assessment, communication strategy design, and resistance management.",
+  "comments": "Foundational cognitive ability underlying all WIDAI interpersonal KSAs. Not directly defined in WIDAI \u2014 assumed as prerequisite. GAP consideration: not a gap because WIDAI defines professional competencies, not foundational cognitive abilities.",
+  "strength_of_relationship": 4,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_atlas_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark. Both texts processed jointly through transformer; outputs calibrated 0-1 similarity score.",
+      "raw_score_0_1": 0.3935,
+      "mapped_strength_0_10": 3.9,
+      "final_strength_integer": 4,
+      "significance": "Moderate similarity (nist band: roughly as similar as dissimilar). The moderate STS score is consistent with a Superset relationship where the O*NET element covers significantly broader ground than the WIDAI KSA. The shared conceptual territory is real but represents a fraction of the O*NET element's scope, compressing the similarity signal."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching. Precision = FDE coverage of KSA tokens. Recall = KSA coverage by FDE tokens. F1 = harmonic mean.",
+        "precision": 0.8647,
+        "recall": 0.8475,
+        "f1": 0.856,
+        "significance": "F1 of 0.8560 indicates lower token-level semantic alignment. Precision and Recall are balanced, indicating roughly symmetric semantic coverage between the two descriptions. The P > R pattern is atypical for a Superset relationship \u2014 it suggests the KSA may contain specificity that extends beyond the FDE's scope. This warrants attention during human review, though it may reflect domain-specific terminology in the KSA that the FDE covers conceptually without matching at the token level."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference. Classifies text pair as entailment, neutral, or contradiction. Indicates directional implication strength.",
+        "contradiction": 0.001,
+        "entailment": 0.0021,
+        "neutral": 0.9969,
+        "significance": "Neutral-dominant (99.69%) \u2014 the model finds the descriptions related but neither implying nor contradicting each other. Neutral is common for Superset pairs where the scope gap is large \u2014 the FDE covers broader territory than the KSA, so the NLI model sees topical relatedness without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
+        "cosine_similarity_0_1": 0.2742,
+        "significance": "The bi-encoder score (0.2742) is moderately lower than the STS cross-encoder (0.3935). The gap (0.12) indicates the relationship has a cross-abstraction component \u2014 some of the semantic alignment requires joint processing to detect, suggesting vocabulary or scope divergence between the two descriptions."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
+        "similarity_0_1": 0.0606,
+        "significance": "Low lexical overlap (6.06% of tokens shared). Some shared vocabulary exists (likely common functional words or broadly-used domain terms) but the bulk of each description uses distinct terminology."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-03-31"
+}

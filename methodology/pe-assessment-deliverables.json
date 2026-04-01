@@ -1,6 +1,6 @@
 {
-  "$schema": "https://atlas.cdaio.gov/schemas/pe-assessment-deliverables/v1.0.0",
-  "deliverables_id": "ATLAS-PE-DEL-001",
+  "$schema": "https://widai.cdaio.gov/schemas/pe-assessment-deliverables/v1.0.0",
+  "deliverables_id": "WIDAI-PE-DEL-001",
   "deliverables_version": "1.0.0",
   "deliverables_name": "PE Workforce Due Diligence Assessment — Deliverables Specification",
   "description": "Machine-readable specification for the four deliverables produced by the PE assessment engagement. Each deliverable has a defined purpose, audience, content structure, and data sources.",
@@ -29,7 +29,7 @@
           "length": "2-3 paragraphs",
           "content": [
             "Assessment date and scope (which teams assessed, reference architecture used)",
-            "Methodology summary in plain language (what ATLAS measures: role coverage, KSA capability, key person risk, hiring gaps)",
+            "Methodology summary in plain language (what WIDAI measures: role coverage, KSA capability, key person risk, hiring gaps)",
             "Key limitation: this is not a performance evaluation, not a cultural fit assessment, not a substitute for management interviews"
           ]
         },
@@ -139,16 +139,16 @@
       "secondary_audience": [
         "PE investment committee (reference material for follow-up questions)"
       ],
-      "purpose": "Detailed, visual mapping of team members to ATLAS roles, with coverage and capability scores. Enables integration planning: who stays, who needs development, who needs to be replaced, where are the gaps?",
+      "purpose": "Detailed, visual mapping of team members to WIDAI roles, with coverage and capability scores. Enables integration planning: who stays, who needs development, who needs to be replaced, where are the gaps?",
       "executive_signal": "Operationalizes the WRS into a team-by-team, person-by-person action plan",
       "content_structure": [
         {
-          "section": "1. Organization Chart with ATLAS Role Overlays",
+          "section": "1. Organization Chart with WIDAI Role Overlays",
           "length": "2-3 pages",
           "content": [
             "Visual org chart (or org structure diagram) showing:",
             "  - Each person's name, title, reporting line",
-            "  - ATLAS primary role label (e.g., 'ATLAS-ENG-0005: Senior Data Engineer')",
+            "  - WIDAI primary role label (e.g., 'WIDAI-ENG-0005: Senior Data Engineer')",
             "  - Color coding: Green (coverage ≥75%, capability ≥75%), Yellow (coverage 50-75% or capability 50-75%), Red (coverage <50% or capability <50%)",
             "  - Key person risk flag: person with KPRS >60 marked with special indicator (e.g., ⚠)",
             "Note: Does NOT include individual person scores (kept confidential); only visual assessment of role readiness"
@@ -165,7 +165,7 @@
           "content": [
             "All team members listed with:",
             "  - Name, Job Title, Reporting Manager",
-            "  - Primary ATLAS Role, Secondary ATLAS Role (if applicable)",
+            "  - Primary WIDAI Role, Secondary WIDAI Role (if applicable)",
             "  - Coverage Score (0-100)",
             "  - Capability Score (0-100)",
             "  - Criticality (1-5, relative to value creation plan)",
@@ -177,7 +177,7 @@
             {
               "Name": "Jane Smith",
               "Title": "Senior Data Engineer",
-              "Primary Role": "ATLAS-ENG-0005",
+              "Primary Role": "WIDAI-ENG-0005",
               "Coverage": 100,
               "Capability": 85,
               "Criticality": 4,
@@ -222,7 +222,7 @@
           "content": [
             "For each major role (or for roles with gaps), break down: which KSAs are covered by the team, which are gaps?",
             "Format: Stacked bar chart or heat map showing KSA coverage percentage",
-            "Example: Data Engineering role requires 15 KSAs (from ATLAS). Chart shows 14/15 are covered (93% coverage), with 1 gap identified.",
+            "Example: Data Engineering role requires 15 KSAs (from WIDAI). Chart shows 14/15 are covered (93% coverage), with 1 gap identified.",
             "Purpose: Enable CHRO or integration lead to identify specific learning & development opportunities"
           ]
         },
@@ -261,11 +261,11 @@
         }
       ],
       "data_sources": [
-        "Role mapping matrix (person → ATLAS role)",
+        "Role mapping matrix (person → WIDAI role)",
         "Coverage and capability scoring matrices (individual level)",
         "Criticality assignments",
         "Concentration risk assessment",
-        "ATLAS role definitions and KSA mappings",
+        "WIDAI role definitions and KSA mappings",
         "Value creation plan (for criticality context)"
       ],
       "formatting_requirements": [
@@ -292,7 +292,7 @@
         "Portfolio company leadership (once deal closes)",
         "Board of advisors or external recruiting partners"
       ],
-      "purpose": "Prescriptive hiring roadmap. Identifies every role that needs to be hired, ranks by criticality and market difficulty, provides ATLAS-sourced job description seeds, estimates hiring timeline and market difficulty.",
+      "purpose": "Prescriptive hiring roadmap. Identifies every role that needs to be hired, ranks by criticality and market difficulty, provides WIDAI-sourced job description seeds, estimates hiring timeline and market difficulty.",
       "executive_signal": "Answers: 'What do we need to hire? In what order? What will it cost in time and resources? What should the job descriptions say?'",
       "content_structure": [
         {
@@ -312,7 +312,7 @@
             "Table ranking all gaps by priority: (1 - coverage_score) × criticality × market_scarcity",
             "Columns:",
             "  - Rank (1, 2, 3, ...)",
-            "  - Role (ATLAS role name)",
+            "  - Role (WIDAI role name)",
             "  - Gap Type (Unfilled, Under-filled)",
             "  - Current Headcount / Required Headcount",
             "  - Criticality (1-5)",
@@ -328,13 +328,13 @@
           "length": "2-3 pages",
           "content": [
             "Detailed profile for each critical hire:",
-            "  - Role: [ATLAS Role Name]",
+            "  - Role: [WIDAI Role Name]",
             "  - Why Critical: [1-2 sentences on impact to value creation plan]",
             "  - Current Gap: [unfilled, under-filled with how many FTE missing]",
             "  - Required Profile:",
             "    * Seniority: [Junior / Mid / Senior / Lead / Executive]",
             "    * Years of experience: [minimum, preferred]",
-            "    * Key KSAs / competencies: [from ATLAS role definition]",
+            "    * Key KSAs / competencies: [from WIDAI role definition]",
             "    * Technology stack: [specific tools, platforms, languages]",
             "    * Domain expertise: [if relevant: healthcare, fintech, etc.]",
             "  - Market Difficulty: [Low (1-2 months) / Moderate (3-6 months) / High (6-12+ months)]",
@@ -342,21 +342,21 @@
             "  - Hiring Recommendation:",
             "    * Timeline: Start recruiting [immediate / within X weeks]",
             "    * Alternative if slow: Consultant bridge for [X months], then hire permanent replacement",
-            "    * Salary Range: [from ATLAS job market data, if available]",
-            "  - ATLAS Job Description Seed: [See Section 4 below]"
+            "    * Salary Range: [from WIDAI job market data, if available]",
+            "  - WIDAI Job Description Seed: [See Section 4 below]"
           ]
         },
         {
-          "section": "4. ATLAS Job Description Seeds",
+          "section": "4. WIDAI Job Description Seeds",
           "length": "varies by number of roles",
           "content": [
-            "For each critical hire, provide a starting job description sourced from ATLAS role definition",
+            "For each critical hire, provide a starting job description sourced from WIDAI role definition",
             "Each seed includes:",
-            "  - Role Title (ATLAS canonical title)",
+            "  - Role Title (WIDAI canonical title)",
             "  - Summary (1 paragraph describing the role and its impact)",
-            "  - Key Responsibilities (5-7 bullet points from ATLAS role definition)",
-            "  - Required KSAs (Knowledge, Skills, Abilities from ATLAS mapping)",
-            "  - Education / Experience Requirements (from ATLAS job market data)",
+            "  - Key Responsibilities (5-7 bullet points from WIDAI role definition)",
+            "  - Required KSAs (Knowledge, Skills, Abilities from WIDAI mapping)",
+            "  - Education / Experience Requirements (from WIDAI job market data)",
             "  - Certifications / Preferred Qualifications",
             "Note: These are seeds; hiring manager will customize for company-specific context",
             "Purpose: Save CHRO / recruiting team 2-3 hours per role description"
@@ -404,8 +404,8 @@
       "data_sources": [
         "Coverage scoring matrix (identifies gaps)",
         "Criticality assignments (prioritization)",
-        "ATLAS job market data (hiring timeline, scarcity, salary ranges)",
-        "ATLAS role definitions and KSA mappings (job description seeds)",
+        "WIDAI job market data (hiring timeline, scarcity, salary ranges)",
+        "WIDAI role definitions and KSA mappings (job description seeds)",
         "Value creation plan (context for criticality)",
         "Market research on tech talent scarcity (hiring timeline estimates)"
       ],
@@ -456,7 +456,7 @@
             "",
             "Profile Structure:",
             "  - Person Name: [Name]",
-            "  - Title / Primary Role: [Title, ATLAS Role]",
+            "  - Title / Primary Role: [Title, WIDAI Role]",
             "  - Years in Company: [X years]",
             "  - Years in Current Role: [X years]",
             "",
@@ -597,7 +597,7 @@
       "Physical: printed hardcopies for board presentation (optional)"
     ],
     "packaging_notes": [
-      "All deliverables are branded with ATLAS logo and methodology attribution",
+      "All deliverables are branded with WIDAI logo and methodology attribution",
       "Executive Summary is presentation-ready (can be printed as slides or read standalone)",
       "Workforce Capability Map org chart is printable as large poster (11x17 or A1 format)",
       "Key Person Risk Assessment is marked 'Confidential — for PE firm and integration team only'",
@@ -606,7 +606,7 @@
   },
   "post_delivery_follow_up": {
     "90_day_check_in": "Optional; assessor checks in with integration team to validate assessments, identify KSA gaps, adjust hiring roadmap based on actual candidate market conditions",
-    "assessment_refinement": "Feedback from first 2-3 assessments is used to refine scoring model, reference architectures, and ATLAS KSA definitions (Tier 1 roadmap item)"
+    "assessment_refinement": "Feedback from first 2-3 assessments is used to refine scoring model, reference architectures, and WIDAI KSA definitions (Tier 1 roadmap item)"
   },
   "important_notes": {
     "no_compensation_data": "This version of deliverables does NOT include workforce investment modeling (salary, benefits, hiring costs, Year 1-3 budget). Compensation analysis is a Phase 3+ add-on requiring Lightcast partnerships and is not in scope for the first assessment.",

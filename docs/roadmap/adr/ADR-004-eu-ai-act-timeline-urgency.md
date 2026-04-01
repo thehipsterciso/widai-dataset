@@ -32,9 +32,9 @@ Specifically:
 
 ## Rationale
 
-**Why not beachhead:** EU AI Act compliance has high urgency but lower cascading adoption than PE due diligence. One compliance engagement serves one organization's European operations. It does not cascade into portfolio-wide mandates. The compliance tool market is also crowded — ATLAS's differentiation (workforce role mapping) risks being absorbed as a feature of existing compliance platforms rather than establishing a standalone category.
+**Why not beachhead:** EU AI Act compliance has high urgency but lower cascading adoption than PE due diligence. One compliance engagement serves one organization's European operations. It does not cascade into portfolio-wide mandates. The compliance tool market is also crowded — WIDAI's differentiation (workforce role mapping) risks being absorbed as a feature of existing compliance platforms rather than establishing a standalone category.
 
-**Why urgent parallel, not deferred:** The August 2026 deadline is real and immovable. Organizations with EU operations are making compliance decisions now. If ATLAS's role mapping is not available before enforcement, the market window closes — not permanently, but the urgency-driven early adopters will have solved their problems with less rigorous approaches. The cost of missing this window is not fatal but is significant.
+**Why urgent parallel, not deferred:** The August 2026 deadline is real and immovable. Organizations with EU operations are making compliance decisions now. If WIDAI's role mapping is not available before enforcement, the market window closes — not permanently, but the urgency-driven early adopters will have solved their problems with less rigorous approaches. The cost of missing this window is not fatal but is significant.
 
 **Why the timeline works:** Tier 0 validation (2 weeks) + Tier 1 foundations (6 weeks) = Week 8. Tier 2 begins Week 9 with regulatory context fields already populated. R06 (obligation mapping) and R14 (practitioner validation) run for 8 weeks, producing a deliverable by Week 16 — approximately late July 2026, one week before August 2 enforcement.
 
@@ -46,7 +46,7 @@ This timeline is tight but not impossible because:
 
 ### Failure Mode F5 Is the Binding Constraint
 
-Pass 2 identified F5: "ATLAS is slower than enforcement." If the timeline slips beyond August 2026, UC2 loses its urgency premium. The decision to begin regulatory context work in Tier 1 (not Tier 2) is specifically designed to mitigate F5 by front-loading the foundational work.
+Pass 2 identified F5: "WIDAI is slower than enforcement." If the timeline slips beyond August 2026, UC2 loses its urgency premium. The decision to begin regulatory context work in Tier 1 (not Tier 2) is specifically designed to mitigate F5 by front-loading the foundational work.
 
 ### Regulatory Practitioner Validation Is Non-Negotiable
 
@@ -59,7 +59,7 @@ R14 (regulatory practitioner validation) is therefore a hard dependency for UC2 
 **Positive:**
 - Captures the urgency-driven early adopter market before enforcement
 - Regulatory context work benefits UC1 (PE assessments of regulated targets) and UC3 (model risk governance) simultaneously
-- Demonstrates ATLAS's cross-framework mapping capability — the feature no competitor provides
+- Demonstrates WIDAI's cross-framework mapping capability — the feature no competitor provides
 - Creates newsletter content with built-in urgency ("5 months to compliance — do you have the right people?")
 
 **Negative:**
@@ -73,8 +73,8 @@ R14 (regulatory practitioner validation) is therefore a hard dependency for UC2 
 
 ## References
 
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 1: UC2 analysis (August 2026 deadline, 8/27 member states ready)
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 2: F5, F6, F7 failure modes
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 3: CISO Persona B (regulatory validation requirement)
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 1: UC2 analysis (August 2026 deadline, 8/27 member states ready)
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 2: F5, F6, F7 failure modes
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 3: CISO Persona B (regulatory validation requirement)
 - Research Brief: EU AI Act Compliance Tooling (Credo AI, Vanta, OneTrust landscape)
 - EU AI Act enforcement timeline: Regulation (EU) 2024/1689, Article 113

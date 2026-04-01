@@ -5,7 +5,7 @@
   "atlas_version": "0.5.2",
   "assessment_date": "2026-03-31",
   "total_gap_signals": 6,
-  "note": "Gap signals are thematic clusters, not per-FDE. Multiple O*NET FDEs may point to the same underlying ATLAS gap. Per ADR-014, gaps are registered here and resolved during Phase 1D Synthesis — not during STRM execution.",
+  "note": "Gap signals are thematic clusters, not per-FDE. Multiple O*NET FDEs may point to the same underlying WIDAI gap. Per ADR-014, gaps are registered here and resolved during Phase 1D Synthesis — not during STRM execution.",
 
   "gaps": [
     {
@@ -21,10 +21,10 @@
       ],
       "domains_searched": ["LS", "AB", "OP"],
       "nearest_miss": "LS-S-006 (board presentations), AB-S-002 (analysis documentation)",
-      "description": "ATLAS defines multiple domain-specific communication skills (board presentations, analysis documentation, stakeholder engagement, AI documentation) but lacks foundational communication competencies as standalone KSAs. O*NET defines Reading Comprehension, Active Listening, Writing, and Speaking as distinct basic skills. ATLAS treats these as implicit prerequisites rather than explicit competencies.",
+      "description": "WIDAI defines multiple domain-specific communication skills (board presentations, analysis documentation, stakeholder engagement, AI documentation) but lacks foundational communication competencies as standalone KSAs. O*NET defines Reading Comprehension, Active Listening, Writing, and Speaking as distinct basic skills. WIDAI treats these as implicit prerequisites rather than explicit competencies.",
       "suggested_domain": "LS",
-      "authoring_guidance": "Consider whether ATLAS should define foundational communication abilities (e.g., 'Ability to communicate complex technical concepts clearly to non-technical audiences' or 'Ability to synthesize written information from diverse sources'). These would be cross-cutting abilities referenced by many roles. Counter-argument: these may be too foundational for a professional workforce framework — ATLAS defines what differentiates data/AI professionals, not general knowledge worker skills. Resolution deferred to synthesis.",
-      "synthesis_recommendation": "Evaluate whether other framework STRMs (DCWF, DDAT, SFIA) define communication competencies at a level appropriate for ATLAS. If multiple frameworks flag this, it strengthens the case for inclusion."
+      "authoring_guidance": "Consider whether WIDAI should define foundational communication abilities (e.g., 'Ability to communicate complex technical concepts clearly to non-technical audiences' or 'Ability to synthesize written information from diverse sources'). These would be cross-cutting abilities referenced by many roles. Counter-argument: these may be too foundational for a professional workforce framework — WIDAI defines what differentiates data/AI professionals, not general knowledge worker skills. Resolution deferred to synthesis.",
+      "synthesis_recommendation": "Evaluate whether other framework STRMs (DCWF, DDAT, SFIA) define communication competencies at a level appropriate for WIDAI. If multiple frameworks flag this, it strengthens the case for inclusion."
     },
     {
       "gap_id": "ONET-GAP-002",
@@ -36,7 +36,7 @@
       ],
       "domains_searched": ["LS", "OP", "AI", "AG"],
       "nearest_miss": "LS-S-010 (emerging technology evaluation), AG-A-004 (translating new research into policy)",
-      "description": "ATLAS covers specific expressions of continuous learning (evaluating emerging tech, translating new research) but lacks a standalone competency for professional knowledge currency — the discipline of maintaining current expertise in a rapidly evolving field. O*NET defines both 'Active Learning' (applying new information to decisions) and 'Updating and Using Relevant Knowledge' (keeping technically current).",
+      "description": "WIDAI covers specific expressions of continuous learning (evaluating emerging tech, translating new research) but lacks a standalone competency for professional knowledge currency — the discipline of maintaining current expertise in a rapidly evolving field. O*NET defines both 'Active Learning' (applying new information to decisions) and 'Updating and Using Relevant Knowledge' (keeping technically current).",
       "suggested_domain": "LS",
       "authoring_guidance": "Consider a KSA like 'Ability to maintain professional knowledge currency in data and AI through continuous learning, industry engagement, and systematic evaluation of emerging research and practice.' This would be an Ability in the LS domain, cross-cutting across all roles.",
       "synthesis_recommendation": "Strong candidate for inclusion if corroborated by NICE (which has continuous learning expectations for cyber roles) or DDAT/DCWF."
@@ -51,7 +51,7 @@
       ],
       "domains_searched": ["OP", "LS", "DQ"],
       "nearest_miss": "OP-K-005 (self-service platform design), DQ-A-004 (data product design)",
-      "description": "ATLAS covers service delivery mechanisms (self-service platforms, service catalogs, data products) but lacks a dispositional competency around internal customer/service orientation — the mindset of treating data consumers as customers. This is particularly relevant for data product management and DataOps roles.",
+      "description": "WIDAI covers service delivery mechanisms (self-service platforms, service catalogs, data products) but lacks a dispositional competency around internal customer/service orientation — the mindset of treating data consumers as customers. This is particularly relevant for data product management and DataOps roles.",
       "suggested_domain": "OP",
       "authoring_guidance": "Consider an Ability like 'Ability to orient data and AI service delivery around internal customer needs, proactively identifying pain points and measuring satisfaction.' Counter-argument: service orientation may be a leadership/cultural attribute rather than a measurable KSA. Evaluate whether data product management roles need this explicitly.",
       "synthesis_recommendation": "Low priority unless corroborated by Data Mesh principles or DAMA DMBOK service management concepts."
@@ -67,7 +67,7 @@
       ],
       "domains_searched": ["LS", "OP"],
       "nearest_miss": "LS-S-001 (multi-year strategy execution), OP-T-006 (pipeline orchestration scheduling)",
-      "description": "ATLAS covers strategic planning (LS-S-001) and technical scheduling (pipeline orchestration) but lacks explicit project management competencies — the skill of managing project timelines, dependencies, resource allocation, and delivery milestones for data/AI initiatives. This gap is notable because data/AI projects are notoriously difficult to scope and schedule.",
+      "description": "WIDAI covers strategic planning (LS-S-001) and technical scheduling (pipeline orchestration) but lacks explicit project management competencies — the skill of managing project timelines, dependencies, resource allocation, and delivery milestones for data/AI initiatives. This gap is notable because data/AI projects are notoriously difficult to scope and schedule.",
       "suggested_domain": "OP",
       "authoring_guidance": "Consider a Skill like 'Skill in managing data and AI project timelines, including work breakdown, dependency mapping, milestone tracking, risk-adjusted scheduling, and adaptive replanning for the inherent uncertainty of analytical and ML development work.' This would be particularly relevant for senior IC and management roles.",
       "synthesis_recommendation": "High priority. Project management for data/AI work has unique characteristics (non-linear progress, research uncertainty, data dependency). If DCWF or DDAT define project management competencies, this gap is confirmed."
@@ -81,7 +81,7 @@
       ],
       "domains_searched": ["LS"],
       "nearest_miss": "LS-S-003 (cross-functional coalition building), LS-S-005 (stakeholder engagement including resistance management)",
-      "description": "ATLAS covers negotiation within coalition building and resistance management within stakeholder engagement, but lacks an explicit conflict resolution competency. Data/AI leaders frequently mediate conflicts between business units over data ownership, priority access, and governance compliance.",
+      "description": "WIDAI covers negotiation within coalition building and resistance management within stakeholder engagement, but lacks an explicit conflict resolution competency. Data/AI leaders frequently mediate conflicts between business units over data ownership, priority access, and governance compliance.",
       "suggested_domain": "LS",
       "authoring_guidance": "Could be an Ability: 'Ability to mediate conflicts between organizational units regarding data ownership, access priority, governance compliance, and resource allocation, finding solutions that advance organizational data strategy while respecting departmental needs.' Alternatively, this may be adequately covered by existing stakeholder management KSAs.",
       "synthesis_recommendation": "Low priority as standalone. Evaluate whether DCWF or DDAT define conflict resolution explicitly for data roles."
@@ -97,10 +97,10 @@
       ],
       "domains_searched": ["AG", "RM"],
       "nearest_miss": "AG-K-004 (responsible AI principles), AG-A-002 (ethical trade-offs)",
-      "description": "ATLAS covers applied AI ethics (fairness metrics, governance frameworks, trade-off navigation) but the O*NET mapping reveals that the foundational disciplines informing AI ethics — philosophy (ethical reasoning), psychology (human cognition and bias), sociology (group dynamics and societal impact) — have only weak intersections with ATLAS. ATLAS assumes the ethical reasoning foundations rather than defining them. This may be appropriate for a professional workforce framework, or it may indicate that ATLAS should define the foundational ethical literacy expected of AI governance practitioners.",
+      "description": "WIDAI covers applied AI ethics (fairness metrics, governance frameworks, trade-off navigation) but the O*NET mapping reveals that the foundational disciplines informing AI ethics — philosophy (ethical reasoning), psychology (human cognition and bias), sociology (group dynamics and societal impact) — have only weak intersections with WIDAI. WIDAI assumes the ethical reasoning foundations rather than defining them. This may be appropriate for a professional workforce framework, or it may indicate that WIDAI should define the foundational ethical literacy expected of AI governance practitioners.",
       "suggested_domain": "AG",
       "authoring_guidance": "Consider whether AG domain should include a Knowledge KSA like 'Knowledge of ethical reasoning frameworks (consequentialism, deontology, virtue ethics, care ethics) as foundations for navigating AI ethics decisions that cannot be resolved by technical fairness metrics alone.' This is relevant for senior governance roles but may be over-specified for engineering roles.",
-      "synthesis_recommendation": "Evaluate against EU AI Act STRM (which requires AI literacy and ethical reasoning) and NIST AI RMF. If regulatory frameworks expect ethical reasoning foundations, ATLAS should define them."
+      "synthesis_recommendation": "Evaluate against EU AI Act STRM (which requires AI literacy and ethical reasoning) and NIST AI RMF. If regulatory frameworks expect ethical reasoning foundations, WIDAI should define them."
     }
   ]
 }

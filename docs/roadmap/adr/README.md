@@ -1,16 +1,16 @@
-# ATLAS Architectural Decision Records
+# WIDAI Architectural Decision Records
 
 **Date:** 2026-03-26
 **Author:** Thomas Jones / The Hipster CISO
-**Source:** Ensemble Brainstorm — Five-Pass Algorithm for Strategic Thinking, applied to ATLAS roadmap
+**Source:** Ensemble Brainstorm — Five-Pass Algorithm for Strategic Thinking, applied to WIDAI roadmap
 
 ---
 
 ## What This Is
 
-These Architectural Decision Records document the reasoning behind every major roadmap decision for the ATLAS project. Each ADR captures: what was decided, why, what alternatives were considered, and what the consequences are — including risks the decision creates.
+These Architectural Decision Records document the reasoning behind every major roadmap decision for the WIDAI project. Each ADR captures: what was decided, why, what alternatives were considered, and what the consequences are — including risks the decision creates.
 
-The ADRs are derived from a systematic five-pass analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping) conducted against ATLAS's six priority use cases, supported by five parallel research briefs covering PE due diligence, EU AI Act compliance, model risk governance, agentic AI workforce design, and competitive taxonomy landscape.
+The ADRs are derived from a systematic five-pass analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping) conducted against WIDAI's six priority use cases, supported by five parallel research briefs covering PE due diligence, EU AI Act compliance, model risk governance, agentic AI workforce design, and competitive taxonomy landscape.
 
 **Status:** ADRs 001–010 are Proposed (pre-Phase 0). ADRs 011–015 are Accepted and executed.
 

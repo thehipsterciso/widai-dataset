@@ -1,4 +1,4 @@
-name: Validate ATLAS Dataset
+name: Validate WIDAI Dataset
 
 on:
   push:
@@ -19,5 +19,5 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run ATLAS validation
+      - name: Run WIDAI validation
         run: python scripts/validate.py

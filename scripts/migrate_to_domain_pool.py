@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ATLAS KSA Migration: Role-Centric → Shared Domain Pool
+WIDAI KSA Migration: Role-Centric → Shared Domain Pool
 
 Implements ADR-013. Reads all existing category-based KSA files, deduplicates,
 assigns each KSA to a knowledge domain, generates new role-independent IDs,
@@ -281,7 +281,7 @@ def load_all_ksas():
                 ksas[kid] = {
                     "type": ksa.get("type", "Unknown"),
                     "statement": ksa.get("statement", ""),
-                    "origin_framework": ksa.get("origin_framework", "ATLAS"),
+                    "origin_framework": ksa.get("origin_framework", "WIDAI"),
                     "origin_version": ksa.get("origin_version", "0.3.0"),
                     "source_file": os.path.basename(fp),
                 }
@@ -312,7 +312,7 @@ def load_all_mappings():
 def run_migration(dry_run=False):
     """Execute the full migration."""
     print("\n" + "=" * 70)
-    print("ATLAS KSA MIGRATION: Role-Centric → Shared Domain Pool")
+    print("WIDAI KSA MIGRATION: Role-Centric → Shared Domain Pool")
     print("=" * 70)
     print(f"\nADR-013 implementation — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print(f"Mode: {'DRY RUN' if dry_run else 'LIVE'}\n")
@@ -458,7 +458,7 @@ def run_migration(dry_run=False):
                 type_counts[k["type"]] += 1
 
             pool_file = {
-                "dataset_id": "ATLAS-KSAS",
+                "dataset_id": "WIDAI-KSAS",
                 "domain_code": domain_code,
                 "domain_title": DOMAINS[domain_code],
                 "ksa_count": len(ksas_list),
@@ -559,7 +559,7 @@ def run_migration(dry_run=False):
                     unique_rels.append(r)
 
             mapping_file = {
-                "dataset_id": "ATLAS-ROLE-KSA-MAP",
+                "dataset_id": "WIDAI-ROLE-KSA-MAP",
                 "category_code": cat,
                 "relationship_count": len(unique_rels),
                 "schema_version": "2.0.0",

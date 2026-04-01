@@ -1,16 +1,16 @@
 # CDAIO Domain Master Role Inventory and Gap Analysis
 
-**The ATLAS v0.3.0 framework captures roughly 40% of the roles found across 50+ workforce frameworks, standards, and market sources.** Research across NIST NICE, DAMA DMBOK, DCAM, DCWF, O\*NET/BLS SOC, EU AI Act, ISO/IEC 42001, UK DDaT, Gartner, McKinsey, and dozens of practitioner communities identifies **187 distinct role functions** that fall within or adjacent to the Chief Data and AI Officer organizational domain. ATLAS currently defines 34 named roles across 8 work role categories — this analysis identifies **112 additional role functions** not yet represented, spanning VP/Director leadership layers, data mesh domain roles, GenAI/LLMOps operations, model risk management, and AI safety specializations. The most critical structural gap is the absence of a middle-management leadership layer (VP/Director) between the C-suite and individual contributors.
+**The WIDAI v0.3.0 framework captures roughly 40% of the roles found across 50+ workforce frameworks, standards, and market sources.** Research across NIST NICE, DAMA DMBOK, DCAM, DCWF, O\*NET/BLS SOC, EU AI Act, ISO/IEC 42001, UK DDaT, Gartner, McKinsey, and dozens of practitioner communities identifies **187 distinct role functions** that fall within or adjacent to the Chief Data and AI Officer organizational domain. WIDAI currently defines 34 named roles across 8 work role categories — this analysis identifies **112 additional role functions** not yet represented, spanning VP/Director leadership layers, data mesh domain roles, GenAI/LLMOps operations, model risk management, and AI safety specializations. The most critical structural gap is the absence of a middle-management leadership layer (VP/Director) between the C-suite and individual contributors.
 
 ---
 
 ## 1. Complete master inventory of all roles by functional category
 
-The following inventory consolidates every distinct role function identified across all researched frameworks. Each role lists its primary source attribution(s), seniority band, and whether it exists in ATLAS v0.3.0.
+The following inventory consolidates every distinct role function identified across all researched frameworks. Each role lists its primary source attribution(s), seniority band, and whether it exists in WIDAI v0.3.0.
 
 ### GOV — Governance, strategy, and executive leadership
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
 | 1 | Chief Data and AI Officer | CDAIO, CDAO, Pioneer CDAx | Gartner, HBR (Gopal/Davenport/Bean 2025), CDO Magazine | C-Suite | ✅ WRC-01 |
 | 2 | Chief Data Officer | CDO | Evidence Act (44 USC §3520A), DAMA, Gartner, Deloitte | C-Suite | ✅ WRC-01 |
@@ -40,7 +40,7 @@ The following inventory consolidates every distinct role function identified acr
 
 ### ENG — Engineering, architecture, and platform
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
 | 26 | Data Architect | Enterprise Data Architect, Solution Data Architect | DAMA DMBOK Ch.4, O\*NET 15-1243, DCWF 653, UK DDaT | Mid–Senior | ✅ WRC-02 |
 | 27 | AI/ML Platform Architect | ML Infrastructure Architect | Gartner, AWS ML Lens | Senior | ✅ WRC-02 |
@@ -70,7 +70,7 @@ The following inventory consolidates every distinct role function identified acr
 
 ### DEV — Data science, ML, and AI development
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
 | 51 | Data Scientist | Applied Data Scientist, Research Data Scientist | O\*NET 15-2051, BLS (36% growth), DCWF 423, all frameworks | IC–Senior | ✅ WRC-03 |
 | 52 | ML Engineer | Applied ML Engineer | Aura (most in-demand), LinkedIn, AWS ML Lens | IC–Senior | ✅ WRC-03 |
@@ -90,13 +90,13 @@ The following inventory consolidates every distinct role function identified acr
 
 ### DSM — Data stewardship, quality, and management
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
-| 66 | Data Quality Manager | DQ Program Lead | DAMA DMBOK Ch.13, DCAM Cap 5, ATLAS | Manager | ✅ WRC-04 |
-| 67 | Master Data Manager | MDM Lead, Reference Data Manager | DAMA DMBOK Ch.10, ATLAS | Manager | ✅ WRC-04 |
-| 68 | Metadata Manager | Metadata Administrator | DAMA DMBOK Ch.12, Gartner, ATLAS | Manager | ✅ WRC-04 |
-| 69 | Data Privacy Specialist | Data Privacy Analyst | IAPP, ATLAS | IC–Mid | ✅ WRC-04 |
-| 70 | Data Product Manager | Data Product Owner | TDWI 2022, Forrester, Data Mesh arch., ATLAS | Manager/Dir | ✅ WRC-04 |
+| 66 | Data Quality Manager | DQ Program Lead | DAMA DMBOK Ch.13, DCAM Cap 5, WIDAI | Manager | ✅ WRC-04 |
+| 67 | Master Data Manager | MDM Lead, Reference Data Manager | DAMA DMBOK Ch.10, WIDAI | Manager | ✅ WRC-04 |
+| 68 | Metadata Manager | Metadata Administrator | DAMA DMBOK Ch.12, Gartner, WIDAI | Manager | ✅ WRC-04 |
+| 69 | Data Privacy Specialist | Data Privacy Analyst | IAPP, WIDAI | IC–Mid | ✅ WRC-04 |
+| 70 | Data Product Manager | Data Product Owner | TDWI 2022, Forrester, Data Mesh arch., WIDAI | Manager/Dir | ✅ WRC-04 |
 | 71 | Data Quality Analyst | DQ Specialist, Data Profiling Specialist | DAMA DMBOK, CMMI DMM, Monte Carlo | IC–Mid | ❌ |
 | 72 | Data Catalog Manager | Data Discovery Lead | DAMA DMBOK Ch.12, CDMC Comp 2 | Mid | ❌ |
 | 73 | Data Classification Specialist | Data Sensitivity Analyst | CDMC Comp 2 | Mid | ❌ |
@@ -116,7 +116,7 @@ The following inventory consolidates every distinct role function identified acr
 
 ### ANL — Analytics, BI, and insight
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
 | 87 | Data Analyst | Marketing/Financial/Healthcare Data Analyst | O\*NET 15-2051.01, UK DDaT, DCWF 422, all frameworks | IC–Senior | ✅ WRC-05 |
 | 88 | Senior Data Analyst | Principal Data Analyst | UK DDaT, BLS SOC | Senior | ✅ WRC-05 |
@@ -135,12 +135,12 @@ The following inventory consolidates every distinct role function identified acr
 
 ### RSK — Risk, ethics, safety, compliance, and audit
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
-| 101 | AI Risk and Ethics Specialist | Responsible AI Lead | NIST AI RMF, DCWF 733, ATLAS | Mid–Senior | ✅ WRC-06 |
-| 102 | AI Security Specialist | AI Cybersecurity Analyst | NICE competency area, ATLAS | Mid–Senior | ✅ WRC-06 |
-| 103 | AI Test and Evaluation Specialist | TEVV Specialist | NIST AI RMF, DCWF 672, ATLAS | Mid–Senior | ✅ WRC-06 |
-| 104 | Data Compliance Analyst | Data Compliance Officer | O\*NET 13-1041, ATLAS | IC–Mid | ✅ WRC-06 |
+| 101 | AI Risk and Ethics Specialist | Responsible AI Lead | NIST AI RMF, DCWF 733, WIDAI | Mid–Senior | ✅ WRC-06 |
+| 102 | AI Security Specialist | AI Cybersecurity Analyst | NICE competency area, WIDAI | Mid–Senior | ✅ WRC-06 |
+| 103 | AI Test and Evaluation Specialist | TEVV Specialist | NIST AI RMF, DCWF 672, WIDAI | Mid–Senior | ✅ WRC-06 |
+| 104 | Data Compliance Analyst | Data Compliance Officer | O\*NET 13-1041, WIDAI | IC–Mid | ✅ WRC-06 |
 | 105 | AI Red Team Lead | AI Red Teamer, Adversarial ML Specialist | NIST AI RMF, White House EO, Microsoft AI Red Team, EU AI Act | Mid–Senior | ❌ |
 | 106 | AI Incident Response Manager | AI Safety Officer | Industry practice, analogous to cyber IR | Mid–Senior | ❌ |
 | 107 | AI Auditor | AI/ML Auditor, Advanced AI Auditor | ISACA AAIA (2024), IIA AI Auditing Framework, AICPA | Mid–Senior | ❌ |
@@ -164,12 +164,12 @@ The following inventory consolidates every distinct role function identified acr
 
 ### OPS — Operations, programs, adoption, and enablement
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
-| 125 | Data and AI Program Manager | AI/ML Project Manager | O\*NET 13-1082, 15-1299.09, ATLAS | Manager | ✅ WRC-07 |
-| 126 | Data and AI Adoption Specialist | — | DCWF 753, ATLAS | Mid | ✅ WRC-07 |
-| 127 | Data and AI Literacy Trainer | Data Literacy Lead | EU AI Act Art 4, ATLAS | Mid | ✅ WRC-07 |
-| 128 | Data Operations Specialist | — | DCWF 624, ATLAS | Mid | ✅ WRC-07 |
+| 125 | Data and AI Program Manager | AI/ML Project Manager | O\*NET 13-1082, 15-1299.09, WIDAI | Manager | ✅ WRC-07 |
+| 126 | Data and AI Adoption Specialist | — | DCWF 753, WIDAI | Mid | ✅ WRC-07 |
+| 127 | Data and AI Literacy Trainer | Data Literacy Lead | EU AI Act Art 4, WIDAI | Mid | ✅ WRC-07 |
+| 128 | Data Operations Specialist | — | DCWF 624, WIDAI | Mid | ✅ WRC-07 |
 | 129 | Analytics Translator | Data Translator, Business Translator, Data Evangelist | McKinsey HBR 2018, Gartner, DATAVERSITY | Mid–Senior | ❌ |
 | 130 | Data Evangelist | Data Advocate, Data Champion | Emory/LinkedIn Learning, CDO Magazine, MIT Sloan | Mid | ❌ |
 | 131 | AI Adoption/Change Manager | Data Mesh Change Agent, AI Transformation Manager | InTechHouse, agility-at-scale.com | Manager | ❌ |
@@ -184,12 +184,12 @@ The following inventory consolidates every distinct role function identified acr
 
 ### LDR — Strategic leadership, research, and transformation
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
-| 140 | Data and AI Transformation Lead | — | ATLAS | Senior/Dir | ✅ WRC-08 |
-| 141 | Data and AI Research Scientist | — | ATLAS | Senior | ✅ WRC-08 |
-| 142 | AI Innovation Lead | — | DCWF 902, ATLAS | Senior/Dir | ✅ WRC-08 |
-| 143 | Data and AI Strategy Consultant | — | ATLAS | Senior | ✅ WRC-08 |
+| 140 | Data and AI Transformation Lead | — | WIDAI | Senior/Dir | ✅ WRC-08 |
+| 141 | Data and AI Research Scientist | — | WIDAI | Senior | ✅ WRC-08 |
+| 142 | AI Innovation Lead | — | DCWF 902, WIDAI | Senior/Dir | ✅ WRC-08 |
+| 143 | Data and AI Strategy Consultant | — | WIDAI | Senior | ✅ WRC-08 |
 | 144 | VP Data Engineering | Head of Data Engineering | Gartner, Deloitte, LinkedIn, job market | VP | ❌ |
 | 145 | VP Data Science | Head of Data Science | Gartner, LinkedIn, all major firms | VP | ❌ |
 | 146 | VP Analytics | Head of Analytics, VP BI | Gartner, Deloitte | VP | ❌ |
@@ -220,7 +220,7 @@ The following inventory consolidates every distinct role function identified acr
 
 ### Regulatory and value-chain roles (EU AI Act and standards)
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
 | 171 | AI Provider Compliance Lead | — | EU AI Act Art 16-21 | Senior | ❌ |
 | 172 | AI Deployer Compliance Lead | Human Oversight Specialist | EU AI Act Art 26 | Senior | ❌ |
@@ -233,7 +233,7 @@ The following inventory consolidates every distinct role function identified acr
 
 ### Additional niche and industry-specific roles
 
-| # | Role Function | Key Variants | Primary Sources | Seniority | In ATLAS? |
+| # | Role Function | Key Variants | Primary Sources | Seniority | In WIDAI? |
 |---|---|---|---|---|---|
 | 179 | Clinical AI Specialist | Medical Imaging Engineer | Healthcare industry, FDA SaMD | Mid–Senior | ❌ |
 | 180 | Algorithmic Trading Engineer | Quantitative Developer | Financial services, O\*NET 13-2099.01 | Mid–Senior | ❌ |
@@ -247,41 +247,41 @@ The following inventory consolidates every distinct role function identified acr
 
 ---
 
-## 2. Gap analysis: roles present in frameworks but absent from ATLAS v0.3.0
+## 2. Gap analysis: roles present in frameworks but absent from WIDAI v0.3.0
 
-ATLAS v0.3.0 contains **34 named roles** across 8 categories. This research identifies **153 additional role functions** not currently represented. The gaps cluster into **seven critical themes** ranked by urgency.
+WIDAI v0.3.0 contains **34 named roles** across 8 categories. This research identifies **153 additional role functions** not currently represented. The gaps cluster into **seven critical themes** ranked by urgency.
 
 ### Gap Theme 1 — The missing VP/Director leadership layer is the single largest structural gap
 
-ATLAS jumps from C-suite executives (WRC-01 GOV) directly to individual contributor and manager-level roles. Every major framework and all industry analyst models (Gartner, Deloitte, McKinsey) document a **VP and Director layer** that provides functional leadership between the CDAIO and working teams. At minimum, **9 VP-level and 10 Director-level standard titles** exist in the market. This layer is essential for any organization beyond startup stage. Recommended additions include VP Data Engineering, VP Data Science, VP Analytics, VP Data Governance, VP AI/ML, Deputy CDO, Chief of Staff to CDAIO, and corresponding Director-level roles.
+WIDAI jumps from C-suite executives (WRC-01 GOV) directly to individual contributor and manager-level roles. Every major framework and all industry analyst models (Gartner, Deloitte, McKinsey) document a **VP and Director layer** that provides functional leadership between the CDAIO and working teams. At minimum, **9 VP-level and 10 Director-level standard titles** exist in the market. This layer is essential for any organization beyond startup stage. Recommended additions include VP Data Engineering, VP Data Science, VP Analytics, VP Data Governance, VP AI/ML, Deputy CDO, Chief of Staff to CDAIO, and corresponding Director-level roles.
 
 ### Gap Theme 2 — Model risk management roles are entirely absent
 
-The Federal Reserve's SR 11-7 guidance (applicable to all supervised financial institutions and increasingly adopted by non-financial enterprises for AI governance) creates an entire organizational structure with **6 distinct roles**: Model Risk Manager, Model Validator, Model Owner, Model Developer (as a governance designation), Model Governance Analyst, and Model Risk Committee member. None appear in ATLAS. Given the convergence of model risk management and AI governance, these roles are critical for the RSK category.
+The Federal Reserve's SR 11-7 guidance (applicable to all supervised financial institutions and increasingly adopted by non-financial enterprises for AI governance) creates an entire organizational structure with **6 distinct roles**: Model Risk Manager, Model Validator, Model Owner, Model Developer (as a governance designation), Model Governance Analyst, and Model Risk Committee member. None appear in WIDAI. Given the convergence of model risk management and AI governance, these roles are critical for the RSK category.
 
 ### Gap Theme 3 — Data mesh domain roles need dedicated representation
 
-Data mesh adoption is growing (**40% faster time-to-market** for data products per Gartner 2024). The framework creates roles that do not map cleanly to existing ATLAS categories: Domain Data Owner, Domain Data Product Owner, Self-Serve Data Platform Engineer, Data Enabling Team Coach, Federated Governance Representative, and Data Mesh Change Manager. These span GOV, ENG, DSM, and OPS categories.
+Data mesh adoption is growing (**40% faster time-to-market** for data products per Gartner 2024). The framework creates roles that do not map cleanly to existing WIDAI categories: Domain Data Owner, Domain Data Product Owner, Self-Serve Data Platform Engineer, Data Enabling Team Coach, Federated Governance Representative, and Data Mesh Change Manager. These span GOV, ENG, DSM, and OPS categories.
 
 ### Gap Theme 4 — GenAI/LLMOps and agentic AI roles are unrepresented
 
-The fastest-growing job titles in the market — Prompt Engineer (+135.8%), Generative AI Engineer, Context Engineer, LLMOps Engineer, FMOps Engineer, RLHF Specialist, RAG Engineer, AI Agent Developer — have no ATLAS analogs. The ENG and DEV categories need GenAI-specific additions.
+The fastest-growing job titles in the market — Prompt Engineer (+135.8%), Generative AI Engineer, Context Engineer, LLMOps Engineer, FMOps Engineer, RLHF Specialist, RAG Engineer, AI Agent Developer — have no WIDAI analogs. The ENG and DEV categories need GenAI-specific additions.
 
 ### Gap Theme 5 — Privacy, audit, and compliance roles at the CDAIO boundary
 
-ATLAS includes Data Privacy Specialist and Data Compliance Analyst but misses the broader ecosystem: **Data Protection Officer** (legally mandated under GDPR), **Privacy Engineer** (IAPP CIPT), **AI Auditor** (ISACA AAIA 2024), **AI Governance Professional** (IAPP AIGP 2024), and the **AI Red Team Lead** (mandated by EU AI Act and White House EO for high-risk systems). These are distinct from existing RSK roles.
+WIDAI includes Data Privacy Specialist and Data Compliance Analyst but misses the broader ecosystem: **Data Protection Officer** (legally mandated under GDPR), **Privacy Engineer** (IAPP CIPT), **AI Auditor** (ISACA AAIA 2024), **AI Governance Professional** (IAPP AIGP 2024), and the **AI Red Team Lead** (mandated by EU AI Act and White House EO for high-risk systems). These are distinct from existing RSK roles.
 
 ### Gap Theme 6 — Data management operational roles from DAMA DMBOK
 
-DAMA DMBOK defines ~120 roles across 11 knowledge areas. ATLAS captures the top-level managers but misses important operational roles: **Data Quality Analyst**, **Data Catalog Manager**, **Data Lineage Analyst**, **Data Classification Specialist**, **Business Glossary Manager**, **Records Manager**, **Knowledge Manager**, **Data Lifecycle Manager**, and the hierarchical stewardship model (Executive, Coordinating, Business, and Technical Data Steward variants).
+DAMA DMBOK defines ~120 roles across 11 knowledge areas. WIDAI captures the top-level managers but misses important operational roles: **Data Quality Analyst**, **Data Catalog Manager**, **Data Lineage Analyst**, **Data Classification Specialist**, **Business Glossary Manager**, **Records Manager**, **Knowledge Manager**, **Data Lifecycle Manager**, and the hierarchical stewardship model (Executive, Coordinating, Business, and Technical Data Steward variants).
 
 ### Gap Theme 7 — Emerging cross-functional and enablement roles
 
 Several roles that bridge data/AI teams and the rest of the organization are absent: **Analytics Translator / Data Translator** (McKinsey), **Citizen Data Scientist** (Gartner), **Data Evangelist**, **AI UX Designer**, **Decision Scientist** (Google), **Conversational AI Designer**, **AI Supervisor/Agent Coordinator** (McKinsey Agentic Org 2025), and **Forward-Deployed Engineer**.
 
-### Summary of gap counts by ATLAS category
+### Summary of gap counts by WIDAI category
 
-| ATLAS Category | Current Roles | Gaps Identified | Priority Additions |
+| WIDAI Category | Current Roles | Gaps Identified | Priority Additions |
 |---|---|---|---|
 | WRC-01 GOV | 6 | ~20 | Data Owner, DPO, AI Governance Professional, Executive Data Steward, Federated Governance Rep |
 | WRC-02 ENG | 5 | ~20 | MLOps Engineer, DataOps Engineer, Data Reliability Engineer, LLMOps Engineer, Knowledge Graph Engineer, DBA |
@@ -383,17 +383,17 @@ Central CDAIO Org                     Domain Teams (per BU)
 
 Many titles refer to essentially the same function with only branding, seniority, or contextual differences. The following groups consolidate common variants.
 
-**Data pipeline and infrastructure building**: Data Engineer, ETL Developer, ELT Engineer, Data Pipeline Engineer, Data Integration Engineer, Big Data Engineer, Cloud Data Engineer, and Streaming Data Engineer all describe the same core function of building and maintaining data pipelines. **ATLAS correctly uses "Data Engineer"** as the canonical title.
+**Data pipeline and infrastructure building**: Data Engineer, ETL Developer, ELT Engineer, Data Pipeline Engineer, Data Integration Engineer, Big Data Engineer, Cloud Data Engineer, and Streaming Data Engineer all describe the same core function of building and maintaining data pipelines. **WIDAI correctly uses "Data Engineer"** as the canonical title.
 
 **ML model operationalization**: MLOps Engineer, ML Operations Engineer, ML Deployment Engineer, ML Platform Engineer, and AIOps Engineer all center on deploying, monitoring, and managing ML models in production. MLOps Engineer is the most common title and should be canonical. This is **distinct from ML Engineer** (who builds models) and from **DataOps Engineer** (who focuses on data pipelines).
 
-**Data analysis and reporting**: Data Analyst, Business Analyst, Reporting Analyst, Insights Analyst, Product Analyst, and BI Analyst all perform data interpretation and visualization. In practice, **Data Analyst and BI Analyst/Developer** represent two ends of a spectrum (exploratory analysis vs. report/dashboard building). ATLAS correctly separates these.
+**Data analysis and reporting**: Data Analyst, Business Analyst, Reporting Analyst, Insights Analyst, Product Analyst, and BI Analyst all perform data interpretation and visualization. In practice, **Data Analyst and BI Analyst/Developer** represent two ends of a spectrum (exploratory analysis vs. report/dashboard building). WIDAI correctly separates these.
 
-**AI/ML model building**: ML Engineer, AI Engineer, Deep Learning Engineer, and Applied Scientist overlap substantially. The market is converging on **ML Engineer** for model-focused work and **AI Engineer** for broader AI application building including GenAI. ATLAS correctly lists both.
+**AI/ML model building**: ML Engineer, AI Engineer, Deep Learning Engineer, and Applied Scientist overlap substantially. The market is converging on **ML Engineer** for model-focused work and **AI Engineer** for broader AI application building including GenAI. WIDAI correctly lists both.
 
-**Data governance enforcement**: Data Steward, Data Custodian, Business Data Steward, Technical Data Steward, and Domain Data Steward are all variants of the stewardship function distinguished by scope (domain vs. enterprise) and orientation (business vs. technical). ATLAS uses "Data Steward" but should consider distinguishing **Executive/Coordinating Data Steward** at the senior level from **Business/Technical Data Steward** at the operational level, as DAMA DMBOK does.
+**Data governance enforcement**: Data Steward, Data Custodian, Business Data Steward, Technical Data Steward, and Domain Data Steward are all variants of the stewardship function distinguished by scope (domain vs. enterprise) and orientation (business vs. technical). WIDAI uses "Data Steward" but should consider distinguishing **Executive/Coordinating Data Steward** at the senior level from **Business/Technical Data Steward** at the operational level, as DAMA DMBOK does.
 
-**AI ethics and responsibility**: AI Risk and Ethics Specialist, Responsible AI Lead, AI Ethicist, AI Ethics Officer, AI Governance Professional, and AI Fairness Lead describe overlapping but distinct functions. The core distinction is between **risk assessment** (evaluating AI systems) and **governance program management** (designing organizational processes). ATLAS should retain the current AI Risk and Ethics Specialist and add an AI Governance Professional for the programmatic dimension.
+**AI ethics and responsibility**: AI Risk and Ethics Specialist, Responsible AI Lead, AI Ethicist, AI Ethics Officer, AI Governance Professional, and AI Fairness Lead describe overlapping but distinct functions. The core distinction is between **risk assessment** (evaluating AI systems) and **governance program management** (designing organizational processes). WIDAI should retain the current AI Risk and Ethics Specialist and add an AI Governance Professional for the programmatic dimension.
 
 **Translation and evangelism**: Analytics Translator, Data Translator, Business Translator, Data Evangelist, and Data Advocate all bridge data teams and business stakeholders. McKinsey coined "Analytics Translator" in 2018, and the role has been debated as standalone vs. a skill set. These can be consolidated under **Analytics Translator / Data Evangelist** as a single role function.
 
@@ -425,14 +425,14 @@ The following roles have appeared or gained significant market traction since 20
 
 ---
 
-## Conclusion: strategic priorities for extending ATLAS
+## Conclusion: strategic priorities for extending WIDAI
 
-This research confirms that the CDAIO organizational domain is significantly broader and more layered than ATLAS v0.3.0 currently represents. Three strategic priorities emerge for the framework's extension.
+This research confirms that the CDAIO organizational domain is significantly broader and more layered than WIDAI v0.3.0 currently represents. Three strategic priorities emerge for the framework's extension.
 
-**First, add the VP/Director leadership taxonomy.** This is non-negotiable for organizational relevance. Every enterprise of meaningful scale has this layer, and its absence makes ATLAS incomplete for organizational design purposes. A new **WRC-09 MGL (Management and Governance Leadership)** category — or expansion of WRC-08 LDR — should accommodate 9 VP-level and 10+ Director-level standardized titles.
+**First, add the VP/Director leadership taxonomy.** This is non-negotiable for organizational relevance. Every enterprise of meaningful scale has this layer, and its absence makes WIDAI incomplete for organizational design purposes. A new **WRC-09 MGL (Management and Governance Leadership)** category — or expansion of WRC-08 LDR — should accommodate 9 VP-level and 10+ Director-level standardized titles.
 
 **Second, add dedicated categories for model risk management and AI safety.** The convergence of financial model risk management (SR 11-7), AI governance (ISO 42001), and emerging regulation (EU AI Act) creates a distinct professional domain with its own career ladder: Model Governance Analyst → Model Validator → Model Risk Manager → Head of MRM. Similarly, AI red teaming and AI safety research represent a growing specialization within WRC-06 RSK.
 
-**Third, add GenAI and agentic AI operational roles.** The GenAI revolution has created genuinely new engineering functions (Context Engineer, LLMOps/FMOps Engineer, RAG Engineer) and operational roles (AI Trainer, AI Agent Orchestrator) that do not map to existing ATLAS categories. These are not passing trends — they reflect fundamental shifts in how AI systems are built and operated, with dedicated infrastructure, tooling, and career paths now established.
+**Third, add GenAI and agentic AI operational roles.** The GenAI revolution has created genuinely new engineering functions (Context Engineer, LLMOps/FMOps Engineer, RAG Engineer) and operational roles (AI Trainer, AI Agent Orchestrator) that do not map to existing WIDAI categories. These are not passing trends — they reflect fundamental shifts in how AI systems are built and operated, with dedicated infrastructure, tooling, and career paths now established.
 
-Beyond these priorities, extending coverage to include DAMA DMBOK operational roles, data mesh domain roles, ISO/regulatory compliance roles, and cross-functional enablement roles (Analytics Translator, Decision Scientist, Citizen Data Scientist) would bring ATLAS to approximately **95% coverage** of the roles identified across all 50+ frameworks and sources researched. The remaining 5% consists of highly niche, industry-specific, or very early-stage roles that may warrant a "watch list" rather than immediate inclusion.
+Beyond these priorities, extending coverage to include DAMA DMBOK operational roles, data mesh domain roles, ISO/regulatory compliance roles, and cross-functional enablement roles (Analytics Translator, Decision Scientist, Citizen Data Scientist) would bring WIDAI to approximately **95% coverage** of the roles identified across all 50+ frameworks and sources researched. The remaining 5% consists of highly niche, industry-specific, or very early-stage roles that may warrant a "watch list" rather than immediate inclusion.

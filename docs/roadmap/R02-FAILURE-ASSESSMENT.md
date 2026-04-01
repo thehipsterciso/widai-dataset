@@ -15,7 +15,7 @@ This produced a passing score (4.26/5) on a fundamentally incomplete test. The p
 
 **The numbers tell the story:**
 
-| Metric | ATLAS (Current) | NICE Framework v2.1.0 | Gap Factor |
+| Metric | WIDAI (Current) | NICE Framework v2.1.0 | Gap Factor |
 |--------|-----------------|----------------------|------------|
 | Mean KSAs per role | 8.95 | ~133 | **14.9x** |
 | Median KSAs per role | 9 | ~130 | **14.4x** |
@@ -33,7 +33,7 @@ This produced a passing score (4.26/5) on a fundamentally incomplete test. The p
 | Cybersecurity Policy and Planning (OG-WRL-002) | 25 | 34 | 9 | **68** |
 | **Mean** | **38.3** | **72.8** | **22.3** | **133.3** |
 
-ATLAS roles are operating at **6.7% of industry-standard depth**. This is not a calibration issue. It is an order of magnitude failure.
+WIDAI roles are operating at **6.7% of industry-standard depth**. This is not a calibration issue. It is an order of magnitude failure.
 
 ---
 
@@ -47,7 +47,7 @@ R02 should have also asked: "Does the AI-assisted workflow produce sufficient KS
 
 The test scored 5 AI-authored roles on statement clarity, specificity, assessability, and framework grounding. Average: 4.26/5. But the test roles only had 8-9 KSAs each. The test validated that those 8-9 statements were good. It never asked whether 8-9 was enough.
 
-**Why this happened:** The test was designed against the existing ATLAS reference set (37 roles, average ~8.7 KSAs). The reference set itself was never benchmarked against external frameworks. R02 graded on a curve — comparing AI output to ATLAS's own thin standard rather than to the industry standard the dataset claims to rival.
+**Why this happened:** The test was designed against the existing WIDAI reference set (37 roles, average ~8.7 KSAs). The reference set itself was never benchmarked against external frameworks. R02 graded on a curve — comparing AI output to WIDAI's own thin standard rather than to the industry standard the dataset claims to rival.
 
 ### 2. ADR-005 — Quality Gates Without Depth Gates
 
@@ -104,7 +104,7 @@ The R04 PE Assessment Scoring Model defines a Coverage dimension that measures "
 
 ### Structural (Prevent Recurrence)
 
-5. **External Benchmarking Requirement**: Every validation test must include at least one external benchmark comparison. Internal-only validation (comparing ATLAS to ATLAS) is insufficient and will not be accepted.
+5. **External Benchmarking Requirement**: Every validation test must include at least one external benchmark comparison. Internal-only validation (comparing WIDAI to WIDAI) is insufficient and will not be accepted.
 
 6. **R02 Revalidation**: R02 must be re-run with depth as a scored dimension. The 4.26/5 quality score stands for statement quality. A new depth score must be established.
 

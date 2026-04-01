@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="docs/assets/atlas-at-a-glance.svg" alt="ATLAS at a glance — 187 roles, 497 KSAs, 70+ frameworks, one standard" width="100%"/>
+  <img src="docs/assets/widai-at-a-glance.svg" alt="WIDAI at a glance — 187 roles, 12 KSA domains, 70+ frameworks, one standard" width="100%"/>
 </p>
 
-# ATLAS
+# WIDAI
 
 **The first machine-readable, cross-framework workforce taxonomy for data and AI.**
 
-ATLAS answers a question that every organization building with data and AI eventually faces but nobody has standardized: *who do we need, what should they know, and how do we measure the gap between where we are and where we need to be?*
+WIDAI answers a question that every organization building with data and AI eventually faces but nobody has standardized: *who do we need, what should they know, and how do we measure the gap between where we are and where we need to be?*
 
 There are frameworks that describe cybersecurity roles. Frameworks that describe general occupations. Frameworks that describe IT skills. None of them were built for the data and AI profession — the discipline that now underpins every enterprise strategy but has no shared language for its workforce.
 
-ATLAS fills that gap. It defines 187 roles across the full data and AI organization, maps 497 knowledge, skills, abilities, and tasks across 12 knowledge domains using a shared-pool model, and unifies 70+ source frameworks — NIST NICE, O\*NET, SFIA, DAMA DMBOK, ESCO, EU AI Act, ISO 42001, SR 11-7, and dozens more — into a single dataset with full source provenance. Every mapping traces back to where it came from. Every role carries context from every framework that describes it.
+WIDAI fills that gap. It defines 187 roles across the full data and AI organization, maps knowledge, skills, abilities, and tasks across 12 knowledge domains using a shared-pool model, and unifies 70+ source frameworks — NIST NICE, O\*NET, SFIA, DAMA DMBOK, ESCO, EU AI Act, ISO 42001, SR 11-7, and dozens more — into a single dataset with full source provenance. Every mapping traces back to where it came from. Every role carries context from every framework that describes it.
 
 The result: one taxonomy that speaks every framework's language simultaneously.
 
@@ -28,7 +28,7 @@ This is not a tooling gap. It is an infrastructure gap. The same infrastructure 
 
 ---
 
-## What ATLAS Makes Possible
+## What WIDAI Makes Possible
 
 **For PE operating partners evaluating acquisition targets:** A standardized assessment that maps the target's data/AI team against a reference taxonomy, produces a maturity score, identifies key-person risks, and models the Year 1–3 workforce investment. Delivered in 30 days, priced as deal-level trivial. No more gut feel and reference checks for the workforce that will determine whether the value creation plan succeeds.
 
@@ -36,7 +36,7 @@ This is not a tooling gap. It is an infrastructure gap. The same infrastructure 
 
 **For financial institutions governing AI models:** An organizational design framework for SR 11-7 model risk governance adapted for AI. Three lines of defense mapped to defined roles with independence requirements, staffing ratios, and cross-regulatory context. The reference architecture that consulting firms haven't published.
 
-**For anyone building with agentic AI:** The first structured role definitions for a workforce category that doesn't exist in any established framework. Agent Supervisor, Agent Orchestrator, AI Trust Engineer — roles that organizations are creating ad hoc, without a shared vocabulary. ATLAS provides the vocabulary.
+**For anyone building with agentic AI:** The first structured role definitions for a workforce category that doesn't exist in any established framework. Agent Supervisor, Agent Orchestrator, AI Trust Engineer — roles that organizations are creating ad hoc, without a shared vocabulary. WIDAI provides the vocabulary.
 
 **For newly hired CDIAOs walking into a role on Monday:** A Week 1 assessment that maps the current team, identifies the three biggest gaps, and produces a hiring plan by end of Week 2. Not a 187-role taxonomy to study. A tool that produces answers on the timeline the operating partner expects.
 
@@ -45,14 +45,14 @@ This is not a tooling gap. It is an infrastructure gap. The same infrastructure 
 ## The Differentiator Nobody Else Can Provide
 
 <p align="center">
-  <img src="docs/assets/competitive-position.svg" alt="Competitive positioning — ATLAS occupies a category of one" width="100%"/>
+  <img src="docs/assets/competitive-position.svg" alt="Competitive positioning — WIDAI occupies a category of one" width="100%"/>
 </p>
 
-Lightcast processes billions of job postings and has compensation data updated biweekly. Eightfold builds proprietary organizational taxonomies for individual enterprises. NICE defines cybersecurity roles. O\*NET covers the general labor market. Each is excellent at what it does. None of them do what ATLAS does.
+Lightcast processes billions of job postings and has compensation data updated biweekly. Eightfold builds proprietary organizational taxonomies for individual enterprises. NICE defines cybersecurity roles. O\*NET covers the general labor market. Each is excellent at what it does. None of them do what WIDAI does.
 
-ATLAS is the only dataset that maps a single role to obligations under multiple regulatory and professional frameworks simultaneously. An AI Governance Manager in ATLAS carries context from EU AI Act Article 14, NIST AI RMF GOVERN functions, ISO 42001 controls, DAMA DMBOK knowledge areas, and SFIA skills — all in one record, all with source provenance.
+WIDAI is the only dataset that maps a single role to obligations under multiple regulatory and professional frameworks simultaneously. An AI Governance Manager in WIDAI carries context from EU AI Act Article 14, NIST AI RMF GOVERN functions, ISO 42001 controls, DAMA DMBOK knowledge areas, and SFIA skills — all in one record, all with source provenance.
 
-That cross-framework mapping is the feature a CISO with budget for two hires and three regulatory obligations needs. It is the feature a PE operating partner assessing a regulated target needs. It is the feature that makes ATLAS citable by analysts and usable by practitioners. And it is genuinely difficult to replicate, because it requires not just data access but two decades of judgment about how these frameworks relate to each other.
+That cross-framework mapping is the feature a CISO with budget for two hires and three regulatory obligations needs. It is the feature a PE operating partner assessing a regulated target needs. It is the feature that makes WIDAI citable by analysts and usable by practitioners. And it is genuinely difficult to replicate, because it requires not just data access but two decades of judgment about how these frameworks relate to each other.
 
 ---
 
@@ -68,7 +68,7 @@ The full roadmap contains 25 scored items organized into dependency tiers, each 
 
 **Phase 0 — Validate (Weeks 1–2).** Completed 2026-03-26. Four parallel tests executed with results: R01 (Coverage Gap Test) PASS — 92.2% KSA coverage across 5 archetypes validates current data supports a pilot assessment. R02 (AI-Assisted KSA Quality Test) PASS — 4.26/5 average quality score validates AI-assisted authoring can match manual quality. R05 (License Audit) CONDITIONAL — 19 frameworks GREEN for commercial use, all others citation-only, establishes commercial pathway. R24 (Consistency Audit) PASS WITH CONDITIONS — 8.2/10 consistency score across existing KSAs establishes authoring standards. All assumptions validated. See detailed results: [`docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
 
-**Phase 1 — First Product (Weeks 3–8).** In progress. R04 (PE Assessment Methodology) complete. **Critical correction applied:** KSA data model restructured from role-centric to shared domain pool ([ADR-013](docs/roadmap/adr/ADR-013-shared-pool-ksa-architecture.md)) after depth audit revealed 8.95 KSAs/role average versus NICE framework's 68-206 — a 14.9x shortfall. Architecture now uses 12 knowledge domains with many-to-many role mappings. **KSA enrichment methodology established:** NIST IR 8477 Set Theory Relationship Mapping (STRM) adopted as the formal methodology for evidence-based KSA pool enrichment ([ADR-014](docs/roadmap/adr/ADR-014-strm-based-ksa-enrichment.md)). Phase 1A baseline enrichment complete (363 → 497 KSAs). Phase 1B framework prioritization complete (34 of 70 frameworks STRM-eligible, 4-tier execution sequence). Phase 1C STRM cycle in progress — first framework STRM complete: O\*NET 30.2 mapped against full KSA pool ([ADR-015](docs/roadmap/adr/ADR-015-strm-onet.md)), 126 elements evaluated, 6 gap signals registered. Pilot engagement (R03) blocked until enrichment synthesis completes.
+**Phase 1 — First Product (Weeks 3–8).** In progress. R04 (PE Assessment Methodology) complete. **Critical correction applied:** KSA data model restructured from role-centric to shared domain pool ([ADR-013](docs/roadmap/adr/ADR-013-shared-pool-ksa-architecture.md)) after depth audit revealed significant shortfall versus established frameworks. Architecture now uses 12 knowledge domains with many-to-many role mappings. **KSA enrichment methodology established:** NIST IR 8477 Set Theory Relationship Mapping (STRM) adopted as the formal methodology for evidence-based KSA pool enrichment ([ADR-014](docs/roadmap/adr/ADR-014-strm-based-ksa-enrichment.md)). Phase 1A baseline enrichment complete. Phase 1B framework prioritization complete (34 of 70 frameworks STRM-eligible, 4-tier execution sequence). Phase 1C STRM cycle in progress — frameworks being mapped against the KSA pool one at a time, producing per-element rationale files with multi-method computational scoring. See [`docs/README.md`](docs/README.md) for STRM progress tracker. Pilot engagement (R03) blocked until enrichment synthesis completes.
 
 **Phase 2 — Compliance + Validation (Weeks 9–16).** EU AI Act obligation-to-role mapping ships before August 2026 enforcement. Cross-regulatory role coverage analysis produces the killer feature. Regulatory practitioners validate the mappings. The quick assessment interface makes the methodology repeatable.
 
@@ -82,19 +82,17 @@ The full roadmap contains 25 scored items organized into dependency tiers, each 
 
 ## Current State — Honest Assessment
 
-ATLAS is in active development at version 0.5.3. Transparency about where things stand is not a weakness; it is the credibility this project is built on.
+WIDAI is in active development at version 0.5.3. Transparency about where things stand is not a weakness; it is the credibility this project is built on.
 
-**What exists today:** 187 roles defined across 10 categories. 497 KSAs across 12 domain pools (177 Knowledge, 126 Skills, 147 Tasks, 47 Abilities). 70+ source frameworks with provenance. 333 role-to-framework mappings. Shared-pool KSA architecture with many-to-many role mappings. Entity-separated architecture designed for graph database ingestion. Schema supporting regulatory context, cross-framework mapping, and quantified assessment. STRM framework mapping infrastructure with first framework (O\*NET) complete.
+**What exists today:** 187 roles defined across 10 categories. KSAs organized across 12 domain pools (Knowledge, Skills, Tasks, Abilities) with active enrichment expanding depth through STRM framework mappings. 70+ source frameworks with provenance. Shared-pool KSA architecture with many-to-many role mappings. Entity-separated architecture designed for graph database ingestion. Schema supporting regulatory context, cross-framework mapping, and quantified assessment. STRM framework mapping infrastructure with multi-method computational scoring pipeline.
 
-**Phase 0 Validation: Complete.** The validation sprint has executed with all tests passing or passing-with-conditions. Coverage validation (R01) confirmed 92.2% KSA coverage across 5 archetypes, supporting mid-market team assessments. Quality validation (R02) confirmed AI-assisted authoring can match manual quality (4.26/5 average), reducing KSA completion timeline from 6–12 months to 4–8 weeks. License audit (R05) confirms that 19 GREEN frameworks permit commercial use without restriction; 28 additional frameworks require attribution; all 70 frameworks are citation-only at minimum. The hypothesis — that current coverage is sufficient for a PE assessment pilot — is validated with measurable evidence. Phase 1 (First Product) is cleared for execution.
+**Phase 0 Validation: Complete.** Four parallel tests executed — coverage, quality, licensing, consistency — all passing or passing-with-conditions. The hypothesis that current coverage supports a PE assessment pilot is validated with measurable evidence. Phase 1 cleared for execution. Results: [`docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
 
-**Phase 1 First Product: R04 complete, R08 complete.** The PE Workforce Due Diligence Assessment methodology is fully specified — a 4-dimension scoring model producing a single Workforce Readiness Score (0-100), a 30-day engagement workflow, four deliverable templates, and five reference architectures by company profile. Every score traces to observable evidence against ATLAS KSA requirements. R08 closed the remaining KSA gaps: 42 KSAs authored across 5 roles (Model Risk Manager, MLOps Engineer, DataOps Engineer, Data Protection Officer, Clinical Data Manager), bringing PE archetype coverage from 92.2% to 100%. Every role in every PE archetype now has full KSA-level assessment capability.
+**Phase 1 First Product: In progress.** The PE Workforce Due Diligence Assessment methodology is fully specified (R04) — a 4-dimension scoring model producing a single Workforce Readiness Score (0-100), a 30-day engagement workflow, four deliverable templates, and five reference architectures by company profile. KSA enrichment is proceeding through the STRM framework mapping cycle — each framework produces per-element rationale files with multi-method computational scoring, gap identification, and cross-framework validation evidence. KSA pool depth and coverage statistics will stabilize after synthesis (Phase 1D).
 
-**Commercial viability confirmed for GREEN frameworks.** The commercial_status classification established in R05 produces a clean subset of 19 frameworks with unrestricted commercial application. The AI-assisted authoring pathway (validated by R02) enables rapid KSA expansion to additional roles as commercial features are prioritized. Provenance tagging ensures transparency about which KSAs were human-authored versus AI-assisted.
+**Commercial viability confirmed.** License audit established a clean subset of frameworks with unrestricted commercial application. AI-assisted authoring pathway validated for rapid KSA expansion. Provenance tagging ensures transparency about which KSAs were human-authored versus AI-assisted.
 
-**What does not exist yet:** Full role-KSA mappings (42 of 187 roles have direct mappings; remaining roles await STRM-based enrichment synthesis per ADR-014 Phase 1D). Per-role depth target of 40+ KSAs not yet achieved — requires STRM completion and role-KSA mapping rebuild. Populated regulatory context fields (in progress for EU AI Act, Phase 2). A pilot engagement partner (R03). An API.
-
-**What the research says:** The gap between current state and first product has been empirically validated. Results: [`docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`](docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)
+**What does not exist yet:** Full role-KSA mappings at target depth — requires STRM completion and role-KSA mapping rebuild (Phase 1D synthesis). Populated regulatory context fields (Phase 2). A pilot engagement partner (R03). An API.
 
 ---
 
@@ -114,27 +112,27 @@ This project does not operate on intuition. The roadmap was produced through a s
 | Schema modifications before enrichment | [ADR-008](docs/roadmap/adr/ADR-008-schema-modifications-before-enrichment.md) | Don't populate fields that will change. Modify the schema first. |
 | Agentic AI as Tier 3 first-mover play | [ADR-009](docs/roadmap/adr/ADR-009-agentic-ai-roles-first-mover.md) | First-mover advantage is real but only holds if definitions are credible. Credibility comes from the beachhead. |
 | Validate before building | [ADR-010](docs/roadmap/adr/ADR-010-validation-sprint-before-product-build.md) | Four tests executed: R01 PASS (92.2% coverage), R02 PASS (4.26/5 quality), R05 CONDITIONAL (19 GREEN frameworks), R24 PASS WITH CONDITIONS (8.2/10 consistency). Go decision for Phase 1 product build. |
-| PE assessment scoring model design | [ADR-011](docs/roadmap/adr/ADR-011-pe-assessment-scoring-model.md) | Evidence-based scoring against ATLAS KSAs, deal-specific criticality, four deliverables without compensation data, reference architectures by company profile, single WRS composite score. |
+| PE assessment scoring model design | [ADR-011](docs/roadmap/adr/ADR-011-pe-assessment-scoring-model.md) | Evidence-based scoring against WIDAI KSAs, deal-specific criticality, four deliverables without compensation data, reference architectures by company profile, single WRS composite score. |
 | KSA depth correction | [ADR-012](docs/roadmap/adr/ADR-012-ksa-depth-correction.md) | External benchmarking revealed 14.9x depth shortfall. DCI metric, adversarial quality gate, and 40+ KSAs/role target established. |
 | Shared-pool KSA architecture | [ADR-013](docs/roadmap/adr/ADR-013-shared-pool-ksa-architecture.md) | Domain-based KSA pool with many-to-many role mappings replaces role-centric model. 12 knowledge domains. |
 | STRM-based KSA enrichment | [ADR-014](docs/roadmap/adr/ADR-014-strm-based-ksa-enrichment.md) | NIST IR 8477 Set Theory Relationship Mapping adopted for evidence-based enrichment. Four-phase execution. |
-| STRM — O\*NET 30.2 | [ADR-015](docs/roadmap/adr/ADR-015-strm-onet.md) | First framework STRM: 126 FDEs mapped, 103 relationships found, 6 gap signals, QA/QC PASS. |
+| STRM — O\*NET 30.2 | [ADR-015](docs/roadmap/adr/ADR-015-strm-onet.md) | First framework STRM complete. Multi-method scoring pipeline established. Gap signals in foundational professional skills. |
 
 ---
 
 ## For Collaborators
 
-ATLAS is built by [Thomas Jones](https://www.linkedin.com/in/yourprofilehere) — The Hipster CISO. Twenty years of executive leadership spanning cybersecurity, data governance, and AI strategy. Carnegie Mellon CDAIO Program. Building at the intersection of enterprise protection and enterprise growth, because those are the same discipline viewed from different altitudes.
+WIDAI is built by [Thomas Jones](https://www.linkedin.com/in/yourprofilehere) — The Hipster CISO. Twenty years of executive leadership spanning cybersecurity, data governance, and AI strategy. Carnegie Mellon CDAIO Program. Building at the intersection of enterprise protection and enterprise growth, because those are the same discipline viewed from different altitudes.
 
 The project welcomes collaborators who bring specific expertise the roadmap needs:
 
 **Regulatory practitioners** — EU AI Act interpretation, SR 11-7 model risk governance, ISO 42001 implementation experience. The regulatory context mappings need validation by people who have been through examinations, not just people who have read the regulations.
 
-**PE operating partners and portfolio advisors** — If you assess data/AI teams as part of deal diligence or portfolio management, you are the user ATLAS was designed to serve first. A pilot engagement produces value for both sides: you get a structured assessment methodology, ATLAS gets market validation.
+**PE operating partners and portfolio advisors** — If you assess data/AI teams as part of deal diligence or portfolio management, you are the user WIDAI was designed to serve first. A pilot engagement produces value for both sides: you get a structured assessment methodology, WIDAI gets market validation.
 
-**CDIAOs and CISOs in the first 90 days of a new role** — You are building the assessment and organizational design that ATLAS is being built to support. Your feedback on what's useful, what's missing, and what's wrong is more valuable than any framework analysis.
+**CDIAOs and CISOs in the first 90 days of a new role** — You are building the assessment and organizational design that WIDAI is being built to support. Your feedback on what's useful, what's missing, and what's wrong is more valuable than any framework analysis.
 
-**Data and AI workforce researchers** — If you study role evolution, skills taxonomies, or organizational design for data/AI teams, ATLAS's dataset is available for research collaboration.
+**Data and AI workforce researchers** — If you study role evolution, skills taxonomies, or organizational design for data/AI teams, WIDAI's dataset is available for research collaboration.
 
 > Interested? Open an issue, or reach out directly through [The Hipster CISO](https://thehipsterciso.substack.com).
 
@@ -142,7 +140,7 @@ The project welcomes collaborators who bring specific expertise the roadmap need
 
 ## Technical Documentation
 
-The executive narrative above tells you why ATLAS exists and where it's going. The technical documentation tells you how it's built.
+The executive narrative above tells you why WIDAI exists and where it's going. The technical documentation tells you how it's built.
 
 | Document | What It Covers |
 |----------|----------------|
@@ -150,10 +148,10 @@ The executive narrative above tells you why ATLAS exists and where it's going. T
 | [Master Schema Design](docs/master-schema-design.md) | 25+ field JSON schema with nested regulatory and framework context |
 | [Field-by-Field Assessment](docs/field-by-field-assessment.md) | Use case analysis and modification verdicts for every schema field |
 | [Gap Analysis](docs/gap-analysis.md) | 187-role inventory with coverage status against source frameworks |
-| [Roadmap Analysis](docs/roadmap/ensemble-brainstorm-atlas.md) | Full five-pass strategic analysis with research citations |
+| [Roadmap Analysis](docs/roadmap/ensemble-brainstorm-widai.md) | Full five-pass strategic analysis with research citations |
 | [Architectural Decision Records](docs/roadmap/adr/) | 15 ADRs documenting rationale for every major roadmap and methodology decision |
 | [PE Assessment Methodology](methodology/R04-pe-assessment-methodology.md) | Scoring model, engagement workflow, and deliverable specifications for the PE workforce due diligence product |
-| [NICE Boundary Scoping](docs/nice-boundary-scoping.md) | How ATLAS relates to NIST NICE for cybersecurity boundary roles |
+| [NICE Boundary Scoping](docs/nice-boundary-scoping.md) | How WIDAI relates to NIST NICE for cybersecurity boundary roles |
 | [STRM Framework Mappings](strm/) | NIST IR 8477 Set Theory Relationship Mappings — per-framework evidence for KSA enrichment |
 | [Framework Prioritization](docs/roadmap/phase-1b-framework-prioritization.md) | 70 frameworks assessed for STRM eligibility, 4-tier execution sequence |
 

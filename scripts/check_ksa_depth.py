@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ATLAS KSA Depth Coverage Index (DCI)
+WIDAI KSA Depth Coverage Index (DCI)
 
 Measures whether each mapped role has sufficient KSA depth to support
 meaningful workforce assessment. Benchmarks against the NIST NICE Framework
@@ -102,7 +102,7 @@ DCI_GATE_THRESHOLD = MINIMUM_DEPTH_STANDARD / NICE_MEAN_TOTAL
 
 
 class DepthCoverageIndex:
-    """Calculates KSA depth metrics for every mapped role in ATLAS."""
+    """Calculates KSA depth metrics for every mapped role in WIDAI."""
 
     def __init__(self, base_path):
         self.base = base_path
@@ -282,13 +282,13 @@ class DepthCoverageIndex:
     def run_analysis(self):
         """Run full DCI analysis across all mapped roles."""
         print("\n" + "=" * 70)
-        print("ATLAS KSA DEPTH COVERAGE INDEX (DCI)")
+        print("WIDAI KSA DEPTH COVERAGE INDEX (DCI)")
         print("=" * 70)
         print(f"\nBenchmark: NIST NICE Framework v2.1.0")
         print(f"  NICE mean KSAs/role: {NICE_MEAN_TOTAL:.1f}")
         print(f"  NICE range: {NICE_MIN_TOTAL} - {NICE_MAX_TOTAL}")
         print(f"  NICE type distribution: {NICE_MEAN_TASKS:.1f}T / {NICE_MEAN_KNOWLEDGE:.1f}K / {NICE_MEAN_SKILLS:.1f}S")
-        print(f"\nATLAS thresholds:")
+        print(f"\nWIDAI thresholds:")
         print(f"  Standard minimum: {MINIMUM_DEPTH_STANDARD} KSAs/role")
         print(f"  Regulatory minimum: {MINIMUM_DEPTH_REGULATORY} KSAs/role")
         print(f"  DCI gate threshold: {DCI_GATE_THRESHOLD:.2%} of NICE mean\n")

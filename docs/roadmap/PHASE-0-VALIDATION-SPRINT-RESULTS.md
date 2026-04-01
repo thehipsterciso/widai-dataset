@@ -26,7 +26,7 @@
 
 **Question:** Can the current 37 KSA-complete roles support a minimum viable PE assessment?
 
-**Answer:** Yes. Tested against 5 representative mid-market team archetypes (64 total roles across manufacturer, financial services, SaaS, healthcare, retail). ATLAS maps 100% of archetype roles to existing role definitions. 92.2% of mapped roles have complete KSA coverage.
+**Answer:** Yes. Tested against 5 representative mid-market team archetypes (64 total roles across manufacturer, financial services, SaaS, healthcare, retail). WIDAI maps 100% of archetype roles to existing role definitions. 92.2% of mapped roles have complete KSA coverage.
 
 **Key findings:**
 - PE-backed manufacturer and mid-market retailer achieve 100% KSA coverage
@@ -63,7 +63,7 @@
 
 ### R05: Source Framework License Audit
 
-**Question:** Can ATLAS be commercially distributed given its 70+ source frameworks?
+**Question:** Can WIDAI be commercially distributed given its 70+ source frameworks?
 
 **Answer:** Conditionally. 19 frameworks are clearly GREEN (commercial derivatives permitted). 28 are YELLOW (conditional/requires review). 23 are RED (blockers without licensing).
 
@@ -79,9 +79,9 @@
 - COBIT/CMMI (ISACA) — annual commercial license required
 - WEF — CC BY-NC-ND (complete blocker: no commercial use AND no derivatives)
 
-**Decision gate: CONDITIONAL.** Commercial viability depends on how deeply ATLAS relies on RED frameworks.
+**Decision gate: CONDITIONAL.** Commercial viability depends on how deeply WIDAI relies on RED frameworks.
 
-**Critical next step:** Conduct a dependency analysis — for each RED framework, determine: (a) how many ATLAS roles reference it, (b) whether the reference is a citation (low risk) vs. a structural derivative (high risk), and (c) whether the framework can be replaced with a GREEN alternative. This analysis determines whether the RED frameworks are load-bearing walls or decorative trim.
+**Critical next step:** Conduct a dependency analysis — for each RED framework, determine: (a) how many WIDAI roles reference it, (b) whether the reference is a citation (low risk) vs. a structural derivative (high risk), and (c) whether the framework can be replaced with a GREEN alternative. This analysis determines whether the RED frameworks are load-bearing walls or decorative trim.
 
 ### R24: KSA Quality Consistency Audit
 
@@ -93,7 +93,7 @@
 - JSON schema: identical across all 322 KSAs (10/10)
 - Prefix compliance: 100% correct format (10/10)
 - Statement granularity: consistent 17-23 word averages (9/10)
-- Source attribution: 100% ATLAS v0.3.0 (10/10)
+- Source attribution: 100% WIDAI v0.3.0 (10/10)
 
 **What's inconsistent (needs clarification):**
 - Ability type collapse: 8 in GOV → 4 in ENG → 1 in DEV → 0 in DSM through LDR (6/10)
@@ -108,7 +108,7 @@
 
 ### Condition 1: Framework Dependency Analysis (R05 follow-up)
 
-Before any commercial distribution, map the actual dependency depth for each RED framework. Determine whether ATLAS role definitions structurally derive from RED-licensed content or merely cite it. This analysis takes 1-2 days and directly determines the commercial model.
+Before any commercial distribution, map the actual dependency depth for each RED framework. Determine whether WIDAI role definitions structurally derive from RED-licensed content or merely cite it. This analysis takes 1-2 days and directly determines the commercial model.
 
 **Recommended approach:** Three-tier product model — free tier on GREEN frameworks only, premium with selectively licensed frameworks (SFIA, DAMA, ISACA), enterprise with full coverage.
 

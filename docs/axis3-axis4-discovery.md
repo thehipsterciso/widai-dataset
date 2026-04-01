@@ -1,8 +1,8 @@
-# ATLAS Workforce Framework — Axis 3 & Axis 4 Discovery
+# WIDAI Workforce Framework — Axis 3 & Axis 4 Discovery
 ## Exhaustive Use Case and Organizational Context Enumeration
 
 **Date:** 2026-03-26  
-**Framework:** ATLAS v0.4.0 (187 roles, 10 categories, 15+ frameworks unified)  
+**Framework:** WIDAI v0.4.0 (187 roles, 10 categories, 15+ frameworks unified)  
 **Creator:** Thomas Jones (CDAIO domain expertise, 20+ years data governance + AI strategy)  
 **Scope:** Complete enumeration of outputs (Axis 3) and organizational contexts (Axis 4)
 
@@ -12,7 +12,7 @@
 ## The Form Value Takes When Delivered
 
 ### Overview
-ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (documents, reports, visualizations the user walks away with), **(B) Embedded Tools** (generators, assessments, calculators the user operates), and **(C) Data Products** (APIs, ontologies, databases the user integrates). Each category serves different buyer types and organizational functions. This taxonomy moves beyond the seed list to surface non-obvious outputs that exploit ATLAS's 187-role, 15-framework unified structure.
+WIDAI outputs span three delivery categories: **(A) Standalone Deliverables** (documents, reports, visualizations the user walks away with), **(B) Embedded Tools** (generators, assessments, calculators the user operates), and **(C) Data Products** (APIs, ontologies, databases the user integrates). Each category serves different buyer types and organizational functions. This taxonomy moves beyond the seed list to surface non-obvious outputs that exploit WIDAI's 187-role, 15-framework unified structure.
 
 ---
 
@@ -21,7 +21,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 ### **A1. STRATEGIC PLANNING OUTPUTS**
 
 #### 1.1 Workforce Transformation Roadmap
-- **Definition:** Multi-year staged plan for transitioning a current org chart to a target ATLAS-aligned org structure.
+- **Definition:** Multi-year staged plan for transitioning a current org chart to a target WIDAI-aligned org structure.
 - **Content:** Current-state role inventory → skill gap analysis → hiring vs. reskilling cost-benefit → phased team assembly with timeline + resource allocation + risk mitigation for key person gaps.
 - **Consumers:** CFOs (cost planning), CIOs/CTOs (capability sequencing), CDAO/CDAIO (org design), HR/Talent leads.
 - **Format:** Gantt chart + narrative + detailed handoff milestones. Interactive version with scenario modeling (add 3 more data engineers in Q1 vs. Q3 — impact on roadmap?).
@@ -42,11 +42,11 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Consumers:** Boards preparing for convergence, CIOs evaluating organizational structure, CDOs/CAIOs/CISOs planning for convergence roles.
 - **Format:** Interactive org chart with meeting rhythm template, accountability matrix (RACI), and transition playbook for converting from siloed to converged.
 - **Discovery Score:** 3 (non-obvious that this becomes a primary output; customers may not ask for it explicitly, but it becomes central to strategic planning).
-- **Strategic Value:** ATLAS is uniquely positioned to define "what convergence actually looks like operationally." This output grounds abstract "CDAIO" discussions in concrete role structure.
+- **Strategic Value:** WIDAI is uniquely positioned to define "what convergence actually looks like operationally." This output grounds abstract "CDAIO" discussions in concrete role structure.
 
 #### 1.4 Talent Acquisition Strategy
-- **Definition:** Recruitment plan optimized for ATLAS role taxonomy — job descriptions, talent sourcing channels, candidate evaluation criteria.
-- **Content:** For each role → job description template (leveraging ATLAS role definition) → required vs. nice-to-have skills (sourced from 15+ frameworks) → market salary range + supply assessment (hot role? rare? easy to find?) → sourcing channels (where do data architects hang out?) → screening rubric.
+- **Definition:** Recruitment plan optimized for WIDAI role taxonomy — job descriptions, talent sourcing channels, candidate evaluation criteria.
+- **Content:** For each role → job description template (leveraging WIDAI role definition) → required vs. nice-to-have skills (sourced from 15+ frameworks) → market salary range + supply assessment (hot role? rare? easy to find?) → sourcing channels (where do data architects hang out?) → screening rubric.
 - **Consumers:** HR, recruiters, hiring managers, PE portfolio companies doing rapid hiring.
 - **Format:** Modular JD generator + sourcing playbook + pre-built screening questions + market intelligence dashboard.
 - **Discovery Score:** 2 (obvious given role definitions, but the "market supply for role X" dimension is valuable).
@@ -57,7 +57,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Content:** For each of 187 roles → build cost + timeline + quality variability → buy cost (FTE, contractor rates) → outsource cost (managed service) → strategic advantages/risks of each → recommendation for company size + maturity.
 - **Consumers:** CFOs, CIOs, outsourcing executives, private equity for portfolio companies.
 - **Format:** Role-by-role matrix (build/buy/partner) + cost calculator + risk summary + scenario planner.
-- **Discovery Score:** 3 (non-obvious application of ATLAS; valuable for portfolio companies and scaling orgs).
+- **Discovery Score:** 3 (non-obvious application of WIDAI; valuable for portfolio companies and scaling orgs).
 - **Strategic Value:** Directly quantifies cost differences and helps companies avoid over-investing in roles better served by contractors or outsourcers.
 
 ---
@@ -65,15 +65,15 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 ### **A2. ASSESSMENT AND DIAGNOSTIC OUTPUTS**
 
 #### 2.1 AI Readiness Scorecard
-- **Definition:** Multi-dimensional assessment of organizational readiness to deploy AI, mapped to ATLAS domain expertise requirements.
-- **Content:** 5 dimensions (governance, data, talent, infrastructure, organizational change) × 5 tiers (pre-AI to AI-native) → for each cell, required ATLAS roles + skill sets → gap score + remediation paths.
+- **Definition:** Multi-dimensional assessment of organizational readiness to deploy AI, mapped to WIDAI domain expertise requirements.
+- **Content:** 5 dimensions (governance, data, talent, infrastructure, organizational change) × 5 tiers (pre-AI to AI-native) → for each cell, required WIDAI roles + skill sets → gap score + remediation paths.
 - **Consumers:** Boards, CIOs, CDAO/CDAIO, strategy teams.
 - **Format:** Interactive dashboard with color-coded readiness by dimension + gap roadmap + investment calculator.
 - **Discovery Score:** 2 (obvious once the taxonomy exists).
 - **Strategic Value:** Answers "Are we ready to do AI?" and "What do we need to hire/train to become ready?"
 
 #### 2.2 Data Governance Maturity Assessment
-- **Definition:** 5-level maturity model (ad-hoc → repeatable → defined → managed → optimized) with ATLAS role requirements mapped to each level.
+- **Definition:** 5-level maturity model (ad-hoc → repeatable → defined → managed → optimized) with WIDAI role requirements mapped to each level.
 - **Content:** For each maturity level → governance structure required → role counts + seniority mix → required skills + certifications → KPIs + control objectives → investment required.
 - **Consumers:** CDOs, internal audit, compliance, boards.
 - **Format:** Assessment questionnaire (50-100 questions) → maturity score → role gap analysis → investment roadmap.
@@ -81,15 +81,15 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Strategic Value:** Moves from abstract "maturity" to concrete "here are the 7 roles you need to hire to move from Level 2 to Level 3."
 
 #### 2.3 Skills Inventory Assessment
-- **Definition:** Current-state skills audit of existing team members mapped against ATLAS skill requirements.
-- **Content:** Interview process → actual skills assessed → mapped to ATLAS KSA database → skill gaps identified → reskilling recommendations.
+- **Definition:** Current-state skills audit of existing team members mapped against WIDAI skill requirements.
+- **Content:** Interview process → actual skills assessed → mapped to WIDAI KSA database → skill gaps identified → reskilling recommendations.
 - **Consumers:** HR, CDO, learning & development, talent management.
 - **Format:** Survey tool (mobile/web) → skills profile per person → team-level gap heatmap → reskilling priority matrix.
 - **Discovery Score:** 2 (applies directly to the KSA structure).
 - **Strategic Value:** Answers "What can we grow internally vs. what must we hire?" at the skill level.
 
 #### 2.4 Bench Strength Report
-- **Definition:** High-risk assessment identifying which critical ATLAS roles have only one or two people who can do the work.
+- **Definition:** High-risk assessment identifying which critical WIDAI roles have only one or two people who can do the work.
 - **Content:** For each role in org → count of people qualified → experience spread → "what happens if this person leaves?" impact score → succession plan recommendations → training needs to cross-train backups.
 - **Consumers:** CIOs, CDOs, HR, board risk committees.
 - **Format:** Risk dashboard (Tier 1 roles flagged) + specific risk narratives + mitigation playbook + insurance cost estimate.
@@ -101,7 +101,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Content:** For each regulation + company context → required roles per regulation → current org → gaps + risk × urgency matrix → remediation roadmap.
 - **Consumers:** General Counsel, CDOs, CISOs, compliance officers, boards.
 - **Format:** Regulation-by-regulation gap summary + specific role/skill remediation items + timeline + cost.
-- **Discovery Score:** 3 (highly non-obvious and valuable; ATLAS is the only framework that unified regulatory role requirements with workforce data).
+- **Discovery Score:** 3 (highly non-obvious and valuable; WIDAI is the only framework that unified regulatory role requirements with workforce data).
 - **Strategic Value:** Answers "What do we need to hire to comply with the EU AI Act?" with specificity.
 
 #### 2.6 Peer Benchmarking Report
@@ -109,7 +109,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Content:** Industry role density benchmarks (e.g., manufacturing companies your size have 1 data engineer per 500 employees) → skills distribution → seniority mix → compensation benchmarks.
 - **Consumers:** CIOs, HR, boards, PE operating partners evaluating portfolio companies.
 - **Format:** Interactive comparison dashboard (your org vs. peer average vs. best-in-class) + percentile rankings.
-- **Discovery Score:** 2 (straightforward once ATLAS covers the benchmark dataset).
+- **Discovery Score:** 2 (straightforward once WIDAI covers the benchmark dataset).
 - **Strategic Value:** "Are we understaffed in data engineering?" becomes answerable with peer data.
 
 ---
@@ -117,7 +117,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 ### **A3. GOVERNANCE AND COMPLIANCE ARTIFACTS**
 
 #### 3.1 RACI Matrix (Roles × Decisions)
-- **Definition:** Decision authority mapping showing who in each ATLAS role has Responsible/Accountable/Consulted/Informed authority for key decisions.
+- **Definition:** Decision authority mapping showing who in each WIDAI role has Responsible/Accountable/Consulted/Informed authority for key decisions.
 - **Content:** Data quality governance → AI model deployment → security architecture → budget allocation → talent decisions → mapped across roles with authority levels.
 - **Consumers:** Governance committees, CDOs, CISOs, internal audit.
 - **Format:** Interactive spreadsheet/tool (hover for role descriptions + authority justification) + variant versions by company size/maturity.
@@ -133,7 +133,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Strategic Value:** Answers auditor questions ("Who owns compliance with this regulation?") without ambiguity.
 
 #### 3.3 Compliance & Control Self-Assessment (CSA) Template
-- **Definition:** Pre-built controls framework with mapping to ATLAS roles + regulatory obligations.
+- **Definition:** Pre-built controls framework with mapping to WIDAI roles + regulatory obligations.
 - **Content:** For each control (data lineage, model explainability, security incident response) → required role(s) to own it → frequency of assessment → evidence requirements.
 - **Consumers:** Internal audit, external auditors, compliance teams.
 - **Format:** Spreadsheet tool (SOC 2, ISO 27001, ISO 42001 variants) + auto-population where roles are defined.
@@ -141,7 +141,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Strategic Value:** Reduces time spent mapping controls to organizational roles.
 
 #### 3.4 Audit Evidence Package
-- **Definition:** Pre-built directory structure for collecting audit evidence, organized by ATLAS role + regulatory requirement.
+- **Definition:** Pre-built directory structure for collecting audit evidence, organized by WIDAI role + regulatory requirement.
 - **Content:** Folder structure (Role X → Regulation Y → Control Z → evidence items) + checklist of what evidence to collect + templates for documenting evidence.
 - **Consumers:** Internal audit, compliance, finance audit.
 - **Format:** Folder template + instruction guide + evidence log tool.
@@ -161,7 +161,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Strategic Value:** Moves "data teams cost a lot" from intuition to data-driven budget planning.
 
 #### 4.2 Cost-of-Vacancy Analysis
-- **Definition:** For each ATLAS role, quantifies cost of leaving the position unfilled.
+- **Definition:** For each WIDAI role, quantifies cost of leaving the position unfilled.
 - **Content:** For each role → average time to hire + productivity loss during vacancy + interim outsourcing cost + project delays/failures + risk events attributable to vacancy → total cost of vacancy.
 - **Consumers:** Hiring managers, CFOs, HR, boards.
 - **Format:** Role-by-role analysis + business case for rapid hiring + dashboard of current vacancies with cost burn.
@@ -177,15 +177,15 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Strategic Value:** "Should we hire a Data Governance Officer or use a managed service?" becomes data-driven.
 
 #### 4.4 Workforce ROI Dashboard
-- **Definition:** Tracks value generated by data/AI team relative to investment, mapped to ATLAS roles.
+- **Definition:** Tracks value generated by data/AI team relative to investment, mapped to WIDAI roles.
 - **Content:** By role category → headcount × salary → projects delivered + business value attributed → ROI by function + trend.
 - **Consumers:** CFOs, CDOs, CIOs.
 - **Format:** Interactive dashboard (roi by role, by project, by business line) + year-over-year trend.
-- **Discovery Score:** 3 (difficult to do well; ATLAS taxonomy makes it tractable).
+- **Discovery Score:** 3 (difficult to do well; WIDAI taxonomy makes it tractable).
 - **Strategic Value:** "Is our data team ROI-positive?" becomes answerable rather than debatable.
 
 #### 4.5 Compensation Benchmarking Report
-- **Definition:** Market salary + benefits ranges for each ATLAS role by geography, company size, industry.
+- **Definition:** Market salary + benefits ranges for each WIDAI role by geography, company size, industry.
 - **Content:** For each role → salary P25/P50/P75 + bonus % + equity (if applicable) + benefits + market trend + supply/demand signal.
 - **Consumers:** HR, compensation teams, CDOs managing salaries, boards.
 - **Format:** Interactive tool (filter by role, geography, company size) + benchmarking report + offer decision support.
@@ -198,7 +198,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 
 #### 5.1 Workforce Integration Playbook
 - **Definition:** Step-by-step guide for integrating the target company's data/AI team into acquirer's organization.
-- **Content:** Target org analysis (mapped to ATLAS roles) → acquirer org structure → role overlap analysis → integration approach (keep both? consolidate? eliminate?) → communication plan → timeline.
+- **Content:** Target org analysis (mapped to WIDAI roles) → acquirer org structure → role overlap analysis → integration approach (keep both? consolidate? eliminate?) → communication plan → timeline.
 - **Consumers:** M&A teams, CIOs, CDOs, HR.
 - **Format:** Detailed playbook (100+ pages) + communication templates + role transition guides + risk mitigation checklist.
 - **Discovery Score:** 3 (non-obvious to create, valuable for PE/strategic acquisitions).
@@ -206,7 +206,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 
 #### 5.2 Capability Overlap Analysis
 - **Definition:** Identifies which data/AI roles/functions are redundant between acquirer and target.
-- **Content:** Target roles mapped to ATLAS → acquirer roles → overlap scoring (which role pairs are doing the same work?) → consolidation recommendations → cost savings quantification.
+- **Content:** Target roles mapped to WIDAI → acquirer roles → overlap scoring (which role pairs are doing the same work?) → consolidation recommendations → cost savings quantification.
 - **Consumers:** M&A teams, integration leaders, CFOs.
 - **Format:** Heatmap (target roles vs. acquirer roles, colored by overlap) + detailed overlap assessment per role.
 - **Discovery Score:** 2 (straightforward once role mapping exists).
@@ -225,7 +225,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Content:** Target org competency model (extracted from interviews) → acquirer competency model → gap assessment → integration risk scoring.
 - **Consumers:** M&A teams, integration leaders.
 - **Format:** Cultural fit scorecard + risk flags + remediation recommendations.
-- **Discovery Score:** 3 (difficult to do systematically; ATLAS role definitions provide framework).
+- **Discovery Score:** 3 (difficult to do systematically; WIDAI role definitions provide framework).
 - **Strategic Value:** Reduces "why did all the best people leave after close?" surprises.
 
 ---
@@ -233,7 +233,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 ### **A6. TRAINING AND DEVELOPMENT OUTPUTS**
 
 #### 6.1 Learning Path Generator
-- **Definition:** For each ATLAS role, prescriptive learning path from entry level to mastery.
+- **Definition:** For each WIDAI role, prescriptive learning path from entry level to mastery.
 - **Content:** Role X → required skills → for each skill, learning modules (internal courses + external resources + certifications) → sequence + time estimates + prerequisites + success metrics.
 - **Consumers:** HR, L&D, career development teams, individual contributors.
 - **Format:** Interactive tool (select role → generate learning path) + course catalog + progress tracking.
@@ -241,7 +241,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Strategic Value:** Answers "How do I become a Data Architect?" with a structured curriculum.
 
 #### 6.2 Certification Roadmap
-- **Definition:** Recommended certifications for each ATLAS role + value assessment.
+- **Definition:** Recommended certifications for each WIDAI role + value assessment.
 - **Content:** For each role → relevant certifications (DAMA CDMP, IAPP CIPM, ISACA CDPSE, etc.) → cost + time + ROI + employer recognition + market signal.
 - **Consumers:** HR, individual contributors, hiring managers.
 - **Format:** Certification recommendation by role + cost/benefit analysis + exam prep resources.
@@ -277,7 +277,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 ### **A7. RISK AND CONTINUITY OUTPUTS**
 
 #### 7.1 Key Person Risk Assessment
-- **Definition:** For each critical ATLAS role, identifies concentration risk and single points of failure.
+- **Definition:** For each critical WIDAI role, identifies concentration risk and single points of failure.
 - **Content:** Role → # of people who can do it → experience spread → "what if this person is hit by a bus?" impact score → continuity risk rating.
 - **Consumers:** CIOs, CDOs, HR, risk committees.
 - **Format:** Risk dashboard (Tier 1 roles flagged) + specific risk narratives + mitigation recommendations.
@@ -313,7 +313,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 ### **A8. INTERVIEW AND HIRING OUTPUTS**
 
 #### 8.1 Interview Rubric & Scoring Guide
-- **Definition:** Standardized interview framework for each ATLAS role, with behavioral and technical dimensions.
+- **Definition:** Standardized interview framework for each WIDAI role, with behavioral and technical dimensions.
 - **Content:** For each role → required competencies × interview questions → scoring rubric (1-5 scale per competency) → hiring decision logic.
 - **Consumers:** Hiring managers, recruiters, interview panel training.
 - **Format:** Rubric document + question bank + scoring calculator + interviewer training.
@@ -321,15 +321,15 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Strategic Value:** Standardizes hiring quality across multiple rounds and interviewers.
 
 #### 8.2 Job Description Generator
-- **Definition:** Auto-generated JDs for each ATLAS role, customizable by company size, maturity, industry.
-- **Content:** Role → base JD (from ATLAS) → company customization (size/maturity/industry) → required skills → nice-to-have skills → compensation range → reporting line options.
+- **Definition:** Auto-generated JDs for each WIDAI role, customizable by company size, maturity, industry.
+- **Content:** Role → base JD (from WIDAI) → company customization (size/maturity/industry) → required skills → nice-to-have skills → compensation range → reporting line options.
 - **Consumers:** HR, hiring managers, recruiters.
 - **Format:** Template generator tool (select role + context → JD PDF ready for posting).
 - **Discovery Score:** 2 (straightforward templating).
 - **Strategic Value:** Saves time on JD creation; ensures skill requirements are complete.
 
 #### 8.3 Interview Preparation Guide
-- **Definition:** For each ATLAS role, guidance on what to assess, how to assess, and how to evaluate.
+- **Definition:** For each WIDAI role, guidance on what to assess, how to assess, and how to evaluate.
 - **Content:** Role → core competencies to assess → interview techniques (behavioral, technical, situational) → candidate red flags + green flags → evaluation framework.
 - **Consumers:** Hiring managers, recruiters.
 - **Format:** Role-specific guide + question templates + evaluation checklist.
@@ -337,7 +337,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Strategic Value:** Improves hiring consistency and quality.
 
 #### 8.4 Competency Assessment Matrix
-- **Definition:** Competency profile for each ATLAS role, with proficiency levels and evidence of assessment.
+- **Definition:** Competency profile for each WIDAI role, with proficiency levels and evidence of assessment.
 - **Content:** Role → required competencies → proficiency level (awareness/working/practitioner/expert) → evidence of proficiency (work samples, certifications, interview questions).
 - **Consumers:** Hiring managers, L&D, career development.
 - **Format:** Matrix (role × competency) + proficiency level definitions + assessment evidence guide.
@@ -351,16 +351,16 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 ### **B1. OPERATIONAL TOOLS**
 
 #### 1.1 Skills Gap Analysis Tool
-- **Definition:** Interactive tool for inputting current org + identifying skill gaps vs. ATLAS target profile.
-- **Content:** Input current team (names, roles, skills) → compare to ATLAS skill requirements for those roles → gap heatmap → remediation recommendations.
+- **Definition:** Interactive tool for inputting current org + identifying skill gaps vs. WIDAI target profile.
+- **Content:** Input current team (names, roles, skills) → compare to WIDAI skill requirements for those roles → gap heatmap → remediation recommendations.
 - **Consumers:** CDOs, HR, managers.
 - **Format:** Web-based tool (spreadsheet import + visualization) + API for integration with HRIS.
 - **Discovery Score:** 2 (straightforward once taxonomy exists).
 - **Strategic Value:** Makes "what skills are we missing?" answerable in 30 minutes.
 
 #### 1.2 Role Assessment Tool
-- **Definition:** Guided assessment to determine which ATLAS role matches a current position.
-- **Content:** Interview workflow (20-30 questions) → current role description → matches against ATLAS roles → confidence scoring + alternative roles suggested.
+- **Definition:** Guided assessment to determine which WIDAI role matches a current position.
+- **Content:** Interview workflow (20-30 questions) → current role description → matches against WIDAI roles → confidence scoring + alternative roles suggested.
 - **Consumers:** HR, hiring managers, current employees.
 - **Format:** Web-based questionnaire → results dashboard.
 - **Discovery Score:** 2 (useful classification tool).
@@ -404,7 +404,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 
 #### 2.1 AI Readiness Scorecard (Interactive)
 - **Definition:** Self-assessment tool with real-time scoring and gap recommendations.
-- **Content:** 50-100 questions across 5 dimensions → scored against ATLAS role requirements → readiness profile + specific role gaps + remediation roadmap.
+- **Content:** 50-100 questions across 5 dimensions → scored against WIDAI role requirements → readiness profile + specific role gaps + remediation roadmap.
 - **Consumers:** Boards, CIOs, strategy teams.
 - **Format:** Web-based assessment + interactive result dashboard.
 - **Discovery Score:** 2 (straightforward assessment tool).
@@ -412,7 +412,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 
 #### 2.2 Data Governance Maturity Evaluator
 - **Definition:** Maturity model self-assessment with role recommendations.
-- **Content:** Questions about current governance practices → maturity score (Level 1-5) → current org structure → target org structure (ATLAS roles required for next level) + cost estimate.
+- **Content:** Questions about current governance practices → maturity score (Level 1-5) → current org structure → target org structure (WIDAI roles required for next level) + cost estimate.
 - **Consumers:** CDOs, internal audit.
 - **Format:** Web-based assessment + interactive result dashboard with org recommendations.
 - **Discovery Score:** 2 (standard maturity model with role mapping).
@@ -423,7 +423,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Content:** Regulation selection → 50-100 compliance questions → gap score per regulation → role-based remediation → compliance risk score.
 - **Consumers:** Compliance, General Counsel, boards.
 - **Format:** Web-based assessment + regulatory gap dashboard.
-- **Discovery Score:** 3 (valuable; only possible with ATLAS's unified regulatory role mapping).
+- **Discovery Score:** 3 (valuable; only possible with WIDAI's unified regulatory role mapping).
 - **Strategic Value:** "Are we compliant with the EU AI Act?" becomes assessable with role-level precision.
 
 ---
@@ -432,7 +432,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 
 ### **C1. API AND DATABASE PRODUCTS**
 
-#### 1.1 ATLAS Role Taxonomy API
+#### 1.1 WIDAI Role Taxonomy API
 - **Definition:** REST/GraphQL API exposing 187 roles with full schema (KSAs, seniority, domain, etc.).
 - **Content:** Endpoints for role lookup, skill search, filtering by domain/tier/maturity, related roles, framework crosswalks.
 - **Consumers:** Talent intelligence platforms, internal HRIS integrations, career sites, third-party talent apps.
@@ -466,7 +466,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 
 #### 1.5 Framework Crosswalk API
 - **Definition:** API for translating between different framework role codes and taxonomies.
-- **Content:** ATLAS role_id ↔ O*NET code ↔ NICE code ↔ SFIA skill codes ↔ ESCO URI.
+- **Content:** WIDAI role_id ↔ O*NET code ↔ NICE code ↔ SFIA skill codes ↔ ESCO URI.
 - **Consumers:** Data integration systems, talent platforms, research tools.
 - **Format:** REST API (translate between code systems).
 - **Discovery Score:** 2 (niche but valuable for cross-framework integrations).
@@ -490,7 +490,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Consumers:** Career sites, internal HR sites, job board aggregators.
 - **Format:** JavaScript widget (iframe or web component) + customizable styling.
 - **Discovery Score:** 2 (straightforward embedding).
-- **Strategic Value:** Makes ATLAS role definitions available on partner sites.
+- **Strategic Value:** Makes WIDAI role definitions available on partner sites.
 
 #### 2.2 Skills Matrix (Embeddable)
 - **Definition:** Filterable table of roles × skills, embeddable into tools.
@@ -529,7 +529,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 - **Strategic Value:** "What skills should we train for now?" becomes forward-looking.
 
 #### 3.3 Diversity & Inclusion Analytics
-- **Definition:** Tools for tracking diversity of hiring/promotion across ATLAS roles and domains.
+- **Definition:** Tools for tracking diversity of hiring/promotion across WIDAI roles and domains.
 - **Content:** Current diversity profile by role/domain + peer benchmarks + trend analysis → recommendations for addressing gaps.
 - **Consumers:** HR, CHRO, boards.
 - **Format:** Dashboard + peer comparison + targeted recommendations.
@@ -574,7 +574,7 @@ ATLAS outputs span three delivery categories: **(A) Standalone Deliverables** (d
 
 ### Overview
 
-ATLAS's value is distributed across organizational contexts that vary across 8 critical dimensions:
+WIDAI's value is distributed across organizational contexts that vary across 8 critical dimensions:
 1. **Ownership structure** (private, PE, VC, public, nonprofit, government)
 2. **Organizational size** (startup to mega-enterprise)
 3. **Industry vertical** (15+ sectors)
@@ -584,7 +584,7 @@ ATLAS's value is distributed across organizational contexts that vary across 8 c
 7. **Transformation stage** (pre-transformation to continuous)
 8. **Geographic footprint** (US to global to EU-specific)
 
-For each dimension, enumeration shows: **(A) the values/categories, (B) how context changes ATLAS delivery, (C) primary buyer types in this context, (D) discovery score (how obvious/hidden this dimension is).**
+For each dimension, enumeration shows: **(A) the values/categories, (B) how context changes WIDAI delivery, (C) primary buyer types in this context, (D) discovery score (how obvious/hidden this dimension is).**
 
 ---
 
@@ -593,7 +593,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 1.1 PE-Backed Portfolio Company
 - **Definition:** Private company with equity owned by a PE fund, typically in buy-and-build or consolidation mode.
 - **Size Range:** $50M–$2B revenue (typical PE hold: 5–7 years).
-- **How ATLAS Changes:** PE context creates urgency around cost discipline and quick valuation lift. ATLAS becomes a tool for:
+- **How WIDAI Changes:** PE context creates urgency around cost discipline and quick valuation lift. WIDAI becomes a tool for:
   - Immediate cost optimization (make-buy-partner analysis).
   - Deal preparation (workforce integration playbook, redundancy identification).
   - Exit preparation (compliance documentation, org chart defensibility).
@@ -607,7 +607,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 1.2 VC-Backed High-Growth Company (Series A–C)
 - **Definition:** Private company with VC equity, scaling rapidly, typically pre-IPO (1–7 years post-series A).
 - **Size Range:** $5M–$500M ARR (but with 50%+ YoY growth).
-- **How ATLAS Changes:** VC context emphasizes speed and flexibility over cost discipline. ATLAS becomes a tool for:
+- **How WIDAI Changes:** VC context emphasizes speed and flexibility over cost discipline. WIDAI becomes a tool for:
   - Hyper-speed scaling (hiring plan simulator, talent acquisition strategy).
   - Role standardization (what should our "Data Scientist" be at $50M ARR?).
   - Founder education (what does a CDAIO actually do?).
@@ -622,7 +622,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 1.3 Public Company
 - **Definition:** Traded equity, established governance, quarterly earnings pressure, often multi-business-unit.
 - **Size Range:** $200M–$100B+ revenue (large majority of enterprise data/AI investment).
-- **How ATLAS Changes:** Public company context emphasizes governance, audit-readiness, and risk management. ATLAS becomes a tool for:
+- **How WIDAI Changes:** Public company context emphasizes governance, audit-readiness, and risk management. WIDAI becomes a tool for:
   - Organizational clarity (org chart defensibility for boards/auditors).
   - Regulatory compliance documentation (EU AI Act, ISO 42001, SR 11-7 mappings).
   - Internal controls (RACI matrices, compliance self-assessment).
@@ -637,7 +637,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 1.4 Private/Family-Owned Company
 - **Definition:** Equity held by founder or founding family, often with owner as primary decision-maker.
 - **Size Range:** $10M–$2B revenue (highly variable).
-- **How ATLAS Changes:** Family-owned context emphasizes long-term positioning and owner education. ATLAS becomes a tool for:
+- **How WIDAI Changes:** Family-owned context emphasizes long-term positioning and owner education. WIDAI becomes a tool for:
   - Strategic planning (multi-year data/AI roadmap for the business).
   - Talent retention (career pathing to retain key people through ownership transitions).
   - Succession planning (preparing next generation to lead, including data/AI).
@@ -652,21 +652,21 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 1.5 Nonprofit/Public Service Organization
 - **Definition:** Equity-free, mission-driven, tax-exempt status (includes universities, charities, government agencies).
 - **Size Range:** $10M–$1B budget (highly variable).
-- **How ATLAS Changes:** Nonprofit context emphasizes impact measurement, grant compliance, and donor/board accountability. ATLAS becomes a tool for:
+- **How WIDAI Changes:** Nonprofit context emphasizes impact measurement, grant compliance, and donor/board accountability. WIDAI becomes a tool for:
   - Grant compliance (demonstrating organizational capacity for data/AI initiatives).
   - Mission-driven hiring (how to hire data talent that aligns with mission values).
   - Budget justification (cost of data/AI relative to mission impact).
   - Donor communication (data/AI capability as proof of impact).
 - **Primary Buyers:** Executive Director + CFO/COO (budget stewardship) + Grant managers + Board members (oversight).
 - **Buyer Decision Drivers:** Grant compliance, budget justification, impact measurement, donor confidence, board oversight.
-- **Discovery Score:** 4 (non-obvious that ATLAS applies to nonprofits; requires adaptation for mission-driven context).
+- **Discovery Score:** 4 (non-obvious that WIDAI applies to nonprofits; requires adaptation for mission-driven context).
 - **Specific Outputs Favored:** Workforce investment model, grant compliance documentation, cost-benefit analysis.
 - **Pricing Model Implications:** Price-sensitive; may need nonprofit discounting or freemium model to reach this segment.
 
 ### 1.6 Government/Public Sector
 - **Definition:** Federal, state, local government agencies, with civil service rules and public budget constraints.
 - **Size Range:** Highly variable ($1M–$10B+).
-- **How ATLAS Changes:** Government context emphasizes civil service compliance, hiring authorities, and budget rigidity. ATLAS becomes a tool for:
+- **How WIDAI Changes:** Government context emphasizes civil service compliance, hiring authorities, and budget rigidity. WIDAI becomes a tool for:
   - Classification alignment (aligning data/AI roles with civil service classifications).
   - Hiring authority justification (business case for new positions).
   - Workforce planning (managing within budget freezes and hiring caps).
@@ -680,7 +680,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 1.7 Cooperative/Joint Venture
 - **Definition:** Shared ownership structure (cooperative members, joint venture partners, consortia).
 - **Size Range:** Highly variable.
-- **How ATLAS Changes:** Shared ownership creates governance complexity. ATLAS becomes a tool for:
+- **How WIDAI Changes:** Shared ownership creates governance complexity. WIDAI becomes a tool for:
   - Governance clarity (RACI matrices across owners).
   - Investment justification (shared cost allocation).
   - Role allocation (which organization provides which capabilities?).
@@ -694,7 +694,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ## DIMENSION 2: ORGANIZATIONAL SIZE
 
 ### 2.1 Startup (1–50 employees)
-- **How ATLAS Changes:** At this scale, data/AI is typically ad-hoc or minimal. ATLAS becomes educational:
+- **How WIDAI Changes:** At this scale, data/AI is typically ad-hoc or minimal. WIDAI becomes educational:
   - Founder education ("What data capabilities do we need?").
   - Early hiring (what to hire first: analyst, engineer, both?).
   - Competitive positioning (what's our data/AI story for investors?).
@@ -703,7 +703,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Specific Outputs Favored:** Founder education, hiring sequencing, competitive positioning.
 
 ### 2.2 Scale-Up (50–500 employees)
-- **How ATLAS Changes:** Data function is forming but not mature. ATLAS becomes foundational:
+- **How WIDAI Changes:** Data function is forming but not mature. WIDAI becomes foundational:
   - Org design (how to structure the first data team?).
   - Hiring planning (how many data engineers do we need at $10M ARR?).
   - Skills definition (what does a "Data Scientist" do here?).
@@ -712,7 +712,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Specific Outputs Favored:** Org design blueprint, hiring plan simulator, talent acquisition strategy, skills definition.
 
 ### 2.3 Mid-Market (500–5,000 employees)
-- **How ATLAS Changes:** Data function established, scaling, possibly with some organizational maturity. ATLAS becomes operational:
+- **How WIDAI Changes:** Data function established, scaling, possibly with some organizational maturity. WIDAI becomes operational:
   - Org optimization (restructure as we scale?).
   - Skill gap analysis (what are we missing?).
   - Compliance/governance (formal controls, audit readiness).
@@ -722,7 +722,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Specific Outputs Favored:** All operational tools, compliance/governance artifacts, cost optimization.
 
 ### 2.4 Large Enterprise (5,000–50,000 employees)
-- **How ATLAS Changes:** Multiple data teams, organizational silos, governance complexity. ATLAS becomes strategic:
+- **How WIDAI Changes:** Multiple data teams, organizational silos, governance complexity. WIDAI becomes strategic:
   - Portfolio view (how mature is data/AI across business units?).
   - Consistency (standardize roles/skills across divisions).
   - Governance architecture (RACI, controls, regulatory compliance).
@@ -732,7 +732,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Specific Outputs Favored:** Regulatory compliance, governance/RACI, portfolio benchmarking, career pathing, succession planning.
 
 ### 2.5 Mega-Enterprise (50,000+ employees)
-- **How ATLAS Changes:** Governance, regulatory, and strategic challenges dominate. ATLAS becomes proof and risk management:
+- **How WIDAI Changes:** Governance, regulatory, and strategic challenges dominate. WIDAI becomes proof and risk management:
   - Regulatory evidence package (comprehensive proof of compliance).
   - Risk quantification (key-person risk, compliance risk).
   - Portfolio alignment (ensuring consistency across dozens of business units).
@@ -747,7 +747,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.1 Financial Services (Banking, Insurance, Asset Management)
 - **Regulatory Exposure:** **HIGH** (Basel III, Dodd-Frank, MiFID II, GDPR, EU AI Act).
 - **AI Maturity:** **Developing → Established** (significant investment in ML for trading, risk, credit).
-- **How ATLAS Changes:** Regulatory compliance is existential. ATLAS becomes:
+- **How WIDAI Changes:** Regulatory compliance is existential. WIDAI becomes:
   - Compliance mapping (role-to-regulation documentation).
   - Model risk governance (SR 11-7 roles for model risk management).
   - Audit evidence generation (continuous compliance documentation).
@@ -760,7 +760,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.2 Healthcare & Pharma
 - **Regulatory Exposure:** **HIGH** (HIPAA, FDA, GDPR, health sector AI regulations).
 - **AI Maturity:** **Early → Developing** (less than financial services but growing rapidly).
-- **How ATLAS Changes:** Patient safety and privacy are existential. ATLAS becomes:
+- **How WIDAI Changes:** Patient safety and privacy are existential. WIDAI becomes:
   - Compliance mapping (healthcare-specific role requirements).
   - Data governance (patient data stewardship).
   - Model validation (FDA requirements for AI/ML medical devices).
@@ -771,7 +771,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.3 Manufacturing/Industrial Operations
 - **Regulatory Exposure:** **MEDIUM** (industry-specific: auto/defense/aerospace have high exposure; others lower).
 - **AI Maturity:** **Early → Developing** (growing focus on predictive maintenance, supply chain optimization).
-- **How ATLAS Changes:** Operational efficiency is the goal. ATLAS becomes:
+- **How WIDAI Changes:** Operational efficiency is the goal. WIDAI becomes:
   - Cost optimization (lean data teams, make-buy decisions).
   - Skill specificity (manufacturing-specific data science, e.g., sensor analytics).
   - Integration with operations (data/AI ROI measured in downtime reduction, yield improvement).
@@ -782,7 +782,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.4 Technology/Software (SaaS, Cloud, AI Vendors)
 - **Regulatory Exposure:** **MEDIUM** (GDPR, SOC 2, varies by customer base; AI vendors face EU AI Act scrutiny).
 - **AI Maturity:** **Established → Advanced** (AI is product, not just organizational capability).
-- **How ATLAS Changes:** Technical depth and speed are critical. ATLAS becomes:
+- **How WIDAI Changes:** Technical depth and speed are critical. WIDAI becomes:
   - Hiring planning (scale data/AI teams fast in competitive market).
   - Retention focus (tech talent highly mobile; career pathing critical).
   - Skill specificity (cloud platforms, MLOps, production ML systems).
@@ -793,7 +793,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.5 Retail/CPG (Consumer, E-Commerce)
 - **Regulatory Exposure:** **MEDIUM** (GDPR, state privacy laws, FTC scrutiny of AI in hiring/credit).
 - **AI Maturity:** **Developing → Established** (significant investment in customer analytics, personalization, supply chain).
-- **How ATLAS Changes:** Customer insights and operational speed are critical. ATLAS becomes:
+- **How WIDAI Changes:** Customer insights and operational speed are critical. WIDAI becomes:
   - Skills definition (analytics, personalization, supply chain science).
   - Talent acquisition (competitive market for data science).
   - Competitive benchmarking (peer companies' data maturity).
@@ -804,7 +804,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.6 Energy/Utilities
 - **Regulatory Exposure:** **HIGH** (FERC, NERC, state utility commissions, environmental regulations).
 - **AI Maturity:** **Early → Developing** (focus on grid optimization, predictive maintenance, demand forecasting).
-- **How ATLAS Changes:** Regulatory compliance + operational continuity are critical. ATLAS becomes:
+- **How WIDAI Changes:** Regulatory compliance + operational continuity are critical. WIDAI becomes:
   - Compliance mapping (role-to-regulation documentation).
   - Continuity planning (data/AI systems critical to grid; workforce continuity essential).
   - Long-term workforce planning (aging workforce requires succession planning).
@@ -815,7 +815,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.7 Telecommunications
 - **Regulatory Exposure:** **MEDIUM** (FCC, GDPR, state telecom rules, AI scrutiny).
 - **AI Maturity:** **Established** (significant investment in network optimization, customer analytics, fraud detection).
-- **How ATLAS Changes:** Scale and regulatory compliance are critical. ATLAS becomes:
+- **How WIDAI Changes:** Scale and regulatory compliance are critical. WIDAI becomes:
   - Portfolio view (standardizing data/AI across divisions).
   - Regulatory mapping (EU AI Act, GDPR compliance).
   - Competitive benchmarking (peer telcos' data maturity).
@@ -826,7 +826,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.8 Defense/Aerospace
 - **Regulatory Exposure:** **VERY HIGH** (FedRAMP, CMMC, ITAR, NIST SP 800 series, AI Executive Order).
 - **AI Maturity:** **Developing → Established** (DoD mandating AI governance; defense contractors racing to build capability).
-- **How ATLAS Changes:** Regulatory compliance is existential and severe. ATLAS becomes:
+- **How WIDAI Changes:** Regulatory compliance is existential and severe. WIDAI becomes:
   - Governance documentation (NIST AI RMF compliance, DoD AI Governance standards).
   - Security clearance management (many roles require clearances; talent pool limited).
   - Subcontractor compliance (supply chain governance).
@@ -837,7 +837,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.9 Insurance
 - **Regulatory Exposure:** **HIGH** (state insurance commissions, GDPR, model governance, AI regulation emerging).
 - **AI Maturity:** **Developing** (significant investment in claims processing, pricing, fraud detection).
-- **How ATLAS Changes:** Model governance and regulatory compliance are critical. ATLAS becomes:
+- **How WIDAI Changes:** Model governance and regulatory compliance are critical. WIDAI becomes:
   - Model governance (fairness, explainability, validation).
   - Role-to-regulation mapping (insurance-specific requirements).
   - Talent acquisition (competing with finance for talent).
@@ -848,7 +848,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.10 Professional Services (Consulting, Law, Accounting)
 - **Regulatory Exposure:** **MEDIUM** (GDPR, SOX for larger firms, professional liability).
 - **AI Maturity:** **Early → Developing** (emerging: AI for legal research, audit analytics, consulting delivery).
-- **How ATLAS Changes:** Billable utilization and leverage are critical. ATLAS becomes:
+- **How WIDAI Changes:** Billable utilization and leverage are critical. WIDAI becomes:
   - Skills definition (what AI/data capabilities do we need to sell?).
   - Talent acquisition (how do we compete with tech for data talent?).
   - Internal efficiency (AI/data for internal operations, not just client work).
@@ -859,7 +859,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.11 Real Estate/Property Management
 - **Regulatory Exposure:** **LOW–MEDIUM** (GDPR for EU, state landlord-tenant laws, fair housing).
 - **AI Maturity:** **Early** (emerging: predictive maintenance, tenant analytics, market pricing).
-- **How ATLAS Changes:** Cost control and efficiency are critical. ATLAS becomes:
+- **How WIDAI Changes:** Cost control and efficiency are critical. WIDAI becomes:
   - Make-buy-partner analysis (build vs. use external data services).
   - Hiring planning (how many data people for a $500M property company?).
 - **Primary Buyers:** COO, CFO, CIO.
@@ -869,7 +869,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.12 Logistics/Supply Chain
 - **Regulatory Exposure:** **LOW–MEDIUM** (GDPR for EU operations, environmental regulations, safety).
 - **AI Maturity:** **Developing → Established** (significant investment in route optimization, demand forecasting, warehouse automation).
-- **How ATLAS Changes:** Operational efficiency and cost optimization are critical. ATLAS becomes:
+- **How WIDAI Changes:** Operational efficiency and cost optimization are critical. WIDAI becomes:
   - Skills definition (supply chain science, optimization).
   - Talent acquisition (competing with tech for talent in limited markets).
   - Make-buy decisions (build in-house vs. use 3PL data services).
@@ -880,7 +880,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.13 Media/Entertainment/Publishing
 - **Regulatory Exposure:** **LOW** (GDPR for EU, FTC scrutiny of ad targeting, content moderation).
 - **AI Maturity:** **Developing → Established** (recommendation engines, content analytics, ad optimization).
-- **How ATLAS Changes:** Content and audience insights are critical; speed matters. ATLAS becomes:
+- **How WIDAI Changes:** Content and audience insights are critical; speed matters. WIDAI becomes:
   - Skills definition (content science, recommendation systems).
   - Competitive benchmarking (peer companies' data maturity).
   - Talent acquisition (competing with tech for talent).
@@ -891,7 +891,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.14 Agriculture/Food
 - **Regulatory Exposure:** **MEDIUM** (GDPR for EU, EPA for environmental data, food safety).
 - **AI Maturity:** **Early → Developing** (emerging: precision agriculture, supply chain optimization, food safety analytics).
-- **How ATLAS Changes:** Domain specificity and cost control are critical. ATLAS becomes:
+- **How WIDAI Changes:** Domain specificity and cost control are critical. WIDAI becomes:
   - Skills definition (agriculture data science is specialized).
   - Hiring planning (how to hire specialized talent?).
 - **Primary Buyers:** COO, Chief Sustainability Officer, CIO.
@@ -901,7 +901,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ### 3.15 Education (Universities, K-12, EdTech)
 - **Regulatory Exposure:** **MEDIUM** (FERPA, Title IV, state education regulations, GDPR for international).
 - **AI Maturity:** **Early** (emerging: student analytics, predictive early warning, adaptive learning).
-- **How ATLAS Changes:** Budget constraints and mission alignment are critical. ATLAS becomes:
+- **How WIDAI Changes:** Budget constraints and mission alignment are critical. WIDAI becomes:
   - Grant compliance (data capability as evidence for grant applications).
   - Talent acquisition (competing with tech, limited budgets).
   - Mission alignment (how does data/AI serve the educational mission?).
@@ -915,17 +915,17 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 
 ### 4.1 Pre-Data (No formal data function)
 - **Characteristics:** Data scattered across systems, no centralization, no governance, ad-hoc analytics.
-- **How ATLAS Changes:** Educational focus. ATLAS becomes:
+- **How WIDAI Changes:** Educational focus. WIDAI becomes:
   - Definition of roles (what should a data team include?).
   - Business case building (ROI of data investment).
   - Hiring sequencing (what to build first?).
 - **Primary Buyers:** CEO/Founder, CFO, CIO (often the same person in small orgs).
 - **Buyer Decision Drivers:** Business case clarity, founder/board education.
-- **Discovery Score:** 4 (pre-data orgs often don't recognize they need ATLAS yet).
+- **Discovery Score:** 4 (pre-data orgs often don't recognize they need WIDAI yet).
 
 ### 4.2 Early Data (Basic analytics, manual reporting)
 - **Characteristics:** 1–3 person analytics team, ad-hoc data requests, no formal governance.
-- **How ATLAS Changes:** Foundation-building focus. ATLAS becomes:
+- **How WIDAI Changes:** Foundation-building focus. WIDAI becomes:
   - Org design (how to scale from 1 to 5 people?).
   - Hiring planning (sequence of hiring).
   - Skills definition (what do we need in each role?).
@@ -934,7 +934,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 
 ### 4.3 Developing (Data team forming, some governance)
 - **Characteristics:** 5–15 person data team, basic data warehouse, emerging governance, emerging analytics culture.
-- **How ATLAS Changes:** Scaling and governance focus. ATLAS becomes:
+- **How WIDAI Changes:** Scaling and governance focus. WIDAI becomes:
   - Org optimization (how to structure as we scale?).
   - Skills gap analysis (what are we missing?).
   - Governance framework (how to formalize governance?).
@@ -943,7 +943,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 
 ### 4.4 Established (Mature data org, formal governance)
 - **Characteristics:** 20–50+ person data organization, mature governance, strong analytics culture, some ML.
-- **How ATLAS Changes:** Optimization and risk management focus. ATLAS becomes:
+- **How WIDAI Changes:** Optimization and risk management focus. WIDAI becomes:
   - Portfolio view (consistency across teams).
   - Regulatory compliance (formal controls, audit readiness).
   - Talent management (career pathing, bench strength, succession).
@@ -952,7 +952,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 
 ### 4.5 Advanced/AI-Native (Significant AI deployment, governance at scale)
 - **Characteristics:** 50+ person data/AI organization, deployed ML systems, formal AI governance, AI in core business.
-- **How ATLAS Changes:** Strategic risk management and convergence focus. ATLAS becomes:
+- **How WIDAI Changes:** Strategic risk management and convergence focus. WIDAI becomes:
   - Convergence planning (move to CDAIO model?).
   - Regulatory compliance (comprehensive EU AI Act, ISO 42001 governance).
   - Portfolio risk management (which AI systems carry regulatory risk?).
@@ -965,7 +965,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ## DIMENSION 5: REGULATORY EXPOSURE
 
 ### 5.1 High Regulatory Exposure (Financial Services, Healthcare, Defense, Energy)
-- **How ATLAS Changes:** Compliance and evidence are existential. ATLAS becomes:
+- **How WIDAI Changes:** Compliance and evidence are existential. WIDAI becomes:
   - Regulatory mapping (role-to-regulation documentation).
   - Continuous compliance (audit evidence generation).
   - Governance architecture (formal RACI, controls, oversight).
@@ -975,7 +975,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Specific Outputs Favored:** Role-to-regulation mapping, compliance gap analysis, audit evidence packages, governance/RACI matrices.
 
 ### 5.2 Medium Regulatory Exposure (Retail, Insurance, Telecom, Real Estate, Tech/SaaS)
-- **How ATLAS Changes:** Selective compliance and risk management. ATLAS becomes:
+- **How WIDAI Changes:** Selective compliance and risk management. WIDAI becomes:
   - Targeted compliance mapping (for specific regulations like GDPR, AI Act).
   - Risk quantification (regulatory exposure quantified).
 - **Primary Buyers:** General Counsel, Chief Compliance Officer, CIO.
@@ -983,7 +983,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 2 (compliance focus present but not existential).
 
 ### 5.3 Low Regulatory Exposure (Media, Professional Services, Manufacturing, Agriculture)
-- **How ATLAS Changes:** Opportunistic compliance and business-focused. ATLAS becomes:
+- **How WIDAI Changes:** Opportunistic compliance and business-focused. WIDAI becomes:
   - Optional compliance mapping (if regulations apply).
   - Risk awareness (but not existential).
   - Business efficiency (primary focus).
@@ -996,13 +996,13 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ## DIMENSION 6: WORKFORCE MODEL
 
 ### 6.1 Traditional Full-Time Employment
-- **How ATLAS Changes:** Emphasis on career pathing, retention, internal development.
+- **How WIDAI Changes:** Emphasis on career pathing, retention, internal development.
 - **Primary Buyers:** HR, CDOs, CFOs.
 - **Specific Outputs Favored:** Career pathing, learning paths, compensation benchmarking, succession planning.
 - **Discovery Score:** 1 (baseline assumption).
 
 ### 6.2 Hybrid (Full-Time + Contractors/Consultants)
-- **How ATLAS Changes:** Make-buy-partner analysis becomes critical. ATLAS becomes:
+- **How WIDAI Changes:** Make-buy-partner analysis becomes critical. WIDAI becomes:
   - Role-level make-buy decisions (hire vs. contract for each role).
   - Cost comparison (FTE vs. contractor models).
   - Skill continuity (contractor vs. hire for critical roles).
@@ -1011,7 +1011,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 2 (increasingly common model).
 
 ### 6.3 Gig/Contractor-Heavy
-- **How ATLAS Changes:** External talent management and skill continuity become critical. ATLAS becomes:
+- **How WIDAI Changes:** External talent management and skill continuity become critical. WIDAI becomes:
   - Skill definitions (what are we contracting for?).
   - Vendor management (which vendors provide which capabilities?).
   - Knowledge continuity (how do we retain knowledge with contractor churn?).
@@ -1020,7 +1020,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 3 (emerging model, less common in data/AI but growing).
 
 ### 6.4 Globally Distributed
-- **How ATLAS Changes:** Time zone coordination and cultural fit become critical. ATLAS becomes:
+- **How WIDAI Changes:** Time zone coordination and cultural fit become critical. WIDAI becomes:
   - Role-location mapping (which roles need to be collocated?).
   - Compensation adjustment (cost of living differences).
   - Communication structure (RACI across time zones).
@@ -1029,7 +1029,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 3 (increasingly common post-COVID).
 
 ### 6.5 Unionized
-- **How ATLAS Changes:** Union contracts and collective bargaining affect hiring flexibility. ATLAS becomes:
+- **How WIDAI Changes:** Union contracts and collective bargaining affect hiring flexibility. WIDAI becomes:
   - Compliance with union contracts (role definitions, seniority rules).
   - Workforce planning within constraints (what flexibility do we have?).
 - **Primary Buyers:** HR, CFOs, General Counsel.
@@ -1037,7 +1037,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 4 (rare in data/AI; mostly affects manufacturing, public sector).
 
 ### 6.6 Seasonal/Cyclical
-- **How ATLAS Changes:** Workforce planning must account for cyclical demand. ATLAS becomes:
+- **How WIDAI Changes:** Workforce planning must account for cyclical demand. WIDAI becomes:
   - Seasonal staffing models (core team + seasonal contractors).
   - Skills continuity (how do we train seasonal staff?).
 - **Primary Buyers:** CFOs, operational leaders.
@@ -1049,15 +1049,15 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ## DIMENSION 7: TRANSFORMATION STAGE
 
 ### 7.1 Pre-Transformation (No active data/AI initiative)
-- **How ATLAS Changes:** Awareness and business case building are the focus. ATLAS becomes:
+- **How WIDAI Changes:** Awareness and business case building are the focus. WIDAI becomes:
   - Education (what is the data/AI opportunity?).
   - Business case templates (ROI of transformation).
   - Competitive benchmarking (what are peers doing?).
 - **Primary Buyers:** CEO, board, CFO.
-- **Discovery Score:** 4 (pre-transformation orgs often don't recognize ATLAS relevance).
+- **Discovery Score:** 4 (pre-transformation orgs often don't recognize WIDAI relevance).
 
 ### 7.2 Early Transformation (Data/AI initiative launched, <1 year)
-- **How ATLAS Changes:** Planning and hiring focus. ATLAS becomes:
+- **How WIDAI Changes:** Planning and hiring focus. WIDAI becomes:
   - Org design (what does success look like?).
   - Hiring planning (talent acquisition sequence).
   - Skills definition (what are we building toward?).
@@ -1065,7 +1065,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 2 (clear use case once transformation is initiated).
 
 ### 7.3 Mid-Transformation (1–3 years in, partial capability, scaling phase)
-- **How ATLAS Changes:** Scaling, governance, and risk management focus. ATLAS becomes:
+- **How WIDAI Changes:** Scaling, governance, and risk management focus. WIDAI becomes:
   - Skill gap analysis (what's missing?).
   - Governance architecture (formal controls).
   - Talent management (career pathing, retention).
@@ -1073,7 +1073,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 1 (obvious use case).
 
 ### 7.4 Post-Transformation (3–5 years in, capability mature, optimization phase)
-- **How ATLAS Changes:** Optimization and competitive advantage focus. ATLAS becomes:
+- **How WIDAI Changes:** Optimization and competitive advantage focus. WIDAI becomes:
   - Portfolio optimization (consistency, efficiency).
   - Regulatory compliance (formal proof).
   - Strategic talent management (retention, development).
@@ -1081,7 +1081,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 1 (obvious use case).
 
 ### 7.5 Continuous Transformation (5+ years, perpetual evolution)
-- **How ATLAS Changes:** Strategic evolution and risk management focus. ATLAS becomes:
+- **How WIDAI Changes:** Strategic evolution and risk management focus. WIDAI becomes:
   - Convergence planning (CDAIO evolution?).
   - Regulatory adaptation (EU AI Act, emerging standards).
   - Talent strategy (staying ahead of market).
@@ -1094,13 +1094,13 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ## DIMENSION 8: GEOGRAPHIC CONTEXT
 
 ### 8.1 US-Only Operations
-- **How ATLAS Changes:** US regulatory focus (SOX, state privacy laws, sector-specific).
+- **How WIDAI Changes:** US regulatory focus (SOX, state privacy laws, sector-specific).
 - **Primary Buyers:** CIOs, CDOs, CFOs.
 - **Specific Outputs Favored:** US-focused compliance, competitive benchmarking.
 - **Discovery Score:** 1 (baseline context).
 
 ### 8.2 EU Operations (GDPR + AI Act Exposure)
-- **How ATLAS Changes:** EU regulatory exposure is critical. ATLAS becomes:
+- **How WIDAI Changes:** EU regulatory exposure is critical. WIDAI becomes:
   - GDPR compliance documentation (role-to-regulation mapping).
   - EU AI Act governance (comprehensive, given EU's leadership in AI regulation).
   - Data localization (role definitions may be EU-specific).
@@ -1109,7 +1109,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 1 (obvious compliance focus).
 
 ### 8.3 Global Operations (Multi-Region)
-- **How ATLAS Changes:** Regulatory complexity multiplies. ATLAS becomes:
+- **How WIDAI Changes:** Regulatory complexity multiplies. WIDAI becomes:
   - Regional compliance mapping (GDPR, US, sector-specific, China, etc.).
   - Global org design (consistency vs. regional adaptation).
   - Talent strategy (global talent markets have different dynamics).
@@ -1118,7 +1118,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 2 (complex multi-region context).
 
 ### 8.4 Emerging Markets Focus (Asia, Latin America, Africa)
-- **How ATLAS Changes:** Emerging regulatory environments + talent scarcity. ATLAS becomes:
+- **How WIDAI Changes:** Emerging regulatory environments + talent scarcity. WIDAI becomes:
   - Talent acquisition strategy (how to hire specialized talent in emerging markets?).
   - Make-buy decisions (may need to outsource or partner).
   - Regulatory adaptation (rules still forming in many markets).
@@ -1131,13 +1131,13 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 ## DIMENSION 9: DECISION-MAKING CULTURE
 
 ### 9.1 Centralized (Top-down, CEO/CFO makes data/AI decisions)
-- **How ATLAS Changes:** Org design and financial justification are critical.
+- **How WIDAI Changes:** Org design and financial justification are critical.
 - **Buyers:** CEO, CFO, CIO.
 - **Specific Outputs Favored:** Org design blueprint, financial models, board presentations.
 - **Discovery Score:** 2 (organizational culture context, not always obvious).
 
 ### 9.2 Federated (Business units own data/AI decisions)
-- **How ATLAS Changes:** Consistency enforcement becomes challenging. ATLAS becomes:
+- **How WIDAI Changes:** Consistency enforcement becomes challenging. WIDAI becomes:
   - Portfolio view (comparing/benchmarking across units).
   - Talent retention (career pathing across federated structure).
   - Governance coordination (RACI across units).
@@ -1146,16 +1146,16 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 - **Discovery Score:** 3 (federated model is non-obvious challenge).
 
 ### 9.3 Consensus-Driven (Collaborative decision-making)
-- **How ATLAS Changes:** Buy-in and education are critical.
+- **How WIDAI Changes:** Buy-in and education are critical.
 - **Buyers:** CDO, CIO, business leaders.
 - **Specific Outputs Favored:** Educational content, org design rationale, business case materials.
-- **Discovery Score:** 3 (consensus culture is non-obvious in terms of ATLAS benefit).
+- **Discovery Score:** 3 (consensus culture is non-obvious in terms of WIDAI benefit).
 
 ### 9.4 Founder-Led (Founder/family makes decisions, fast iteration)
-- **How ATLAS Changes:** Speed and founder education are critical.
+- **How WIDAI Changes:** Speed and founder education are critical.
 - **Buyers:** Founder/CEO.
 - **Specific Outputs Favored:** Founder education, quick decision tools, competitive benchmarking.
-- **Discovery Score:** 3 (founder-led culture is non-obvious in terms of ATLAS benefit).
+- **Discovery Score:** 3 (founder-led culture is non-obvious in terms of WIDAI benefit).
 
 ---
 
@@ -1165,10 +1165,10 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 
 | Discovery Score | Dimension + Value | Examples | Strategic Insight |
 |---|---|---|---|
-| 1 (Obvious) | Size, maturity stage, ownership (public), transformation stage | Large enterprise, established maturity, public company, mid-transformation | Clear use cases; ATLAS sells itself |
+| 1 (Obvious) | Size, maturity stage, ownership (public), transformation stage | Large enterprise, established maturity, public company, mid-transformation | Clear use cases; WIDAI sells itself |
 | 2 (Clear once positioned) | Ownership (PE, VC), regulatory exposure (medium), industry (finance, tech), workforce model (hybrid), decision culture | PE-backed portfolio, medium-regulatory industry, hybrid FTE+contractor, federated org | Positioning matters; need to explain context-specific benefit |
 | 3 (Non-obvious, high value) | Regulatory mapping, family-owned, specialized industries, geographic context, global operations, federated culture | Cost-of-vacancy analysis for family-owned, GDPR compliance for EU, federated org design, emerging markets talent | Hidden value; require consultative selling to surface |
-| 4–5 (Sophisticated) | Pre-data orgs, government context, cooperative ownership, pre-transformation, emerging markets | Pre-data org needs education first; government compliance unique; startup ignorant of need | Lowest-hanging fruit if ATLAS can reach; otherwise ignored |
+| 4–5 (Sophisticated) | Pre-data orgs, government context, cooperative ownership, pre-transformation, emerging markets | Pre-data org needs education first; government compliance unique; startup ignorant of need | Lowest-hanging fruit if WIDAI can reach; otherwise ignored |
 
 ### Total Contextual Dimensions: 8
 ### Total Contextual Values Enumerated: 50+
@@ -1199,7 +1199,7 @@ For each dimension, enumeration shows: **(A) the values/categories, (B) how cont
 
 **Total outputs enumerated: 50+ distinct deliverables across three categories (Standalone, Tools, Data Products)**
 
-The strategic insight: **ATLAS is not a single product. It's a *product suite* with 50+ possible outputs, each with different buyer types and contexts.**
+The strategic insight: **WIDAI is not a single product. It's a *product suite* with 50+ possible outputs, each with different buyer types and contexts.**
 
 - **Category A (Standalone Deliverables):** 35+ outputs, ranging from obvious (org design blueprint) to sophisticated (attrition risk modeling).
 - **Category B (Embedded Tools):** 12+ tools for operational use (hiring, skills gap, career pathing).
@@ -1208,7 +1208,7 @@ The strategic insight: **ATLAS is not a single product. It's a *product suite* w
 **Non-obvious outputs with highest strategic value:**
 1. **Cost-of-Vacancy Analysis** — quantifies urgency of hiring, justifies recruiting spend.
 2. **Role-to-Regulation Mapping** — solves the "prove compliance to auditors" problem for regulated companies.
-3. **CDAIO Org Chart Template** — ATLAS is uniquely positioned to define convergence structure.
+3. **CDAIO Org Chart Template** — WIDAI is uniquely positioned to define convergence structure.
 4. **Skill Demand Forecasting** — forward-looking tool using role trends.
 5. **Organizational Network Analysis** — reveals non-obvious role dependencies and centrality.
 
@@ -1218,9 +1218,9 @@ The strategic insight: **ATLAS is not a single product. It's a *product suite* w
 
 **Total contextual dimensions enumerated: 9 core dimensions × 40+ values**
 
-The strategic insight: **ATLAS's value is heavily context-dependent. The same framework creates 10x more value for a regulated PE-backed portfolio company than for a bootstrap startup.**
+The strategic insight: **WIDAI's value is heavily context-dependent. The same framework creates 10x more value for a regulated PE-backed portfolio company than for a bootstrap startup.**
 
-**Highest-value contexts (where ATLAS delivers greatest ROI):**
+**Highest-value contexts (where WIDAI delivers greatest ROI):**
 1. **Regulated mid-market-to-large enterprises** (finance, healthcare, defense) — regulatory compliance + org design + talent management = existential need.
 2. **PE-backed portfolio companies** (any industry) — cost optimization + deal support + integration planning = urgent, quantifiable ROI.
 3. **Post-IPO/public companies** — governance + audit readiness + succession planning = board/audit committee demand.
@@ -1232,7 +1232,7 @@ The strategic insight: **ATLAS's value is heavily context-dependent. The same fr
 3. PE operating partners (high decision-making authority, clear ROI metrics, willingness to invest in portfolio tools).
 
 **Hardest-to-reach contexts (require most positioning):**
-1. Pre-data organizations (no one recognizes they need ATLAS yet).
+1. Pre-data organizations (no one recognizes they need WIDAI yet).
 2. Early-stage startups (data is not yet a priority).
 3. Very small organizations (<50 employees, no formal data function).
 
@@ -1248,7 +1248,7 @@ The strategic insight: **ATLAS's value is heavily context-dependent. The same fr
 - With medium–high regulatory exposure
 - Looking to optimize cost, reduce risk, and prepare for exit
 
-**For this buyer, ATLAS solves:**
+**For this buyer, WIDAI solves:**
 1. **Deal support** (integration planning, redundancy identification, cost analysis).
 2. **Governance** (regulatory mapping, compliance gap analysis, RACI matrices).
 3. **Cost control** (make-buy-partner analysis, staffing optimization).
@@ -1261,7 +1261,7 @@ The strategic insight: **ATLAS's value is heavily context-dependent. The same fr
 - In established data maturity (Level 4)
 - Moving toward convergence (CDAIO model)
 
-**For this buyer, ATLAS solves:**
+**For this buyer, WIDAI solves:**
 1. **Organizational clarity** (org chart defensibility, role definition consistency).
 2. **Regulatory compliance** (role-to-regulation mapping, audit evidence, compliance gap analysis).
 3. **Talent strategy** (succession planning, bench strength, career pathing for retention).

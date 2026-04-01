@@ -4,13 +4,13 @@ Based on R05 License Audit and R05 Dependency Analysis results."""
 
 import json
 
-FRAMEWORKS_PATH = "/sessions/awesome-elegant-mayer/mnt/ATLAS/atlas-dataset/frameworks/frameworks.json"
+FRAMEWORKS_PATH = "/sessions/awesome-elegant-mayer/mnt/WIDAI/atlas-dataset/frameworks/frameworks.json"
 
 # Classification map: framework_id -> (license_class, commercial_status, license_type, notes)
 CLASSIFICATIONS = {
     # GREEN — Clear for commercial use
     "80000_HOURS": ("GREEN", "approved", "Free educational content", ""),
-    "ATLAS": ("GREEN", "approved", "Project-specific", "Self-reference"),
+    "WIDAI": ("GREEN", "approved", "Project-specific", "Self-reference"),
     "BLS_SOC": ("GREEN", "approved", "Public Domain (U.S. Government)", ""),
     "DATA_MESH": ("GREEN", "approved", "Open architectural pattern", "Credit Zhamak Dehghani"),
     "DBT_LABS": ("GREEN", "approved", "Apache License 2.0", "Include Apache 2.0 notice"),
@@ -29,7 +29,7 @@ CLASSIFICATIONS = {
     "OCC": ("GREEN", "approved", "Public Domain (U.S. Government)", ""),
     "SINGAPORE_MAIG": ("GREEN", "approved", "Government framework", ""),
     # Reclassified GREEN — Thomas's original practitioner expertise
-    "PRACTITIONER_COMMUNITY": ("GREEN", "approved", "ATLAS original (practitioner expertise)", "Reclassified from YELLOW per author confirmation 2026-03-26"),
+    "PRACTITIONER_COMMUNITY": ("GREEN", "approved", "WIDAI original (practitioner expertise)", "Reclassified from YELLOW per author confirmation 2026-03-26"),
     
     # RED — Excluded from commercial distribution (citation-only, zero data loss)
     "BCG": ("RED", "excluded-commercial", "Proprietary (copyrighted)", "Citation-only dependency; safe to exclude"),

@@ -9,15 +9,15 @@
 
 ## Context
 
-ATLAS currently has 187 defined roles but only 37 have complete KSA mappings. The remaining 150 are scaffold-only — role definitions without the knowledge, skills, and abilities that enable assessment, gap analysis, and competency evaluation. Schema fields are populated at 10 of 25.
+WIDAI currently has 187 defined roles but only 37 have complete KSA mappings. The remaining 150 are scaffold-only — role definitions without the knowledge, skills, and abilities that enable assessment, gap analysis, and competency evaluation. Schema fields are populated at 10 of 25.
 
-The previous implicit assumption — articulated in the ATLAS Goal Definition — was that the dataset must reach comprehensive completion before products could ship. The Goal Definition's critical path reads: "Full KSA authoring for all 187 roles... Without KSAs, there is no skills gap analysis, no competency assessment, no training path generation, no interview rubric — which means no product."
+The previous implicit assumption — articulated in the WIDAI Goal Definition — was that the dataset must reach comprehensive completion before products could ship. The Goal Definition's critical path reads: "Full KSA authoring for all 187 roles... Without KSAs, there is no skills gap analysis, no competency assessment, no training path generation, no interview rubric — which means no product."
 
 Constraint Inversion (Pass 4) directly challenged this assumption.
 
 ## Decision
 
-**ATLAS will pursue product validation on current data coverage (37 KSA-complete roles across GOV, ENG, DEV, DSM, RSK, OPS, LDR, ANL categories) rather than waiting for full dataset completion.**
+**WIDAI will pursue product validation on current data coverage (37 KSA-complete roles across GOV, ENG, DEV, DSM, RSK, OPS, LDR, ANL categories) rather than waiting for full dataset completion.**
 
 This decision is conditional on Tier 0 validation: R01 (coverage gap test mapping 3-5 real team structures against current data) must confirm that current coverage supports a minimum viable assessment. If R01 fails, this decision reverses and the roadmap pivots to accelerated KSA authoring before product work.
 
@@ -38,15 +38,15 @@ This decision is conditional on Tier 0 validation: R01 (coverage gap test mappin
 | LDR | 31 | 24 | Medium — leadership assessment |
 | ANL | 14 | 30 | Medium — analytics team |
 
-A mid-market data/AI team of 15-30 people maps to approximately 20-40 ATLAS roles. The categories with KSA coverage account for the majority of those roles.
+A mid-market data/AI team of 15-30 people maps to approximately 20-40 WIDAI roles. The categories with KSA coverage account for the majority of those roles.
 
-**The CDAIO persona confirmed this.** Pass 3's newly hired CDAIO persona articulated: "I don't need perfect coverage. I need useful coverage for the roles I actually have." And: "If ATLAS could give me a quick assessment tool that maps my current team in under a day... I'd pay for that today. Before the taxonomy is complete. Before the API exists."
+**The CDAIO persona confirmed this.** Pass 3's newly hired CDAIO persona articulated: "I don't need perfect coverage. I need useful coverage for the roles I actually have." And: "If WIDAI could give me a quick assessment tool that maps my current team in under a day... I'd pay for that today. Before the taxonomy is complete. Before the API exists."
 
 **Piloting generates authoring priority data.** The gap between current coverage and what a real assessment requires is the most valuable input for KSA authoring prioritization. Without a pilot, authoring priority is guesswork. With a pilot, every unmapped role becomes a prioritized backlog item with real-world evidence of its importance.
 
 ### What "Ship" Means
 
-Ship does not mean "release ATLAS as complete." It means:
+Ship does not mean "release WIDAI as complete." It means:
 
 - Run a PE assessment pilot using current data
 - Document coverage gaps encountered during the pilot
@@ -83,10 +83,10 @@ This validation removes the conditional dependency on ADR-003. The decision to "
 
 ## References
 
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 4: Constraint 1 ("The dataset must be complete before products ship")
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 3: CDAIO Persona D
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 4: Assumption Test Queue (R01 as immediate test)
-- ATLAS Goal Definition, Critical Path section
-- ATLAS dataset: current KSA distribution across 8 categories
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 4: Constraint 1 ("The dataset must be complete before products ship")
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 3: CDAIO Persona D
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 4: Assumption Test Queue (R01 as immediate test)
+- WIDAI Goal Definition, Critical Path section
+- WIDAI dataset: current KSA distribution across 8 categories
 - Phase 0 Validation Sprint Results: `docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`
 - R01 Coverage Gap Test: `docs/roadmap/R01-coverage-gap-test.md`

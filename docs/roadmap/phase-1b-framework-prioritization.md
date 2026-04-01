@@ -9,10 +9,10 @@
 
 Each of 70 source frameworks assessed against four criteria:
 
-1. **KSA-Equivalent Concepts** — Does the framework define competencies, skills, knowledge areas, tasks, work activities, or similar construct types that can be mapped against ATLAS KSAs using STRM relationship types?
+1. **KSA-Equivalent Concepts** — Does the framework define competencies, skills, knowledge areas, tasks, work activities, or similar construct types that can be mapped against WIDAI KSAs using STRM relationship types?
 2. **Extractable Elements** — Does the framework provide machine-readable or manually extractable element data at sufficient granularity for per-element STRM mapping?
-3. **ATLAS Coverage Breadth** — How many ATLAS roles reference this framework? (Proxy for domain coverage.)
-4. **Strategic Use Case Relevance** — Does this framework directly serve ATLAS commercial use cases (PE Assessment, EU AI Act Compliance, Model Risk Governance, Agentic AI Workforce Design)?
+3. **WIDAI Coverage Breadth** — How many WIDAI roles reference this framework? (Proxy for domain coverage.)
+4. **Strategic Use Case Relevance** — Does this framework directly serve WIDAI commercial use cases (PE Assessment, EU AI Act Compliance, Model Risk Governance, Agentic AI Workforce Design)?
 
 ## Classification Results
 
@@ -74,7 +74,7 @@ These frameworks are job posting aggregators, consultancy research, publications
 | MCKINSEY | 6 | Consultancy research |
 | INDEED | 4 | Job posting aggregator |
 | AWS | 4 | Vendor certification/documentation — describes product skills, not workforce competencies |
-| ATLAS | 4 | Self-reference |
+| WIDAI | 4 | Self-reference |
 | BCG | 3 | Consultancy research (paywalled) |
 | FORRESTER | 3 | Analyst research |
 | MIT_SLOAN | 3 | Academic publication |
@@ -102,7 +102,7 @@ These frameworks are job posting aggregators, consultancy research, publications
 | VELLUM | 1 | AI tool vendor |
 | WEF | 1 | Forum/publication |
 
-**Total Category B: 35 frameworks (plus ATLAS self-reference = 36)**
+**Total Category B: 35 frameworks (plus WIDAI self-reference = 36)**
 
 ### Note on Category B
 
@@ -114,18 +114,18 @@ From the 34 eligible frameworks, execution priority is determined by strategic u
 
 ### Tier 1 — Foundational (Execute First)
 
-These frameworks define competencies directly, have GREEN licenses, and anchor the most ATLAS use cases. They establish the STRM methodology rhythm and produce the highest-value gap identification.
+These frameworks define competencies directly, have GREEN licenses, and anchor the most WIDAI use cases. They establish the STRM methodology rhythm and produce the highest-value gap identification.
 
 | Priority | Framework | Rationale |
 |----------|-----------|-----------|
-| 1 | **O*NET** | Largest competency database in existence. 25 ATLAS role refs. Directly defines K, S, A, T, Work Activities. GREEN license. Anchors PE Assessment use case via occupational benchmarking. |
-| 2 | **NIST NICE** | The model ATLAS emulates for KSA structure. 4 refs but comprehensive cyber-adjacent competencies. GREEN license. Validates the KSA taxonomy design itself. |
-| 3 | **DCWF** | US federal data/AI workforce competency framework. 15 refs. GREEN license. Direct competitor/complement to ATLAS scope. |
+| 1 | **O*NET** | Largest competency database in existence. 25 WIDAI role refs. Directly defines K, S, A, T, Work Activities. GREEN license. Anchors PE Assessment use case via occupational benchmarking. |
+| 2 | **NIST NICE** | The model WIDAI emulates for KSA structure. 4 refs but comprehensive cyber-adjacent competencies. GREEN license. Validates the KSA taxonomy design itself. |
+| 3 | **DCWF** | US federal data/AI workforce competency framework. 15 refs. GREEN license. Direct competitor/complement to WIDAI scope. |
 | 4 | **DDAT** | UK equivalent to DCWF. 8 refs. GREEN license. International validation and gap identification. |
 
 ### Tier 2 — Strategic (Execute Next)
 
-These frameworks directly serve ATLAS commercial use cases. They are either regulatory requirements or industry-standard capability models.
+These frameworks directly serve WIDAI commercial use cases. They are either regulatory requirements or industry-standard capability models.
 
 | Priority | Framework | Rationale |
 |----------|-----------|-----------|

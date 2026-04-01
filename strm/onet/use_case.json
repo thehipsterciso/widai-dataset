@@ -9,9 +9,9 @@
   "tier": 1,
 
   "use_case_per_ir8477_section3": {
-    "target_audience": "ATLAS framework developers, PE assessment practitioners, and data/AI workforce planners who need to understand how ATLAS KSAs relate to the U.S. government's most comprehensive occupational competency database. Secondary audience: stakeholders evaluating ATLAS methodological rigor.",
+    "target_audience": "WIDAI framework developers, PE assessment practitioners, and data/AI workforce planners who need to understand how WIDAI KSAs relate to the U.S. government's most comprehensive occupational competency database. Secondary audience: stakeholders evaluating WIDAI methodological rigor.",
 
-    "why_this_mapping": "O*NET is the largest occupational competency database in existence (923 occupations, 169 leaf-level content model elements). It is referenced by 25 ATLAS roles — the highest reference count of any framework. This STRM serves three purposes: (1) validate ATLAS KSA pool completeness against a comprehensive general-purpose competency taxonomy, (2) identify gaps where O*NET defines competencies relevant to data/AI work that ATLAS does not yet cover, (3) establish the STRM methodology rhythm — O*NET as first framework sets the quality standard for all subsequent STRMs.",
+    "why_this_mapping": "O*NET is the largest occupational competency database in existence (923 occupations, 169 leaf-level content model elements). It is referenced by 25 WIDAI roles — the highest reference count of any framework. This STRM serves three purposes: (1) validate WIDAI KSA pool completeness against a comprehensive general-purpose competency taxonomy, (2) identify gaps where O*NET defines competencies relevant to data/AI work that WIDAI does not yet cover, (3) establish the STRM methodology rhythm — O*NET as first framework sets the quality standard for all subsequent STRMs.",
 
     "concept_types_mapped": {
       "focal_document": {
@@ -25,10 +25,10 @@
         ],
         "total_fdes_in_scope": 130,
         "total_fdes_excluded": 39,
-        "exclusion_rationale": "O*NET Psychomotor Abilities (1.A.2.*: 12 elements), Physical Abilities (1.A.3.*: 9 elements), and Sensory Abilities (1.A.4.*: 12 elements) are excluded. ATLAS covers data and AI workforce roles — knowledge work occupations where physical, psychomotor, and sensory abilities are not differentiating competencies. Excluding these prevents diluting the STRM with 39 'No relationship' results that carry no analytical value. Physical work activities (4.A.3.a.*: 4 elements) are similarly excluded."
+        "exclusion_rationale": "O*NET Psychomotor Abilities (1.A.2.*: 12 elements), Physical Abilities (1.A.3.*: 9 elements), and Sensory Abilities (1.A.4.*: 12 elements) are excluded. WIDAI covers data and AI workforce roles — knowledge work occupations where physical, psychomotor, and sensory abilities are not differentiating competencies. Excluding these prevents diluting the STRM with 39 'No relationship' results that carry no analytical value. Physical work activities (4.A.3.a.*: 4 elements) are similarly excluded."
       },
       "reference_document": {
-        "source": "ATLAS KSA Pool v0.5.2",
+        "source": "WIDAI KSA Pool v0.5.2",
         "concept_types": [
           "Knowledge (K) — domain-organized",
           "Skills (S) — domain-organized",
@@ -40,13 +40,13 @@
       }
     },
 
-    "direction_of_mapping": "Focal → Reference. Each O*NET content model element (focal) is evaluated against the ATLAS KSA pool (reference). An O*NET element with 'No relationship' to any ATLAS KSA indicates a potential gap in ATLAS coverage.",
+    "direction_of_mapping": "Focal → Reference. Each O*NET content model element (focal) is evaluated against the WIDAI KSA pool (reference). An O*NET element with 'No relationship' to any WIDAI KSA indicates a potential gap in WIDAI coverage.",
 
-    "exhaustiveness_level": "Exhaustive within scope. Every in-scope O*NET FDE is evaluated. For each FDE, the most relevant ATLAS KSA is identified (best match). Where multiple ATLAS KSAs relate to a single O*NET element, the strongest relationship is recorded as primary with secondary relationships noted in rationale.",
+    "exhaustiveness_level": "Exhaustive within scope. Every in-scope O*NET FDE is evaluated. For each FDE, the most relevant WIDAI KSA is identified (best match). Where multiple WIDAI KSAs relate to a single O*NET element, the strongest relationship is recorded as primary with secondary relationships noted in rationale.",
 
-    "rationale_type": "Semantic (primary). O*NET and ATLAS use different vocabularies to describe overlapping competency domains. O*NET uses occupation-general language ('Knowledge of business and management principles...'); ATLAS uses role-specific language within data/AI context ('Knowledge of data governance policy frameworks...'). Syntactic matching would undercount relationships due to vocabulary divergence. Functional rationale is used as secondary where semantic comparison is insufficient — particularly for Work Activities where the functional outcome matters more than the descriptive language.",
+    "rationale_type": "Semantic (primary). O*NET and WIDAI use different vocabularies to describe overlapping competency domains. O*NET uses occupation-general language ('Knowledge of business and management principles...'); WIDAI uses role-specific language within data/AI context ('Knowledge of data governance policy frameworks...'). Syntactic matching would undercount relationships due to vocabulary divergence. Functional rationale is used as secondary where semantic comparison is insufficient — particularly for Work Activities where the functional outcome matters more than the descriptive language.",
 
-    "rationale_justification": "O*NET is a general-purpose occupational taxonomy. ATLAS is a domain-specific workforce framework for data and AI. The concept overlap is real but the language diverges significantly. Semantic rationale allows evaluating whether two differently-worded concepts describe the same underlying competency. This is the standard SCF approach for cross-framework STRM where vocabulary differs but domain overlaps."
+    "rationale_justification": "O*NET is a general-purpose occupational taxonomy. WIDAI is a domain-specific workforce framework for data and AI. The concept overlap is real but the language diverges significantly. Semantic rationale allows evaluating whether two differently-worded concepts describe the same underlying competency. This is the standard SCF approach for cross-framework STRM where vocabulary differs but domain overlaps."
   },
 
   "scope_decisions": {

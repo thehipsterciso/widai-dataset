@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-ATLAS derives its workforce taxonomy from 70+ source frameworks. This audit evaluates the licensing terms of each framework to determine whether commercial distribution of ATLAS is legally viable.
+WIDAI derives its workforce taxonomy from 70+ source frameworks. This audit evaluates the licensing terms of each framework to determine whether commercial distribution of WIDAI is legally viable.
 
 ### Key Findings
 
@@ -19,7 +19,7 @@ ATLAS derives its workforce taxonomy from 70+ source frameworks. This audit eval
 
 ### Critical Risk Assessment
 
-**RESULT: CONDITIONAL** — ATLAS can proceed with commercial distribution only under specific conditions (see recommendations below).
+**RESULT: CONDITIONAL** — WIDAI can proceed with commercial distribution only under specific conditions (see recommendations below).
 
 ### Immediate Blockers (RED Frameworks)
 
@@ -70,7 +70,7 @@ These frameworks are explicitly open for commercial use, modification, and deriv
 - **Commercial Derivatives:** YES
 - **Attribution:** Required (to USDOL/ETA)
 - **Risk:** GREEN
-- **Notes:** This is a key source framework for ATLAS. Clear legal ground for commercial use. Requires attribution.
+- **Notes:** This is a key source framework for WIDAI. Clear legal ground for commercial use. Requires attribution.
 
 #### 2. **BLS-SOC** ✓
 - **Publisher:** U.S. Bureau of Labor Statistics
@@ -208,19 +208,19 @@ These frameworks are explicitly open for commercial use, modification, and deriv
 - **Risk:** GREEN
 - **Notes:** Presumed government framework available for public use.
 
-#### 19. **ATLAS (Self)** ✓
-- **Publisher:** ATLAS Project
+#### 19. **WIDAI (Self)** ✓
+- **Publisher:** WIDAI Project
 - **License:** Project-specific
 - **Commercial Derivatives:** YES (by definition)
 - **Attribution:** N/A
 - **Risk:** GREEN
-- **Notes:** Internal reference to ATLAS itself.
+- **Notes:** Internal reference to WIDAI itself.
 
 ---
 
 ### YELLOW Frameworks (28 total) — Conditional/Requires Review
 
-These frameworks have uncertain, mixed, or conditional licensing terms. Each requires individual evaluation for the specific ATLAS use case.
+These frameworks have uncertain, mixed, or conditional licensing terms. Each requires individual evaluation for the specific WIDAI use case.
 
 #### Conditional Commercial (Requires Assessment)
 
@@ -259,7 +259,7 @@ These frameworks have uncertain, mixed, or conditional licensing terms. Each req
 
 ### RED Frameworks (23 total) — Blockers to Commercial Distribution
 
-These frameworks explicitly prohibit or severely restrict commercial derivative works. **Cannot be included in ATLAS commercial products without separate licensing agreements.**
+These frameworks explicitly prohibit or severely restrict commercial derivative works. **Cannot be included in WIDAI commercial products without separate licensing agreements.**
 
 #### 1. **Gartner** 🚫 CRITICAL BLOCKER
 - **Publisher:** Gartner, Inc.
@@ -267,7 +267,7 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 - **Commercial Derivatives:** NO - explicitly prohibited
 - **Key Restriction:** Gartner **explicitly prohibits** using content as input to AI/ML systems or creating derivatives. No automated scraping or commercial products permitted.
 - **Contact:** Gartner Content Compliance (content-compliance@gartner.com)
-- **Impact:** If ATLAS mappings derive from Gartner analysis, commercial distribution violates their terms.
+- **Impact:** If WIDAI mappings derive from Gartner analysis, commercial distribution violates their terms.
 
 #### 2. **Forrester** 🚫 CRITICAL BLOCKER
 - **Publisher:** Forrester Research, Inc.
@@ -282,14 +282,14 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 - **License:** Proprietary/Copyrighted
 - **Commercial Derivatives:** NO - requires written permission
 - **Key Restriction:** Strict IP controls. External use, reprints, or marketing use requires written permission from reprints@mckinsey.com. Likely requires licensing fee.
-- **Impact:** Cannot include McKinsey-derived mappings in commercial ATLAS without explicit authorization.
+- **Impact:** Cannot include McKinsey-derived mappings in commercial WIDAI without explicit authorization.
 
 #### 4. **IDC** 🚫 CRITICAL BLOCKER
 - **Publisher:** IDC (International Data Corporation)
 - **License:** Proprietary/Copyrighted
 - **Commercial Derivatives:** NO - requires written permission for external use
 - **Key Restriction:** All research copyrighted. Cannot be reproduced, excerpted, or distributed externally without written IDC Permissions (permissions@idc.com).
-- **Impact:** Cannot use IDC research commercially in ATLAS.
+- **Impact:** Cannot use IDC research commercially in WIDAI.
 
 #### 5. **COBIT-2019** 🚫 CRITICAL BLOCKER
 - **Publisher:** ISACA
@@ -297,7 +297,7 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 - **Commercial Derivatives:** NO - requires annual commercial license
 - **Key Restriction:** Creating derivatives for commercial purposes, embedding in commercial products, or commercial use requires annual license from ISACA. Unauthorized use is copyright infringement.
 - **Contact:** IPinfo@isaca.org or +1-847-660-5557
-- **Impact:** Cannot distribute commercial ATLAS with COBIT-2019 mappings without ISACA license.
+- **Impact:** Cannot distribute commercial WIDAI with COBIT-2019 mappings without ISACA license.
 
 #### 6. **SFIA** 🚫 CRITICAL BLOCKER
 - **Publisher:** SFIA Foundation
@@ -305,7 +305,7 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 - **Commercial Derivatives:** NO - requires commercial exploitation license
 - **Key Restriction:** Copying of SFIA material is prohibited unless authorized in writing or under valid SFIA license. Commercial exploitation of SFIA (e.g., mapping to commercial services) requires annual license fee.
 - **Contact:** SFIA Foundation (licensing@sfia-online.org)
-- **Impact:** Cannot commercially exploit ATLAS with SFIA mappings without license.
+- **Impact:** Cannot commercially exploit WIDAI with SFIA mappings without license.
 
 #### 7. **CMMI-DMM** 🚫 CRITICAL BLOCKER
 - **Publisher:** CMMI Institute (ISACA-affiliated)
@@ -313,7 +313,7 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 - **Commercial Derivatives:** NO - requires ISACA license
 - **Key Restriction:** Cannot be copied, distributed, or embedded in commercial products without ISACA license.
 - **Contact:** IPinfo@isaca.org
-- **Impact:** Cannot include CMMI-DMM in commercial ATLAS without licensing.
+- **Impact:** Cannot include CMMI-DMM in commercial WIDAI without licensing.
 
 #### 8. **CMMI/ISACA** 🚫 CRITICAL BLOCKER
 - **Publisher:** ISACA
@@ -321,14 +321,14 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 - **Commercial Derivatives:** NO - all ISACA IP requires licensing
 - **Key Restriction:** ISACA licenses commercial use of all frameworks (COBIT, CMMI, CMM, etc.). Annual licensing required.
 - **Contact:** IPinfo@isaca.org
-- **Impact:** Any ISACA framework use in commercial ATLAS requires licensing agreement.
+- **Impact:** Any ISACA framework use in commercial WIDAI requires licensing agreement.
 
 #### 9-15. **ISO Standards (ISO-23894, ISO-27001, ISO-27701, ISO-38505, ISO-42001, ISO-5338, ISO-8000)** 🚫 CRITICAL BLOCKER
 - **Publisher:** International Organization for Standardization
 - **License:** Proprietary/Copyrighted (paid standards)
 - **Commercial Derivatives:** NO - requires ISO licensing
 - **Key Restriction:** ISO standards must be purchased. Creating derivatives requires permission. All 7 ISO standards are copyright-protected.
-- **Impact:** Cannot include detailed ISO standard mappings in commercial ATLAS. Only high-level references permissible.
+- **Impact:** Cannot include detailed ISO standard mappings in commercial WIDAI. Only high-level references permissible.
 
 #### 16. **IEEE** 🚫 CRITICAL BLOCKER
 - **Publisher:** IEEE (Institute of Electrical and Electronics Engineers)
@@ -343,7 +343,7 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 - **License:** Proprietary/Copyrighted
 - **Commercial Derivatives:** NO - explicit restriction on commercial learning materials
 - **Key Restriction:** Cannot be used in corporate training, course packs, or commercial products. Commercial derivatives require copyright permission from permissions@harvardbusiness.org.
-- **Impact:** Cannot include HBR-derived content in commercial ATLAS.
+- **Impact:** Cannot include HBR-derived content in commercial WIDAI.
 
 #### 18. **DAMA-DMBOK** 🚫 CRITICAL BLOCKER (Mixed Licensing)
 - **Publisher:** DAMA International
@@ -358,7 +358,7 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 - **License:** Proprietary/Copyrighted
 - **Commercial Derivatives:** NO - requires licensing
 - **Key Restriction:** Consulting research is proprietary. Commercial use requires permission.
-- **Impact:** Cannot include Deloitte-derived frameworks in commercial ATLAS.
+- **Impact:** Cannot include Deloitte-derived frameworks in commercial WIDAI.
 
 #### 20. **BCG** 🚫 CRITICAL BLOCKER
 - **Publisher:** Boston Consulting Group
@@ -366,28 +366,28 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 - **Commercial Derivatives:** NO - requires licensing
 - **Key Restriction:** Commercial exploitation restricted. Requires written permission for commercial use.
 - **Contact:** legal@bcg.com
-- **Impact:** Cannot distribute commercial ATLAS with BCG mappings without agreement.
+- **Impact:** Cannot distribute commercial WIDAI with BCG mappings without agreement.
 
 #### 21. **KPMG** 🚫 CRITICAL BLOCKER
 - **Publisher:** KPMG (consulting firm)
 - **License:** Proprietary/Copyrighted
 - **Commercial Derivatives:** NO - requires permission
 - **Key Restriction:** KPMG frameworks are proprietary. Commercial use requires written permission.
-- **Impact:** Cannot include KPMG-derived content in commercial ATLAS.
+- **Impact:** Cannot include KPMG-derived content in commercial WIDAI.
 
 #### 22. **CDO Magazine** 🚫 CRITICAL BLOCKER
 - **Publisher:** Chief Data Officer Magazine
 - **License:** Proprietary/Publishing
 - **Commercial Derivatives:** NO - editorial copyright
 - **Key Restriction:** Magazine editorial content is copyrighted. Commercial reuse is restricted.
-- **Impact:** Cannot use CDO Magazine editorial content in commercial ATLAS.
+- **Impact:** Cannot use CDO Magazine editorial content in commercial WIDAI.
 
 #### 23. **WEF** 🚫 CRITICAL BLOCKER
 - **Publisher:** World Economic Forum
 - **License:** Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
 - **Commercial Derivatives:** NO - BOTH commercial use AND derivatives are prohibited
 - **Key Restriction:** Most WEF reports are CC BY-NC-ND, which explicitly prohibits both commercial use AND creating derivative works.
-- **Impact:** CANNOT include WEF-derived mappings in commercial ATLAS. This is a complete blocker.
+- **Impact:** CANNOT include WEF-derived mappings in commercial WIDAI. This is a complete blocker.
 
 ---
 
@@ -395,7 +395,7 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 
 ### By License Type
 
-| License Type | Count | Commercial Derivative Permitted? | ATLAS Implication |
+| License Type | Count | Commercial Derivative Permitted? | WIDAI Implication |
 |---|---|---|---|
 | Public Domain (U.S. Government) | 10 | ✓ YES | Clear to use |
 | Creative Commons BY (permissive) | 3 | ✓ YES | Clear to use with attribution |
@@ -407,7 +407,7 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
 
 ### Decision Framework
 
-**For Commercial ATLAS Distribution:**
+**For Commercial WIDAI Distribution:**
 
 1. **GREEN Frameworks (19)** — APPROVED
    - Include all GREEN frameworks in commercial product
@@ -420,14 +420,14 @@ These frameworks explicitly prohibit or severely restrict commercial derivative 
    - Estimated 40% of frameworks; need individual assessment
 
 3. **RED Frameworks (23)** — MUST EXCLUDE OR LICENSE
-   - **Option A (Preferred):** Exclude from commercial ATLAS
+   - **Option A (Preferred):** Exclude from commercial WIDAI
    - **Option B:** Obtain individual licensing agreements
    - **Option C:** License selectively only the highest-value frameworks
    - Estimated 33% of frameworks; significant legal/cost burden
 
 ### Fair Use Considerations
 
-For research frameworks (Gartner, Forrester, McKinsey, IDC), the question arises: **Can ATLAS make fair use of framework concepts without creating derivatives?**
+For research frameworks (Gartner, Forrester, McKinsey, IDC), the question arises: **Can WIDAI make fair use of framework concepts without creating derivatives?**
 
 **Fair Use Analysis:**
 
@@ -487,7 +487,7 @@ For research frameworks (Gartner, Forrester, McKinsey, IDC), the question arises
 
 ## Legal Compliance Checklist
 
-- [ ] Confirm all GREEN frameworks included in ATLAS have proper attribution statements
+- [ ] Confirm all GREEN frameworks included in WIDAI have proper attribution statements
 - [ ] Remove or obtain licenses for all 23 RED frameworks before commercial distribution
 - [ ] Document licensing agreements for any YELLOW frameworks included
 - [ ] Obtain written legal opinion on fair use analysis (if applicable)
@@ -503,9 +503,9 @@ For research frameworks (Gartner, Forrester, McKinsey, IDC), the question arises
 
 ## Conclusion
 
-ATLAS has strong legal ground to distribute a commercial product based on the 19 GREEN frameworks, which cover foundational U.S. government workforce taxonomies (O*NET, BLS-SOC), cybersecurity standards (NIST NICE, DCWF), and legislation (GDPR, EU AI Act, HIPAA, Evidence Act, Executive Orders).
+WIDAI has strong legal ground to distribute a commercial product based on the 19 GREEN frameworks, which cover foundational U.S. government workforce taxonomies (O*NET, BLS-SOC), cybersecurity standards (NIST NICE, DCWF), and legislation (GDPR, EU AI Act, HIPAA, Evidence Act, Executive Orders).
 
-However, if ATLAS aims to include comprehensive coverage across all 70 frameworks, significant licensing costs and legal review are required. **Commercial viability depends on:**
+However, if WIDAI aims to include comprehensive coverage across all 70 frameworks, significant licensing costs and legal review are required. **Commercial viability depends on:**
 
 1. **Business model choice:** Free basic tier (GREEN only) vs. premium tier (licensed RED frameworks)
 2. **Licensing strategy:** Which RED frameworks warrant licensing investment

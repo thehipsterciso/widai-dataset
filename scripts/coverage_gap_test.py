@@ -4,10 +4,10 @@ Coverage Gap Test: Can a PE workforce due diligence assessment be run against
 the current 37 KSA-covered roles?
 
 This script:
-1. Loads all roles and KSAs from the ATLAS dataset
+1. Loads all roles and KSAs from the WIDAI dataset
 2. Identifies which roles have KSA coverage
 3. Defines 5 representative PE portfolio company data/AI team structures
-4. Maps team roles to ATLAS roles and checks KSA coverage
+4. Maps team roles to WIDAI roles and checks KSA coverage
 5. Outputs a comprehensive coverage report
 """
 
@@ -94,7 +94,7 @@ def similarity_ratio(a, b):
 
 def find_closest_atlas_role(team_role_title, all_roles):
     """
-    Find the closest matching ATLAS role by comparing canonical_title
+    Find the closest matching WIDAI role by comparing canonical_title
     and key_variants.
 
     Returns (role_id, role_dict, match_score) or (None, None, 0) if no good match.
@@ -197,7 +197,7 @@ def define_team_structures():
 
 def map_team_to_atlas(team_roles, all_roles):
     """
-    Map a team composition to ATLAS roles.
+    Map a team composition to WIDAI roles.
 
     Returns list of (team_role, count, atlas_role_id, atlas_role, match_score).
     """
@@ -315,7 +315,7 @@ def print_report(all_roles, covered_roles, all_teams_analysis, priority_roles):
     # Section 1: Overall Coverage
     print("\n[1] OVERALL KSA COVERAGE")
     print("-" * 80)
-    print(f"Total ATLAS roles loaded:         {len(all_roles)}")
+    print(f"Total WIDAI roles loaded:         {len(all_roles)}")
     print(f"Roles with KSA coverage:          {len(covered_roles)}")
     print(f"Coverage rate:                    {len(covered_roles)/len(all_roles)*100:.1f}%")
 
@@ -351,7 +351,7 @@ def print_report(all_roles, covered_roles, all_teams_analysis, priority_roles):
                     print(f"      → {detail['atlas_role']} (NO KSAs)")
                     print(f"      [Match: {status}]")
                 else:
-                    print(f"      → Role not found in ATLAS")
+                    print(f"      → Role not found in WIDAI")
 
     # Section 3: Assessment Verdict
     print("\n[3] ASSESSMENT VERDICT")
@@ -389,7 +389,7 @@ def print_report(all_roles, covered_roles, all_teams_analysis, priority_roles):
 
 def main():
     """Main execution."""
-    print("Loading ATLAS dataset...")
+    print("Loading WIDAI dataset...")
 
     # Load data
     all_roles = load_all_roles()

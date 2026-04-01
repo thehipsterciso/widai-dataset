@@ -1,10 +1,10 @@
-# Ensemble Brainstorm — ATLAS Roadmap
+# Ensemble Brainstorm — WIDAI Roadmap
 ## Use-Case-Driven Five-Pass Analysis
 
 **Date:** 2026-03-26
 **Author:** Thomas Jones / The Hipster CISO
 **Method:** Ensemble Brainstorm — Five-Pass Algorithm for Strategic Thinking
-**Goal:** Build a dependency-driven roadmap for ATLAS, the first machine-readable, cross-framework workforce taxonomy for data and AI.
+**Goal:** Build a dependency-driven roadmap for WIDAI, the first machine-readable, cross-framework workforce taxonomy for data and AI.
 
 **Primary Use Cases Under Analysis:**
 1. PE Workforce Due Diligence Standard (SOI: 20/25)
@@ -26,7 +26,7 @@
 
 **Market reality from research:** $2.6T in PE deal value annually (2025). 60% of deal value depends on operational execution requiring strong talent. Yet 60% of CEO replacements occur within Year 1 post-acquisition — suggesting pre-close talent assessment is failing. Current practice: resume collection, subjective interviews, psychometric assessments on leadership. Data/AI workforce assessment is nascent — Protiviti's seven-dimension AI maturity model is the closest thing, but it's a consulting framework, not a product.
 
-**What ATLAS needs:**
+**What WIDAI needs:**
 - P1.1: Role coverage sufficient for typical data/AI team mapping (15-30 roles in a mid-market target)
 - P1.2: A maturity scoring model that produces a defensible number (not a framework, a score)
 - P1.3: Assessment methodology deliverable within 30-60 day deal timelines
@@ -39,10 +39,10 @@
 
 **Market reality from research:** As of March 2026, only 8 of 27 EU member states have designated competent authorities. High-risk AI requirements enforce August 2, 2026 — five months from now. 79% of enterprises cite AI governance talent scarcity as a barrier. Existing tools (Credo AI, Vanta, OneTrust, Daiki) focus on compliance workflow automation — none provide workforce role mapping. The cross-framework mapping gap is confirmed: no tool bridges EU AI Act operators → internal organizational roles → NIST AI RMF → ISO 42001.
 
-**What ATLAS needs:**
+**What WIDAI needs:**
 - P1.6: Role-to-regulation mapping for EU AI Act articles (14, 4, 43, 72, 25, 50)
 - P1.7: Regulatory context fields populated for all governance and compliance roles
-- P1.8: Provider/Deployer role distinction mapped to ATLAS roles
+- P1.8: Provider/Deployer role distinction mapped to WIDAI roles
 - P1.9: Cross-framework compliance mapping (EU AI Act + ISO 42001 + NIST AI RMF — the three frameworks organizations must navigate simultaneously)
 - P1.10: Update cadence that tracks implementing acts and enforcement guidance
 
@@ -52,8 +52,8 @@
 
 **Market reality from research:** 72% of financial institutions have AI in production; only 9% have mature governance. Treasury's new FS AI RMF (February 2026) has 230+ control objectives. Banks are centralizing GenAI governance even when data/analytics are decentralized. Emerging roles: AI Model Risk Assessor, VP AI Risk Management. Big Four (KPMG, Deloitte, EY) are offering model risk consulting but not publishing machine-readable organizational design frameworks.
 
-**What ATLAS needs:**
-- P1.11: SR 11-7 roles fully defined in ATLAS (Model Owner, Model Developer, Model Validator, Model Risk Manager, AI Auditor)
+**What WIDAI needs:**
+- P1.11: SR 11-7 roles fully defined in WIDAI (Model Owner, Model Developer, Model Validator, Model Risk Manager, AI Auditor)
 - P1.12: Three-lines-of-defense organizational pattern with independence requirements
 - P1.13: Staffing ratios (models per validator, analysts per line of defense) scalable from 5 to 500 models
 - P1.14: Regulatory mapping to SR 11-7, OCC 2011-12, FS AI RMF, ISO 42001, EU AI Act
@@ -65,18 +65,18 @@
 
 **Market reality from research:** 79% of organizations report some agentic AI adoption. Only 11% have production systems. Gartner predicts 40%+ of agentic AI projects will be canceled by end of 2027 — governance failure is the primary driver. "AI Agent Orchestrator" identified as "most important job of 2026" (Eightfold.ai). Singapore MAIG launched January 2026 — world's first governance framework for agentic AI. No existing workforce framework (NICE, O*NET, SFIA, ESCO) includes agentic AI roles.
 
-**What ATLAS needs:**
+**What WIDAI needs:**
 - P1.16: New role definitions for Agent Supervisor, Agent Orchestrator, AI Trust Engineer, AI Memory Engineer, AI Agent Developer
 - P1.17: Skills mapping grounded in real deployment patterns (not theoretical)
 - P1.18: Transition paths from existing roles (ML Engineer → Agent Developer, SRE → Trust Engineer)
 - P1.19: Governance framework alignment (Singapore MAIG, NIST AI RMF, EU AI Act implications)
 - P1.20: Quarterly update capability — this space is evolving faster than any other
 
-**Gap:** These roles do not exist in ATLAS today. NICHE category has 9 roles and 0 KSAs. This is greenfield — first-mover advantage is time-limited.
+**Gap:** These roles do not exist in WIDAI today. NICHE category has 9 roles and 0 KSAs. This is greenfield — first-mover advantage is time-limited.
 
 #### UC5: CDAIO First-90-Days Toolkit
 
-**What ATLAS needs:**
+**What WIDAI needs:**
 - P1.21: Assessment methodology that can be run in the first week
 - P1.22: Gap analysis producing actionable org design recommendations
 - P1.23: Industry-customizable templates (manufacturing vs. financial services vs. technology)
@@ -88,7 +88,7 @@
 
 **Market reality from research:** No commercial product or published methodology exists for quantitative workforce adequacy scoring in cyber insurance. Underwriters assess technical controls (MFA, EDR, backups) but not the people who operate them. The $14B+ cyber insurance market has no standardized workforce risk assessment. This is a confirmed white space.
 
-**What ATLAS needs:**
+**What WIDAI needs:**
 - P1.25: Security, governance, and risk roles with sufficient granularity for staffing adequacy assessment
 - P1.26: Benchmarking data (expected staffing levels by org profile)
 - P1.27: Scoring model simple enough for underwriting (15-20 questions)
@@ -138,9 +138,9 @@
 
 #### UC1: PE Due Diligence Fails If...
 
-**F1: The assessment takes too long for deal timelines.** PE due diligence is 30-60 days. If ATLAS-based assessment requires extensive customization per target, it misses the window. Current consulting assessments (Mercer, EY) work because they have standardized processes. ATLAS needs a standardized methodology, not a custom engagement.
+**F1: The assessment takes too long for deal timelines.** PE due diligence is 30-60 days. If WIDAI-based assessment requires extensive customization per target, it misses the window. Current consulting assessments (Mercer, EY) work because they have standardized processes. WIDAI needs a standardized methodology, not a custom engagement.
 
-**F2: The maturity score isn't defensible.** Research shows 72% of deal teams overestimate target capability. If ATLAS scores can't withstand challenge from the target company's management team ("your score is wrong because..."), the product dies after one failed engagement. Scoring must be calibrated against real outcomes.
+**F2: The maturity score isn't defensible.** Research shows 72% of deal teams overestimate target capability. If WIDAI scores can't withstand challenge from the target company's management team ("your score is wrong because..."), the product dies after one failed engagement. Scoring must be calibrated against real outcomes.
 
 **F3: Compensation data is missing.** The Year 1-3 workforce investment model is one of five deliverables and the one that speaks the financial language of PE. Without market compensation data, this deliverable is hollow. Current state: no compensation data, no data partnerships. Research confirms Lightcast has this data (32,000+ skills, market data updated biweekly). Partnership or licensing required.
 
@@ -148,7 +148,7 @@
 
 #### UC2: EU AI Act Compliance Fails If...
 
-**F5: ATLAS is slower than enforcement.** August 2, 2026 is five months away. Credo AI, Vanta, OneTrust are shipping compliance tools NOW. If ATLAS's regulatory role mapping isn't available before enforcement, the compliance tools win the market and role mapping becomes a feature of their platforms, not a standalone product.
+**F5: WIDAI is slower than enforcement.** August 2, 2026 is five months away. Credo AI, Vanta, OneTrust are shipping compliance tools NOW. If WIDAI's regulatory role mapping isn't available before enforcement, the compliance tools win the market and role mapping becomes a feature of their platforms, not a standalone product.
 
 **F6: The mapping is too generic.** Research shows organizations need role mapping specific to their AI Act operator type (Provider vs. Deployer). A generic "AI Governance Manager handles Article 14" isn't useful — the mapping must be contextual, specifying different role requirements for different operator types.
 
@@ -156,11 +156,11 @@
 
 #### UC3: Model Risk Governance Fails If...
 
-**F8: Banks won't accept a non-consulting framework.** Research shows Big Four (KPMG, Deloitte, EY) dominate this space. Banks buy from consultants, not taxonomies. ATLAS must either partner with a consultancy or position as the reference framework that consultancies build on.
+**F8: Banks won't accept a non-consulting framework.** Research shows Big Four (KPMG, Deloitte, EY) dominate this space. Banks buy from consultants, not taxonomies. WIDAI must either partner with a consultancy or position as the reference framework that consultancies build on.
 
-**F9: SR 11-7 purists reject AI-adapted interpretations.** Research reveals tension: some banks argue regulators should narrow SR 11-7 scope to exclude AI. If ATLAS's AI adaptation of SR 11-7 organizational design is seen as non-standard, regulated institutions won't adopt it.
+**F9: SR 11-7 purists reject AI-adapted interpretations.** Research reveals tension: some banks argue regulators should narrow SR 11-7 scope to exclude AI. If WIDAI's AI adaptation of SR 11-7 organizational design is seen as non-standard, regulated institutions won't adopt it.
 
-**F10: Staffing ratios have no empirical basis.** How many model validators per AI model? Without real-world data, any number ATLAS proposes is aspirational. Research confirms the governance-practice gap: 72% have AI in production, 9% have mature governance. The data to calibrate staffing ratios may not exist yet.
+**F10: Staffing ratios have no empirical basis.** How many model validators per AI model? Without real-world data, any number WIDAI proposes is aspirational. Research confirms the governance-practice gap: 72% have AI in production, 9% have mature governance. The data to calibrate staffing ratios may not exist yet.
 
 #### UC4: Agentic AI Fails If...
 
@@ -182,7 +182,7 @@
 - **HC2: Different use cases need different parts of the dataset.** UC1 needs role coverage + KSAs. UC2 needs regulatory context. UC3 needs RSK category depth. UC4 needs new roles entirely. Trying to complete the entire dataset before serving any use case is a serialization trap.
 - **HC3: Compensation data requires external partnership.** No amount of dataset authoring solves this — it requires a commercial relationship with Lightcast, BLS, or similar.
 - **HC4: Legal/regulatory validation requires domain expertise Thomas may not have.** EU AI Act interpretation and SR 11-7 adaptation need practitioner review, not just framework design.
-- **HC5: The consulting channel may be required.** Banks buy from consultants. PE firms buy from advisors. If ATLAS is positioned as a raw dataset or taxonomy, the market may not recognize it as a product. The product surface matters as much as the data.
+- **HC5: The consulting channel may be required.** Banks buy from consultants. PE firms buy from advisors. If WIDAI is positioned as a raw dataset or taxonomy, the market may not recognize it as a product. The product surface matters as much as the data.
 
 ---
 
@@ -200,9 +200,9 @@ Your biggest risk is trying to sell me the dataset when what I need is the answe
 
 ### Persona B: CISO at a Financial Services Firm (Validates/Challenges UC2, UC3, UC6)
 
-"I'm trying to staff for three regulations simultaneously: EU AI Act, SR 11-7 adaptation for AI models, and our cyber insurance renewal. I have budget for maybe two new hires. What I need isn't a list of 50 roles I should have — it's a priority map that tells me which two hires cover the most regulatory surface area. Does ATLAS have that?
+"I'm trying to staff for three regulations simultaneously: EU AI Act, SR 11-7 adaptation for AI models, and our cyber insurance renewal. I have budget for maybe two new hires. What I need isn't a list of 50 roles I should have — it's a priority map that tells me which two hires cover the most regulatory surface area. Does WIDAI have that?
 
-Where ATLAS could be genuinely useful: the cross-framework mapping. I'm translating between NICE (my team's current framework), SR 11-7 (what the Fed expects), and EU AI Act (what our European operations need). If ATLAS can show me one role that satisfies obligations under all three, that's worth more than 187 individual role definitions.
+Where WIDAI could be genuinely useful: the cross-framework mapping. I'm translating between NICE (my team's current framework), SR 11-7 (what the Fed expects), and EU AI Act (what our European operations need). If WIDAI can show me one role that satisfies obligations under all three, that's worth more than 187 individual role definitions.
 
 What concerns me: the regulatory context fields. If they're populated by framework analysis and not validated by someone who's been through a regulatory examination, I can't use them as evidence. My examiners will ask where this came from, and 'a cross-framework taxonomy built by one person' isn't the answer they'll accept."
 
@@ -216,9 +216,9 @@ Lightcast has the market data. They update biweekly, they have 32,000+ skills, t
 
 Eightfold and Gloat build organization-specific taxonomies. They're powerful but proprietary. Every customer gets a different taxonomy. There's no standard to benchmark against.
 
-What nobody has — and what I'd actually cite in a research note — is a machine-readable, cross-framework reference taxonomy specifically for data and AI that maps to O*NET, ESCO, NICE, SFIA, and DAMA simultaneously. If ATLAS does that, it's in a category of one. But I won't cite a dataset. I'll cite a product that organizations use and can testify to. I need case studies before I write about this."
+What nobody has — and what I'd actually cite in a research note — is a machine-readable, cross-framework reference taxonomy specifically for data and AI that maps to O*NET, ESCO, NICE, SFIA, and DAMA simultaneously. If WIDAI does that, it's in a category of one. But I won't cite a dataset. I'll cite a product that organizations use and can testify to. I need case studies before I write about this."
 
-**Surfaced:** ATLAS's competitive position is confirmed: category of one in cross-framework, machine-readable, data/AI-specific taxonomy. Lightcast is complementary (market data), not competitive (different layer). But analyst coverage requires case studies. Getting to case studies requires getting to production use. The recognition goal depends on the adoption goal.
+**Surfaced:** WIDAI's competitive position is confirmed: category of one in cross-framework, machine-readable, data/AI-specific taxonomy. Lightcast is complementary (market data), not competitive (different layer). But analyst coverage requires case studies. Getting to case studies requires getting to production use. The recognition goal depends on the adoption goal.
 
 ### Persona D: Newly Hired CDAIO at a PE-Backed Manufacturer (Validates UC1, UC5)
 
@@ -226,7 +226,7 @@ What nobody has — and what I'd actually cite in a research note — is a machi
 
 What I need right now isn't a 187-role taxonomy. I need a way to map these 11 people to something standardized, identify the three biggest gaps, and present a hiring plan to the operating partner that's defensible.
 
-If ATLAS could give me: (1) a quick assessment tool that maps my current team in under a day, (2) a gap analysis against a reference architecture for my company size and industry, and (3) a hiring priority list with job descriptions ready to post — I'd pay for that today. Before the taxonomy is complete. Before the API exists. I don't need perfect coverage. I need useful coverage for the roles I actually have."
+If WIDAI could give me: (1) a quick assessment tool that maps my current team in under a day, (2) a gap analysis against a reference architecture for my company size and industry, and (3) a hiring priority list with job descriptions ready to post — I'd pay for that today. Before the taxonomy is complete. Before the API exists. I don't need perfect coverage. I need useful coverage for the roles I actually have."
 
 **Surfaced:** The minimum viable product is much smaller than the full dataset. 30-50 roles with KSAs, a lightweight assessment tool, and reference org design templates by company size would serve this persona today. Perfect is the enemy of shipped.
 
@@ -234,13 +234,13 @@ If ATLAS could give me: (1) a quick assessment tool that maps my current team in
 
 | Question | Persona A (PE) | Persona B (CISO) | Persona C (Analyst) | Persona D (CDAIO) |
 |----------|----------------|-------------------|---------------------|---------------------|
-| Is ATLAS a product or a dataset? | Product (assessment service) | Product (compliance tool) | Dataset (reference standard) | Product (toolkit) |
+| Is WIDAI a product or a dataset? | Product (assessment service) | Product (compliance tool) | Dataset (reference standard) | Product (toolkit) |
 | What's the right scope to launch? | One use case, nailed | Cross-regulatory mapping | Full taxonomy | 30-50 roles, good enough |
 | What creates credibility? | Completed pilot | Regulatory validation | Case studies + analyst citation | Immediate usability |
 | What's the biggest risk? | Too slow to pilot | Unvalidated regulatory claims | No adoption evidence | Too complex to use quickly |
 | What would they pay for? | $50-75K/assessment | Compliance subscription | N/A (cites, doesn't buy) | $5-10K toolkit license |
 
-**Key disagreement:** Persona A and D agree ATLAS should ship a narrow, usable product now. Persona C says the full taxonomy is the moat. Persona B says regulatory validation is non-negotiable. The resolution: ship narrow, validate with practitioners, build toward completeness — in that order.
+**Key disagreement:** Persona A and D agree WIDAI should ship a narrow, usable product now. Persona C says the full taxonomy is the moat. Persona B says regulatory validation is non-negotiable. The resolution: ship narrow, validate with practitioners, build toward completeness — in that order.
 
 ---
 
@@ -260,7 +260,7 @@ Analysis of typical mid-market data/AI team (11-30 people):
 - Model Risk (RSK): partially covered (24 roles, 35 KSAs)
 - Operations (OPS): partially covered (15 roles, 23 KSAs)
 
-**Finding:** A PE due diligence assessment targeting a mid-market data/AI team of 15-30 people likely maps to 20-40 ATLAS roles. Of those, GOV, ENG, DEV, and DSM categories have KSAs. RSK, OPS, and LDR have partial KSAs. NICHE and REG have none.
+**Finding:** A PE due diligence assessment targeting a mid-market data/AI team of 15-30 people likely maps to 20-40 WIDAI roles. Of those, GOV, ENG, DEV, and DSM categories have KSAs. RSK, OPS, and LDR have partial KSAs. NICHE and REG have none.
 
 **Decision point:** A pilot assessment could run today against current data, with acknowledged gaps in NICHE and REG categories. The pilot itself generates the evidence of what's missing — informing KSA authoring priority.
 
@@ -298,21 +298,21 @@ Analysis of typical mid-market data/AI team (11-30 people):
 
 ## PASS 5 — Second-Order Mapping
 
-### If ATLAS succeeds (any use case reaches production adoption):
+### If WIDAI succeeds (any use case reaches production adoption):
 
 **Enables (not on roadmap):**
-- ATLAS role IDs become a lingua franca in data/AI hiring. Job postings reference ATLAS codes. This creates a network effect — but also a maintenance obligation. Every role definition change affects downstream users.
-- The PE assessment methodology becomes replicable. Other advisors request ATLAS licensing. This is the consulting toolkit use case (UC5/White Space 6) emerging organically.
-- ATLAS data feeds the hc-enterprise-kg knowledge graph, creating a connected intelligence layer across Thomas's entire content and advisory ecosystem.
-- The Hipster CISO newsletter gets exclusive, data-backed content from ATLAS research — competitive moat for content quality.
+- WIDAI role IDs become a lingua franca in data/AI hiring. Job postings reference WIDAI codes. This creates a network effect — but also a maintenance obligation. Every role definition change affects downstream users.
+- The PE assessment methodology becomes replicable. Other advisors request WIDAI licensing. This is the consulting toolkit use case (UC5/White Space 6) emerging organically.
+- WIDAI data feeds the hc-enterprise-kg knowledge graph, creating a connected intelligence layer across Thomas's entire content and advisory ecosystem.
+- The Hipster CISO newsletter gets exclusive, data-backed content from WIDAI research — competitive moat for content quality.
 
 **Requires (not planned for):**
-- Versioning and backward compatibility commitments. If someone builds on ATLAS v0.4.0, what happens when v1.0 changes role IDs?
+- Versioning and backward compatibility commitments. If someone builds on WIDAI v0.4.0, what happens when v1.0 changes role IDs?
 - Data licensing framework. Open base taxonomy (like O*NET) with premium products on top? Or fully proprietary? This decision affects adoption velocity vs. revenue.
-- Support infrastructure. Even one PE firm using ATLAS in production creates support obligations (questions, customization requests, bug reports).
-- Liability considerations. If ATLAS-based assessments inform hiring/firing decisions or investment committee recommendations, accuracy becomes a legal concern.
+- Support infrastructure. Even one PE firm using WIDAI in production creates support obligations (questions, customization requests, bug reports).
+- Liability considerations. If WIDAI-based assessments inform hiring/firing decisions or investment committee recommendations, accuracy becomes a legal concern.
 
-### If ATLAS partially succeeds (most likely scenario):
+### If WIDAI partially succeeds (most likely scenario):
 
 **Partial success looks like:** One PE pilot completed. 2-3 CDIAOs using informally. 80% KSA coverage. No API — still flat files. No analyst coverage. Regulatory context partially populated.
 
@@ -324,15 +324,15 @@ Analysis of typical mid-market data/AI team (11-30 people):
 - A clear signal about which use case has the most traction — informing where to double down
 
 **What partial success requires that full success doesn't:**
-- Conscious content extraction strategy — every piece of ATLAS research is potential newsletter/LinkedIn content
+- Conscious content extraction strategy — every piece of WIDAI research is potential newsletter/LinkedIn content
 - Integration with existing Thomas Jones assets (newsletter, knowledge graph, LinkedIn positioning)
 - Decision about whether partial success is the destination or a waypoint
 
 ### Liability Flags
 
 - **L1: Source framework licensing.** O*NET is public domain. SFIA is copyrighted. DAMA DMBOK is copyrighted. NICE is public domain. EU AI Act text is freely available. Research confirmed no unified license audit has been done. Must be completed before any commercial use.
-- **L2: Regulatory context accuracy.** If ATLAS says "AI Governance Manager owns Article 14 obligations" and a regulator disagrees, the organization that relied on ATLAS has a governance failure. Disclaimer + practitioner validation required.
-- **L3: Assessment accuracy in hiring/investment decisions.** PE firms using ATLAS scores to inform deal decisions creates liability. Assessment methodology documentation must include limitations and confidence intervals.
+- **L2: Regulatory context accuracy.** If WIDAI says "AI Governance Manager owns Article 14 obligations" and a regulator disagrees, the organization that relied on WIDAI has a governance failure. Disclaimer + practitioner validation required.
+- **L3: Assessment accuracy in hiring/investment decisions.** PE firms using WIDAI scores to inform deal decisions creates liability. Assessment methodology documentation must include limitations and confidence intervals.
 - **L4: Agentic AI role durability.** Defining roles in a space evolving quarterly means some definitions will become obsolete. Version dating and deprecation policy required.
 
 ---
@@ -358,7 +358,7 @@ Analysis of typical mid-market data/AI team (11-30 people):
 | R13 | Compensation data partnership strategy (Lightcast/BLS) | P2,P4 | Medium | High | Low | **Watch List** |
 | R14 | Regulatory practitioner validation (EU AI Act + SR 11-7) | P2,P3 | High | High | Medium | **Roadmap Anchor** |
 | R15 | CDAIO assessment toolkit assembly (combines UC1-UC3 components) | P1 | Medium | Low | High | **Front of Queue** |
-| R16 | Content extraction: turn ATLAS research into newsletter/LinkedIn | P5 | Medium | High | Low | **Watch List** |
+| R16 | Content extraction: turn WIDAI research into newsletter/LinkedIn | P5 | Medium | High | Low | **Watch List** |
 | R17 | Versioning and backward compatibility policy | P5 | Medium | High | Low | **Watch List** |
 | R18 | Data licensing model decision (open base + premium vs. proprietary) | P5 | High | High | Low | **Watch List** |
 | R19 | API / data access layer | P1 | Medium | Low | Low | **Standard** |
@@ -432,9 +432,9 @@ First-pass enrichment of the 12 domain KSA pools from current depth (5-19 KSAs/r
 - R12: Methodology documentation
 
 #### Phase 1B: Framework Prioritization
-Assess which of the 70+ ATLAS source frameworks contain KSA-equivalent concept types at sufficient granularity for STRM. Not all do — many are role-level references only (e.g., LinkedIn job postings, Glassdoor titles). Produce a prioritized execution sequence.
+Assess which of the 70+ WIDAI source frameworks contain KSA-equivalent concept types at sufficient granularity for STRM. Not all do — many are role-level references only (e.g., LinkedIn job postings, Glassdoor titles). Produce a prioritized execution sequence.
 
-**Criteria:** KSA-equivalent concept types, machine-readable data availability, ATLAS role coverage breadth, strategic relevance to use cases.
+**Criteria:** KSA-equivalent concept types, machine-readable data availability, WIDAI role coverage breadth, strategic relevance to use cases.
 
 **Deliverable:** Prioritized framework list documented here.
 
@@ -443,7 +443,7 @@ For each framework in priority order, execute the full STRM cycle:
 
 1. **Use case documentation** (NIST IR 8477 Section 3) — audience, purpose, concept types, rationale type, direction, exhaustiveness
 2. **Canonical source acquisition** — exact version stored in `sources/` or version-pinned citation
-3. **STRM mapping execution** — every focal document element mapped against ATLAS KSA pool per Table 5 format + Strength column (ATLAS extension)
+3. **STRM mapping execution** — every focal document element mapped against WIDAI KSA pool per Table 5 format + Strength column (WIDAI extension)
 4. **Per-FDE rationale files** — independent file objects preserving full reasoning at mapping-level resolution
 5. **Gap issue registration** — every "No relationship" logged with context (nearest miss, suggested domain, authoring guidance)
 6. **QA/QC gate** — complete review before proceeding to next framework
@@ -451,7 +451,7 @@ For each framework in priority order, execute the full STRM cycle:
 
 **Seven deliverables per framework. No framework STRM proceeds until the prior one is QA'd and committed.**
 
-**STRM format** (per NIST IR 8477 Table 5 + ATLAS extension):
+**STRM format** (per NIST IR 8477 Table 5 + WIDAI extension):
 
 | Column | Source |
 |--------|--------|
@@ -459,9 +459,9 @@ For each framework in priority order, execute the full STRM cycle:
 | Focal Document Element Description | NIST IR 8477 |
 | Rationale (Syntactic / Semantic / Functional) | NIST IR 8477 |
 | Relationship (Subset of / Intersects with / Equal / Superset of / No relationship) | NIST IR 8477 |
-| Reference Document Element (ID) — ATLAS KSA ID | NIST IR 8477 |
-| Reference Document Element Description — ATLAS KSA Statement | NIST IR 8477 |
-| Strength of Relationship (1-10) | ATLAS extension (from SCF practice) |
+| Reference Document Element (ID) — WIDAI KSA ID | NIST IR 8477 |
+| Reference Document Element Description — WIDAI KSA Statement | NIST IR 8477 |
+| Strength of Relationship (1-10) | WIDAI extension (from SCF practice) |
 
 **Principles governing Phase 1C:**
 - No synthesis before all frameworks are mapped

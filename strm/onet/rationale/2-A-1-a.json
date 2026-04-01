@@ -1,0 +1,61 @@
+{
+  "strm_id": "STRM-001-ONET",
+  "fde_id": "2.A.1.a",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "2.A.1.a",
+  "focal_document_element_description": "Understanding written sentences and paragraphs in work-related documents.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "LS-S-006",
+  "reference_document_element_description": "Skill in preparing and delivering board-level presentations on data and AI strategy, translating technical complexity into business language appropriate for governance audiences.",
+  "comments": "O*NET reading comprehension is a foundational skill underlying many WIDAI KSAs but not directly defined in WIDAI. All WIDAI roles require reading comprehension for documentation, regulations, technical specifications. GAP SIGNAL: WIDAI lacks foundational communication skills as standalone KSAs. Functional rationale: the outcome (understanding written content) is prerequisite to virtually all WIDAI tasks.",
+  "strength_of_relationship": 2,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_atlas_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark. Both texts processed jointly through transformer; outputs calibrated 0-1 similarity score.",
+      "raw_score_0_1": 0.2335,
+      "mapped_strength_0_10": 2.3,
+      "final_strength_integer": 2,
+      "significance": "Weak similarity (nist band: much more dissimilar than similar). The low STS score reflects the wide scope gap between the O*NET element and the WIDAI KSA. The superset relationship exists at the concept level, but the vocabulary and scope divergence is large enough that the cross-encoder captures only a weak signal."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching. Precision = FDE coverage of KSA tokens. Recall = KSA coverage by FDE tokens. F1 = harmonic mean.",
+        "precision": 0.8812,
+        "recall": 0.8611,
+        "f1": 0.8711,
+        "significance": "F1 of 0.8711 indicates moderate token-level semantic alignment. Precision exceeds Recall, indicating that the FDE's semantic content is more tightly aligned with the KSA than the reverse \u2014 the KSA contains concepts or specificity beyond what the FDE covers. The P > R pattern is atypical for a Superset relationship \u2014 it suggests the KSA may contain specificity that extends beyond the FDE's scope. This warrants attention during human review, though it may reflect domain-specific terminology in the KSA that the FDE covers conceptually without matching at the token level."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference. Classifies text pair as entailment, neutral, or contradiction. Indicates directional implication strength.",
+        "contradiction": 0.0002,
+        "entailment": 0.002,
+        "neutral": 0.9978,
+        "significance": "Neutral-dominant (99.78%) \u2014 the model finds the descriptions related but neither implying nor contradicting each other. Neutral is common for Superset pairs where the scope gap is large \u2014 the FDE covers broader territory than the KSA, so the NLI model sees topical relatedness without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
+        "cosine_similarity_0_1": 0.202,
+        "significance": "The bi-encoder score (0.2020) is close to the STS cross-encoder (0.2335). The small gap (0.03) suggests the semantic relationship is largely capturable through independent encoding \u2014 the descriptions share enough surface-level semantic features that cross-attention adds only marginal signal."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
+        "similarity_0_1": 0.069,
+        "significance": "Low lexical overlap (6.90% of tokens shared). Some shared vocabulary exists (likely common functional words or broadly-used domain terms) but the bulk of each description uses distinct terminology."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-03-31"
+}

@@ -9,7 +9,7 @@
 
 ## Context
 
-The ATLAS role schema (`role_record.json`) defines 25+ fields for each role record. A Field-by-Field Assessment conducted prior to the Ensemble Brainstorm identified 12 schema modifications needed — 7 classified as "KEEP WITH MODIFICATIONS" — that should be implemented before large-scale data enrichment proceeds.
+The WIDAI role schema (`role_record.json`) defines 25+ fields for each role record. A Field-by-Field Assessment conducted prior to the Ensemble Brainstorm identified 12 schema modifications needed — 7 classified as "KEEP WITH MODIFICATIONS" — that should be implemented before large-scale data enrichment proceeds.
 
 The rationale is structural: enriching data into a schema that will change creates rework. Fields populated in the current schema format would need migration after schema changes. Modifying first avoids this waste.
 
@@ -71,6 +71,6 @@ The remaining modifications were not implemented in the initial batch. During R2
 ## References
 
 - Field-by-Field Assessment: 7 KEEP WITH MODIFICATIONS verdicts
-- ATLAS schema: role_record.json (current state includes all 7 modifications)
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 1: Foundation layer dependency map
-- ATLAS Goal Definition: "12 schema modifications from the Field-by-Field Assessment"
+- WIDAI schema: role_record.json (current state includes all 7 modifications)
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 1: Foundation layer dependency map
+- WIDAI Goal Definition: "12 schema modifications from the Field-by-Field Assessment"

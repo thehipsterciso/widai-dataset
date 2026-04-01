@@ -12,11 +12,11 @@ Existing approaches (Mercer talent assessment, EY workforce diligence, Protiviti
 
 ## Decision
 
-Design a four-dimension scoring model (Coverage, Capability, Criticality, Concentration Risk) that aggregates to three composite indices (TCI, KPRS, GSI) and one Workforce Readiness Score (WRS). Every score traces to observable evidence against ATLAS KSA requirements.
+Design a four-dimension scoring model (Coverage, Capability, Criticality, Concentration Risk) that aggregates to three composite indices (TCI, KPRS, GSI) and one Workforce Readiness Score (WRS). Every score traces to observable evidence against WIDAI KSA requirements.
 
 ### Key Design Choices
 
-**1. Evidence-based, not subjective.** Capability scores are computed against ATLAS KSA requirements using observable evidence (certifications, documented experience, work product review). No "rate this person 1-5" subjective scales.
+**1. Evidence-based, not subjective.** Capability scores are computed against WIDAI KSA requirements using observable evidence (certifications, documented experience, work product review). No "rate this person 1-5" subjective scales.
 
 *Alternatives considered:* Subjective expert assessment (faster but not defensible), self-reported maturity models (easier but gameable), psychometric assessment (valid but out of scope and adds weeks).
 
@@ -48,7 +48,7 @@ Design a four-dimension scoring model (Coverage, Capability, Criticality, Concen
 - Without compensation data, the assessment cannot answer "what will it cost to close the gaps?" with precision. This is the PE operating partner's second most important question.
 - Reference architectures are based on practitioner judgment, not empirical calibration. First 3-5 assessments will refine them.
 - Capability scoring from evidence (certifications, experience) is a proxy for actual competence. Work product review improves accuracy but adds time.
-- KSA coverage varies by ATLAS category — some roles have deeper assessment criteria than others.
+- KSA coverage varies by WIDAI category — some roles have deeper assessment criteria than others.
 
 ## References
 

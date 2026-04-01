@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-ATLAS Consistency Checker
+WIDAI Consistency Checker
 
-Validates that the ATLAS dataset is internally consistent — that manifest counts
+Validates that the WIDAI dataset is internally consistent — that manifest counts
 match actual file counts, that all referenced IDs exist, that framework mappings
 are complete, and that ADR decisions are reflected in the data.
 
@@ -22,7 +22,7 @@ from datetime import datetime
 
 
 class ConsistencyChecker:
-    """Validates ATLAS dataset consistency."""
+    """Validates WIDAI dataset consistency."""
 
     def __init__(self, base_path):
         self.base = base_path
@@ -62,13 +62,13 @@ class ConsistencyChecker:
 
     def check_manifest(self):
         """
-        Verify atlas_manifest.json exists and contains required fields.
+        Verify widai_manifest.json exists and contains required fields.
         Load it for use in subsequent checks.
         """
         print("Checking manifest...")
-        manifest_path = os.path.join(self.base, "atlas_manifest.json")
+        manifest_path = os.path.join(self.base, "widai_manifest.json")
         if not os.path.exists(manifest_path):
-            self.errors.append("atlas_manifest.json not found")
+            self.errors.append("widai_manifest.json not found")
             return
 
         data, error = self.load_json(manifest_path)
@@ -86,7 +86,7 @@ class ConsistencyChecker:
         ]
         for field in required_fields:
             if field not in self.manifest:
-                self.errors.append(f"atlas_manifest.json missing required field: {field}")
+                self.errors.append(f"widai_manifest.json missing required field: {field}")
 
         print(f"  ✓ Manifest valid (version {self.manifest.get('version', 'unknown')})\n")
 
@@ -335,7 +335,7 @@ class ConsistencyChecker:
     def run_all_checks(self):
         """Execute all consistency checks in order."""
         print("\n" + "=" * 60)
-        print("ATLAS DATASET CONSISTENCY CHECK")
+        print("WIDAI DATASET CONSISTENCY CHECK")
         print("=" * 60 + "\n")
 
         # Prerequisite: JSON integrity

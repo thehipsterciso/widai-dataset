@@ -9,7 +9,7 @@
 
 ## Context
 
-ATLAS has six use cases scored at high Strategic Opportunity Index (15-20/25 each). Traditional product roadmapping would prioritize by impact or revenue potential — which would suggest pursuing all five 20/25-scored use cases simultaneously or picking the one with the most executive appeal.
+WIDAI has six use cases scored at high Strategic Opportunity Index (15-20/25 each). Traditional product roadmapping would prioritize by impact or revenue potential — which would suggest pursuing all five 20/25-scored use cases simultaneously or picking the one with the most executive appeal.
 
 The five-pass analysis surfaced a structural problem with priority-based sequencing: the use cases share foundational dependencies but diverge in their specific requirements. UC1 (PE Due Diligence) needs role coverage and a scoring model. UC2 (EU AI Act) needs regulatory context fields. UC3 (Model Risk Governance) needs RSK category depth. UC4 (Agentic AI) needs entirely new roles. UC5 (CDAIO Toolkit) depends on components from UC1-UC3.
 
@@ -17,7 +17,7 @@ A priority-ranked roadmap creates either serialization (do one thing at a time, 
 
 ## Decision
 
-**Sequence the ATLAS roadmap by structural dependency chains, not by use case priority or strategic value.**
+**Sequence the WIDAI roadmap by structural dependency chains, not by use case priority or strategic value.**
 
 The roadmap is organized into five topological tiers:
 
@@ -55,6 +55,6 @@ The dependency chain emerged from topological sorting of these relationships. It
 
 ## References
 
-- Ensemble Brainstorm — ATLAS Roadmap, Scoring and Classification section (25 scored items)
-- Ensemble Brainstorm — ATLAS Roadmap, Dependency Chain (Topological Sort)
-- Ensemble Brainstorm — ATLAS Roadmap, Roadmap Summary (Phase 0-4)
+- Ensemble Brainstorm — WIDAI Roadmap, Scoring and Classification section (25 scored items)
+- Ensemble Brainstorm — WIDAI Roadmap, Dependency Chain (Topological Sort)
+- Ensemble Brainstorm — WIDAI Roadmap, Roadmap Summary (Phase 0-4)

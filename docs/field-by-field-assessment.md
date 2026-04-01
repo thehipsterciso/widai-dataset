@@ -1,6 +1,6 @@
-# ATLAS schema field-by-field use case assessment for data and AI applications
+# WIDAI schema field-by-field use case assessment for data and AI applications
 
-**Every field in the ATLAS 187-role schema has defensible use cases in the data and AI space, but the fields vary dramatically in value density.** The identity, content, cross-framework mapping, and relationship fields form the schema's high-value core — they power knowledge graphs, ML training pipelines, semantic search, and RAG systems. The classification and regulatory context fields serve narrower but critical governance and compliance functions. A handful of fields, particularly in job market attributes and domain-specific context, carry weaker standalone justification and should be evaluated for consolidation. This assessment covers every field and nested object across all 12 field groups, scoped strictly to data and AI applications.
+**Every field in the WIDAI 187-role schema has defensible use cases in the data and AI space, but the fields vary dramatically in value density.** The identity, content, cross-framework mapping, and relationship fields form the schema's high-value core — they power knowledge graphs, ML training pipelines, semantic search, and RAG systems. The classification and regulatory context fields serve narrower but critical governance and compliance functions. A handful of fields, particularly in job market attributes and domain-specific context, carry weaker standalone justification and should be evaluated for consolidation. This assessment covers every field and nested object across all 12 field groups, scoped strictly to data and AI applications.
 
 ---
 
@@ -8,11 +8,11 @@
 
 These five fields form the irreducible core of the schema. Without them, no downstream AI or data application is possible.
 
-### `role_id` (ATLAS-{DOMAIN}-{SEQUENCE})
+### `role_id` (WIDAI-{DOMAIN}-{SEQUENCE})
 
-**Primary use case.** Serves as the canonical foreign key for every downstream system that references ATLAS roles — knowledge graphs, vector databases, recommendation engines, and governance dashboards. The deterministic format (`ATLAS-{DOMAIN}-{SEQUENCE}`) enables both human readability and machine-parseable domain extraction, which is critical for partitioning in data mesh architectures.
+**Primary use case.** Serves as the canonical foreign key for every downstream system that references WIDAI roles — knowledge graphs, vector databases, recommendation engines, and governance dashboards. The deterministic format (`WIDAI-{DOMAIN}-{SEQUENCE}`) enables both human readability and machine-parseable domain extraction, which is critical for partitioning in data mesh architectures.
 
-**Secondary use cases.** Grounds LLM outputs in RAG systems by providing traceable citations back to authoritative records. Enables hybrid search (combining BM25 keyword retrieval on role_ids with dense vector similarity) — a pattern Neo4j's Advanced RAG guide identifies as essential because "semantic search excels at understanding meaning but can miss rare terms like IDs and codes." Also serves as the join key linking ATLAS to external model inventories, vendor capability matrices, and organizational charts.
+**Secondary use cases.** Grounds LLM outputs in RAG systems by providing traceable citations back to authoritative records. Enables hybrid search (combining BM25 keyword retrieval on role_ids with dense vector similarity) — a pattern Neo4j's Advanced RAG guide identifies as essential because "semantic search excels at understanding meaning but can miss rare terms like IDs and codes." Also serves as the join key linking WIDAI to external model inventories, vendor capability matrices, and organizational charts.
 
 **Inherent value.** A globally unique, stable identifier transforms 187 role definitions from a flat list into an addressable, referenceable data product. Per Zhamak Dehghani's data mesh principles, addressability through canonical identifiers is a prerequisite for data-as-a-product.
 
@@ -44,11 +44,11 @@ These five fields form the irreducible core of the schema. Without them, no down
 
 **Verdict: KEEP AS-IS.** The title_type enum is exceptionally well-designed. The `reported_by_incumbent` and `employer_posting` types are genuinely novel additions to the SKOS pattern and capture variation that matters for real-world data ingestion.
 
-### `description` (ATLAS-curated canonical description)
+### `description` (WIDAI-curated canonical description)
 
 **Primary use case.** Serves as the primary text for **vector embedding generation** in RAG systems and semantic search. Production RAG pipelines use structured text templates like `"Role: {title}. Domain: {functional_domain}. Description: {description}. Key skills: {skills}."` to create embedding-ready chunks — the description field provides the richest semantic signal for similarity computation.
 
-**Secondary use cases.** Functions as the reference text for zero-shot and few-shot classification of job postings into ATLAS roles. The OECD's semi-supervised approach used O\*NET skill definitions as "semantic anchors" for BERT-based classification — ATLAS descriptions would serve the same function. Also powers AI-generated job descriptions, competency frameworks, and training curricula when used as input context for generative models.
+**Secondary use cases.** Functions as the reference text for zero-shot and few-shot classification of job postings into WIDAI roles. The OECD's semi-supervised approach used O\*NET skill definitions as "semantic anchors" for BERT-based classification — WIDAI descriptions would serve the same function. Also powers AI-generated job descriptions, competency frameworks, and training curricula when used as input context for generative models.
 
 **Inherent value.** A curated, consistent description across all 187 roles — written in a single authorial voice rather than copied from disparate sources — produces cleaner embeddings and more reliable similarity scores than raw source text.
 
@@ -58,7 +58,7 @@ These five fields form the irreducible core of the schema. Without them, no down
 
 ### `source_descriptions` (array of objects)
 
-**Primary use case.** Provides **data provenance and auditability** for the canonical description. When an AI system makes decisions based on ATLAS role definitions (e.g., recommending candidates, flagging compliance gaps), auditors and regulators need to trace the definition back to its authoritative source. The `source_url`, `retrieved_date`, and `source_framework` sub-fields directly align with the Data & Trust Alliance's 22-metadata-field provenance standard.
+**Primary use case.** Provides **data provenance and auditability** for the canonical description. When an AI system makes decisions based on WIDAI role definitions (e.g., recommending candidates, flagging compliance gaps), auditors and regulators need to trace the definition back to its authoritative source. The `source_url`, `retrieved_date`, and `source_framework` sub-fields directly align with the Data & Trust Alliance's 22-metadata-field provenance standard.
 
 **Secondary use cases.** Enables **multi-source training data generation** — each source description provides a different perspective on the same role, creating natural augmentation for NLP models. The ESCO-O\*NET crosswalk's success (85% top-1 accuracy) came from encoding multiple textual views of each occupation. Also supports temporal analysis: comparing descriptions across `source_version` values reveals how role definitions evolve. The `language` sub-field enables cross-lingual transfer learning.
 
@@ -82,7 +82,7 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 **Inherent value.** A consistent 5-level hierarchy across 187 roles creates an immediately usable organizational skeleton. Without this field, any consuming system would need to infer seniority from titles — an error-prone NLP task.
 
-**Residual value.** Combined with `seniority_mappings`, enables cross-framework seniority normalization (ATLAS Tier 3 ≈ SFIA Level 5 ≈ O\*NET Job Zone 4). Combined with `related_roles` (career_progression_from/to), creates a directed acyclic graph of career ladders within each tier.
+**Residual value.** Combined with `seniority_mappings`, enables cross-framework seniority normalization (WIDAI Tier 3 ≈ SFIA Level 5 ≈ O\*NET Job Zone 4). Combined with `related_roles` (career_progression_from/to), creates a directed acyclic graph of career ladders within each tier.
 
 **Verdict: KEEP AS-IS.** Five tiers is the right granularity — it matches O\*NET's 5 Job Zones and provides enough resolution for org design without over-fragmenting.
 
@@ -92,7 +92,7 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 **Secondary use cases.** Powers faceted search and filtering in data catalogs and career platforms. Enables domain-specific skills gap analysis (e.g., "What's our coverage in AI Governance & Ethics?"). Functions as a graph partition key in knowledge graphs, enabling efficient community detection algorithms to identify related role clusters.
 
-**Inherent value.** A controlled vocabulary of 11 domains provides the classification backbone for any analytics built on top of ATLAS — workforce dashboards, compliance coverage maps, and training needs assessments all depend on domain groupings.
+**Inherent value.** A controlled vocabulary of 11 domains provides the classification backbone for any analytics built on top of WIDAI — workforce dashboards, compliance coverage maps, and training needs assessments all depend on domain groupings.
 
 **Residual value.** Combined with `atlas_tier`, creates a 5×11 matrix that maps the entire CDAIO organizational space. Combined with `skills`, enables domain-specific competency models. Combined with `regulatory_context`, identifies which domains carry regulatory obligations.
 
@@ -136,25 +136,25 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 ### `in_atlas_v030` (boolean)
 
-**Primary use case.** Tracks **schema lineage** — which roles existed in the prior version of ATLAS. This is essential for change management when consumers depend on the dataset: they need to distinguish new additions from existing roles to manage migration.
+**Primary use case.** Tracks **schema lineage** — which roles existed in the prior version of WIDAI. This is essential for change management when consumers depend on the dataset: they need to distinguish new additions from existing roles to manage migration.
 
 **Secondary use cases.** Enables temporal analysis of how the data/AI role landscape is expanding. Supports rollback scenarios and version comparison dashboards.
 
 **Inherent value.** Low standalone value — it is metadata about a specific schema transition event.
 
-**Residual value.** Combined with lifecycle fields (`created_date`, `status`), creates a complete version history. But a single boolean tracking one specific prior version is brittle — it won't scale as ATLAS releases v0.4.0, v0.5.0, etc.
+**Residual value.** Combined with lifecycle fields (`created_date`, `status`), creates a complete version history. But a single boolean tracking one specific prior version is brittle — it won't scale as WIDAI releases v0.4.0, v0.5.0, etc.
 
 **Verdict: KEEP WITH MODIFICATIONS.** Replace with a more general `introduced_in_version` field (string, e.g., "v0.3.0" or "v0.4.0") that scales across schema versions. The current boolean only answers one question and will become increasingly irrelevant as the schema evolves.
 
 ### `atlas_work_role_id` (pointer to work role definition)
 
-**Primary use case.** Creates a **foreign key relationship** to the ATLAS base structure's work role definitions, enabling normalization. Multiple ATLAS role records may map to the same underlying work role (e.g., a "Senior ML Engineer" and "Staff ML Engineer" might share a common work role definition but differ in tier).
+**Primary use case.** Creates a **foreign key relationship** to the WIDAI base structure's work role definitions, enabling normalization. Multiple WIDAI role records may map to the same underlying work role (e.g., a "Senior ML Engineer" and "Staff ML Engineer" might share a common work role definition but differ in tier).
 
 **Secondary use cases.** Enables aggregation across seniority levels for workforce planning (counting all people in a work role family regardless of tier). Supports data normalization by separating role-level attributes from work-role-level attributes.
 
 **Inherent value.** Standard relational design pattern that reduces redundancy and improves maintainability. Critical for any consuming system that needs to reason about work roles abstractly.
 
-**Residual value.** Combined with `atlas_tier`, creates the work-role × seniority matrix. Combined with external ATLAS tables, enables join-based enrichment without denormalizing everything into the role record.
+**Residual value.** Combined with `atlas_tier`, creates the work-role × seniority matrix. Combined with external WIDAI tables, enables join-based enrichment without denormalizing everything into the role record.
 
 **Verdict: KEEP AS-IS.** Standard foreign key pattern. Well-designed.
 
@@ -168,7 +168,7 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 **Secondary use cases.** Enables **automated source freshness monitoring** — a pipeline can periodically check `resolvable` URLs and flag broken links. Supports regulatory compliance: the EU AI Act (Article 10) requires providers of high-risk AI systems to implement data governance covering training data provenance. The `source_framework` and `reference` sub-fields enable citation generation for reports and documentation.
 
-**Inherent value.** Source provenance transforms ATLAS from an opinionated taxonomy into an evidence-based, auditable reference dataset. This distinction matters for adoption in regulated industries (financial services, healthcare, government).
+**Inherent value.** Source provenance transforms WIDAI from an opinionated taxonomy into an evidence-based, auditable reference dataset. This distinction matters for adoption in regulated industries (financial services, healthcare, government).
 
 **Residual value.** Combined with `source_descriptions`, creates a complete audit chain from curated role definition → source framework text → source URL. Combined with `gap_and_priority_metadata.frameworks_missing`, identifies where provenance is incomplete.
 
@@ -176,13 +176,13 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 ### `seniority_level` (free text from source reports)
 
-**Primary use case.** Preserves the **original seniority language** used by source frameworks, which may not map cleanly to the ATLAS 5-tier system. This is useful for entity resolution when matching ATLAS roles against external data that uses source-specific seniority language.
+**Primary use case.** Preserves the **original seniority language** used by source frameworks, which may not map cleanly to the WIDAI 5-tier system. This is useful for entity resolution when matching WIDAI roles against external data that uses source-specific seniority language.
 
 **Secondary use cases.** Provides NLP training data for seniority extraction models. Supports audit trails where regulators need to see the original source language.
 
 **Inherent value.** Low — the free-text format limits machine-readability. The value is primarily archival.
 
-**Residual value.** Combined with `atlas_tier` and `seniority_mappings`, provides a three-way cross-reference (ATLAS tier, source language, framework-specific levels) that resolves seniority ambiguities.
+**Residual value.** Combined with `atlas_tier` and `seniority_mappings`, provides a three-way cross-reference (WIDAI tier, source language, framework-specific levels) that resolves seniority ambiguities.
 
 **Verdict: KEEP WITH MODIFICATIONS.** Consider restructuring as an array of objects (like `source_descriptions`) with `seniority_text`, `source_framework`, and `source_version` sub-fields to track which source provided which seniority language. Free text from a single unnamed source is less useful than attributed free text from multiple sources.
 
@@ -194,7 +194,7 @@ These four field groups (tasks, skills, knowledge_areas, abilities) are marked a
 
 ### `tasks` (array of objects)
 
-**Primary use case.** Enables **AI automation exposure analysis** — the dominant application of task-level occupational data in current research. The Upjohn Institute's AI Exposure Score, Pew Research Center's classification of 41 O\*NET work activities for AI susceptibility, and McKinsey's Skill Change Index all operate at the task level. Without populated task data, ATLAS cannot support the most policy-relevant analysis in the data/AI space: which role functions are automatable, augmentable, or resistant to AI.
+**Primary use case.** Enables **AI automation exposure analysis** — the dominant application of task-level occupational data in current research. The Upjohn Institute's AI Exposure Score, Pew Research Center's classification of 41 O\*NET work activities for AI susceptibility, and McKinsey's Skill Change Index all operate at the task level. Without populated task data, WIDAI cannot support the most policy-relevant analysis in the data/AI space: which role functions are automatable, augmentable, or resistant to AI.
 
 **Secondary use cases.** Powers **task-based job matching** — TechWolf's foundational approach starts with "understanding actual work performed, then derives skills implications." Tasks serve as training labels for extreme multi-label classification models (TechWolf's ConTeXT-match achieves state-of-the-art using task/skill ESCO data). The `importance` score and `relevance_pct` sub-fields enable weighted analysis: a role where 80% of tasks are AI-automatable has a different strategic profile than one where only 20% are. The `task_type` sub-field enables filtering by task category.
 
@@ -212,7 +212,7 @@ These four field groups (tasks, skills, knowledge_areas, abilities) are marked a
 
 **Inherent value.** **Skills are the lingua franca of the modern talent marketplace.** LinkedIn tracks 41,000+ skills; Lightcast maintains 34,000 validated skills; Cornerstone's Skills Graph covers 50,000+ unique skills. A curated, domain-specific skill inventory with importance and proficiency scoring has immediate commercial value.
 
-**Residual value.** Combined with `tasks`, creates the task-skill mapping graph that drives learning recommendations. Combined with `occupation_codes`, enables cross-framework skill benchmarking (comparing ATLAS skill requirements against O\*NET importance scores). Combined with `certifications`, identifies the credential pathways that validate specific skills. Combined with `job_market_attributes.technology_skills`, bridges conceptual skills (e.g., "machine learning") to specific tools (e.g., "TensorFlow 2.x").
+**Residual value.** Combined with `tasks`, creates the task-skill mapping graph that drives learning recommendations. Combined with `occupation_codes`, enables cross-framework skill benchmarking (comparing WIDAI skill requirements against O\*NET importance scores). Combined with `certifications`, identifies the credential pathways that validate specific skills. Combined with `job_market_attributes.technology_skills`, bridges conceptual skills (e.g., "machine learning") to specific tools (e.g., "TensorFlow 2.x").
 
 **Verdict: KEEP AS-IS — PRIORITIZE POPULATION.** The sub-field structure is comprehensive and well-aligned with O\*NET's content model and ESCO's skill property model. Second-highest population priority after tasks.
 
@@ -248,11 +248,11 @@ These four field groups (tasks, skills, knowledge_areas, abilities) are marked a
 
 **Primary use case.** Creates **cross-framework interoperability** — the single most technically challenging and commercially valuable capability a role taxonomy can offer. The ESCO-O\*NET crosswalk (built using BERT transformer models, achieving 85% top-1 accuracy) demonstrates that structured cross-framework mappings with typed match relations are the de facto standard for occupational data interoperability. The `match_type` enum (`exact/broad/narrow/close/related`) directly mirrors the official ESCO-O\*NET crosswalk relation types.
 
-**Secondary use cases.** Enables **cross-national workforce planning** — a multinational organization can map ATLAS roles to O\*NET (US), ESCO (EU), DDaT (UK), SFIA (global IT), and ANZSCO (Australia/NZ) simultaneously, enabling consistent global role definitions. The `system` enum covering 12 frameworks (O\*NET-SOC, SOC-2018, ISCO-08, ESCO, NICE, NICE-OPM, DCWF, SFIA, DDaT, Census, NOC, ANZSCO) makes ATLAS a Rosetta Stone for occupational classification. Also powers entity resolution at scale: when an ATS ingests a job posting tagged with SOC code 15-2051, the system can resolve it to the correct ATLAS role via the occupation_codes mapping. The `uri` sub-field enables linked data integration.
+**Secondary use cases.** Enables **cross-national workforce planning** — a multinational organization can map WIDAI roles to O\*NET (US), ESCO (EU), DDaT (UK), SFIA (global IT), and ANZSCO (Australia/NZ) simultaneously, enabling consistent global role definitions. The `system` enum covering 12 frameworks (O\*NET-SOC, SOC-2018, ISCO-08, ESCO, NICE, NICE-OPM, DCWF, SFIA, DDaT, Census, NOC, ANZSCO) makes WIDAI a Rosetta Stone for occupational classification. Also powers entity resolution at scale: when an ATS ingests a job posting tagged with SOC code 15-2051, the system can resolve it to the correct WIDAI role via the occupation_codes mapping. The `uri` sub-field enables linked data integration.
 
-**Inherent value.** The Occupation Ontology (OccO) project specifically addresses the "n-squared problem" of needing crosswalks between every pair of standards. ATLAS's occupation_codes field solves this by serving as a hub — mapping each role to all relevant frameworks simultaneously rather than requiring pairwise mappings between frameworks.
+**Inherent value.** The Occupation Ontology (OccO) project specifically addresses the "n-squared problem" of needing crosswalks between every pair of standards. WIDAI's occupation_codes field solves this by serving as a hub — mapping each role to all relevant frameworks simultaneously rather than requiring pairwise mappings between frameworks.
 
-**Residual value.** Combined with `variant_titles`, creates a complete lookup table: any observed title variant → canonical role → any framework-specific code. Combined with `seniority_mappings`, adds level normalization to the cross-framework mapping. Combined with `skills`, enables cross-framework skill benchmarking (comparing ATLAS skill requirements against O\*NET importance scores or ESCO essential/optional designations).
+**Residual value.** Combined with `variant_titles`, creates a complete lookup table: any observed title variant → canonical role → any framework-specific code. Combined with `seniority_mappings`, adds level normalization to the cross-framework mapping. Combined with `skills`, enables cross-framework skill benchmarking (comparing WIDAI skill requirements against O\*NET importance scores or ESCO essential/optional designations).
 
 **Verdict: KEEP AS-IS.** This is arguably the schema's most distinctive and defensible field. The `match_type` enum and `match_source` sub-field are well-designed and follow established crosswalk standards.
 
@@ -266,7 +266,7 @@ These four field groups (tasks, skills, knowledge_areas, abilities) are marked a
 
 **Residual value.** Combined with `atlas_tier`, creates a five-way seniority cross-reference. Combined with `job_market_attributes.salary_range_usd`, enables seniority-adjusted compensation analysis. Combined with `occupation_codes`, creates the most complete role-level interoperability package available.
 
-**Verdict: KEEP AS-IS.** The field structure is well-designed. The `sfia_level_range` object with min/max is particularly good — it acknowledges that ATLAS roles may span SFIA levels rather than mapping 1:1.
+**Verdict: KEEP AS-IS.** The field structure is well-designed. The `sfia_level_range` object with min/max is particularly good — it acknowledges that WIDAI roles may span SFIA levels rather than mapping 1:1.
 
 ---
 
@@ -294,7 +294,7 @@ These four field groups (tasks, skills, knowledge_areas, abilities) are marked a
 
 **Secondary use cases.** The `eu_ai_act_risk_tiers` array enables risk-tier-based workforce planning — organizations can identify which roles are involved with high-risk AI systems and apply appropriate competency requirements. The `iso42001_control_mappings` array maps each role to specific ISO 42001 controls (e.g., Clause 5.3 for roles/responsibilities, Clause 7.2 for competence, Annex A.3 for roles), supporting certification audit preparation. The `obligations_summary` string provides human-readable regulatory context for non-specialist consumers. The `sr117_effective_challenge_authority` boolean identifies roles authorized to perform effective challenge — critical for bank regulatory examinations.
 
-**Inherent value.** **No other workforce taxonomy includes structured regulatory obligation mappings.** This field single-handedly differentiates ATLAS from O\*NET, ESCO, SFIA, and every other occupational framework in the market. As regulatory pressure on AI intensifies globally, this field's value will compound.
+**Inherent value.** **No other workforce taxonomy includes structured regulatory obligation mappings.** This field single-handedly differentiates WIDAI from O\*NET, ESCO, SFIA, and every other occupational framework in the market. As regulatory pressure on AI intensifies globally, this field's value will compound.
 
 **Residual value.** Combined with `certifications`, identifies which credentials satisfy regulatory competency requirements. Combined with `skills`, defines the competency profile for each regulatory obligation. Combined with `atlas_tier`, enables analysis of regulatory authority distribution across seniority levels. Combined with `related_roles`, maps the complete regulatory accountability chain from board level (Tier 1) to practitioners (Tier 5).
 
@@ -330,7 +330,7 @@ This is a complex nested object with multiple sub-fields that serve different pu
 
 **Secondary use cases.** Powers compensation design for CDAIO organizations. Enables ROI analysis for upskilling investments (comparing salary uplift from career_progression transitions against training costs). Supports vendor procurement by establishing market rates for specific role types.
 
-**Inherent value.** High for the salary data; moderate for years_experience. BLS and LinkedIn already publish this data publicly — ATLAS's value-add is curating it for 187 specific data/AI roles and maintaining it over time.
+**Inherent value.** High for the salary data; moderate for years_experience. BLS and LinkedIn already publish this data publicly — WIDAI's value-add is curating it for 187 specific data/AI roles and maintaining it over time.
 
 **Residual value.** Combined with `skills`, enables skill premium analysis (which skills correlate with higher percentile salaries). Combined with `atlas_tier`, creates seniority-adjusted compensation bands. Combined with `certifications`, quantifies the certification premium.
 
@@ -338,7 +338,7 @@ This is a complex nested object with multiple sub-fields that serve different pu
 
 ### `linkedin_job_functions`, `employment_types`, `workplace_types`, `education_requirements`
 
-**Primary use case.** These sub-fields capture **market context** — how roles appear in the wild on job platforms. `linkedin_job_functions` enables mapping ATLAS roles to LinkedIn's internal taxonomy, supporting API integration. `employment_types` (full-time, contract, etc.) and `workplace_types` (remote, hybrid, on-site) capture the structural attributes of roles that affect talent availability.
+**Primary use case.** These sub-fields capture **market context** — how roles appear in the wild on job platforms. `linkedin_job_functions` enables mapping WIDAI roles to LinkedIn's internal taxonomy, supporting API integration. `employment_types` (full-time, contract, etc.) and `workplace_types` (remote, hybrid, on-site) capture the structural attributes of roles that affect talent availability.
 
 **Secondary use cases.** Power job posting generation and matching. Support workforce planning by identifying which roles can be filled remotely (expanding talent pools) versus those requiring on-site presence.
 
@@ -378,11 +378,11 @@ This is a complex nested object with multiple sub-fields that serve different pu
 
 ### `gap_and_priority_metadata` (object)
 
-**Primary use case.** Enables **data stewardship workflow management** for the ATLAS dataset itself. The `coverage_completeness` enum (`complete/partial/stub`) functions as a data quality metric — aligned with MDM best practices where "volume and quality of golden records" is a key KPI. The `priority_level` enum enables triage by data stewards. The `frameworks_missing` array identifies specific enrichment targets.
+**Primary use case.** Enables **data stewardship workflow management** for the WIDAI dataset itself. The `coverage_completeness` enum (`complete/partial/stub`) functions as a data quality metric — aligned with MDM best practices where "volume and quality of golden records" is a key KPI. The `priority_level` enum enables triage by data stewards. The `frameworks_missing` array identifies specific enrichment targets.
 
 **Secondary use cases.** Powers **trust scoring for downstream consumers** — a consuming AI system can weight role records by completeness, giving higher confidence to `complete` records and lower confidence to `stub` records. The `last_reviewed` date supports the periodic review requirement in NIST AI RMF GOVERN 1.5. The `curation_notes` string enables human-readable context for editorial decisions. The `reviewed_by` string creates an accountability trail.
 
-**Inherent value.** This field makes ATLAS a self-aware data product — it knows its own quality and communicates it to consumers. This is a rare and valuable design pattern that most taxonomies lack.
+**Inherent value.** This field makes WIDAI a self-aware data product — it knows its own quality and communicates it to consumers. This is a rare and valuable design pattern that most taxonomies lack.
 
 **Residual value.** Combined with `sources`, creates a complete quality assessment: which sources are available, which are missing, and how complete the record is. Combined with lifecycle fields, enables quality trend analysis over time.
 
@@ -394,7 +394,7 @@ This is a complex nested object with multiple sub-fields that serve different pu
 
 ### `related_roles` (array of objects)
 
-**Primary use case.** Creates the **edge list for the ATLAS role knowledge graph**. The `relationship_type` enum (`parent/child/sibling/specialization_of/generalization_of/career_progression_from/career_progression_to/related`) provides the typed edges needed for graph-based reasoning. ESCO's Neo4j implementation uses `skos:broader` and `skos:narrower` for hierarchy; ATLAS's richer relationship vocabulary enables more sophisticated graph queries.
+**Primary use case.** Creates the **edge list for the WIDAI role knowledge graph**. The `relationship_type` enum (`parent/child/sibling/specialization_of/generalization_of/career_progression_from/career_progression_to/related`) provides the typed edges needed for graph-based reasoning. ESCO's Neo4j implementation uses `skos:broader` and `skos:narrower` for hierarchy; WIDAI's richer relationship vocabulary enables more sophisticated graph queries.
 
 **Secondary use cases.** Powers **career path recommendation engines** — the `career_progression_from/to` edges create directed paths that platforms like Eightfold, Gloat, and TalentGuard use for internal mobility recommendations. The `specialization_of/generalization_of` edges enable drill-down/roll-up navigation in career explorers. The `parent/child` edges define the organizational hierarchy. KDD 2025's CAPER paper demonstrates that temporal knowledge graphs with role/skill relationships achieve state-of-the-art career trajectory prediction.
 
@@ -410,7 +410,7 @@ This is a complex nested object with multiple sub-fields that serve different pu
 
 ### `status` (enum: draft/review/published/deprecated)
 
-**Primary use case.** Implements **content lifecycle management** for the ATLAS dataset. MDM platforms universally implement workflow-based governance with configurable approval processes — this 4-state lifecycle mirrors the pattern used by Semarchy, Ataccama, and other MDM vendors. Consuming systems can filter to `published` records for production use while data stewards work on `draft` and `review` records.
+**Primary use case.** Implements **content lifecycle management** for the WIDAI dataset. MDM platforms universally implement workflow-based governance with configurable approval processes — this 4-state lifecycle mirrors the pattern used by Semarchy, Ataccama, and other MDM vendors. Consuming systems can filter to `published` records for production use while data stewards work on `draft` and `review` records.
 
 **Secondary use cases.** The `deprecated` status enables soft deletion — roles that become obsolete are marked rather than removed, preserving referential integrity for historical analysis and audit trails. Supports the EU AI Act's documentation requirements by tracking when roles were established and retired.
 
@@ -424,11 +424,11 @@ This is a complex nested object with multiple sub-fields that serve different pu
 
 **Primary use case.** Implements **temporal governance and version control**. The `schema_version` field is particularly important — it enables consuming systems to detect breaking changes and adapt their parsing logic accordingly. Saxo Bank's data mesh implementation uses "GitOps for domain management" with schema versioning as a core requirement.
 
-**Secondary use cases.** Supports the EU AI Act's requirement that providers keep technical documentation for 10 years and deployers retain logs for at least 6 months. Enables "time-travel queries" — reconstructing what the ATLAS dataset looked like at any point in time. Powers change detection pipelines that notify consumers when records they depend on are modified.
+**Secondary use cases.** Supports the EU AI Act's requirement that providers keep technical documentation for 10 years and deployers retain logs for at least 6 months. Enables "time-travel queries" — reconstructing what the WIDAI dataset looked like at any point in time. Powers change detection pipelines that notify consumers when records they depend on are modified.
 
 **Inherent value.** Table stakes for any data product. Without timestamps and version tracking, the dataset cannot be managed, audited, or integrated reliably.
 
-**Residual value.** Combined with `status`, creates a complete state machine history. Combined with `sources.retrieved_date`, enables freshness comparison between the ATLAS record and its underlying sources.
+**Residual value.** Combined with `status`, creates a complete state machine history. Combined with `sources.retrieved_date`, enables freshness comparison between the WIDAI record and its underlying sources.
 
 **Verdict: KEEP AS-IS.** Standard and essential. Consider adding a `version` field at the record level (distinct from `schema_version`) to track individual record revisions if the schema evolves to support record-level versioning.
 
@@ -448,4 +448,4 @@ Across the entire schema, the assessment identifies **zero fields that should be
 | `regulatory_context` | Modify | Add NIST AI RMF function mappings and `jurisdictions` array |
 | `dama_context` | Modify | Generalize to extensible `framework_specific_context` pattern |
 
-The schema's highest-value fields are `occupation_codes`, `related_roles`, `skills`, `tasks`, `regulatory_context`, and `variant_titles` — these six fields power the applications that most differentiate ATLAS from existing taxonomies. The content fields (tasks, skills, knowledge_areas, abilities) represent the schema's largest unrealized value and should be the top population priority. The regulatory context field is ATLAS's most unique competitive advantage — no other occupational framework offers structured regulatory obligation mappings, and as AI regulation intensifies globally, this field's value will compound rapidly. The schema is mature, well-designed, and ready to serve as the canonical reference data product for the CDAIO organizational domain.
+The schema's highest-value fields are `occupation_codes`, `related_roles`, `skills`, `tasks`, `regulatory_context`, and `variant_titles` — these six fields power the applications that most differentiate WIDAI from existing taxonomies. The content fields (tasks, skills, knowledge_areas, abilities) represent the schema's largest unrealized value and should be the top population priority. The regulatory context field is WIDAI's most unique competitive advantage — no other occupational framework offers structured regulatory obligation mappings, and as AI regulation intensifies globally, this field's value will compound rapidly. The schema is mature, well-designed, and ready to serve as the canonical reference data product for the CDAIO organizational domain.

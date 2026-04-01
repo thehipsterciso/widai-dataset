@@ -1,14 +1,14 @@
 # R01: Coverage Gap Test — Tier 0 Validation
 
 **Test Date:** 2026-03-26
-**ATLAS Version:** 0.4.0
+**WIDAI Version:** 0.4.0
 **Test Type:** Tier 0 Validation (go/no-go for PE due diligence pilot)
 
 ---
 
 ## Executive Summary
 
-R01 tests whether ATLAS can support a PE due diligence pilot by measuring role coverage and KSA availability across 5 representative mid-market data/AI team archetypes.
+R01 tests whether WIDAI can support a PE due diligence pilot by measuring role coverage and KSA availability across 5 representative mid-market data/AI team archetypes.
 
 **Result: PASS**
 
@@ -34,12 +34,12 @@ All 5 archetypes represent PE target universe: mid-market companies ($100M-$2B r
 
 ### Mapping Methodology
 
-- **Direct match:** Job title matched exactly to ATLAS canonical role title
+- **Direct match:** Job title matched exactly to WIDAI canonical role title
 - **Fuzzy match:** Semantic matching on role keywords (Data Engineer → Senior Data Engineer)
 - **Assessment readiness:**
   - **Full** — Role exists with KSA mappings
   - **Partial** — Role exists, no KSAs available
-  - **None** — Role not in ATLAS
+  - **None** — Role not in WIDAI
 
 ---
 
@@ -134,13 +134,13 @@ All 5 archetypes represent PE target universe: mid-market companies ($100M-$2B r
 - **Leadership (LDR):** Core roles covered; emerging strategic roles (AI Innovation Lead, Transformation Lead) have limited KSA depth
 
 ### No Unmapped Roles
-Zero archetypes had roles that could not be matched to ATLAS. This reflects both ATLAS breadth (187 roles) and intelligent fuzzy matching.
+Zero archetypes had roles that could not be matched to WIDAI. This reflects both WIDAI breadth (187 roles) and intelligent fuzzy matching.
 
 ---
 
 ## KSA Coverage Details
 
-**Total KSA entities in ATLAS:** 322 KSAs
+**Total KSA entities in WIDAI:** 322 KSAs
 **Roles with KSA mappings:** 159/187 (85%)
 **Categories with KSA support:** 8/10 (GOV, ENG, DEV, DSM, ANL, RSK, OPS, LDR)
 **Categories without KSAs:** NICHE (specialized roles), REG (regulatory framework roles)
@@ -153,7 +153,7 @@ Zero archetypes had roles that could not be matched to ATLAS. This reflects both
 
 **Measured Result:** 92.2% KSA coverage
 
-**Interpretation:** ATLAS exceeds threshold by 32.2 percentage points. Dataset is sufficiently mature to support PE due diligence pilot without delay.
+**Interpretation:** WIDAI exceeds threshold by 32.2 percentage points. Dataset is sufficiently mature to support PE due diligence pilot without delay.
 
 ---
 
@@ -176,11 +176,11 @@ Zero archetypes had roles that could not be matched to ATLAS. This reflects both
 
 ## Conclusion
 
-ATLAS v0.4.0 is **ready for PE due diligence pilot**. The dataset provides:
+WIDAI v0.4.0 is **ready for PE due diligence pilot**. The dataset provides:
 
 - **Comprehensive role coverage** across all mid-market data/AI team structures
 - **Strong KSA foundation** with 92% of roles having complete assessment capability
-- **Minimal mapping friction** — all archetypes map 100% to ATLAS roles
+- **Minimal mapping friction** — all archetypes map 100% to WIDAI roles
 - **Clear roadmap** for targeted KSA enhancement post-pilot
 
 No data freeze or pause required. Proceed to Tier 1 validation with confidence.

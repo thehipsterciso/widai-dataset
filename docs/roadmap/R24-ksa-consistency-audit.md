@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-The ATLAS KSA dataset demonstrates **EXCELLENT structural consistency** but **SIGNIFICANT type distribution variance**. All 322 KSAs follow identical JSON schemas, maintain perfect prefix compliance, and attribute consistently to ATLAS v0.3.0. However, Ability coverage collapses after the DEV category (from 8→4→1→0), and total KSA counts decline from GOV (73) to OPS (23).
+The WIDAI KSA dataset demonstrates **EXCELLENT structural consistency** but **SIGNIFICANT type distribution variance**. All 322 KSAs follow identical JSON schemas, maintain perfect prefix compliance, and attribute consistently to WIDAI v0.3.0. However, Ability coverage collapses after the DEV category (from 8→4→1→0), and total KSA counts decline from GOV (73) to OPS (23).
 
 **Recommendation:** Proceed with deployment, but clarify intent behind Ability removal and standardize terminology before full operationalization.
 
@@ -30,14 +30,14 @@ All eight categories use identical JSON schema:
   "ksa_id": "STRING",
   "type": "Knowledge|Skill|Ability|Task",
   "statement": "STRING",
-  "origin_framework": "ATLAS",
+  "origin_framework": "WIDAI",
   "origin_version": "0.3.0"
 }
 ```
 
 **Findings:**
 - Schema version: **1.0.0** (100% consistent)
-- Framework attribution: **ATLAS 0.3.0** (100% consistent, 322/322 KSAs)
+- Framework attribution: **WIDAI 0.3.0** (100% consistent, 322/322 KSAs)
 - ID format: All follow `{CATEGORY}-{ROLE}-{TYPE}-{SEQUENCE}` pattern
 - Field presence: All fields present in all KSAs
 
@@ -250,7 +250,7 @@ ANL: risk (2x)
 
 **Status:** 100% attribution across all KSAs.
 
-- **All 322 KSAs** attribute to: `ATLAS` framework, version `0.3.0`
+- **All 322 KSAs** attribute to: `WIDAI` framework, version `0.3.0`
 - **No missing** or inconsistent attributions
 - Suggests coordinated authorship or strict curation process
 
@@ -402,7 +402,7 @@ LDR:  0 Abilities  (continues)
 
 **Implication:**
 
-The ATLAS KSA dataset has a **solid structural foundation**. All 322 KSAs follow identical schemas, maintain perfect prefix compliance, and attribute consistently to ATLAS v0.3.0. This indicates professional curation.
+The WIDAI KSA dataset has a **solid structural foundation**. All 322 KSAs follow identical schemas, maintain perfect prefix compliance, and attribute consistently to WIDAI v0.3.0. This indicates professional curation.
 
 However, **type distribution shows evidence of progressive design decisions** that require documentation:
 
@@ -447,7 +447,7 @@ These patterns suggest either **intentional domain scoping** (appropriate) or **
 
 ## Conclusion
 
-The ATLAS KSA framework is **structurally sound and professionally curated**. Evidence of intentional design is clear (GOV-first authorship, progressive specialization by domain). However, **intent documentation is missing** for key decisions (Ability removal, vocabulary narrowing).
+The WIDAI KSA framework is **structurally sound and professionally curated**. Evidence of intentional design is clear (GOV-first authorship, progressive specialization by domain). However, **intent documentation is missing** for key decisions (Ability removal, vocabulary narrowing).
 
 **Status:** ✓ READY FOR CONDITIONAL DEPLOYMENT
 

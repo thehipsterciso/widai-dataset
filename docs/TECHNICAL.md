@@ -1,16 +1,16 @@
-# ATLAS — Technical Documentation
+# WIDAI — Technical Documentation
 
-This document covers the data architecture, schema design, repository structure, and validation tooling for the ATLAS dataset. For strategic context, use cases, and roadmap, see the [main README](../README.md).
+This document covers the data architecture, schema design, repository structure, and validation tooling for the WIDAI dataset. For strategic context, use cases, and roadmap, see the [main README](../README.md).
 
 ---
 
 ## Architecture
 
-ATLAS uses a shared-pool KSA model with entity-separated flat files and many-to-many role mappings. This architecture was established in [ADR-013](roadmap/adr/ADR-013-shared-pool-ksa-architecture.md), replacing the original role-centric model after a depth audit revealed a 14.9x shortfall against NICE framework benchmarks.
+WIDAI uses a shared-pool KSA model with entity-separated flat files and many-to-many role mappings. This architecture was established in [ADR-013](roadmap/adr/ADR-013-shared-pool-ksa-architecture.md), replacing the original role-centric model after a depth audit revealed a 14.9x shortfall against NICE framework benchmarks.
 
 The core design principle: **KSAs are shared competencies organized by knowledge domain, not role properties.** A single KSA — "Knowledge of data classification frameworks and sensitivity labeling standards" — belongs to the Data Governance domain and can be referenced by a Data Governance Director, a Data Steward, a Privacy Officer, and an AI Governance Manager. Each role references the same KSA with a `proficiency_context` that differentiates how it applies: strategic for the Director, operational for the Steward, oversight for the Privacy Officer.
 
-This follows patterns established by NIST NICE (where Tasks and KSAs exist independently, and roles reference them) and SFIA (where skills exist as a shared library and roles are assembled from them). The key difference: ATLAS organizes its shared pool by knowledge domain rather than by role category, enabling cross-domain sharing that role-centric models structurally prevent.
+This follows patterns established by NIST NICE (where Tasks and KSAs exist independently, and roles reference them) and SFIA (where skills exist as a shared library and roles are assembled from them). The key difference: WIDAI organizes its shared pool by knowledge domain rather than by role category, enabling cross-domain sharing that role-centric models structurally prevent.
 
 Each directory represents a node type. Each mapping file represents an edge type. The structure loads directly into Neo4j or any graph database without transformation.
 
@@ -21,7 +21,7 @@ Each directory represents a node type. Each mapping file represents an edge type
   - Domain codes: DG, DA, DQ, AI, AG, SP, AB, LS, OP, RC, RM, TF
   - Type codes: K (Knowledge), S (Skill), A (Ability), T (Task)
 - Relationship tables in `/mappings/` connect roles to KSAs via `work_role_id` → `ksa_id` with `proficiency_context`
-- Role-to-framework mappings use `role_id` (format: `ATLAS-{CATEGORY}-{NNN}`)
+- Role-to-framework mappings use `role_id` (format: `WIDAI-{CATEGORY}-{NNN}`)
 
 ### KSA Domain Taxonomy
 
@@ -96,7 +96,7 @@ atlas-dataset/
 │   ├── coverage_gap_test.py   R01 validation test
 │   ├── ksa_quality_audit.py   R24 quality audit
 │   └── update_framework_licensing.py  R05 licensing update
-├── atlas_manifest.json     Dataset index — no payload, metadata only
+├── widai_manifest.json     Dataset index — no payload, metadata only
 ├── CHANGELOG.md            Version history
 ├── CONTRIBUTING.md         Pre-commit discipline checklist
 └── ATTRIBUTION.md          Framework licensing attribution
@@ -157,7 +157,7 @@ The master schema (`schema/role_record.json`) defines 25+ fields per role record
 
 ### KSA Depth Coverage Index (DCI) — ADR-012
 
-Benchmarks every mapped role's KSA count against the NIST NICE Framework v2.1.0. The NICE framework averages 133.3 KSAs per role (range: 68-206). ATLAS targets a minimum of 40 KSAs per standard role and 60 per regulatory role.
+Benchmarks every mapped role's KSA count against the NIST NICE Framework v2.1.0. The NICE framework averages 133.3 KSAs per role (range: 68-206). WIDAI targets a minimum of 40 KSAs per standard role and 60 per regulatory role.
 
 ```bash
 python3 scripts/check_ksa_depth.py
@@ -197,15 +197,15 @@ Current validation checks: JSON structural integrity, referential integrity (eve
 
 ## Scope
 
-ATLAS covers the full data and AI profession. It explicitly excludes the CISO and cybersecurity workforce, which is covered comprehensively by NIST NICE. Boundary roles (Database Administrator, Privacy Officer, etc.) are included with domain-qualified framing, following the NICE precedent for adjacent roles. See [NICE Boundary Scoping](nice-boundary-scoping.md) for the detailed analysis.
+WIDAI covers the full data and AI profession. It explicitly excludes the CISO and cybersecurity workforce, which is covered comprehensively by NIST NICE. Boundary roles (Database Administrator, Privacy Officer, etc.) are included with domain-qualified framing, following the NICE precedent for adjacent roles. See [NICE Boundary Scoping](nice-boundary-scoping.md) for the detailed analysis.
 
 ---
 
 ## Source Frameworks
 
-ATLAS unifies 70 source frameworks. Each framework carries a `commercial_status` classification (GREEN/YELLOW/RED) from the R05 License Audit. The major frameworks and their roles in the taxonomy:
+WIDAI unifies 70 source frameworks. Each framework carries a `commercial_status` classification (GREEN/YELLOW/RED) from the R05 License Audit. The major frameworks and their roles in the taxonomy:
 
-| Framework | Type | Role in ATLAS | Commercial Status |
+| Framework | Type | Role in WIDAI | Commercial Status |
 |-----------|------|--------------|-------------------|
 | O\*NET | Occupational taxonomy | General occupation codes, task descriptions | GREEN |
 | NIST NICE | Cybersecurity workforce | Boundary role definitions, KSA methodology model | GREEN |

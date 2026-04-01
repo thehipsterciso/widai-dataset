@@ -1,9 +1,13 @@
 # Changelog
 
-All notable changes to the ATLAS dataset are documented here.
+All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
 ## [0.5.3] - 2026-03-31
+
+### Project Rename: ATLAS → WIDAI
+
+**Workforce Initiative for Data and AI (WIDAI)** — project renamed across all documentation, data files, and tooling. Repo folder rename pending (handled separately at the GitHub level).
 
 ### Phase 1B: Framework Prioritization
 
@@ -17,23 +21,36 @@ This project uses [Semantic Versioning](https://semver.org/).
 
 ### Phase 1C: STRM-001 — O*NET Database 30.2 (ADR-015)
 
-**First STRM complete** — O*NET Content Model 30.2 mapped against ATLAS KSA Pool v0.5.2.
+**First STRM complete** — O*NET Content Model 30.2 mapped against WIDAI KSA Pool v0.5.2.
 
 **Why:** O*NET is the largest occupational competency database (923 occupations, 169 content model elements). First STRM establishes methodology rhythm and validates baseline KSA pool against the broadest general-purpose competency taxonomy available.
 
 **What changed:**
-- 126 in-scope O*NET Focal Document Elements evaluated exhaustively against 497 ATLAS KSAs
+- 126 in-scope O*NET Focal Document Elements evaluated exhaustively against WIDAI KSA pool
 - Relationship distribution: 82 Intersects with (65%), 23 No relationship (18%), 17 Superset of (14%), 4 Equal (3%)
-- Mean Strength of Relationship: 5.2/10
 - 6 gap signals identified (foundational communication, continuous learning, service orientation, project management, conflict resolution, ethical reasoning foundations)
 - Gap signals cluster in foundational professional skills, not domain-specific technical areas — validating Phase 1A enrichment quality
 - QA/QC: PASS on all criteria
 
-**New files:** `sources/onet_30_2_citation.json`, `sources/onet_30_2/` (raw database), `strm/onet/use_case.json`, `strm/onet/strm_mapping.json`, `strm/onet/qa_qc_report.json`, `strm/issues/STRM-001-ONET-gaps.json`
+**Multi-method computational scoring pipeline established:**
+- Primary: Cross-Encoder STS (`cross-encoder/stsb-roberta-base`) — industry-standard pairwise semantic textual similarity. Raw 0-1 score mapped to NIST 0-10 strength scale.
+- Secondary: BERTScore P/R/F1 (`roberta-large`), NLI Cross-Encoder (`nli-deberta-v3-base`), Bi-Encoder Cosine (`all-MiniLM-L6-v2`), Jaccard Token Overlap
+- Each scored pair documented with all five methods plus per-method interpretive `significance` reasoning
+- Scoring pipeline is reproducible — identical inputs produce identical outputs
+
+**Per-FDE rationale files (126):**
+- One JSON file per O*NET Focal Document Element in `strm/onet/rationale/`
+- Full NIST IR 8278Ar1 OLIR template fields plus WIDAI extensions per ADR-014
+- Complete five-method scoring audit trail with interpretive reasoning per method
+- File naming: FDE ID with dashes (e.g., `2-C-1-f.json`)
+
+**New files:** `sources/onet_30_2_citation.json`, `sources/onet_30_2/` (raw database), `strm/onet/use_case.json`, `strm/onet/strm_mapping.json`, `strm/onet/strm_scoring_pipeline.py`, `strm/onet/scoring_summary.json`, `strm/onet/qa_qc_report.json`, `strm/onet/rationale/*.json` (126 files), `strm/issues/STRM-001-ONET-gaps.json`
 
 **New ADRs:** ADR-015 (STRM — O*NET Database 30.2)
 
 **New documentation:** `docs/roadmap/phase-1b-framework-prioritization.md`
+
+**Documentation cleanup:** README and docs/README rewritten to track progress rather than snapshot-specific statistics. Evolving numbers (KSA counts, strength distributions) deferred to individual STRM ADRs and rationale files until synthesis (Phase 1D) produces stable figures. `widai_manifest.json` renamed from `atlas_manifest.json`.
 
 ## [0.5.2] - 2026-03-31
 
@@ -41,7 +58,7 @@ This project uses [Semantic Versioning](https://semver.org/).
 
 **KSA pool expanded** from 363 to 497 unique KSAs across all 12 domain pools.
 
-**Why:** ADR-014 (STRM-Based KSA Enrichment) identified that the ATLAS KSA pool at 363 entries was too thin for meaningful STRM framework mapping. At 5–19 KSAs per role, STRM would produce overwhelmingly "No relationship" results — confirming known gaps without producing actionable signal. Phase 1A establishes a reasonable baseline so STRM mappings produce genuine validation.
+**Why:** ADR-014 (STRM-Based KSA Enrichment) identified that the WIDAI KSA pool at 363 entries was too thin for meaningful STRM framework mapping. At 5–19 KSAs per role, STRM would produce overwhelmingly "No relationship" results — confirming known gaps without producing actionable signal. Phase 1A establishes a reasonable baseline so STRM mappings produce genuine validation.
 
 **What changed:**
 - RC (Regulatory & Compliance): 7 → 42 KSAs. Major expansion covering data protection regulations, AI-specific regulatory frameworks, sector-specific compliance, cross-jurisdictional mapping, DPIAs, data subject rights, international data transfers, consent management, and regulatory examination readiness.
@@ -59,7 +76,7 @@ This project uses [Semantic Versioning](https://semver.org/).
 
 **Enrichment methodology:** Research-grounded domain-expertise first pass informed by DAMA DMBOK, SFIA, O*NET, EU AI Act, GDPR competency frameworks, SR 11-7/SS1/23, DPO competency frameworks, and AI conformity assessment requirements. This baseline is explicitly pre-validation — STRM phase (Phase 1C) will validate, correct, and refine.
 
-**Manifest updated:** atlas_manifest.json statistics and per-domain KSA counts synchronized.
+**Manifest updated:** widai_manifest.json statistics and per-domain KSA counts synchronized.
 
 ## [0.5.1] - 2026-03-31
 
@@ -67,12 +84,12 @@ This project uses [Semantic Versioning](https://semver.org/).
 
 **Methodology redesign** — KSA enrichment approach replaced from bulk AI-assisted authoring to NIST IR 8477 Set Theory Relationship Mapping (STRM) framework-by-framework evidence-based methodology.
 
-**Why:** Adversarial review on 2026-03-31 identified that bulk KSA authoring — even with the Adversarial Quality Gate (AQG-v1) — produces KSAs without provenance chain, identifies gaps by intuition rather than systematic framework comparison, and determines cross-cutting KSAs by assumption rather than multi-framework evidence. The KSA pool is the core intellectual property of ATLAS. Every commercial product scores against it. It requires the same methodological rigor as the roadmap itself.
+**Why:** Adversarial review on 2026-03-31 identified that bulk KSA authoring — even with the Adversarial Quality Gate (AQG-v1) — produces KSAs without provenance chain, identifies gaps by intuition rather than systematic framework comparison, and determines cross-cutting KSAs by assumption rather than multi-framework evidence. The KSA pool is the core intellectual property of WIDAI. Every commercial product scores against it. It requires the same methodological rigor as the roadmap itself.
 
 **What changed:**
 - ADR-014 adopted: STRM-based enrichment supersedes ADR-012 Section 4 (Dataset Enrichment Sprint)
 - Roadmap Phase 1 restructured into four sub-phases: 1A (Baseline Enrichment), 1B (Framework Prioritization), 1C (Per-Framework STRM Cycle), 1D (Synthesis)
-- STRM deliverable format defined: NIST IR 8477 Table 5 six-column structure + Strength of Relationship (ATLAS extension from SCF practice)
+- STRM deliverable format defined: NIST IR 8477 Table 5 six-column structure + Strength of Relationship (WIDAI extension from SCF practice)
 - Seven deliverables per framework: canonical source, use case, STRM mapping data, per-FDE rationale files, gap issue register, QA/QC report, ADR
 - New repo directories planned: `sources/`, `strm/`, `strm/issues/`
 - Synthesis rules intentionally deferred until all framework STRMs are complete — rules emerge from evidence, not before it
@@ -127,7 +144,7 @@ AB (Analytics & BI), AG (AI Governance & Ethics), AI (AI/ML Foundations), DA (Da
 - ADR-011: PE Assessment Scoring Model Design — documents key design decisions and alternatives considered
 
 ### Commit Discipline
-- Added CONTRIBUTING.md: Pre-commit checklist specific to ATLAS (update, create, verify phases)
+- Added CONTRIBUTING.md: Pre-commit checklist specific to WIDAI (update, create, verify phases)
 - Added scripts/check_consistency.py: Automated validation of manifest accuracy, framework consistency, cross-references, CHANGELOG currency
 - Added .github/workflows/consistency.yml: CI gate running consistency checks on every push/PR
 - Fixed documentation drift from Phase 0 (CHANGELOG, README, manifest, ADR-003, ADR-005 all synced)
@@ -136,7 +153,7 @@ AB (Analytics & BI), AG (AI Governance & Ethics), AI (AI/ML Foundations), DA (Da
 
 ### Roadmap & Strategy
 - Redesigned README.md as C-suite strategy deck with competitive positioning, market opportunity, and execution roadmap
-- Published ATLAS Roadmap: Ensemble Brainstorm five-pass strategic analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping)
+- Published WIDAI Roadmap: Ensemble Brainstorm five-pass strategic analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping)
 - Added 10 Architectural Decision Records (ADRs) documenting rationale for roadmap decisions, consequences, and alternatives considered
 
 ### Phase 0 Validation Sprint — Complete
@@ -161,7 +178,7 @@ AB (Analytics & BI), AG (AI Governance & Ethics), AI (AI/ML Foundations), DA (Da
 - 322 Role_KSA relationship records in `/mappings/role_ksa_*.json`
 - 70 framework references in `/frameworks/frameworks.json`
 - 333 role-to-framework mappings across 70 source frameworks
-- `atlas_manifest.json` as dataset index (no payload, metadata only)
+- `widai_manifest.json` as dataset index (no payload, metadata only)
 - JSON Schema for CDAIO Domain Master Role Record (`/schema/role_record.json`)
 - Validation script (`/scripts/validate.py`) with referential integrity checks
 - GitHub Actions CI workflow (`.github/workflows/validate.yml`)
@@ -181,7 +198,7 @@ AB (Analytics & BI), AG (AI Governance & Ethics), AI (AI/ML Foundations), DA (Da
 ## [0.3.0] - 2026-03-24
 
 ### Prior state (imported from chat)
-- ATLAS v0.3.0 Base Structure: 8 WRCs, 34 work roles, KSA spine (ksa_id, type, statement)
+- WIDAI v0.3.0 Base Structure: 8 WRCs, 34 work roles, KSA spine (ksa_id, type, statement)
 - KSAs embedded inside work role records
 - No entity separation, no relationship tables
 

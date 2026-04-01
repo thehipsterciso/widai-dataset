@@ -7,7 +7,7 @@
 
 ## Context
 
-The ATLAS KSA data model was built with role-centric ownership: each KSA is authored for a specific role, given an ID that embeds the role (`GOV-01.01-K-001`), stored in a category-based file, and mapped 1:1 to exactly one role. The manifest claims "KSAs are independent entities" — but the implementation contradicts this at every level.
+The WIDAI KSA data model was built with role-centric ownership: each KSA is authored for a specific role, given an ID that embeds the role (`GOV-01.01-K-001`), stored in a category-based file, and mapped 1:1 to exactly one role. The manifest claims "KSAs are independent entities" — but the implementation contradicts this at every level.
 
 Audit findings (2026-03-27):
 - 364 KSAs, 364 role-KSA mappings. Perfect 1:1 cardinality. Zero sharing.

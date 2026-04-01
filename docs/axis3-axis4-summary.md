@@ -1,7 +1,7 @@
-# ATLAS Axis 3 & Axis 4 Discovery — Executive Summary
+# WIDAI Axis 3 & Axis 4 Discovery — Executive Summary
 
 **Completed:** 2026-03-26  
-**Scope:** Complete enumeration of ATLAS framework outputs (Axis 3) and organizational contexts (Axis 4)  
+**Scope:** Complete enumeration of WIDAI framework outputs (Axis 3) and organizational contexts (Axis 4)  
 **Deliverable:** axis3-axis4-discovery.md (1,271 lines, comprehensive taxonomy)
 
 ---
@@ -43,7 +43,7 @@
 | Organization Size | 5 | Mid-market (500–5K) is "Goldilocks zone" — clear problems, budget to solve |
 | Industry Vertical | 15 | Regulated (finance, healthcare, defense) have existential compliance needs |
 | Data/AI Maturity | 5 | Established (Level 4) & Advanced (Level 5) = easiest sales; pre-data invisible |
-| Regulatory Exposure | 3 | High-exposure orgs: ATLAS is compliance tool; others: efficiency tool |
+| Regulatory Exposure | 3 | High-exposure orgs: WIDAI is compliance tool; others: efficiency tool |
 | Workforce Model | 6 | Hybrid/contractor models create make-buy-partner decision urgency |
 | Transformation Stage | 5 | Mid-transformation (1–3 years in) = peak receptivity |
 | Geographic Context | 4 | EU operations = critical; US-only = baseline |
@@ -65,7 +65,7 @@
 3. **Post-IPO/public companies** (board and audit committee demand governance proof)
 
 **Hardest-to-Reach Contexts:**
-1. **Pre-data organizations** (don't yet recognize they need ATLAS; education-first sales required)
+1. **Pre-data organizations** (don't yet recognize they need WIDAI; education-first sales required)
 2. **Early-stage startups** (data not a priority; founder education required)
 3. **Emerging markets** (specialized adaptations needed; underdeveloped talent markets)
 
@@ -76,12 +76,12 @@
 ### For Go-to-Market Strategy
 
 **1. Build for Multiple Buyers Simultaneously**
-- Same ATLAS dataset powers 50+ different outputs for different audiences
+- Same WIDAI dataset powers 50+ different outputs for different audiences
 - CDO buyers want governance + compliance outputs
 - CFO buyers want cost/investment models
 - HR buyers want career pathing + hiring tools
 - Boards want regulatory proof + risk quantification
-- **Implication:** Modular product packaging; customers don't buy "ATLAS," they buy specific outputs
+- **Implication:** Modular product packaging; customers don't buy "WIDAI," they buy specific outputs
 
 **2. Context-Based Positioning**
 - Value prop changes dramatically by context

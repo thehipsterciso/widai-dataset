@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Validation script for ATLAS dataset.
+Validation script for WIDAI dataset.
 Validates JSON integrity, referential integrity, and duplicate detection.
 """
 
@@ -38,10 +38,10 @@ def main():
                 errors.append(result[1])
 
     # ── 2. Validate manifest ──
-    print("Validating atlas_manifest.json...")
-    manifest_path = os.path.join(base, "atlas_manifest.json")
+    print("Validating widai_manifest.json...")
+    manifest_path = os.path.join(base, "widai_manifest.json")
     if not os.path.exists(manifest_path):
-        errors.append("atlas_manifest.json not found")
+        errors.append("widai_manifest.json not found")
     else:
         result = load_json(manifest_path)
         if isinstance(result, tuple):
@@ -50,7 +50,7 @@ def main():
             manifest = result
             for field in ["dataset_id", "dataset_title", "version", "created_date", "statistics"]:
                 if field not in manifest:
-                    errors.append(f"atlas_manifest.json missing required field: {field}")
+                    errors.append(f"widai_manifest.json missing required field: {field}")
 
     # ── 3. Collect all role_ids ──
     print("Collecting role IDs...")
@@ -103,7 +103,7 @@ def main():
             role_ksa_count += 1
             wrid = rel.get("work_role_id")
             kid = rel.get("ksa_id")
-            # work_role_id uses WR-GOV-01.01 format, not ATLAS-GOV-0001
+            # work_role_id uses WR-GOV-01.01 format, not WIDAI-GOV-0001
             # so we skip role_id validation for these (different ID space)
             if kid and kid not in all_ksa_ids:
                 errors.append(f"Orphaned ksa_id: {kid} in {os.path.basename(fp)}")

@@ -1,0 +1,61 @@
+{
+  "strm_id": "STRM-001-ONET",
+  "fde_id": "4.A.4.b.5",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "4.A.4.b.5",
+  "focal_document_element_description": "Identifying the developmental needs of others and coaching, mentoring, or otherwise helping others to improve their knowledge or skills.",
+  "rationale": "Semantic",
+  "relationship": "Equal",
+  "reference_document_element": "LS-S-007",
+  "reference_document_element_description": "Skill in mentoring and developing data and AI professionals, including individualized development planning, technical coaching, career guidance, and creating growth opportunities within the organizational context.",
+  "comments": "Excellent match. WIDAI LS-S-007 is a direct, specific expression of coaching and development for data/AI professionals. Also: AB-S-004 (mentoring junior analysts). Very strong coverage.",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_atlas_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark. Both texts processed jointly through transformer; outputs calibrated 0-1 similarity score.",
+      "raw_score_0_1": 0.6333,
+      "mapped_strength_0_10": 6.3,
+      "final_strength_integer": 6,
+      "significance": "Moderate similarity (nist band: roughly as similar as dissimilar). The moderate STS score for an Equal relationship reflects vocabulary divergence between O*NET's general-purpose language and WIDAI's domain-specific terminology. The concepts are equivalent despite surface-level phrasing differences that compress the cross-encoder score."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching. Precision = FDE coverage of KSA tokens. Recall = KSA coverage by FDE tokens. F1 = harmonic mean.",
+        "precision": 0.8806,
+        "recall": 0.8702,
+        "f1": 0.8754,
+        "significance": "F1 of 0.8754 indicates moderate token-level semantic alignment. Precision and Recall are balanced, indicating roughly symmetric semantic coverage between the two descriptions. Balanced P/R is consistent with the Equal classification \u2014 both descriptions cover each other's semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference. Classifies text pair as entailment, neutral, or contradiction. Indicates directional implication strength.",
+        "contradiction": 0.0013,
+        "entailment": 0.9603,
+        "neutral": 0.0384,
+        "significance": "Entailment-dominant (96.03%) \u2014 the model detects that one description logically implies aspects of the other. Strong entailment signal supports conceptual equivalence between these descriptions."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
+        "cosine_similarity_0_1": 0.6582,
+        "significance": "The bi-encoder score (0.6582) meets or exceeds the STS cross-encoder (0.6333). This is uncommon and suggests the semantic similarity is well-represented in the embedding space \u2014 the descriptions occupy similar vector-space regions even without joint processing."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
+        "similarity_0_1": 0.1111,
+        "significance": "Low lexical overlap (11.11% of tokens shared). Some shared vocabulary exists (likely common functional words or broadly-used domain terms) but the bulk of each description uses distinct terminology."
+      }
+    }
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-03-31"
+}

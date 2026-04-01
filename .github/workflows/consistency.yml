@@ -1,4 +1,4 @@
-name: ATLAS Consistency Check
+name: WIDAI Consistency Check
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run ATLAS consistency check
+      - name: Run WIDAI consistency check
         run: python scripts/check_consistency.py
 
       - name: Run KSA Depth Coverage Index (DCI)

@@ -1,4 +1,4 @@
-# ATLAS Architecture Brainstorm: KSA Data Model Redesign
+# WIDAI Architecture Brainstorm: KSA Data Model Redesign
 
 **Date:** 2026-03-27
 **Trigger:** Manual review exposed order-of-magnitude KSA depth failure + fundamental shared-pool design flaw
@@ -8,7 +8,7 @@
 
 ## What Broke and Why
 
-The ATLAS KSA model was built role-centric when it should have been built pool-centric. Every decision since has compounded this error.
+The WIDAI KSA model was built role-centric when it should have been built pool-centric. Every decision since has compounded this error.
 
 **The architectural claim (from the manifest):** "KSAs are independent entities. Roles reference KSAs via relationship tables in /mappings/."
 
@@ -26,7 +26,7 @@ The authoring process was role-first: "What does a CDAIO need to know?" → auth
 
 The NICE framework — the only comparable reference — works completely differently. NICE has a shared pool where `K0001` through `K0622` are independent items. Work roles reference into the pool. A single Knowledge item appears in dozens of roles. The KSA doesn't "belong" to any role. It exists independently, and roles claim it.
 
-This is the model ATLAS should follow. It was not a novel insight — it was the obvious design if anyone had looked at the reference framework's actual structure before building.
+This is the model WIDAI should follow. It was not a novel insight — it was the obvious design if anyone had looked at the reference framework's actual structure before building.
 
 ---
 
@@ -111,7 +111,7 @@ Current mapping model (from `role_ksa_GOV.json`):
   "work_role_id": "WR-GOV-01.01",
   "work_role_title": "Chief Data and AI Officer (CDAIO)",
   "ksa_id": "GOV-01.01-K-001",
-  "source_framework": "ATLAS",
+  "source_framework": "WIDAI",
   "source_version": "0.3.0",
   "relationship_type": "requires"
 }
@@ -241,4 +241,4 @@ This restructuring changes the KSA identity model, file organization, mapping ca
 
 The alternative is to keep the current model and just add more role-specific KSAs, which would mean authoring ~1,400 unique statements (many of them near-duplicates) and maintaining a dataset where the same knowledge exists under 5 different IDs.
 
-The shared-pool model is the correct architecture. NICE uses it. O*NET uses it. SFIA uses it. Every mature competency framework uses it. ATLAS should have been built this way from the start.
+The shared-pool model is the correct architecture. NICE uses it. O*NET uses it. SFIA uses it. Every mature competency framework uses it. WIDAI should have been built this way from the start.

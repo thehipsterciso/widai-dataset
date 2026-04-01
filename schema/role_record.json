@@ -2,21 +2,21 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://atlas.cdaio.gov/schemas/role-record/v1.0.0",
   "title": "CDAIO Domain Master Role Record",
-  "description": "A role record in the CDAIO ATLAS master role dataset, designed to ingest data from NICE, O*NET, SOC, DCWF, DDaT, SFIA, ESCO, DAMA, EU AI Act, ISO 42001, SR 11-7, LinkedIn, IAPP, ISACA, and Gartner without losing fidelity.",
+  "description": "A role record in the CDAIO WIDAI master role dataset, designed to ingest data from NICE, O*NET, SOC, DCWF, DDaT, SFIA, ESCO, DAMA, EU AI Act, ISO 42001, SR 11-7, LinkedIn, IAPP, ISACA, and Gartner without losing fidelity.",
   "type": "object",
   "required": ["role_id", "canonical_title", "description", "sources", "atlas_tier", "functional_domain", "status"],
   "properties": {
 
     "role_id": {
       "type": "string",
-      "pattern": "^ATLAS-[A-Z]{2,4}-[0-9]{4}$",
-      "description": "ATLAS-assigned canonical identifier. Format: ATLAS-{domain_code}-{sequence}. Minted internally; not from any source framework."
+      "pattern": "^WIDAI-[A-Z]{2,4}-[0-9]{4}$",
+      "description": "WIDAI-assigned canonical identifier. Format: WIDAI-{domain_code}-{sequence}. Minted internally; not from any source framework."
     },
 
     "canonical_title": {
       "type": "string",
       "maxLength": 200,
-      "description": "Single authoritative title chosen by ATLAS curation team. One per record."
+      "description": "Single authoritative title chosen by WIDAI curation team. One per record."
     },
 
     "variant_titles": {
@@ -42,7 +42,7 @@
     "description": {
       "type": "string",
       "maxLength": 5000,
-      "description": "ATLAS-curated canonical description synthesized from source definitions."
+      "description": "WIDAI-curated canonical description synthesized from source definitions."
     },
 
     "source_descriptions": {
@@ -71,7 +71,7 @@
         "Tier 4 - Mid-Level Practitioner",
         "Tier 5 - Entry/Associate"
       ],
-      "description": "ATLAS-assigned seniority tier. Manually curated; not directly from any single framework."
+      "description": "WIDAI-assigned seniority tier. Manually curated; not directly from any single framework."
     },
 
     "functional_domain": {
@@ -89,7 +89,7 @@
         "Data Product Management",
         "Data Leadership"
       ],
-      "description": "Primary ATLAS functional domain. Synthesized from DAMA knowledge areas, DDaT families, NICE categories, and SFIA subcategories."
+      "description": "Primary WIDAI functional domain. Synthesized from DAMA knowledge areas, DDaT families, NICE categories, and SFIA subcategories."
     },
 
     "secondary_domains": {
@@ -116,7 +116,7 @@
     "category_code": {
       "type": "string",
       "enum": ["GOV", "ENG", "DEV", "DSM", "ANL", "RSK", "OPS", "LDR", "REG", "NICHE"],
-      "description": "ATLAS category code (10 values). Maps to functional domains: GOV=Data Governance & Stewardship; ENG=Data Engineering & Architecture; DEV=Data Science & Machine Learning; DSM=Data Management & Operations; ANL=Analytics & Business Intelligence; RSK=Model Risk & Validation; OPS=Data Security+Privacy & Compliance; LDR=Data Leadership; REG=Privacy & Compliance; NICHE=Data Product Management+AI Governance & Ethics."
+      "description": "WIDAI category code (10 values). Maps to functional domains: GOV=Data Governance & Stewardship; ENG=Data Engineering & Architecture; DEV=Data Science & Machine Learning; DSM=Data Management & Operations; ANL=Analytics & Business Intelligence; RSK=Model Risk & Validation; OPS=Data Security+Privacy & Compliance; LDR=Data Leadership; REG=Privacy & Compliance; NICHE=Data Product Management+AI Governance & Ethics."
     },
 
     "category_title": {
@@ -397,7 +397,7 @@
 
     "gap_and_priority_metadata": {
       "type": "object",
-      "description": "ATLAS curation metadata — manually maintained.",
+      "description": "WIDAI curation metadata — manually maintained.",
       "properties": {
         "coverage_completeness": {
           "type": "string",
@@ -414,7 +414,7 @@
 
     "related_roles": {
       "type": "array",
-      "description": "Links to other ATLAS roles with typed relationships.",
+      "description": "Links to other WIDAI roles with typed relationships.",
       "items": {
         "type": "object",
         "properties": {
@@ -434,7 +434,7 @@
     "introduced_in_version": {
       "type": "string",
       "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$",
-      "description": "ATLAS schema version in which this role record was introduced (e.g., 'v0.3.0', 'v0.4.0'). Scales across versions."
+      "description": "WIDAI schema version in which this role record was introduced (e.g., 'v0.3.0', 'v0.4.0'). Scales across versions."
     },
 
     "created_date": { "type": "string", "format": "date" },

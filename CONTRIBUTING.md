@@ -1,6 +1,6 @@
-# ATLAS Commit Discipline Guide
+# WIDAI Commit Discipline Guide
 
-This document is not a generic open source contributing guide. It is a **commit discipline system** designed to prevent the gap between what ATLAS actually contains and what its documentation claims.
+This document is not a generic open source contributing guide. It is a **commit discipline system** designed to prevent the gap between what WIDAI actually contains and what its documentation claims.
 
 The problem: work gets committed (new roles added, KSAs modified, frameworks remapped), but documentation doesn't follow. The README says 187 roles when there are actually 189. The manifest claims 322 KSAs but the actual count is 318. ADRs describe decisions that nobody validated. The roadmap claims a milestone is complete but the work isn't in the codebase.
 
@@ -14,7 +14,7 @@ Before you push, go through every item below. Mark off as you go. If you skip an
 
 ### A. Update Existing Documentation
 
-These files document ATLAS's current state. If your commit changes any of these aspects, you **must** update these files.
+These files document WIDAI's current state. If your commit changes any of these aspects, you **must** update these files.
 
 - **[ ] CHANGELOG.md** — Does this commit add, change, or remove anything?
   - New roles? Add version/date entry with role count and category breakdown
@@ -23,14 +23,14 @@ These files document ATLAS's current state. If your commit changes any of these 
   - Bug fixes or data corrections? List affected entities
   - *Rule:* Every commit that touches `/roles/`, `/ksas/`, `/mappings/`, or `/frameworks/` needs a CHANGELOG entry. Undocumented commits create drift.
 
-- **[ ] atlas_manifest.json** — Do any counts change?
+- **[ ] widai_manifest.json** — Do any counts change?
   - Recount roles in each `/roles/*.json` file; update `directories.roles.files[].role_count`
   - Recount KSAs in each `/ksas/*.json` file; update `directories.ksas.files[].ksa_count`
   - Recount mappings in each `/mappings/*.json` file; update `directories.mappings.files[].mapping_count` or `relationship_count`
   - Update `statistics.total_roles`, `statistics.total_ksas`, `statistics.total_role_ksa_relationships`, `statistics.total_frameworks`
   - Update `statistics.categories[].role_count`, `statistics.categories[].ksa_count`, `statistics.categories[].role_ksa_count` for affected categories
   - Update `version` if this is a release commit
-  - *Rule:* The manifest is the single source of truth for "what does ATLAS contain right now". Drift here causes every downstream decision to be made on stale data.
+  - *Rule:* The manifest is the single source of truth for "what does WIDAI contain right now". Drift here causes every downstream decision to be made on stale data.
 
 - **[ ] README.md** — Do any statistics, phase descriptions, status claims, or ADR summaries need updating?
   - Update role/KSA/framework counts in the "at-a-glance" section if manifest changed
@@ -77,7 +77,7 @@ These files document ATLAS's current state. If your commit changes any of these 
     - License text or attribution requirements
     - Any restrictions on derivative works
   - If the framework is YELLOW (requires attribution) or RED (citation-only), note those restrictions
-  - *Rule:* ATTRIBUTION.md is the legal surface. Incomplete attribution exposes ATLAS to compliance risk.
+  - *Rule:* ATTRIBUTION.md is the legal surface. Incomplete attribution exposes WIDAI to compliance risk.
 
 ### B. Create New Documentation
 
@@ -155,7 +155,7 @@ and what assumptions it validates or invalidates.
 
 [Validation notes: e.g., "R01 coverage test complete, 92.2% KSA coverage"]
 
-Documentation updated: CHANGELOG.md, atlas_manifest.json, ADR-003 status
+Documentation updated: CHANGELOG.md, widai_manifest.json, ADR-003 status
 [Issue references: "Closes #26" or "Relates to #15"]
 
 Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
@@ -171,7 +171,7 @@ R01: Coverage gap test — PASS (92.2% KSA coverage)
 Phase 0 Validation Sprint test. Mapped 64 roles across 5 archetypes.
 Decision gate (>=60%): PASS — proceed to Tier 1 (validates ADR-003)
 
-Documentation updated: CHANGELOG.md, atlas_manifest.json, ADR-003 status, README.md
+Documentation updated: CHANGELOG.md, widai_manifest.json, ADR-003 status, README.md
 Closes #12
 
 Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
@@ -187,7 +187,7 @@ Added: LDR category (Data Governance Lead, Chief Data Officer variants)
 Mapped to NIST AI RMF GOVERN and GARTNER CDA frameworks.
 All 8 roles meet KSA quality acceptance criteria (R02 baseline).
 
-Documentation updated: CHANGELOG.md, atlas_manifest.json, README.md
+Documentation updated: CHANGELOG.md, widai_manifest.json, README.md
 
 Closes #14
 

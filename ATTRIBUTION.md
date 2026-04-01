@@ -1,18 +1,18 @@
-# ATLAS — Attribution and Notices
+# WIDAI — Attribution and Notices
 
-ATLAS derives its cross-framework workforce taxonomy from multiple source frameworks. This document provides required attribution notices and licensing acknowledgments for all source frameworks used in ATLAS commercial products.
+WIDAI derives its cross-framework workforce taxonomy from multiple source frameworks. This document provides required attribution notices and licensing acknowledgments for all source frameworks used in WIDAI commercial products.
 
 ## Required Attributions
 
 ### O*NET (Creative Commons Attribution 4.0)
 
-O*NET is maintained by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). ATLAS includes mappings to O*NET occupational classifications and competency structures.
+O*NET is maintained by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). WIDAI includes mappings to O*NET occupational classifications and competency structures.
 
 **Required Attribution:**
 
 The following attribution must be included wherever O*NET data or mappings are displayed:
 
-> "O*NET® is a trademark of the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). O*NET data, content, and documentation are available under the Creative Commons Attribution 4.0 License (CC BY 4.0). Content created using O*NET material is adapted by the ATLAS project and does not constitute an official U.S. Department of Labor product or endorsement."
+> "O*NET® is a trademark of the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). O*NET data, content, and documentation are available under the Creative Commons Attribution 4.0 License (CC BY 4.0). Content created using O*NET material is adapted by the WIDAI project and does not constitute an official U.S. Department of Labor product or endorsement."
 
 **License:** Creative Commons Attribution 4.0 (CC BY 4.0)  
 **Publisher:** U.S. Department of Labor, Employment and Training Administration  
@@ -23,7 +23,7 @@ The following attribution must be included wherever O*NET data or mappings are d
 
 ### UK Government DDaT (Open Government Licence v3.0)
 
-The UK Government Digital Service publishes the Data, Digital and Technology (DDaT) Professional Capability Framework. ATLAS includes mappings to DDaT role definitions and capability levels.
+The UK Government Digital Service publishes the Data, Digital and Technology (DDaT) Professional Capability Framework. WIDAI includes mappings to DDaT role definitions and capability levels.
 
 **Required Attribution:**
 
@@ -38,7 +38,7 @@ The UK Government Digital Service publishes the Data, Digital and Technology (DD
 
 ### dbt Labs (Apache License 2.0)
 
-dbt Labs provides analytics engineering documentation and role definitions. ATLAS includes mappings to dbt analytics engineering competencies.
+dbt Labs provides analytics engineering documentation and role definitions. WIDAI includes mappings to dbt analytics engineering competencies.
 
 **Required Notice:**
 
@@ -70,11 +70,11 @@ limitations under the License.
 
 ## Recommended Attributions
 
-The following frameworks are included in ATLAS under permissive or public domain licenses. While attribution is not legally required, proper credit is recommended.
+The following frameworks are included in WIDAI under permissive or public domain licenses. While attribution is not legally required, proper credit is recommended.
 
 ### U.S. Government Frameworks (Public Domain)
 
-ATLAS incorporates multiple U.S. government workforce frameworks published in the public domain:
+WIDAI incorporates multiple U.S. government workforce frameworks published in the public domain:
 
 - **BLS-SOC** (Bureau of Labor Statistics Standard Occupational Classification) — Occupational taxonomy from the U.S. Department of Labor
 - **NIST NICE** (National Institute of Standards and Technology Cybersecurity Workforce Framework) — Cybersecurity roles and competencies
@@ -88,11 +88,11 @@ ATLAS incorporates multiple U.S. government workforce frameworks published in th
 
 **Recommended Attribution:**
 
-> "ATLAS incorporates public domain workforce frameworks from the U.S. government, including the Bureau of Labor Statistics Standard Occupational Classification (BLS-SOC), the NIST Cybersecurity Workforce Framework (NICE), the NIST AI Risk Management Framework (AI RMF), the Department of Defense Cyber Workforce Framework (DCWF), and corresponding regulatory frameworks from the FDA, Federal Reserve, and Office of the Comptroller of the Currency. These are public domain materials and may be freely used in accordance with U.S. copyright law."
+> "WIDAI incorporates public domain workforce frameworks from the U.S. government, including the Bureau of Labor Statistics Standard Occupational Classification (BLS-SOC), the NIST Cybersecurity Workforce Framework (NICE), the NIST AI Risk Management Framework (AI RMF), the Department of Defense Cyber Workforce Framework (DCWF), and corresponding regulatory frameworks from the FDA, Federal Reserve, and Office of the Comptroller of the Currency. These are public domain materials and may be freely used in accordance with U.S. copyright law."
 
 ### EU and Regulatory Frameworks (Public Domain/Legislation)
 
-ATLAS includes mappings to European Union and international regulatory frameworks published as public domain legislation:
+WIDAI includes mappings to European Union and international regulatory frameworks published as public domain legislation:
 
 - **GDPR** (General Data Protection Regulation) — EU data protection regulation
 - **EU AI Act** — EU artificial intelligence regulatory framework
@@ -100,7 +100,7 @@ ATLAS includes mappings to European Union and international regulatory framework
 
 **Recommended Attribution:**
 
-> "ATLAS incorporates regulatory frameworks from the European Union (GDPR and EU AI Act) and the Singapore Infocomm Media Development Authority (MAIG). These are government and regulatory publications available for public use."
+> "WIDAI incorporates regulatory frameworks from the European Union (GDPR and EU AI Act) and the Singapore Infocomm Media Development Authority (MAIG). These are government and regulatory publications available for public use."
 
 ### Architectural and Community Frameworks
 
@@ -111,7 +111,7 @@ The following frameworks are included as open architectural patterns or educatio
 
 **Recommended Attribution:**
 
-> "ATLAS references the Data Mesh architectural pattern and the 80000 Hours career research framework. These are community and non-profit educational resources shared for professional development purposes."
+> "WIDAI references the Data Mesh architectural pattern and the 80000 Hours career research framework. These are community and non-profit educational resources shared for professional development purposes."
 
 ---
 
@@ -137,17 +137,17 @@ The following frameworks are included as open architectural patterns or educatio
 | **Data Mesh** | Chris Richardson / Open Community | Uncopyrighted Architectural Pattern | ✓ Yes | Recommended |
 | **80000 Hours** | 80000 Hours (Non-Profit Organization) | Educational Content | ✓ Yes | Recommended |
 | **Singapore MAIG** | Singapore Government (Infocomm Media Development Authority) | Government Framework | ✓ Yes | Recommended |
-| **ATLAS** | ATLAS Project | Project-Specific | ✓ Yes (Self) | N/A |
+| **WIDAI** | WIDAI Project | Project-Specific | ✓ Yes (Self) | N/A |
 
 ---
 
 ## Commercial Use Restrictions and Licensing Notice
 
-ATLAS is distributed with mappings derived from the 19 frameworks listed above, all of which explicitly permit commercial use. 
+WIDAI is distributed with mappings derived from the 19 frameworks listed above, all of which explicitly permit commercial use. 
 
-**Important Note:** ATLAS references or includes data from additional frameworks (approximately 50 other sources) that have licensing restrictions limiting their commercial use. These restricted frameworks are **not included** in ATLAS commercial products. A complete framework licensing audit is maintained in `docs/roadmap/R05-license-audit.md`.
+**Important Note:** WIDAI references or includes data from additional frameworks (approximately 50 other sources) that have licensing restrictions limiting their commercial use. These restricted frameworks are **not included** in WIDAI commercial products. A complete framework licensing audit is maintained in `docs/roadmap/R05-license-audit.md`.
 
-The following restricted framework categories are **explicitly excluded** from ATLAS commercial products:
+The following restricted framework categories are **explicitly excluded** from WIDAI commercial products:
 
 - **Proprietary Research:** Gartner, Forrester, McKinsey, Deloitte, BCG, KPMG, and similar analyst firms (require licensing agreements)
 - **Proprietary Standards:** COBIT-2019, CMMI-DMM, and ISACA frameworks (require ISACA commercial licenses)
@@ -159,21 +159,21 @@ The following restricted framework categories are **explicitly excluded** from A
 
 ## Notice
 
-This Attribution document covers frameworks included in ATLAS commercial products. The frameworks listed above have been selected specifically because their licenses explicitly permit commercial use and derivative works, with appropriate attribution where required.
+This Attribution document covers frameworks included in WIDAI commercial products. The frameworks listed above have been selected specifically because their licenses explicitly permit commercial use and derivative works, with appropriate attribution where required.
 
-ATLAS references additional frameworks in research and development documentation, architectural discussions, and educational materials. Those frameworks may have separate licensing terms. For a complete framework licensing analysis, see:
+WIDAI references additional frameworks in research and development documentation, architectural discussions, and educational materials. Those frameworks may have separate licensing terms. For a complete framework licensing analysis, see:
 
 **`docs/roadmap/R05-license-audit.md`** — Comprehensive licensing audit of all 70+ source frameworks
 
-**`frameworks/frameworks.json`** — Complete registry of frameworks referenced in ATLAS
+**`frameworks/frameworks.json`** — Complete registry of frameworks referenced in WIDAI
 
-### Attribution Statement for ATLAS Products
+### Attribution Statement for WIDAI Products
 
-When distributing ATLAS as a commercial product, include the following notice:
+When distributing WIDAI as a commercial product, include the following notice:
 
-> **ATLAS Attribution Notice**
+> **WIDAI Attribution Notice**
 >
-> ATLAS derives its cross-framework workforce taxonomy from multiple open and government sources, including:
+> WIDAI derives its cross-framework workforce taxonomy from multiple open and government sources, including:
 >
 > - O*NET (U.S. Department of Labor) — CC BY 4.0
 > - BLS-SOC (U.S. Bureau of Labor Statistics) — Public Domain
@@ -190,9 +190,9 @@ When distributing ATLAS as a commercial product, include the following notice:
 
 ## Compliance and Record-Keeping
 
-This Attribution document serves as the official record of licensing compliance for ATLAS commercial products. It should be:
+This Attribution document serves as the official record of licensing compliance for WIDAI commercial products. It should be:
 
-1. **Included in Product Distributions** — Bundled with all commercial ATLAS releases
+1. **Included in Product Distributions** — Bundled with all commercial WIDAI releases
 2. **Updated with Product Releases** — Maintained with each new version that modifies framework coverage
 3. **Accessible to Users** — Readily available in product documentation
 4. **Reviewed Annually** — Legal compliance review at least once per year
@@ -208,14 +208,14 @@ This Attribution document serves as the official record of licensing compliance 
 
 ## Questions and Support
 
-For questions regarding ATLAS attribution, licensing, or framework usage:
+For questions regarding WIDAI attribution, licensing, or framework usage:
 
 - **Framework Licensing Questions:** See `docs/roadmap/R05-license-audit.md`
-- **Attribution Accuracy:** File an issue at [ATLAS Repository Issues]
-- **Legal Compliance Review:** Contact ATLAS project governance
+- **Attribution Accuracy:** File an issue at [WIDAI Repository Issues]
+- **Legal Compliance Review:** Contact WIDAI project governance
 
 ---
 
 **Last Updated:** 2026-03-26  
 **Status:** Active  
-**Distribution:** Include with all commercial ATLAS products and documentation releases
+**Distribution:** Include with all commercial WIDAI products and documentation releases

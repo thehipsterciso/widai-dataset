@@ -17,11 +17,11 @@ Initial approach considered: AI-assisted bulk authoring against each domain pool
 1. **No provenance chain.** Bulk-authored KSAs trace to "we thought it should be there," not to an external framework requirement. When a PE operating partner asks "why does this KSA exist," the answer must be traceable to source evidence.
 2. **No systematic gap identification.** Without formal framework comparison, gaps are identified by intuition — the same failure mode that produced the original 8.95 KSAs/role depth deficiency.
 3. **No cross-cutting evidence.** Common KSAs that carry across multiple roles should be identified by multiple independent frameworks confirming the same competency, not by a single authoring pass assuming which KSAs are shared.
-4. **Optimization for motion over quality.** Bulk authoring optimizes for speed of pool population. The KSA pool is the core intellectual property of ATLAS — every commercial product scores against it. It requires the same methodological rigor applied to the roadmap itself.
+4. **Optimization for motion over quality.** Bulk authoring optimizes for speed of pool population. The KSA pool is the core intellectual property of WIDAI — every commercial product scores against it. It requires the same methodological rigor applied to the roadmap itself.
 
 ## Decision
 
-Adopt NIST IR 8477 Set Theory Relationship Mapping (STRM) as the formal methodology for KSA enrichment. Map the ATLAS KSA pool against each source framework individually, accumulate evidence, then synthesize the enriched pool from the aggregate findings.
+Adopt NIST IR 8477 Set Theory Relationship Mapping (STRM) as the formal methodology for KSA enrichment. Map the WIDAI KSA pool against each source framework individually, accumulate evidence, then synthesize the enriched pool from the aggregate findings.
 
 ### Methodology: NIST IR 8477 Set Theory Relationship Mapping
 
@@ -45,14 +45,14 @@ Strictness order: Syntactic (most strict) → Semantic → Functional (least str
 
 The relationship type and rationale must be used together.
 
-**ATLAS enhancement:** Strength of Relationship (1–10 scale) is added as a seventh column. This is an ATLAS extension not prescribed by NIST IR 8477 but adopted from SCF practice to support quantitative analysis during synthesis.
+**WIDAI enhancement:** Strength of Relationship (1–10 scale) is added as a seventh column. This is an WIDAI extension not prescribed by NIST IR 8477 but adopted from SCF practice to support quantitative analysis during synthesis.
 
 ### Document Orientation
 
 - **Focal Document** — The source framework being mapped (NICE, SFIA, DAMA DMBOK, etc.). Each element from the focal document is evaluated.
-- **Reference Document** — The ATLAS KSA Pool (version-pinned). Each focal element is mapped against the reference pool.
+- **Reference Document** — The WIDAI KSA Pool (version-pinned). Each focal element is mapped against the reference pool.
 
-This orientation matches SCF practice. A focal document element with "No relationship" to any ATLAS KSA indicates a gap in the ATLAS pool.
+This orientation matches SCF practice. A focal document element with "No relationship" to any WIDAI KSA indicates a gap in the WIDAI pool.
 
 ### STRM Deliverable Format
 
@@ -64,9 +64,9 @@ Per NIST IR 8477 Table 5, adapted for JSON serialization:
 | Focal Document Element Description | Full text of the framework element |
 | Rationale | Syntactic, Semantic, or Functional |
 | Relationship | Subset of, Intersects with, Equal, Superset of, No relationship |
-| Reference Document Element (ID) | ATLAS KSA ID (or null for No relationship) |
-| Reference Document Element Description | Full ATLAS KSA statement (or null) |
-| Strength of Relationship | 1–10 (ATLAS extension; null for No relationship) |
+| Reference Document Element (ID) | WIDAI KSA ID (or null for No relationship) |
+| Reference Document Element Description | Full WIDAI KSA statement (or null) |
+| Strength of Relationship | 1–10 (WIDAI extension; null for No relationship) |
 
 JSON is the authoritative format (consistent with repo convention). Each STRM mapping is stored as a JSON file in `strm/` following this structure.
 
@@ -74,19 +74,19 @@ JSON is the authoritative format (consistent with repo convention). Each STRM ma
 
 #### Phase 1A: Baseline KSA Enrichment
 
-Before STRM mapping begins, the ATLAS KSA pool requires a first-pass enrichment from its current 363 KSAs to a reasonable baseline. At current depth (5–19 KSAs per role), STRM would produce overwhelmingly "No relationship" results — confirming what is already known (the pool is thin) without producing actionable signal.
+Before STRM mapping begins, the WIDAI KSA pool requires a first-pass enrichment from its current 363 KSAs to a reasonable baseline. At current depth (5–19 KSAs per role), STRM would produce overwhelmingly "No relationship" results — confirming what is already known (the pool is thin) without producing actionable signal.
 
 The first-pass enrichment uses domain expertise and high-level framework knowledge to flesh out each of the 12 domain pools. This pass is explicitly acknowledged as pre-validation — the STRM phase will validate, correct, and refine what is authored here.
 
 #### Phase 1B: Framework Prioritization
 
-Assess ATLAS source frameworks for STRM relevance — which frameworks contain KSA-equivalent concept types (knowledge, skills, abilities, tasks, competencies) at sufficient granularity to map against the ATLAS pool. This determines the execution sequence.
+Assess WIDAI source frameworks for STRM relevance — which frameworks contain KSA-equivalent concept types (knowledge, skills, abilities, tasks, competencies) at sufficient granularity to map against the WIDAI pool. This determines the execution sequence.
 
 Prioritization criteria:
 - Does the framework define KSA-equivalent concepts? (Not all 70+ do.)
 - Does the framework provide machine-readable or extractable element data?
-- How many ATLAS roles does the framework cover?
-- Strategic relevance to ATLAS use cases (PE assessment, EU AI Act, Model Risk)
+- How many WIDAI roles does the framework cover?
+- Strategic relevance to WIDAI use cases (PE assessment, EU AI Act, Model Risk)
 
 Framework prioritization is documented in the roadmap. The prioritized list is not revised once STRM execution begins — it is executed in order.
 
@@ -110,16 +110,16 @@ Obtain the exact version of the framework document. Store a canonical copy in `s
 
 **Step 3 — STRM Mapping Execution**
 
-For each Focal Document Element, evaluate against every relevant ATLAS KSA. Document: rationale, relationship type, strength, and per-mapping reasoning.
+For each Focal Document Element, evaluate against every relevant WIDAI KSA. Document: rationale, relationship type, strength, and per-mapping reasoning.
 
 Per-FDE rationale is stored as independent file objects to preserve full resolution. Rationale is not compressed into a single cell or array element. This is the evidentiary record — it must withstand scrutiny.
 
 **Step 4 — Gap Issue Registration**
 
-Every "No relationship" finding for a framework element that is in scope (i.e., should be covered by ATLAS) is registered as a discrete issue. Each issue includes:
+Every "No relationship" finding for a framework element that is in scope (i.e., should be covered by WIDAI) is registered as a discrete issue. Each issue includes:
 - The FDE that has no match
 - Domains searched
-- Nearest miss (closest ATLAS KSA, if any)
+- Nearest miss (closest WIDAI KSA, if any)
 - Suggested domain for the missing KSA
 - Authoring guidance for the synthesis phase
 
@@ -153,7 +153,7 @@ After all framework STRMs are complete:
 - Cross-cutting KSAs are identified from multi-framework alignment evidence
 - Synthesis rules are defined based on the evidence patterns observed — not before
 - The enriched KSA pool is constructed from the synthesis findings
-- Cross-STRM consistency is validated (transitivity check: if Framework A element X = ATLAS KSA Y, and Framework B element Z = ATLAS KSA Y, then X and Z should be equivalent)
+- Cross-STRM consistency is validated (transitivity check: if Framework A element X = WIDAI KSA Y, and Framework B element Z = WIDAI KSA Y, then X and Z should be equivalent)
 
 The synthesis methodology is explicitly not defined in this ADR. Defining synthesis rules before evidence collection would bias the STRM evaluation. Synthesis rules will be documented in a separate ADR after the last framework STRM is QA'd.
 
@@ -171,7 +171,7 @@ The synthesis methodology is explicitly not defined in this ADR. Defining synthe
 
 *Alternatives considered:*
 - Single monolithic mapping file per framework: Loses rationale resolution. Impossible to review or challenge individual mappings.
-- Excel format (matching SCF): Human-friendly but inconsistent with ATLAS repo convention. JSON is machine-readable, diffable in git, and queryable for synthesis.
+- Excel format (matching SCF): Human-friendly but inconsistent with WIDAI repo convention. JSON is machine-readable, diffable in git, and queryable for synthesis.
 - No independent rationale files: Reduces deliverable count but compresses the most important part of the process — the reasoning — into a field that will be skimmed, not read.
 
 ### Principles
@@ -188,8 +188,8 @@ The synthesis methodology is explicitly not defined in this ADR. Defining synthe
 - Every KSA in the enriched pool has a provenance chain through STRM mappings to source frameworks.
 - Cross-cutting KSAs emerge from multi-framework evidence, not assumption.
 - Gap identification is systematic and exhaustive — not intuition-driven.
-- The STRM deliverables are permanent, auditable artifacts that defend ATLAS methodology to any audience (PE operating partners, regulatory practitioners, analysts).
-- Adopting NIST IR 8477 gives ATLAS methodological credibility — mapped using the U.S. government's published standard for framework relationship mapping.
+- The STRM deliverables are permanent, auditable artifacts that defend WIDAI methodology to any audience (PE operating partners, regulatory practitioners, analysts).
+- Adopting NIST IR 8477 gives WIDAI methodological credibility — mapped using the U.S. government's published standard for framework relationship mapping.
 
 **Negative:**
 - Timeline extends significantly. Each framework STRM is a multi-session effort. 10+ frameworks at this depth could require 10+ dedicated working sessions.

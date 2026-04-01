@@ -5,7 +5,7 @@ import json
 import os
 from collections import defaultdict
 
-os.chdir('/sessions/awesome-elegant-mayer/mnt/ATLAS/atlas-dataset')
+os.chdir('/sessions/awesome-elegant-mayer/mnt/WIDAI/atlas-dataset')
 
 # Load all role files
 categories = {}
@@ -145,7 +145,7 @@ archetypes = {
 }
 
 def map_role_to_atlas(job_title):
-    """Try to match a job title to ATLAS roles"""
+    """Try to match a job title to WIDAI roles"""
     title_lower = job_title.lower().strip()
 
     # Direct match first

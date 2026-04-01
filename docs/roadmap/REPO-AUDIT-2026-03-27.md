@@ -1,4 +1,4 @@
-# ATLAS Repository Audit: File-by-File Alignment Assessment
+# WIDAI Repository Audit: File-by-File Alignment Assessment
 
 **Date:** 2026-03-27
 **Trigger:** Architecture restructuring to shared-pool KSA model (ADR-013)
@@ -28,7 +28,7 @@
 | `CHANGELOG.md` | UPDATE | Needs v0.5.0 entry documenting architectural restructuring |
 | `CONTRIBUTING.md` | UPDATE | References old KSA file structure and manifest update procedures |
 | `README.md` | REWRITE | Claims "364 KSAs", "R08 complete", Phase 0 "PASS" — all invalidated or restructured |
-| `atlas_manifest.json` | REWRITE | Statistics, file inventory, architecture description all changing |
+| `widai_manifest.json` | REWRITE | Statistics, file inventory, architecture description all changing |
 
 ## Documentation
 

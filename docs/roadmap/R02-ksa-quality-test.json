@@ -1,11 +1,11 @@
 {
   "test_id": "R02",
-  "test_name": "AI-Assisted KSA Quality Test for ATLAS Dataset",
+  "test_name": "AI-Assisted KSA Quality Test for WIDAI Dataset",
   "test_date": "2026-03-26",
   "test_hypothesis": "AI-assisted KSA authoring produces competency models of comparable quality to manually-authored KSAs, meeting the bar of 'editable' rather than 'rewrite-required' quality.",
   "roles_tested": [
     {
-      "role_id": "ATLAS-OPS-0131",
+      "role_id": "WIDAI-OPS-0131",
       "canonical_title": "AI Adoption/Change Manager",
       "category": "OPS",
       "work_role_code": "WR-OPS-07.05",
@@ -41,7 +41,7 @@
       "recommendations": "Approve with light editorial review. Particularly strong on Knowledge statements grounding in real adoption barriers."
     },
     {
-      "role_id": "ATLAS-RSK-0107",
+      "role_id": "WIDAI-RSK-0107",
       "canonical_title": "AI Auditor",
       "category": "RSK",
       "work_role_code": "WR-RSK-06.05",
@@ -79,7 +79,7 @@
       "recommendations": "Approve. Strongest KSA set in the R02 test. Framework grounding is exemplary and directly supports the auditor role."
     },
     {
-      "role_id": "ATLAS-NICHE-0180",
+      "role_id": "WIDAI-NICHE-0180",
       "canonical_title": "Algorithmic Trading Engineer",
       "category": "NICHE",
       "work_role_code": "WR-NICHE-01.01",
@@ -116,7 +116,7 @@
       "recommendations": "Approve with note to split K-001 and K-002 in review. Strong on domain specificity, but granularity could be refined. This is the hardest domain (NICHE + highly specialized), so KSA coarseness is forgivable."
     },
     {
-      "role_id": "ATLAS-REG-0173",
+      "role_id": "WIDAI-REG-0173",
       "canonical_title": "Authorized Representative (AI)",
       "category": "REG",
       "work_role_code": "WR-REG-01.01",
@@ -153,7 +153,7 @@
       "recommendations": "Approve. Strongest REG category KSAs in the dataset. Framework accuracy is flawless (EU AI Act citations are precise). This set demonstrates AI can handle regulatory frameworks as well as technical ones."
     },
     {
-      "role_id": "ATLAS-OPS-0135",
+      "role_id": "WIDAI-OPS-0135",
       "canonical_title": "AI Solutions Engineer",
       "category": "OPS",
       "work_role_code": "WR-OPS-07.06",
@@ -226,24 +226,24 @@
       "Granularity: AI-authored granularity matches manual KSA standards (avg score 4.0/5)",
       "Statement quality: correct format, clear, assessable (avg score 4.4/5)",
       "Framework accuracy: appropriate source frameworks identified and referenced (avg score 4.4/5)",
-      "Style consistency: reads as cohesive part of ATLAS dataset (avg score 4.0/5)",
+      "Style consistency: reads as cohesive part of WIDAI dataset (avg score 4.0/5)",
       "Assessment utility: each KSA independently measurable against job requirements (avg score 4.4/5)",
       "Rewrite threshold: zero roles at 'rewrite-required' quality; all at 'edit' level or higher"
     ],
     "conditions_for_scaling": [
       "Require Thomas human review of all AI-drafted KSAs before publication (no auto-publish)",
-      "Tag each AI-drafted KSA with origin_framework='ATLAS (AI-assisted)' to distinguish from fully manual KSAs during transition",
+      "Tag each AI-drafted KSA with origin_framework='WIDAI (AI-assisted)' to distinguish from fully manual KSAs during transition",
       "Batch process by category (complete OPS, RSK, ANL, LDR before moving to NICHE, REG for highest-value coverage)",
       "Schedule review at ~15 roles per week (Thomas ~60 min per role \u00d7 15 = 15 hours/week), aligning with product development work",
       "Establish a rapid feedback loop: if failure modes emerge during review, pause and iterate the authoring prompt before continuing"
     ],
-    "provenance_tagging": "All AI-drafted KSAs should be tagged with generation_method='AI-assisted with human expert review' in the KSA metadata. Transparent provenance is important for credibility \u2014 ATLAS users should know the authoring methodology.",
+    "provenance_tagging": "All AI-drafted KSAs should be tagged with generation_method='AI-assisted with human expert review' in the KSA metadata. Transparent provenance is important for credibility \u2014 WIDAI users should know the authoring methodology.",
     "next_steps": [
       "1. Thomas reviews R02 KSAs and provides feedback on specific refinements needed",
       "2. Iterate authoring prompt based on feedback to improve granularity/style consistency",
       "3. If feedback is minor (editorial only), proceed to scale on remaining 150 roles",
       "4. If feedback identifies systematic issues, run second validation round on 3-5 roles from different categories before scaling",
-      "5. Once scaled, integrate AI-assisted KSA workflow into the ATLAS development cycle for any new roles added to the taxonomy"
+      "5. Once scaled, integrate AI-assisted KSA workflow into the WIDAI development cycle for any new roles added to the taxonomy"
     ]
   }
 }

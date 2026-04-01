@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ATLAS KSA Quality Audit Script
+WIDAI KSA Quality Audit Script
 
 Audits the quality and consistency of KSA data across all categories.
 """
@@ -52,7 +52,7 @@ class KSAQualityAudit:
         print("Loading role files...")
         for role_file in sorted(self.roles_dir.glob("*.json")):
             category = role_file.stem
-            if category == "atlas_manifest":
+            if category == "widai_manifest":
                 continue
             with open(role_file) as f:
                 data = json.load(f)
@@ -364,7 +364,7 @@ class KSAQualityAudit:
     def generate_report(self):
         """Generate and print the final audit report."""
         print("\n" + "="*70)
-        print("ATLAS KSA QUALITY AUDIT - FINAL REPORT")
+        print("WIDAI KSA QUALITY AUDIT - FINAL REPORT")
         print("="*70 + "\n")
 
         self.load_data()

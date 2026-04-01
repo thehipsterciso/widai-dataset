@@ -7,11 +7,11 @@
 
 ## Context
 
-On 2026-03-27, manual review of R08 output (42 KSAs across 5 gap roles) revealed a critical depth deficiency in the ATLAS KSA model. Comparison against the NIST NICE Framework v2.1.0 — the only comparable machine-readable workforce taxonomy with published KSA-per-role data — showed ATLAS roles operating at approximately 6.7% of industry-standard depth.
+On 2026-03-27, manual review of R08 output (42 KSAs across 5 gap roles) revealed a critical depth deficiency in the WIDAI KSA model. Comparison against the NIST NICE Framework v2.1.0 — the only comparable machine-readable workforce taxonomy with published KSA-per-role data — showed WIDAI roles operating at approximately 6.7% of industry-standard depth.
 
 **The evidence:**
 
-| Metric | ATLAS | NICE v2.1.0 | Gap |
+| Metric | WIDAI | NICE v2.1.0 | Gap |
 |--------|-------|-------------|-----|
 | Mean KSAs/role | 8.95 | 133.3 | 14.9x |
 | Min KSAs/role | 4 | 68 | 17.0x |
@@ -41,7 +41,7 @@ Define a mathematical metric that benchmarks role depth against the NICE framewo
 - Produce a per-role score and a dataset-wide aggregate
 - Set a minimum threshold below which a role is flagged as "insufficient depth"
 
-**Minimum depth target:** 40 KSAs per role (conservative floor — approximately 30% of NICE mean, accounting for ATLAS's narrower domain scope per role). Roles with regulatory assessment implications (DPO, Model Risk Manager) target 60+.
+**Minimum depth target:** 40 KSAs per role (conservative floor — approximately 30% of NICE mean, accounting for WIDAI's narrower domain scope per role). Roles with regulatory assessment implications (DPO, Model Risk Manager) target 60+.
 
 *Alternatives considered:*
 - Match NICE mean exactly (~133/role): Unrealistic for initial correction. NICE covers broader cybersecurity domain with more shared Knowledge items across roles. Data/AI roles are more specialized.
@@ -54,7 +54,7 @@ Build a multi-pass review process modeled on the ensemble brainstorm algorithm's
 
 - **Pass 1 — Breadth Scan:** For a given role, enumerate all knowledge domains, skill categories, and task areas from source frameworks. Produce a domain coverage map.
 - **Pass 2 — Depth Challenge:** For each domain identified in Pass 1, challenge whether the current KSA set adequately covers it. Identify gaps.
-- **Pass 3 — External Benchmark:** Compare KSA count and distribution against the closest NICE analog (or O*NET, SFIA equivalent). Flag any dimension where ATLAS is <25% of benchmark depth.
+- **Pass 3 — External Benchmark:** Compare KSA count and distribution against the closest NICE analog (or O*NET, SFIA equivalent). Flag any dimension where WIDAI is <25% of benchmark depth.
 - **Pass 4 — Assessability Test:** For each KSA, verify it is observable and scorable in a PE due diligence context. Remove or rewrite KSAs that are too abstract to assess.
 - **Pass 5 — Adversarial Review:** Assume the role of a skeptical PE operating partner. Ask: "If I hired against this KSA set, would I miss any critical capability?" Document and fill any gaps surfaced.
 
@@ -65,7 +65,7 @@ Build a multi-pass review process modeled on the ensemble brainstorm algorithm's
 
 ### 3. External Benchmarking Requirement
 
-All future validation tests must include at least one external framework benchmark comparison. Internal-only validation (comparing ATLAS to ATLAS) is formally prohibited for any gate that determines "readiness" or "coverage."
+All future validation tests must include at least one external framework benchmark comparison. Internal-only validation (comparing WIDAI to WIDAI) is formally prohibited for any gate that determines "readiness" or "coverage."
 
 This applies retroactively to R02, which must be supplemented with a depth dimension before its validation result can be cited in future ADRs.
 
@@ -88,7 +88,7 @@ Bring all 42 currently-mapped roles to the minimum depth threshold (40+ KSAs per
 
 **Positive:**
 - Assessment credibility: A role with 40-80 KSAs provides genuine discriminating power in PE due diligence. A role with 8 KSAs does not.
-- External defensibility: Benchmarking against NICE gives ATLAS a citable comparison point for methodology discussions.
+- External defensibility: Benchmarking against NICE gives WIDAI a citable comparison point for methodology discussions.
 - Structural prevention: The AQG and DCI metric prevent recurrence systematically rather than relying on manual catch.
 - R04 recalibration: Coverage dimension scores become meaningful when the reference set has adequate depth.
 

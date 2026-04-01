@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ATLAS Adversarial Quality Gate (AQG)
+WIDAI Adversarial Quality Gate (AQG)
 
 Five-pass adversarial review process for KSA completeness validation.
 Modeled on the ensemble brainstorm algorithm's multi-perspective methodology.
@@ -35,7 +35,7 @@ from datetime import datetime
 # =============================================================================
 # Domain Coverage Reference
 # =============================================================================
-# For each ATLAS category, the expected knowledge domains that any role in
+# For each WIDAI category, the expected knowledge domains that any role in
 # that category should partially address. Derived from source frameworks
 # (DAMA DMBOK, NIST AI RMF, NICE, O*NET, SFIA, ISO 42001).
 #
@@ -205,7 +205,7 @@ STRONG_ASSESSMENT_VERBS = [
 
 
 class AdversarialQualityGate:
-    """Five-pass adversarial quality gate for ATLAS KSA completeness."""
+    """Five-pass adversarial quality gate for WIDAI KSA completeness."""
 
     def __init__(self, base_path):
         self.base = base_path
@@ -542,7 +542,7 @@ class AdversarialQualityGate:
     def run_gate(self):
         """Run adversarial quality gate across all mapped roles."""
         print("\n" + "=" * 70)
-        print("ATLAS ADVERSARIAL QUALITY GATE (AQG)")
+        print("WIDAI ADVERSARIAL QUALITY GATE (AQG)")
         print("=" * 70)
         print(f"\n  Five-pass adversarial review per ADR-012")
         print(f"  Pass 1: Breadth Scan — domain coverage against category reference")

@@ -3,7 +3,7 @@
 **Document Status:** Published
 **Version:** 1.0.0
 **Date:** 2026-03-27
-**Author:** ATLAS Methodology Team
+**Author:** WIDAI Methodology Team
 **Applicable To:** PE acquisition due diligence (target company data/AI workforce assessment)
 **Engagement Model:** 30-day assessment, $50-75K per engagement
 
@@ -22,7 +22,7 @@ When a PE firm evaluates a data or AI-enabled company, three workforce questions
 3. **Who are the key person risks?**
    Are there irreplaceable people? If the CDO leaves, does the deal die? Or is the team distributed? How much does it cost to retain the critical people?
 
-The ATLAS PE Assessment answers all three questions with defensible, evidence-based scoring. It's not a gut feel, and it's not subjective. Every score traces back to observable evidence: certifications, work history, documented experience, and measurable KSA requirements.
+The WIDAI PE Assessment answers all three questions with defensible, evidence-based scoring. It's not a gut feel, and it's not subjective. Every score traces back to observable evidence: certifications, work history, documented experience, and measurable KSA requirements.
 
 ---
 
@@ -34,7 +34,7 @@ The assessment runs in 5 phases over 30 days. The timeline is designed to fit PE
 
 We start with your value creation plan. What are the 3-5 things that drive value in this deal? (Examples: "Build real-time pricing ML model," "Implement data governance for regulatory compliance," "Consolidate three companies' data platforms.")
 
-From there, we map the plan to workforce requirements. Using ATLAS, we select a reference architecture—a baseline organizational model for a company of this size and maturity level. (A 15-person early-stage analytics team has different needs than a 50-person scaled operation.)
+From there, we map the plan to workforce requirements. Using WIDAI, we select a reference architecture—a baseline organizational model for a company of this size and maturity level. (A 15-person early-stage analytics team has different needs than a 50-person scaled operation.)
 
 We also send a data request to the target company: org chart, role descriptions, team profiles, and optional evidence artifacts (certifications, resumes, work samples). This is the data we'll assess against.
 
@@ -42,7 +42,7 @@ We also send a data request to the target company: org chart, role descriptions,
 
 ### Phase 2: Data Collection & Role Mapping (Days 4-10)
 
-The target company returns org data. We map each person to ATLAS roles—not by job title alone, but by responsibilities and scope. "Data Engineer" in one company might map to a senior platform role; in another, an individual contributor role. We get specific.
+The target company returns org data. We map each person to WIDAI roles—not by job title alone, but by responsibilities and scope. "Data Engineer" in one company might map to a senior platform role; in another, an individual contributor role. We get specific.
 
 For each person, we compile capability evidence: certifications, work history, projects they've shipped, technical depth. The evidence is what we score, not a subjective interview impression.
 
@@ -83,7 +83,7 @@ WRS bands:
 
 ### Phase 4: Analysis & Deliverable Production (Days 21-28)
 
-We analyze gaps and develop the hiring roadmap. Which roles are missing? Rank them by (gap severity × criticality × market scarcity). The top 5-7 roles become your critical hiring priorities. For each, we provide a ATLAS-sourced job description seed, estimated hiring timeline (tight market = 6+ months for senior roles), and alternative staffing options (consultant bridge, internal upskilling, outsourcing).
+We analyze gaps and develop the hiring roadmap. Which roles are missing? Rank them by (gap severity × criticality × market scarcity). The top 5-7 roles become your critical hiring priorities. For each, we provide a WIDAI-sourced job description seed, estimated hiring timeline (tight market = 6+ months for senior roles), and alternative staffing options (consultant bridge, internal upskilling, outsourcing).
 
 We also identify key person mitigation strategies. For each high-concentration-risk person, we recommend: retention incentives (24-month bonus or equity vest), knowledge documentation (runbooks, architecture docs, mentoring), succession planning (develop internal backup), or external support (consultant bridge during backfill).
 
@@ -91,9 +91,9 @@ We produce four deliverables:
 
 1. **Executive Summary** (1-2 pages): WRS score, three key findings, go/no-go signal, top 3 hiring priorities, key person risk summary. Designed for board presentation.
 
-2. **Workforce Capability Map** (5-10 pages): Org chart with ATLAS role overlays, capability heat map, KSA coverage breakdown, strengths and gaps narrative.
+2. **Workforce Capability Map** (5-10 pages): Org chart with WIDAI role overlays, capability heat map, KSA coverage breakdown, strengths and gaps narrative.
 
-3. **Gap Analysis & Hiring Priority Plan** (3-5 pages): All gaps ranked by impact, recommended hiring sequence, ATLAS job description seeds, estimated timelines, alternative approaches.
+3. **Gap Analysis & Hiring Priority Plan** (3-5 pages): All gaps ranked by impact, recommended hiring sequence, WIDAI job description seeds, estimated timelines, alternative approaches.
 
 4. **Key Person Risk Assessment** (2-3 pages): Top 5 concentration risks, mitigation strategies by person, retention plan, succession roadmap.
 
@@ -111,7 +111,7 @@ The presentation is designed for PE context. We talk in your language: value dri
 
 Every PE operating partner we spoke with said the same thing: "Your biggest risk is that I'll challenge your score and you won't have evidence."
 
-The ATLAS model is built to withstand challenge.
+The WIDAI model is built to withstand challenge.
 
 ### Evidence Traceability
 
@@ -121,7 +121,7 @@ There's no "I have a feeling this person is good." There's: "Here's the evidence
 
 ### KSA-Based Scoring
 
-Our KSA requirements come from ATLAS, which synthesizes from NICE (U.S. government cybersecurity workforce framework), O*NET (Department of Labor), SFIA (international standards), and other authoritative sources. These aren't made-up requirements; they're industry standards.
+Our KSA requirements come from WIDAI, which synthesizes from NICE (U.S. government cybersecurity workforce framework), O*NET (Department of Labor), SFIA (international standards), and other authoritative sources. These aren't made-up requirements; they're industry standards.
 
 When we score capability, we're comparing against these standards. A Chief Data Officer must have Knowledge of enterprise data strategy frameworks, Ability to lead through organizational resistance, and Skills in data governance design. These are testable, observable qualities—not vague concepts.
 
@@ -169,9 +169,9 @@ The entire executive summary is designed to be read in 5 minutes and answered th
 ### 2. Workforce Capability Map (5-10 pages)
 
 This is the integration planning document. It has:
-- Org chart with ATLAS role overlays (color-coded: green = strong, yellow = moderate, red = gap)
+- Org chart with WIDAI role overlays (color-coded: green = strong, yellow = moderate, red = gap)
 - Team summary table (every person, with coverage/capability/criticality scores and recommendation)
-- Role-level heat map (what percentage of each ATLAS role's KSAs is covered by the team?)
+- Role-level heat map (what percentage of each WIDAI role's KSAs is covered by the team?)
 - Strengths narrative (where is the team excellent?)
 - Gaps narrative (where are the vulnerabilities?)
 - Integration implications (who stays, who develops, who needs to be replaced, what's the timeline?)
@@ -183,7 +183,7 @@ This is what your CHRO uses to make people decisions: who to promote, who to tra
 This is your recruiting roadmap. It has:
 - Priority matrix: all gaps ranked by (1 - coverage) × criticality × market_scarcity
 - Top 5-7 critical hires with detailed profiles: required seniority, key KSAs, market difficulty, hiring timeline
-- ATLAS job description seeds (copy-paste ready; customizable for your company)
+- WIDAI job description seeds (copy-paste ready; customizable for your company)
 - Gantt chart: when to start recruiting which roles
 - Resource plan: internal recruiting capacity, external agencies, consultant bridges
 - Alternative approaches for hard-to-fill roles (internal upskilling, fractional/contract, outsourcing)
@@ -230,7 +230,7 @@ Expected roles: CAIO, CDO, VP engineering, VP data science, VP analytics, model 
 
 When we assess your company, we first identify which architecture it should map to based on size and maturity. Then we score your team against that baseline. If you're a 25-person growth-stage company and you have all the roles in the Growth reference architecture, you're in great shape. If you're missing the data science function, that's a critical gap for growth-stage.
 
-This reference framework makes scoring consistent and comparable. Two different PE firms can both use ATLAS on similar-size targets and get comparable scores.
+This reference framework makes scoring consistent and comparable. Two different PE firms can both use WIDAI on similar-size targets and get comparable scores.
 
 ---
 
@@ -353,7 +353,7 @@ Every deliverable notes confidence levels so you know where to weight the findin
 
 ## Who We Are
 
-ATLAS is a curated dataset of 187 data/AI workforce roles and 497 KSAs (knowledge, skills, abilities, and tasks) across 12 knowledge domains, synthesized from NICE, O*NET, SFIA, DAMA, and other authoritative frameworks. We created the PE assessment methodology to translate ATLAS into actionable business value for PE firms evaluating data/AI teams.
+WIDAI is a curated dataset of 187 data/AI workforce roles and 497 KSAs (knowledge, skills, abilities, and tasks) across 12 knowledge domains, synthesized from NICE, O*NET, SFIA, DAMA, and other authoritative frameworks. We created the PE assessment methodology to translate WIDAI into actionable business value for PE firms evaluating data/AI teams.
 
 We're not recruiting firms, consultants, or organizational design experts. We're data and workforce taxonomy experts who built a methodology to answer three specific PE questions. We partner with your CHRO, integration team, and recruiting partners—not replace them.
 
@@ -361,8 +361,8 @@ We're not recruiting firms, consultants, or organizational design experts. We're
 
 ## Questions?
 
-Contact: ATLAS Methodology Team
-Email: methodology@atlas.cdaio.gov
+Contact: WIDAI Methodology Team
+Email: methodology@widai.cdaio.gov
 
 ---
 

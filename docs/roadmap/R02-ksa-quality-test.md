@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-The R02 test validates AI-assisted KSA authoring for the ATLAS dataset. Five roles without existing KSAs were selected across different categories and complexity levels. AI drafted 44 KSAs (8-9 per role). Quality was assessed on completeness, granularity, statement quality, framework accuracy, style consistency, and assessment utility.
+The R02 test validates AI-assisted KSA authoring for the WIDAI dataset. Five roles without existing KSAs were selected across different categories and complexity levels. AI drafted 44 KSAs (8-9 per role). Quality was assessed on completeness, granularity, statement quality, framework accuracy, style consistency, and assessment utility.
 
 **Result: ADOPT AI-assisted workflow for remaining 150 scaffold-only roles.**
 
@@ -20,7 +20,7 @@ All five test roles achieved overall quality scores of 4.0 or higher on a 1-5 sc
 
 ## Roles Tested
 
-### 1. AI Adoption/Change Manager (ATLAS-OPS-0131)
+### 1. AI Adoption/Change Manager (WIDAI-OPS-0131)
 **Category:** OPS | **Seniority:** Manager | **KSAs Authored:** 8
 
 **Scores:**
@@ -38,7 +38,7 @@ All five test roles achieved overall quality scores of 4.0 or higher on a 1-5 sc
 
 ---
 
-### 2. AI Auditor (ATLAS-RSK-0107)
+### 2. AI Auditor (WIDAI-RSK-0107)
 **Category:** RSK | **Seniority:** Mid–Senior | **KSAs Authored:** 9
 
 **Scores:**
@@ -58,7 +58,7 @@ All five test roles achieved overall quality scores of 4.0 or higher on a 1-5 sc
 
 ---
 
-### 3. Algorithmic Trading Engineer (ATLAS-NICHE-0180)
+### 3. Algorithmic Trading Engineer (WIDAI-NICHE-0180)
 **Category:** NICHE | **Seniority:** Mid–Senior | **KSAs Authored:** 9
 
 **Scores:**
@@ -78,7 +78,7 @@ All five test roles achieved overall quality scores of 4.0 or higher on a 1-5 sc
 
 ---
 
-### 4. Authorized Representative (AI) (ATLAS-REG-0173)
+### 4. Authorized Representative (AI) (WIDAI-REG-0173)
 **Category:** REG | **Seniority:** Senior | **KSAs Authored:** 9
 
 **Scores:**
@@ -98,7 +98,7 @@ All five test roles achieved overall quality scores of 4.0 or higher on a 1-5 sc
 
 ---
 
-### 5. AI Solutions Engineer (ATLAS-OPS-0135)
+### 5. AI Solutions Engineer (WIDAI-OPS-0135)
 **Category:** OPS | **Seniority:** Mid–Senior | **KSAs Authored:** 9
 
 **Scores:**
@@ -158,7 +158,7 @@ All roles match or closely follow the target distribution.
    - RSK-06.05: ISACA (AAIA), IIA, AICPA (audit standards)
    - NICHE-01.01: SEC, FCA, MiFID II (financial regulations)
    - REG-01.01: EU AI Act (regulatory framework)
-   - OPS-07.06: ATLAS patterns (operational architectures)
+   - OPS-07.06: WIDAI patterns (operational architectures)
 
 3. **Appropriate K/S/A/T distribution.** All sets follow the observed pattern: Knowledge > Task > Skill > Ability.
 
@@ -196,7 +196,7 @@ All roles match or closely follow the target distribution.
 - [ ] Granularity: Matches manual KSA standards — **PASS** (avg 4.0/5)
 - [ ] Statement Quality: Correct format, clear, assessable — **PASS** (avg 4.4/5)
 - [ ] Framework Accuracy: Appropriate frameworks identified and referenced — **PASS** (avg 4.4/5)
-- [ ] Style Consistency: Reads as cohesive part of ATLAS dataset — **PASS** (avg 4.0/5)
+- [ ] Style Consistency: Reads as cohesive part of WIDAI dataset — **PASS** (avg 4.0/5)
 - [ ] Assessment Utility: Each KSA independently measurable — **PASS** (avg 4.4/5)
 - [ ] Rewrite Threshold: Zero roles at "rewrite-required" quality; all at "edit" level or higher — **PASS** (5/5 roles editable)
 
@@ -298,7 +298,7 @@ All roles match or closely follow the target distribution.
 - Manual: "Knowledge of enterprise data strategy frameworks, including data governance operating models, data architecture principles..."
 - AI: "Knowledge of change management frameworks (ADKAR, Kotter, McKinsey 7S) and how they are applied to data and AI transformation initiatives..."
 
-Both follow ATLAS conventions. AI slightly more explicit about specific frameworks (good for assessment).
+Both follow WIDAI conventions. AI slightly more explicit about specific frameworks (good for assessment).
 
 ---
 

@@ -9,7 +9,7 @@
 
 ## Context
 
-ATLAS has 187 defined roles. 37 have complete KSA (Knowledge, Skills, Abilities) mappings. 150 remain scaffold-only — role definitions without the competency data that enables assessment, gap analysis, and competency evaluation.
+WIDAI has 187 defined roles. 37 have complete KSA (Knowledge, Skills, Abilities) mappings. 150 remain scaffold-only — role definitions without the competency data that enables assessment, gap analysis, and competency evaluation.
 
 At the current authoring rate, completing all 150 roles manually would require an estimated 6-12 months of sustained effort. For a solo-operator project, this is the single largest bottleneck on the roadmap. Every use case — PE due diligence, EU AI Act compliance, model risk governance, CDAIO toolkit — depends on KSA coverage for its relevant roles.
 
@@ -29,9 +29,9 @@ Before scaling this approach, a quality validation test (R02) must be completed:
 
 ## Rationale
 
-**The bottleneck is production, not expertise.** The 37 existing KSA sets establish a clear pattern — structure, depth, source framework references, and assessment applicability. The knowledge required to author KSAs is available in the source frameworks (NICE, O*NET, SFIA, DAMA DMBOK, ESCO). The constraint is the time required to synthesize this knowledge into ATLAS's format, not the availability of the knowledge itself.
+**The bottleneck is production, not expertise.** The 37 existing KSA sets establish a clear pattern — structure, depth, source framework references, and assessment applicability. The knowledge required to author KSAs is available in the source frameworks (NICE, O*NET, SFIA, DAMA DMBOK, ESCO). The constraint is the time required to synthesize this knowledge into WIDAI's format, not the availability of the knowledge itself.
 
-**AI-assisted authoring rebalances Thomas's time toward high-value activities.** Thomas's irreplaceable contribution is judgment: deciding which source framework interpretation to privilege, how to weight competing KSA definitions, and whether the resulting competency model maps to real-world practice. Drafting — the mechanical synthesis of source framework content into ATLAS format — is the commodity step. Shifting drafting to AI and review to Thomas produces higher throughput without sacrificing the quality judgment that makes ATLAS credible.
+**AI-assisted authoring rebalances Thomas's time toward high-value activities.** Thomas's irreplaceable contribution is judgment: deciding which source framework interpretation to privilege, how to weight competing KSA definitions, and whether the resulting competency model maps to real-world practice. Drafting — the mechanical synthesis of source framework content into WIDAI format — is the commodity step. Shifting drafting to AI and review to Thomas produces higher throughput without sacrificing the quality judgment that makes WIDAI credible.
 
 **The reference set enables quality calibration.** Unlike greenfield authoring, AI-assisted KSA production has a built-in benchmark: the 37 existing roles. This means quality can be measured, not assumed. The R02 test is designed to produce a go/no-go signal before committing to the approach at scale.
 
@@ -53,7 +53,7 @@ AI-assisted KSAs are not auto-published. Each role goes through:
 3. **Consistency check** against the authoring methodology documentation (R12)
 4. **Provenance tagging** — each KSA records whether it was human-authored, AI-assisted, or AI-drafted with human review
 
-The provenance tagging is important for credibility. When ATLAS reaches external adoption, users should know the authoring methodology. Transparency about AI assistance — done well and with quality controls — is a credibility asset, not a liability.
+The provenance tagging is important for credibility. When WIDAI reaches external adoption, users should know the authoring methodology. Transparency about AI assistance — done well and with quality controls — is a credibility asset, not a liability.
 
 ## Consequences
 
@@ -78,17 +78,17 @@ The provenance tagging is important for credibility. When ATLAS reaches external
 
 - **Result:** PASS
 - **Quality Score:** 4.26/5 average across AI-assisted drafts blind-compared to manually-authored reference set
-- **Assessment Dimensions:** Completeness (source framework coverage), accuracy (alignment with source definitions), consistency (matching ATLAS authoring style), and practical applicability (usefulness for assessment scenarios)
+- **Assessment Dimensions:** Completeness (source framework coverage), accuracy (alignment with source definitions), consistency (matching WIDAI authoring style), and practical applicability (usefulness for assessment scenarios)
 - **Key Finding:** No systematic deficiencies detected. AI-assisted KSAs require editing (average review time 30-60 min per role) but do not require rewriting. Quality is comparable to existing KSA set.
 - **Implication:** The 3-5x speedup is achievable. AI-assisted authoring becomes the primary acceleration strategy for authoring the remaining 150 scaffold-only roles.
 
-Provenance tagging is implemented: each KSA records authoring methodology (manual, AI-assisted, AI-drafted-with-review). This transparency supports credibility when ATLAS reaches external adoption.
+Provenance tagging is implemented: each KSA records authoring methodology (manual, AI-assisted, AI-drafted-with-review). This transparency supports credibility when WIDAI reaches external adoption.
 
 ## References
 
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 4: Constraint 2 ("Thomas operates alone")
-- Ensemble Brainstorm — ATLAS Roadmap, Scoring: R02 (AI-assisted KSA authoring quality test — Roadmap Anchor)
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 4: Assumption Test Queue
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 4: Constraint 2 ("Thomas operates alone")
+- Ensemble Brainstorm — WIDAI Roadmap, Scoring: R02 (AI-assisted KSA authoring quality test — Roadmap Anchor)
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 4: Assumption Test Queue
 - Current KSA distribution: 37 roles with KSAs across GOV(73), ENG(53), DEV(46), DSM(38), RSK(35), ANL(30), LDR(24), OPS(23); NICHE(0), REG(0)
 - Phase 0 Validation Sprint Results: `docs/roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md`
 - R02 KSA Quality Test: `docs/roadmap/R02-ksa-quality-test.md`

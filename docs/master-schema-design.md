@@ -58,7 +58,7 @@ The schema must accommodate these enumerated value sets:
 
 **Fields present across all or nearly all frameworks** (the minimum viable core): unique identifier (format varies), title/name, description/definition, and source attribution. **Fields present in most structured frameworks**: tasks/responsibilities, skills/competencies, knowledge areas, category/family classification, and at least one occupation code. **Fields that are framework-specific and must be optional**: O\*NET statistical metadata (N, Standard Error, CI bounds), NICE TKS statement IDs, DCWF workforce element and proficiency level, DDaT civil service grade mapping, SFIA 7-level descriptors per generic attribute, ESCO multi-language labels and essential/optional skill split, LinkedIn compensation schema, EU AI Act risk tier and obligation mapping, SR 11-7 independence requirements and line-of-defense designation.
 
-**Fields that cannot be populated from existing frameworks and require manual curation**: ATLAS tier classification (no framework uses this natively), canonical role ID (must be minted), gap/priority metadata, cross-framework "primary source" designation, industry applicability beyond the federal/government focus of NICE/DCWF/DDaT, and years-of-experience ranges (only partially available from LinkedIn/Schema.org job postings, not from frameworks themselves).
+**Fields that cannot be populated from existing frameworks and require manual curation**: WIDAI tier classification (no framework uses this natively), canonical role ID (must be minted), gap/priority metadata, cross-framework "primary source" designation, industry applicability beyond the federal/government focus of NICE/DCWF/DDaT, and years-of-experience ranges (only partially available from LinkedIn/Schema.org job postings, not from frameworks themselves).
 
 ## Recommended JSON schema for the CDAIO Domain Master Role Record
 
@@ -69,21 +69,21 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://atlas.cdaio.gov/schemas/role-record/v1.0.0",
   "title": "CDAIO Domain Master Role Record",
-  "description": "A role record in the CDAIO ATLAS master role dataset, designed to ingest data from NICE, O*NET, SOC, DCWF, DDaT, SFIA, ESCO, DAMA, EU AI Act, ISO 42001, SR 11-7, LinkedIn, IAPP, ISACA, and Gartner without losing fidelity.",
+  "description": "A role record in the CDAIO WIDAI master role dataset, designed to ingest data from NICE, O*NET, SOC, DCWF, DDaT, SFIA, ESCO, DAMA, EU AI Act, ISO 42001, SR 11-7, LinkedIn, IAPP, ISACA, and Gartner without losing fidelity.",
   "type": "object",
   "required": ["role_id", "canonical_title", "description", "sources", "atlas_tier", "functional_domain", "status"],
   "properties": {
 
     "role_id": {
       "type": "string",
-      "pattern": "^ATLAS-[A-Z]{2,4}-[0-9]{4}$",
-      "description": "ATLAS-assigned canonical identifier. Format: ATLAS-{domain_code}-{sequence}. Minted internally; not from any source framework."
+      "pattern": "^WIDAI-[A-Z]{2,4}-[0-9]{4}$",
+      "description": "WIDAI-assigned canonical identifier. Format: WIDAI-{domain_code}-{sequence}. Minted internally; not from any source framework."
     },
 
     "canonical_title": {
       "type": "string",
       "maxLength": 200,
-      "description": "Single authoritative title chosen by ATLAS curation team. One per record."
+      "description": "Single authoritative title chosen by WIDAI curation team. One per record."
     },
 
     "variant_titles": {
@@ -109,7 +109,7 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
     "description": {
       "type": "string",
       "maxLength": 5000,
-      "description": "ATLAS-curated canonical description synthesized from source definitions."
+      "description": "WIDAI-curated canonical description synthesized from source definitions."
     },
 
     "source_descriptions": {
@@ -138,7 +138,7 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
         "Tier 4 - Mid-Level Practitioner",
         "Tier 5 - Entry/Associate"
       ],
-      "description": "ATLAS-assigned seniority tier. Manually curated; not directly from any single framework."
+      "description": "WIDAI-assigned seniority tier. Manually curated; not directly from any single framework."
     },
 
     "functional_domain": {
@@ -156,7 +156,7 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
         "Data Product Management",
         "Data Leadership"
       ],
-      "description": "Primary ATLAS functional domain. Synthesized from DAMA knowledge areas, DDaT families, NICE categories, and SFIA subcategories."
+      "description": "Primary WIDAI functional domain. Synthesized from DAMA knowledge areas, DDaT families, NICE categories, and SFIA subcategories."
     },
 
     "secondary_domains": {
@@ -393,7 +393,7 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
 
     "gap_and_priority_metadata": {
       "type": "object",
-      "description": "ATLAS curation metadata — manually maintained.",
+      "description": "WIDAI curation metadata — manually maintained.",
       "properties": {
         "coverage_completeness": {
           "type": "string",
@@ -410,7 +410,7 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
 
     "related_roles": {
       "type": "array",
-      "description": "Links to other ATLAS roles with typed relationships.",
+      "description": "Links to other WIDAI roles with typed relationships.",
       "items": {
         "type": "object",
         "properties": {
@@ -438,9 +438,9 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
 
 **Arrays of attributed objects vs. arrays of strings.** Every multi-valued field (variant titles, skills, tasks, occupation codes) uses `array of objects` with a required `source_framework` field. This adds verbosity but is essential for three reasons: (1) the same role may have different skill lists in O\*NET vs. DDaT vs. ESCO, and conflating them without provenance makes deduplication and conflict resolution impossible; (2) O\*NET skills carry numeric ratings while DDaT skills carry proficiency levels — a flat string array cannot hold both; (3) when frameworks update at different cadences, source versioning per-item enables incremental refresh without full record replacement.
 
-**Canonical title + variant titles pattern.** The schema separates one `canonical_title` (curated by ATLAS, not auto-derived) from N `variant_titles` with full attribution. This follows ESCO's preferred-label/alternative-label distinction but adds source provenance. The canonical title must be manually chosen because frameworks disagree on naming — O\*NET says "Database Architects," DDaT says "Data architect," ESCO says "database designer," and SFIA has no role titles at all (only skill codes like DTAN).
+**Canonical title + variant titles pattern.** The schema separates one `canonical_title` (curated by WIDAI, not auto-derived) from N `variant_titles` with full attribution. This follows ESCO's preferred-label/alternative-label distinction but adds source provenance. The canonical title must be manually chosen because frameworks disagree on naming — O\*NET says "Database Architects," DDaT says "Data architect," ESCO says "database designer," and SFIA has no role titles at all (only skill codes like DTAN).
 
-**Seniority as a polymorphic mapping object.** Rather than forcing all frameworks into a single seniority scale (which would lose precision), `seniority_mappings` carries each framework's native seniority value as a separate typed field. The ATLAS tier provides a unified view, but the original DDaT skill level, SFIA level range, DCWF proficiency, and LinkedIn seniority are all preserved. This was chosen over a single `seniority_level` enum because the scales are fundamentally incompatible — DDaT's 4 levels map imprecisely to SFIA's 7, and O\*NET's Job Zones measure preparation needed (not organizational seniority).
+**Seniority as a polymorphic mapping object.** Rather than forcing all frameworks into a single seniority scale (which would lose precision), `seniority_mappings` carries each framework's native seniority value as a separate typed field. The WIDAI tier provides a unified view, but the original DDaT skill level, SFIA level range, DCWF proficiency, and LinkedIn seniority are all preserved. This was chosen over a single `seniority_level` enum because the scales are fundamentally incompatible — DDaT's 4 levels map imprecisely to SFIA's 7, and O\*NET's Job Zones measure preparation needed (not organizational seniority).
 
 **Regulatory context as a separate object.** EU AI Act roles, ISO 42001 control mappings, and SR 11-7 line-of-defense designations are qualitatively different from workforce framework attributes. They describe legal/compliance obligations rather than job content. Grouping them in `regulatory_context` keeps the core role definition clean while preserving this data for governance-focused consumers.
 
@@ -450,7 +450,7 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
 
 ```json
 {
-  "role_id": "ATLAS-DMO-0012",
+  "role_id": "WIDAI-DMO-0012",
   "canonical_title": "Database Administrator",
   "variant_titles": [
     { "title": "Database Administrators", "source_framework": "O*NET", "source_version": "30.2", "title_type": "preferred", "language": "en" },
@@ -566,12 +566,12 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
     "frameworks_missing": ["NICE"],
     "curation_notes": "NICE Framework does not have a direct DBA work role; closest NICE role is DD-WRL-001 (Database Management Specialist) if one existed. DCWF code 421 maps directly. DDaT maps only loosely to Data engineer. SFIA maps to DATM skill but SFIA does not define roles.",
     "last_reviewed": "2026-03-24",
-    "reviewed_by": "ATLAS Curation Team"
+    "reviewed_by": "WIDAI Curation Team"
   },
   "related_roles": [
-    { "related_role_id": "ATLAS-DEA-0003", "relationship_type": "sibling", "source": "O*NET related occupations" },
-    { "related_role_id": "ATLAS-DAR-0001", "relationship_type": "career_progression_to", "source": "manual curation" },
-    { "related_role_id": "ATLAS-DMO-0015", "relationship_type": "specialization_of", "source": "manual curation" }
+    { "related_role_id": "WIDAI-DEA-0003", "relationship_type": "sibling", "source": "O*NET related occupations" },
+    { "related_role_id": "WIDAI-DAR-0001", "relationship_type": "career_progression_to", "source": "manual curation" },
+    { "related_role_id": "WIDAI-DMO-0015", "relationship_type": "specialization_of", "source": "manual curation" }
   ],
   "status": "review",
   "created_date": "2026-03-24",
@@ -582,7 +582,7 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
 
 ## Stable identifier systems that can anchor cross-framework mapping
 
-The strongest candidates for stable cross-framework role IDs are **O\*NET-SOC codes** and **ESCO URIs**. O\*NET-SOC codes are the most widely adopted: they embed the BLS SOC code (enabling direct crosswalk to the US labor classification), have been stable since 2019, and are referenced by DCWF, NICE (via OPM codes), Lightcast, and the ESCO-O\*NET crosswalk. ESCO URIs are the best option for international coverage — they are persistent, dereferenceable (pointing to a live API), mapped to ISCO-08 natively, and crosswalked to O\*NET. Neither is sufficient alone because O\*NET covers only US occupations and ESCO is Eurocentric. **The ATLAS role ID proposed in this schema (`ATLAS-XX-NNNN`) exists precisely to provide a stable internal anchor** that bridges both systems, with the `occupation_codes` array holding all external identifiers and their match types.
+The strongest candidates for stable cross-framework role IDs are **O\*NET-SOC codes** and **ESCO URIs**. O\*NET-SOC codes are the most widely adopted: they embed the BLS SOC code (enabling direct crosswalk to the US labor classification), have been stable since 2019, and are referenced by DCWF, NICE (via OPM codes), Lightcast, and the ESCO-O\*NET crosswalk. ESCO URIs are the best option for international coverage — they are persistent, dereferenceable (pointing to a live API), mapped to ISCO-08 natively, and crosswalked to O\*NET. Neither is sufficient alone because O\*NET covers only US occupations and ESCO is Eurocentric. **The WIDAI role ID proposed in this schema (`WIDAI-XX-NNNN`) exists precisely to provide a stable internal anchor** that bridges both systems, with the `occupation_codes` array holding all external identifiers and their match types.
 
 ## Conclusion: what the schema gets right and what remains hard
 

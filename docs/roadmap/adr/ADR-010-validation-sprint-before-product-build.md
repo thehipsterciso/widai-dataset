@@ -21,7 +21,7 @@ Four items scored as Roadmap Anchors share a common characteristic: they are tes
 ### The Four Tests
 
 **R01: Coverage Gap Test**
-Map 3-5 real data/AI team structures against current ATLAS data coverage. Use publicly available team structures, Thomas's network contacts, or anonymized organizational data. The question: can the current 37 KSA-complete roles support a minimum viable PE assessment?
+Map 3-5 real data/AI team structures against current WIDAI data coverage. Use publicly available team structures, Thomas's network contacts, or anonymized organizational data. The question: can the current 37 KSA-complete roles support a minimum viable PE assessment?
 
 - **If yes (≥60% role coverage):** Proceed to Tier 1 with current data (ADR-003 holds)
 - **If no (<60% coverage):** Insert a focused KSA sprint targeting the 10-15 highest-frequency unmapped roles before Tier 1. This adds 2-4 weeks but prevents a failed pilot.
@@ -33,7 +33,7 @@ Author KSAs for 5 roles using AI assistance. Blind-compare against manually-auth
 - **If quality falls short:** Identify failure modes. Determine if failures are systematic (abandon AI-assisted approach) or limited to specific role types (hybrid approach — AI for standard roles, manual for complex roles).
 
 **R05: Source Framework License Audit**
-Audit licensing terms for all 70+ source frameworks. ATLAS derives from O*NET (public domain), NICE (public domain), SFIA (copyrighted), DAMA DMBOK (copyrighted), ESCO (EU open data), and others. Determine which frameworks permit commercial derivative works and under what conditions.
+Audit licensing terms for all 70+ source frameworks. WIDAI derives from O*NET (public domain), NICE (public domain), SFIA (copyrighted), DAMA DMBOK (copyrighted), ESCO (EU open data), and others. Determine which frameworks permit commercial derivative works and under what conditions.
 
 - **If all clear:** Proceed with current cross-framework architecture
 - **If restrictions found:** Determine scope of restrictions. If a major framework (SFIA, DAMA) restricts commercial use, the cross-framework mapping may need to exclude those sources or negotiate licensing. This affects the differentiator positioning (ADR-006).
@@ -112,7 +112,7 @@ All four tests executed in parallel on Day 1 of the sprint. Results:
 
 ## References
 
-- Ensemble Brainstorm — ATLAS Roadmap, Pass 4: Assumption Test Queue (5 prioritized tests)
-- Ensemble Brainstorm — ATLAS Roadmap, Scoring: R01, R02, R05, R24 (all Roadmap Anchors)
-- Ensemble Brainstorm — ATLAS Roadmap, Dependency Chain: Tier 0
-- Ensemble Brainstorm — ATLAS Roadmap, Roadmap Summary: Phase 0 (Validation Sprint)
+- Ensemble Brainstorm — WIDAI Roadmap, Pass 4: Assumption Test Queue (5 prioritized tests)
+- Ensemble Brainstorm — WIDAI Roadmap, Scoring: R01, R02, R05, R24 (all Roadmap Anchors)
+- Ensemble Brainstorm — WIDAI Roadmap, Dependency Chain: Tier 0
+- Ensemble Brainstorm — WIDAI Roadmap, Roadmap Summary: Phase 0 (Validation Sprint)
