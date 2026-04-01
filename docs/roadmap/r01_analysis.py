@@ -5,7 +5,7 @@ import json
 import os
 from collections import defaultdict
 
-os.chdir('/sessions/awesome-elegant-mayer/mnt/WIDAI/atlas-dataset')
+os.chdir('/sessions/awesome-elegant-mayer/mnt/WIDAI/widai-dataset')
 
 # Load all role files
 categories = {}
@@ -32,7 +32,7 @@ for cat in ['ENG', 'DEV', 'DSM', 'ANL', 'GOV', 'RSK', 'OPS', 'LDR']:
 for cat, roles in categories.items():
     for role in roles:
         canonical = role['canonical_title'].lower()
-        work_role_id = role.get('atlas_work_role_id')
+        work_role_id = role.get('widai_work_role_id')
         has_ksa = work_role_id in ksa_coverage if work_role_id else False
 
         role_lookup[canonical] = {
@@ -144,7 +144,7 @@ archetypes = {
     }
 }
 
-def map_role_to_atlas(job_title):
+def map_role_to_widai(job_title):
     """Try to match a job title to WIDAI roles"""
     title_lower = job_title.lower().strip()
 
@@ -216,7 +216,7 @@ for arch_name, arch_data in archetypes.items():
     }
 
     for job_title, count in arch_data['roles']:
-        mapping = map_role_to_atlas(job_title)
+        mapping = map_role_to_widai(job_title)
         arch_results['roles_in_team'].append({
             'title': job_title,
             'count': count,
@@ -256,7 +256,7 @@ top_unmapped = sorted(unmapped_across_archetypes.items(), key=lambda x: x[1], re
 summary = {
     'test_date': '2026-03-26',
     'test_version': 'R01',
-    'atlas_version': '0.4.0',
+    'widai_version': '0.4.0',
     'archetype_count': len(results),
     'total_roles_analyzed': all_total,
     'total_roles_mapped': all_mapped,

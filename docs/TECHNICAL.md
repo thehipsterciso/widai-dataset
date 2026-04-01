@@ -16,7 +16,7 @@ Each directory represents a node type. Each mapping file represents an edge type
 
 ### Primary Key Design
 
-- `atlas_work_role_id` — Primary key for roles. Format: `WR-{CATEGORY}-{NN.NN}` (e.g., `WR-GOV-01.01`)
+- `widai_work_role_id` — Primary key for roles. Format: `WR-{CATEGORY}-{NN.NN}` (e.g., `WR-GOV-01.01`)
 - `ksa_id` — Primary key for KSAs. Format: `{DOMAIN_CODE}-{TYPE}-{SEQUENCE}` (e.g., `DG-K-001`, `AI-S-012`)
   - Domain codes: DG, DA, DQ, AI, AG, SP, AB, LS, OP, RC, RM, TF
   - Type codes: K (Knowledge), S (Skill), A (Ability), T (Task)
@@ -49,7 +49,7 @@ Total: 497 unique KSAs across 12 domains (schema version 2.0.0).
 ## Repository Structure
 
 ```
-atlas-dataset/
+widai-dataset/
 ├── roles/                  One JSON file per category_code
 │   └── 10 files            187 roles (GOV, ENG, DEV, DSM, ANL, RSK, OPS, LDR, REG, NICHE)
 ├── ksas/                   Shared KSA pool organized by knowledge domain
@@ -131,7 +131,7 @@ The master schema (`schema/role_record.json`) defines 25+ fields per role record
 
 ### Role Record Fields
 
-**Core Identity:** `atlas_work_role_id`, `canonical_title`, `category_code` (enum: GOV, ENG, DEV, DSM, ANL, RSK, OPS, LDR, REG, NICHE), `functional_domain`, `secondary_domains`, `role_summary`
+**Core Identity:** `widai_work_role_id`, `canonical_title`, `category_code` (enum: GOV, ENG, DEV, DSM, ANL, RSK, OPS, LDR, REG, NICHE), `functional_domain`, `secondary_domains`, `role_summary`
 
 **Seniority:** `seniority_level` — array of objects with provenance, supporting multiple framework perspectives on the same role's level
 
@@ -149,7 +149,7 @@ The master schema (`schema/role_record.json`) defines 25+ fields per role record
 
 ### Role-KSA Mapping Fields (Schema v2.0.0)
 
-**Relationship:** `work_role_id` (references atlas_work_role_id), `ksa_id` (references domain-based KSA ID), `relationship_type` (requires), `proficiency_context` (strategic, operational, technical, oversight)
+**Relationship:** `work_role_id` (references widai_work_role_id), `ksa_id` (references domain-based KSA ID), `relationship_type` (requires), `proficiency_context` (strategic, operational, technical, oversight)
 
 ---
 

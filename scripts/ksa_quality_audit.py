@@ -173,8 +173,8 @@ class KSAQualityAudit:
         all_work_role_ids = {}
         for category, roles in self.all_roles.items():
             for role in roles:
-                if "atlas_work_role_id" in role and role["atlas_work_role_id"]:
-                    all_work_role_ids[role["atlas_work_role_id"]] = (category, role.get("canonical_title"))
+                if "widai_work_role_id" in role and role["widai_work_role_id"]:
+                    all_work_role_ids[role["widai_work_role_id"]] = (category, role.get("canonical_title"))
 
         missing_roles = set()
         for category, mappings in self.all_mappings.items():

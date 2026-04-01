@@ -261,11 +261,11 @@ class AdversarialQualityGate:
                 self.errors.append(error)
                 continue
             for role in data.get("roles", []):
-                wrid = role.get("atlas_work_role_id")
+                wrid = role.get("widai_work_role_id")
                 if wrid:
                     # Normalize field names for downstream use
                     role["work_role_title"] = role.get("canonical_title", "Unknown")
-                    role["atlas_category_code"] = role.get("category_code", "")
+                    role["widai_category_code"] = role.get("category_code", "")
                     self.role_details[wrid] = role
 
         # Role-framework mappings (for breadth scan)
@@ -290,7 +290,7 @@ class AdversarialQualityGate:
         """
         ksa_ids = self.role_ksas.get(work_role_id, [])
         role_info = self.role_details.get(work_role_id, {})
-        category = role_info.get("atlas_category_code", "")
+        category = role_info.get("widai_category_code", "")
 
         expected = EXPECTED_DOMAINS.get(category, {})
         domains = expected.get("domains", [])
@@ -395,7 +395,7 @@ class AdversarialQualityGate:
         return {
             "pass": "external_benchmark",
             "status": "PASS" if ratio >= 0.25 else "FAIL",
-            "atlas_count": total,
+            "widai_count": total,
             "nice_mean": round(nice_mean, 1),
             "ratio": round(ratio, 4),
             "ratio_pct": round(ratio * 100, 1),
@@ -531,7 +531,7 @@ class AdversarialQualityGate:
         return {
             "work_role_id": work_role_id,
             "title": role_info.get("work_role_title", "Unknown"),
-            "category": role_info.get("atlas_category_code", ""),
+            "category": role_info.get("widai_category_code", ""),
             "overall_status": overall_status,
             "passes_passed": pass_count,
             "passes_failed": fail_count,

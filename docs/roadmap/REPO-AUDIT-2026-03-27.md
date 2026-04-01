@@ -64,7 +64,7 @@
 | `docs/roadmap/R08-priority-ksa-authoring.md` | REMOVE | Built on flawed 1:1 model, superseded by ADR-012 |
 | `docs/roadmap/R24-ksa-consistency-audit.json` | KEEP | Quality scores still valid for statement consistency |
 | `docs/roadmap/R24-ksa-consistency-audit.md` | UPDATE | Add note about structural limitations (tested consistency, not depth/sharing) |
-| `docs/roadmap/ensemble-brainstorm-atlas.md` | KEEP | Original brainstorm, still valuable |
+| `docs/roadmap/ensemble-brainstorm-widai.md` | KEEP | Original brainstorm, still valuable |
 | `docs/roadmap/r01_analysis.py` | KEEP | Historical analysis script |
 | `docs/roadmap/aqg-analysis.json` | REMOVE | Generated from old structure, will be regenerated |
 | `docs/roadmap/dci-analysis.json` | REMOVE | Generated from old structure, will be regenerated |

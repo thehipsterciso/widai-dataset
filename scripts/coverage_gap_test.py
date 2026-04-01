@@ -74,7 +74,7 @@ def get_roles_with_ksa_coverage(all_roles, role_to_ksas):
     covered_roles = {}
 
     for role_id, role in all_roles.items():
-        work_role_id = role.get("atlas_work_role_id")
+        work_role_id = role.get("widai_work_role_id")
         if work_role_id and work_role_id in role_to_ksas:
             ksa_count = len(role_to_ksas[work_role_id])
             if ksa_count > 0:
@@ -92,7 +92,7 @@ def similarity_ratio(a, b):
     return SequenceMatcher(None, a.lower(), b.lower()).ratio()
 
 
-def find_closest_atlas_role(team_role_title, all_roles):
+def find_closest_widai_role(team_role_title, all_roles):
     """
     Find the closest matching WIDAI role by comparing canonical_title
     and key_variants.
@@ -195,23 +195,23 @@ def define_team_structures():
     return teams
 
 
-def map_team_to_atlas(team_roles, all_roles):
+def map_team_to_widai(team_roles, all_roles):
     """
     Map a team composition to WIDAI roles.
 
-    Returns list of (team_role, count, atlas_role_id, atlas_role, match_score).
+    Returns list of (team_role, count, widai_role_id, widai_role, match_score).
     """
     mappings = []
 
     for team_role, count in team_roles:
-        result = find_closest_atlas_role(team_role, all_roles)
-        atlas_role_id, atlas_role, score = result
+        result = find_closest_widai_role(team_role, all_roles)
+        widai_role_id, widai_role, score = result
 
         mappings.append({
             "team_role": team_role,
             "count": count,
-            "atlas_role_id": atlas_role_id,
-            "atlas_role": atlas_role,
+            "widai_role_id": widai_role_id,
+            "widai_role": widai_role,
             "match_score": score,
         })
 
@@ -220,7 +220,7 @@ def map_team_to_atlas(team_roles, all_roles):
 
 def analyze_team_coverage(team_name, team_roles, all_roles, covered_roles, role_to_ksas):
     """Analyze KSA coverage for a single team."""
-    mappings = map_team_to_atlas(team_roles, all_roles)
+    mappings = map_team_to_widai(team_roles, all_roles)
 
     total_positions = sum(m["count"] for m in mappings)
     covered_positions = 0
@@ -230,18 +230,18 @@ def analyze_team_coverage(team_name, team_roles, all_roles, covered_roles, role_
     for mapping in mappings:
         team_role = mapping["team_role"]
         count = mapping["count"]
-        atlas_role_id = mapping["atlas_role_id"]
-        atlas_role = mapping["atlas_role"]
+        widai_role_id = mapping["widai_role_id"]
+        widai_role = mapping["widai_role"]
         score = mapping["match_score"]
 
-        if atlas_role_id and atlas_role_id in covered_roles:
-            ksa_count = covered_roles[atlas_role_id]["ksa_count"]
+        if widai_role_id and widai_role_id in covered_roles:
+            ksa_count = covered_roles[widai_role_id]["ksa_count"]
             covered_positions += count
             covered_details.append({
                 "team_role": team_role,
                 "count": count,
-                "atlas_role": atlas_role.get("canonical_title"),
-                "atlas_role_id": atlas_role_id,
+                "widai_role": widai_role.get("canonical_title"),
+                "widai_role_id": widai_role_id,
                 "ksa_count": ksa_count,
                 "match_score": f"{score:.2f}",
             })
@@ -249,8 +249,8 @@ def analyze_team_coverage(team_name, team_roles, all_roles, covered_roles, role_
             uncovered_details.append({
                 "team_role": team_role,
                 "count": count,
-                "atlas_role": atlas_role.get("canonical_title") if atlas_role else "NOT FOUND",
-                "atlas_role_id": atlas_role_id,
+                "widai_role": widai_role.get("canonical_title") if widai_role else "NOT FOUND",
+                "widai_role_id": widai_role_id,
                 "match_score": f"{score:.2f}" if score > 0 else "NO MATCH",
             })
 
@@ -277,12 +277,12 @@ def get_priority_roles_to_add(all_teams_analysis, all_roles):
 
     for team_analysis in all_teams_analysis:
         for uncovered in team_analysis["uncovered_details"]:
-            role_id = uncovered["atlas_role_id"]
+            role_id = uncovered["widai_role_id"]
             if role_id:
                 uncovered_role_counts[role_id] += uncovered["count"]
                 if role_id not in uncovered_role_info:
                     uncovered_role_info[role_id] = {
-                        "atlas_role": uncovered["atlas_role"],
+                        "widai_role": uncovered["widai_role"],
                         "category": all_roles[role_id].get("category_code") if role_id in all_roles else "UNKNOWN",
                     }
 
@@ -295,8 +295,8 @@ def get_priority_roles_to_add(all_teams_analysis, all_roles):
 
     return [
         {
-            "atlas_role_id": role_id,
-            "atlas_role": uncovered_role_info[role_id]["atlas_role"],
+            "widai_role_id": role_id,
+            "widai_role": uncovered_role_info[role_id]["widai_role"],
             "category": uncovered_role_info[role_id]["category"],
             "appearances": count,
         }
@@ -339,7 +339,7 @@ def print_report(all_roles, covered_roles, all_teams_analysis, priority_roles):
             print("\n  ✓ COVERED ROLES:")
             for detail in team_analysis["covered_details"]:
                 print(f"    - {detail['team_role']} (x{detail['count']})")
-                print(f"      → {detail['atlas_role']} ({detail['ksa_count']} KSAs)")
+                print(f"      → {detail['widai_role']} ({detail['ksa_count']} KSAs)")
                 print(f"      [Match: {detail['match_score']}]")
 
         if team_analysis["uncovered_details"]:
@@ -347,8 +347,8 @@ def print_report(all_roles, covered_roles, all_teams_analysis, priority_roles):
             for detail in team_analysis["uncovered_details"]:
                 status = detail["match_score"] if detail["match_score"] != "NO MATCH" else "NO MATCH FOUND"
                 print(f"    - {detail['team_role']} (x{detail['count']})")
-                if detail["atlas_role"] != "NOT FOUND":
-                    print(f"      → {detail['atlas_role']} (NO KSAs)")
+                if detail["widai_role"] != "NOT FOUND":
+                    print(f"      → {detail['widai_role']} (NO KSAs)")
                     print(f"      [Match: {status}]")
                 else:
                     print(f"      → Role not found in WIDAI")
@@ -378,7 +378,7 @@ def print_report(all_roles, covered_roles, all_teams_analysis, priority_roles):
     print("(Ranked by frequency across teams)\n")
 
     for i, role in enumerate(priority_roles, 1):
-        print(f"{i}. {role['atlas_role']} ({role['atlas_role_id']})")
+        print(f"{i}. {role['widai_role']} ({role['widai_role_id']})")
         print(f"   Category: {role['category']}")
         print(f"   Appears in {role['appearances']} team positions")
 

@@ -163,7 +163,7 @@ class DepthCoverageIndex:
                 self.errors.append(error)
                 continue
             for role in data.get("roles", []):
-                wrid = role.get("atlas_work_role_id")
+                wrid = role.get("widai_work_role_id")
                 if wrid:
                     self.role_details[wrid] = {
                         "title": role.get("canonical_title", "Unknown"),

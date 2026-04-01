@@ -67,11 +67,11 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://atlas.cdaio.gov/schemas/role-record/v1.0.0",
+  "$id": "https://widai.cdaio.gov/schemas/role-record/v1.0.0",
   "title": "CDAIO Domain Master Role Record",
   "description": "A role record in the CDAIO WIDAI master role dataset, designed to ingest data from NICE, O*NET, SOC, DCWF, DDaT, SFIA, ESCO, DAMA, EU AI Act, ISO 42001, SR 11-7, LinkedIn, IAPP, ISACA, and Gartner without losing fidelity.",
   "type": "object",
-  "required": ["role_id", "canonical_title", "description", "sources", "atlas_tier", "functional_domain", "status"],
+  "required": ["role_id", "canonical_title", "description", "sources", "widai_tier", "functional_domain", "status"],
   "properties": {
 
     "role_id": {
@@ -129,7 +129,7 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
       }
     },
 
-    "atlas_tier": {
+    "widai_tier": {
       "type": "string",
       "enum": [
         "Tier 1 - Executive/Strategic Leadership",
@@ -481,7 +481,7 @@ The schema uses arrays of attributed objects (rather than arrays of strings) for
       "language": "en"
     }
   ],
-  "atlas_tier": "Tier 4 - Mid-Level Practitioner",
+  "widai_tier": "Tier 4 - Mid-Level Practitioner",
   "functional_domain": "Data Management & Operations",
   "secondary_domains": ["Data Engineering & Architecture", "Data Security"],
   "occupation_codes": [

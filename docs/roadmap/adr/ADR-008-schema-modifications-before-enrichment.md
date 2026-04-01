@@ -17,7 +17,7 @@ Seven modifications have been implemented in the current schema:
 
 1. **`secondary_domains`** — Changed to enum matching `functional_domain` values. Ensures domain classification consistency.
 2. **`category_code`** — Added as proper enum with 10 values (GOV, ENG, DEV, DSM, ANL, RSK, OPS, LDR, NICHE, REG) plus mapping documentation. Previously implicit in file organization.
-3. **`introduced_in_version`** — Replaced `in_atlas_v030` boolean with versioned string. Supports proper version tracking as the dataset evolves.
+3. **`introduced_in_version`** — Replaced `in_widai_v030` boolean with versioned string. Supports proper version tracking as the dataset evolves.
 4. **`seniority_level`** — Restructured from flat string to array of objects with provenance. Acknowledges that different frameworks define seniority differently for the same role.
 5. **`abilities`** — Added `importance_score` and `level_score`. Enables quantified assessment and gap analysis.
 6. **`regulatory_context`** — Added `nist_ai_rmf_functions` and `jurisdictions`. Supports UC2 (EU AI Act), UC3 (Model Risk), and cross-regulatory analysis (R11).

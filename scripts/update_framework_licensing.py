@@ -4,7 +4,7 @@ Based on R05 License Audit and R05 Dependency Analysis results."""
 
 import json
 
-FRAMEWORKS_PATH = "/sessions/awesome-elegant-mayer/mnt/WIDAI/atlas-dataset/frameworks/frameworks.json"
+FRAMEWORKS_PATH = "/sessions/awesome-elegant-mayer/mnt/WIDAI/widai-dataset/frameworks/frameworks.json"
 
 # Classification map: framework_id -> (license_class, commercial_status, license_type, notes)
 CLASSIFICATIONS = {

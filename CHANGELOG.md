@@ -50,7 +50,7 @@ This project uses [Semantic Versioning](https://semver.org/).
 
 **New documentation:** `docs/roadmap/phase-1b-framework-prioritization.md`
 
-**Documentation cleanup:** README and docs/README rewritten to track progress rather than snapshot-specific statistics. Evolving numbers (KSA counts, strength distributions) deferred to individual STRM ADRs and rationale files until synthesis (Phase 1D) produces stable figures. `widai_manifest.json` renamed from `atlas_manifest.json`.
+**Documentation cleanup:** README and docs/README rewritten to track progress rather than snapshot-specific statistics. Evolving numbers (KSA counts, strength distributions) deferred to individual STRM ADRs and rationale files until synthesis (Phase 1D) produces stable figures. `widai_manifest.json` renamed from `widai_manifest.json`.
 
 ## [0.5.2] - 2026-03-31
 

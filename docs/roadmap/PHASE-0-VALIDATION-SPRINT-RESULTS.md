@@ -153,4 +153,4 @@ With Phase 0 complete, the Tier 1 roadmap items are now unblocked:
 | `R24-ksa-consistency-audit.md` | Human-readable consistency audit |
 | `PHASE-0-VALIDATION-SPRINT-RESULTS.md` | This consolidated report |
 
-All files located in: `atlas-dataset/docs/roadmap/`
+All files located in: `widai-dataset/docs/roadmap/`

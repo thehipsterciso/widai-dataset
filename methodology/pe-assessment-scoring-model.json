@@ -7,7 +7,7 @@
   "last_updated": "2026-03-27",
   "author": "WIDAI Methodology Team",
   "status": "published",
-  "applicable_atlas_version": ">=0.4.0",
+  "applicable_widai_version": ">=0.4.0",
   "disclaimer": "This model produces a defensible, evidence-based assessment score. It does NOT substitute for management interviews, legal diligence, or organizational culture assessment. Use in context with other investment thesis validation work.",
   "assessment_dimensions": {
     "coverage": {
@@ -51,7 +51,7 @@
       },
       "calculation_method": "capability_score = (ksa_evidence_count / ksa_requirement_count) × completeness_weight + interview_assessment × 0.25",
       "inputs": [
-        "role_ksa_requirements_from_atlas",
+        "role_ksa_requirements_from_widai",
         "evidence_artifacts_provided",
         "certification_status",
         "work_experience_indicators",
@@ -393,28 +393,28 @@
         "expected_roles": [
           {
             "role": "Chief Data Officer or Data Lead",
-            "canonical_atlas_role": "WIDAI-GOV-0001 or WIDAI-LDR-0003",
+            "canonical_widai_role": "WIDAI-GOV-0001 or WIDAI-LDR-0003",
             "min_coverage_percent": 100,
             "seniority_required": "Senior/Lead",
             "fte_expected": 1.0
           },
           {
             "role": "Data Engineer(s)",
-            "canonical_atlas_role": "WIDAI-ENG-0005",
+            "canonical_widai_role": "WIDAI-ENG-0005",
             "min_coverage_percent": 80,
             "seniority_required": "Mid/Senior",
             "fte_expected": 1.0
           },
           {
             "role": "Analytics or BI Developer",
-            "canonical_atlas_role": "WIDAI-ANL-0008",
+            "canonical_widai_role": "WIDAI-ANL-0008",
             "min_coverage_percent": 100,
             "seniority_required": "Mid",
             "fte_expected": 1.0
           },
           {
             "role": "Data Quality / Governance Specialist",
-            "canonical_atlas_role": "WIDAI-GOV-0008",
+            "canonical_widai_role": "WIDAI-GOV-0008",
             "min_coverage_percent": 50,
             "seniority_required": "Junior/Mid",
             "fte_expected": 0.5
@@ -445,49 +445,49 @@
         "expected_roles": [
           {
             "role": "Chief Data Officer",
-            "canonical_atlas_role": "WIDAI-GOV-0001",
+            "canonical_widai_role": "WIDAI-GOV-0001",
             "min_coverage_percent": 100,
             "seniority_required": "C-Suite",
             "fte_expected": 1.0
           },
           {
             "role": "Data Engineering Lead(s)",
-            "canonical_atlas_role": "WIDAI-ENG-0005",
+            "canonical_widai_role": "WIDAI-ENG-0005",
             "min_coverage_percent": 100,
             "seniority_required": "Senior",
             "fte_expected": 2.0
           },
           {
             "role": "Data Engineers (individual contributors)",
-            "canonical_atlas_role": "WIDAI-ENG-0005",
+            "canonical_widai_role": "WIDAI-ENG-0005",
             "min_coverage_percent": 100,
             "seniority_required": "Mid",
             "fte_expected": 2.0
           },
           {
             "role": "Data Science / ML Engineers",
-            "canonical_atlas_role": "WIDAI-DEV-0010",
+            "canonical_widai_role": "WIDAI-DEV-0010",
             "min_coverage_percent": 80,
             "seniority_required": "Mid/Senior",
             "fte_expected": 1.5
           },
           {
             "role": "BI/Analytics Developers",
-            "canonical_atlas_role": "WIDAI-ANL-0008",
+            "canonical_widai_role": "WIDAI-ANL-0008",
             "min_coverage_percent": 100,
             "seniority_required": "Mid",
             "fte_expected": 2.0
           },
           {
             "role": "Data Governance Director",
-            "canonical_atlas_role": "WIDAI-GOV-0008",
+            "canonical_widai_role": "WIDAI-GOV-0008",
             "min_coverage_percent": 100,
             "seniority_required": "Senior",
             "fte_expected": 1.0
           },
           {
             "role": "Data Quality Manager",
-            "canonical_atlas_role": "WIDAI-OPS-0002",
+            "canonical_widai_role": "WIDAI-OPS-0002",
             "min_coverage_percent": 80,
             "seniority_required": "Mid",
             "fte_expected": 1.0
@@ -520,84 +520,84 @@
         "expected_roles": [
           {
             "role": "Chief Data and AI Officer",
-            "canonical_atlas_role": "WIDAI-GOV-0001",
+            "canonical_widai_role": "WIDAI-GOV-0001",
             "min_coverage_percent": 100,
             "seniority_required": "C-Suite",
             "fte_expected": 1.0
           },
           {
             "role": "Chief Data Officer (if separate from CAIO)",
-            "canonical_atlas_role": "WIDAI-GOV-0002",
+            "canonical_widai_role": "WIDAI-GOV-0002",
             "min_coverage_percent": 100,
             "seniority_required": "C-Suite",
             "fte_expected": 1.0
           },
           {
             "role": "VP Data Engineering / Data Architecture",
-            "canonical_atlas_role": "WIDAI-ENG-0001",
+            "canonical_widai_role": "WIDAI-ENG-0001",
             "min_coverage_percent": 100,
             "seniority_required": "VP/Director",
             "fte_expected": 1.0
           },
           {
             "role": "Senior Data Engineers",
-            "canonical_atlas_role": "WIDAI-ENG-0005",
+            "canonical_widai_role": "WIDAI-ENG-0005",
             "min_coverage_percent": 100,
             "seniority_required": "Senior",
             "fte_expected": 4.0
           },
           {
             "role": "ML/Data Science Leaders",
-            "canonical_atlas_role": "WIDAI-DEV-0008",
+            "canonical_widai_role": "WIDAI-DEV-0008",
             "min_coverage_percent": 100,
             "seniority_required": "Senior/Lead",
             "fte_expected": 2.0
           },
           {
             "role": "ML/Data Science Engineers",
-            "canonical_atlas_role": "WIDAI-DEV-0010",
+            "canonical_widai_role": "WIDAI-DEV-0010",
             "min_coverage_percent": 100,
             "seniority_required": "Mid/Senior",
             "fte_expected": 3.0
           },
           {
             "role": "BI/Analytics Leaders",
-            "canonical_atlas_role": "WIDAI-ANL-0003",
+            "canonical_widai_role": "WIDAI-ANL-0003",
             "min_coverage_percent": 100,
             "seniority_required": "Lead/Senior",
             "fte_expected": 2.0
           },
           {
             "role": "BI/Analytics Developers",
-            "canonical_atlas_role": "WIDAI-ANL-0008",
+            "canonical_widai_role": "WIDAI-ANL-0008",
             "min_coverage_percent": 100,
             "seniority_required": "Mid",
             "fte_expected": 4.0
           },
           {
             "role": "Data Governance Director",
-            "canonical_atlas_role": "WIDAI-GOV-0008",
+            "canonical_widai_role": "WIDAI-GOV-0008",
             "min_coverage_percent": 100,
             "seniority_required": "Senior",
             "fte_expected": 1.0
           },
           {
             "role": "Data Quality / DataOps Lead",
-            "canonical_atlas_role": "WIDAI-OPS-0002",
+            "canonical_widai_role": "WIDAI-OPS-0002",
             "min_coverage_percent": 100,
             "seniority_required": "Senior/Lead",
             "fte_expected": 1.0
           },
           {
             "role": "Data Product Manager",
-            "canonical_atlas_role": "WIDAI-NICHE-0020",
+            "canonical_widai_role": "WIDAI-NICHE-0020",
             "min_coverage_percent": 100,
             "seniority_required": "Senior",
             "fte_expected": 1.0
           },
           {
             "role": "Compliance/Privacy Officer (dedicated or shared)",
-            "canonical_atlas_role": "WIDAI-REG-0001",
+            "canonical_widai_role": "WIDAI-REG-0001",
             "min_coverage_percent": 80,
             "seniority_required": "Senior",
             "fte_expected": 0.5
@@ -632,55 +632,55 @@
         "expected_roles_sample": [
           {
             "role": "Chief Data and AI Officer",
-            "canonical_atlas_role": "WIDAI-GOV-0001",
+            "canonical_widai_role": "WIDAI-GOV-0001",
             "min_coverage_percent": 100,
             "fte_expected": 1.0
           },
           {
             "role": "VP Data Engineering / Data Architecture",
-            "canonical_atlas_role": "WIDAI-ENG-0001",
+            "canonical_widai_role": "WIDAI-ENG-0001",
             "min_coverage_percent": 100,
             "fte_expected": 1.0
           },
           {
             "role": "VP Data Science and AI",
-            "canonical_atlas_role": "WIDAI-DEV-0008",
+            "canonical_widai_role": "WIDAI-DEV-0008",
             "min_coverage_percent": 100,
             "fte_expected": 1.0
           },
           {
             "role": "VP Analytics and Insights",
-            "canonical_atlas_role": "WIDAI-ANL-0003",
+            "canonical_widai_role": "WIDAI-ANL-0003",
             "min_coverage_percent": 100,
             "fte_expected": 1.0
           },
           {
             "role": "Senior Data Engineers (multiple)",
-            "canonical_atlas_role": "WIDAI-ENG-0005",
+            "canonical_widai_role": "WIDAI-ENG-0005",
             "min_coverage_percent": 100,
             "fte_expected": "6.0+"
           },
           {
             "role": "Data Scientists / ML Engineers (multiple)",
-            "canonical_atlas_role": "WIDAI-DEV-0010",
+            "canonical_widai_role": "WIDAI-DEV-0010",
             "min_coverage_percent": 100,
             "fte_expected": "5.0+"
           },
           {
             "role": "Model Risk Officer / AI Risk Lead",
-            "canonical_atlas_role": "WIDAI-RSK-0001",
+            "canonical_widai_role": "WIDAI-RSK-0001",
             "min_coverage_percent": 100,
             "fte_expected": 1.0
           },
           {
             "role": "Data Governance Director",
-            "canonical_atlas_role": "WIDAI-GOV-0008",
+            "canonical_widai_role": "WIDAI-GOV-0008",
             "min_coverage_percent": 100,
             "fte_expected": 1.0
           },
           {
             "role": "Specialized roles (Master Data, Privacy, DataOps, etc.)",
-            "canonical_atlas_role": "Various",
+            "canonical_widai_role": "Various",
             "min_coverage_percent": "80-100",
             "fte_expected": "3.0+"
           }
@@ -703,7 +703,7 @@
     ]
   },
   "implementation_notes": {
-    "atlas_integration": "All role IDs, KSA references, and category codes are sourced from WIDAI master dataset. Scoring model is agnostic to underlying data; mappings are the integration point.",
+    "widai_integration": "All role IDs, KSA references, and category codes are sourced from WIDAI master dataset. Scoring model is agnostic to underlying data; mappings are the integration point.",
     "evidence_collection": "Assessment assessor is responsible for collecting evidence artifacts. WIDAI provides the KSA requirements; assessor maps evidence to requirements and scores.",
     "defensibility": "Every score must trace back to observable evidence. Subjective judgment is minimized. If a score cannot be justified with evidence (certifications, work product, documented experience), it should be lower.",
     "customization_points": "Reference architecture selection is the primary customization. All other dimensions (coverage, capability, criticality, concentration) follow the model. Criticality assignment is specific to target and deal, but the scoring mechanism is standard.",

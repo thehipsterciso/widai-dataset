@@ -119,7 +119,7 @@
     "naming_convention": "FDE ID with dots replaced by dashes (e.g., 2-C-1-f.json)",
     "schema_compliance": {
       "nist_fields_present": ["focal_document_element", "focal_document_element_description", "rationale", "relationship", "reference_document_element", "reference_document_element_description", "comments", "strength_of_relationship", "relationship_type", "relationship_explanation", "relationship_property"],
-      "atlas_extensions_present": ["strength_justification", "gap_signal", "evaluated_by", "evaluation_date"],
+      "widai_extensions_present": ["strength_justification", "gap_signal", "evaluated_by", "evaluation_date"],
       "strength_justification_contents": {
         "primary_method": "Cross-Encoder STS (raw score, mapped strength, final integer)",
         "secondary_methods": ["BERTScore (P/R/F1)", "NLI (entailment/neutral/contradiction probabilities)", "Bi-Encoder cosine", "Jaccard token overlap"]

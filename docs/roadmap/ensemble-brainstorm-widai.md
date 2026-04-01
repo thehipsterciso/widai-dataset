@@ -496,7 +496,7 @@ API, graph database, full KSA coverage, analyst engagement. Funded by Phase 2-3 
 ### New Repository Structure (Phase 1C onward)
 
 ```
-atlas-dataset/
+widai-dataset/
 ├── sources/                          # Canonical source documents (version-pinned)
 ├── strm/                             # STRM deliverables
 │   ├── {framework}/

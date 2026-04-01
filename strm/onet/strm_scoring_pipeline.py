@@ -118,7 +118,7 @@ def build_rationale_file(mapping: dict, scores: dict, bertscore_data: dict) -> d
         "relationship_type": None,
         "relationship_explanation": None,
         "relationship_property": None,
-        "_comment_atlas_extensions": "Fields below are WIDAI extensions per ADR-014",
+        "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
         "strength_justification": {
             "methodology": "Multi-method computational scoring",
             "primary_method": {
@@ -245,7 +245,7 @@ def main():
                 "relationship_type": None,
                 "relationship_explanation": None,
                 "relationship_property": None,
-                "_comment_atlas_extensions": "Fields below are WIDAI extensions per ADR-014",
+                "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
                 "strength_justification": {
                     "methodology": "No computational scoring — element determined out of WIDAI scope during semantic analysis",
                     "primary_method": None,

@@ -28,7 +28,7 @@ These five fields form the irreducible core of the schema. Without them, no down
 
 **Inherent value.** Resolves the fundamental ambiguity problem in workforce data. LinkedIn's Knowledge Graph team performs continuous entity resolution to standardize millions of diverse member-entered titles into canonical entities — a canonical_title field provides this ground truth for a domain-specific taxonomy.
 
-**Residual value.** Combined with `variant_titles`, creates a complete synonym dictionary for entity resolution. Combined with `atlas_tier` and `functional_domain`, enables structured faceted search and filtering.
+**Residual value.** Combined with `variant_titles`, creates a complete synonym dictionary for entity resolution. Combined with `widai_tier` and `functional_domain`, enables structured faceted search and filtering.
 
 **Verdict: KEEP AS-IS.** Single authoritative title is the correct design pattern, mirroring SKOS `prefLabel` and ESCO's preferred label convention.
 
@@ -74,7 +74,7 @@ These five fields form the irreducible core of the schema. Without them, no down
 
 These fields define how roles are organized, filtered, and hierarchically arranged. Their primary value is in enabling structured queries, faceted search, and organizational modeling.
 
-### `atlas_tier` (5-level enum)
+### `widai_tier` (5-level enum)
 
 **Primary use case.** Provides the **seniority axis for organizational design models**. Gartner's CDAO research identifies three archetypes (Expert D&A Leader, Connector CDAO, Pioneer CDAx) mapped to organizational tiers. A structured 5-tier hierarchy enables automated org chart generation, span-of-control analysis, and headcount planning for data/AI teams — problems that **70% of CDAOs** now own as primary responsibilities.
 
@@ -94,7 +94,7 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 **Inherent value.** A controlled vocabulary of 11 domains provides the classification backbone for any analytics built on top of WIDAI — workforce dashboards, compliance coverage maps, and training needs assessments all depend on domain groupings.
 
-**Residual value.** Combined with `atlas_tier`, creates a 5×11 matrix that maps the entire CDAIO organizational space. Combined with `skills`, enables domain-specific competency models. Combined with `regulatory_context`, identifies which domains carry regulatory obligations.
+**Residual value.** Combined with `widai_tier`, creates a 5×11 matrix that maps the entire CDAIO organizational space. Combined with `skills`, enables domain-specific competency models. Combined with `regulatory_context`, identifies which domains carry regulatory obligations.
 
 **Verdict: KEEP AS-IS.** Eleven domains is appropriate for the CDAIO scope. The enum values cover the major functional areas identified in Gartner, McKinsey, and industry research.
 
@@ -134,7 +134,7 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 **Verdict: KEEP AS-IS.** Low-cost field with genuine utility for deterministic ordering. Not worth removing, but not worth over-investing in either.
 
-### `in_atlas_v030` (boolean)
+### `in_widai_v030` (boolean)
 
 **Primary use case.** Tracks **schema lineage** — which roles existed in the prior version of WIDAI. This is essential for change management when consumers depend on the dataset: they need to distinguish new additions from existing roles to manage migration.
 
@@ -146,7 +146,7 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 **Verdict: KEEP WITH MODIFICATIONS.** Replace with a more general `introduced_in_version` field (string, e.g., "v0.3.0" or "v0.4.0") that scales across schema versions. The current boolean only answers one question and will become increasingly irrelevant as the schema evolves.
 
-### `atlas_work_role_id` (pointer to work role definition)
+### `widai_work_role_id` (pointer to work role definition)
 
 **Primary use case.** Creates a **foreign key relationship** to the WIDAI base structure's work role definitions, enabling normalization. Multiple WIDAI role records may map to the same underlying work role (e.g., a "Senior ML Engineer" and "Staff ML Engineer" might share a common work role definition but differ in tier).
 
@@ -154,7 +154,7 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 **Inherent value.** Standard relational design pattern that reduces redundancy and improves maintainability. Critical for any consuming system that needs to reason about work roles abstractly.
 
-**Residual value.** Combined with `atlas_tier`, creates the work-role × seniority matrix. Combined with external WIDAI tables, enables join-based enrichment without denormalizing everything into the role record.
+**Residual value.** Combined with `widai_tier`, creates the work-role × seniority matrix. Combined with external WIDAI tables, enables join-based enrichment without denormalizing everything into the role record.
 
 **Verdict: KEEP AS-IS.** Standard foreign key pattern. Well-designed.
 
@@ -182,7 +182,7 @@ These fields define how roles are organized, filtered, and hierarchically arrang
 
 **Inherent value.** Low — the free-text format limits machine-readability. The value is primarily archival.
 
-**Residual value.** Combined with `atlas_tier` and `seniority_mappings`, provides a three-way cross-reference (WIDAI tier, source language, framework-specific levels) that resolves seniority ambiguities.
+**Residual value.** Combined with `widai_tier` and `seniority_mappings`, provides a three-way cross-reference (WIDAI tier, source language, framework-specific levels) that resolves seniority ambiguities.
 
 **Verdict: KEEP WITH MODIFICATIONS.** Consider restructuring as an array of objects (like `source_descriptions`) with `seniority_text`, `source_framework`, and `source_version` sub-fields to track which source provided which seniority language. Free text from a single unnamed source is less useful than attributed free text from multiple sources.
 
@@ -200,7 +200,7 @@ These four field groups (tasks, skills, knowledge_areas, abilities) are marked a
 
 **Inherent value.** O\*NET's content model demonstrates that tasks are the atomic unit of work — more granular than skills and more actionable than descriptions. Populating tasks for 187 data/AI roles would create the first domain-specific task inventory for the CDAIO space.
 
-**Residual value.** Combined with `skills`, enables task-to-skill mapping that powers learning recommendation engines (identifying which skills enable which tasks). Combined with `atlas_tier`, reveals how task composition changes across seniority levels. Combined with `regulatory_context`, identifies which tasks carry compliance obligations.
+**Residual value.** Combined with `skills`, enables task-to-skill mapping that powers learning recommendation engines (identifying which skills enable which tasks). Combined with `widai_tier`, reveals how task composition changes across seniority levels. Combined with `regulatory_context`, identifies which tasks carry compliance obligations.
 
 **Verdict: KEEP AS-IS — PRIORITIZE POPULATION.** The sub-field structure (`task_id`, `task_text`, `source_framework`, `task_type`, `importance`, `relevance_pct`) is well-designed and mirrors O\*NET's proven content model. This field should be the top population priority.
 
@@ -236,7 +236,7 @@ These four field groups (tasks, skills, knowledge_areas, abilities) are marked a
 
 **Inherent value.** Moderate standalone value. Abilities are the weakest of the KSA(T) quartet for practical applications in the data/AI space. Most consuming systems (skills gap tools, career platforms, ML training pipelines) operate primarily on skills and tasks.
 
-**Residual value.** Combined with `skills` and `tasks`, completes the full KSA(T) content model. Combined with `atlas_tier`, could reveal how ability requirements shift with seniority. But the thin sub-field structure (`ability_id`, `ability_name`, `source_framework`) limits the analytical depth compared to the richer skills and tasks structures.
+**Residual value.** Combined with `skills` and `tasks`, completes the full KSA(T) content model. Combined with `widai_tier`, could reveal how ability requirements shift with seniority. But the thin sub-field structure (`ability_id`, `ability_name`, `source_framework`) limits the analytical depth compared to the richer skills and tasks structures.
 
 **Verdict: KEEP WITH MODIFICATIONS.** Add `importance_score` and `level_score` sub-fields to match the skills structure, enabling quantitative analysis. The current structure is too sparse for meaningful analytical use. If population resources are scarce, this field should be lowest priority among the content fields.
 
@@ -264,7 +264,7 @@ These four field groups (tasks, skills, knowledge_areas, abilities) are marked a
 
 **Inherent value.** NIST has published a formal report ("Defining a Proficiency Scale for the NICE Framework") exploring alignment between SFIA levels and NICE work roles, demonstrating that seniority normalization is an active area of standards development. Having this pre-computed in the schema saves consuming systems from solving a hard mapping problem.
 
-**Residual value.** Combined with `atlas_tier`, creates a five-way seniority cross-reference. Combined with `job_market_attributes.salary_range_usd`, enables seniority-adjusted compensation analysis. Combined with `occupation_codes`, creates the most complete role-level interoperability package available.
+**Residual value.** Combined with `widai_tier`, creates a five-way seniority cross-reference. Combined with `job_market_attributes.salary_range_usd`, enables seniority-adjusted compensation analysis. Combined with `occupation_codes`, creates the most complete role-level interoperability package available.
 
 **Verdict: KEEP AS-IS.** The field structure is well-designed. The `sfia_level_range` object with min/max is particularly good — it acknowledges that WIDAI roles may span SFIA levels rather than mapping 1:1.
 
@@ -296,7 +296,7 @@ These four field groups (tasks, skills, knowledge_areas, abilities) are marked a
 
 **Inherent value.** **No other workforce taxonomy includes structured regulatory obligation mappings.** This field single-handedly differentiates WIDAI from O\*NET, ESCO, SFIA, and every other occupational framework in the market. As regulatory pressure on AI intensifies globally, this field's value will compound.
 
-**Residual value.** Combined with `certifications`, identifies which credentials satisfy regulatory competency requirements. Combined with `skills`, defines the competency profile for each regulatory obligation. Combined with `atlas_tier`, enables analysis of regulatory authority distribution across seniority levels. Combined with `related_roles`, maps the complete regulatory accountability chain from board level (Tier 1) to practitioners (Tier 5).
+**Residual value.** Combined with `certifications`, identifies which credentials satisfy regulatory competency requirements. Combined with `skills`, defines the competency profile for each regulatory obligation. Combined with `widai_tier`, enables analysis of regulatory authority distribution across seniority levels. Combined with `related_roles`, maps the complete regulatory accountability chain from board level (Tier 1) to practitioners (Tier 5).
 
 **Verdict: KEEP WITH MODIFICATIONS.** Add NIST AI RMF function mappings (GOVERN/MAP/MEASURE/MANAGE) as a sub-field — NIST AI RMF is the most widely adopted US AI governance framework and its GOVERN 1.5 subcategory specifically addresses organizational roles. Also consider adding a `jurisdictions` array to indicate which regulatory frameworks apply to each role based on geography, supporting multinational compliance mapping.
 
@@ -332,7 +332,7 @@ This is a complex nested object with multiple sub-fields that serve different pu
 
 **Inherent value.** High for the salary data; moderate for years_experience. BLS and LinkedIn already publish this data publicly — WIDAI's value-add is curating it for 187 specific data/AI roles and maintaining it over time.
 
-**Residual value.** Combined with `skills`, enables skill premium analysis (which skills correlate with higher percentile salaries). Combined with `atlas_tier`, creates seniority-adjusted compensation bands. Combined with `certifications`, quantifies the certification premium.
+**Residual value.** Combined with `skills`, enables skill premium analysis (which skills correlate with higher percentile salaries). Combined with `widai_tier`, creates seniority-adjusted compensation bands. Combined with `certifications`, quantifies the certification premium.
 
 **Verdict: KEEP AS-IS.** The p25/p50/p75 structure with source attribution and as_of_date is well-designed and mirrors BLS/industry standards. Consider adding a `currency` field to support non-USD markets as the schema scales internationally.
 
@@ -400,7 +400,7 @@ This is a complex nested object with multiple sub-fields that serve different pu
 
 **Inherent value.** **Relationships are the highest-leverage field in the schema.** A flat list of 187 roles is a reference table; a connected graph of 187 roles with typed relationships is a knowledge graph. The difference in analytical power is orders of magnitude — graph algorithms (community detection, shortest path, centrality) become available only when relationships are populated.
 
-**Residual value.** Combined with `skills`, enables skill gap computation between current and target roles (the core operation powering career path recommendations). Combined with `atlas_tier`, creates the complete career ladder visualization. Combined with `functional_domain`, reveals cross-domain career transitions. Combined with `regulatory_context`, maps the regulatory accountability chain.
+**Residual value.** Combined with `skills`, enables skill gap computation between current and target roles (the core operation powering career path recommendations). Combined with `widai_tier`, creates the complete career ladder visualization. Combined with `functional_domain`, reveals cross-domain career transitions. Combined with `regulatory_context`, maps the regulatory accountability chain.
 
 **Verdict: KEEP AS-IS.** The relationship_type enum is comprehensive and well-designed. The `source` sub-field (tracking where each relationship was derived) is a valuable provenance feature.
 
@@ -442,7 +442,7 @@ Across the entire schema, the assessment identifies **zero fields that should be
 |-------|---------|-----------|
 | `secondary_domains` | Modify | Use `functional_domain` enum values instead of free-text strings |
 | `category_code` / `category_title` | Modify | Formalize the deterministic mapping to `functional_domain` |
-| `in_atlas_v030` | Modify | Replace with `introduced_in_version` (string) for scalability |
+| `in_widai_v030` | Modify | Replace with `introduced_in_version` (string) for scalability |
 | `seniority_level` | Modify | Restructure as array of attributed objects with source_framework |
 | `abilities` | Modify | Add `importance_score` and `level_score` sub-fields |
 | `regulatory_context` | Modify | Add NIST AI RMF function mappings and `jurisdictions` array |

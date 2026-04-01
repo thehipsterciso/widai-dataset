@@ -63,4 +63,4 @@ API, graph database, full coverage. Informed by all prior phases.
 
 Start with ADR-001 (roadmap sequencing logic) and ADR-010 (validation sprint). These frame the overall approach. Then read the use-case-specific ADRs (002, 004, 009) and the cross-cutting decisions (003, 005, 006, 007, 008) in any order. ADR-012 through ADR-015 document the KSA enrichment methodology evolution — read these in sequence.
 
-Each ADR is self-contained but references other ADRs where decisions interact. The supporting analysis lives in [ensemble-brainstorm-atlas.md](../ensemble-brainstorm-atlas.md).
+Each ADR is self-contained but references other ADRs where decisions interact. The supporting analysis lives in [ensemble-brainstorm-widai.md](../ensemble-brainstorm-widai.md).

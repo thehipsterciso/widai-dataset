@@ -39,7 +39,7 @@ WIDAI is a unified workforce framework that maps roles across the CDAIO domain, 
 
 ### Roadmap & Decisions
 
-**[Execution Roadmap](roadmap/ensemble-brainstorm-atlas.md)** — Five-pass strategic analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping).
+**[Execution Roadmap](roadmap/ensemble-brainstorm-widai.md)** — Five-pass strategic analysis (Forward Decomposition, Reverse Induction, Perspective Rotation, Constraint Inversion, Second-Order Mapping).
 
 **[Phase 0 Validation Results](roadmap/PHASE-0-VALIDATION-SPRINT-RESULTS.md)** — Four parallel tests executed with results. Go decision for Phase 1.
 
@@ -60,7 +60,7 @@ WIDAI is a unified workforce framework that maps roles across the CDAIO domain, 
 ## File Structure
 
 ```
-atlas-dataset/
+widai-dataset/
 ├── roles/                    One file per category (GOV.json, ENG.json, etc.)
 ├── ksas/                     Domain-based KSA pools (12 domains, many-to-many role mappings)
 ├── frameworks/               Reference data for 70 source frameworks
