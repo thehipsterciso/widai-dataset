@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-C-007",
+  "fde_type": "competency",
+  "article": "49(4)",
+  "article_title": "Registration",
+  "obligation_text": "Deployers who are public authorities or Union institutions, bodies, offices or agencies shall register and select the system and register its use in the EU database. Other deployers shall be authorised to register themselves and select the system and register its use.",
+  "scoring_text": "Knowledge of deployer registration obligations in the EU AI database, including system selection documentation, use case registration, and differentiated requirements for public authorities versus other deployers.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-C-007",
+  "focal_document_element_description": "Knowledge of deployer registration obligations in the EU AI database, including system selection documentation, use case registration, and differentiated requirements for public authorities versus other deployers.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "RC-T-010",
+  "reference_document_element_description": "Prepare and submit regulatory filings, registrations, and notifications required by applicable data protection and AI regulations, including processing registrations, DPO appointments, and AI system registrations.",
+  "comments": "EU AI Act Art. 49(4) (competency) superset of WIDAI RC domain. RC-T-010 is the strongest match (STS: 0.540, cosine: 0.639). Secondary: AG-K-013 (AG, cosine: 0.624), AG-K-005 (AG, cosine: 0.623).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.5395,
+      "mapped_strength_0_10": 5.4,
+      "final_strength_integer": 5,
+      "significance": "STS 5.4/10 (raw 0.539). Shared vocabulary: [ai, system]. EU AI Act competency requirement terms [authorities, case, database, deployer, deployers, differentiated] vs WIDAI terms [applicable, appointments, data, dpo, filings, notifications] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.876,
+        "recall": 0.8859,
+        "f1": 0.8809,
+        "significance": "BERTScore F1=0.881 (P=0.876, R=0.886). Balanced P/R \u2014 the 26-word EU AI Act competency and 25-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0012,
+        "entailment": 0.0009,
+        "neutral": 0.9979,
+        "significance": "NLI: neutral-dominant (99.8%). Standard result for cross-framework competency mapping \u2014 the EU AI Act element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6391,
+        "significance": "Bi-encoder 0.639 > STS 0.539 (gap +0.100). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, system] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1,
+        "significance": "Jaccard 10.0%. Shared tokens: [ai, system]. EU AI Act-only: [authorities, case, database, deployer, deployers, differentiated]. WIDAI-only: [applicable, appointments, data, dpo, filings, notifications]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "deployer"
+    ],
+    "risk_category": "high-risk",
+    "enforcement_date": "2026-08-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,74 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-C-008",
+  "fde_type": "competency",
+  "article": "5(1)",
+  "article_title": "Prohibited AI practices",
+  "obligation_text": "The placing on the market, the putting into service or the use of AI systems that deploy subliminal techniques beyond a person's consciousness or purposefully manipulative or deceptive techniques, with the objective or the effect of materially distorting the behaviour of a person or a group of persons, is prohibited.",
+  "scoring_text": "Knowledge of prohibited AI practices under EU law, including identification of subliminal techniques, manipulative and deceptive AI system characteristics, and assessment of whether AI systems materially distort behaviour in prohibited ways.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-C-008",
+  "focal_document_element_description": "Knowledge of prohibited AI practices under EU law, including identification of subliminal techniques, manipulative and deceptive AI system characteristics, and assessment of whether AI systems materially distort behaviour in prohibited ways.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-K-008",
+  "reference_document_element_description": "Knowledge of AI regulatory compliance requirements, including EU AI Act conformity assessment obligations, prohibited use categories, and documentation requirements for high-risk AI systems.",
+  "comments": "EU AI Act Art. 5(1) (competency) equal WIDAI AG domain. AG-K-008 is the strongest match (STS: 0.702, cosine: 0.752). Secondary: AG-K-013 (AG, cosine: 0.744), RC-K-003 (RC, cosine: 0.743).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.7017,
+      "mapped_strength_0_10": 7.0,
+      "final_strength_integer": 7,
+      "significance": "STS 7.0/10 (raw 0.702). Shared vocabulary: [ai, assessment, eu, knowledge, prohibited, systems]. EU AI Act competency requirement terms [behaviour, characteristics, deceptive, distort, identification, law] vs WIDAI terms [act, categories, compliance, conformity, documentation, high] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8966,
+        "recall": 0.9088,
+        "f1": 0.9027,
+        "significance": "BERTScore F1=0.903 (P=0.897, R=0.909). Balanced P/R \u2014 the 31-word EU AI Act competency and 23-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0004,
+        "entailment": 0.0133,
+        "neutral": 0.9863,
+        "significance": "NLI: neutral-dominant (98.6%). Standard result for cross-framework competency mapping \u2014 the EU AI Act element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7522,
+        "significance": "Bi-encoder 0.752 > STS 0.702 (gap +0.050). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, assessment, eu, knowledge, prohibited] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2432,
+        "significance": "Jaccard 24.3%. Shared tokens: [ai, assessment, eu, knowledge, prohibited, systems]. EU AI Act-only: [behaviour, characteristics, deceptive, distort, identification, law]. WIDAI-only: [act, categories, compliance, conformity, documentation, high]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "provider",
+      "deployer"
+    ],
+    "risk_category": "prohibited",
+    "enforcement_date": "2025-02-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

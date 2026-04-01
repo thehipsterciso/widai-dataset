@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-O-008",
+  "fde_type": "obligation",
+  "article": "10(5)",
+  "article_title": "Data and data governance",
+  "obligation_text": "To the extent that it is strictly necessary for the purpose of ensuring bias detection and correction in relation to the high-risk AI systems, the providers of such systems may exceptionally process special categories of personal data, subject to appropriate safeguards for the fundamental rights and freedoms of natural persons.",
+  "scoring_text": "Knowledge of lawful processing of special category personal data for AI bias detection, including legal basis assessment, necessity evaluation, safeguard implementation for fundamental rights, and documentation requirements under GDPR Article 9 and AI Act interaction.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-O-008",
+  "focal_document_element_description": "Knowledge of lawful processing of special category personal data for AI bias detection, including legal basis assessment, necessity evaluation, safeguard implementation for fundamental rights, and documentation requirements under GDPR Article 9 and AI Act interaction.",
+  "rationale": "Functional",
+  "relationship": "Intersects with",
+  "reference_document_element": "AG-K-008",
+  "reference_document_element_description": "Knowledge of AI regulatory compliance requirements, including EU AI Act conformity assessment obligations, prohibited use categories, and documentation requirements for high-risk AI systems.",
+  "comments": "EU AI Act Art. 10(5) (obligation) intersects with WIDAI AG domain. AG-K-008 is the strongest match (STS: 0.470, cosine: 0.629). Secondary: AG-K-013 (AG, cosine: 0.607), RC-K-003 (RC, cosine: 0.594).",
+  "strength_of_relationship": 5,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.4699,
+      "mapped_strength_0_10": 4.7,
+      "final_strength_integer": 5,
+      "significance": "STS 4.7/10 (raw 0.470). Shared vocabulary: [act, ai, assessment, documentation, knowledge, requirements]. EU AI Act competency implication terms [9, article, basis, bias, category, data] vs WIDAI terms [categories, compliance, conformity, eu, high, obligations] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8784,
+        "recall": 0.9113,
+        "f1": 0.8945,
+        "significance": "BERTScore F1=0.894 (P=0.878, R=0.911). R exceeds P by 0.033 \u2014 the WIDAI KSA's 23 words are well-captured by the competency implication's 35 words, but the competency implication contains broader scope."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.002,
+        "entailment": 0.0025,
+        "neutral": 0.9956,
+        "significance": "NLI: neutral-dominant (99.6%). Standard result for cross-framework competency mapping \u2014 the EU AI Act element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6286,
+        "significance": "Bi-encoder 0.629 > STS 0.470 (gap +0.159). Independent encoding finds more similarity than cross-attention. Shared surface terms [act, ai, assessment, documentation, knowledge] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.2381,
+        "significance": "Jaccard 23.8%. Shared tokens: [act, ai, assessment, documentation, knowledge, requirements]. EU AI Act-only: [9, article, basis, bias, category, data]. WIDAI-only: [categories, compliance, conformity, eu, high, obligations]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "provider"
+    ],
+    "risk_category": "high-risk",
+    "enforcement_date": "2026-08-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

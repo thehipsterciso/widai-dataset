@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-O-002",
+  "fde_type": "obligation",
+  "article": "9(2)",
+  "article_title": "Risk management system",
+  "obligation_text": "The risk management system shall be understood as a continuous iterative process planned and run throughout the entire lifecycle of a high-risk AI system, requiring regular systematic review and updating. It shall comprise: the identification and analysis of known and reasonably foreseeable risks; the estimation and evaluation of risks under intended use and reasonably foreseeable misuse; the evaluation of other risks based on post-market monitoring data; and the adoption of appropriate and targeted risk management measures.",
+  "scoring_text": "Skill in conducting iterative AI risk assessment across the system lifecycle, including risk identification and analysis, risk estimation under intended use and foreseeable misuse conditions, integration of post-market monitoring data into risk evaluation, and design of targeted risk management measures.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-O-002",
+  "focal_document_element_description": "Skill in conducting iterative AI risk assessment across the system lifecycle, including risk identification and analysis, risk estimation under intended use and foreseeable misuse conditions, integration of post-market monitoring data into risk evaluation, and design of targeted risk management measures.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "RM-S-008",
+  "reference_document_element_description": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+  "comments": "EU AI Act Art. 9(2) (obligation) equal WIDAI RM domain. RM-S-008 is the strongest match (STS: 0.693, cosine: 0.724). Secondary: RC-T-012 (RC, cosine: 0.716), AG-S-005 (AG, cosine: 0.713).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6929,
+      "mapped_strength_0_10": 6.9,
+      "final_strength_integer": 7,
+      "significance": "STS 6.9/10 (raw 0.693). Shared vocabulary: [ai, data, risk, skill]. EU AI Act competency implication terms [across, analysis, assessment, conditions, conducting, design] vs WIDAI terms [accommodate, activities, appetite, business, cases, decisions] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8688,
+        "recall": 0.8643,
+        "f1": 0.8665,
+        "significance": "BERTScore F1=0.867 (P=0.869, R=0.864). Balanced P/R \u2014 the 40-word competency implication and 31-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0002,
+        "entailment": 0.001,
+        "neutral": 0.9988,
+        "significance": "NLI: neutral-dominant (99.9%). Standard result for cross-framework competency mapping \u2014 the EU AI Act element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7237,
+        "significance": "Bi-encoder 0.724 \u2248 STS 0.693 (gap 0.031). Independent encoding and cross-attention agree. Shared terms [ai, data, risk, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1296,
+        "significance": "Jaccard 13.0%. Shared tokens: [ai, data, risk, skill]. EU AI Act-only: [across, analysis, assessment, conditions, conducting, design]. WIDAI-only: [accommodate, activities, appetite, business, cases, decisions]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "provider"
+    ],
+    "risk_category": "high-risk",
+    "enforcement_date": "2026-08-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

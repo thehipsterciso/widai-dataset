@@ -1,0 +1,74 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-C-001",
+  "fde_type": "competency",
+  "article": "4",
+  "article_title": "AI literacy",
+  "obligation_text": "Providers and deployers of AI systems shall take measures to ensure, to their best extent, a sufficient level of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their technical knowledge, experience, education and training and the context the AI systems are to be used in, and considering the persons or groups of persons on whom the AI systems are to be used.",
+  "scoring_text": "Knowledge of AI literacy program design, including assessment of staff technical knowledge, experience, education and training needs, contextual adaptation of AI literacy content to operational contexts, and consideration of affected populations in AI literacy planning.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-C-001",
+  "focal_document_element_description": "Knowledge of AI literacy program design, including assessment of staff technical knowledge, experience, education and training needs, contextual adaptation of AI literacy content to operational contexts, and consideration of affected populations in AI literacy planning.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "AG-K-009",
+  "reference_document_element_description": "Knowledge of AI literacy concepts, including what AI is and is not, how ML models work at a conceptual level, AI limitations and failure modes, and responsible AI principles for non-technical audiences.",
+  "comments": "EU AI Act Art. 4 (competency) superset of WIDAI AG domain. AG-K-009 is the strongest match (STS: 0.590, cosine: 0.723). Secondary: OP-T-006 (OP, cosine: 0.707), OP-T-004 (OP, cosine: 0.576).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.59,
+      "mapped_strength_0_10": 5.9,
+      "final_strength_integer": 6,
+      "significance": "STS 5.9/10 (raw 0.590). Shared vocabulary: [ai, knowledge, literacy, technical]. EU AI Act competency requirement terms [adaptation, affected, assessment, consideration, content, contexts] vs WIDAI terms [audiences, concepts, conceptual, failure, level, limitations] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.877,
+        "recall": 0.8809,
+        "f1": 0.879,
+        "significance": "BERTScore F1=0.879 (P=0.877, R=0.881). Balanced P/R \u2014 the 35-word EU AI Act competency and 32-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0248,
+        "entailment": 0.0002,
+        "neutral": 0.975,
+        "significance": "NLI: neutral-dominant (97.5%). Standard result for cross-framework competency mapping \u2014 the EU AI Act element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7225,
+        "significance": "Bi-encoder 0.723 > STS 0.590 (gap +0.133). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, knowledge, literacy, technical] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1522,
+        "significance": "Jaccard 15.2%. Shared tokens: [ai, knowledge, literacy, technical]. EU AI Act-only: [adaptation, affected, assessment, consideration, content, contexts]. WIDAI-only: [audiences, concepts, conceptual, failure, level, limitations]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "provider",
+      "deployer"
+    ],
+    "risk_category": "all",
+    "enforcement_date": "2025-02-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

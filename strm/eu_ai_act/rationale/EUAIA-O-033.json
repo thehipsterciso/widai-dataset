@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-O-033",
+  "fde_type": "obligation",
+  "article": "27(3)",
+  "article_title": "Fundamental rights impact assessment",
+  "obligation_text": "The fundamental rights impact assessment shall include: a description of the deployer's processes in which the high-risk AI system will be used; a description of the period of time within which, and the frequency with which, each high-risk AI system is intended to be used; the categories of natural persons and groups likely to be affected; the specific risks of harm likely to impact the identified categories of persons or groups; a description of the implementation of human oversight measures; the measures to be taken where those risks materialise.",
+  "scoring_text": "Knowledge of fundamental rights impact assessment content requirements, including process documentation, use case scoping, affected population identification, harm risk assessment, human oversight implementation planning, and risk mitigation measure design.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-O-033",
+  "focal_document_element_description": "Knowledge of fundamental rights impact assessment content requirements, including process documentation, use case scoping, affected population identification, harm risk assessment, human oversight implementation planning, and risk mitigation measure design.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "SP-K-009",
+  "reference_document_element_description": "Knowledge of Data Protection Impact Assessment methodology, including the conditions that make assessments mandatory, techniques for evaluating risk to individuals, and how to document residual risk and mitigation measures to supervisory authority standards.",
+  "comments": "EU AI Act Art. 27(3) (obligation) superset of WIDAI SP domain. SP-K-009 is the strongest match (STS: 0.619, cosine: 0.668). Secondary: RC-K-010 (RC, cosine: 0.635), SP-K-004 (SP, cosine: 0.630).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6186,
+      "mapped_strength_0_10": 6.2,
+      "final_strength_integer": 6,
+      "significance": "STS 6.2/10 (raw 0.619). Shared vocabulary: [assessment, impact, knowledge, mitigation, risk]. EU AI Act competency implication terms [affected, case, content, design, documentation, fundamental] vs WIDAI terms [assessments, authority, conditions, data, document, evaluating] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8825,
+        "recall": 0.882,
+        "f1": 0.8822,
+        "significance": "BERTScore F1=0.882 (P=0.882, R=0.882). Balanced P/R \u2014 the 29-word competency implication and 33-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.9985,
+        "entailment": 0.0001,
+        "neutral": 0.0014,
+        "significance": "NLI: contradiction-dominant (99.9%). Semantic tension between \"Knowledge of fundamental rights impact assessment content requirements, includin\" and \"Knowledge of Data Protection Impact Assessment methodology, including the condit\". Despite STS-based 'Superset of' classification, these concepts may operate in adjacent but distinct professional domains."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6681,
+        "significance": "Bi-encoder 0.668 \u2248 STS 0.619 (gap 0.049). Independent encoding and cross-attention agree. Shared terms [assessment, impact, knowledge, mitigation, risk] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1667,
+        "significance": "Jaccard 16.7%. Shared tokens: [assessment, impact, knowledge, mitigation, risk]. EU AI Act-only: [affected, case, content, design, documentation, fundamental]. WIDAI-only: [assessments, authority, conditions, data, document, evaluating]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "deployer"
+    ],
+    "risk_category": "high-risk",
+    "enforcement_date": "2026-08-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

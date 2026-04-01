@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-O-050",
+  "fde_type": "obligation",
+  "article": "72(2)",
+  "article_title": "Post-market monitoring by providers",
+  "obligation_text": "The post-market monitoring system shall actively and systematically collect, document and analyse relevant data which may be provided by deployers or which may be collected through other sources, on the performance of high-risk AI systems throughout their lifetime, and which allow the provider to evaluate the continuous compliance of AI systems with the requirements set out in Chapter III, Section 2.",
+  "scoring_text": "Skill in AI performance data collection and analysis for post-market surveillance, including deployer data integration, multi-source data aggregation, lifetime performance analysis, and continuous compliance evaluation against regulatory requirements.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-O-050",
+  "focal_document_element_description": "Skill in AI performance data collection and analysis for post-market surveillance, including deployer data integration, multi-source data aggregation, lifetime performance analysis, and continuous compliance evaluation against regulatory requirements.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "DG-T-007",
+  "reference_document_element_description": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+  "comments": "EU AI Act Art. 72(2) (obligation) superset of WIDAI DG domain. DG-T-007 is the strongest match (STS: 0.585, cosine: 0.687). Secondary: RC-A-005 (RC, cosine: 0.664), LS-T-001 (LS, cosine: 0.622).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.5847,
+      "mapped_strength_0_10": 5.8,
+      "final_strength_integer": 6,
+      "significance": "STS 5.8/10 (raw 0.585). Shared vocabulary: [ai, performance, post]. EU AI Act competency implication terms [against, aggregation, analysis, collection, compliance, continuous] vs WIDAI terms [definitions, deployment, detection, drift, establish, incident] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8839,
+        "recall": 0.8903,
+        "f1": 0.8871,
+        "significance": "BERTScore F1=0.887 (P=0.884, R=0.890). Balanced P/R \u2014 the 28-word competency implication and 18-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.004,
+        "entailment": 0.0011,
+        "neutral": 0.9949,
+        "significance": "NLI: neutral-dominant (99.5%). Standard result for cross-framework competency mapping \u2014 the EU AI Act element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6874,
+        "significance": "Bi-encoder 0.687 > STS 0.585 (gap +0.103). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, performance, post] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1282,
+        "significance": "Jaccard 12.8%. Shared tokens: [ai, performance, post]. EU AI Act-only: [against, aggregation, analysis, collection, compliance, continuous]. WIDAI-only: [definitions, deployment, detection, drift, establish, incident]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "provider"
+    ],
+    "risk_category": "high-risk",
+    "enforcement_date": "2026-08-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

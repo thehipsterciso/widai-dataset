@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-O-029",
+  "fde_type": "obligation",
+  "article": "26(5)",
+  "article_title": "Obligations of deployers of high-risk AI systems",
+  "obligation_text": "Deployers shall monitor the operation of the high-risk AI system on the basis of the instructions for use and, where relevant, inform providers. Where deployers have reason to consider that the use of the high-risk AI system in accordance with the instructions may result in that AI system presenting a risk, they shall, without undue delay, inform the provider or distributor and the relevant market surveillance authority and shall suspend the use of that system.",
+  "scoring_text": "Skill in AI system operational monitoring, including performance monitoring against instructions for use, risk signal identification, provider notification procedures, market surveillance authority reporting, and system suspension decision-making.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-O-029",
+  "focal_document_element_description": "Skill in AI system operational monitoring, including performance monitoring against instructions for use, risk signal identification, provider notification procedures, market surveillance authority reporting, and system suspension decision-making.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "DG-T-007",
+  "reference_document_element_description": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+  "comments": "EU AI Act Art. 26(5) (obligation) superset of WIDAI DG domain. DG-T-007 is the strongest match (STS: 0.600, cosine: 0.678). Secondary: RM-T-005 (RM, cosine: 0.675), AI-S-010 (AI, cosine: 0.647).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.5997,
+      "mapped_strength_0_10": 6.0,
+      "final_strength_integer": 6,
+      "significance": "STS 6.0/10 (raw 0.600). Shared vocabulary: [ai, monitoring, performance, procedures, reporting]. EU AI Act competency implication terms [against, authority, decision, identification, instructions, making] vs WIDAI terms [definitions, deployment, detection, drift, establish, incident] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8907,
+        "recall": 0.8965,
+        "f1": 0.8936,
+        "significance": "BERTScore F1=0.894 (P=0.891, R=0.896). Balanced P/R \u2014 the 27-word competency implication and 18-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.9785,
+        "entailment": 0.0,
+        "neutral": 0.0214,
+        "significance": "NLI: contradiction-dominant (97.9%). Semantic tension between \"Skill in AI system operational monitoring, including performance monitoring agai\" and \"Establish post-deployment AI monitoring standards, including performance thresho\". Despite STS-based 'Superset of' classification, these concepts may operate in adjacent but distinct professional domains."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6784,
+        "significance": "Bi-encoder 0.678 > STS 0.600 (gap +0.079). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, monitoring, performance, procedures, reporting] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1842,
+        "significance": "Jaccard 18.4%. Shared tokens: [ai, monitoring, performance, procedures, reporting]. EU AI Act-only: [against, authority, decision, identification, instructions, making]. WIDAI-only: [definitions, deployment, detection, drift, establish, incident]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "deployer"
+    ],
+    "risk_category": "high-risk",
+    "enforcement_date": "2026-08-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

@@ -1,0 +1,83 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "framework_id": "EU-AI-ACT",
+  "framework_version": "Regulation (EU) 2024/1689",
+  "framework_date": "2024-07-12",
+  "framework_source": "Official Journal L 2024/1689, EUR-Lex",
+  "widai_ksa_pool_version": "0.5.6",
+  "widai_ksa_pool_size": 497,
+  "execution_date": "2026-04-01",
+  "priority": 5,
+  "tier": 2,
+  "use_case_per_ir8477_section3": {
+    "target_audience": "WIDAI framework developers, EU AI Act compliance officers, PE operating partners evaluating portfolio companies with EU market exposure, CDAIOs building regulatory compliance workforce programs, and AI governance practitioners mapping obligations to organizational capabilities.",
+    "why_this_mapping": "The EU AI Act is the first comprehensive AI-specific regulation globally, imposing workforce-relevant obligations across the AI system lifecycle. Unlike STRM-001 through STRM-004 (which mapped competency frameworks), this STRM maps regulatory obligations to workforce competencies — answering 'what workforce capabilities are required to comply?' This is the highest-value question for WIDAI's PE assessment use case: organizations preparing for EU AI Act compliance need to know which workforce competencies they have and which they lack.",
+    "concept_types_mapped": {
+      "focal_document": {
+        "source": "EU AI Act (Regulation (EU) 2024/1689)",
+        "concept_types": [
+          "Competency elements (8) — articles explicitly defining workforce competency requirements (e.g., Art. 4 AI literacy, Art. 9(8) relevant expertise)",
+          "Obligation elements (54) — legal obligations whose fulfillment requires identifiable workforce competencies, each with a competency_implication field providing the workforce interpretation"
+        ],
+        "total_fdes_in_scope": 62,
+        "total_fdes_excluded": 0,
+        "exclusion_rationale": "62 elements extracted from 21 articles. Excluded articles: institutional governance (Art. 56-75 except 72-73), penalties (Art. 99-101), amendments to other legislation (Art. 102-113), definitions (Art. 3), transitional provisions (Art. 111-113), and articles with no workforce-relevant requirements. Every included article contains either an explicit competency requirement or a substantive obligation implying workforce competencies."
+      },
+      "reference_document": {
+        "source": "WIDAI KSA Pool v0.5.6",
+        "concept_types": [
+          "Knowledge (K) — domain-organized",
+          "Skills (S) — domain-organized",
+          "Tasks (T) — domain-organized",
+          "Abilities (A) — domain-organized"
+        ],
+        "total_reference_elements": 497,
+        "domains": 12
+      },
+      "structural_note": "The EU AI Act is a regulation, not a competency framework. Its articles define legal obligations, not KSAs. To bridge this gap, each element includes both obligation_text (the original regulatory language) and competency_implication (the workforce competency interpretation). The competency_implication is the scoring text — what gets measured against WIDAI KSAs. Both texts are preserved in rationale files for full provenance."
+    },
+    "direction_of_mapping": "Focal → Reference. Each EU AI Act element (focal) is evaluated against the WIDAI KSA pool (reference). An element with 'No relationship' would indicate a regulatory requirement that WIDAI's competency pool cannot address — a critical gap for compliance readiness assessment.",
+    "exhaustiveness_level": "Exhaustive within scope. All 62 extracted elements are evaluated. Element extraction focused on workforce-relevant articles; articles without workforce implications were excluded before extraction, not during mapping.",
+    "rationale_type": "Functional (per NIST IR 8477 Section 4.3)",
+    "rationale_justification": "The mapping direction is obligation→competency: what workforce capability is required to fulfill this regulatory requirement? This is a Functional question ('how similar are the results of executing the two concepts'), not a Semantic question. Even though both the competency_implication and WIDAI KSA are in competency language, the underlying relationship being evaluated is functional — does possessing this competency enable fulfilling this obligation?"
+  },
+  "scope_decisions": {
+    "articles_in_scope": 21,
+    "articles_total": 113,
+    "element_types": {
+      "competency": {
+        "count": 8,
+        "description": "Articles that explicitly state workforce competency, training, or literacy requirements",
+        "examples": "Art. 4 (AI literacy), Art. 9(8) (relevant expertise), Art. 14(4) (human oversight competence)"
+      },
+      "obligation": {
+        "count": 54,
+        "description": "Legal obligations whose fulfillment requires identifiable workforce competencies",
+        "examples": "Art. 9(1) (establish risk management system), Art. 10(2) (data governance), Art. 17(1) (quality management system)"
+      }
+    },
+    "enforcement_date_distribution": {
+      "2025-02-02": "Art. 4 (AI literacy), Art. 5 (prohibited practices) — 3 elements",
+      "2025-08-02": "Art. 53, 55 (GPAI obligations) — 8 elements",
+      "2026-08-02": "High-risk system obligations — 51 elements"
+    }
+  },
+  "fde_count_summary": {
+    "competency_elements": 8,
+    "obligation_elements": 54,
+    "total_in_scope": 62,
+    "excluded": 0
+  },
+  "candidate_identification": {
+    "description": "Bi-encoder embeddings (all-MiniLM-L6-v2) used to identify the most semantically relevant WIDAI KSA candidate for each element. 62 × 497 = 30,814 potential pairs evaluated. Each element's competency_implication text was encoded and compared against all WIDAI KSA embeddings.",
+    "model": "all-MiniLM-L6-v2",
+    "candidate_data": "sources/eu_ai_act/eu_ai_act_candidates.json",
+    "note": "Candidate identification determines pairing. All scoring, classification, and significance generation performed by the STRM scoring pipeline (strm/eu_ai_act/strm_scoring_pipeline.py)."
+  },
+  "methodology_evolution": {
+    "original_plan": "Dual-mode pipeline — STS-primary for competency elements, NLI-primary for obligation elements. Based on pre-execution analysis that legal prose and competency language occupy different vocabulary domains, making STS inappropriate for obligation→competency inference.",
+    "diagnostic_finding": "NLI entailment scored near-zero for all element types (obligation mean=0.007, competency mean=0.009). NLI measures strict logical implication — two related competency statements are 'neutral' in NLI terms, not 'entailment'. Meanwhile, STS scored 0.358–0.824 on obligation elements — well-distributed, actionable signal.",
+    "resolution": "The competency_implication field bridges the vocabulary gap. Since the scoring text is competency-language for both element types, STS appropriately measures semantic relatedness. Revised to STS-primary for all elements, consistent with STRM-001–004. NLI retained as secondary signal (contradiction detection).",
+    "lesson": "The pre-execution analysis correctly identified the problem (vocabulary domain gap between legal prose and competency text) but the solution was in the data architecture (competency_implication field), not the scoring method."
+  }
+}

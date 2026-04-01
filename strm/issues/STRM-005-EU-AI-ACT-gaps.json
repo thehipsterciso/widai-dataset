@@ -1,0 +1,28 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "framework": "EU AI Act (Regulation (EU) 2024/1689)",
+  "gap_register_date": "2026-04-01",
+  "total_elements_evaluated": 62,
+  "no_relationship_count": 0,
+  "gap_signals": [],
+  "analysis": {
+    "summary": "Zero gap signals identified. All 62 EU AI Act elements (8 competency, 54 obligation) mapped to at least one WIDAI KSA with strength ≥ 4.",
+    "interpretation": "The WIDAI KSA pool comprehensively covers the workforce competencies required by the EU AI Act. This is the expected outcome for a Tier 2 regulatory framework whose workforce requirements were a known input during Phase 1A baseline enrichment. The AI Governance (AG), Risk Management (RM), Regulatory Compliance (RC), and Security and Privacy (SP) domain pools contain KSAs that map to every article's competency requirements.",
+    "strongest_domain_coverage": {
+      "AG": "AI Governance — highest representation. Covers AI literacy (Art. 4), human oversight (Art. 14), transparency/documentation (Art. 12-13), quality management (Art. 17), conformity assessment (Art. 43).",
+      "RC": "Regulatory Compliance — covers provider/deployer obligations (Art. 16, 26), conformity assessment (Art. 34, 43), corrective actions (Art. 20).",
+      "RM": "Risk Management — covers risk management system (Art. 9), accuracy/robustness/cybersecurity (Art. 15), adversarial testing (Art. 55).",
+      "SP": "Security and Privacy — covers data governance (Art. 10), record-keeping (Art. 12), registration (Art. 49)."
+    },
+    "weakest_matches": {
+      "note": "While no elements scored as 'No relationship', four elements scored as 'Intersects with' (strength 4), indicating partial rather than full coverage.",
+      "intersects_elements": [
+        "EUAIA-O-039 (Art. 50(3)) — Deep fake disclosure obligations",
+        "EUAIA-O-040 (Art. 50(4)) — Emotion recognition/biometric system disclosure",
+        "EUAIA-O-008 (Art. 10(5)) — Training data bias examination",
+        "EUAIA-C-006 (Art. 26(6)) — Deployer workforce AI literacy"
+      ]
+    },
+    "cross_strm_note": "Prior STRMs (STRM-001 through STRM-004) identified 18 gap signals from workforce competency frameworks. The absence of gaps in STRM-005 does not mean the KSA pool is complete — it means the pool covers the regulatory dimension. Gaps from competency frameworks (communication skills, workforce planning, IT security boundary) remain open."
+  }
+}

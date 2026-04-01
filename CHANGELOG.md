@@ -3,6 +3,45 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.5.7] - 2026-04-01
+
+### Phase 1C: STRM-005 — EU AI Act (Regulation (EU) 2024/1689) (ADR-019)
+
+**Fifth STRM complete — first Tier 2, first regulatory framework.** EU AI Act mapped against WIDAI KSA Pool v0.5.6. First obligation→competency mapping. Functional rationale (first deviation from Semantic).
+
+**Why:** The EU AI Act is the first comprehensive AI-specific regulation globally. Unlike STRM-001–004 (which mapped workforce competency frameworks), STRM-005 maps regulatory obligations to workforce competencies — answering "what workforce capabilities are required to comply?" This is the highest-value question for PE assessment: organizations with EU market exposure need to know which competencies they have and which they lack.
+
+**What changed:**
+- 62 elements extracted from 21 articles (8 competency, 54 obligation)
+- Each element preserves dual provenance: obligation_text (original regulatory language) + competency_implication (workforce competency interpretation used for scoring)
+- Relationship distribution: 27 Equal (43.5%), 31 Superset of (50.0%), 4 Intersects with (6.5%), 0 No relationship (0.0%)
+- Mean strength (scored): 6.34/10 — higher than prior STRMs (4.18–5.12), explained by focused regulatory scope and competency-language scoring text
+- Competency elements (mean 6.31) and obligation elements (mean 6.35) score nearly identically, validating the competency_implication bridging approach
+- Zero gap signals — WIDAI KSA pool covers all EU AI Act workforce requirements (expected: requirements were input to Phase 1A enrichment)
+- 4 elements with partial coverage (Intersects with): deep fake disclosure, biometric disclosure, training data bias, deployer AI literacy
+- Methodology evolution: NLI-primary initially planned for obligation elements, diagnostic scoring showed near-zero entailment (mean 0.007), revised to STS-primary for all elements. Documented in ADR-019.
+- QA/QC: PASS on all 7 criteria
+- Cumulative: 5 frameworks, 5,470 elements scored, 5,470 rationale files, 18 gap signals, 19 ADRs
+
+**Scoring methodology — STS-primary, Functional rationale:**
+- Bi-encoder candidate identification (62 × 497 = 30,814 pairs) via all-MiniLM-L6-v2
+- Full multi-method scoring pipeline (STS primary + 4 secondary) for all 62 scored pairs
+- Functional rationale per NIST IR 8477 Section 4.3 — obligation→competency mapping direction
+- 62 per-FDE rationale files with content-specific significance and dual provenance
+- NLI diagnostic documented: entailment measures strict logical implication, not semantic relatedness
+
+**New deliverables:**
+- `sources/eu_ai_act/eu_ai_act_elements.json` — 62 elements with dual-provenance fields
+- `sources/eu_ai_act/eu_ai_act_citation.json` — canonical source citation
+- `sources/eu_ai_act/eu_ai_act_candidates.json` — bi-encoder candidate identifications
+- `strm/eu_ai_act/strm_mapping.json` — STRM mapping data
+- `strm/eu_ai_act/rationale/*.json` — 62 per-FDE rationale files
+- `strm/eu_ai_act/scoring_summary.json` — scoring statistics with NLI diagnostic
+- `strm/eu_ai_act/use_case.json` — NIST IR 8477 Section 3 use case
+- `strm/eu_ai_act/qa_qc_report.json` — 7/7 checks pass
+- `strm/issues/STRM-005-EU-AI-ACT-gaps.json` — gap register (0 gaps)
+- `docs/roadmap/adr/ADR-019-strm-eu-ai-act.md` — full ADR with methodology evolution
+
 ## [0.5.6] - 2026-04-01
 
 ### Phase 1C: STRM-004 — UK Government DDaT Capability Framework (ADR-018)

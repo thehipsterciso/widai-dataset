@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-O-028",
+  "fde_type": "obligation",
+  "article": "26(4)",
+  "article_title": "Obligations of deployers of high-risk AI systems",
+  "obligation_text": "To the extent the deployer exercises control over the input data, that deployer shall ensure that input data is relevant and sufficiently representative in view of the intended purpose of the high-risk AI system.",
+  "scoring_text": "Skill in AI input data quality management, including relevance assessment, representativeness evaluation for intended purpose, and data quality assurance for deployer-controlled inputs.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-O-028",
+  "focal_document_element_description": "Skill in AI input data quality management, including relevance assessment, representativeness evaluation for intended purpose, and data quality assurance for deployer-controlled inputs.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "LS-S-006",
+  "reference_document_element_description": "Skill in conducting organizational data and AI diagnostic assessments, including stakeholder interviews, artifact review, maturity scoring, and finding synthesis.",
+  "comments": "EU AI Act Art. 26(4) (obligation) superset of WIDAI LS domain. LS-S-006 is the strongest match (STS: 0.564, cosine: 0.602). Secondary: LS-S-008 (LS, cosine: 0.590), LS-S-009 (LS, cosine: 0.590).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.5643,
+      "mapped_strength_0_10": 5.6,
+      "final_strength_integer": 6,
+      "significance": "STS 5.6/10 (raw 0.564). Shared vocabulary: [ai, data, skill]. EU AI Act competency implication terms [assessment, assurance, controlled, deployer, evaluation, input] vs WIDAI terms [artifact, assessments, conducting, diagnostic, finding, interviews] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8611,
+        "recall": 0.8927,
+        "f1": 0.8766,
+        "significance": "BERTScore F1=0.877 (P=0.861, R=0.893). R exceeds P by 0.032 \u2014 the WIDAI KSA's 19 words are well-captured by the competency implication's 22 words, but the competency implication contains broader scope."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0979,
+        "entailment": 0.0,
+        "neutral": 0.9021,
+        "significance": "NLI: neutral-dominant (90.2%). Standard result for cross-framework competency mapping \u2014 the EU AI Act element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.6021,
+        "significance": "Bi-encoder 0.602 \u2248 STS 0.564 (gap 0.038). Independent encoding and cross-attention agree. Shared terms [ai, data, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1875,
+        "significance": "Jaccard 18.8%. Shared tokens: [ai, data, skill]. EU AI Act-only: [assessment, assurance, controlled, deployer, evaluation, input]. WIDAI-only: [artifact, assessments, conducting, diagnostic, finding, interviews]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "deployer"
+    ],
+    "risk_category": "high-risk",
+    "enforcement_date": "2026-08-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

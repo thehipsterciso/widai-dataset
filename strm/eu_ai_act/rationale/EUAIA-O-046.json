@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-O-046",
+  "fde_type": "obligation",
+  "article": "55(1)(b)",
+  "article_title": "Obligations of providers of GPAI models with systemic risk",
+  "obligation_text": "Providers of general-purpose AI models with systemic risk shall assess and mitigate possible systemic risks, including their sources, that may stem from the development, the placing on the market, or the use of general-purpose AI models with systemic risk.",
+  "scoring_text": "Knowledge of systemic AI risk assessment, including risk source identification across development, market placement, and deployment phases, systemic risk evaluation methodologies, and mitigation strategy design for general-purpose AI models.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-O-046",
+  "focal_document_element_description": "Knowledge of systemic AI risk assessment, including risk source identification across development, market placement, and deployment phases, systemic risk evaluation methodologies, and mitigation strategy design for general-purpose AI models.",
+  "rationale": "Functional",
+  "relationship": "Superset of",
+  "reference_document_element": "AG-K-003",
+  "reference_document_element_description": "Knowledge of AI risk taxonomy, including model risk, algorithmic bias, opacity, adversarial vulnerability, data poisoning, training data integrity failures, and systemic AI failure modes.",
+  "comments": "EU AI Act Art. 55(1)(b) (obligation) superset of WIDAI AG domain. AG-K-003 is the strongest match (STS: 0.636, cosine: 0.748). Secondary: AG-K-010 (AG, cosine: 0.683), AG-K-002 (AG, cosine: 0.663).",
+  "strength_of_relationship": 6,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6362,
+      "mapped_strength_0_10": 6.4,
+      "final_strength_integer": 6,
+      "significance": "STS 6.4/10 (raw 0.636). Shared vocabulary: [ai, knowledge, risk, systemic]. EU AI Act competency implication terms [across, assessment, deployment, design, development, evaluation] vs WIDAI terms [adversarial, algorithmic, bias, data, failure, failures] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8844,
+        "recall": 0.887,
+        "f1": 0.8857,
+        "significance": "BERTScore F1=0.886 (P=0.884, R=0.887). Balanced P/R \u2014 the 29-word competency implication and 24-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.0216,
+        "entailment": 0.0073,
+        "neutral": 0.971,
+        "significance": "NLI: neutral-dominant (97.1%). Standard result for cross-framework competency mapping \u2014 the EU AI Act element and WIDAI KSA describe overlapping competencies without strict logical implication."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7478,
+        "significance": "Bi-encoder 0.748 > STS 0.636 (gap +0.112). Independent encoding finds more similarity than cross-attention. Shared surface terms [ai, knowledge, risk, systemic] inflate the bi-encoder, but cross-attention detects semantic divergence beneath the vocabulary overlap."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1795,
+        "significance": "Jaccard 17.9%. Shared tokens: [ai, knowledge, risk, systemic]. EU AI Act-only: [across, assessment, deployment, design, development, evaluation]. WIDAI-only: [adversarial, algorithmic, bias, data, failure, failures]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "gpai_provider"
+    ],
+    "risk_category": "gpai_systemic",
+    "enforcement_date": "2025-08-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}

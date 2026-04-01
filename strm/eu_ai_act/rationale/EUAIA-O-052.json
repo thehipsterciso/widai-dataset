@@ -1,0 +1,73 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "fde_id": "EUAIA-O-052",
+  "fde_type": "obligation",
+  "article": "73(4)",
+  "article_title": "Reporting of serious incidents",
+  "obligation_text": "The provider shall, following the reporting of a serious incident, without undue delay, perform the necessary investigations in relation to the serious incident and the AI system concerned. This shall include a risk assessment of the incident, and corrective action.",
+  "scoring_text": "Skill in AI serious incident investigation, including root cause analysis, risk assessment of incidents, AI system investigation methodology, and corrective action design and implementation following serious incidents.",
+  "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
+  "focal_document_element": "EUAIA-O-052",
+  "focal_document_element_description": "Skill in AI serious incident investigation, including root cause analysis, risk assessment of incidents, AI system investigation methodology, and corrective action design and implementation following serious incidents.",
+  "rationale": "Functional",
+  "relationship": "Equal",
+  "reference_document_element": "AG-S-005",
+  "reference_document_element_description": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+  "comments": "EU AI Act Art. 73(4) (obligation) equal WIDAI AG domain. AG-S-005 is the strongest match (STS: 0.695, cosine: 0.702). Secondary: RC-S-008 (RC, cosine: 0.609), AG-K-004 (AG, cosine: 0.605).",
+  "strength_of_relationship": 7,
+  "relationship_type": null,
+  "relationship_explanation": null,
+  "relationship_property": null,
+  "_comment_widai_extensions": "Fields below are WIDAI extensions per ADR-014",
+  "strength_justification": {
+    "methodology": "Multi-method computational scoring (STS-primary, Functional rationale)",
+    "primary_method": {
+      "name": "Cross-Encoder STS",
+      "model": "cross-encoder/stsb-roberta-base",
+      "description": "Semantic Textual Similarity via cross-encoder regression. Primary method for all elements. Scores the competency_implication text (workforce competency interpretation of the regulatory requirement) against WIDAI KSA statements.",
+      "raw_score_0_1": 0.6954,
+      "mapped_strength_0_10": 7.0,
+      "final_strength_integer": 7,
+      "significance": "STS 7.0/10 (raw 0.695). Shared vocabulary: [ai, risk, skill]. EU AI Act competency implication terms [action, analysis, assessment, cause, corrective, design] vs WIDAI terms [assessments, bias, conducting, determination, documentation, evaluation] define the semantic distance."
+    },
+    "secondary_methods": {
+      "bertscore": {
+        "model": "roberta-large",
+        "description": "Token-level contextual embedding matching.",
+        "precision": 0.8875,
+        "recall": 0.8972,
+        "f1": 0.8923,
+        "significance": "BERTScore F1=0.892 (P=0.887, R=0.897). Balanced P/R \u2014 the 27-word competency implication and 20-word WIDAI KSA cover each other's token-level semantic content symmetrically."
+      },
+      "nli_cross_encoder": {
+        "model": "cross-encoder/nli-deberta-v3-base",
+        "description": "Natural Language Inference classification. NLI entailment is systematically low for competency\u2192competency pairs (mean ~0.007) because NLI measures strict logical implication, not semantic relatedness. Primary diagnostic value is in detecting contradiction.",
+        "contradiction": 0.8611,
+        "entailment": 0.001,
+        "neutral": 0.1379,
+        "significance": "NLI: contradiction-dominant (86.1%). Semantic tension between \"Skill in AI serious incident investigation, including root cause analysis, risk\" and \"Skill in conducting AI impact assessments, including risk tiering, harm identifi\". Despite STS-based 'Equal' classification, these concepts may operate in adjacent but distinct professional domains."
+      },
+      "biencoder_cosine": {
+        "model": "all-MiniLM-L6-v2",
+        "description": "Bi-encoder sentence embeddings with cosine similarity.",
+        "cosine_similarity_0_1": 0.7017,
+        "significance": "Bi-encoder 0.702 \u2248 STS 0.695 (gap 0.006). Independent encoding and cross-attention agree. Shared terms [ai, risk, skill] are sufficient for independent encoding to detect the match."
+      },
+      "jaccard_token": {
+        "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens).",
+        "similarity_0_1": 0.1714,
+        "significance": "Jaccard 17.1%. Shared tokens: [ai, risk, skill]. EU AI Act-only: [action, analysis, assessment, cause, corrective, design]. WIDAI-only: [assessments, bias, conducting, determination, documentation, evaluation]."
+      }
+    }
+  },
+  "regulatory_context": {
+    "applies_to": [
+      "provider"
+    ],
+    "risk_category": "high-risk",
+    "enforcement_date": "2026-08-02"
+  },
+  "gap_signal": null,
+  "evaluated_by": "AI-assisted (Claude) with human review",
+  "evaluation_date": "2026-04-01"
+}
