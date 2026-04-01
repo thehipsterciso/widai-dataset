@@ -8,8 +8,12 @@ Primary:   Cross-Encoder STS (stsb-roberta-base) → strength_of_relationship 0-
 Secondary: BERTScore P/R/F1, NLI entailment/neutral/contradiction,
            Bi-encoder cosine similarity, Jaccard token overlap
 
-All methods documented per-FDE in rationale JSON files per ADR-014.
-Adapted from STRM-001-ONET pipeline for higher volume (2,148 vs 126 elements).
+Each scored pair receives substantive, content-specific significance
+analysis referencing actual shared vocabulary, concept bridges, and
+directional implications for the specific text pair.
+
+Adapted from STRM-001-ONET pipeline. Single-stage: every mapped pair
+scored with all five methods in one pass.
 """
 
 import json
@@ -31,30 +35,54 @@ SCORING_SUMMARY_FILE = os.path.join(STRM_DIR, "scoring_summary.json")
 
 TODAY = date.today().isoformat()
 
+STOPWORDS = {
+    'a', 'an', 'the', 'and', 'or', 'of', 'to', 'in', 'for', 'with',
+    'on', 'at', 'by', 'from', 'as', 'is', 'are', 'was', 'were', 'be',
+    'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will',
+    'would', 'could', 'should', 'may', 'might', 'shall', 'can', 'that',
+    'this', 'these', 'those', 'it', 'its', 'their', 'them', 'they',
+    'which', 'who', 'whom', 'what', 'where', 'when', 'how', 'not',
+    'no', 'nor', 'but', 'if', 'then', 'than', 'so', 'such', 'both',
+    'each', 'all', 'any', 'into', 'through', 'during', 'before',
+    'after', 'above', 'below', 'between', 'other', 'about', 'up',
+    'out', 'over', 'under', 'also', 'including', 'e', 'g'
+}
+
+
 # ── Load Models ──
-print("Loading models...")
-print("  [1/4] Cross-Encoder STS (stsb-roberta-base)...")
+print("Loading models...", flush=True)
+print("  [1/4] Cross-Encoder STS (stsb-roberta-base)...", flush=True)
 sts_model = CrossEncoder('cross-encoder/stsb-roberta-base')
 
-print("  [2/4] Cross-Encoder NLI (nli-deberta-v3-base)...")
+print("  [2/4] Cross-Encoder NLI (nli-deberta-v3-base)...", flush=True)
 nli_model = CrossEncoder('cross-encoder/nli-deberta-v3-base')
 
-print("  [3/4] Bi-Encoder (all-MiniLM-L6-v2)...")
+print("  [3/4] Bi-Encoder (all-MiniLM-L6-v2)...", flush=True)
 bienc_model = SentenceTransformer('all-MiniLM-L6-v2')
 
-print("  [4/4] BERTScore will run in batch after individual scoring...")
-print("Models loaded.\n")
+print("  [4/4] BERTScore will run in batch after individual scoring...", flush=True)
+print("Models loaded.\n", flush=True)
 
 
-def jaccard_similarity(text_a: str, text_b: str) -> float:
-    """Token-level Jaccard similarity. Purely lexical, hand-traceable."""
-    tokens_a = set(re.findall(r'\b\w+\b', text_a.lower()))
-    tokens_b = set(re.findall(r'\b\w+\b', text_b.lower()))
+# ── Text Analysis Utilities ──
+
+def tokenize(text):
+    """Lowercased word tokens as a set."""
+    return set(re.findall(r'\b\w+\b', text.lower()))
+
+
+def substantive_tokens(tokens):
+    """Filter stopwords, return sorted substantive tokens."""
+    return sorted(tokens - STOPWORDS)
+
+
+def jaccard_similarity(text_a, text_b):
+    """Token-level Jaccard similarity."""
+    tokens_a = tokenize(text_a)
+    tokens_b = tokenize(text_b)
     if not tokens_a or not tokens_b:
         return 0.0
-    intersection = tokens_a & tokens_b
-    union = tokens_a | tokens_b
-    return len(intersection) / len(union)
+    return len(tokens_a & tokens_b) / len(tokens_a | tokens_b)
 
 
 def softmax(logits):
@@ -64,31 +92,194 @@ def softmax(logits):
     return [x / total for x in exp_logits]
 
 
-def score_pair(fde_text: str, ksa_text: str) -> dict:
-    """Score a single FDE-KSA pair with all methods except BERTScore (batched later)."""
-    
+def get_text_analysis(fde_text, ksa_text):
+    """Compute shared/unique tokens and concept bridges for a pair."""
+    fde_tok = tokenize(fde_text)
+    ksa_tok = tokenize(ksa_text)
+    shared = sorted(fde_tok & ksa_tok)
+    shared_sub = sorted(set(shared) - STOPWORDS)
+    fde_only = sorted((fde_tok - ksa_tok) - STOPWORDS)
+    ksa_only = sorted((ksa_tok - fde_tok) - STOPWORDS)
+    fde_words = len(fde_text.split())
+    ksa_words = len(ksa_text.split())
+    return {
+        "shared": shared,
+        "shared_sub": shared_sub,
+        "fde_only": fde_only,
+        "ksa_only": ksa_only,
+        "fde_words": fde_words,
+        "ksa_words": ksa_words,
+    }
+
+
+# ── Significance Generators ──
+
+def sig_sts(sts_raw, strength, ta, fde_text, ksa_text):
+    """STS significance: shared vocab, concept bridges, unique terms."""
+    parts = [f"STS {strength}/10 (raw {sts_raw:.3f})."]
+
+    if ta["shared_sub"]:
+        parts.append(f"Shared vocabulary: [{', '.join(ta['shared_sub'][:10])}].")
+    else:
+        parts.append("No substantive shared vocabulary — relationship is purely semantic.")
+
+    if ta["fde_only"] and ta["ksa_only"]:
+        parts.append(
+            f"NICE-only terms [{', '.join(ta['fde_only'][:6])}] "
+            f"vs WIDAI-only terms [{', '.join(ta['ksa_only'][:6])}] "
+            f"define the semantic distance between the descriptions."
+        )
+
+    return " ".join(parts)
+
+
+def sig_bertscore(p, r, f1, ta):
+    """BERTScore significance: directional analysis with word counts."""
+    parts = [f"BERTScore F1={f1:.3f} (P={p:.3f}, R={r:.3f})."]
+
+    fw = ta["fde_words"]
+    kw = ta["ksa_words"]
+
+    if abs(p - r) < 0.02:
+        parts.append(
+            f"Balanced P/R — the {fw}-word NICE element and "
+            f"{kw}-word WIDAI KSA cover each other's token-level "
+            f"semantic content symmetrically."
+        )
+    elif p > r:
+        parts.append(
+            f"P exceeds R by {p - r:.3f} — the NICE element's {fw} words "
+            f"are well-captured by the WIDAI KSA's {kw} words, "
+            f"but the KSA contains additional specificity "
+            f"not reflected in the NICE element."
+        )
+    else:
+        parts.append(
+            f"R exceeds P by {r - p:.3f} — the WIDAI KSA's {kw} words "
+            f"are well-captured by the NICE element's {fw} words, "
+            f"but the NICE element contains broader scope "
+            f"not fully reflected in the matched WIDAI KSA."
+        )
+
+    return " ".join(parts)
+
+
+def sig_nli(nli, fde_text, ksa_text, relationship):
+    """NLI significance: what the classification means for this specific pair."""
+    c, e, n = nli["contradiction"], nli["entailment"], nli["neutral"]
+
+    fde_short = fde_text[:80].rstrip()
+    ksa_short = ksa_text[:80].rstrip()
+
+    if e > 0.5:
+        return (
+            f"NLI: entailment-dominant ({e:.1%}). "
+            f"The model interprets \"{fde_short}\" as logically implying "
+            f"aspects of \"{ksa_short}\" — directional semantic containment "
+            f"consistent with '{relationship}' classification."
+        )
+    elif c > 0.5:
+        return (
+            f"NLI: contradiction-dominant ({c:.1%}). "
+            f"Despite '{relationship}' classification, the model detects "
+            f"semantic tension between \"{fde_short}\" and "
+            f"\"{ksa_short}\". Indicates these concepts operate in "
+            f"adjacent but distinct professional domains — "
+            f"shared vocabulary, different application context."
+        )
+    elif n > 0.8:
+        return (
+            f"NLI: neutral-dominant ({n:.1%}). "
+            f"\"{fde_short}\" and \"{ksa_short}\" are related but neither "
+            f"implies nor contradicts the other. Standard result for cross-framework "
+            f"mapping where two independent frameworks describe overlapping "
+            f"competencies with independent vocabulary."
+        )
+    else:
+        return (
+            f"NLI: mixed signal (E:{e:.1%}, N:{n:.1%}, C:{c:.1%}). "
+            f"No dominant classification for \"{fde_short}\" vs "
+            f"\"{ksa_short}\" — the relationship is genuinely ambiguous "
+            f"from a logical inference perspective."
+        )
+
+
+def sig_biencoder(bienc, sts, ta):
+    """Bi-encoder significance: explain the STS gap using shared vocab."""
+    gap = bienc - sts
+    abs_gap = abs(gap)
+    shared_str = ', '.join(ta['shared_sub'][:5]) if ta['shared_sub'] else 'none'
+
+    if abs_gap < 0.05:
+        return (
+            f"Bi-encoder {bienc:.3f} ≈ STS {sts:.3f} (gap {abs_gap:.3f}). "
+            f"Independent encoding and cross-attention agree. "
+            f"Shared terms [{shared_str}] are sufficient for "
+            f"independent encoding to detect the match."
+        )
+    elif gap > 0:
+        return (
+            f"Bi-encoder {bienc:.3f} > STS {sts:.3f} (gap +{gap:.3f}). "
+            f"Independent encoding finds more similarity than cross-attention. "
+            f"Shared surface terms [{shared_str}] inflate the bi-encoder, "
+            f"but cross-attention detects semantic divergence beneath "
+            f"the vocabulary overlap."
+        )
+    else:
+        return (
+            f"Bi-encoder {bienc:.3f} < STS {sts:.3f} (gap {gap:.3f}). "
+            f"Cross-attention finds deeper alignment than independent encoding. "
+            f"The relationship depends on cross-text reasoning — "
+            f"concept-level mapping between [{', '.join(ta['fde_only'][:3])}] "
+            f"and [{', '.join(ta['ksa_only'][:3])}] that bi-encoders "
+            f"structurally cannot capture."
+        )
+
+
+def sig_jaccard(jaccard, ta):
+    """Jaccard significance: list actual shared tokens, unique tokens."""
+    if not ta["shared_sub"]:
+        return (
+            f"Jaccard {jaccard:.1%}. Zero substantive shared tokens. "
+            f"The entire relationship is semantic — no lexical trace. "
+            f"NICE terms: [{', '.join(ta['fde_only'][:6])}]. "
+            f"WIDAI terms: [{', '.join(ta['ksa_only'][:6])}]."
+        )
+
+    return (
+        f"Jaccard {jaccard:.1%}. "
+        f"Shared tokens: [{', '.join(ta['shared_sub'])}]. "
+        f"NICE-only: [{', '.join(ta['fde_only'][:6])}]. "
+        f"WIDAI-only: [{', '.join(ta['ksa_only'][:6])}]."
+    )
+
+
+# ── Scoring ──
+
+def score_pair(fde_text, ksa_text):
+    """Score a single FDE-KSA pair with all methods except BERTScore (batched)."""
+
     # 1. Cross-Encoder STS (PRIMARY) — 0 to 1
     sts_raw = float(sts_model.predict([(fde_text, ksa_text)])[0])
     sts_strength = round(sts_raw * 10, 2)
-    
+
     # 2. Cross-Encoder NLI — softmax probabilities
     nli_logits = nli_model.predict([(fde_text, ksa_text)])[0]
-    # nli-deberta-v3-base labels: [contradiction, entailment, neutral]
     probs = softmax([float(x) for x in nli_logits])
     nli_result = {
         "contradiction": round(probs[0], 4),
         "entailment": round(probs[1], 4),
         "neutral": round(probs[2], 4)
     }
-    
+
     # 3. Bi-Encoder Cosine Similarity — 0 to 1
     emb_fde = bienc_model.encode(fde_text, convert_to_tensor=True)
     emb_ksa = bienc_model.encode(ksa_text, convert_to_tensor=True)
     bienc_cosine = float(util.cos_sim(emb_fde, emb_ksa)[0][0])
-    
+
     # 4. Jaccard Token Overlap — 0 to 1
     jaccard = jaccard_similarity(fde_text, ksa_text)
-    
+
     return {
         "sts_raw_0_1": round(sts_raw, 4),
         "sts_strength_0_10": round(sts_strength, 1),
@@ -98,77 +289,32 @@ def score_pair(fde_text: str, ksa_text: str) -> dict:
     }
 
 
-def generate_significance(scores, relationship, fde_text, ksa_text):
-    """Generate per-method significance interpretations."""
-    sts = scores["sts_raw_0_1"]
-    nli = scores["nli"]
-    bienc = scores["biencoder_cosine_0_1"]
-    jaccard = scores["jaccard_token_0_1"]
-    sts_str = scores["sts_strength_0_10"]
-    
-    # STS significance
-    if sts_str >= 7:
-        sts_sig = f"Strong similarity ({sts_str}/10). The cross-encoder detects substantial semantic alignment between these concepts, indicating they describe closely related competencies despite domain-specific vocabulary."
-    elif sts_str >= 4:
-        sts_sig = f"Moderate similarity ({sts_str}/10). The cross-encoder finds meaningful but bounded overlap — consistent with cross-framework mapping between cybersecurity and data/AI domains where shared governance concepts use different terminology."
-    elif sts_str >= 2:
-        sts_sig = f"Weak similarity ({sts_str}/10). Limited semantic overlap detected. The relationship exists but the concepts diverge significantly in scope or application domain."
-    else:
-        sts_sig = f"Minimal similarity ({sts_str}/10). Near-zero cross-encoder score indicates the concepts share little semantic content despite being mapped as related."
-    
-    # NLI significance
-    max_nli = max(nli.values())
-    dominant = [k for k, v in nli.items() if v == max_nli][0]
-    if dominant == "entailment" and nli["entailment"] > 0.5:
-        nli_sig = f"Entailment-dominant ({nli['entailment']:.1%}). The NICE element logically implies aspects of the WIDAI KSA, indicating directional semantic containment."
-    elif dominant == "neutral":
-        nli_sig = f"Neutral-dominant ({nli['neutral']:.1%}). The model finds the descriptions related but neither implying nor contradicting each other — typical for cross-domain framework mapping where concepts overlap without strict logical implication."
-    elif dominant == "contradiction" and nli["contradiction"] > 0.5:
-        nli_sig = f"Contradiction-dominant ({nli['contradiction']:.1%}). The model detects scope divergence — the concepts may use similar vocabulary in opposing contexts. This warrants review but may reflect domain-specific usage patterns rather than true semantic conflict."
-    else:
-        nli_sig = f"Mixed signal (E:{nli['entailment']:.1%}, N:{nli['neutral']:.1%}, C:{nli['contradiction']:.1%}). No dominant classification — the relationship is genuinely ambiguous from a logical inference perspective."
-    
-    # Bi-encoder significance
-    gap = abs(sts - bienc)
-    if gap < 0.05:
-        bienc_sig = f"Bi-encoder ({bienc:.3f}) closely tracks STS ({sts:.3f}). The small gap ({gap:.3f}) indicates the relationship is capturable through independent encoding — shared surface semantics align with cross-attention analysis."
-    elif bienc > sts:
-        bienc_sig = f"Bi-encoder ({bienc:.3f}) exceeds STS ({sts:.3f}). The independent embeddings find more similarity than cross-attention, suggesting surface-level vocabulary overlap exceeds the deeper semantic relationship."
-    else:
-        bienc_sig = f"Bi-encoder ({bienc:.3f}) trails STS ({sts:.3f}). Cross-attention captures semantic relationships that independent encoding misses — typical for cross-domain pairs where shared meaning exists beneath divergent vocabulary."
-    
-    # Jaccard significance
-    if jaccard >= 0.15:
-        jac_sig = f"Moderate lexical overlap ({jaccard:.1%} of tokens shared). Some shared vocabulary provides a traceable baseline for the semantic relationship."
-    elif jaccard >= 0.05:
-        jac_sig = f"Low lexical overlap ({jaccard:.1%}). Limited shared vocabulary — the relationship is primarily semantic rather than terminological."
-    else:
-        jac_sig = f"Near-zero lexical overlap ({jaccard:.1%}). The concepts use almost entirely different vocabulary, confirming the relationship is detected through semantic understanding, not word matching."
-    
-    return {
-        "sts": sts_sig,
-        "nli": nli_sig,
-        "biencoder": bienc_sig,
-        "jaccard": jac_sig
-    }
+def build_rationale_file(mapping, scores, bertscore_data, ta):
+    """Build the per-FDE rationale JSON with content-specific significance."""
 
-
-def build_rationale_file(mapping, scores, bertscore_data, significance):
-    """Build the per-FDE rationale JSON per ADR-014 approved schema."""
-    
     strength = round(scores["sts_strength_0_10"])
-    
+    fde_text = mapping["fde_description"]
+    ksa_text = mapping["ref_statement"]
+    relationship = mapping["relationship"]
+
+    # Generate all significance fields
+    sts_sig = sig_sts(scores["sts_raw_0_1"], scores["sts_strength_0_10"], ta, fde_text, ksa_text)
+    bs_sig = sig_bertscore(bertscore_data["precision"], bertscore_data["recall"], bertscore_data["f1"], ta)
+    nli_sig = sig_nli(scores["nli"], fde_text, ksa_text, relationship)
+    bienc_sig = sig_biencoder(scores["biencoder_cosine_0_1"], scores["sts_raw_0_1"], ta)
+    jac_sig = sig_jaccard(scores["jaccard_token_0_1"], ta)
+
     rationale_json = {
         "strm_id": "STRM-002-NICE",
         "fde_id": mapping["fde_id"],
         "fde_type": mapping["fde_type"],
         "_comment_nist_fields": "Fields below follow IR 8278Ar1 Section 3.2 OLIR template",
         "focal_document_element": mapping["fde_id"],
-        "focal_document_element_description": mapping["fde_description"],
+        "focal_document_element_description": fde_text,
         "rationale": mapping["rationale"],
-        "relationship": mapping["relationship"],
+        "relationship": relationship,
         "reference_document_element": mapping["ref_id"],
-        "reference_document_element_description": mapping["ref_statement"],
+        "reference_document_element_description": ksa_text,
         "comments": mapping["notes"],
         "strength_of_relationship": strength,
         "relationship_type": None,
@@ -184,7 +330,7 @@ def build_rationale_file(mapping, scores, bertscore_data, significance):
                 "raw_score_0_1": scores["sts_raw_0_1"],
                 "mapped_strength_0_10": scores["sts_strength_0_10"],
                 "final_strength_integer": strength,
-                "significance": significance["sts"]
+                "significance": sts_sig
             },
             "secondary_methods": {
                 "bertscore": {
@@ -193,7 +339,7 @@ def build_rationale_file(mapping, scores, bertscore_data, significance):
                     "precision": bertscore_data["precision"],
                     "recall": bertscore_data["recall"],
                     "f1": bertscore_data["f1"],
-                    "significance": bertscore_data.get("significance", "")
+                    "significance": bs_sig
                 },
                 "nli_cross_encoder": {
                     "model": "cross-encoder/nli-deberta-v3-base",
@@ -201,18 +347,18 @@ def build_rationale_file(mapping, scores, bertscore_data, significance):
                     "contradiction": scores["nli"]["contradiction"],
                     "entailment": scores["nli"]["entailment"],
                     "neutral": scores["nli"]["neutral"],
-                    "significance": significance["nli"]
+                    "significance": nli_sig
                 },
                 "biencoder_cosine": {
                     "model": "all-MiniLM-L6-v2",
                     "description": "Bi-encoder sentence embeddings with cosine similarity. Each text encoded independently; measures vector-space proximity.",
                     "cosine_similarity_0_1": scores["biencoder_cosine_0_1"],
-                    "significance": significance["biencoder"]
+                    "significance": bienc_sig
                 },
                 "jaccard_token": {
                     "description": "Token-level Jaccard similarity (intersection/union of lowercased word tokens). Purely lexical baseline, hand-traceable.",
                     "similarity_0_1": scores["jaccard_token_0_1"],
-                    "significance": significance["jaccard"]
+                    "significance": jac_sig
                 }
             }
         },
@@ -220,90 +366,77 @@ def build_rationale_file(mapping, scores, bertscore_data, significance):
         "evaluated_by": "AI-assisted (Claude) with human review",
         "evaluation_date": TODAY
     }
-    
+
     return rationale_json
 
 
 def main():
     # ── Load mappings ──
-    print(f"Loading mappings from {MAPPING_FILE}...")
+    print(f"Loading mappings from {MAPPING_FILE}...", flush=True)
     with open(MAPPING_FILE, 'r') as f:
         strm_data = json.load(f)
-    
+
     mappings = strm_data["mappings"]
-    print(f"  {len(mappings)} total mappings loaded.")
-    
+    print(f"  {len(mappings)} total mappings loaded.", flush=True)
+
     scored_mappings = [m for m in mappings if m.get("ref_id")]
     norel_mappings = [m for m in mappings if not m.get("ref_id")]
-    print(f"  {len(scored_mappings)} with relationships to score")
-    print(f"  {len(norel_mappings)} with no relationship (strength = 0)\n")
-    
-    # ── Score all pairs ──
-    print("Scoring pairs with STS, NLI, Bi-Encoder, Jaccard...")
+    print(f"  {len(scored_mappings)} with relationships to score", flush=True)
+    print(f"  {len(norel_mappings)} with no relationship (strength = 0)\n", flush=True)
+
+    # ── Score all pairs (single-stage) ──
+    print("Scoring pairs with STS, NLI, Bi-Encoder, Jaccard...", flush=True)
     all_scores = {}
+    all_text_analysis = {}
     for i, m in enumerate(scored_mappings):
         scores = score_pair(m["fde_description"], m["ref_statement"])
         all_scores[m["fde_id"]] = scores
+        all_text_analysis[m["fde_id"]] = get_text_analysis(m["fde_description"], m["ref_statement"])
         if (i + 1) % 100 == 0:
-            print(f"  Scored {i+1}/{len(scored_mappings)}")
-    print(f"  Scored {len(scored_mappings)}/{len(scored_mappings)} — individual methods complete.\n")
-    
+            print(f"  Scored {i+1}/{len(scored_mappings)}", flush=True)
+    print(f"  Scored {len(scored_mappings)}/{len(scored_mappings)} — individual methods complete.\n", flush=True)
+
     # ── BERTScore in batch ──
-    print("Running BERTScore batch...")
+    print("Running BERTScore batch...", flush=True)
     fde_texts = [m["fde_description"] for m in scored_mappings]
     ksa_texts = [m["ref_statement"] for m in scored_mappings]
-    
+
     P, R, F1 = bertscore_fn(
         cands=fde_texts,
         refs=ksa_texts,
         lang="en",
         verbose=True
     )
-    
+
     bertscore_data = {}
     for i, m in enumerate(scored_mappings):
-        p = round(float(P[i]), 4)
-        r = round(float(R[i]), 4)
-        f1 = round(float(F1[i]), 4)
-        
-        # Generate BERTScore significance
-        if f1 >= 0.90:
-            sig = f"High token-level alignment (F1={f1:.3f}). Strong contextual embedding overlap at the token level."
-        elif f1 >= 0.85:
-            sig = f"Moderate token-level alignment (F1={f1:.3f}). "
-            if p > r + 0.02:
-                sig += f"Precision exceeds Recall (P={p:.3f} > R={r:.3f}), indicating the NICE element's semantic content is more tightly aligned with the KSA than the reverse."
-            elif r > p + 0.02:
-                sig += f"Recall exceeds Precision (R={r:.3f} > P={p:.3f}), indicating the KSA covers more of the NICE element than the element covers the KSA."
-            else:
-                sig += f"Balanced P/R ({p:.3f}/{r:.3f}) indicating symmetric token-level overlap."
-        else:
-            sig = f"Lower token-level alignment (F1={f1:.3f}). The concepts share limited contextual embedding similarity at the token level, consistent with cross-domain vocabulary divergence."
-        
         bertscore_data[m["fde_id"]] = {
-            "precision": p,
-            "recall": r,
-            "f1": f1,
-            "significance": sig
+            "precision": round(float(P[i]), 4),
+            "recall": round(float(R[i]), 4),
+            "f1": round(float(F1[i]), 4),
         }
-    print("BERTScore complete.\n")
-    
-    # ── Generate rationale files ──
+    print("BERTScore complete.\n", flush=True)
+
+    # ── Clear and regenerate rationale files ──
+    if os.path.exists(RATIONALE_DIR):
+        for f in os.listdir(RATIONALE_DIR):
+            os.remove(os.path.join(RATIONALE_DIR, f))
+        print(f"Cleared existing rationale files.", flush=True)
     os.makedirs(RATIONALE_DIR, exist_ok=True)
-    
-    print("Generating per-FDE rationale files...")
+
+    print("Generating per-FDE rationale files...", flush=True)
     strength_values = []
-    
+
     for m in mappings:
         fde_id = m["fde_id"]
         filename = fde_id + ".json"
         filepath = os.path.join(RATIONALE_DIR, filename)
-        
+
         if m.get("ref_id"):
             scores = all_scores[fde_id]
             bs = bertscore_data[fde_id]
-            significance = generate_significance(scores, m["relationship"], m["fde_description"], m["ref_statement"])
-            rationale = build_rationale_file(m, scores, bs, significance)
+            ta = all_text_analysis[fde_id]
+            rationale = build_rationale_file(m, scores, bs, ta)
             strength_values.append(rationale["strength_of_relationship"])
         else:
             rationale = {
@@ -333,14 +466,14 @@ def main():
                 "evaluation_date": TODAY
             }
             strength_values.append(0)
-        
+
         with open(filepath, 'w') as f:
             json.dump(rationale, f, indent=2)
-    
-    print(f"  Written {len(mappings)} rationale files to {RATIONALE_DIR}/\n")
-    
+
+    print(f"  Written {len(mappings)} rationale files to {RATIONALE_DIR}/\n", flush=True)
+
     # ── Update strm_mapping.json ──
-    print("Updating strm_mapping.json with STS-derived strength scores...")
+    print("Updating strm_mapping.json with STS-derived strength scores...", flush=True)
     for m in mappings:
         fde_id = m["fde_id"]
         if m.get("ref_id"):
@@ -348,15 +481,15 @@ def main():
             m["strength"] = round(scores["sts_strength_0_10"])
         else:
             m["strength"] = 0
-    
+
     with open(MAPPING_FILE, 'w') as f:
         json.dump(strm_data, f, indent=2)
-    print("  strm_mapping.json updated.\n")
-    
+    print("  strm_mapping.json updated.\n", flush=True)
+
     # ── Generate scoring summary ──
     scored_strengths = [all_scores[m["fde_id"]]["sts_strength_0_10"] for m in scored_mappings]
     all_strengths = [s for s in strength_values]
-    
+
     summary = {
         "pipeline_run_date": TODAY,
         "strm_id": "STRM-002-NICE",
@@ -399,7 +532,7 @@ def main():
             "rationale_files_generated": len(mappings)
         }
     }
-    
+
     rel_types = set(m["relationship"] for m in mappings)
     for rel in sorted(rel_types):
         rel_strengths = [
@@ -420,33 +553,46 @@ def main():
             summary["statistics"]["strength_distribution"]["by_relationship_type"][rel] = {
                 "count": n, "mean": 0, "median": 0, "min": 0, "max": 0
             }
-    
+
     with open(SCORING_SUMMARY_FILE, 'w') as f:
         json.dump(summary, f, indent=2)
-    print(f"Scoring summary saved to {SCORING_SUMMARY_FILE}")
-    
+    print(f"Scoring summary saved to {SCORING_SUMMARY_FILE}", flush=True)
+
     # ── Console summary ──
-    print("\n" + "="*70)
-    print("PIPELINE COMPLETE")
-    print("="*70)
-    print(f"  Rationale files:  {len(mappings)} written to rationale/")
-    print(f"  strm_mapping.json: strength scores updated")
-    print(f"  scoring_summary.json: statistics saved")
+    print("\n" + "="*70, flush=True)
+    print("PIPELINE COMPLETE", flush=True)
+    print("="*70, flush=True)
+    print(f"  Rationale files:  {len(mappings)} written to rationale/", flush=True)
+    print(f"  strm_mapping.json: strength scores updated", flush=True)
+    print(f"  scoring_summary.json: statistics saved", flush=True)
     print(f"\n  Strength (scored pairs): mean={np.mean(scored_strengths):.1f}, "
           f"median={np.median(scored_strengths):.1f}, "
-          f"std={np.std(scored_strengths):.1f}")
+          f"std={np.std(scored_strengths):.1f}", flush=True)
     print(f"  Strength (all w/ zeros): mean={np.mean(all_strengths):.1f}, "
-          f"median={np.median(all_strengths):.1f}")
-    
+          f"median={np.median(all_strengths):.1f}", flush=True)
+
     for rel in sorted(rel_types):
         rel_s = [all_scores[m["fde_id"]]["sts_strength_0_10"] for m in scored_mappings if m["relationship"] == rel]
         if rel_s:
-            print(f"    {rel:<20} n={len(rel_s):>4}  mean={np.mean(rel_s):.1f}  range=[{np.min(rel_s):.1f}, {np.max(rel_s):.1f}]")
+            print(f"    {rel:<20} n={len(rel_s):>4}  mean={np.mean(rel_s):.1f}  range=[{np.min(rel_s):.1f}, {np.max(rel_s):.1f}]", flush=True)
         else:
             n = len([m for m in norel_mappings if m["relationship"] == rel])
-            print(f"    {rel:<20} n={n:>4}  strength=0 (out of scope)")
-    
-    print("\nDone.")
+            print(f"    {rel:<20} n={n:>4}  strength=0 (out of scope)", flush=True)
+
+    # ── Show example for verification ──
+    example_path = os.path.join(RATIONALE_DIR, "T1857.json")
+    if os.path.exists(example_path):
+        with open(example_path) as f:
+            ex = json.load(f)
+        sj = ex["strength_justification"]
+        print("\n--- EXAMPLE: T1857 ---", flush=True)
+        print(f"STS: {sj['primary_method']['significance']}", flush=True)
+        print(f"BERTScore: {sj['secondary_methods']['bertscore']['significance']}", flush=True)
+        print(f"NLI: {sj['secondary_methods']['nli_cross_encoder']['significance']}", flush=True)
+        print(f"Bi-enc: {sj['secondary_methods']['biencoder_cosine']['significance']}", flush=True)
+        print(f"Jaccard: {sj['secondary_methods']['jaccard_token']['significance']}", flush=True)
+
+    print("\nDone.", flush=True)
 
 
 if __name__ == "__main__":
