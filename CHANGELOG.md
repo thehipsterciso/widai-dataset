@@ -27,6 +27,24 @@ Richest evidence base: 7,694 total mappings, NICE (143 analytics-relevant) and D
 - AB domain total: 10+10+4+11 = 35 KSAs → 29+25+15+30 = 99 KSAs
 - This process becomes the standard methodology for expanding all 12 domains across all 4 dimensions
 
+### Full DA Domain Expansion — All Four Dimensions
+
+**Complete cross-framework synthesis expansion for the Data Architecture & Infrastructure domain.** All four KSA dimensions rebuilt using high watermark analysis across all 6 STRMs. Schema version 3.0.0 — clean break, no legacy_ids.
+
+**DA Knowledge: 16 → 28 KSAs**
+All 6 frameworks analyzed: NICE (327 WIDAI-relevant), DCWF (398), DDaT (31), NIST AI RMF (38), EU AI Act (18), O*NET (6). 12 new concept clusters: DataOps practices and CI/CD for data, database administration and lifecycle management, data classification/cataloging/metadata management, data privacy and protection techniques, container orchestration and cloud-native infrastructure, data backup/recovery/disaster recovery, data lineage and provenance tracking, API design and data service patterns, event-driven architecture patterns, cloud cost models and FinOps, schema evolution and change management, capacity planning and performance engineering.
+
+**DA Skills: 9 → 20 KSAs**
+Rich evidence base with multiple strong matches (DA-S-009 at 3 strong, DA-S-001 at 2). NICE 361 WIDAI-relevant, DCWF 515. 11 new skill clusters: automated pipeline testing, heterogeneous source integration, root cause analysis for infrastructure failures, schema evolution management, database performance tuning, capacity planning and scaling, data catalog/metadata implementation, data migration execution, backup/disaster recovery implementation, data API/service layer design, architecture communication to non-technical stakeholders.
+
+**DA Abilities: 3 → 15 KSAs**
+1,740 total mappings. DA-A-002 (pipeline failure diagnosis) dominated evidence with max STS 0.6716. 12 new ability clusters: competing technology trade-off evaluation, capacity/scaling anticipation, business-to-architecture translation, cross-team coordination, incremental architecture adaptation, technical debt balancing, security implication assessment, failure pattern recognition, architecture communication, complexity management, vendor/technology risk evaluation, enterprise architecture integration.
+
+**DA Tasks: 12 → 25 KSAs**
+9,479 total mappings with 5 strong matches. DCWF 416 WIDAI-relevant, NICE 222, DDaT 18 at >=0.60. 13 new task clusters: backup/disaster recovery implementation, data migration execution, data catalog/metadata systems, lineage/provenance tracking, database administration, data API/service layers, capacity planning, CI/CD for data infrastructure, platform security assessment, schema evolution management, event-driven architecture implementation, vendor evaluation/POC, architecture documentation production.
+
+- DA domain total: 16+9+3+12 = 40 KSAs → 28+20+15+25 = 88 KSAs
+
 ### Full AG Domain Expansion — All Four Dimensions
 
 **Complete cross-framework synthesis expansion for the AI Governance & Ethics domain.** All four KSA dimensions rebuilt using high watermark analysis across all 6 STRMs. Schema version 3.0.0 — clean break, no legacy_ids.

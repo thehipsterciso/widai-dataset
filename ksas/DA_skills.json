@@ -3,8 +3,8 @@
   "domain_code": "DA",
   "domain_title": "Data Architecture & Infrastructure",
   "type": "Skill",
-  "count": 9,
-  "schema_version": "2.0.0",
+  "count": 20,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "DA-S-001",
@@ -13,10 +13,7 @@
       "domain_code": "DA",
       "statement": "Skill in producing enterprise data architecture artifacts, including data flow diagrams, entity-relationship models, data domain maps, and integration architecture documentation.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.01-S-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-S-002",
@@ -25,10 +22,7 @@
       "domain_code": "DA",
       "statement": "Skill in evaluating data platform technology options against requirements, including performance, scalability, cost, security, and operational complexity trade-offs.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.01-S-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-S-003",
@@ -37,10 +31,7 @@
       "domain_code": "DA",
       "statement": "Skill in defining and enforcing enterprise data modeling standards, naming conventions, and structural patterns across engineering teams.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.01-S-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-S-004",
@@ -49,10 +40,7 @@
       "domain_code": "DA",
       "statement": "Skill in designing ML training and serving infrastructure that scales from prototype to production without requiring architectural rework.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.02-S-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-S-005",
@@ -61,10 +49,7 @@
       "domain_code": "DA",
       "statement": "Skill in designing and implementing data pipeline monitoring, including lineage tracking, data freshness alerting, volume anomaly detection, and schema drift detection.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.03-S-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-S-006",
@@ -73,10 +58,7 @@
       "domain_code": "DA",
       "statement": "Skill in performance tuning data pipelines, including query optimization, partition strategy, caching, and resource scaling.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.03-S-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-S-007",
@@ -85,10 +67,7 @@
       "domain_code": "DA",
       "statement": "Skill in deploying, configuring, and scaling data platform components using infrastructure-as-code with version control and automated testing.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.05-S-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-S-008",
@@ -97,10 +76,7 @@
       "domain_code": "DA",
       "statement": "Skill in implementing data platform cost management practices, including resource tagging, usage monitoring, cost allocation, and rightsizing recommendations.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.05-S-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-S-009",
@@ -109,10 +85,106 @@
       "domain_code": "DA",
       "statement": "Skill in designing data pipeline observability systems, including lineage tracking, execution monitoring, cost attribution, and root-cause analysis tooling for pipeline failures and data quality incidents.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.07-S-002"
-      ]
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-010",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in designing and implementing automated data pipeline testing, including unit tests for transformations, integration tests for end-to-end data flows, and regression testing for schema and data quality changes.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-011",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in implementing data integration across heterogeneous source systems, including API-based extraction, change data capture configuration, streaming ingestion, and the resolution of schema conflicts between sources.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-012",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in performing root cause analysis for data infrastructure failures, including diagnosis of pipeline breakdowns, data corruption events, performance degradation, and systemic reliability issues.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-013",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in managing schema evolution across data systems, including backward and forward compatibility enforcement, schema registry operation, migration scripting, and coordinating schema changes across producer and consumer systems.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-014",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in database performance tuning and optimization, including query plan analysis, index strategy design, storage optimization, and workload management for both relational and non-relational database systems.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-015",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in data platform capacity planning and scaling, including workload forecasting, resource utilization analysis, auto-scaling configuration, and proactive scaling decisions that prevent service degradation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-016",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in implementing and operating data catalog and metadata management systems, including automated metadata harvesting, business glossary curation, data asset discovery, and lineage visualization.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-017",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in planning and executing data migration projects, including source-to-target mapping, data validation strategies, cutover planning, rollback procedures, and post-migration verification.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-018",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in implementing data backup and disaster recovery procedures, including backup automation, recovery testing, failover configuration, and validation that recovery objectives are achievable under realistic conditions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-019",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in designing and implementing data API and service layers, including RESTful and GraphQL endpoint design, authentication and authorization integration, rate limiting, and API versioning strategies.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-S-020",
+      "type": "Skill",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Skill in communicating data architecture decisions and technical trade-offs to non-technical stakeholders, including translating infrastructure constraints into business impact language and producing architecture decision records.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
     }
   ]
 }

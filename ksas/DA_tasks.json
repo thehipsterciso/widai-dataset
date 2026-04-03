@@ -3,8 +3,8 @@
   "domain_code": "DA",
   "domain_title": "Data Architecture & Infrastructure",
   "type": "Task",
-  "count": 12,
-  "schema_version": "2.0.0",
+  "count": 25,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "DA-T-001",
@@ -13,10 +13,7 @@
       "domain_code": "DA",
       "statement": "Design and document the enterprise data architecture, including platform topology, data domain structure, integration patterns, and data lifecycle policies.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.01-T-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-002",
@@ -25,10 +22,7 @@
       "domain_code": "DA",
       "statement": "Review and approve data model designs produced by data engineers and analysts, ensuring conformance with enterprise standards and architectural principles.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.01-T-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-003",
@@ -37,10 +31,7 @@
       "domain_code": "DA",
       "statement": "Evaluate and recommend data platform technology selections, producing architecture decision records with evidence-based rationale.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.01-T-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-004",
@@ -49,10 +40,7 @@
       "domain_code": "DA",
       "statement": "Define enterprise data integration standards, including interface contracts, schema evolution policies, API versioning standards, and event schema governance.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.01-T-004"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-005",
@@ -61,10 +49,7 @@
       "domain_code": "DA",
       "statement": "Design, build, and maintain data ingestion pipelines from source systems to the data platform, including schema mapping, transformation logic, and error handling.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.03-T-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-006",
@@ -73,10 +58,7 @@
       "domain_code": "DA",
       "statement": "Optimize existing data pipelines for performance, cost, and reliability, documenting changes and their measured impact.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.03-T-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-007",
@@ -85,10 +67,7 @@
       "domain_code": "DA",
       "statement": "Design and maintain the analytics transformation layer, including staging models, intermediate transformations, and consumption-ready data mart models.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.04-T-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-008",
@@ -97,10 +76,7 @@
       "domain_code": "DA",
       "statement": "Define, document, and implement enterprise metric definitions in the semantic layer, ensuring consistency across BI tools and analytical consumers.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.04-T-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-009",
@@ -109,10 +85,7 @@
       "domain_code": "DA",
       "statement": "Implement platform monitoring and alerting for availability, performance, cost, and security events, with defined escalation procedures.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.05-T-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-010",
@@ -121,10 +94,7 @@
       "domain_code": "DA",
       "statement": "Manage data platform access controls, including role definitions, permission grants, access reviews, and privilege escalation procedures.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.05-T-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-011",
@@ -133,10 +103,7 @@
       "domain_code": "DA",
       "statement": "Build and maintain automated data pipelines with version-controlled transformations, automated testing, environment parity between development and production, and deployment processes that enable rapid iteration without production risk.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.07-T-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "DA-T-012",
@@ -145,10 +112,124 @@
       "domain_code": "DA",
       "statement": "Manage data environment provisioning and configuration, ensuring development, staging, and production environments maintain parity and that pipeline promotions follow defined testing and approval workflows.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.07-T-003"
-      ]
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-013",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Implement and maintain data backup and disaster recovery procedures, including automated backup scheduling, recovery testing, failover execution, and validation that recovery point and recovery time objectives are achievable.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-014",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Plan and execute data migration projects between platforms, including source-to-target mapping, data validation, cutover scheduling, rollback planning, and post-migration verification.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-015",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Design and maintain data catalog and metadata management systems, including automated metadata harvesting, business glossary integration, data asset discovery, and lineage visualization.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-016",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Implement data lineage and provenance tracking across the data platform, enabling impact analysis, regulatory compliance evidence, and debugging of data quality issues to their source.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-017",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Perform database administration and routine maintenance, including patching, index optimization, storage management, performance monitoring, and end-of-life planning for database systems.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-018",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Design and implement data API and service layers that enable controlled data consumption, including endpoint design, authentication integration, rate limiting, documentation, and usage monitoring.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-019",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Execute data platform capacity planning, including workload characterization, growth forecasting, resource utilization analysis, and scaling recommendations that balance performance requirements against cost constraints.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-020",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Implement CI/CD pipelines for data infrastructure, including automated testing of transformations, environment promotion workflows, infrastructure-as-code deployment, and rollback procedures.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-021",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Conduct data platform security assessments, including vulnerability scanning, access control audits, encryption verification, and remediation of identified security gaps in data infrastructure.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-022",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Manage schema evolution and versioning across data platform environments, including compatibility assessment, migration execution, consumer notification, and validation that schema changes do not break downstream systems.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-023",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Design and implement event-driven data architectures, including message broker configuration, event schema design, consumer group management, and monitoring of event processing latency and throughput.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-024",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Conduct data platform vendor evaluations and proofs of concept, including requirements definition, test scenario design, evaluation criteria development, and evidence-based recommendation documentation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "DA-T-025",
+      "type": "Task",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Produce and maintain data architecture documentation, including system topology diagrams, data flow documentation, technology stack descriptions, operational runbooks, and architecture decision records that capture rationale for current design choices.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
     }
   ]
 }
