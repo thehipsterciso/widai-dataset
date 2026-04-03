@@ -2,9 +2,9 @@
   "dataset_id": "WIDAI-KSAS",
   "domain_code": "OP",
   "domain_title": "Operations & Enablement",
-  "ksa_count": 35,
-  "knowledge_count": 10,
-  "skill_count": 10,
+  "ksa_count": 37,
+  "knowledge_count": 11,
+  "skill_count": 11,
   "task_count": 12,
   "ability_count": 3,
   "schema_version": "2.0.0",
@@ -390,6 +390,28 @@
       "origin_framework": "WIDAI",
       "origin_version": "0.5.1",
       "legacy_ids": []
+    },
+    {
+      "ksa_id": "OP-S-011",
+      "type": "Skill",
+      "domain": "Operations & Enablement",
+      "domain_code": "OP",
+      "statement": "Skill in resolving cross-functional conflicts related to data and AI initiatives, including mediating disagreements over data ownership, arbitrating competing priority claims on shared infrastructure, negotiating resource allocation trade-offs, and facilitating productive dialogue between technical and business stakeholders.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.8",
+      "legacy_ids": [],
+      "strm_gap_source": "STRM-001-ONET: O*NET 4.A.4.a.7 (Resolving Conflicts and Negotiating) \u2014 STS 0.450 to DG-S-005"
+    },
+    {
+      "ksa_id": "OP-K-011",
+      "type": "Knowledge",
+      "domain": "Operations & Enablement",
+      "domain_code": "OP",
+      "statement": "Knowledge of professional development and technical currency practices for data and AI practitioners, including continuing education approaches, conference and community engagement, certification pathways, skills assessment methods, and strategies for maintaining relevance as tools, methods, and best practices evolve.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.8",
+      "legacy_ids": [],
+      "strm_gap_source": "STRM-001-ONET: O*NET 4.A.2.b.3 (Updating and Using Relevant Knowledge) \u2014 STS 0.421 to DG-S-008"
     }
   ]
 }

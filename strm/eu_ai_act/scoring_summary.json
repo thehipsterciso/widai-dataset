@@ -1,130 +1,51 @@
 {
   "pipeline_run_date": "2026-04-01",
   "strm_id": "STRM-005-EU-AI-ACT",
-  "framework": "EU AI Act (Regulation (EU) 2024/1689)",
+  "pipeline_version": "domain-exhaustive",
   "methodology": {
-    "primary_method": {
-      "name": "Cross-Encoder STS",
-      "model": "cross-encoder/stsb-roberta-base",
-      "role": "Generates strength_of_relationship integer (0-10)",
-      "mapping": "raw_score (0-1) \u00d7 10, rounded to nearest integer",
-      "note": "Consistent with STRM-001\u2013004. Scores competency_implication text, not raw obligation_text."
-    },
-    "rationale_type": "Functional (per NIST IR 8477 Section 4.3)",
-    "rationale_justification": "The mapping direction is obligation\u2192competency: what workforce capability is required to fulfill this regulatory requirement? This is a Functional question ('how similar are the results of executing the two concepts'), not a Semantic question.",
-    "scoring_text": "competency_implication field (workforce competency interpretation of each element)",
-    "secondary": [
-      {
-        "name": "BERTScore",
-        "model": "roberta-large",
-        "role": "Token-level audit trail"
-      },
-      {
-        "name": "NLI Cross-Encoder",
-        "model": "cross-encoder/nli-deberta-v3-base",
-        "role": "Contradiction detection, logical implication secondary signal"
-      },
-      {
-        "name": "Bi-Encoder Cosine",
-        "model": "all-MiniLM-L6-v2",
-        "role": "Independent embedding cosine similarity"
-      },
-      {
-        "name": "Jaccard Token",
-        "model": null,
-        "role": "Lexical baseline"
-      }
-    ],
-    "nli_diagnostic": {
-      "note": "NLI entailment is systematically low for competency\u2192competency pairs. This is expected behavior, not a data quality issue.",
-      "entailment_distribution": {
-        "count": 62,
-        "mean": 0.01,
-        "median": 0.0,
-        "std": 0.03,
-        "min": 0.0,
-        "max": 0.22
-      },
-      "interpretation": "NLI measures strict logical implication. Two overlapping competency statements are typically 'neutral' in NLI terms \u2014 they describe related concepts without one logically implying the other. STS is the appropriate primary signal for measuring semantic relatedness between competency texts."
-    },
-    "methodology_evolution": "Originally planned as dual-mode (STS for competency elements, NLI for obligation elements). Diagnostic scoring revealed NLI entailment is near-zero for all element types (mean 0.007 for obligations). Revised to STS-primary for all elements. The competency_implication field bridges the vocabulary gap between legal prose and competency language, making STS appropriate. See ADR-019 for full documentation."
+    "approach": "Exhaustive scoring \u2014 all elements against all KSAs",
+    "total_pairs_scored": 31248,
+    "note": "62 elements x 504 KSAs = 31,248 pairs"
   },
   "statistics": {
-    "total_mappings": 62,
-    "scored_mappings": 62,
-    "no_relationship_mappings": 0,
+    "total_fdes": 62,
+    "total_mapping_rows": 13481,
+    "scored_mappings": 13481,
+    "no_relationship_fdes": 0,
+    "unique_ksas_matched": 487,
+    "rationale_files": 13481,
+    "relationship_distribution": {
+      "Subset Of": 60,
+      "Intersects With": 13420,
+      "Equal": 1
+    },
     "strength_distribution": {
-      "all": {
-        "count": 62,
-        "mean": 6.37,
-        "median": 6.0,
-        "std": 0.9,
-        "min": 4.0,
-        "max": 8.0
-      },
-      "scored_only": {
-        "count": 62,
-        "mean": 6.34,
-        "median": 6.35,
-        "std": 0.92,
-        "min": 3.6,
-        "max": 8.2
-      },
-      "competency_elements": {
-        "count": 8,
-        "mean": 6.31,
-        "median": 6.45,
-        "std": 0.74,
-        "min": 5.1,
-        "max": 7.2
-      },
-      "obligation_elements": {
-        "count": 54,
-        "mean": 6.35,
-        "median": 6.35,
-        "std": 0.95,
-        "min": 3.6,
-        "max": 8.2
-      },
-      "by_relationship_type": {
-        "Equal": {
-          "count": 27,
-          "mean": 7.17,
-          "median": 7.2,
-          "std": 0.42,
-          "min": 6.6,
-          "max": 8.2
-        },
-        "Intersects with": {
-          "count": 4,
-          "mean": 4.3,
-          "median": 4.45,
-          "std": 0.45,
-          "min": 3.6,
-          "max": 4.7
-        },
-        "Superset of": {
-          "count": 31,
-          "mean": 5.88,
-          "median": 5.9,
-          "std": 0.41,
-          "min": 5.0,
-          "max": 6.5
-        }
-      }
+      "3": 6697,
+      "5": 6707,
+      "8": 76,
+      "10": 1
     },
-    "element_type_breakdown": {
-      "competency": {
-        "total": 8,
-        "scored": 8,
-        "no_relationship": 0
-      },
-      "obligation": {
-        "total": 54,
-        "scored": 54,
-        "no_relationship": 0
-      }
+    "domain_distribution": {
+      "AG": 1904,
+      "AI": 1561,
+      "LS": 1325,
+      "RM": 1311,
+      "OP": 1166,
+      "RC": 1152,
+      "SP": 1003,
+      "DQ": 977,
+      "DG": 923,
+      "TF": 782,
+      "AB": 698,
+      "DA": 679
     },
-    "rationale_files_generated": 62
+    "sts_statistics_scored": {
+      "count": 13481,
+      "mean": 0.4634,
+      "median": 0.4507,
+      "std": 0.0799,
+      "min": 0.35,
+      "max": 0.8238
+    }
   }
 }

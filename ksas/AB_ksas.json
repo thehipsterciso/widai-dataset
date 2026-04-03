@@ -2,11 +2,11 @@
   "dataset_id": "WIDAI-KSAS",
   "domain_code": "AB",
   "domain_title": "Analytics & BI",
-  "ksa_count": 34,
+  "ksa_count": 35,
   "knowledge_count": 10,
   "skill_count": 10,
   "task_count": 11,
-  "ability_count": 3,
+  "ability_count": 4,
   "schema_version": "2.0.0",
   "ksas": [
     {
@@ -218,7 +218,7 @@
       "type": "Skill",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Skill in implementing automated data pipeline testing — unit tests for individual transformations, integration tests for end-to-end data flows, and regression tests that validate output consistency across pipeline changes.",
+      "statement": "Skill in implementing automated data pipeline testing \u2014 unit tests for individual transformations, integration tests for end-to-end data flows, and regression tests that validate output consistency across pipeline changes.",
       "origin_framework": "WIDAI",
       "origin_version": "0.5.0",
       "legacy_ids": [
@@ -406,6 +406,17 @@
       "origin_framework": "WIDAI",
       "origin_version": "0.5.1",
       "legacy_ids": []
+    },
+    {
+      "ksa_id": "AB-A-004",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to exercise structured judgment in data-informed decision-making, weighing quantitative evidence against qualitative context, assessing relative costs and benefits of analytical approaches, and recommending actions when data is incomplete or ambiguous.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.8",
+      "legacy_ids": [],
+      "strm_gap_source": "STRM-001-ONET: O*NET 2.B.4.e (Judgment and Decision Making) \u2014 STS 0.406 to AB-A-002"
     }
   ]
 }

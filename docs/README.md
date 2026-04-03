@@ -72,6 +72,8 @@ widai-dataset/
 │   ├── dcwf/                 DCWF v5.1 STRM (complete)
 │   ├── ddat/                 DDaT Capability Framework STRM (complete)
 │   ├── eu_ai_act/            EU AI Act STRM (complete) — first regulatory framework
+│   ├── nist_ai_rmf/          NIST AI RMF 1.0 STRM (complete) — second regulatory framework
+│   ├── strm_scoring_pipeline.py  Consolidated domain-exhaustive scoring pipeline
 │   └── issues/               Gap issue registers across all STRMs
 ├── methodology/              Assessment and scoring methodologies
 ├── schema/                   JSON Schema definitions
@@ -95,7 +97,7 @@ All four validation tests passed. Go decision for Phase 1.
 |-----------|--------|---------|
 | 1A — Baseline KSA Enrichment | Complete | KSA pool expanded across all 12 domains. Abilities coverage gap closed. |
 | 1B — Framework Prioritization | Complete | 34 STRM-eligible frameworks identified. 4-tier execution sequence. |
-| 1C — Per-Framework STRM Cycle | In Progress | Tier 1 complete (4 frameworks). Tier 2 in progress: EU AI Act complete (62 elements). 5,470 total elements scored across 5 frameworks. See STRM progress below. |
+| 1C — Per-Framework STRM Cycle | In Progress | Tier 1 complete (4 frameworks). Tier 2: 2 of 5 complete (EU AI Act, NIST AI RMF). All 6 STRMs reprocessed through consolidated domain-exhaustive pipeline — 2.76M pairs scored, 536,737 rationale files. See STRM progress below. |
 | 1D — Synthesis | Not Started | Cross-framework evidence synthesis. Blocked until sufficient STRMs complete. |
 
 ### STRM Framework Progress
@@ -107,7 +109,7 @@ All four validation tests passed. Go decision for Phase 1.
 | 1 | DoD DCWF v5.1 | Complete | [ADR-017](roadmap/adr/ADR-017-strm-dcwf.md) |
 | 1 | DDaT | Complete | [ADR-018](roadmap/adr/ADR-018-strm-ddat.md) |
 | 2 | EU AI Act | Complete | [ADR-019](roadmap/adr/ADR-019-strm-eu-ai-act.md) |
-| 2 | NIST AI RMF | Queued | — |
+| 2 | NIST AI RMF | Complete | — |
 | 2 | DAMA DMBOK | Queued | — |
 | 2 | FED SR 11-7 | Queued | — |
 | 2 | GDPR | Queued | — |

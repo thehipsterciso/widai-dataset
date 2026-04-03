@@ -1,143 +1,156 @@
 {
   "strm_id": "STRM-001-ONET",
-  "qa_date": "2026-03-31",
-  "reviewer": "Thomas Jones / The Hipster CISO",
-  "status": "PASS",
+  "framework": "O*NET Database 30.2",
+  "pipeline_version": "v3-domain-exhaustive",
+  "qa_qc_date": "2026-04-01",
+  "widai_version": "0.5.9",
+  "reviewer": "AI-assisted (Claude) with human review",
+  "methodology_change": "Replaced bi-encoder top-5 candidate pre-filtering with domain-aware exhaustive scoring. Each FDE routed to applicable WIDAI domains based on O*NET taxonomy analysis. Every KSA in applicable domains scored through full cross-encoder pipeline. 34,763 total pairs scored (vs v2's 629).",
 
-  "scoring_methodology": {
-    "pipeline_version": "3.0.0",
-    "methodology": "Multi-method computational scoring with Cross-Encoder STS primary",
-    "primary_method": {
-      "name": "Cross-Encoder STS",
-      "model": "cross-encoder/stsb-roberta-base",
-      "description": "Semantic Textual Similarity via cross-encoder regression trained on STS-Benchmark. Both texts processed jointly through transformer cross-attention; outputs calibrated 0-1 similarity score mapped to 0-10 NIST strength scale.",
-      "score_mapping": "raw_score (0-1) × 10, rounded to nearest integer"
-    },
-    "secondary_methods": [
-      {
-        "name": "BERTScore",
-        "model": "roberta-large",
-        "role": "Token-level audit trail (Precision, Recall, F1). P/R directionality validates relationship type assignments."
-      },
-      {
-        "name": "NLI Cross-Encoder",
-        "model": "cross-encoder/nli-deberta-v3-base",
-        "role": "Directional implication classification (entailment/neutral/contradiction probabilities)."
-      },
-      {
-        "name": "Bi-Encoder Cosine",
-        "model": "all-MiniLM-L6-v2",
-        "role": "Independent embedding cosine similarity baseline."
-      },
-      {
-        "name": "Jaccard Token",
-        "model": null,
-        "role": "Lexical baseline (word token intersection/union). Hand-traceable without ML dependencies."
-      }
-    ],
-    "reproducibility": "Pipeline at strm/onet/strm_scoring_pipeline.py produces identical results for identical inputs. All models are deterministic for pinned versions. All 126 per-FDE rationale files contain complete five-method audit trails.",
-    "references": ["Reimers & Gurevych (2019) Sentence-BERT", "Zhang et al. (2020) BERTScore", "STS-Benchmark", "NIST IR 8278Ar1 §3.2.12"]
-  },
-
-  "completeness_check": {
+  "completeness_checks": {
     "total_fdes_in_scope": 126,
-    "total_fdes_mapped": 126,
-    "rationale_files_generated": 126,
-    "fdes_with_blank_relationship": 0,
-    "fdes_with_blank_rationale": 0,
-    "result": "PASS — All 126 in-scope FDEs evaluated. 126 per-FDE rationale files generated with complete multi-method audit trails."
+    "total_fdes_evaluated": 126,
+    "fdes_with_scored_mappings": 108,
+    "fdes_with_no_relationship": 18,
+    "total_mapping_rows": 5440,
+    "total_rationale_files": 5440,
+    "blank_evaluations": 0,
+    "completeness_percentage": 100.0,
+    "status": "PASS",
+    "note": "All 126 O*NET FDEs evaluated. 14 identified as out-of-scope via domain routing (returned empty domain list). 112 FDEs routed to applicable domains. 108 FDEs produced at least one qualifying mapping. 18 FDEs classified as No Relationship. Every mapping row has a corresponding rationale file."
   },
 
-  "rationale_consistency_check": {
-    "default_rationale": "Semantic",
-    "semantic_count": 85,
-    "functional_count": 41,
-    "syntactic_count": 0,
-    "rationale_type_justification": "Semantic used as default per use case (vocabulary divergence between general-purpose O*NET and domain-specific WIDAI). Functional used for 41 FDEs where the outcome/activity matters more than vocabulary similarity — particularly for Abilities (cognitive traits) and Work Activities (behavioral descriptions). No syntactic matches expected given vocabulary divergence.",
-    "result": "PASS — Rationale types consistently applied per use case justification."
+  "rationale_documentation": {
+    "total_rationale_files": 5440,
+    "scored_rationale_files_with_all_methods": 5422,
+    "no_relationship_rationale_files": 18,
+    "files_missing_rationale": 0,
+    "invalid_json_files": 0,
+    "status": "PASS",
+    "note": "All 5422 scored rationale files contain STS primary + 4 secondary methods (BERTScore, NLI with softmax-corrected probabilities, Bi-Encoder, Jaccard). All 18 No Relationship files document best candidate STS score to justify classification."
   },
 
-  "relationship_distribution": {
-    "intersects_with": {"count": 82, "pct": 65.1},
-    "no_relationship": {"count": 23, "pct": 18.3},
-    "superset_of": {"count": 17, "pct": 13.5},
-    "equal": {"count": 4, "pct": 3.2},
-    "subset_of": {"count": 0, "pct": 0.0},
-    "analysis": "Distribution is consistent with expectations for a general-purpose framework (O*NET) mapped against a domain-specific framework (WIDAI). High 'Intersects with' rate (65%) reflects O*NET's broader scope intersecting with WIDAI's deeper domain coverage. 'Superset of' (14%) correctly identifies where O*NET defines broader competencies that encompass specific WIDAI KSAs. 'Equal' (3%) found only for work activities with direct WIDAI equivalents. Zero 'Subset of' is correct — O*NET elements are always equal to or broader than individual WIDAI KSAs due to O*NET's occupation-general scope.",
-    "result": "PASS — Distribution is analytically coherent."
-  },
-
-  "strength_distribution": {
-    "n_scored": 103,
-    "n_no_relationship": 23,
-    "computed_mean_scored": 4.18,
-    "computed_median_scored": 4.3,
-    "computed_std_scored": 1.35,
-    "computed_range_scored": [0.7, 6.9],
-    "by_relationship_type": {
-      "equal": {"count": 4, "mean": 4.60, "median": 4.25, "range": [3.6, 6.3]},
-      "superset_of": {"count": 17, "mean": 4.15, "median": 3.9, "range": [2.3, 5.9]},
-      "intersects_with": {"count": 82, "mean": 4.16, "median": 4.3, "range": [0.7, 6.9]}
+  "relationship_type_consistency": {
+    "relationship_distribution": {
+      "Intersects With": {"count": 5422, "percentage": 99.7},
+      "No Relationship": {"count": 18, "percentage": 0.3},
+      "Subset Of": {"count": 0, "percentage": 0.0},
+      "Equal": {"count": 0, "percentage": 0.0}
     },
-    "analysis": "Computed mean strength of 4.18 for scored pairs reflects the vocabulary and scope gap between a general-purpose taxonomy and a domain-specific framework. The cross-encoder STS model processes both descriptions jointly through cross-attention, capturing semantic relationships that lexical and independent-encoding methods miss. Scores cluster in the 3-5 band (NIST 'roughly as similar as dissimilar'), consistent with the structural relationship between a general occupational taxonomy and a specialized professional framework. The secondary methods (BERTScore, NLI, bi-encoder, Jaccard) are documented in each rationale file for audit and future recalibration.",
-    "result": "PASS — Strength scores are computationally derived with documented methodology and full five-method audit trails."
-  },
-
-  "gap_issue_quality": {
-    "total_gap_signals": 6,
-    "all_have_triggering_fdes": true,
-    "all_have_domains_searched": true,
-    "all_have_nearest_miss": true,
-    "all_have_synthesis_recommendation": true,
-    "severity_distribution": {"moderate": 3, "low": 3},
-    "analysis": "Six thematic gap clusters identified from 8 individual FDE gap signals. All gap issues include required fields per ADR-014 Step 4. Gaps are appropriately categorized: foundational skills gaps (communication, project management, continuous learning) vs. dispositional gaps (service orientation, conflict resolution) vs. foundational knowledge gaps (ethical reasoning). Synthesis recommendations correctly defer resolution and identify cross-framework validation criteria.",
-    "result": "PASS — Gap issues are complete and appropriately scoped."
-  },
-
-  "no_relationship_audit": {
-    "total_no_relationship": 23,
-    "intentionally_out_of_scope": 23,
-    "in_scope_gaps": 0,
-    "categories": {
-      "physical_science_knowledge": ["Physics", "Chemistry", "Biology", "Geography"],
-      "physical_domain_knowledge": ["Food Production", "Building and Construction", "Mechanical", "Transportation"],
-      "healthcare": ["Medicine and Dentistry", "Therapy and Counseling"],
-      "general_office": ["Administrative", "Performing Administrative Activities"],
-      "commercial": ["Sales and Marketing"],
-      "arts_humanities": ["Foreign Language", "Fine Arts", "History and Archeology"],
-      "cognitive_baseline": ["Memorization", "Selective Attention", "Time Sharing", "Spatial Orientation"],
-      "physical_activities": ["Repairing and Maintaining Mechanical Equipment"],
-      "public_facing": ["Assisting and Caring for Others", "Performing for or Working Directly with the Public"]
+    "scf_comparison": {
+      "scf_intersects_pct": 88.8,
+      "widai_intersects_pct": 99.7,
+      "assessment": "Higher Intersects With percentage is expected: exhaustive domain scoring surfaces all qualifying intersections, and O*NET general occupational competencies are broader than individual WIDAI KSAs, precluding Subset Of or Equal classifications."
     },
-    "analysis": "All 23 'No relationship' findings are correctly identified as intentionally out of WIDAI scope. No false negatives detected — every No relationship element is either a physical-world competency, a domain unrelated to data/AI work, a basic cognitive trait not differentiating for professionals, or a general office/commercial skill. None represent gaps in WIDAI coverage.",
-    "result": "PASS — All No relationship findings are justified."
+    "no_relationship_validation": "18 FDEs (14.3%) classified as No Relationship. These include: Food Production, Building/Construction, Mechanical, Physics, Chemistry, Biology, Geography, Medicine/Dentistry, Fine Arts, History/Archeology, Philosophy/Theology, Transportation, Time Management, Spatial Orientation, Selective Attention, Repairing Mechanical Equipment, Assisting/Caring for Others, Performing for the Public. All are genuinely outside WIDAI data/AI workforce scope.",
+    "status": "PASS"
   },
 
-  "per_fde_rationale_audit": {
-    "total_rationale_files": 126,
-    "file_location": "strm/onet/rationale/{fde-id}.json",
-    "naming_convention": "FDE ID with dots replaced by dashes (e.g., 2-C-1-f.json)",
-    "schema_compliance": {
-      "nist_fields_present": ["focal_document_element", "focal_document_element_description", "rationale", "relationship", "reference_document_element", "reference_document_element_description", "comments", "strength_of_relationship", "relationship_type", "relationship_explanation", "relationship_property"],
-      "widai_extensions_present": ["strength_justification", "gap_signal", "evaluated_by", "evaluation_date"],
-      "strength_justification_contents": {
-        "primary_method": "Cross-Encoder STS (raw score, mapped strength, final integer)",
-        "secondary_methods": ["BERTScore (P/R/F1)", "NLI (entailment/neutral/contradiction probabilities)", "Bi-Encoder cosine", "Jaccard token overlap"]
+  "strength_scoring": {
+    "scoring_methodology": "Cross-Encoder STS (stsb-roberta-base) as primary, raw 0-1 mapped to SCF-aligned discrete scale (3, 5, 8, 10). NLI probabilities via softmax.",
+    "discrete_scale": {
+      "10": ">= 0.82 STS",
+      "8": ">= 0.70 STS",
+      "5": ">= 0.45 STS",
+      "3": ">= 0.35 STS",
+      "0": "< 0.35 STS (No Relationship)"
+    },
+    "strength_distribution": {
+      "0": {"count": 18, "percentage": 0.3},
+      "3": {"count": 3671, "percentage": 67.5},
+      "5": {"count": 1749, "percentage": 32.2},
+      "8": {"count": 2, "percentage": 0.0},
+      "10": {"count": 0, "percentage": 0.0}
+    },
+    "sts_statistics_scored": {
+      "mean": 0.4294,
+      "median": 0.4148,
+      "std": 0.0632,
+      "min": 0.350,
+      "max": 0.7053
+    },
+    "scf_comparison": {
+      "scf_strength_5_pct": 72.8,
+      "widai_strength_5_pct": 32.2,
+      "assessment": "Lower strength-5 percentage reflects the exhaustive scoring approach — all qualifying intersections are captured, including many weak (strength 3) relationships that the bi-encoder pre-filter in v2 excluded. When filtered to strength >= 5, 1,751 mappings across 414 unique KSAs provide a rich, high-confidence mapping layer."
+    },
+    "status": "PASS"
+  },
+
+  "one_to_many_validation": {
+    "mappings_per_fde": {
+      "mean": 50.2,
+      "max": 296,
+      "min": 1,
+      "distribution": {
+        "1_to_5_mappings": 17,
+        "6_to_10_mappings": 13,
+        "11_to_20_mappings": 15,
+        "21_to_50_mappings": 25,
+        "51_to_100_mappings": 21,
+        "101_plus_mappings": 17
       }
     },
-    "result": "PASS — All 126 rationale files conform to schema with complete NIST fields and WIDAI multi-method scoring extensions."
+    "scf_comparison": {
+      "scf_mean_per_fde": 1.6,
+      "widai_v2_mean_per_fde": 2.8,
+      "widai_v3_mean_per_fde": 50.2,
+      "assessment": "Much higher mappings per FDE reflects exhaustive domain scoring rather than pre-filtered top-N approach. For analysis purposes, strength >= 5 subset has mean 17.9 per FDE, median 8.0."
+    },
+    "unique_ksas_matched": 491,
+    "total_ksas_in_pool": 504,
+    "ksa_utilization_pct": 97.4,
+    "domain_distribution": {
+      "AI": 656, "DQ": 636, "OP": 595, "AB": 466, "LS": 454, "RC": 440, "TF": 424, "AG": 403, "DA": 402, "DG": 385, "RM": 300, "SP": 261
+    },
+    "domains_represented": 12,
+    "domains_total": 12,
+    "domain_concentration_check": "PASS — All 12 domains represented. Well-distributed. Max domain (AI, 12.1%) within acceptable range.",
+    "status": "PASS"
   },
 
-  "overall_assessment": {
-    "result": "PASS",
-    "summary": "STRM-001-ONET meets all QA/QC criteria. 126 FDEs exhaustively evaluated with per-FDE rationale files containing five-method scoring audit trails. Strength scores are derived from Cross-Encoder STS (industry-standard pairwise semantic similarity), with BERTScore, NLI, bi-encoder cosine, and Jaccard token overlap as documented secondary methods. Six gap signals identified with complete issue context and synthesis recommendations. The O*NET STRM successfully validates WIDAI's core domain coverage while identifying targeted enrichment opportunities in foundational professional skills.",
-    "key_findings": [
-      "WIDAI has strong coverage of O*NET's data-relevant competencies — 103 of 126 FDEs have documented relationships.",
-      "The 'Intersects with' dominance (65%) correctly reflects the general-vs-specific framework relationship.",
-      "Multi-method scoring pipeline (STS primary + 4 secondary methods) produces computationally reproducible strength scores with complete audit trails.",
-      "Gap signals cluster around foundational professional skills rather than domain-specific technical gaps — confirming the v0.5.2 domain pool is technically comprehensive.",
-      "No WIDAI KSA domains were found to be systematically underrepresented in the O*NET mapping.",
-      "All scoring data is preserved in per-FDE rationale files for future recalibration or methodology refinement."
-    ]
-  }
+  "methodology_validation": {
+    "pipeline_version": "v3-domain-exhaustive",
+    "candidate_generation": "Domain-aware routing based on O*NET taxonomy analysis. No bi-encoder pre-filter. 14 FDEs identified as out-of-scope (returned empty domain list). 112 FDEs routed to applicable domains.",
+    "scoring": "Full multi-method on all domain-routed pairs (34,763 pairs scored in two massive batch predict() calls)",
+    "classification_calibration": "SCF STRM-calibrated thresholds (unchanged from v2)",
+    "nli_softmax": "Applied (corrected in v2, carried forward)",
+    "rationale_type": "Semantic (appropriate for O*NET knowledge/skill/ability descriptions mapped to WIDAI KSA statements)",
+    "status": "PASS"
+  },
+
+  "gap_analysis": {
+    "no_relationship_count": 18,
+    "out_of_scope_confirmed": 18,
+    "gap_signals_registered": 10,
+    "genuine_gaps": 1,
+    "out_of_scope_weak_matches": 9,
+    "v2_gaps_resolved": 6,
+    "gap_register_file": "strm/issues/STRM-001-ONET-gaps.json",
+    "detection_method": "FDEs with only strength-3 mappings where the O*NET element describes a competency within WIDAI scope. Out-of-scope FDEs validated against taxonomy.",
+    "note": "6 of 7 v2 gap KSAs validated as resolved by new KSAs: Persuasion, Judgment/Decision Making, Computers/Electronics, Systems Analysis, Conflict Resolution, Updating Knowledge. All appear as top matches in their triggering FDEs. 1 genuine gap remains: Staffing (LS-T-011 exists but scores below threshold across all O*NET occupations).",
+    "status": "PASS — Gaps identified and documented. 6/7 v2 gaps validated as resolved by new KSAs."
+  },
+
+  "v2_to_v3_comparison": {
+    "v2_mapping_rows": 359,
+    "v3_mapping_rows": 5440,
+    "v2_unique_ksas": 162,
+    "v3_unique_ksas": 491,
+    "v2_domains_used": 12,
+    "v3_domains_used": 12,
+    "v2_no_relationship": 17,
+    "v3_no_relationship": 18,
+    "v2_pairs_scored": 629,
+    "v3_pairs_scored": 34763,
+    "v2_mean_sts_scored": 0.485,
+    "v3_mean_sts_scored": 0.4294,
+    "improvement_summary": "v3 produces 15.2x more mapping rows, surfaces 3.0x more unique KSAs (97.4% pool utilization vs 32.4%), eliminates bi-encoder pre-filter dependency. Lower mean STS reflects exhaustive capture of all qualifying relationships including weak intersections. Strength >= 5 subset (1,751 rows, 414 KSAs) provides high-confidence mapping layer. 6 of 7 v2 gap KSAs validated as top matches in their triggering FDEs."
+  },
+
+  "overall_status": "PASS — 7/7 checks pass.",
+  "checks_passed": 7,
+  "checks_corrected": 0,
+  "checks_failed": 0,
+  "checks_total": 7
 }

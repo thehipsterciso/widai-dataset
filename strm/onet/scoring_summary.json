@@ -1,86 +1,51 @@
 {
-  "pipeline_run_date": "2026-03-31",
+  "pipeline_run_date": "2026-04-01",
   "strm_id": "STRM-001-ONET",
+  "pipeline_version": "v3-domain-exhaustive",
   "methodology": {
-    "primary": {
-      "name": "Cross-Encoder STS",
-      "model": "cross-encoder/stsb-roberta-base",
-      "role": "Generates strength_of_relationship integer (0-10)",
-      "mapping": "raw_score (0-1) \u00d7 10, rounded to nearest integer"
-    },
-    "secondary": [
-      {
-        "name": "BERTScore",
-        "model": "roberta-large",
-        "role": "Token-level audit trail (Precision, Recall, F1)"
-      },
-      {
-        "name": "NLI Cross-Encoder",
-        "model": "cross-encoder/nli-deberta-v3-base",
-        "role": "Directional implication classification (entailment/neutral/contradiction)"
-      },
-      {
-        "name": "Bi-Encoder Cosine",
-        "model": "all-MiniLM-L6-v2",
-        "role": "Independent embedding cosine similarity"
-      },
-      {
-        "name": "Jaccard Token",
-        "model": null,
-        "role": "Lexical baseline (word token intersection/union)"
-      }
-    ]
+    "approach": "Domain-aware exhaustive scoring",
+    "candidate_selection": "Intelligent domain routing (no bi-encoder pre-filter). Each FDE routed to applicable WIDAI domains based on content analysis. Every KSA in those domains scored through cross-encoder.",
+    "total_pairs_scored": 34763,
+    "vs_v2": "v2 scored 629 pairs (bi-encoder top-5). v3 scored 34763 pairs (domain-exhaustive)."
   },
   "statistics": {
-    "total_mappings": 126,
-    "scored_mappings": 103,
-    "no_relationship_mappings": 23,
-    "strength_distribution": {
-      "all": {
-        "mean": 3.4,
-        "median": 4.0,
-        "std": 2.04,
-        "min": 0.0,
-        "max": 7.0
-      },
-      "scored_only": {
-        "mean": 4.18,
-        "median": 4.3,
-        "std": 1.35,
-        "min": 0.7,
-        "max": 6.9
-      },
-      "by_relationship_type": {
-        "Equal": {
-          "count": 4,
-          "mean": 4.6,
-          "median": 4.25,
-          "min": 3.6,
-          "max": 6.3
-        },
-        "Intersects with": {
-          "count": 82,
-          "mean": 4.16,
-          "median": 4.3,
-          "min": 0.7,
-          "max": 6.9
-        },
-        "No relationship": {
-          "count": 23,
-          "mean": 0,
-          "median": 0,
-          "min": 0,
-          "max": 0
-        },
-        "Superset of": {
-          "count": 17,
-          "mean": 4.15,
-          "median": 3.9,
-          "min": 2.3,
-          "max": 5.9
-        }
-      }
+    "total_fdes": 126,
+    "total_mapping_rows": 5440,
+    "unique_ksas_matched": 490,
+    "no_relationship_fdes": 18,
+    "out_of_scope_fdes": 14,
+    "rationale_files": 5440,
+    "relationship_distribution": {
+      "Intersects With": 5422,
+      "No Relationship": 18
     },
-    "rationale_files_generated": 126
+    "strength_distribution": {
+      "0": 18,
+      "3": 3671,
+      "5": 1749,
+      "8": 2
+    },
+    "domain_distribution": {
+      "AI": 656,
+      "DQ": 636,
+      "OP": 595,
+      "AB": 466,
+      "LS": 454,
+      "RC": 440,
+      "TF": 424,
+      "AG": 403,
+      "DA": 402,
+      "DG": 385,
+      "RM": 300,
+      "SP": 261
+    },
+    "sts_statistics_scored": {
+      "count": 5422,
+      "mean": 0.4294,
+      "median": 0.4148,
+      "std": 0.0632,
+      "min": 0.35,
+      "max": 0.7053
+    }
   }
 }

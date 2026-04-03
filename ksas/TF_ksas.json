@@ -2,11 +2,11 @@
   "dataset_id": "WIDAI-KSAS",
   "domain_code": "TF",
   "domain_title": "Technical Foundations",
-  "ksa_count": 37,
-  "knowledge_count": 13,
+  "ksa_count": 39,
+  "knowledge_count": 14,
   "skill_count": 12,
   "task_count": 8,
-  "ability_count": 4,
+  "ability_count": 5,
   "schema_version": "2.0.0",
   "ksas": [
     {
@@ -392,6 +392,28 @@
       "origin_framework": "WIDAI",
       "origin_version": "0.5.1",
       "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-K-014",
+      "type": "Knowledge",
+      "domain": "Technical Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of computing fundamentals relevant to data and AI work, including computer architecture concepts (processors, memory hierarchy, storage systems), operating system principles, hardware-software interaction, and how infrastructure constraints affect data processing performance and system design decisions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.8",
+      "legacy_ids": [],
+      "strm_gap_source": "STRM-001-ONET: O*NET 2.C.3.a (Computers and Electronics) \u2014 STS 0.361 to AI-K-016"
+    },
+    {
+      "ksa_id": "TF-A-005",
+      "type": "Ability",
+      "domain": "Technical Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to analyze data and AI systems holistically, understanding how changes in one component affect upstream and downstream dependencies, predicting system-level consequences of technical decisions, and designing for resilience across interconnected data pipelines and services.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.8",
+      "legacy_ids": [],
+      "strm_gap_source": "STRM-001-ONET: O*NET 2.B.4.g (Systems Analysis) \u2014 STS 0.371 to TF-A-002"
     }
   ]
 }

@@ -1,158 +1,51 @@
 {
   "pipeline_run_date": "2026-04-01",
   "strm_id": "STRM-006-NIST-AI-RMF",
-  "framework": "NIST AI Risk Management Framework 1.0 (NIST AI 100-1)",
+  "pipeline_version": "domain-exhaustive",
   "methodology": {
-    "primary_method": {
-      "name": "Cross-Encoder STS",
-      "model": "cross-encoder/stsb-roberta-base",
-      "role": "Generates strength_of_relationship integer (0-10)",
-      "mapping": "raw_score (0-1) \u00d7 10, rounded to nearest integer",
-      "note": "Consistent with STRM-001\u2013005. Scores competency_implication text, not raw outcome_text."
-    },
-    "rationale_type": "Functional (per NIST IR 8477 Section 4.3)",
-    "rationale_justification": "The mapping direction is outcome\u2192competency: what workforce capability is required to achieve this risk management outcome? This is a Functional question ('how similar are the results of executing the two concepts'), not a Semantic question.",
-    "scoring_text": "competency_implication field (workforce competency interpretation of each element)",
-    "secondary": [
-      {
-        "name": "BERTScore",
-        "model": "roberta-large",
-        "role": "Token-level audit trail"
-      },
-      {
-        "name": "NLI Cross-Encoder",
-        "model": "cross-encoder/nli-deberta-v3-base",
-        "role": "Contradiction detection, logical implication secondary signal"
-      },
-      {
-        "name": "Bi-Encoder Cosine",
-        "model": "all-MiniLM-L6-v2",
-        "role": "Independent embedding cosine similarity"
-      },
-      {
-        "name": "Jaccard Token",
-        "model": null,
-        "role": "Lexical baseline"
-      }
-    ],
-    "nli_diagnostic": {
-      "note": "NLI entailment is systematically low for competency\u2192competency pairs. This is expected behavior, not a data quality issue.",
-      "entailment_distribution": {
-        "count": 70,
-        "mean": 0.09,
-        "median": 0.0,
-        "std": 0.26,
-        "min": 0.0,
-        "max": 0.99
-      },
-      "interpretation": "NLI measures strict logical implication. Two overlapping competency statements are typically 'neutral' in NLI terms \u2014 they describe related concepts without one logically implying the other. STS is the appropriate primary signal for measuring semantic relatedness between competency texts."
-    },
-    "methodology_note": "Methodology identical to STRM-005-EU-AI-ACT. Dual-provenance (outcome_text + competency_implication), Functional rationale, STS-primary scoring. See ADR-019 for full documentation."
+    "approach": "Exhaustive scoring \u2014 all elements against all KSAs",
+    "total_pairs_scored": 35280,
+    "note": "70 elements x 504 KSAs = 35,280 pairs"
   },
   "statistics": {
-    "total_mappings": 70,
-    "scored_mappings": 70,
-    "no_relationship_mappings": 0,
+    "total_fdes": 70,
+    "total_mapping_rows": 19128,
+    "scored_mappings": 19128,
+    "no_relationship_fdes": 0,
+    "unique_ksas_matched": 498,
+    "rationale_files": 19128,
+    "relationship_distribution": {
+      "Subset Of": 92,
+      "Intersects With": 19035,
+      "Equal": 1
+    },
     "strength_distribution": {
-      "all": {
-        "count": 70,
-        "mean": 6.63,
-        "median": 7.0,
-        "std": 0.7,
-        "min": 4.0,
-        "max": 8.0
-      },
-      "scored_only": {
-        "count": 70,
-        "mean": 6.62,
-        "median": 6.7,
-        "std": 0.68,
-        "min": 4.1,
-        "max": 8.1
-      },
-      "by_function": {
-        "GOVERN": {
-          "count": 19,
-          "mean": 6.87,
-          "median": 6.9,
-          "std": 0.56,
-          "min": 5.8,
-          "max": 7.9
-        },
-        "MANAGE": {
-          "count": 12,
-          "mean": 6.64,
-          "median": 6.75,
-          "std": 0.52,
-          "min": 5.7,
-          "max": 7.3
-        },
-        "MAP": {
-          "count": 18,
-          "mean": 6.56,
-          "median": 6.5,
-          "std": 0.64,
-          "min": 5.5,
-          "max": 8.1
-        },
-        "MEASURE": {
-          "count": 21,
-          "mean": 6.43,
-          "median": 6.7,
-          "std": 0.81,
-          "min": 4.1,
-          "max": 8.0
-        }
-      },
-      "by_relationship_type": {
-        "Equal": {
-          "count": 43,
-          "mean": 7.05,
-          "median": 7.0,
-          "std": 0.38,
-          "min": 6.5,
-          "max": 8.1
-        },
-        "Intersects with": {
-          "count": 1,
-          "mean": 4.1,
-          "median": 4.1,
-          "std": 0.0,
-          "min": 4.1,
-          "max": 4.1
-        },
-        "Superset of": {
-          "count": 26,
-          "mean": 6.01,
-          "median": 5.95,
-          "std": 0.29,
-          "min": 5.5,
-          "max": 6.5
-        }
-      }
+      "3": 8705,
+      "5": 10325,
+      "8": 97,
+      "10": 1
     },
-    "function_breakdown": {
-      "GOVERN": {
-        "total": 19,
-        "scored": 19,
-        "no_relationship": 0
-      },
-      "MANAGE": {
-        "total": 12,
-        "scored": 12,
-        "no_relationship": 0
-      },
-      "MAP": {
-        "total": 18,
-        "scored": 18,
-        "no_relationship": 0
-      },
-      "MEASURE": {
-        "total": 21,
-        "scored": 21,
-        "no_relationship": 0
-      }
+    "domain_distribution": {
+      "AG": 2334,
+      "AI": 2325,
+      "LS": 2067,
+      "RM": 1785,
+      "OP": 1653,
+      "DQ": 1549,
+      "DG": 1450,
+      "RC": 1319,
+      "AB": 1213,
+      "SP": 1186,
+      "TF": 1169,
+      "DA": 1078
     },
-    "rationale_files_generated": 70
+    "sts_statistics_scored": {
+      "count": 19128,
+      "mean": 0.4696,
+      "median": 0.4609,
+      "std": 0.0808,
+      "min": 0.35,
+      "max": 0.8245
+    }
   }
 }

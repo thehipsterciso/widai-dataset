@@ -3,6 +3,109 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.6.0] - 2026-04-03
+
+### Domain-Exhaustive Reprocessing — All Six STRMs on Consolidated Pipeline
+
+**Every STRM reprocessed through a single, memory-optimized, domain-exhaustive pipeline.** STRMs 002–006 had been scored using per-framework scripts that kept only one best-match KSA per element (1:1 mapping). The v3 exhaustive methodology — proven on STRM-001 — scores every element against every KSA in the 504-KSA pool. This release brings all six STRMs to that standard. Total rationale files: 10,854 → 536,737.
+
+**Why:** The per-framework pipelines (created during initial STRM execution) used bi-encoder candidate pre-filtering that surfaced only the single strongest match per element. This masked the true relationship density — a NICE task element that intersects with 80+ WIDAI KSAs appeared to match exactly one. The domain-exhaustive approach eliminates this pre-filter: all pairs scored through the full cross-encoder, all qualifying relationships recorded. The result is a complete map of which KSAs relate to which framework elements and at what strength, not just the peak signal.
+
+**Consolidated pipeline architecture:**
+- Single script (`strm/strm_scoring_pipeline.py`) handles all 6 frameworks via `--strm` argument
+- Framework-specific element loaders with per-framework metadata preservation
+- Sequential model loading with `gc.collect()` between phases — prevents swap thrashing on 16GB systems
+- NLI batch_size=32 (reduced from 128) — DeBERTa-v3-base memory footprint requires smaller batches
+- STS batch_size=128 retained — RoBERTa-base fits comfortably in single-model memory window
+- SCF-calibrated thresholds unchanged: Equal >= 0.82, Subset >= 0.70, Intersects >= 0.35
+- NLI contradiction gate unchanged: > 0.70 blocks Equal/Subset
+- Discrete strength scale unchanged: 3, 5, 8, 10
+
+**Results — before (1:1 best-match) → after (exhaustive):**
+
+| STRM | Framework | Pairs Scored | Mappings (before → after) | Rationale Files | Unique KSAs | No Relationship FDEs |
+|------|-----------|-------------|--------------------------|-----------------|-------------|---------------------|
+| 001 | O*NET 30.2 | 34,763 | 5,440 (already exhaustive) | 5,440 | 490 | 18 |
+| 002 | NICE v2.1.0 | 1,082,592 | 2,148 → 181,750 | 181,750 | 504 | 20 |
+| 003 | DCWF v5.1 | 1,484,280 | 2,945 → 288,101 | 288,101 | 504 | 23 |
+| 004 | DDaT | 95,256 | 189 → 28,837 | 28,837 | 504 | 0 |
+| 005 | EU AI Act | 31,248 | 62 → 13,481 | 13,481 | 487 | 0 |
+| 006 | NIST AI RMF 1.0 | 35,280 | 70 → 19,128 | 19,128 | 498 | 0 |
+| **Total** | | **2,763,419** | **536,737** | **536,737** | | |
+
+**Relationship distribution (all STRMs combined):**
+- Intersects With dominates (as expected with 0.35 threshold across 504 KSAs)
+- Small Equal and Subset Of counts at higher thresholds — these are the high-confidence signals
+- DDaT, EU AI Act, NIST AI RMF: 0 No Relationship FDEs (every element maps to at least one KSA)
+- NICE: 20 No Relationship FDEs, DCWF: 23, O*NET: 18 — genuine coverage boundaries
+
+**Pipeline operations:**
+- Per-framework pipeline scripts purged from all 6 STRM directories (superseded by consolidated script)
+- Orchestrator script (`run_remaining_strms.sh`) used for NICE→DCWF overnight chaining, then purged
+- All STRM directories now have identical structure: strm_mapping.json, scoring_summary.json, qa_qc_report.json, use_case.json, rationale/
+
+## [0.5.9] - 2026-04-01
+
+### STRM Pipeline v3 — Domain-Exhaustive Scoring of STRM-001 (O*NET 30.2)
+
+**Three-iteration pipeline evolution in a single day.** STRM-001 reprocessed through v1→v2→v3 pipeline progression. v2 introduced one-to-many mapping with SCF-calibrated thresholds and created 7 new KSAs from gap analysis. v3 replaced bi-encoder candidate pre-filtering with domain-aware exhaustive scoring — every KSA in applicable domains scored through the full cross-encoder pipeline. 34,763 pairs scored (vs v2's 629, vs v1's 126). KSA pool expanded from 497 to 504.
+
+**Why v2:** Comparison against the Secure Controls Framework (SCF) STRM revealed three structural deficiencies in the v1 pipeline: (1) single-best-match architecture (one-to-one instead of one-to-many), (2) inflated relationship classification thresholds producing unrealistic Equal percentages, (3) false 100% coverage claims in later STRMs. The SCF STRM provided the calibration reference: 88.8% Intersects With, 7.8% Subset Of, 0.7% Equal, 2.7% No Relationship with discrete strength scale (3, 5, 8, 10).
+
+**Why v3:** Exhaustiveness audit of v2 revealed the bi-encoder pre-filter (top-5 candidates per FDE) only scored 629 of 62,622 possible pairs (1%). Bi-encoder cosine similarity misses functional relationships where vocabulary differs — a data governance KSA might be functionally relevant to an O*NET management element but use entirely different terminology. Domain-aware routing eliminates this vocabulary dependency: for each FDE, identify applicable WIDAI domains by content analysis, then score every KSA in those domains through the cross-encoder.
+
+**Pipeline Architecture (v3 — current):**
+- Domain-aware exhaustive scoring: each FDE routed to applicable WIDAI domains via O*NET taxonomy analysis
+- Every KSA in applicable domains scored through full cross-encoder (no bi-encoder pre-filter)
+- 14 FDEs identified as out-of-scope by domain routing (not scored)
+- 34,763 total pairs scored across 112 in-scope FDEs
+- SCF-calibrated thresholds: Equal >= 0.82, Subset >= 0.70, Intersects >= 0.35 (unchanged from v2)
+- NLI contradiction gate: > 0.70 probability prevents Equal/Subset classification
+- NLI softmax correction (fixed in v2, carried forward)
+- Discrete strength scale: 3, 5, 8, 10 (SCF-aligned)
+- Two massive batch predict() calls (batch_size=128) for STS and NLI scoring
+
+**STRM-001 Results (v1 → v2 → v3):**
+- Mapping rows: 126 → 359 → 5,440 (15.2x v2, 43.2x v1)
+- Unique KSAs matched: 48 → 161 → 491 (97.4% of 504-KSA pool)
+- Pairs scored: 126 → 629 → 34,763 (exhaustive within applicable domains)
+- Domains represented: 11 → 12 → 12 (all domains, well-distributed)
+- Relationship distribution: 99.7% Intersects With, 0.3% No Relationship
+- Strength distribution: 67.5% at 3, 32.2% at 5, 0.04% at 8
+- Mean mappings per FDE: 50.2 (strength >= 5 subset: 17.9 mean, 8.0 median)
+- No Relationship: 18 FDEs (14.3%) — all genuinely out of scope
+- STS scored mean: 0.429 (lower than v2's 0.485 — reflects exhaustive capture of all qualifying relationships including weak intersections)
+
+**New KSAs (7 created in v2, validated by v3 — pool 497 → 504):**
+- LS-S-014: Stakeholder influence and persuasion — v3 validates as top match for Persuasion FDE (STS 0.597, str 5)
+- LS-T-011: Data/AI organizational unit staffing — scores below threshold in v3; needs refinement
+- AB-A-004: Structured judgment under analytical uncertainty — v3 validates as top match (STS 0.598, str 5)
+- TF-K-014: Computing fundamentals — v3 validates as top match for Computers/Electronics FDE (STS 0.644, str 5)
+- TF-A-005: Systems thinking and impact analysis — v3 validates as top match (STS 0.524, str 5)
+- OP-S-011: Cross-functional conflict resolution — v3 validates as top match (STS 0.620, str 5)
+- OP-K-011: Professional development and technical currency
+
+**Gap analysis (v3):**
+- 10 gap signals total (FDEs with only strength-3 mappings)
+- 1 genuine gap: Staffing (LS-T-011 exists but scores below threshold — needs KSA refinement)
+- 9 out-of-scope or foundational (no KSA creation warranted)
+- 6 of 7 v2 gap KSAs validated as top matches in their triggering FDEs
+
+**Updated deliverables:**
+- `strm/onet/strm_scoring_pipeline_v3.py` — domain-exhaustive pipeline (production)
+- `strm/onet/strm_scoring_pipeline_v2.py` — one-to-many pipeline (superseded, preserved)
+- `strm/onet/strm_mapping.json` — 5,440 mapping rows (v3 production)
+- `strm/onet/rationale/*.json` — 5,440 per-pair rationale files
+- `strm/onet/scoring_summary.json` — v3 statistics
+- `strm/onet/qa_qc_report.json` — 7/7 checks pass, v2→v3 comparison
+- `strm/issues/STRM-001-ONET-gaps.json` — 1 genuine gap, 9 out-of-scope, 6/7 v2 gaps resolved
+- `ksas/LS_ksas.json` — +2 KSAs (LS-S-014, LS-T-011)
+- `ksas/AB_ksas.json` — +1 KSA (AB-A-004)
+- `ksas/TF_ksas.json` — +2 KSAs (TF-K-014, TF-A-005)
+- `ksas/OP_ksas.json` — +2 KSAs (OP-S-011, OP-K-011)
+
+**Backups preserved:** rationale_v1_backup/, rationale_v2_backup/, strm_mapping_v1_backup.json, strm_mapping_v2_backup.json, scoring_summary_v1_backup.json
+
 ## [0.5.8] - 2026-04-01
 
 ### Phase 1C: STRM-006 — NIST AI Risk Management Framework 1.0 (NIST AI 100-1)
@@ -14,7 +117,7 @@ This project uses [Semantic Versioning](https://semver.org/).
 **What changed:**
 - 70 subcategory outcome elements extracted across 4 functions: GOVERN (19), MAP (18), MEASURE (21), MANAGE (12)
 - Each element preserves dual provenance: outcome_text (original NIST language) + competency_implication (workforce competency interpretation used for scoring)
-- Relationship distribution: 43 Equal (61.4%), 26 Superset of (37.1%), 1 Intersects with (1.4%), 0 No relationship (0.0%)
+- Relationship distribution: 43 Equal (61.4%), 26 Superset of (37.1%), 1 Intersects with (1.4%), 0 No relationship (0.0%) — **NOTE: Built on v1 single-best-match pipeline. Pending reprocessing with v2 methodology.**
 - Mean strength (scored): 6.62/10 — highest across all STRMs, explained by narrow in-domain scope and dual-provenance competency-language scoring
 - By function: GOVERN (6.87), MANAGE (6.64), MAP (6.56), MEASURE (6.43) — GOVERN strongest reflecting WIDAI governance domain depth
 - 14 gap signals (7 critical, 3 moderate, 4 low) — 20.0% gap rate

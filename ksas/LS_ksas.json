@@ -2,10 +2,10 @@
   "dataset_id": "WIDAI-KSAS",
   "domain_code": "LS",
   "domain_title": "Leadership & Strategy",
-  "ksa_count": 41,
+  "ksa_count": 43,
   "knowledge_count": 13,
-  "skill_count": 13,
-  "task_count": 10,
+  "skill_count": 14,
+  "task_count": 11,
   "ability_count": 5,
   "schema_version": "2.0.0",
   "ksas": [
@@ -456,6 +456,28 @@
       "origin_framework": "WIDAI",
       "origin_version": "0.5.1",
       "legacy_ids": []
+    },
+    {
+      "ksa_id": "LS-S-014",
+      "type": "Skill",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Skill in influencing organizational decision-makers and cross-functional stakeholders to adopt data-driven approaches, including framing technical value propositions in business terms, building consensus across competing priorities, and overcoming resistance through evidence rather than authority.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.8",
+      "legacy_ids": [],
+      "strm_gap_source": "STRM-001-ONET: O*NET 2.B.1.c (Persuasion) \u2014 STS 0.419 to LS-A-001"
+    },
+    {
+      "ksa_id": "LS-T-011",
+      "type": "Task",
+      "domain": "Leadership & Strategy",
+      "domain_code": "LS",
+      "statement": "Staff data and AI organizational units by defining role requirements, evaluating candidate qualifications against defined competency frameworks, conducting structured hiring processes, and designing team compositions that balance technical depth with cross-functional capability.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.8",
+      "legacy_ids": [],
+      "strm_gap_source": "STRM-001-ONET: O*NET 4.A.4.c.2 (Staffing Organizational Units) \u2014 STS 0.425 to LS-K-009"
     }
   ]
 }
