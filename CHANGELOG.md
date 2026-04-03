@@ -46,6 +46,26 @@ Total mappings across 6 frameworks. 3 duplicate groups merged within Phase 1A ba
 - Added 4 synthesis analysis documents: `docs/synthesis/DA-{KNOWLEDGE,SKILLS,ABILITIES,TASKS}-SYNTHESIS.md`
 - DA domain total: 28+20+15+25 = 88 KSAs → 25+19+15+24 = 83 KSAs
 
+### DG Domain Re-Synthesis — Evidence-Driven Deduplication
+
+**DG domain re-synthesized using correct evidence-driven methodology.** DG was never expanded — all entries are Phase 1A baseline (origin_version 0.5.0). Re-synthesis checked for internal duplicates within the baseline and upgraded all files to schema 3.0.0. Each dimension received a dedicated synthesis analysis document. Counts are OUTPUT of evidence analysis, not predetermined targets.
+
+**DG Knowledge: 11 → 9 KSAs**
+13,184 total mappings across 6 frameworks. All 11 entries had 6/6 framework coverage. 2 duplicate groups merged: governance operating models + program design (K-003/K-007 — K-007 subsumes K-003's operating model scope and adds council/policy/stewardship design), metadata/catalog/glossary (K-004/K-011 — shared core scope of data catalogs, metadata management, and business glossaries from platform vs. standards perspectives). 7 entries preserved without change. Synthesis doc: `docs/synthesis/DG-KNOWLEDGE-SYNTHESIS.md`.
+
+**DG Skills: 9 → 7 KSAs**
+13,426 total mappings. S-002 (strategic alignment) is the evidence anchor — 17 strong matches, max STS 0.8143 from AIRMF-MP-1.4. 2 duplicate groups merged: stewardship programs (S-003/S-006 — S-006 subsumes S-003's design scope and adds operational dimension), governance council management (S-004/S-005 — building/managing and operating are the same lifecycle). 5 entries preserved without change. Synthesis doc: `docs/synthesis/DG-SKILLS-SYNTHESIS.md`.
+
+**DG Abilities: 5 → 5 KSAs (validated, no changes)**
+2,649 total mappings. All 5 entries address distinct cognitive capabilities. A-004 (sustaining governance without mandate) has thin evidence (4/6 FW, 30 mappings) but describes a genuine practitioner ability no framework captures. Synthesis doc: `docs/synthesis/DG-ABILITIES-SYNTHESIS.md`.
+
+**DG Tasks: 15 → 15 KSAs (validated, no changes)**
+8,032 total mappings. Multiple close pairs examined (T-006/T-011 enterprise vs. domain catalog, T-008/T-012 council operation vs. participation, T-002/T-014 strategy development vs. engagements, T-013/T-015 access review vs. processing). All operate at legitimately different organizational levels or serve distinct functional scopes. Legacy_ids confirm different role origins. Synthesis doc: `docs/synthesis/DG-TASKS-SYNTHESIS.md`.
+
+- Added 4 synthesis analysis documents: `docs/synthesis/DG-{KNOWLEDGE,SKILLS,ABILITIES,TASKS}-SYNTHESIS.md`
+- All DG files upgraded from schema 2.0.0 to 3.0.0 (legacy_ids removed, origin_version updated)
+- DG domain total: 11+9+5+15 = 40 KSAs → 9+7+5+15 = 36 KSAs
+
 ### AG Domain Re-Synthesis — Evidence-Driven Deduplication
 
 **AG domain re-synthesized using correct evidence-driven methodology.** Each dimension received a dedicated synthesis analysis document before any JSON changes. Duplicate groups identified within Phase 1A baseline entries, post-STRM entries validated against framework evidence per ADR-014 Principle 5. Counts are OUTPUT of evidence analysis, not predetermined targets.
