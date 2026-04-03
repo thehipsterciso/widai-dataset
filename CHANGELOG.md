@@ -27,6 +27,25 @@ Richest evidence base: 7,694 total mappings, NICE (143 analytics-relevant) and D
 - AB domain total: 10+10+4+11 = 35 KSAs → 29+25+15+30 = 99 KSAs
 - This process becomes the standard methodology for expanding all 12 domains across all 4 dimensions
 
+### Full AI Domain Expansion — All Four Dimensions
+
+**Complete cross-framework synthesis expansion for the AI/ML Foundations domain.** All four KSA dimensions rebuilt using high watermark analysis across all 6 STRMs. Schema version 3.0.0 — clean break, no legacy_ids.
+
+**AI Knowledge: 29 → 40 KSAs**
+All 6 frameworks analyzed: DCWF (438 WIDAI-relevant), NICE (329), DDaT (54), NIST AI RMF (52), EU AI Act (30), O*NET (9). 11 new concept clusters: AI risk management frameworks, AI ethics and fairness evaluation, AI governance and regulatory compliance (EU AI Act, NIST AI RMF), AI security threats and adversarial ML, human-AI interaction design, AI supply chain risk, AI system lifecycle management, AI TEVV methodology, AI data governance for ML, AI business value assessment, multimodal AI systems.
+
+**AI Skills: 19 → 30 KSAs**
+DCWF (513 WIDAI-relevant) and NICE (256) provided the richest evidence. EU AI Act contributed the single highest STS match (EUAIA-O-041 transparency at 0.7674). 11 new skill clusters: transparency/explainability implementation, AI risk assessment execution, fairness/bias evaluation, adversarial testing/red-teaming, data preprocessing/quality for ML, regulatory-grade documentation, AI monitoring/observability design, feedback incorporation mechanisms, third-party AI component assessment, end-to-end AI integration orchestration, AI literacy/training program design.
+
+**AI Abilities: 3 → 15 KSAs**
+Thinnest evidence base (1,097 total mappings) but clear concept gaps. 12 new ability clusters: mathematical/statistical method selection, pattern recognition/abstraction, model output interpretation in business context, AI tool/platform applicability assessment, business-to-AI requirements translation, cost-benefit reasoning for AI, competing requirement balancing, trustworthy AI principle integration, technical-to-strategic translation, process conformance evaluation, automated operations design reasoning, user interaction assessment.
+
+**AI Tasks: 21 → 38 KSAs**
+Richest evidence base: 16,786 total mappings. DCWF 513 WIDAI-relevant, NICE 256, DDaT 62, NIST AI RMF 55, EU AI Act 37, O*NET 9. Strongest hits: DCWF 5889 (AI use cases/best practices) at STS 0.7891, EUAIA-O-041 (GPAI technical docs) at 0.7472, AIRMF-MS-2.6 (safety evaluation) at 0.7413. 17 new task clusters: AI risk assessment, fairness/bias evaluation, adversarial testing/red-teaming, regulatory documentation, training data governance, human oversight design, use case feasibility, integration/deployment orchestration, transparency/explainability, AI incident management, AI literacy/training programs, third-party AI assessment, feedback incorporation, AI system inventory, AI decommissioning, cost optimization, executive AI communication.
+
+- Renamed synthesis script: `scripts/ab_dimension_synthesis.py` → `scripts/dimension_synthesis.py` (domain-generic, accepts `--domain` and `--dimension` arguments)
+- AI domain total: 29+19+3+21 = 72 KSAs → 40+30+15+38 = 123 KSAs
+
 ## [0.6.2] - 2026-04-03
 
 ### AB Knowledge Domain — Cross-Framework Synthesis (First Domain MVP)
