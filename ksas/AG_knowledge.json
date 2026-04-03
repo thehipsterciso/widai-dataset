@@ -3,7 +3,7 @@
   "domain_code": "AG",
   "domain_title": "AI Governance & Ethics",
   "type": "Knowledge",
-  "count": 25,
+  "count": 19,
   "schema_version": "3.0.0",
   "entries": [
     {
@@ -11,7 +11,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of model interpretability and explainability methods, including SHAP values, LIME, partial dependence plots, and when explanation requirements should influence model selection.",
+      "statement": "Knowledge of AI explainability and interpretability methods, including SHAP values, LIME, partial dependence plots, counterfactual explanations, attention visualization, and the appropriate application of each method type by model class and explanation requirement.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -20,7 +20,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+      "statement": "Knowledge of AI governance structures and framework components, including model risk management, AI lifecycle oversight, accountability assignment, AI system registries, tiered review processes, impact assessment methodologies, post-deployment monitoring requirements, and the organizational conditions that enable responsible AI deployment at scale.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -29,7 +29,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI risk taxonomy, including model risk, algorithmic bias, opacity, adversarial vulnerability, data poisoning, training data integrity failures, and systemic AI failure modes.",
+      "statement": "Knowledge of AI risk taxonomy, including model risk, algorithmic bias, opacity, adversarial vulnerability, data poisoning, training data integrity failures, systemic AI failure modes, performance risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -38,7 +38,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+      "statement": "Knowledge of responsible AI principles, their operationalization, and audit methods, including fairness metrics and metric selection, explainability methods and documentation standards, human oversight requirements and protocols, AI impact assessment methodologies, and bias test design.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -47,7 +47,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI regulatory frameworks, including the EU AI Act risk classification structure, conformity assessment requirements, prohibited use categories, and obligations on providers versus deployers.",
+      "statement": "Knowledge of AI regulatory frameworks and compliance requirements, including the EU AI Act risk classification structure, conformity assessment obligations, prohibited use categories, high-risk system obligations, documentation requirements, technical documentation standards, and obligations on providers versus deployers.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -56,7 +56,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+      "statement": "Knowledge of AI literacy concepts, including what AI is and is not, how ML models work at a conceptual level, AI limitations and failure modes, and responsible AI principles for non-technical audiences.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -65,7 +65,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+      "statement": "Knowledge of algorithmic fairness concepts, including group fairness metrics (demographic parity, equalized odds, calibration), individual fairness, and the mathematical trade-offs between competing fairness definitions.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -74,7 +74,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI regulatory compliance requirements, including EU AI Act conformity assessment obligations, prohibited use categories, and documentation requirements for high-risk AI systems.",
+      "statement": "Knowledge of AI and machine learning-specific model risk considerations, including data drift, concept drift, black-box explainability requirements, and how traditional model risk frameworks must adapt for non-parametric, ensemble, and foundation models.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -83,7 +83,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI literacy concepts, including what AI is and is not, how ML models work at a conceptual level, AI limitations and failure modes, and responsible AI principles for non-technical audiences.",
+      "statement": "Knowledge of AI risk management roles, responsibilities, and accountability structures, including executive-level oversight design, RACI-based governance frameworks, cross-functional coordination models, and the organizational conditions required for effective AI risk decision-making.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -92,7 +92,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+      "statement": "Knowledge of human-AI interaction governance, including human oversight architecture design, human-in-the-loop and human-on-the-loop patterns, human-machine interface requirements for AI oversight, and trust calibration mechanisms appropriate to different risk levels.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -101,7 +101,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of algorithmic fairness concepts, including group fairness metrics (demographic parity, equalized odds, calibration), individual fairness, and the mathematical trade-offs between competing fairness definitions.",
+      "statement": "Knowledge of AI system transparency and disclosure requirements, including interaction notification obligations, synthetic content identification, deepfake disclosure, AI-generated content labeling, and the design of transparency mechanisms appropriate to different regulatory contexts.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -110,7 +110,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI explainability methods, including SHAP, LIME, counterfactual explanations, attention visualization, and the appropriate application of each method type by model class.",
+      "statement": "Knowledge of AI data governance requirements, including training data provenance tracking, representativeness assessment, annotation governance, data quality standards for regulatory compliance, and the relationship between training data characteristics and AI system equity outcomes.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -119,7 +119,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI regulatory requirements, including the EU AI Act prohibited use categories, high-risk system obligations, conformity assessment requirements, and technical documentation standards.",
+      "statement": "Knowledge of AI conformity assessment and compliance lifecycle management, including conformity assessment procedures, CE marking requirements, notified body engagement, post-market surveillance obligations, and AI value chain liability triggers.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -128,7 +128,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI and machine learning-specific model risk considerations, including data drift, concept drift, black-box explainability requirements, and how traditional model risk frameworks must adapt for non-parametric, ensemble, and foundation models.",
+      "statement": "Knowledge of AI risk measurement and quantification methods, including risk metrics design, proxy indicators for unmeasurable or emerging risks, fairness measurement across protected attributes, and the translation of risk measurement results into governance decisions.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -137,7 +137,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI risk management roles, responsibilities, and accountability structures, including executive-level oversight design, RACI-based governance frameworks, cross-functional coordination models, and the organizational conditions required for effective AI risk decision-making.",
+      "statement": "Knowledge of AI supply chain risk management, including third-party AI component assessment, pre-trained model provenance evaluation, intellectual property considerations, vendor dependency mapping, and contingency planning for AI service disruption.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -146,7 +146,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of human-AI interaction governance, including human oversight architecture design, human-in-the-loop and human-on-the-loop patterns, human-machine interface requirements for AI oversight, and trust calibration mechanisms appropriate to different risk levels.",
+      "statement": "Knowledge of AI incident management and regulatory reporting requirements, including serious incident identification criteria, root cause analysis methodology, corrective action frameworks, and mandatory reporting obligations under applicable AI regulation.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -155,7 +155,7 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI system transparency and disclosure requirements, including interaction notification obligations, synthetic content identification, deepfake disclosure, AI-generated content labeling, and the design of transparency mechanisms appropriate to different regulatory contexts.",
+      "statement": "Knowledge of AI system lifecycle governance, including inception assessment, development-stage governance gates, deployment readiness evaluation, substantial modification criteria, and decommissioning procedures including safe phase-out and stakeholder notification.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -164,66 +164,12 @@
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Knowledge of AI data governance requirements, including training data provenance tracking, representativeness assessment, annotation governance, data quality standards for regulatory compliance, and the relationship between training data characteristics and AI system equity outcomes.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AG-K-019",
-      "type": "Knowledge",
-      "domain": "AI Governance & Ethics",
-      "domain_code": "AG",
-      "statement": "Knowledge of AI conformity assessment and compliance lifecycle management, including conformity assessment procedures, CE marking requirements, notified body engagement, post-market surveillance obligations, and AI value chain liability triggers.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AG-K-020",
-      "type": "Knowledge",
-      "domain": "AI Governance & Ethics",
-      "domain_code": "AG",
-      "statement": "Knowledge of AI risk measurement and quantification methods, including risk metrics design, proxy indicators for unmeasurable or emerging risks, fairness measurement across protected attributes, and the translation of risk measurement results into governance decisions.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AG-K-021",
-      "type": "Knowledge",
-      "domain": "AI Governance & Ethics",
-      "domain_code": "AG",
-      "statement": "Knowledge of AI supply chain risk management, including third-party AI component assessment, pre-trained model provenance evaluation, intellectual property considerations, vendor dependency mapping, and contingency planning for AI service disruption.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AG-K-022",
-      "type": "Knowledge",
-      "domain": "AI Governance & Ethics",
-      "domain_code": "AG",
-      "statement": "Knowledge of AI incident management and regulatory reporting requirements, including serious incident identification criteria, root cause analysis methodology, corrective action frameworks, and mandatory reporting obligations under applicable AI regulation.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AG-K-023",
-      "type": "Knowledge",
-      "domain": "AI Governance & Ethics",
-      "domain_code": "AG",
-      "statement": "Knowledge of AI system lifecycle governance, including inception assessment, development-stage governance gates, deployment readiness evaluation, substantial modification criteria, and decommissioning procedures including safe phase-out and stakeholder notification.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AG-K-024",
-      "type": "Knowledge",
-      "domain": "AI Governance & Ethics",
-      "domain_code": "AG",
       "statement": "Knowledge of AI testing, evaluation, verification, and validation (TEVV) methodology from a governance perspective, including test protocol design for high-risk systems, independent assessment requirements, real-world testing governance, and TEVV process effectiveness evaluation.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
     {
-      "ksa_id": "AG-K-025",
+      "ksa_id": "AG-K-019",
       "type": "Knowledge",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",

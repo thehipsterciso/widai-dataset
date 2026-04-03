@@ -45,23 +45,24 @@ Rich evidence base with multiple strong matches (DA-S-009 at 3 strong, DA-S-001 
 
 - DA domain total: 16+9+3+12 = 40 KSAs → 28+20+15+25 = 88 KSAs
 
-### Full AG Domain Expansion — All Four Dimensions
+### AG Domain Re-Synthesis — Evidence-Driven Deduplication
 
-**Complete cross-framework synthesis expansion for the AI Governance & Ethics domain.** All four KSA dimensions rebuilt using high watermark analysis across all 6 STRMs. Schema version 3.0.0 — clean break, no legacy_ids.
+**AG domain re-synthesized using correct evidence-driven methodology.** Each dimension received a dedicated synthesis analysis document before any JSON changes. Duplicate groups identified within Phase 1A baseline entries, post-STRM entries validated against framework evidence per ADR-014 Principle 5. Counts are OUTPUT of evidence analysis, not predetermined targets.
 
-**AG Knowledge: 14 → 25 KSAs**
-All 6 frameworks analyzed: DCWF (136 WIDAI-relevant), NICE (71), NIST AI RMF (57), EU AI Act (24), DDaT (23), O*NET (2). 11 new concept clusters: AI risk management roles and accountability structures, human-AI interaction governance, AI transparency and disclosure requirements, AI data governance requirements, AI conformity assessment and compliance lifecycle, AI risk measurement and quantification methods, AI supply chain risk management, AI incident management and regulatory reporting, AI system lifecycle governance, AI TEVV methodology (governance perspective), AI stakeholder engagement and community impact.
+**AG Knowledge: 25 → 19 KSAs**
+15,619 total mappings across 6 frameworks. 5 duplicate groups merged within Phase 1A baseline: explainability methods (K-001/K-012), governance structures (K-002/K-006), risk taxonomy (K-003/K-010), responsible AI principles (K-004/K-007), regulatory requirements triple merge (K-005/K-008/K-013). 3 Phase 1A preserved (K-009 AI literacy, K-011 fairness math, K-014 model risk). All 11 post-STRM entries validated. Synthesis doc: `docs/synthesis/AG-KNOWLEDGE-SYNTHESIS.md`.
 
-**AG Skills: 8 → 20 KSAs**
-Rich regulatory framework evidence — EU AI Act and NIST AI RMF contributed the strongest signals. 12 new skill clusters: regulatory-grade AI documentation, iterative AI risk assessment, post-market monitoring systems, AI quality management systems, AI incident management, third-party AI risk monitoring, AI risk tracking infrastructure, TEVV process effectiveness evaluation, stakeholder feedback mechanisms, fundamental rights impact assessment, transparency and accountability evaluation, AI system inventory and classification.
+**AG Skills: 20 → 19 KSAs**
+16,686 total mappings. 1 duplicate group merged: AI system documentation + regulatory-grade documentation (S-008/S-009). 8 Phase 1A entries had no internal duplicates. All 11 remaining post-STRM entries validated — strongest evidence: EUAIA-O-049 (0.7289) post-market monitoring, AIRMF-MG-2.4 (0.7174) feedback systems. Synthesis doc: `docs/synthesis/AG-SKILLS-SYNTHESIS.md`.
 
-**AG Abilities: 4 → 15 KSAs**
-3,839 total mappings across 6 frameworks. DCWF 136 WIDAI-relevant, NICE 71, NIST AI RMF 57, EU AI Act 24, DDaT 23, O*NET 2. Max STS 0.6888 (AIRMF-MS-4.2). 11 new ability clusters: multi-framework regulatory synthesis, quantitative measurement integration into governance, stakeholder conflict mediation, governance-operations divergence detection, second-order governance effect anticipation, governance framework adaptation, governance mechanism effectiveness evaluation, cross-functional governance coordination, governance rationale communication, governance continuity through organizational change, governance rigor-velocity balancing.
+**AG Abilities: 15 → 15 KSAs (validated, no changes)**
+3,839 total mappings. 4 Phase 1A entries — no duplicates. All 11 post-STRM entries validated. Abilities dimension consistently shows lower STS (max 0.6888) due to higher-order cognitive framing. Synthesis doc: `docs/synthesis/AG-ABILITIES-SYNTHESIS.md`.
 
-**AG Tasks: 11 → 25 KSAs**
-Richest evidence base: 11,745 total mappings. DCWF 445 WIDAI-relevant, NICE 237, NIST AI RMF 64, EU AI Act 49, DDaT 27, O*NET 3. Strongest hits: DCWF 5934 (automated T&E framework) at STS 0.7503, DCWF 5883 (AI workforce structure) at 0.7493, AIRMF-MG-1.4 (residual risk documentation) at 0.7926, AIRMF-MP-1.5 (organizational risk tolerance) at 0.7751. 14 new task clusters: governance review process operation, iterative lifecycle risk assessment, regulatory-grade documentation, post-market monitoring/surveillance, AI incident management, third-party AI risk assessment, TEVV governance, fundamental rights impact assessment, AI governance literacy/training, stakeholder engagement/feedback, conformity assessment, transparency/disclosure implementation, risk quantification/measurement, decommissioning governance.
+**AG Tasks: 25 → 23 KSAs**
+11,745 total mappings. 2 duplicate groups merged within Phase 1A baseline: AI system inventory establish + maintain (T-002/T-005), AI impact assessments (T-006/T-008 — T-008 superset). All 14 post-STRM entries validated. Strongest evidence: AIRMF-MG-1.4 (0.7926) residual risk documentation, AIRMF-MP-1.5 (0.7751) organizational risk tolerance. Synthesis doc: `docs/synthesis/AG-TASKS-SYNTHESIS.md`.
 
-- AG domain total: 14+8+4+11 = 37 KSAs → 25+20+15+25 = 85 KSAs
+- Added 4 synthesis analysis documents: `docs/synthesis/AG-{KNOWLEDGE,SKILLS,ABILITIES,TASKS}-SYNTHESIS.md`
+- AG domain total: 25+20+15+25 = 85 KSAs → 19+19+15+23 = 76 KSAs
 
 ### AI Domain Re-Synthesis — Evidence-Driven Deduplication
 
