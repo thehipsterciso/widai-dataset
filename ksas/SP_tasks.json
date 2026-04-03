@@ -1,0 +1,130 @@
+{
+  "dataset_id": "widai-sp-tasks",
+  "domain_code": "SP",
+  "domain_title": "Security & Privacy",
+  "type": "Task",
+  "count": 10,
+  "schema_version": "2.0.0",
+  "entries": [
+    {
+      "ksa_id": "SP-T-001",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Implement AI application security controls, including prompt injection defenses, output filtering, access controls, and audit logging.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "DEV-03.03-T-003"
+      ]
+    },
+    {
+      "ksa_id": "SP-T-002",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Maintain the records of processing activities (RoPA), ensuring accuracy, completeness, and currency for all personal data processing operations.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "DSM-04.04-T-001"
+      ]
+    },
+    {
+      "ksa_id": "SP-T-003",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Manage the data subject rights fulfillment process, including request intake, identity verification, fulfillment coordination, response delivery, and documentation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "DSM-04.04-T-002"
+      ]
+    },
+    {
+      "ksa_id": "SP-T-004",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Conduct DPIAs for new or materially changed data processing activities, documenting risks, mitigations, and residual risk acceptance decisions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "DSM-04.04-T-003"
+      ]
+    },
+    {
+      "ksa_id": "SP-T-005",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Establish, communicate, and enforce enterprise-wide data and AI policies covering quality, privacy, security, ethics, and responsible use.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-T-002"
+      ]
+    },
+    {
+      "ksa_id": "SP-T-006",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Monitor organizational compliance with data protection obligations, conduct internal audits of processing activities, maintain the register of processing activities, and report compliance posture to senior management and supervisory authorities as required.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.07-T-001"
+      ]
+    },
+    {
+      "ksa_id": "SP-T-007",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Serve as the designated point of contact for supervisory authorities and data subjects exercising their rights, managing inquiries, access requests, erasure requests, and complaints within statutory timeframes.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.07-T-002"
+      ]
+    },
+    {
+      "ksa_id": "SP-T-008",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Advise on data protection implications of new projects, systems, and processing activities, ensuring privacy considerations are integrated into design and procurement decisions before processing begins.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.07-T-003"
+      ]
+    },
+    {
+      "ksa_id": "SP-T-009",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Execute security testing for AI systems prior to production deployment, including adversarial robustness testing, prompt injection testing, and supply chain verification.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.02-T-002"
+      ]
+    },
+    {
+      "ksa_id": "SP-T-010",
+      "type": "Task",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Develop and maintain AI security standards for the enterprise, including training data provenance requirements, model registry controls, and LLM application security requirements.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.02-T-003"
+      ]
+    }
+  ]
+}

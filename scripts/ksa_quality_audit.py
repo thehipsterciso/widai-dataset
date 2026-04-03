@@ -34,12 +34,15 @@ class KSAQualityAudit:
     def load_data(self):
         """Load all KSA, mapping, and role data."""
         print("Loading KSA files...")
-        for ksa_file in sorted(self.ksas_dir.glob("*_ksas.json")):
-            category = ksa_file.stem.replace("_ksas", "")
-            with open(ksa_file) as f:
-                data = json.load(f)
-                self.all_ksas[category] = {ksa["ksa_id"]: ksa for ksa in data.get("ksas", [])}
-                self.categories.add(category)
+        for pattern in ["*_knowledge.json", "*_skills.json", "*_tasks.json", "*_abilities.json"]:
+            for ksa_file in sorted(self.ksas_dir.glob(pattern)):
+                category = ksa_file.stem.split("_")[0]
+                with open(ksa_file) as f:
+                    data = json.load(f)
+                    if category not in self.all_ksas:
+                        self.all_ksas[category] = {}
+                    self.all_ksas[category].update({ksa["ksa_id"]: ksa for ksa in data.get("entries", [])})
+                    self.categories.add(category)
 
         print("Loading role-KSA mapping files...")
         for mapping_file in sorted(self.mappings_dir.glob("role_ksa_*.json")):

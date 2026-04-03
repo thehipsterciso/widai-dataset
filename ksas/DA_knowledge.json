@@ -1,0 +1,202 @@
+{
+  "dataset_id": "widai-da-knowledge",
+  "domain_code": "DA",
+  "domain_title": "Data Architecture & Infrastructure",
+  "type": "Knowledge",
+  "count": 16,
+  "schema_version": "2.0.0",
+  "entries": [
+    {
+      "ksa_id": "DA-K-001",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of semantic layer design, including measure definition, dimension hierarchy design, slowly changing dimension handling, and the relationship between semantic model design and report performance.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ANL-05.03-K-002"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-002",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of data modeling techniques including conceptual, logical, and physical modeling, entity-relationship modeling, dimensional modeling, and data vault methodology.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.01-K-001"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-003",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of data platform architecture patterns, including data warehouse, data lake, data lakehouse, data mesh, and data fabric architectures, and the trade-offs each presents.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.01-K-002"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-004",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of data integration patterns including ETL, ELT, event streaming, CDC (change data capture), API-based integration, and data virtualization.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.01-K-003"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-005",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of data pipeline design patterns, including batch processing, streaming processing, micro-batch, and lambda and kappa architecture trade-offs.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.03-K-001"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-006",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of distributed data processing frameworks (e.g., Spark, Flink, Beam) and when each is appropriate for a given data volume, latency, and complexity requirement.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.03-K-002"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-007",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of data pipeline orchestration tools (e.g., Airflow, Prefect, Dagster) and how to design DAGs that are observable, recoverable, and maintainable.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.03-K-005"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-008",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of dimensional modeling principles, including star schema, snowflake schema, slowly changing dimensions, and the design trade-offs between normalization and query performance.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.04-K-001"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-009",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of dbt (data build tool) or equivalent transformation framework patterns, including model layering (staging, intermediate, mart), testing, documentation, and lineage generation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.04-K-002"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-010",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of metrics layer concepts, including semantic layer design, metric definition standards, and how centralized metric definitions prevent inconsistency across reporting tools.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.04-K-003"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-011",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of infrastructure-as-code principles and tooling (e.g., Terraform, Pulumi) as applied to data platform provisioning and configuration management.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.05-K-002"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-012",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of data platform security controls, including network isolation, encryption at rest and in transit, identity and access management, and audit logging.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.05-K-003"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-013",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of data pipeline orchestration tools and scheduling patterns, including dependency graph management, failure handling, retry strategies, idempotency requirements, and SLA-driven monitoring.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.07-K-002"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-014",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of vendor and third-party risk management as it applies to data platform providers, AI model suppliers, cloud infrastructure vendors, and data service providers.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "GOV-01.01-K-007"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-015",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of data pipeline monitoring concepts, including data freshness, volume anomalies, schema changes, job failure patterns, and the alerting systems used to detect each.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "OPS-07.04-K-001"
+      ]
+    },
+    {
+      "ksa_id": "DA-K-016",
+      "type": "Knowledge",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Knowledge of data platform access management processes, including access request intake, provisioning workflows, access review cycles, and deprovisioning procedures.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "OPS-07.04-K-002"
+      ]
+    }
+  ]
+}

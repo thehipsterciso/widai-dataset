@@ -1,0 +1,46 @@
+{
+  "dataset_id": "widai-da-abilities",
+  "domain_code": "DA",
+  "domain_title": "Data Architecture & Infrastructure",
+  "type": "Ability",
+  "count": 3,
+  "schema_version": "2.0.0",
+  "entries": [
+    {
+      "ksa_id": "DA-A-001",
+      "type": "Ability",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Ability to make defensible architectural decisions under uncertainty, documenting the rationale, rejected alternatives, and conditions that would trigger re-evaluation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.01-A-001"
+      ]
+    },
+    {
+      "ksa_id": "DA-A-002",
+      "type": "Ability",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Ability to diagnose and resolve data pipeline failures under time pressure, with clear incident documentation and root cause analysis.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.03-A-001"
+      ]
+    },
+    {
+      "ksa_id": "DA-A-003",
+      "type": "Ability",
+      "domain": "Data Architecture & Infrastructure",
+      "domain_code": "DA",
+      "statement": "Ability to identify and resolve metric inconsistency problems that arise when different teams define the same business concept differently in their own queries.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "ENG-02.04-A-001"
+      ]
+    }
+  ]
+}

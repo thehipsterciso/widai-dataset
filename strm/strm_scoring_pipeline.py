@@ -229,12 +229,15 @@ ELEMENT_LOADERS = {
 # ══════════════════════════════════════════════════════════════════
 
 def load_widai_ksas():
-    """Load all WIDAI KSAs from domain files."""
+    """Load all WIDAI KSAs from type-separated domain files."""
     all_ksas = []
-    for fp in sorted(glob.glob(os.path.join(KSA_DIR, "*_ksas.json"))):
+    for fp in sorted(glob.glob(os.path.join(KSA_DIR, "*_knowledge.json")) +
+                     glob.glob(os.path.join(KSA_DIR, "*_skills.json")) +
+                     glob.glob(os.path.join(KSA_DIR, "*_tasks.json")) +
+                     glob.glob(os.path.join(KSA_DIR, "*_abilities.json"))):
         with open(fp) as f:
             data = json.load(f)
-        for item in data["ksas"]:
+        for item in data["entries"]:
             all_ksas.append({
                 "id": item["ksa_id"],
                 "type": item["type"],

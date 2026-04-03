@@ -3,6 +3,17 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.6.1] - 2026-04-03
+
+### KSA Files Split by Type
+
+**Knowledge, Skills, Abilities, and Tasks now live in separate files per domain.** The 12 merged `{DOMAIN}_ksas.json` files are replaced by 48 type-separated files: `{DOMAIN}_knowledge.json`, `{DOMAIN}_skills.json`, `{DOMAIN}_tasks.json`, `{DOMAIN}_abilities.json`. Same 504 KSAs, same 12 domains, cleaner separation.
+
+- Schema key changed from `ksas` to `entries` in each file; `type` and `count` fields added to file-level metadata
+- Scoring pipeline (`strm_scoring_pipeline.py`) updated to load from new file structure
+- Quality audit script (`scripts/ksa_quality_audit.py`) updated to load from new file structure
+- No KSA content changed — IDs, statements, provenance all preserved
+
 ## [0.6.0] - 2026-04-03
 
 ### Domain-Exhaustive Reprocessing — All Six STRMs on Consolidated Pipeline

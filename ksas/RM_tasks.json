@@ -1,0 +1,106 @@
+{
+  "dataset_id": "widai-rm-tasks",
+  "domain_code": "RM",
+  "domain_title": "Risk Management",
+  "type": "Task",
+  "count": 8,
+  "schema_version": "2.0.0",
+  "entries": [
+    {
+      "ksa_id": "RM-T-001",
+      "type": "Task",
+      "domain": "Risk Management",
+      "domain_code": "RM",
+      "statement": "Develop and present executive-level data and AI strategy recommendations, including business case, risk assessment, and implementation sequencing rationale.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "LDR-08.04-T-002"
+      ]
+    },
+    {
+      "ksa_id": "RM-T-002",
+      "type": "Task",
+      "domain": "Risk Management",
+      "domain_code": "RM",
+      "statement": "Conduct threat model assessments for AI systems, identifying AI-specific attack surfaces, threat actors, and applicable mitigating controls.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.02-T-001"
+      ]
+    },
+    {
+      "ksa_id": "RM-T-003",
+      "type": "Task",
+      "domain": "Risk Management",
+      "domain_code": "RM",
+      "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.03-T-001"
+      ]
+    },
+    {
+      "ksa_id": "RM-T-004",
+      "type": "Task",
+      "domain": "Risk Management",
+      "domain_code": "RM",
+      "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.03-T-002"
+      ]
+    },
+    {
+      "ksa_id": "RM-T-005",
+      "type": "Task",
+      "domain": "Risk Management",
+      "domain_code": "RM",
+      "statement": "Operate continuous evaluation processes for deployed AI systems, monitoring for performance degradation, behavioral drift, and emerging failure modes.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.03-T-003"
+      ]
+    },
+    {
+      "ksa_id": "RM-T-006",
+      "type": "Task",
+      "domain": "Risk Management",
+      "domain_code": "RM",
+      "statement": "Establish and maintain the enterprise model inventory, ensuring all models \u2014 including AI/ML models, vendor models, and end-user computing models \u2014 are registered, tiered by risk, and subject to appropriate validation cadence.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.05-T-001"
+      ]
+    },
+    {
+      "ksa_id": "RM-T-007",
+      "type": "Task",
+      "domain": "Risk Management",
+      "domain_code": "RM",
+      "statement": "Conduct or oversee periodic model risk assessments, produce aggregate model risk reporting for senior management and the board, and ensure timely escalation of material model risk findings to appropriate governance bodies.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.05-T-002"
+      ]
+    },
+    {
+      "ksa_id": "RM-T-008",
+      "type": "Task",
+      "domain": "Risk Management",
+      "domain_code": "RM",
+      "statement": "Define and enforce model development standards, including documentation requirements, testing protocols, approval gates, ongoing monitoring expectations, and the criteria for model retirement or replacement.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.5.0",
+      "legacy_ids": [
+        "RSK-06.05-T-003"
+      ]
+    }
+  ]
+}

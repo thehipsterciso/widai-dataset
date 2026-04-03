@@ -62,7 +62,7 @@ WIDAI is a unified workforce framework that maps roles across the CDAIO domain, 
 ```
 widai-dataset/
 ├── roles/                    One file per category (GOV.json, ENG.json, etc.)
-├── ksas/                     Domain-based KSA pools (12 domains, many-to-many role mappings)
+├── ksas/                     Type-separated KSA pools (12 domains × 4 types: knowledge, skills, tasks, abilities)
 ├── frameworks/               Reference data for 70 source frameworks
 ├── mappings/                 Relationship tables (role↔KSA, role↔framework)
 ├── sources/                  Canonical source citations and raw framework data
