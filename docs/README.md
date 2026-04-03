@@ -53,7 +53,7 @@ WIDAI is a unified workforce framework that maps roles across the CDAIO domain, 
 
 ### Synthesis
 
-**[AB Knowledge Synthesis](../strm/AB-KNOWLEDGE-SYNTHESIS.md)** — First cross-framework synthesis for a single domain×dimension. 7,874 mappings across 6 frameworks analyzed for 10 AB Knowledge KSAs. Evidence matrix, gap analysis, near-miss analysis, and 5 candidate new KSAs.
+**[AB Knowledge Synthesis](../strm/AB-KNOWLEDGE-SYNTHESIS.md)** — Cross-framework synthesis for the AB Knowledge dimension. 7,874 mappings across 6 frameworks analyzed, leading to expansion from 10 → 29 KSAs. See also [Expansion Proposal](../strm/AB-KNOWLEDGE-EXPANSION-PROPOSAL.md) for the full high watermark analysis and concept clustering methodology.
 
 ### STRM Framework Mappings
 

@@ -3,6 +3,18 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.7.0] - 2026-04-03
+
+### AB Knowledge Expansion — 10 → 29 KSAs
+
+**First domain×dimension through the cross-framework synthesis expansion process.** AB Knowledge KSAs rebuilt from scratch using high watermark analysis across all 6 STRMs. NICE (128 analytics-relevant K-elements) and DCWF (122) provided the evidence base. 29 distinct knowledge concept clusters identified after filtering, deduplication, and domain boundary enforcement.
+
+- Schema version bumped to 3.0.0 — `legacy_ids` field removed, clean break from pre-synthesis IDs
+- 9 concept groups: Statistical Foundations (4), Analytical Methods (5), Causal & Experimental (3), Visualization & Communication (3), BI Platforms & Architecture (3), BI Governance (2), Monitoring & Measurement (3), Embedded & Advanced Analytics (3), Analytics Ethics & Decision Science (3)
+- Added analysis scripts: `ab_k_highwater.py`, `ab_k_concept_cluster.py`, `ab_k_relevant_concepts.py`
+- Added expansion proposal: `strm/AB-KNOWLEDGE-EXPANSION-PROPOSAL.md`
+- This process becomes the standard methodology for expanding all domains across all dimensions (Knowledge, Skills, Abilities, Tasks)
+
 ## [0.6.2] - 2026-04-03
 
 ### AB Knowledge Domain — Cross-Framework Synthesis (First Domain MVP)

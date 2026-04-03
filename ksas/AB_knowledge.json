@@ -3,8 +3,8 @@
   "domain_code": "AB",
   "domain_title": "Analytics & BI",
   "type": "Knowledge",
-  "count": 10,
-  "schema_version": "2.0.0",
+  "count": 29,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "AB-K-001",
@@ -13,116 +13,259 @@
       "domain_code": "AB",
       "statement": "Knowledge of descriptive statistics, including measures of central tendency, dispersion, distribution shape, and correlation, and how to interpret each in a business context.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.01-K-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-K-002",
       "type": "Knowledge",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Knowledge of data visualization best practices, including chart type selection, cognitive load principles, color accessibility, and the difference between exploratory and explanatory visualization.",
+      "statement": "Knowledge of inferential statistics, including hypothesis testing, confidence intervals, p-values, effect sizes, and the distinction between statistical significance and practical significance.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.01-K-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-K-003",
       "type": "Knowledge",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Knowledge of common analytical frameworks, including cohort analysis, funnel analysis, segmentation, time series analysis, and A/B test result interpretation.",
+      "statement": "Knowledge of probability theory and distributions, including common parametric and non-parametric distributions, their properties, and selection criteria for modeling business phenomena.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.01-K-004"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-K-004",
       "type": "Knowledge",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Knowledge of advanced analytical methods including multivariate regression, time series forecasting, clustering, cohort analysis, and experimental design.",
+      "statement": "Knowledge of sampling methodology, including probability and non-probability sampling designs, sample size determination, margin of error calculation, and the impact of sampling choices on inference validity.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.02-K-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-K-005",
       "type": "Knowledge",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Knowledge of A/B testing and experimentation design, including sample size calculation, randomization methods, guardrail metric selection, and statistical significance interpretation.",
+      "statement": "Knowledge of common analytical frameworks, including cohort analysis, funnel analysis, segmentation, time series decomposition, and root cause analysis, and when to apply each to business questions.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.02-K-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-K-006",
       "type": "Knowledge",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Knowledge of BI platform capabilities (e.g., Power BI, Tableau, Looker, MicroStrategy) including data model design, calculated field logic, performance optimization, and security implementation.",
+      "statement": "Knowledge of regression methods, including ordinary least squares, generalized linear models, mixed effects models, and regularization approaches, and their assumptions and diagnostic procedures.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.03-K-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-K-007",
       "type": "Knowledge",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Knowledge of BI governance practices, including report certification, content lifecycle management, access control, and version control for BI assets.",
+      "statement": "Knowledge of time series forecasting methods, including ARIMA, exponential smoothing, seasonal decomposition, and the evaluation of forecast accuracy, and how to communicate forecast uncertainty to business stakeholders.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.03-K-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-K-008",
       "type": "Knowledge",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Knowledge of statistical modeling methods including regression modeling (OLS, GLM, mixed effects), survival analysis, Bayesian modeling, and simulation methods.",
+      "statement": "Knowledge of clustering and segmentation methods, including k-means, hierarchical clustering, DBSCAN, and latent class analysis, and how to validate and interpret cluster solutions for business application.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.04-K-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-K-009",
       "type": "Knowledge",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Knowledge of causal inference methods, including difference-in-differences, instrumental variables, regression discontinuity, propensity score matching, and their identification assumptions.",
+      "statement": "Knowledge of multivariate analysis techniques, including principal component analysis, factor analysis, and discriminant analysis, and their application to dimensionality reduction and variable selection.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.04-K-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-K-010",
       "type": "Knowledge",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Knowledge of embedded analytics and augmented analytics concepts, including AI-assisted insight generation, natural language querying, automated anomaly detection, and their impact on self-service BI adoption.",
+      "statement": "Knowledge of A/B testing and experimentation design, including sample size calculation, randomization methods, guardrail metric selection, and statistical significance interpretation.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-011",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of causal inference methods, including difference-in-differences, instrumental variables, regression discontinuity, and propensity score matching, and the identification assumptions each requires.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-012",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of advanced experimentation approaches, including multi-armed bandits, Bayesian optimization, sequential testing, and switchback designs, and when each is preferred over classical A/B testing.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-013",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of data visualization best practices, including chart type selection, cognitive load principles, color accessibility, and the difference between exploratory and explanatory visualization.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-014",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of data storytelling principles, including narrative structure for analytical findings, audience-appropriate framing, the use of context and comparison to drive interpretation, and the distinction between informing and persuading with data.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-015",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of dashboard design principles, including information hierarchy, interactive filtering patterns, real-time vs. batch refresh trade-offs, and the design of self-service analytical experiences.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-016",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of BI platform capabilities and architecture, including data connectivity, semantic layer design, calculated field logic, and the trade-offs between different platform approaches (e.g., Power BI, Tableau, Looker, MicroStrategy).",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-017",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of BI performance optimization, including query tuning, data model design patterns (star schema, snowflake, wide table), incremental refresh strategies, and aggregation table design.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-018",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of semantic layer and metrics layer architecture, including centralized metric definitions, dimension modeling, and the role of metrics stores in ensuring analytical consistency across an organization.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-019",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of BI governance practices, including report certification, content lifecycle management, access control, and version control for BI assets.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-020",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of data literacy program design, including analytical skill assessment, tiered training approaches, self-service enablement strategies, and the organizational change management required to build data-driven decision cultures.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-021",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of metrics and KPI design, including leading vs. lagging indicators, metric decomposition trees, measurement validity and reliability, and the governance of metric definitions across business units.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-022",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of anomaly detection methods for business data, including statistical process control, change point detection, and automated alerting threshold design, and how to distinguish signal from noise in operational metrics.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-023",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of data profiling and data quality assessment methods, including completeness, consistency, timeliness, and accuracy measurement, and how data quality impacts analytical validity and business decisions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-024",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of embedded analytics patterns, including in-application analytics, programmatic report distribution, analytics APIs, and the design considerations for embedding analytical capabilities into operational workflows.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-025",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of augmented analytics capabilities, including AI-assisted insight generation, natural language querying, automated anomaly detection, and their impact on self-service BI adoption and analytical workflow.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-026",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of geospatial analytics concepts, including spatial data types, geocoding, spatial joins, choropleth and heat map design, and the integration of location intelligence into business analysis.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-027",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of analytical bias types, including selection bias, survivorship bias, confirmation bias, and Simpson's paradox, and how each manifests in business analytics and can mislead decision-making.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-028",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of responsible analytics practices, including the ethical use of behavioral data, privacy-preserving analytical methods (k-anonymity, differential privacy), and the organizational obligation to communicate analytical uncertainty and limitations.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-K-029",
+      "type": "Knowledge",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Knowledge of decision science concepts, including decision frameworks under uncertainty, cost-benefit and trade-off analysis, scenario modeling, and the role of analytical evidence in organizational decision-making processes.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
     }
   ]
 }
