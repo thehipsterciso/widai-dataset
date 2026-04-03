@@ -3,104 +3,80 @@
   "domain_code": "AB",
   "domain_title": "Analytics & BI",
   "type": "Task",
-  "count": 11,
-  "schema_version": "2.0.0",
+  "count": 30,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "AB-T-001",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Execute analytical requests from business stakeholders, including data extraction, transformation, analysis, and delivery of findings with documented methodology.",
+      "statement": "Execute analytical requests from business stakeholders, including scoping the question, selecting methodology, performing analysis, and delivering findings with documented assumptions and limitations.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.01-T-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-002",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Build and maintain self-service reports and dashboards that enable business stakeholders to monitor KPIs and explore data without analyst intervention.",
+      "statement": "Extract and collect data from relational databases, APIs, data warehouses, and external sources, writing and optimizing queries to support analytical workflows.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.01-T-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-003",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Document analytical methodologies, data sources, business rules, and known data limitations for all recurring analyses and reports.",
+      "statement": "Transform, clean, and prepare data for analysis, including joining disparate sources, handling missing values, normalizing formats, and validating data integrity before analytical use.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.01-T-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-004",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Lead complex cross-functional analytical projects, coordinating data access, methodology alignment, and stakeholder communication across business units.",
+      "statement": "Perform exploratory data analysis to identify distributions, outliers, patterns, and relationships that inform hypothesis generation and methodology selection.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.02-T-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-005",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Design and analyze controlled experiments (A/B tests), including hypothesis specification, randomization oversight, results interpretation, and recommendation delivery.",
+      "statement": "Build and validate statistical models for business applications, including model specification, parameter estimation, diagnostic evaluation, and performance assessment against business criteria.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.02-T-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-006",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Design, build, and publish BI dashboards and reports that meet defined consumer requirements for content, performance, accessibility, and refresh frequency.",
+      "statement": "Design and analyze controlled experiments, including hypothesis specification, sample size calculation, randomization oversight, results interpretation, and recommendation delivery.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.03-T-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-007",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Maintain and optimize existing BI assets, including performance tuning, data model updates, and deprecation of unused content.",
+      "statement": "Execute segmentation analyses that produce actionable customer, product, or operational groupings, including cluster validation and segment profiling for business use.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.03-T-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-008",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Manage BI platform governance, including report certification workflows, access control maintenance, and content lifecycle reviews.",
+      "statement": "Perform time series analysis and forecasting, including trend identification, seasonality decomposition, model fitting, accuracy evaluation, and communication of forecast uncertainty.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.03-T-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-009",
@@ -109,34 +85,196 @@
       "domain_code": "AB",
       "statement": "Design and execute quantitative analyses for high-stakes business decisions, including methodology selection, sensitivity analysis, and uncertainty quantification.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.04-T-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-010",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Produce analytical documentation that meets the evidence standard required for regulatory, audit, or executive decision support contexts.",
+      "statement": "Perform cost-benefit and trade-off analyses that quantify competing options and present decision-relevant comparisons to stakeholders.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.04-T-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-T-011",
       "type": "Task",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Monitor data pipeline health dashboards and respond to alerts per defined runbooks, including initial triage, escalation when needed, and incident documentation.",
+      "statement": "Conduct market research and competitive analysis using quantitative and qualitative methods, including survey design, secondary data analysis, and synthesis of findings into strategic recommendations.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "OPS-07.04-T-001"
-      ]
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-012",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Perform geospatial analysis, including spatial joins, distance calculations, area aggregations, and presentation of location-based findings through maps and spatial visualizations.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-013",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Build data visualizations that accurately represent analytical findings, selecting appropriate chart types and applying design principles that minimize misinterpretation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-014",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Design, build, and publish BI dashboards and reports that meet defined consumer requirements for content, layout, performance, accessibility, and refresh frequency.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-015",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Build and maintain self-service analytical experiences that enable business stakeholders to monitor KPIs and explore data without analyst intervention.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-016",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Design and maintain BI semantic models, including star schema construction, measure definition, hierarchy design, and optimization for query performance.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-017",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Maintain and optimize existing BI assets, including performance tuning, data model updates, incremental refresh configuration, and deprecation of unused content.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-018",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Construct data narratives that translate analytical findings into business context, structuring presentations with appropriate evidence and detail calibrated to the audience.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-019",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Communicate analytical findings to executive stakeholders, demonstrating how data and analytics initiatives address organizational challenges and inform strategic decisions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-020",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Document analytical methodologies, data sources, business rules, transformation logic, and known data limitations for all recurring analyses and reports.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-021",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Produce analytical documentation that meets the evidence standard required for regulatory, audit, or executive decision support contexts.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-022",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Define and govern metrics and KPI definitions, including measurement methodology, ownership, refresh cadence, and consistency of interpretation across business units.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-023",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Perform data profiling and quality assessment, including completeness checks, consistency validation, accuracy measurement, and documentation of data quality impacts on analytical conclusions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-024",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Manage BI platform governance, including report certification workflows, access control maintenance, content lifecycle reviews, and version control for BI assets.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-025",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Monitor data pipeline and analytical system health dashboards, respond to alerts per defined runbooks, perform initial triage, escalate when needed, and document incidents.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-026",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Implement and maintain automated tests for data pipelines and analytical outputs, including unit tests for transformations, integration tests for end-to-end flows, and regression tests for key metrics.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-027",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Lead complex cross-functional analytical projects, coordinating data access, methodology alignment, stakeholder communication, and deliverable scheduling across business units.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-028",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Gather and translate stakeholder analytical requirements into technical specifications, prototyping analytical solutions iteratively and validating outputs against business needs.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-029",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Mentor junior analysts through code and methodology review, feedback delivery, and progressive skill development aligned to analytical competency expectations.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-T-030",
+      "type": "Task",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Evaluate the impact of regulatory, policy, or procedural changes on analytical operations and reporting requirements, updating processes and documentation accordingly.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
     }
   ]
 }

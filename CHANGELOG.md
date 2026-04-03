@@ -5,15 +5,27 @@ This project uses [Semantic Versioning](https://semver.org/).
 
 ## [0.7.0] - 2026-04-03
 
-### AB Knowledge Expansion — 10 → 29 KSAs
+### Full AB Domain Expansion — All Four Dimensions
 
-**First domain×dimension through the cross-framework synthesis expansion process.** AB Knowledge KSAs rebuilt from scratch using high watermark analysis across all 6 STRMs. NICE (128 analytics-relevant K-elements) and DCWF (122) provided the evidence base. 29 distinct knowledge concept clusters identified after filtering, deduplication, and domain boundary enforcement.
+**Complete cross-framework synthesis expansion for the Analytics & BI domain.** All four KSA dimensions rebuilt from scratch using high watermark analysis across all 6 STRMs. Schema version 3.0.0 — clean break, no legacy_ids.
 
-- Schema version bumped to 3.0.0 — `legacy_ids` field removed, clean break from pre-synthesis IDs
-- 9 concept groups: Statistical Foundations (4), Analytical Methods (5), Causal & Experimental (3), Visualization & Communication (3), BI Platforms & Architecture (3), BI Governance (2), Monitoring & Measurement (3), Embedded & Advanced Analytics (3), Analytics Ethics & Decision Science (3)
+**AB Knowledge: 10 → 29 KSAs**
+NICE (128 analytics-relevant K-elements) and DCWF (122) provided the evidence base. 9 concept groups: Statistical Foundations (4), Analytical Methods (5), Causal & Experimental (3), Visualization & Communication (3), BI Platforms & Architecture (3), BI Governance (2), Monitoring & Measurement (3), Embedded & Advanced Analytics (3), Analytics Ethics & Decision Science (3).
+
+**AB Skills: 10 → 25 KSAs**
+NICE (378 analytics-relevant elements) and DCWF (630) at STS >= 0.50. Richer evidence base than Knowledge — some strong matches present. Covers: requirements translation, querying/extraction, data prep, EDA, regression, statistical modeling, segmentation, experimentation, time series, multi-source synthesis, visualization, dashboards, semantic models, data storytelling, documentation, study design, project management, trade-off analysis, pipeline testing, monitoring/alerting, data profiling, market research, mentoring, design thinking, geospatial.
+
+**AB Abilities: 4 → 15 KSAs**
+NICE (97 analytics-relevant elements) and DCWF (172) at STS >= 0.50. Thinner evidence than Skills/Knowledge but clear concept gaps in the original 4 entries. AB-A-004 dominated with 3 strong matches (max STS 0.7377). Expanded to cover: analytical judgment under uncertainty, method selection, correlation vs. causation reasoning, critical thinking/pattern recognition, evidence synthesis, data quality assessment, translating findings to action, cost-benefit reasoning, scope definition, model assessment, bias recognition, cross-functional collaboration, analytical standards, sensitivity/scenario analysis.
+
+**AB Tasks: 11 → 30 KSAs**
+Richest evidence base: 7,694 total mappings, NICE (143 analytics-relevant) and DCWF (327) at STS >= 0.50. Two strong matches present (max STS 0.7294). Expanded to cover the full analytical task lifecycle: extraction, transformation, EDA, modeling, experimentation, segmentation, forecasting, high-stakes analysis, cost-benefit analysis, market research, geospatial, visualization, dashboards, self-service BI, semantic models, BI maintenance, data storytelling, executive communication, methodology documentation, regulatory documentation, metric governance, data profiling, BI governance, pipeline monitoring, automated testing, project leadership, requirements gathering, mentoring, regulatory impact assessment.
+
+- Added reusable synthesis script: `scripts/ab_dimension_synthesis.py` (takes `--dimension` argument for skills, abilities, tasks)
 - Added analysis scripts: `ab_k_highwater.py`, `ab_k_concept_cluster.py`, `ab_k_relevant_concepts.py`
 - Added expansion proposal: `strm/AB-KNOWLEDGE-EXPANSION-PROPOSAL.md`
-- This process becomes the standard methodology for expanding all domains across all dimensions (Knowledge, Skills, Abilities, Tasks)
+- AB domain total: 10+10+4+11 = 35 KSAs → 29+25+15+30 = 99 KSAs
+- This process becomes the standard methodology for expanding all 12 domains across all 4 dimensions
 
 ## [0.6.2] - 2026-04-03
 

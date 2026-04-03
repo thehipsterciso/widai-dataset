@@ -3,18 +3,17 @@
   "domain_code": "AB",
   "domain_title": "Analytics & BI",
   "type": "Ability",
-  "count": 4,
-  "schema_version": "2.0.0",
+  "count": 15,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "AB-A-001",
       "type": "Ability",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Ability to identify and communicate when analytical findings challenge prevailing business narratives, presenting disconfirming evidence constructively and with appropriate context.",
+      "statement": "Ability to identify and communicate when analytical findings challenge prevailing business narratives, presenting disconfirming evidence constructively and with appropriate context for the audience.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-A-002",
@@ -23,8 +22,7 @@
       "domain_code": "AB",
       "statement": "Ability to select the appropriate analytical method for a given business question, balancing statistical rigor, time constraints, data availability, and audience comprehension capacity.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-A-003",
@@ -33,19 +31,115 @@
       "domain_code": "AB",
       "statement": "Ability to distinguish between correlation and causation in analytical findings, communicating the distinction and its implications for decision-making clearly to business audiences.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AB-A-004",
       "type": "Ability",
       "domain": "Analytics & BI",
       "domain_code": "AB",
-      "statement": "Ability to exercise structured judgment in data-informed decision-making, weighing quantitative evidence against qualitative context, assessing relative costs and benefits of analytical approaches, and recommending actions when data is incomplete or ambiguous.",
+      "statement": "Ability to exercise structured judgment in data-informed decision-making, weighing quantitative evidence against qualitative context and recommending actions when data is incomplete or ambiguous.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.8",
-      "legacy_ids": [],
-      "strm_gap_source": "STRM-001-ONET: O*NET 2.B.4.e (Judgment and Decision Making) \u2014 STS 0.406 to AB-A-002"
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-005",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to recognize patterns and relationships across seemingly unrelated data sets, applying critical thinking to identify organizational, operational, or market dynamics that are not immediately apparent.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-006",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to synthesize analytical findings from multiple data sources, methods, and frameworks into a coherent and prioritized set of conclusions that support decision-making.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-007",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to assess data source quality, including relevance, reliability, completeness, and objectivity, and to determine how data limitations affect the validity of analytical conclusions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-008",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to translate analytical findings into actionable business recommendations, calibrating the level of detail, certainty language, and supporting evidence to the needs and decision authority of the audience.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-009",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to perform cost-benefit and trade-off reasoning across competing analytical approaches or business options, quantifying relative advantages under conditions of uncertainty.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-010",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to define analytical scope and information requirements for a given business problem, determining the appropriate level of rigor, depth, and resource allocation before analysis begins.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-011",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to evaluate the predictive power, generalizability, and business applicability of analytical models, distinguishing between statistical fit and practical value.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-012",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to recognize analytical bias in data, methods, and interpretation, including selection bias, survivorship bias, and confirmation bias, and to apply appropriate mitigation strategies.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-013",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to collaborate effectively across functional boundaries, translating analytical concepts for non-technical stakeholders and integrating domain expertise from business partners into analytical work.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-014",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to apply analytical standards and quality frameworks to evaluate the rigor, reproducibility, and defensibility of analytical outputs before they inform business decisions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AB-A-015",
+      "type": "Ability",
+      "domain": "Analytics & BI",
+      "domain_code": "AB",
+      "statement": "Ability to perform sensitivity and scenario analysis, systematically varying assumptions and inputs to understand how changes in conditions affect analytical conclusions and business outcomes.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
     }
   ]
 }

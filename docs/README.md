@@ -102,7 +102,7 @@ All four validation tests passed. Go decision for Phase 1.
 | 1A — Baseline KSA Enrichment | Complete | KSA pool expanded across all 12 domains. Abilities coverage gap closed. |
 | 1B — Framework Prioritization | Complete | 34 STRM-eligible frameworks identified. 4-tier execution sequence. |
 | 1C — Per-Framework STRM Cycle | In Progress | Tier 1 complete (4 frameworks). Tier 2: 2 of 5 complete (EU AI Act, NIST AI RMF). All 6 STRMs reprocessed through consolidated domain-exhaustive pipeline — 2.76M pairs scored, 536,737 rationale files. See STRM progress below. |
-| 1D — Synthesis | In Progress | First domain×dimension complete: AB Knowledge. 7,874 mappings across 6 frameworks. See `strm/AB-KNOWLEDGE-SYNTHESIS.md`. |
+| 1D — Synthesis | In Progress | First domain complete: AB (Analytics & BI) — all 4 dimensions expanded (K: 10→29, S: 10→25, A: 4→15, T: 11→30 = 99 KSAs). 7,874+ mappings per dimension across 6 frameworks. See `strm/AB-KNOWLEDGE-SYNTHESIS.md`. |
 
 ### STRM Framework Progress
 
