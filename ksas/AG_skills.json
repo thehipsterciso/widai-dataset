@@ -3,8 +3,8 @@
   "domain_code": "AG",
   "domain_title": "AI Governance & Ethics",
   "type": "Skill",
-  "count": 8,
-  "schema_version": "2.0.0",
+  "count": 20,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "AG-S-001",
@@ -13,10 +13,7 @@
       "domain_code": "AG",
       "statement": "Skill in designing and operating enterprise data and AI governance councils, including role definition, decision rights, escalation paths, and policy enforcement mechanisms.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.01-S-003"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AG-S-002",
@@ -25,10 +22,7 @@
       "domain_code": "AG",
       "statement": "Skill in designing AI governance frameworks that address the full AI lifecycle from procurement or build through development, testing, deployment, monitoring, and retirement.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.03-S-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AG-S-003",
@@ -37,10 +31,7 @@
       "domain_code": "AG",
       "statement": "Skill in constructing and communicating AI risk assessments to non-technical executive and board audiences using business risk framing and financial impact language.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.03-S-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AG-S-004",
@@ -49,10 +40,7 @@
       "domain_code": "AG",
       "statement": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.05-S-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AG-S-005",
@@ -61,11 +49,7 @@
       "domain_code": "AG",
       "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.05-S-001",
-        "RSK-06.01-S-001"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AG-S-006",
@@ -74,10 +58,7 @@
       "domain_code": "AG",
       "statement": "Skill in designing and executing bias audits for AI systems, including test dataset construction, metric selection, results interpretation, and remediation recommendation.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "RSK-06.01-S-002"
-      ]
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AG-S-007",
@@ -86,8 +67,7 @@
       "domain_code": "AG",
       "statement": "Skill in designing human oversight mechanisms for AI-assisted decision-making, including escalation triggers, override procedures, human-in-the-loop protocols, and meaningful human control verification.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AG-S-008",
@@ -96,8 +76,115 @@
       "domain_code": "AG",
       "statement": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-009",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in producing regulatory-grade AI system documentation, including technical specifications, risk management records, conformity assessment evidence, and instructions-for-use documentation that meets EU AI Act and NIST AI RMF standards.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-010",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in conducting iterative AI risk assessment across the system lifecycle, including risk identification, impact analysis, likelihood estimation, residual risk documentation, and the design of proportionate mitigation measures.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-011",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in designing and operating AI post-market monitoring systems, including performance surveillance, risk signal identification, deployer data integration, and trigger criteria for corrective action.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-012",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in designing and implementing AI quality management systems, including regulatory compliance strategy, design control processes, testing protocols, and continuous improvement mechanisms that satisfy conformity assessment requirements.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-013",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in managing AI system incidents, including serious incident identification, root cause analysis, corrective action implementation, and mandatory regulatory reporting under applicable AI regulation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-014",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in monitoring and controlling third-party AI risks, including vendor assessment, pre-trained model evaluation, dependency tracking, contract management for AI components, and contingency planning for service disruption.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-015",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in establishing and maintaining AI risk tracking infrastructure, including designing approaches for identifying existing and emerging risks, developing proxy indicators for unmeasurable risks, and integrating risk signals into governance workflows.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-016",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in evaluating AI testing, evaluation, verification, and validation (TEVV) process effectiveness, including assessing whether testing approaches produce actionable results, identifying methodology gaps, and recommending process improvements.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-017",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in designing and operating stakeholder feedback and engagement mechanisms for AI governance, including establishing adjudication processes for conflicting stakeholder input, incorporating feedback into governance decisions, and maintaining community reporting channels.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-018",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in conducting fundamental rights impact assessments for AI systems, including methodology selection, rights identification, disproportionate impact analysis, and integration of assessment findings into deployment decisions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-019",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in evaluating AI transparency and accountability mechanisms, including assessing explainability adequacy, accountability chain completeness, disclosure compliance, and the alignment of transparency measures with regulatory requirements and user needs.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AG-S-020",
+      "type": "Skill",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Skill in designing and maintaining AI system inventory and classification mechanisms, including cataloging deployed systems, tracking risk classifications and lifecycle status, and supporting organizational visibility into AI system deployment.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
     }
   ]
 }

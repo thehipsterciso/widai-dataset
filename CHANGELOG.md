@@ -27,6 +27,24 @@ Richest evidence base: 7,694 total mappings, NICE (143 analytics-relevant) and D
 - AB domain total: 10+10+4+11 = 35 KSAs → 29+25+15+30 = 99 KSAs
 - This process becomes the standard methodology for expanding all 12 domains across all 4 dimensions
 
+### Full AG Domain Expansion — All Four Dimensions
+
+**Complete cross-framework synthesis expansion for the AI Governance & Ethics domain.** All four KSA dimensions rebuilt using high watermark analysis across all 6 STRMs. Schema version 3.0.0 — clean break, no legacy_ids.
+
+**AG Knowledge: 14 → 25 KSAs**
+All 6 frameworks analyzed: DCWF (136 WIDAI-relevant), NICE (71), NIST AI RMF (57), EU AI Act (24), DDaT (23), O*NET (2). 11 new concept clusters: AI risk management roles and accountability structures, human-AI interaction governance, AI transparency and disclosure requirements, AI data governance requirements, AI conformity assessment and compliance lifecycle, AI risk measurement and quantification methods, AI supply chain risk management, AI incident management and regulatory reporting, AI system lifecycle governance, AI TEVV methodology (governance perspective), AI stakeholder engagement and community impact.
+
+**AG Skills: 8 → 20 KSAs**
+Rich regulatory framework evidence — EU AI Act and NIST AI RMF contributed the strongest signals. 12 new skill clusters: regulatory-grade AI documentation, iterative AI risk assessment, post-market monitoring systems, AI quality management systems, AI incident management, third-party AI risk monitoring, AI risk tracking infrastructure, TEVV process effectiveness evaluation, stakeholder feedback mechanisms, fundamental rights impact assessment, transparency and accountability evaluation, AI system inventory and classification.
+
+**AG Abilities: 4 → 15 KSAs**
+3,839 total mappings across 6 frameworks. DCWF 136 WIDAI-relevant, NICE 71, NIST AI RMF 57, EU AI Act 24, DDaT 23, O*NET 2. Max STS 0.6888 (AIRMF-MS-4.2). 11 new ability clusters: multi-framework regulatory synthesis, quantitative measurement integration into governance, stakeholder conflict mediation, governance-operations divergence detection, second-order governance effect anticipation, governance framework adaptation, governance mechanism effectiveness evaluation, cross-functional governance coordination, governance rationale communication, governance continuity through organizational change, governance rigor-velocity balancing.
+
+**AG Tasks: 11 → 25 KSAs**
+Richest evidence base: 11,745 total mappings. DCWF 445 WIDAI-relevant, NICE 237, NIST AI RMF 64, EU AI Act 49, DDaT 27, O*NET 3. Strongest hits: DCWF 5934 (automated T&E framework) at STS 0.7503, DCWF 5883 (AI workforce structure) at 0.7493, AIRMF-MG-1.4 (residual risk documentation) at 0.7926, AIRMF-MP-1.5 (organizational risk tolerance) at 0.7751. 14 new task clusters: governance review process operation, iterative lifecycle risk assessment, regulatory-grade documentation, post-market monitoring/surveillance, AI incident management, third-party AI risk assessment, TEVV governance, fundamental rights impact assessment, AI governance literacy/training, stakeholder engagement/feedback, conformity assessment, transparency/disclosure implementation, risk quantification/measurement, decommissioning governance.
+
+- AG domain total: 14+8+4+11 = 37 KSAs → 25+20+15+25 = 85 KSAs
+
 ### Full AI Domain Expansion — All Four Dimensions
 
 **Complete cross-framework synthesis expansion for the AI/ML Foundations domain.** All four KSA dimensions rebuilt using high watermark analysis across all 6 STRMs. Schema version 3.0.0 — clean break, no legacy_ids.
