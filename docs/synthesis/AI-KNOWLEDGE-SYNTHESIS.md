@@ -1,134 +1,276 @@
-# AI Knowledge — Phase 1D Synthesis Analysis
+# AI/ML Foundations — Knowledge Dimension Synthesis
 
-**Domain:** AI/ML Foundations (AI)
-**Dimension:** Knowledge
-**Date:** 2026-04-03
-**Pre-synthesis count:** 40 (29 Phase 1A baseline + 11 post-STRM additions)
-**Post-synthesis count:** 34
+**Domain**: AI (AI/ML Foundations)
+**Dimension**: Knowledge
+**Date**: 2026-04-03
+**Schema**: 3.0.0
+**Starting count**: 34 (AI-K-001 through AI-K-034)
+
+---
 
 ## Evidence Summary
 
-- **Total mappings:** 23,238 across 6 frameworks
-- **Phase 1A entries (K-001 to K-029):** All have STRM evidence (1/6 to 6/6 coverage)
-- **Post-STRM entries (K-030 to K-040):** 0/6 coverage (added after STRM runs)
+| Metric | Value |
+|--------|-------|
+| Total STRM mappings | 23,238 |
+| Framework elements at STS ≥ 0.50 | 223 |
+| Framework elements at STS ≥ 0.55 | 173 |
+| Framework elements at STS ≥ 0.60 | 136 |
+| Phase 1A entries (with STRM evidence) | 29 (K-001 through K-029) |
+| Post-STRM entries (zero evidence) | 5 (K-030 through K-034) |
 
-### High Watermark (unique FDE count at STS thresholds)
+### Framework Coverage (unique FDEs at STS ≥ 0.60)
 
-| Framework | >=0.45 | >=0.50 | >=0.55 | >=0.60 |
-|-----------|--------|--------|--------|--------|
-| O*NET 30.2 | 16 | 9 | 3 | 1 |
-| NIST NICE v2.1.0 | — | 329 WIDAI-relevant | — | — |
-| DoD DCWF v5.1 | — | 438 WIDAI-relevant | — | — |
-| DDaT | — | 26 WIDAI-relevant | — | — |
-| EU AI Act | — | 30 WIDAI-relevant | — | — |
-| NIST AI RMF 1.0 | — | 52 WIDAI-relevant | — | — |
+| Framework | Count |
+|-----------|-------|
+| NIST NICE v2.1.0 | 123 |
+| DoD DCWF v5.1 | 121 |
+| NIST AI RMF 1.0 | 12 |
+| EU AI Act | 4 |
+| O*NET 30.2 | 1 |
+| DDaT | 1 |
 
-### Strongest STRM Hits
+### Entry Evidence Matrix (Phase 1A entries)
 
-| Entry | Strong | Max STS | Top framework evidence |
-|-------|--------|---------|----------------------|
-| AI-K-029 | 3 | 0.7249 | DCWF [3397] AI capabilities, [5909] AI limitations |
-| AI-K-027 | 2 | 0.7244 | DCWF [5915] latest ML/AI tools, [7049] latest AI tools |
-| AI-K-024 | 1 | 0.7182 | AIRMF-MG-3.2 pre-trained model monitoring |
-| AI-K-005 | 1 | 0.7051 | DCWF [7010] container orchestration |
-| AI-K-021 | 1 | 0.7020 | DCWF [6935] cloud service models |
+All 29 Phase 1A entries have 5/6 or 6/6 framework coverage. Entries with highest STRM signal:
 
-## Duplicate Identification (Phase 1A)
+| Entry | FW Cov | Total Maps | Max STS | Strong |
+|-------|--------|-----------|---------|--------|
+| AI-K-029 | 6/6 | 1,355 | 0.7249 | 3 |
+| AI-K-024 | 6/6 | 1,405 | 0.7182 | 1 |
+| AI-K-027 | 6/6 | 635 | 0.7244 | 2 |
+| AI-K-005 | 6/6 | 482 | 0.7051 | 1 |
+| AI-K-021 | 6/6 | 573 | 0.7020 | 1 |
+| AI-K-017 | 6/6 | 1,093 | 0.6912 | 0 |
+| AI-K-026 | 6/6 | 1,189 | 0.6938 | 0 |
 
-Five groups of near-duplicate entries identified within the Phase 1A baseline:
+Entries with lowest signal (still well-supported):
 
-### Group 1: Model Serving / Deployment
-- **K-004:** ML model serving patterns (REST API, batch, streaming, edge)
-- **K-023:** Model deployment strategies (batch, real-time, edge, A/B, canary, shadow)
-- **Action:** Merge → single entry covering serving architecture AND deployment strategies
-- **Evidence:** K-004 (407 mappings, max 0.6091) + K-023 (1,139 mappings, max 0.6363)
+| Entry | FW Cov | Total Maps | Max STS |
+|-------|--------|-----------|---------|
+| AI-K-012 | 6/6 | 353 | 0.5906 |
+| AI-K-009 | 6/6 | 560 | 0.5858 |
+| AI-K-019 | 5/6 | 265 | 0.6191 |
+| AI-K-014 | 5/6 | 602 | 0.5996 |
+| AI-K-004 | 5/6 | 407 | 0.6091 |
 
-### Group 2: Containerization
-- **K-005:** Containerization (Docker, Kubernetes) for ML
-- **K-025:** Containerization + IaC for ML (GPU mgmt, distributed training, reproducible environments)
-- **Action:** Merge → single entry. K-025 subsumes K-005.
-- **Evidence:** K-005 (482 mappings, max 0.7051) + K-025 (413 mappings, max 0.6755)
+---
 
-### Group 3: Model Monitoring
-- **K-007:** Model monitoring (drift detection, distribution monitoring, latency/throughput)
-- **K-024:** Model monitoring requirements (drift, degradation, alerting, retraining triggers)
-- **Action:** Merge → single entry. K-024 subsumes K-007.
-- **Evidence:** K-007 (610 mappings, max 0.6883) + K-024 (1,405 mappings, max 0.7182)
+## Duplicate Analysis
 
-### Group 4: Cloud Platforms
-- **K-015:** Cloud data platform services across major providers
-- **K-018:** Cloud AI/ML platform services (SageMaker, Vertex AI, Azure ML)
-- **K-021:** Cloud data platform infrastructure (managed compute, serverless, object storage, streaming)
-- **Action:** Merge K-015 + K-021 → single cloud data platform entry. Keep K-018 separate (ML-specific services).
-- **Evidence:** K-015 (530, max 0.6932) + K-021 (573, max 0.7020) nearly identical scope. K-018 (1,166, max 0.6626) is ML-specific.
+Examined all 34 entries for overlapping scope. Evaluated potential duplicate pairs:
 
-### Group 5: ML Platform Components
-- **K-016:** ML platform components (feature stores, registries, experiment tracking, serving)
-- **K-022:** ML pipeline orchestration (feature stores, experiment tracking, model registries, trade-offs)
-- **Action:** Merge → single entry.
-- **Evidence:** K-016 (543, max 0.6785) + K-022 (1,540, max 0.6583)
+### Pair 1: AI-K-004 (model serving/deployment) vs AI-K-017 (MLOps)
 
-**Net effect:** 29 Phase 1A entries − 5 merges = 24 distinct Phase 1A entries
+Both mention A/B testing and canary deployment. However:
+- K-004 focuses on **inference architecture**: REST API serving, batch vs streaming inference, edge deployment, latency/throughput trade-offs
+- K-017 focuses on **operational lifecycle**: CI/CD for ML, automated retraining, model versioning
 
-## Post-STRM Entry Evaluation (K-030 to K-040)
+Evidence confirms differentiation: K-004 attracts 18 elements at STS ≥ 0.55; K-017 attracts 63. Their element overlap is minimal — K-004's elements are about serving patterns, K-017's are about DevOps/MLOps processes.
 
-These entries have 0/6 STRM coverage because they were added after STRM runs. Evaluation against framework evidence to determine if concepts ARE surfaced by frameworks (mapped to other entries) or represent genuine gaps:
+**Decision**: KEEP SEPARATE. Distinct concepts.
 
-| Entry | Concept | Framework evidence | Verdict |
-|-------|---------|-------------------|---------|
-| K-030 | AI risk management frameworks | NIST AI RMF GV-1.x, MG-1.x; EU AI Act O-001, O-002 | **KEEP** — distinct from K-029 |
-| K-031 | AI ethics and fairness | EU AI Act bias elements; NIST AI RMF fairness | **KEEP** — distinct concept |
-| K-032 | AI governance and regulatory | NIST AI RMF GV functions; EU AI Act compliance | **KEEP** — distinct concept |
-| K-033 | AI security and adversarial ML | DCWF AI security [5922]; NIST AI RMF security | **KEEP** — distinct concept |
-| K-034 | Human-AI interaction design | EU AI Act C-003 (0.6804); NIST AI RMF GV-3.2 | **KEEP** — distinct from K-008/K-010 |
-| K-035 | AI supply chain risk | NIST AI RMF GV-6.1, GV-6.2, MG-3.1 | **KEEP** — distinct concept |
-| K-036 | AI lifecycle management | NIST AI RMF MG functions; EU AI Act modification | **KEEP** — governance-level lifecycle, distinct from K-006/K-017 ops |
-| K-037 | AI TEVV methodology | EU AI Act O-004, O-005; NIST AI RMF MP-3.4, MS-2.13 | **KEEP** — distinct from K-028 (research design) |
-| K-038 | AI data governance for ML | EU AI Act O-006, O-028; NIST AI RMF data elements | **KEEP** — AI-specific, cross-domain audit passes (distinct from DG) |
-| K-039 | AI business value assessment | NIST AI RMF MP-1.3 (0.6260) | **KEEP** — distinct from K-029 (capabilities vs. assessment methods) |
-| K-040 | Multimodal AI systems | No framework evidence | **REMOVE** — per ADR-014 Principle 5 |
+### Pair 2: AI-K-015 (cloud data platforms) vs AI-K-018 (cloud AI/ML platforms)
 
-**Net effect:** 10 kept, 1 removed
+Both address cloud infrastructure. However:
+- K-015 covers **general data infrastructure**: managed compute, serverless, object storage, data warehouse, streaming
+- K-018 covers **AI-specific managed services**: SageMaker, Vertex AI, Azure ML, portable vs cloud-native patterns
 
-## Final Count
+Evidence: K-015 attracts 36 elements; K-018 attracts 61. Different abstraction levels confirmed by element clusters — K-015 maps to database/storage elements, K-018 maps to ML platform elements.
 
-24 (Phase 1A deduplicated) + 10 (validated post-STRM) = **34 entries**
+**Decision**: KEEP SEPARATE. Different abstraction levels.
 
-## Entry Mapping: Current → Proposed
+### Pair 3: AI-K-006 (ML pipeline frameworks) vs AI-K-016 (ML platform components)
 
-| Proposed | Source | Action |
-|----------|--------|--------|
-| AI-K-001 | K-001 | Preserve (ML algorithms) |
-| AI-K-002 | K-002 | Preserve (statistical inference) |
-| AI-K-003 | K-003 | Preserve (feature engineering) |
-| AI-K-004 | K-004 + K-023 | Merge (model serving + deployment) |
-| AI-K-005 | K-005 + K-025 | Merge (containerization + IaC) |
-| AI-K-006 | K-006 | Preserve (ML pipeline frameworks) |
-| AI-K-007 | K-007 + K-024 | Merge (model monitoring) |
-| AI-K-008 | K-008 | Preserve (LLM) |
-| AI-K-009 | K-009 | Preserve (RAG) |
-| AI-K-010 | K-010 | Preserve (agentic AI) |
-| AI-K-011 | K-011 | Preserve (NLP taxonomy) |
-| AI-K-012 | K-012 | Preserve (transformer arch) |
-| AI-K-013 | K-013 | Preserve (CV taxonomy) |
-| AI-K-014 | K-014 | Preserve (CNN/ViT) |
-| AI-K-015 | K-015 + K-021 | Merge (cloud data platforms) |
-| AI-K-016 | K-016 + K-022 | Merge (ML platform components) |
-| AI-K-017 | K-017 | Preserve (MLOps) |
-| AI-K-018 | K-018 | Preserve (cloud AI/ML services) |
-| AI-K-019 | K-019 | Preserve (GPU/accelerated compute) |
-| AI-K-020 | K-020 | Preserve (data storage) |
-| AI-K-021 | K-026 | Renumber (DataOps) |
-| AI-K-022 | K-027 | Renumber (AI research frontiers) |
-| AI-K-023 | K-028 | Renumber (experimental design) |
-| AI-K-024 | K-029 | Renumber (AI capability landscape) |
-| AI-K-025 | K-030 | Renumber (AI risk management) |
-| AI-K-026 | K-031 | Renumber (AI ethics/fairness) |
-| AI-K-027 | K-032 | Renumber (AI governance/regulatory) |
-| AI-K-028 | K-033 | Renumber (AI security/adversarial) |
-| AI-K-029 | K-034 | Renumber (human-AI interaction) |
-| AI-K-030 | K-035 | Renumber (AI supply chain risk) |
-| AI-K-031 | K-036 | Renumber (AI lifecycle management) |
-| AI-K-032 | K-037 | Renumber (AI TEVV) |
-| AI-K-033 | K-038 | Renumber (AI data governance for ML) |
-| AI-K-034 | K-039 | Renumber (AI business value) |
+Both address ML infrastructure. However:
+- K-006 focuses on **engineering practices**: reproducibility, testability, maintainability of pipelines
+- K-016 focuses on **component taxonomy**: feature stores, model registries, experiment tracking, serving infrastructure
+
+Evidence: K-006 attracts 56 elements; K-016 attracts 45. Framework elements confirm: K-006 maps to process/methodology elements, K-016 maps to tool/component elements.
+
+**Decision**: KEEP SEPARATE. Practice vs component distinction confirmed by evidence.
+
+### Pair 4: AI-K-005 (containerization/orchestration) vs AI-K-019 (GPU/accelerated compute)
+
+- K-005: Docker, Kubernetes, GPU resource management, distributed training scheduling
+- K-019: GPU cluster management, resource scheduling, distributed training architectures, cost optimization
+
+Overlap on GPU resource management and distributed training. However:
+- K-005 is the **containerization and orchestration** lens (all ML workloads)
+- K-019 is the **accelerated compute** lens (GPU-specific concerns)
+- Evidence: K-005 attracts 32 elements; K-019 attracts 9. K-019's evidence is narrower and more specialized.
+
+**Decision**: KEEP SEPARATE. K-019 addresses a specialized area (GPU economics, cluster architecture) that K-005 touches only peripherally.
+
+### Result: 0 duplicate merges
+
+All 34 entries are sufficiently differentiated. Evidence patterns confirm distinct concept spaces.
+
+---
+
+## Gap Analysis
+
+### Entry Overload Analysis (STS ≥ 0.55)
+
+| Entry | Elements | Assessment |
+|-------|----------|-----------|
+| AI-K-029 | 93 | **CRITICAL OVERLOAD** — decomposition warranted |
+| AI-K-010 | 80 | High but explained by generic AI capability elements |
+| AI-K-027 | 66 | High but explained by governance elements from EU AI Act / AI RMF |
+| AI-K-017 | 63 | Reasonable for broad MLOps concept |
+| AI-K-022 | 61 | Reasonable for research frontiers concept |
+| AI-K-018 | 61 | Partially explained by post-STRM redistribution |
+
+### AI-K-029 Decomposition Analysis
+
+AI-K-029 currently covers: "human-AI interaction design principles, including human oversight mechanisms, human-in-the-loop and human-on-the-loop architectures, interpretability requirements for different decision contexts, and the design of effective AI system transparency."
+
+This entry conflates two distinct concept areas that the regulatory frameworks treat separately:
+
+**Concept A — Human Oversight Architecture**: The design of oversight mechanisms, HITL/HOTL patterns, autonomy level design, override systems, intervention protocols.
+- EU AI Act evidence: EUAIA-C-003 (STS=0.6804) "exercise human oversight of AI systems, including understanding system capacities and limitations"
+- NIST AI RMF evidence: AIRMF-GV-3.2 (STS=0.5439) "human-AI interaction governance, defining roles for human oversight"
+- NIST AI RMF evidence: AIRMF-MP-2.2 (STS=0.6027) "AI system knowledge limits, human oversight requirements"
+
+**Concept B — AI Explainability and Model Interpretability**: Technical methods for making AI decisions understandable — SHAP, LIME, attention visualization, feature importance, model cards, transparency reporting.
+- NIST AI RMF evidence: AIRMF-MS-2.9 (STS=0.6111) "AI model explanation, validation, and contextual interpretation"
+- EU AI Act evidence: EUAIA-O-012 (STS=0.5774) "AI system transparency design, including interpretability mechanisms, output explanation methods"
+- EU AI Act evidence: EUAIA-O-037 (STS=0.5256) "AI system interaction disclosure requirements, including design of notification mechanisms"
+
+The EU AI Act explicitly separates human oversight (Article 14) from transparency obligations (Article 13). NIST AI RMF separates governance of human-AI interaction from measurement of model explainability. The evidence clusters confirm these are independently coherent concepts.
+
+**Decision**: DECOMPOSE AI-K-029 into two entries:
+1. **Human-AI oversight architecture**: Oversight mechanisms, HITL/HOTL patterns, autonomy levels, override design, intervention protocols
+2. **AI explainability and model interpretability**: XAI methods, model transparency techniques, explanation generation, interpretability evaluation, model cards
+
+### Broader Gap Assessment
+
+Examined 116 gap signals from the synthesis enforcer. Most fall into categories already covered:
+
+1. **Generic framework elements** (K0898 "cloud service models", K0694 "computer algorithms", K1246 "data handling") — These map broadly because they are nonspecific. Not gaps in the taxonomy; they are generic descriptors that overlap many entries. No action.
+
+2. **Elements better suited to other domains**: Several NIST AI RMF governance elements (AIRMF-GV-2.1 "risk management roles", AIRMF-GV-4.1 "organizational safety culture") are better covered by the AG (AI Governance) or LS (Leadership & Strategy) domains. Not gaps in AI Knowledge.
+
+3. **Elements better suited to other dimensions**: Documentation elements (AIRMF-MP-1.1, AIRMF-MP-1.6) are Tasks, not Knowledge. Stakeholder engagement elements are Skills. These will be addressed in AI Skills and AI Tasks synthesis.
+
+4. **Concepts partially covered but absorbed by overloaded entries**: Many EU AI Act and NIST AI RMF elements mapping to K-029 and K-010 are actually about supply chain (K-030), lifecycle (K-031), TEVV (K-032), data governance (K-033), or business value (K-034). These post-STRM entries already fill these gaps — the overload exists because the STRMs did not include them.
+
+5. **Potential standalone gaps examined and rejected**:
+   - *Reinforcement learning*: Mentioned in K-022 ("reinforcement learning" in research frontiers). Evidence does not show RL-specific elements at high STS. Not warranted as standalone.
+   - *Recommendation systems*: Practical application, not foundational knowledge. Better suited for role-KSA mappings than domain taxonomy.
+   - *Federated learning / privacy-preserving ML*: Emerging concept. Evidence from NIST AI RMF (AIRMF-MS-2.10 at STS=0.5675 about privacy risk) is indirect. Not enough evidence for standalone entry.
+   - *Multimodal AI*: K-008 (LLMs), K-013/K-014 (CV), K-011 (NLP) cover modality-specific knowledge. Cross-modal integration is emerging but not strongly evidenced in current STRMs.
+
+**Result**: 1 new entry from K-029 decomposition. No other gaps warranted by evidence.
+
+---
+
+## Post-STRM Entry Validation
+
+Entries AI-K-030 through AI-K-034 have 0/6 framework coverage because they were added after all 6 STRMs were scored. Validation requires indirect evidence: framework elements that address the same concept but currently map to other entries.
+
+### AI-K-030: AI Supply Chain Risk and Third-Party Model Dependencies
+
+**Indirect evidence**:
+- AIRMF-GV-6.1 (STS=0.5483): "AI supply chain risk management, including assessing third-party AI component risks"
+- AIRMF-GV-6.2 (STS=0.5416): "contingency plans for third-party AI dependencies"
+- AIRMF-MG-3.1 (STS=0.5984): "third-party AI risk monitoring and control"
+
+Currently maps to K-029 and K-010 as nearest neighbors. Concept is distinct and well-supported across NIST AI RMF.
+
+**Decision**: RETAIN. Strong indirect evidence.
+
+### AI-K-031: AI System Lifecycle Management
+
+**Indirect evidence**:
+- EUAIA-O-035 (STS=0.5943): "substantial modification assessment for AI systems"
+- AIRMF-GV-1.7 (STS=0.5625): "AI system decommissioning procedures"
+- AIRMF-GV-1.6 (STS=0.5311): "AI system inventory mechanisms"
+- EUAIA-O-049 (STS=0.6079): "designing AI post-market monitoring systems"
+
+**Decision**: RETAIN. Multiple framework elements across EU AI Act and NIST AI RMF confirm lifecycle as a distinct knowledge area.
+
+### AI-K-032: AI Testing, Evaluation, Verification, and Validation (TEVV)
+
+**Indirect evidence**:
+- EUAIA-O-005 (STS=0.6115): "AI system testing methodologies including real-world testing protocols"
+- AIRMF-MP-3.4 (STS=0.5826): "evaluate TEVV approach trade-offs"
+- AIRMF-MS-2.13 (STS=0.5407): "assess TEVV process effectiveness"
+- AIRMF-MP-2.3 (STS=0.5373): "AI scientific integrity and TEVV methodology"
+- DCWF [7004A] (STS=0.6338): "Test & Evaluation frameworks"
+
+**Decision**: RETAIN. TEVV is a cornerstone of both EU AI Act and NIST AI RMF with multiple dedicated elements.
+
+### AI-K-033: AI Data Governance for ML Systems
+
+**Indirect evidence**:
+- EUAIA-O-006 (STS=0.5385): "AI training data governance, including design choice documentation, data provenance tracking"
+- EUAIA-O-028 (STS=0.5195): "AI input data quality management"
+- DCWF [7029] (STS=0.6576): "how to collect, store, and monitor data"
+
+**Decision**: RETAIN. Data governance specific to ML is a distinct concept from general data governance (DG domain) and from feature engineering (K-003).
+
+### AI-K-034: AI Business Value Assessment
+
+**Indirect evidence**:
+- AIRMF-MP-1.3 (STS=0.6260): "evaluate AI system business value and relevance"
+- DCWF [5925] (STS=0.6866): "use knowledge of business processes to create or recommend AI solutions"
+- DCWF [7042] (STS=0.6496): "resources and capabilities required to complete AI projects"
+- DCWF [7046] (STS=0.6275): "basic requirements for successful delivery of AI solutions"
+
+**Decision**: RETAIN. Strong indirect evidence from both NIST AI RMF and DCWF.
+
+---
+
+## Mandatory Checklist
+
+- [x] 1. Duplicate groups identified: **0**. All 34 entries differentiated. 4 pairs examined with evidence citations.
+- [x] 2. Gap clusters identified: **1** — K-029 decomposition into oversight architecture + explainability methods.
+- [x] 3. Gap concept: AI explainability and model interpretability as distinct from human oversight architecture.
+- [x] 4. New entry statement: "Knowledge of AI explainability and model interpretability methods, including feature attribution techniques, model-agnostic explanation methods, attention visualization, counterfactual explanation generation, interpretability evaluation metrics, and the design of model cards and transparency documentation."
+- [x] 5. Framework evidence: AIRMF-MS-2.9 (STS=0.6111), EUAIA-O-012 (STS=0.5774), EUAIA-O-037 (STS=0.5256), K-029 overload at 93 elements. EU AI Act Article 13 (transparency) vs Article 14 (human oversight) separation.
+- [x] 6. Post-STRM entries validated: All 5 (K-030 through K-034) confirmed with indirect framework evidence.
+- [x] 7. Final entry count: **35**. Derived from: 34 existing - 0 merges + 1 new (decomposition) = 35.
+- [x] 8. Starting count was 34. Final is 35. Count went up by 1 through evidence-driven decomposition.
+
+---
+
+## Final Entry Map
+
+| New ID | Source | Statement Summary |
+|--------|--------|-----------|
+| AI-K-001 | K-001 preserved | Supervised and unsupervised ML algorithms |
+| AI-K-002 | K-002 preserved | Statistical inference methods |
+| AI-K-003 | K-003 preserved | Feature engineering techniques |
+| AI-K-004 | K-004 preserved | ML model serving and deployment |
+| AI-K-005 | K-005 preserved | Containerization and orchestration for ML |
+| AI-K-006 | K-006 preserved | ML pipeline frameworks |
+| AI-K-007 | K-007 preserved | Model monitoring requirements |
+| AI-K-008 | K-008 preserved | Large language model capabilities |
+| AI-K-009 | K-009 preserved | RAG architecture patterns |
+| AI-K-010 | K-010 preserved | Agentic AI design patterns |
+| AI-K-011 | K-011 preserved | NLP task taxonomy |
+| AI-K-012 | K-012 preserved | Transformer architecture |
+| AI-K-013 | K-013 preserved | Computer vision task taxonomy |
+| AI-K-014 | K-014 preserved | CNN/ViT architectures and transfer learning |
+| AI-K-015 | K-015 preserved | Cloud data platform services |
+| AI-K-016 | K-016 preserved | ML platform components |
+| AI-K-017 | K-017 preserved | MLOps principles |
+| AI-K-018 | K-018 preserved | Cloud AI/ML platform services |
+| AI-K-019 | K-019 preserved | GPU and accelerated compute |
+| AI-K-020 | K-020 preserved | Data storage technologies |
+| AI-K-021 | K-021 preserved | DataOps principles |
+| AI-K-022 | K-022 preserved | ML/AI research frontiers |
+| AI-K-023 | K-023 preserved | Experimental design for ML |
+| AI-K-024 | K-024 preserved | AI capability landscape |
+| AI-K-025 | K-025 preserved | AI risk management frameworks |
+| AI-K-026 | K-026 preserved | AI ethics and fairness evaluation |
+| AI-K-027 | K-027 preserved | AI governance and regulatory compliance |
+| AI-K-028 | K-028 preserved | AI security and adversarial ML |
+| AI-K-029 | K-029 narrowed | Human-AI oversight architecture |
+| AI-K-030 | **NEW — K-029 decomposition** | AI explainability and model interpretability |
+| AI-K-031 | K-030 renumbered | AI supply chain risk and third-party dependencies |
+| AI-K-032 | K-031 renumbered | AI system lifecycle management |
+| AI-K-033 | K-032 renumbered | AI TEVV methodology |
+| AI-K-034 | K-033 renumbered | AI data governance for ML systems |
+| AI-K-035 | K-034 renumbered | AI business value assessment |

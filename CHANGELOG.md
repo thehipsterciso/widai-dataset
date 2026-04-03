@@ -85,24 +85,26 @@ Total mappings across 6 frameworks. 3 duplicate groups merged within Phase 1A ba
 - Added 4 synthesis analysis documents: `docs/synthesis/AG-{KNOWLEDGE,SKILLS,ABILITIES,TASKS}-SYNTHESIS.md`
 - AG domain total: 25+20+15+25 = 85 KSAs → 19+19+15+23 = 76 KSAs
 
-### AI Domain Re-Synthesis — Evidence-Driven Deduplication
+### AI Domain Re-Synthesis — Full Evidence-Driven Synthesis with Programmatic Enforcement
 
-**AI domain re-synthesized using correct evidence-driven methodology.** Each dimension received a dedicated synthesis analysis document before any JSON changes. Duplicate groups identified within Phase 1A baseline entries, post-STRM entries validated against framework evidence per ADR-014 Principle 5. Counts are OUTPUT of evidence analysis, not predetermined targets.
+**AI domain fully re-synthesized with programmatic enforcement and adversarial validation.** Prior dedup-only pass replaced with complete cross-framework synthesis: duplicate analysis, gap analysis with concept clustering, post-STRM validation with indirect evidence citations, and mandatory checklist completion — all enforced by `synthesis_enforcer.py` and validated by `adversarial_validator.py`. These scripts mechanically prevent skipping the gap analysis step that was missed in earlier domain passes.
 
-**AI Knowledge: 40 → 34 KSAs**
-23,238 total mappings across 6 frameworks. 5 duplicate groups merged within Phase 1A baseline: model serving + deployment (K-004/K-023), containerization + IaC (K-005/K-025), model monitoring (K-007/K-024), cloud data platforms (K-015/K-021), ML platform components (K-016/K-022). Post-STRM entries K-030 to K-039 validated with indirect framework evidence. K-040 (Multimodal AI) removed — no framework evidence per ADR-014 Principle 5. Synthesis doc: `docs/synthesis/AI-KNOWLEDGE-SYNTHESIS.md`.
+**AI Knowledge: 34 → 35 KSAs**
+23,238 total mappings across 6 frameworks. 136 elements at STS ≥ 0.60. 4 pairs examined for duplication — all differentiated with evidence citations. 1 evidence-driven expansion: AI-K-029 (human-AI interaction design, 93 overloaded elements) decomposed into AI-K-029 (human-AI oversight architecture) and new AI-K-030 (AI explainability and model interpretability). Decomposition justified by EU AI Act separating human oversight (Article 14) from transparency (Article 13), confirmed by NIST AI RMF evidence: EUAIA-C-003 at STS 0.6804, AIRMF-MS-2.9 at STS 0.6111. Former K-030 through K-034 renumbered to K-031 through K-035. All 5 post-STRM entries validated with indirect evidence. Synthesis doc: `docs/synthesis/AI-KNOWLEDGE-SYNTHESIS.md`.
 
-**AI Skills: 30 → 29 KSAs**
-22,682 total mappings. 1 duplicate group merged: production Python code + research-to-production refactoring (S-003/S-005). All 11 post-STRM entries (S-020 to S-030) validated — strongest evidence: EUAIA-O-012 AI transparency at STS 0.7674 supporting S-020. Synthesis doc: `docs/synthesis/AI-SKILLS-SYNTHESIS.md`.
+**AI Skills: 29 → 29 KSAs (validated, no changes)**
+22,682 total mappings. 175 elements at STS ≥ 0.60. Evidence density 6.0:1. 4 pairs examined — all differentiated. 146 gap signals analyzed: all generic framework elements or concepts already covered by existing 10 post-STRM entries. S-010 (fine-tuning) highest overload at 144 elements — distributed across generic elements, no decomposition warranted. All 10 post-STRM entries validated; strongest: S-026 feedback mechanisms (AIRMF-GV-5.2 at STS 0.6874). Synthesis doc: `docs/synthesis/AI-SKILLS-SYNTHESIS.md`.
 
 **AI Abilities: 15 → 15 KSAs (validated, no changes)**
-1,097 total mappings. Only 3 Phase 1A entries — no duplicates possible. All 12 post-STRM entries validated against framework evidence mapped to A-001/A-002/A-003 during STRM runs. Synthesis doc: `docs/synthesis/AI-ABILITIES-SYNTHESIS.md`.
+1,097 total mappings. Only 2 elements at STS ≥ 0.60 — structurally expected for abstract cognitive concepts. 3 pairs examined, all differentiated. 0 gap signals. Sparse evidence is structural: source frameworks describe competencies as Knowledge/Skills/Tasks, not Abilities. Synthesis doc: `docs/synthesis/AI-ABILITIES-SYNTHESIS.md`.
 
-**AI Tasks: 38 → 36 KSAs**
-16,786 total mappings. 2 duplicate groups merged: ML training pipelines + automated ML pipelines (T-005/T-016), monitoring dashboards + monitoring/observability systems (T-004/T-017). All 17 post-STRM entries validated. Strongest evidence: DCWF [5889] at STS 0.7891, AIRMF-MS-2.6 at 0.7413. Synthesis doc: `docs/synthesis/AI-TASKS-SYNTHESIS.md`.
+**AI Tasks: 36 → 36 KSAs (validated, no changes)**
+16,786 total mappings. 149 elements at STS ≥ 0.60. Evidence density 4.1:1. 4 pairs examined — all differentiated. 86 gap signals analyzed: all generic framework elements or concepts covered by the 15 post-STRM entries. All 15 post-STRM entries validated with indirect evidence. Synthesis doc: `docs/synthesis/AI-TASKS-SYNTHESIS.md`.
 
-- Added 4 synthesis analysis documents: `docs/synthesis/AI-{KNOWLEDGE,SKILLS,ABILITIES,TASKS}-SYNTHESIS.md`
-- AI domain total: 40+30+15+38 = 123 KSAs → 34+29+15+36 = 114 KSAs
+- Rewrote all 4 synthesis analysis documents with full evidence-driven methodology
+- Added `scripts/synthesis_enforcer.py` — generates mandatory analysis template from dimension_synthesis.py output, detects gap signals and overloaded entries, requires checklist completion before JSON changes
+- Added `scripts/adversarial_validator.py` — 8-check post-synthesis validation (COUNT_DIRECTION, EVIDENCE_DENSITY, ENTRY_OVERLOAD, GAP_ANALYSIS_PRESENT, SCHEMA_VERSION, NO_LEGACY_IDS, COUNT_METADATA, SEQUENTIAL_IDS), blocks commit on any failure
+- AI domain total: 34+29+15+36 = 114 KSAs → 35+29+15+36 = 115 KSAs (+1 net from K-029 decomposition)
 - Renamed synthesis script: `scripts/ab_dimension_synthesis.py` → `scripts/dimension_synthesis.py` (domain-generic, accepts `--domain` and `--dimension` arguments)
 
 ## [0.6.2] - 2026-04-03

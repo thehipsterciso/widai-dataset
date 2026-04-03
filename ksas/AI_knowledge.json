@@ -3,7 +3,7 @@
   "domain_code": "AI",
   "domain_title": "AI/ML Foundations",
   "type": "Knowledge",
-  "count": 34,
+  "count": 35,
   "schema_version": "3.0.0",
   "entries": [
     {
@@ -263,7 +263,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of human-AI interaction design principles, including human oversight mechanisms, human-in-the-loop and human-on-the-loop architectures, interpretability requirements for different decision contexts, and the design of effective AI system transparency.",
+      "statement": "Knowledge of human-AI oversight architecture, including human-in-the-loop and human-on-the-loop design patterns, autonomy level frameworks, override and intervention mechanisms, and the governance structures required to maintain meaningful human control over AI system decisions.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -272,7 +272,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of AI supply chain risk and third-party model dependencies, including pre-trained model provenance assessment, API dependency management, intellectual property considerations, and contingency planning for third-party AI service disruption.",
+      "statement": "Knowledge of AI explainability and model interpretability methods, including feature attribution techniques, model-agnostic explanation methods, attention visualization, counterfactual explanation generation, interpretability evaluation metrics, and the design of model cards and transparency documentation.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -281,7 +281,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of AI system lifecycle management, including inception assessment, development governance, deployment readiness evaluation, post-market monitoring, substantial modification criteria, and decommissioning procedures.",
+      "statement": "Knowledge of AI supply chain risk and third-party model dependencies, including pre-trained model provenance assessment, API dependency management, intellectual property considerations, and contingency planning for third-party AI service disruption.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -290,7 +290,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of AI testing, evaluation, verification, and validation (TEVV) methodology, including test protocol design for high-risk systems, real-world testing requirements, red-teaming approaches, and the assessment of TEVV process effectiveness.",
+      "statement": "Knowledge of AI system lifecycle management, including inception assessment, development governance, deployment readiness evaluation, post-market monitoring, substantial modification criteria, and decommissioning procedures.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -299,12 +299,21 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of AI data governance requirements specific to ML systems, including training data provenance, data quality standards for model inputs, annotation governance, synthetic data generation principles, and data lifecycle management across model versions.",
+      "statement": "Knowledge of AI testing, evaluation, verification, and validation (TEVV) methodology, including test protocol design for high-risk systems, real-world testing requirements, red-teaming approaches, and the assessment of TEVV process effectiveness.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
     {
       "ksa_id": "AI-K-034",
+      "type": "Knowledge",
+      "domain": "AI/ML Foundations",
+      "domain_code": "AI",
+      "statement": "Knowledge of AI data governance requirements specific to ML systems, including training data provenance, data quality standards for model inputs, annotation governance, synthetic data generation principles, and data lifecycle management across model versions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.7.0"
+    },
+    {
+      "ksa_id": "AI-K-035",
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
