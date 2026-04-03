@@ -3,7 +3,7 @@
   "domain_code": "DA",
   "domain_title": "Data Architecture & Infrastructure",
   "type": "Task",
-  "count": 25,
+  "count": 24,
   "schema_version": "3.0.0",
   "entries": [
     {
@@ -101,7 +101,7 @@
       "type": "Task",
       "domain": "Data Architecture & Infrastructure",
       "domain_code": "DA",
-      "statement": "Build and maintain automated data pipelines with version-controlled transformations, automated testing, environment parity between development and production, and deployment processes that enable rapid iteration without production risk.",
+      "statement": "Build and maintain automated data pipelines with version-controlled transformations, automated testing, CI/CD deployment including infrastructure-as-code, environment parity between development and production, rollback procedures, and deployment processes that enable rapid iteration without production risk.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -182,7 +182,7 @@
       "type": "Task",
       "domain": "Data Architecture & Infrastructure",
       "domain_code": "DA",
-      "statement": "Implement CI/CD pipelines for data infrastructure, including automated testing of transformations, environment promotion workflows, infrastructure-as-code deployment, and rollback procedures.",
+      "statement": "Conduct data platform security assessments, including vulnerability scanning, access control audits, encryption verification, and remediation of identified security gaps in data infrastructure.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -191,7 +191,7 @@
       "type": "Task",
       "domain": "Data Architecture & Infrastructure",
       "domain_code": "DA",
-      "statement": "Conduct data platform security assessments, including vulnerability scanning, access control audits, encryption verification, and remediation of identified security gaps in data infrastructure.",
+      "statement": "Manage schema evolution and versioning across data platform environments, including compatibility assessment, migration execution, consumer notification, and validation that schema changes do not break downstream systems.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -200,7 +200,7 @@
       "type": "Task",
       "domain": "Data Architecture & Infrastructure",
       "domain_code": "DA",
-      "statement": "Manage schema evolution and versioning across data platform environments, including compatibility assessment, migration execution, consumer notification, and validation that schema changes do not break downstream systems.",
+      "statement": "Design and implement event-driven data architectures, including message broker configuration, event schema design, consumer group management, and monitoring of event processing latency and throughput.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -209,21 +209,12 @@
       "type": "Task",
       "domain": "Data Architecture & Infrastructure",
       "domain_code": "DA",
-      "statement": "Design and implement event-driven data architectures, including message broker configuration, event schema design, consumer group management, and monitoring of event processing latency and throughput.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "DA-T-024",
-      "type": "Task",
-      "domain": "Data Architecture & Infrastructure",
-      "domain_code": "DA",
       "statement": "Conduct data platform vendor evaluations and proofs of concept, including requirements definition, test scenario design, evaluation criteria development, and evidence-based recommendation documentation.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
     {
-      "ksa_id": "DA-T-025",
+      "ksa_id": "DA-T-024",
       "type": "Task",
       "domain": "Data Architecture & Infrastructure",
       "domain_code": "DA",

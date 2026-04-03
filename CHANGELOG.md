@@ -27,23 +27,24 @@ Richest evidence base: 7,694 total mappings, NICE (143 analytics-relevant) and D
 - AB domain total: 10+10+4+11 = 35 KSAs → 29+25+15+30 = 99 KSAs
 - This process becomes the standard methodology for expanding all 12 domains across all 4 dimensions
 
-### Full DA Domain Expansion — All Four Dimensions
+### DA Domain Re-Synthesis — Evidence-Driven Deduplication
 
-**Complete cross-framework synthesis expansion for the Data Architecture & Infrastructure domain.** All four KSA dimensions rebuilt using high watermark analysis across all 6 STRMs. Schema version 3.0.0 — clean break, no legacy_ids.
+**DA domain re-synthesized using correct evidence-driven methodology.** Each dimension received a dedicated synthesis analysis document before any JSON changes. Duplicate groups identified within Phase 1A baseline entries, post-STRM entries validated against framework evidence per ADR-014 Principle 5. Counts are OUTPUT of evidence analysis, not predetermined targets.
 
-**DA Knowledge: 16 → 28 KSAs**
-All 6 frameworks analyzed: NICE (327 WIDAI-relevant), DCWF (398), DDaT (31), NIST AI RMF (38), EU AI Act (18), O*NET (6). 12 new concept clusters: DataOps practices and CI/CD for data, database administration and lifecycle management, data classification/cataloging/metadata management, data privacy and protection techniques, container orchestration and cloud-native infrastructure, data backup/recovery/disaster recovery, data lineage and provenance tracking, API design and data service patterns, event-driven architecture patterns, cloud cost models and FinOps, schema evolution and change management, capacity planning and performance engineering.
+**DA Knowledge: 28 → 25 KSAs**
+Total mappings across 6 frameworks. 3 duplicate groups merged within Phase 1A baseline: semantic/metrics layer knowledge (K-001/K-010), data modeling/dimensional modeling (K-002/K-008), pipeline orchestration tools/patterns (K-007/K-013). All 12 post-STRM entries validated — each fills a distinct knowledge gap not covered by Phase 1A. Synthesis doc: `docs/synthesis/DA-KNOWLEDGE-SYNTHESIS.md`.
 
-**DA Skills: 9 → 20 KSAs**
-Rich evidence base with multiple strong matches (DA-S-009 at 3 strong, DA-S-001 at 2). NICE 361 WIDAI-relevant, DCWF 515. 11 new skill clusters: automated pipeline testing, heterogeneous source integration, root cause analysis for infrastructure failures, schema evolution management, database performance tuning, capacity planning and scaling, data catalog/metadata implementation, data migration execution, backup/disaster recovery implementation, data API/service layer design, architecture communication to non-technical stakeholders.
+**DA Skills: 20 → 19 KSAs**
+11,498 total mappings. 1 duplicate group merged: pipeline monitoring + observability (S-005/S-009 — overlapping lineage tracking scope, S-005 adds data quality signals, S-009 adds operational observability and RCA). 8 Phase 1A entries had no internal duplicates. All 11 post-STRM entries validated. Strongest evidence: DA-S-009 at 3 strong matches (max STS 0.7216). Synthesis doc: `docs/synthesis/DA-SKILLS-SYNTHESIS.md`.
 
-**DA Abilities: 3 → 15 KSAs**
-1,740 total mappings. DA-A-002 (pipeline failure diagnosis) dominated evidence with max STS 0.6716. 12 new ability clusters: competing technology trade-off evaluation, capacity/scaling anticipation, business-to-architecture translation, cross-team coordination, incremental architecture adaptation, technical debt balancing, security implication assessment, failure pattern recognition, architecture communication, complexity management, vendor/technology risk evaluation, enterprise architecture integration.
+**DA Abilities: 15 → 15 KSAs (validated, no changes)**
+1,740 total mappings. Only 3 Phase 1A entries — no duplicates possible. All 12 post-STRM entries validated against framework evidence mapped to A-001/A-002/A-003 during STRM runs. Synthesis doc: `docs/synthesis/DA-ABILITIES-SYNTHESIS.md`.
 
-**DA Tasks: 12 → 25 KSAs**
-9,479 total mappings with 5 strong matches. DCWF 416 WIDAI-relevant, NICE 222, DDaT 18 at >=0.60. 13 new task clusters: backup/disaster recovery implementation, data migration execution, data catalog/metadata systems, lineage/provenance tracking, database administration, data API/service layers, capacity planning, CI/CD for data infrastructure, platform security assessment, schema evolution management, event-driven architecture implementation, vendor evaluation/POC, architecture documentation production.
+**DA Tasks: 25 → 24 KSAs**
+9,479 total mappings. 0 Phase 1A internal duplicates across 12 baseline entries. Post-STRM T-020 (CI/CD for data infrastructure) merged into Phase 1A T-011 (automated pipelines with CI/CD — T-011 already covers version control, testing, environment parity, deployment; T-020 adds IaC specificity but core scope overlaps). 12 remaining post-STRM entries validated. Synthesis doc: `docs/synthesis/DA-TASKS-SYNTHESIS.md`.
 
-- DA domain total: 16+9+3+12 = 40 KSAs → 28+20+15+25 = 88 KSAs
+- Added 4 synthesis analysis documents: `docs/synthesis/DA-{KNOWLEDGE,SKILLS,ABILITIES,TASKS}-SYNTHESIS.md`
+- DA domain total: 28+20+15+25 = 88 KSAs → 25+19+15+24 = 83 KSAs
 
 ### AG Domain Re-Synthesis — Evidence-Driven Deduplication
 
