@@ -3,7 +3,7 @@
   "domain_code": "AI",
   "domain_title": "AI/ML Foundations",
   "type": "Skill",
-  "count": 30,
+  "count": 29,
   "schema_version": "3.0.0",
   "entries": [
     {
@@ -29,7 +29,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in writing production-quality Python code for data processing, feature engineering, model training, and evaluation, including documentation and unit testing.",
+      "statement": "Skill in writing and refactoring ML code to production quality, including data processing, feature engineering, model training, evaluation pipelines, documentation, unit testing, and the transformation of research-quality prototypes into deployable systems.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -47,7 +47,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in refactoring research-quality data science code into production-grade, tested, documented, and deployable ML systems.",
+      "statement": "Skill in designing and implementing model serving APIs, including input validation, output formatting, error handling, authentication, and versioning.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -56,7 +56,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in designing and implementing model serving APIs, including input validation, output formatting, error handling, authentication, and versioning.",
+      "statement": "Skill in implementing automated ML retraining pipelines triggered by performance degradation signals or data distribution shifts.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -65,7 +65,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in implementing automated ML retraining pipelines triggered by performance degradation signals or data distribution shifts.",
+      "statement": "Skill in designing and evaluating prompt engineering strategies, including few-shot prompting, chain-of-thought prompting, and structured output generation.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -74,7 +74,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in designing and evaluating prompt engineering strategies, including few-shot prompting, chain-of-thought prompting, and structured output generation.",
+      "statement": "Skill in building and evaluating RAG pipelines, including embedding model selection, retrieval quality measurement, and end-to-end system evaluation.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -83,7 +83,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in building and evaluating RAG pipelines, including embedding model selection, retrieval quality measurement, and end-to-end system evaluation.",
+      "statement": "Skill in implementing AI application guardrails, including input validation, output filtering, safety classifiers, and human-in-the-loop intervention points.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -92,7 +92,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in implementing AI application guardrails, including input validation, output filtering, safety classifiers, and human-in-the-loop intervention points.",
+      "statement": "Skill in fine-tuning pre-trained language models for domain-specific tasks, including dataset preparation, training configuration, and evaluation design.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -101,7 +101,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in fine-tuning pre-trained language models for domain-specific tasks, including dataset preparation, training configuration, and evaluation design.",
+      "statement": "Skill in designing and implementing NLP evaluation pipelines that measure task-specific performance, robustness, and fairness.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -110,7 +110,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in designing and implementing NLP evaluation pipelines that measure task-specific performance, robustness, and fairness.",
+      "statement": "Skill in preparing image and video datasets for model training, including annotation pipeline design, quality control, augmentation strategy, and train/validation split construction.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -119,7 +119,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in preparing image and video datasets for model training, including annotation pipeline design, quality control, augmentation strategy, and train/validation split construction.",
+      "statement": "Skill in training, evaluating, and optimizing computer vision models, including performance profiling, inference optimization, and edge deployment considerations.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -128,7 +128,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in training, evaluating, and optimizing computer vision models, including performance profiling, inference optimization, and edge deployment considerations.",
+      "statement": "Skill in designing feature engineering pipelines that produce consistent, reproducible, low-latency features for both batch and real-time model serving.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -137,7 +137,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in designing feature engineering pipelines that produce consistent, reproducible, low-latency features for both batch and real-time model serving.",
+      "statement": "Skill in designing and implementing CI/CD pipelines for ML models, including automated testing at unit, integration, and model quality levels, artifact versioning, and deployment automation with rollback capability.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -146,7 +146,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in designing and implementing CI/CD pipelines for ML models, including automated testing at unit, integration, and model quality levels, artifact versioning, and deployment automation with rollback capability.",
+      "statement": "Skill in diagnosing and resolving ML infrastructure failures, including training job crashes, serving latency spikes, resource contention across shared clusters, and data pipeline breakdowns that affect model inputs.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -155,7 +155,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in diagnosing and resolving ML infrastructure failures, including training job crashes, serving latency spikes, resource contention across shared clusters, and data pipeline breakdowns that affect model inputs.",
+      "statement": "Skill in evaluating AI use case feasibility, including data availability assessment, technical complexity estimation, and business value quantification.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -164,7 +164,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in evaluating AI use case feasibility, including data availability assessment, technical complexity estimation, and business value quantification.",
+      "statement": "Skill in building and presenting AI proof-of-concept demonstrations to executive audiences, communicating capability, limitations, and path to production.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -173,7 +173,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in building and presenting AI proof-of-concept demonstrations to executive audiences, communicating capability, limitations, and path to production.",
+      "statement": "Skill in implementing AI system transparency and explainability mechanisms, including model interpretability techniques, output explanation methods, and confidence communication appropriate to different user contexts and regulatory requirements.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -182,7 +182,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in implementing AI system transparency and explainability mechanisms, including model interpretability techniques, output explanation methods, and confidence communication appropriate to different user contexts and regulatory requirements.",
+      "statement": "Skill in conducting AI risk assessments across the system lifecycle, including risk identification, impact analysis, likelihood estimation, and the design of proportionate mitigation measures for different risk categories.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -191,7 +191,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in conducting AI risk assessments across the system lifecycle, including risk identification, impact analysis, likelihood estimation, and the design of proportionate mitigation measures for different risk categories.",
+      "statement": "Skill in evaluating AI systems for fairness and bias, including applying fairness metrics across protected attributes, detecting disparate impact, measuring representativeness of training data, and designing mitigation strategies.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -200,7 +200,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in evaluating AI systems for fairness and bias, including applying fairness metrics across protected attributes, detecting disparate impact, measuring representativeness of training data, and designing mitigation strategies.",
+      "statement": "Skill in designing and executing adversarial testing and red-teaming for AI systems, including robustness evaluation, resilience testing, adversarial input generation, and the identification of failure modes under edge conditions.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -209,7 +209,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in designing and executing adversarial testing and red-teaming for AI systems, including robustness evaluation, resilience testing, adversarial input generation, and the identification of failure modes under edge conditions.",
+      "statement": "Skill in performing data preprocessing and quality assurance for ML training, including data cleaning, deduplication, normalization, label quality verification, and documentation of data preparation decisions and their impact on model behavior.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -218,7 +218,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in performing data preprocessing and quality assurance for ML training, including data cleaning, deduplication, normalization, label quality verification, and documentation of data preparation decisions and their impact on model behavior.",
+      "statement": "Skill in producing regulatory-grade AI system documentation, including technical specifications, risk management records, conformity assessment evidence, training data provenance reports, and instructions-for-use documentation that meets EU AI Act and NIST AI RMF standards.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -227,7 +227,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in producing regulatory-grade AI system documentation, including technical specifications, risk management records, conformity assessment evidence, training data provenance reports, and instructions-for-use documentation that meets EU AI Act and NIST AI RMF standards.",
+      "statement": "Skill in designing AI monitoring and observability systems, including logging architecture, risk-relevant event capture, post-market surveillance infrastructure, and integration of monitoring signals with alerting and response workflows.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -236,7 +236,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in designing AI monitoring and observability systems, including logging architecture, risk-relevant event capture, post-market surveillance infrastructure, and integration of monitoring signals with alerting and response workflows.",
+      "statement": "Skill in designing feedback incorporation mechanisms for AI systems, including user feedback collection, stakeholder adjudication processes, feedback-driven model improvement loops, and community reporting channels.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -245,7 +245,7 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in designing feedback incorporation mechanisms for AI systems, including user feedback collection, stakeholder adjudication processes, feedback-driven model improvement loops, and community reporting channels.",
+      "statement": "Skill in assessing third-party AI components and pre-trained model risks, including vendor evaluation, intellectual property review, dependency mapping, performance validation under local conditions, and contingency planning for service disruption.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -254,21 +254,12 @@
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Skill in assessing third-party AI components and pre-trained model risks, including vendor evaluation, intellectual property review, dependency mapping, performance validation under local conditions, and contingency planning for service disruption.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AI-S-029",
-      "type": "Skill",
-      "domain": "AI/ML Foundations",
-      "domain_code": "AI",
       "statement": "Skill in orchestrating end-to-end AI system integration and deployment, including coordinating model deployment with enterprise systems, managing API contracts, configuring infrastructure-as-code for AI workloads, and automating development-to-production workflows.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
     {
-      "ksa_id": "AI-S-030",
+      "ksa_id": "AI-S-029",
       "type": "Skill",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",

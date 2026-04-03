@@ -63,24 +63,25 @@ Richest evidence base: 11,745 total mappings. DCWF 445 WIDAI-relevant, NICE 237,
 
 - AG domain total: 14+8+4+11 = 37 KSAs → 25+20+15+25 = 85 KSAs
 
-### Full AI Domain Expansion — All Four Dimensions
+### AI Domain Re-Synthesis — Evidence-Driven Deduplication
 
-**Complete cross-framework synthesis expansion for the AI/ML Foundations domain.** All four KSA dimensions rebuilt using high watermark analysis across all 6 STRMs. Schema version 3.0.0 — clean break, no legacy_ids.
+**AI domain re-synthesized using correct evidence-driven methodology.** Each dimension received a dedicated synthesis analysis document before any JSON changes. Duplicate groups identified within Phase 1A baseline entries, post-STRM entries validated against framework evidence per ADR-014 Principle 5. Counts are OUTPUT of evidence analysis, not predetermined targets.
 
-**AI Knowledge: 29 → 40 KSAs**
-All 6 frameworks analyzed: DCWF (438 WIDAI-relevant), NICE (329), DDaT (54), NIST AI RMF (52), EU AI Act (30), O*NET (9). 11 new concept clusters: AI risk management frameworks, AI ethics and fairness evaluation, AI governance and regulatory compliance (EU AI Act, NIST AI RMF), AI security threats and adversarial ML, human-AI interaction design, AI supply chain risk, AI system lifecycle management, AI TEVV methodology, AI data governance for ML, AI business value assessment, multimodal AI systems.
+**AI Knowledge: 40 → 34 KSAs**
+23,238 total mappings across 6 frameworks. 5 duplicate groups merged within Phase 1A baseline: model serving + deployment (K-004/K-023), containerization + IaC (K-005/K-025), model monitoring (K-007/K-024), cloud data platforms (K-015/K-021), ML platform components (K-016/K-022). Post-STRM entries K-030 to K-039 validated with indirect framework evidence. K-040 (Multimodal AI) removed — no framework evidence per ADR-014 Principle 5. Synthesis doc: `docs/synthesis/AI-KNOWLEDGE-SYNTHESIS.md`.
 
-**AI Skills: 19 → 30 KSAs**
-DCWF (513 WIDAI-relevant) and NICE (256) provided the richest evidence. EU AI Act contributed the single highest STS match (EUAIA-O-041 transparency at 0.7674). 11 new skill clusters: transparency/explainability implementation, AI risk assessment execution, fairness/bias evaluation, adversarial testing/red-teaming, data preprocessing/quality for ML, regulatory-grade documentation, AI monitoring/observability design, feedback incorporation mechanisms, third-party AI component assessment, end-to-end AI integration orchestration, AI literacy/training program design.
+**AI Skills: 30 → 29 KSAs**
+22,682 total mappings. 1 duplicate group merged: production Python code + research-to-production refactoring (S-003/S-005). All 11 post-STRM entries (S-020 to S-030) validated — strongest evidence: EUAIA-O-012 AI transparency at STS 0.7674 supporting S-020. Synthesis doc: `docs/synthesis/AI-SKILLS-SYNTHESIS.md`.
 
-**AI Abilities: 3 → 15 KSAs**
-Thinnest evidence base (1,097 total mappings) but clear concept gaps. 12 new ability clusters: mathematical/statistical method selection, pattern recognition/abstraction, model output interpretation in business context, AI tool/platform applicability assessment, business-to-AI requirements translation, cost-benefit reasoning for AI, competing requirement balancing, trustworthy AI principle integration, technical-to-strategic translation, process conformance evaluation, automated operations design reasoning, user interaction assessment.
+**AI Abilities: 15 → 15 KSAs (validated, no changes)**
+1,097 total mappings. Only 3 Phase 1A entries — no duplicates possible. All 12 post-STRM entries validated against framework evidence mapped to A-001/A-002/A-003 during STRM runs. Synthesis doc: `docs/synthesis/AI-ABILITIES-SYNTHESIS.md`.
 
-**AI Tasks: 21 → 38 KSAs**
-Richest evidence base: 16,786 total mappings. DCWF 513 WIDAI-relevant, NICE 256, DDaT 62, NIST AI RMF 55, EU AI Act 37, O*NET 9. Strongest hits: DCWF 5889 (AI use cases/best practices) at STS 0.7891, EUAIA-O-041 (GPAI technical docs) at 0.7472, AIRMF-MS-2.6 (safety evaluation) at 0.7413. 17 new task clusters: AI risk assessment, fairness/bias evaluation, adversarial testing/red-teaming, regulatory documentation, training data governance, human oversight design, use case feasibility, integration/deployment orchestration, transparency/explainability, AI incident management, AI literacy/training programs, third-party AI assessment, feedback incorporation, AI system inventory, AI decommissioning, cost optimization, executive AI communication.
+**AI Tasks: 38 → 36 KSAs**
+16,786 total mappings. 2 duplicate groups merged: ML training pipelines + automated ML pipelines (T-005/T-016), monitoring dashboards + monitoring/observability systems (T-004/T-017). All 17 post-STRM entries validated. Strongest evidence: DCWF [5889] at STS 0.7891, AIRMF-MS-2.6 at 0.7413. Synthesis doc: `docs/synthesis/AI-TASKS-SYNTHESIS.md`.
 
+- Added 4 synthesis analysis documents: `docs/synthesis/AI-{KNOWLEDGE,SKILLS,ABILITIES,TASKS}-SYNTHESIS.md`
+- AI domain total: 40+30+15+38 = 123 KSAs → 34+29+15+36 = 114 KSAs
 - Renamed synthesis script: `scripts/ab_dimension_synthesis.py` → `scripts/dimension_synthesis.py` (domain-generic, accepts `--domain` and `--dimension` arguments)
-- AI domain total: 29+19+3+21 = 72 KSAs → 40+30+15+38 = 123 KSAs
 
 ## [0.6.2] - 2026-04-03
 

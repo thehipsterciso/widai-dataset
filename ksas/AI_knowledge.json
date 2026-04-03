@@ -3,7 +3,7 @@
   "domain_code": "AI",
   "domain_title": "AI/ML Foundations",
   "type": "Knowledge",
-  "count": 40,
+  "count": 34,
   "schema_version": "3.0.0",
   "entries": [
     {
@@ -38,7 +38,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of ML model serving patterns, including REST API serving, batch inference, streaming inference, edge deployment, and the latency, throughput, and cost trade-offs of each.",
+      "statement": "Knowledge of ML model serving architecture and deployment strategies, including REST API serving, batch inference, streaming inference, edge deployment, A/B testing, canary releases, shadow deployments, and the latency, throughput, cost, and failure mode trade-offs of each.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -47,7 +47,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of containerization and orchestration technologies (Docker, Kubernetes) as applied to ML model packaging, deployment, and scaling.",
+      "statement": "Knowledge of containerization, orchestration, and infrastructure-as-code as applied to ML workloads, including Docker, Kubernetes, GPU resource management, distributed training job scheduling, and reproducible environment management across development and production.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -65,7 +65,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of model monitoring approaches, including prediction drift detection, input data distribution monitoring, and latency and throughput tracking.",
+      "statement": "Knowledge of model monitoring requirements, including data drift detection, prediction drift, performance degradation metrics, input data distribution monitoring, latency and throughput tracking, alerting thresholds, and retraining triggers appropriate for different model types and serving patterns.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -137,7 +137,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of cloud data platform services across major providers, including storage, compute, streaming, and orchestration capabilities and their architectural implications.",
+      "statement": "Knowledge of cloud data platform services and infrastructure across major providers, including managed compute, serverless processing, object storage, data warehouse, streaming platforms, and their architectural implications for data and ML workloads.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -146,7 +146,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of ML platform components including feature stores, model registries, experiment tracking systems, model serving infrastructure, and pipeline orchestration frameworks.",
+      "statement": "Knowledge of ML platform components and pipeline orchestration, including feature stores, model registries, experiment tracking systems, model serving infrastructure, and the architectural trade-offs between managed and self-hosted ML platforms.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -191,7 +191,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of cloud data platform infrastructure services, including managed compute, serverless processing, object storage, data warehouse, and streaming platform options across major cloud providers.",
+      "statement": "Knowledge of DataOps principles and practices, including pipeline automation, environment management, data testing strategies, configuration-as-code, and the distinction between DataOps, DevOps, and MLOps as complementary disciplines.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -200,7 +200,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of ML pipeline orchestration tools and patterns, including feature stores, experiment tracking, model registries, and the architectural trade-offs between managed and self-hosted ML platforms.",
+      "statement": "Knowledge of current frontiers in machine learning and AI research, including recent advances in foundation models, reinforcement learning, causal ML, and AI safety research.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -209,7 +209,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of model deployment strategies, including batch inference, real-time serving, edge deployment, A/B testing, canary releases, and shadow deployments, and the infrastructure requirements and failure modes of each.",
+      "statement": "Knowledge of experimental design for ML research, including ablation study design, statistical significance in ML evaluation, benchmark construction, and reproducibility standards.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -218,7 +218,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of model monitoring requirements, including data drift detection, prediction drift, performance degradation metrics, and the alerting thresholds and retraining triggers appropriate for different model types and serving patterns.",
+      "statement": "Knowledge of AI capability landscape, including current capabilities and limitations of generative AI, predictive AI, and autonomous systems as applied to enterprise business problems.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -227,7 +227,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of containerization and infrastructure-as-code as applied to ML workloads, including GPU resource management, distributed training job scheduling, and reproducible environment management across development and production.",
+      "statement": "Knowledge of AI risk management frameworks and safety engineering principles, including risk identification across the AI lifecycle, risk categorization methodologies, and the design of mitigation measures that balance safety with system performance.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -236,7 +236,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of DataOps principles and practices, including pipeline automation, environment management, data testing strategies, configuration-as-code, and the distinction between DataOps, DevOps, and MLOps as complementary disciplines.",
+      "statement": "Knowledge of AI ethics principles and fairness evaluation methods, including bias detection and measurement techniques, fairness metrics, representativeness assessment, and the relationship between training data characteristics and model equity outcomes.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -245,7 +245,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of current frontiers in machine learning and AI research, including recent advances in foundation models, reinforcement learning, causal ML, and AI safety research.",
+      "statement": "Knowledge of AI governance and regulatory compliance requirements, including the EU AI Act risk classification system, NIST AI RMF governance functions, organizational AI policy design, and conformity assessment procedures.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -254,7 +254,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of experimental design for ML research, including ablation study design, statistical significance in ML evaluation, benchmark construction, and reproducibility standards.",
+      "statement": "Knowledge of AI security threats and adversarial ML techniques, including data poisoning, model extraction, evasion attacks, prompt injection, and the defensive measures and robustness testing approaches applicable to each.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -263,7 +263,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of AI capability landscape, including current capabilities and limitations of generative AI, predictive AI, and autonomous systems as applied to enterprise business problems.",
+      "statement": "Knowledge of human-AI interaction design principles, including human oversight mechanisms, human-in-the-loop and human-on-the-loop architectures, interpretability requirements for different decision contexts, and the design of effective AI system transparency.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -272,7 +272,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of AI risk management frameworks and safety engineering principles, including risk identification across the AI lifecycle, risk categorization methodologies, and the design of mitigation measures that balance safety with system performance.",
+      "statement": "Knowledge of AI supply chain risk and third-party model dependencies, including pre-trained model provenance assessment, API dependency management, intellectual property considerations, and contingency planning for third-party AI service disruption.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -281,7 +281,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of AI ethics principles and fairness evaluation methods, including bias detection and measurement techniques, fairness metrics, representativeness assessment, and the relationship between training data characteristics and model equity outcomes.",
+      "statement": "Knowledge of AI system lifecycle management, including inception assessment, development governance, deployment readiness evaluation, post-market monitoring, substantial modification criteria, and decommissioning procedures.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -290,7 +290,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of AI governance and regulatory compliance requirements, including the EU AI Act risk classification system, NIST AI RMF governance functions, organizational AI policy design, and conformity assessment procedures.",
+      "statement": "Knowledge of AI testing, evaluation, verification, and validation (TEVV) methodology, including test protocol design for high-risk systems, real-world testing requirements, red-teaming approaches, and the assessment of TEVV process effectiveness.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -299,7 +299,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of AI security threats and adversarial ML techniques, including data poisoning, model extraction, evasion attacks, prompt injection, and the defensive measures and robustness testing approaches applicable to each.",
+      "statement": "Knowledge of AI data governance requirements specific to ML systems, including training data provenance, data quality standards for model inputs, annotation governance, synthetic data generation principles, and data lifecycle management across model versions.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -308,61 +308,7 @@
       "type": "Knowledge",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Knowledge of human-AI interaction design principles, including human oversight mechanisms, human-in-the-loop and human-on-the-loop architectures, interpretability requirements for different decision contexts, and the design of effective AI system transparency.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AI-K-035",
-      "type": "Knowledge",
-      "domain": "AI/ML Foundations",
-      "domain_code": "AI",
-      "statement": "Knowledge of AI supply chain risk and third-party model dependencies, including pre-trained model provenance assessment, API dependency management, intellectual property considerations, and contingency planning for third-party AI service disruption.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AI-K-036",
-      "type": "Knowledge",
-      "domain": "AI/ML Foundations",
-      "domain_code": "AI",
-      "statement": "Knowledge of AI system lifecycle management, including inception assessment, development governance, deployment readiness evaluation, post-market monitoring, substantial modification criteria, and decommissioning procedures.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AI-K-037",
-      "type": "Knowledge",
-      "domain": "AI/ML Foundations",
-      "domain_code": "AI",
-      "statement": "Knowledge of AI testing, evaluation, verification, and validation (TEVV) methodology, including test protocol design for high-risk systems, real-world testing requirements, red-teaming approaches, and the assessment of TEVV process effectiveness.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AI-K-038",
-      "type": "Knowledge",
-      "domain": "AI/ML Foundations",
-      "domain_code": "AI",
-      "statement": "Knowledge of AI data governance requirements specific to ML systems, including training data provenance, data quality standards for model inputs, annotation governance, synthetic data generation principles, and data lifecycle management across model versions.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AI-K-039",
-      "type": "Knowledge",
-      "domain": "AI/ML Foundations",
-      "domain_code": "AI",
       "statement": "Knowledge of AI business value assessment methods, including use case identification and prioritization, feasibility evaluation, build-versus-buy analysis, ROI estimation for AI initiatives, and the translation of business problems into technically feasible AI solutions.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AI-K-040",
-      "type": "Knowledge",
-      "domain": "AI/ML Foundations",
-      "domain_code": "AI",
-      "statement": "Knowledge of multimodal AI systems, including architectures that process and integrate across text, image, audio, and video modalities, cross-modal alignment techniques, and the evaluation challenges specific to multimodal outputs.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     }

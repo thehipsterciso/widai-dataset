@@ -3,7 +3,7 @@
   "domain_code": "AI",
   "domain_title": "AI/ML Foundations",
   "type": "Task",
-  "count": 38,
+  "count": 36,
   "schema_version": "3.0.0",
   "entries": [
     {
@@ -38,7 +38,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Implement model monitoring dashboards and alerting, including performance degradation thresholds, drift detection, and incident response procedures.",
+      "statement": "Implement model monitoring and observability systems, including performance dashboards, drift detection, degradation alerting, incident response procedures, and automated retraining triggers when defined thresholds are exceeded.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -47,7 +47,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Build and maintain ML training pipelines, including data ingestion, preprocessing, training, evaluation, and model registration steps.",
+      "statement": "Build and maintain automated ML pipelines from data ingestion and feature engineering through model training, validation, deployment, and monitoring, ensuring reproducibility and auditability at every stage.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -146,7 +146,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Build and maintain automated ML pipelines from feature engineering through model training, validation, deployment, and monitoring, ensuring reproducibility and auditability at every stage.",
+      "statement": "Design and execute research projects that advance organizational AI capability, including hypothesis formulation, experimental design, execution, and findings documentation.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -155,7 +155,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Implement model monitoring and observability systems that detect data drift, prediction drift, and performance degradation, triggering alerts or automated retraining workflows when defined thresholds are exceeded.",
+      "statement": "Manage the enterprise AI innovation pipeline, including ideation facilitation, use case triage, prototype development prioritization, and POC results communication.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -164,7 +164,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Design and execute research projects that advance organizational AI capability, including hypothesis formulation, experimental design, execution, and findings documentation.",
+      "statement": "Build and deliver AI proof-of-concepts for high-priority use cases, documenting technical approach, results, limitations, and production readiness assessment.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -173,7 +173,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Manage the enterprise AI innovation pipeline, including ideation facilitation, use case triage, prototype development prioritization, and POC results communication.",
+      "statement": "Execute routine data platform maintenance tasks, including storage cleanup, job configuration updates, and operational documentation maintenance.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -182,7 +182,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Build and deliver AI proof-of-concepts for high-priority use cases, documenting technical approach, results, limitations, and production readiness assessment.",
+      "statement": "Conduct AI risk assessments across the system lifecycle, including risk identification, impact analysis, likelihood estimation, and documentation of proportionate mitigation measures for different risk categories.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -191,7 +191,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Execute routine data platform maintenance tasks, including storage cleanup, job configuration updates, and operational documentation maintenance.",
+      "statement": "Evaluate AI systems for fairness and bias, including applying fairness metrics across protected attributes, assessing training data representativeness, and documenting disparate impact findings and mitigation actions.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -200,7 +200,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Conduct AI risk assessments across the system lifecycle, including risk identification, impact analysis, likelihood estimation, and documentation of proportionate mitigation measures for different risk categories.",
+      "statement": "Design and execute adversarial testing and red-teaming exercises for AI systems, including robustness evaluation, prompt injection testing, evasion attack simulation, and identification of failure modes under adversarial conditions.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -209,7 +209,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Evaluate AI systems for fairness and bias, including applying fairness metrics across protected attributes, assessing training data representativeness, and documenting disparate impact findings and mitigation actions.",
+      "statement": "Produce regulatory-grade AI system documentation, including technical specifications, risk management records, conformity assessment evidence, training data provenance reports, and instructions-for-use documentation that meets applicable regulatory standards.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -218,7 +218,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Design and execute adversarial testing and red-teaming exercises for AI systems, including robustness evaluation, prompt injection testing, evasion attack simulation, and identification of failure modes under adversarial conditions.",
+      "statement": "Execute AI training data governance, including data provenance tracking, annotation quality assurance, representativeness assessment, synthetic data validation, and documentation of data preparation decisions and their impact on model behavior.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -227,7 +227,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Produce regulatory-grade AI system documentation, including technical specifications, risk management records, conformity assessment evidence, training data provenance reports, and instructions-for-use documentation that meets applicable regulatory standards.",
+      "statement": "Design and implement human oversight mechanisms for AI systems, including human-in-the-loop and human-on-the-loop architectures, override capabilities, and trust calibration interfaces appropriate to system risk level.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -236,7 +236,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Execute AI training data governance, including data provenance tracking, annotation quality assurance, representativeness assessment, synthetic data validation, and documentation of data preparation decisions and their impact on model behavior.",
+      "statement": "Conduct AI use case feasibility assessments, including data availability evaluation, technical complexity estimation, organizational readiness analysis, and business value quantification to inform prioritization decisions.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -245,7 +245,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Design and implement human oversight mechanisms for AI systems, including human-in-the-loop and human-on-the-loop architectures, override capabilities, and trust calibration interfaces appropriate to system risk level.",
+      "statement": "Orchestrate end-to-end AI system integration and deployment, including coordinating model deployment with enterprise systems, managing API contracts, configuring infrastructure for AI workloads, and automating promotion workflows from development to production.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -254,7 +254,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Conduct AI use case feasibility assessments, including data availability evaluation, technical complexity estimation, organizational readiness analysis, and business value quantification to inform prioritization decisions.",
+      "statement": "Implement AI system transparency and explainability mechanisms, including model interpretability techniques, output explanation methods, and confidence communication appropriate to different user contexts and regulatory requirements.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -263,7 +263,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Orchestrate end-to-end AI system integration and deployment, including coordinating model deployment with enterprise systems, managing API contracts, configuring infrastructure for AI workloads, and automating promotion workflows from development to production.",
+      "statement": "Manage AI system incidents, including detection, triage, root cause analysis, risk assessment, corrective action implementation, and regulatory reporting where required.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -272,7 +272,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Implement AI system transparency and explainability mechanisms, including model interpretability techniques, output explanation methods, and confidence communication appropriate to different user contexts and regulatory requirements.",
+      "statement": "Design and deliver AI literacy and training programs, including competency assessment, curriculum development for technical and non-technical audiences, and evaluation of training effectiveness in building organizational AI fluency.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -281,7 +281,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Manage AI system incidents, including detection, triage, root cause analysis, risk assessment, corrective action implementation, and regulatory reporting where required.",
+      "statement": "Assess third-party AI components and pre-trained model risks, including vendor evaluation, intellectual property review, performance validation under local conditions, dependency mapping, and contingency planning for service disruption.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -290,7 +290,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Design and deliver AI literacy and training programs, including competency assessment, curriculum development for technical and non-technical audiences, and evaluation of training effectiveness in building organizational AI fluency.",
+      "statement": "Design and implement AI feedback incorporation systems, including user feedback collection mechanisms, stakeholder adjudication processes, feedback-driven model improvement loops, and community reporting channels.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -299,7 +299,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Assess third-party AI components and pre-trained model risks, including vendor evaluation, intellectual property review, performance validation under local conditions, dependency mapping, and contingency planning for service disruption.",
+      "statement": "Maintain an organizational AI system inventory, including cataloging deployed systems, tracking system attributes and risk classifications, documenting lifecycle status, and supporting organizational visibility into AI system deployment.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -308,7 +308,7 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Design and implement AI feedback incorporation systems, including user feedback collection mechanisms, stakeholder adjudication processes, feedback-driven model improvement loops, and community reporting channels.",
+      "statement": "Plan and execute AI system decommissioning, including safe phase-out procedures, risk assessment during transition, data retention decisions, stakeholder notification, and documentation of decommissioning rationale and outcomes.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
@@ -317,30 +317,12 @@
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",
-      "statement": "Maintain an organizational AI system inventory, including cataloging deployed systems, tracking system attributes and risk classifications, documenting lifecycle status, and supporting organizational visibility into AI system deployment.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AI-T-036",
-      "type": "Task",
-      "domain": "AI/ML Foundations",
-      "domain_code": "AI",
-      "statement": "Plan and execute AI system decommissioning, including safe phase-out procedures, risk assessment during transition, data retention decisions, stakeholder notification, and documentation of decommissioning rationale and outcomes.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
-    },
-    {
-      "ksa_id": "AI-T-037",
-      "type": "Task",
-      "domain": "AI/ML Foundations",
-      "domain_code": "AI",
       "statement": "Optimize AI workload cost and resource utilization, including compute resource allocation, GPU scheduling efficiency, cloud cost management, and trade-off analysis between model performance and operational expense.",
       "origin_framework": "WIDAI",
       "origin_version": "0.7.0"
     },
     {
-      "ksa_id": "AI-T-038",
+      "ksa_id": "AI-T-036",
       "type": "Task",
       "domain": "AI/ML Foundations",
       "domain_code": "AI",

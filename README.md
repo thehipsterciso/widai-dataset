@@ -8,7 +8,7 @@
 
 The labor market has had O\*NET for forty years. Cybersecurity has had NICE for a decade. Data and AI — the function that boards are betting their competitive future on — has nothing. No shared language for its workforce. No standard for who these people are, what they should know, or how to measure the gap between where an organization is and where it needs to be.
 
-WIDAI fills that gap. 187 roles. 504 KSAs across 12 knowledge domains. 70+ source frameworks unified with full provenance. Every mapping computationally scored and independently validated — not expert opinion, not manual classification. 536,737 rationale files across 2.76 million scored pairs. One taxonomy that speaks every framework's language simultaneously.
+WIDAI fills that gap. 187 roles. 706 KSAs across 12 knowledge domains. 70+ source frameworks unified with full provenance. Every mapping computationally scored and independently validated — not expert opinion, not manual classification. 536,737 rationale files across 2.76 million scored pairs. One taxonomy that speaks every framework's language simultaneously.
 
 ---
 
