@@ -51,6 +51,10 @@ WIDAI is a unified workforce framework that maps roles across the CDAIO domain, 
 
 **[PE Assessment Methodology](../methodology/R04-pe-assessment-methodology.md)** — Scoring model, engagement workflow, and deliverable specifications for the PE workforce due diligence product.
 
+### Synthesis
+
+**[AB Knowledge Synthesis](../strm/AB-KNOWLEDGE-SYNTHESIS.md)** — First cross-framework synthesis for a single domain×dimension. 7,874 mappings across 6 frameworks analyzed for 10 AB Knowledge KSAs. Evidence matrix, gap analysis, near-miss analysis, and 5 candidate new KSAs.
+
 ### STRM Framework Mappings
 
 **[STRM Directory](../strm/)** — Per-framework NIST IR 8477 Set Theory Relationship Mappings. Each framework STRM produces: mapping data, per-element rationale files with multi-method scoring, gap issue register, scoring summary, and QA/QC report. See individual framework ADRs for methodology and findings.
@@ -98,7 +102,7 @@ All four validation tests passed. Go decision for Phase 1.
 | 1A — Baseline KSA Enrichment | Complete | KSA pool expanded across all 12 domains. Abilities coverage gap closed. |
 | 1B — Framework Prioritization | Complete | 34 STRM-eligible frameworks identified. 4-tier execution sequence. |
 | 1C — Per-Framework STRM Cycle | In Progress | Tier 1 complete (4 frameworks). Tier 2: 2 of 5 complete (EU AI Act, NIST AI RMF). All 6 STRMs reprocessed through consolidated domain-exhaustive pipeline — 2.76M pairs scored, 536,737 rationale files. See STRM progress below. |
-| 1D — Synthesis | Not Started | Cross-framework evidence synthesis. Blocked until sufficient STRMs complete. |
+| 1D — Synthesis | In Progress | First domain×dimension complete: AB Knowledge. 7,874 mappings across 6 frameworks. See `strm/AB-KNOWLEDGE-SYNTHESIS.md`. |
 
 ### STRM Framework Progress
 

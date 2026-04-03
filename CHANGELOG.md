@@ -3,6 +3,20 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.6.2] - 2026-04-03
+
+### AB Knowledge Domain — Cross-Framework Synthesis (First Domain MVP)
+
+**First complete cross-framework synthesis for a single domain×dimension.** All 6 STRMs analyzed for the AB (Analytics & BI) Knowledge dimension: 7,874 mappings across 10 KSAs extracted, scored, and assessed.
+
+**Key finding:** Zero strong classifications (Equal/Subset) across all 6 frameworks. Max STS: 0.6863 (below 0.70 Subset threshold). AB Knowledge is genuinely additive — these frameworks acknowledge analytics at tool/capability level but none articulates it at WIDAI's method/principle granularity.
+
+- Added `scripts/ab_k_synthesis.py` — cross-framework evidence extraction and matrix builder
+- Added `scripts/ab_k_top_matches.py` — per-KSA top match and near-miss analysis
+- Added `strm/ab_knowledge_synthesis.json` — full evidence data (7,874 mappings with per-KSA per-framework breakdowns)
+- Added `strm/AB-KNOWLEDGE-SYNTHESIS.md` — synthesis report with evidence matrix, gap analysis, near-miss analysis, and 5 candidate new KSAs
+- 5 gap signal KSAs identified: data quality/profiling, metrics/KPI design, data storytelling, survey methodology, analytics ethics/bias
+
 ## [0.6.1] - 2026-04-03
 
 ### KSA Files Split by Type
