@@ -263,8 +263,10 @@ def main():
         print(f"  WIDAI-relevant: {len(relevant)}")
         print(f"  Noise filtered: {len(noise)}")
 
-        print(f"\nTop 60 WIDAI-relevant elements:")
-        for i, e in enumerate(sorted(relevant.values(), key=lambda x: x["best_sts"], reverse=True)[:60]):
+        print(f"\nAll WIDAI-relevant elements at STS >= 0.55:")
+        for i, e in enumerate(sorted(relevant.values(), key=lambda x: x["best_sts"], reverse=True)):
+            if e["best_sts"] < 0.55:
+                break
             ksas = ", ".join(sorted(e["ksa_matches"]))
             print(f"  {i+1:>3}. STS={e['best_sts']:.4f} [{e['id']}] {e['desc'][:120]}")
             print(f"       -> {ksas}")
