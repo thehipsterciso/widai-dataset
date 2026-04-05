@@ -3,7 +3,7 @@
   "domain_code": "AG",
   "domain_title": "AI Governance & Ethics",
   "type": "Ability",
-  "count": 15,
+  "count": 28,
   "schema_version": "3.0.0",
   "entries": [
     {
@@ -11,135 +11,252 @@
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to calibrate AI governance oversight proportionally to the actual risk level of AI applications, avoiding both under-governance of high-risk systems and excessive governance that impedes low-risk innovation.",
+      "statement": "Ability to identify, assess, and prioritize risks in AI systems and governance contexts; develop mitigation strategies calibrated to organizational risk tolerance and operational constraints.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-002",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to navigate ethical trade-offs in AI deployment where competing values such as fairness versus accuracy, transparency versus privacy, or speed versus safety require principled resolution.",
+      "statement": "Ability to interpret, apply, and integrate evolving regulations, laws, and standards into organizational governance processes; resolve conflicts between multiple regulatory frameworks.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-003",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to build organizational commitment to responsible AI practices by demonstrating their business value and risk reduction benefits rather than relying solely on compliance mandates.",
+      "statement": "Ability to define, operationalize, and embed trustworthy AI principles—including validity, reliability, safety, security, resilience, accountability, and transparency—into AI system design and organizational governance processes.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-004",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to translate emerging AI ethics research, evolving societal expectations, and new regulatory guidance into practical governance policy updates that maintain organizational alignment.",
+      "statement": "Ability to develop, document, communicate, and iteratively update governance policies that reflect organizational objectives, regulatory requirements, and evolving AI capabilities.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-005",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to synthesize requirements from multiple regulatory frameworks and standards into coherent, non-duplicative governance controls that satisfy overlapping obligations without creating compliance conflicts.",
+      "statement": "Ability to identify key stakeholders, build organizational commitment to governance initiatives, and lead change to embed responsible AI practices through influence, cultural transformation, and sustained engagement.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-006",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to integrate quantitative risk measurements, performance metrics, and monitoring signals into governance decision-making processes, ensuring governance actions are evidence-driven rather than assumption-based.",
+      "statement": "Ability to design and implement governance structures, frameworks, and accountability mechanisms that clarify roles, responsibilities, decision authority, and reporting relationships across organizational units.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-007",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to mediate and resolve conflicts between competing stakeholder interests during governance review and decision processes, achieving outcomes that maintain organizational trust and governance legitimacy.",
+      "statement": "Ability to design and implement AI monitoring systems for deployed applications; establish post-market surveillance infrastructure proportional to assessed risk levels and regulatory requirements.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-008",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to detect divergence between governance intent and operational reality through monitoring, pattern recognition, and cross-referencing governance controls against actual AI system behavior.",
+      "statement": "Ability to assess transparency requirements for AI systems and ensure outputs meet governance standards for interpretability, explainability, and regulatory compliance.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-009",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to anticipate second-order effects of governance decisions on organizational behavior, innovation velocity, risk posture, and stakeholder trust before those effects materialize.",
+      "statement": "Ability to design governance frameworks for human oversight of AI systems, including defining decision authority thresholds, understanding system capacities and limitations, and establishing feedback and adjudication processes.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-010",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to adapt governance frameworks in response to emerging AI capabilities, evolving threat landscapes, and new regulatory requirements without creating governance gaps during transition periods.",
+      "statement": "Ability to design measurement frameworks and metrics that characterize AI system risk, trustworthiness, and adherence to governance principles across the complete system lifecycle.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-011",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to evaluate governance mechanism effectiveness through evidence-based assessment, identifying which controls produce intended outcomes and which create compliance theater without meaningful risk reduction.",
+      "statement": "Ability to conduct conformity assessments of AI systems against regulatory standards; identify non-conformities; and determine and implement corrective actions to restore compliance.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-012",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to coordinate AI governance activities across organizational boundaries, reconciling divergent functional priorities into unified governance outcomes that maintain enterprise-wide coherence.",
+      "statement": "Ability to investigate serious AI incidents, perform root cause analysis, assess incident risk severity, and develop evidence-based remediation strategies.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-013",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to communicate governance rationale persuasively across technical, executive, legal, and operational audiences, adapting depth, framing, and language to each context without losing accuracy.",
+      "statement": "Ability to define business use cases for AI systems, assess their value and alignment with organizational mission, and evaluate whether implementations achieve intended purpose and measurable benefits.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-014",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to maintain governance program coherence and continuity through organizational change, leadership transitions, and scaling events that destabilize established governance routines.",
+      "statement": "Ability to design and support AI adoption strategies that align with organizational vision and goals; identify and address key roadblocks to implementation and organizational change.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "AG-A-015",
       "type": "Ability",
       "domain": "AI Governance & Ethics",
       "domain_code": "AG",
-      "statement": "Ability to balance governance rigor with organizational velocity, identifying where streamlined governance enables responsible AI adoption and where additional controls are non-negotiable.",
+      "statement": "Ability to design and deliver AI risk management and governance training programs for organizational personnel and external partners; build governance competency across the workforce.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.7.0"
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-016",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to relate AI strategy, business objectives, and technology capabilities in organizational context; ensure governance frameworks align with organizational dynamics and strategic direction.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-017",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to monitor and assess AI risks from third-party vendors, partners, and ecosystem participants; establish governance controls for external AI system dependencies.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-018",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to navigate competing ethical values in AI deployment—including fairness versus accuracy, transparency versus privacy, and speed versus safety—and make principled governance decisions balancing competing tensions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-019",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to allocate governance oversight proportionally to actual risk level of AI applications, avoiding both under-governance of high-risk systems and excessive controls on low-risk innovation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-020",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to monitor emerging AI capabilities and threat landscapes, anticipate governance gaps, and adapt governance frameworks and controls without creating unmanaged transition periods.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-021",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to evaluate governance mechanism effectiveness through evidence-based assessment; identify which controls produce intended outcomes and which create compliance theater without meaningful risk reduction.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-022",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to communicate governance rationale persuasively across technical, executive, legal, and operational audiences, adapting depth, framing, and language to each context without losing accuracy.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-023",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to coordinate AI governance activities across organizational boundaries, reconciling divergent functional priorities into unified governance outcomes that maintain enterprise-wide coherence.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-024",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to maintain governance program coherence and continuity through organizational change, leadership transitions, and scaling events that destabilize established governance routines.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-025",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to implement Responsible AI best practices and standards within AI solutions according to organizational ethical principles and regulatory requirements; operationalize ethics from policy to code.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-026",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to establish and maintain processes ensuring data management efforts comply with AI ethical principles; govern data quality, provenance, and usage in AI system contexts.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-027",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to synthesize requirements from multiple regulatory frameworks and standards into coherent, non-duplicative governance controls that satisfy overlapping obligations without creating compliance conflicts.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "AG-A-028",
+      "type": "Ability",
+      "domain": "AI Governance & Ethics",
+      "domain_code": "AG",
+      "statement": "Ability to integrate AI measurement results and trustworthiness metrics into governance decision-making; translate evidence into go/no-go determinations and evidence-driven governance actions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
     }
   ]
 }
