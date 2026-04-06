@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0182",
+  "role_name": "Chief Medical Information Officer",
+  "ksa_id": "RC-T-006",
+  "ksa_text": "Develop, maintain, and update Records of Processing Activities (ROPA), documenting processing purposes, data categories, recipient categories, international transfers, retention periods, and security measures.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4205385454545455,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39658792401628223,
+        "cross_encoder_sts": 0.4109324626865672,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3583358208955224,
+        "jaccard": null,
+        "top_element_id": "1000",
+        "top_element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.4205385454545455,
+        "cross_encoder_sts": 0.451918,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33686,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.38220779220779216,
+        "cross_encoder_sts": 0.39218571428571425,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35559999999999997,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-006",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.390317128154864,
+        "cross_encoder_sts": 0.4231876010781671,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3026625336927224,
+        "jaccard": null,
+        "top_element_id": "K0666",
+        "top_element_label": "Knowledge of system security plans"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35899132231404957,
+        "cross_encoder_sts": 0.38770454545454547,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28242272727272727,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.2",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4079422077922078,
+        "cross_encoder_sts": 0.4196071428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37683571428571433,
+        "jaccard": null,
+        "top_element_id": "2.C.1.b",
+        "top_element_label": "Administrative"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4205385454545455
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.b",
+        "element_label": "Administrative",
+        "score": 0.4079422077922078
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000",
+        "element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary.",
+        "score": 0.39658792401628223
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0666",
+        "element_label": "Knowledge of system security plans",
+        "score": 0.390317128154864
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-006",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.38220779220779216
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-T-006 (Risk & Compliance/Task) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.421. Highest framework: DDaT at 0.421."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Risk & Compliance, composite 0.421. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Risk & Compliance (composite 0.421)?",
+    "evidence": "Risk & Compliance at ~82% market presence. Regulatory compliance (HIPAA, CMS, accreditation) core CMIO accountability. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA RC-T-006 (Risk & Compliance/Task) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.421. Highest framework: DDaT at 0.421.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:42.409285Z",
+    "pipeline_version": "1.0"
+  }
+}

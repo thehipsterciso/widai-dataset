@@ -1,0 +1,95 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0183",
+  "role_name": "Data Annotator",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:49:49.239835Z",
+  "total_ksas": 1069,
+  "included": 52,
+  "excluded": 1017,
+  "inclusion_rate": 0.0486,
+  "adversarial_overturns": {
+    "pass_3": 0,
+    "pass_4": 5,
+    "total_ksas_affected": 5
+  },
+  "calibration": {
+    "min": 35,
+    "max": 75,
+    "status": "ok"
+  },
+  "domain_summary": {
+    "AG": {
+      "include": 0,
+      "exclude": 107,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 0,
+      "exclude": 74,
+      "total": 74,
+      "label": "Risk & Compliance"
+    },
+    "RM": {
+      "include": 0,
+      "exclude": 101,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 0,
+      "exclude": 89,
+      "total": 89,
+      "label": "Leadership & Strategy"
+    },
+    "TF": {
+      "include": 0,
+      "exclude": 87,
+      "total": 87,
+      "label": "Technology Fundamentals"
+    },
+    "AI": {
+      "include": 16,
+      "exclude": 87,
+      "total": 103,
+      "label": "AI & ML"
+    },
+    "DG": {
+      "include": 0,
+      "exclude": 92,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "OP": {
+      "include": 0,
+      "exclude": 69,
+      "total": 69,
+      "label": "Operations & Program Management"
+    },
+    "SP": {
+      "include": 0,
+      "exclude": 84,
+      "total": 84,
+      "label": "Security & Privacy"
+    },
+    "DA": {
+      "include": 0,
+      "exclude": 93,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 33,
+      "exclude": 49,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "AB": {
+      "include": 3,
+      "exclude": 85,
+      "total": 88,
+      "label": "Core Abilities"
+    }
+  }
+}

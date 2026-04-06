@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0182",
+  "role_name": "Chief Medical Information Officer",
+  "ksa_id": "DA-K-011",
+  "ksa_text": "Knowledge of data platform security controls, including network isolation, encryption at rest and in transit, identity and access management, audit logging, and secure architecture patterns.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4223352272727273,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4050442544796975,
+        "cross_encoder_sts": 0.428905424954792,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3414144665461121,
+        "jaccard": null,
+        "top_element_id": "102A",
+        "top_element_label": "Ability to apply programming language structures (e.g., source code review) and logic."
+      },
+      "ddat": {
+        "composite": 0.4099424901185771,
+        "cross_encoder_sts": 0.4385586956521739,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33363260869565214,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3798866666666667,
+        "cross_encoder_sts": 0.3974066666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3331666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-027",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.419365974025974,
+        "cross_encoder_sts": 0.44953942857142853,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3389034285714286,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3701448051948052,
+        "cross_encoder_sts": 0.3965642857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29969285714285715,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.4223352272727273,
+        "cross_encoder_sts": 0.4621125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3162625,
+        "jaccard": null,
+        "top_element_id": "2.C.3.a",
+        "top_element_label": "Computers and Electronics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.a",
+        "element_label": "Computers and Electronics",
+        "score": 0.4223352272727273
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.419365974025974
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4099424901185771
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "102A",
+        "element_label": "Ability to apply programming language structures (e.g., source code review) and logic.",
+        "score": 0.4050442544796975
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-027",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.3798866666666667
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DA-K-011 (Data Architecture/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.422. Highest framework: O*NET at 0.422."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Data Architecture, composite 0.422. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Data Architecture (composite 0.422)?",
+    "evidence": "Data Architecture at ~42% market presence. Clinical data architecture and interoperability in ~40% of CMIO JDs. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DA-K-011 (Data Architecture/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.422. Highest framework: O*NET at 0.422.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:42.405410Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0183",
+  "role_name": "Data Annotator",
+  "ksa_id": "AG-A-001",
+  "ksa_text": "Ability to identify, assess, and prioritize risks in AI systems and governance contexts; develop mitigation strategies calibrated to organizational risk tolerance and operational constraints.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5069088195386703,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.36623226717788315,
+        "cross_encoder_sts": 0.412123640399556,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2438552719200888,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.43123006993006996,
+        "cross_encoder_sts": 0.4850615384615385,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28767948717948716,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4648060034305317,
+        "cross_encoder_sts": 0.45153396226415093,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5001981132075471,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.36285842424242426,
+        "cross_encoder_sts": 0.419591,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21157155555555557,
+        "jaccard": null,
+        "top_element_id": "K0675",
+        "top_element_label": "Knowledge of risk management processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5069088195386703,
+        "cross_encoder_sts": 0.4975701492537314,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5318119402985074,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.34163939393939396,
+        "cross_encoder_sts": 0.3994166666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18756666666666666,
+        "jaccard": null,
+        "top_element_id": "2.B.1.b",
+        "top_element_label": "Coordination"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5069088195386703
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4648060034305317
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.43123006993006996
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.36623226717788315
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0675",
+        "element_label": "Knowledge of risk management processes",
+        "score": 0.36285842424242426
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-A-001 (AI Governance/Ability) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.507. Highest framework: NIST AI RMF at 0.507."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, AI Governance, composite 0.507. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of AI Governance (composite 0.507)?",
+    "evidence": "AI Governance at ~8% market presence. AI governance frameworks not in annotator JDs. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-A-001 (AI Governance/Ability) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.507. Highest framework: NIST AI RMF at 0.507.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:48.951494Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0182",
+  "role_name": "Chief Medical Information Officer",
+  "ksa_id": "AB-S-007",
+  "ksa_text": "Skill in translating business questions and customer requirements into structured analytical approaches, including defining data requirements, scoping analysis, and selecting appropriate methodology.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.45974862258953164,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4184795780490696,
+        "cross_encoder_sts": 0.45740039113428943,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31469074315514994,
+        "jaccard": null,
+        "top_element_id": "3734",
+        "top_element_label": "Ability to design valid and reliable assessments."
+      },
+      "ddat": {
+        "composite": 0.40431788537549407,
+        "cross_encoder_sts": 0.45242934782608696,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27602065217391303,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4427675990675991,
+        "cross_encoder_sts": 0.5015025641025641,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2861410256410256,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.423833962264151,
+        "cross_encoder_sts": 0.46357547169811325,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31785660377358493,
+        "jaccard": null,
+        "top_element_id": "K0647",
+        "top_element_label": "Knowledge of data visualization tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.45974862258953164,
+        "cross_encoder_sts": 0.5225151515151515,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29237121212121214,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-1.1",
+        "top_element_label": "Context is established and understood."
+      },
+      "onet": {
+        "composite": 0.4377112727272727,
+        "cross_encoder_sts": 0.464876,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.365272,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-1.1",
+        "element_label": "Context is established and understood.",
+        "score": 0.45974862258953164
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4427675990675991
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.4377112727272727
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0647",
+        "element_label": "Knowledge of data visualization tools and techniques",
+        "score": 0.423833962264151
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "3734",
+        "element_label": "Ability to design valid and reliable assessments.",
+        "score": 0.4184795780490696
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-S-007 (Core Abilities/Skill) scores 0.460 composite (highest: NIST AI RMF at 0.460). Scope is edge_case for Chief Medical Information Officer: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Core Abilities, composite 0.460. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Core Abilities for Chief Medical Information Officer?",
+    "evidence": "Core Abilities appears in ~40% of Chief Medical Information Officer postings. Executive competencies relevant but implicit in CMIO qualifications. Zero role-specific signals insufficient for edge inclusion at 40% market penetration.",
+    "ruling": "Revised to exclude. Core Abilities without role signals not market-supported. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Core Abilities without role signals not market-supported. Final decision: exclude.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:42.357388Z",
+    "pipeline_version": "1.0"
+  }
+}

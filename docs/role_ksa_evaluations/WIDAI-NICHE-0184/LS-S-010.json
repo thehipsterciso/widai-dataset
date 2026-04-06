@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0184",
+  "role_name": "AI Content Editor",
+  "ksa_id": "LS-S-010",
+  "ksa_text": "Skill in presenting data and AI strategy, risk, and value to board-level audiences, translating technical complexity into governance-appropriate language and decision frameworks.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.5158863636363636,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41760162037037035,
+        "cross_encoder_sts": 0.4494915509259259,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33256180555555553,
+        "jaccard": null,
+        "top_element_id": "1002B",
+        "top_element_label": "Skill in conducting reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.45625378787878784,
+        "cross_encoder_sts": 0.4935583333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.356775,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.469451114922813,
+        "cross_encoder_sts": 0.4772320754716981,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4487018867924528,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4050585393685812,
+        "cross_encoder_sts": 0.44114309623430964,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30883305439330544,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5158863636363636,
+        "cross_encoder_sts": 0.5228214285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4973928571428572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.9",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.41437359307359306,
+        "cross_encoder_sts": 0.45490476190476187,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3062904761904762,
+        "jaccard": null,
+        "top_element_id": "2.A.1.d",
+        "top_element_label": "Speaking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.9",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.5158863636363636
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.469451114922813
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.45625378787878784
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002B",
+        "element_label": "Skill in conducting reviews of technical systems.",
+        "score": 0.41760162037037035
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.d",
+        "element_label": "Speaking",
+        "score": 0.41437359307359306
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-S-010 (Leadership & Strategy/Skill) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.516. Highest framework: NIST AI RMF at 0.516."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, Leadership & Strategy, composite 0.516. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Leadership & Strategy (composite 0.516)?",
+    "evidence": "Leadership & Strategy at ~10% market presence. Leadership/strategy above IC editor scope. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA LS-S-010 (Leadership & Strategy/Skill) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.516. Highest framework: NIST AI RMF at 0.516.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:52.644767Z",
+    "pipeline_version": "1.0"
+  }
+}

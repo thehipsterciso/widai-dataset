@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0184",
+  "role_name": "AI Content Editor",
+  "ksa_id": "DQ-A-002",
+  "ksa_text": "Ability to evaluate data sources for relevance, reliability, completeness, and objectivity to determine how source limitations affect analytical conclusions and data fitness.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4158589981447124,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39936307070707067,
+        "cross_encoder_sts": 0.4146262222222222,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35866133333333333,
+        "jaccard": null,
+        "top_element_id": "1079A",
+        "top_element_label": "Identify functional- and security-related features to find opportunities for new capability development to exploit or mitigate vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.4158589981447124,
+        "cross_encoder_sts": 0.4427510204081633,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34414693877551017,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.39614917355371904,
+        "cross_encoder_sts": 0.41898636363636366,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33525,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3944067082111437,
+        "cross_encoder_sts": 0.4203185483870968,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3253084677419355,
+        "jaccard": null,
+        "top_element_id": "S0111",
+        "top_element_label": "Skill in interfacing with customers"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3859754820936639,
+        "cross_encoder_sts": 0.4140060606060606,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31122727272727274,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.4140829545454545,
+        "cross_encoder_sts": 0.440575,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3434375,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4158589981447124
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.4140829545454545
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1079A",
+        "element_label": "Identify functional- and security-related features to find opportunities for new capability development to exploit or mitigate vulnerabilities.",
+        "score": 0.39936307070707067
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.39614917355371904
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0111",
+        "element_label": "Skill in interfacing with customers",
+        "score": 0.3944067082111437
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-A-002 (Data Quality/Ability) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.416. Highest framework: DDaT at 0.416."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Data Quality, composite 0.416. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Data Quality (composite 0.416)?",
+    "evidence": "Data Quality at ~82% market presence. Content quality and accuracy standards central to AI Content Editor roles. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DQ-A-002 (Data Quality/Ability) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.416. Highest framework: DDaT at 0.416.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:52.734051Z",
+    "pipeline_version": "1.0"
+  }
+}

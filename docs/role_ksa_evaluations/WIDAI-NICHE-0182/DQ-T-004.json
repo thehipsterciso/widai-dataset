@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0182",
+  "role_name": "Chief Medical Information Officer",
+  "ksa_id": "DQ-T-004",
+  "ksa_text": "Establish measurement requirements, performance metrics, and scoring systems for data quality monitoring and assessment.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.43395121638924455,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4045282281412854,
+        "cross_encoder_sts": 0.4295404458598726,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33782898089171975,
+        "jaccard": null,
+        "top_element_id": "1103",
+        "top_element_label": "Determine tactics, techniques, and procedures (TTPs) for intrusion sets."
+      },
+      "ddat": {
+        "composite": 0.43395121638924455,
+        "cross_encoder_sts": 0.4572478873239436,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37182676056338027,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.395901948051948,
+        "cross_encoder_sts": 0.4189142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3345357142857143,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.40506210338680926,
+        "cross_encoder_sts": 0.43852392156862746,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31583058823529414,
+        "jaccard": null,
+        "top_element_id": "K0700",
+        "top_element_label": "Knowledge of data standardization policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3928060606060606,
+        "cross_encoder_sts": 0.41809583333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32536666666666664,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3910863636363636,
+        "cross_encoder_sts": 0.4217375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30935,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.43395121638924455
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0700",
+        "element_label": "Knowledge of data standardization policies and procedures",
+        "score": 0.40506210338680926
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1103",
+        "element_label": "Determine tactics, techniques, and procedures (TTPs) for intrusion sets.",
+        "score": 0.4045282281412854
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.395901948051948
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3928060606060606
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-T-004 (Data Quality/Task) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.434. Highest framework: DDaT at 0.434."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Data Quality, composite 0.434. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Data Quality (composite 0.434)?",
+    "evidence": "Data Quality at ~50% market presence. Clinical data quality and integrity in ~50% of CMIO postings. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DQ-T-004 (Data Quality/Task) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.434. Highest framework: DDaT at 0.434.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:42.383234Z",
+    "pipeline_version": "1.0"
+  }
+}

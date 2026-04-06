@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0183",
+  "role_name": "Data Annotator",
+  "ksa_id": "SP-K-007",
+  "ksa_text": "Knowledge of data protection law in detail, including GDPR, CCPA/CPRA, and sector-specific privacy regulations, with focus on legal bases for processing, data subject rights, cross-border transfer mechanisms, compliance procedures, and enforcement precedent.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4925818181818181,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4188688106360043,
+        "cross_encoder_sts": 0.4309478260869565,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3866581027667984,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.41906599326599325,
+        "cross_encoder_sts": 0.4452407407407407,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3492666666666666,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4424103896103896,
+        "cross_encoder_sts": 0.4328142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.46799999999999997,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-008",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4341101694915255,
+        "cross_encoder_sts": 0.4564614406779661,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.374506779661017,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4691909090909091,
+        "cross_encoder_sts": 0.457,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5017,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4925818181818181,
+        "cross_encoder_sts": 0.5042,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4616,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.4925818181818181
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4691909090909091
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-008",
+        "element_label": "Data and data governance",
+        "score": 0.4424103896103896
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4341101694915255
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.41906599326599325
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-K-007 (Security & Privacy/Knowledge) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.493. Highest framework: O*NET at 0.493."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, Security & Privacy, composite 0.493. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Security & Privacy (composite 0.493)?",
+    "evidence": "Security & Privacy at ~10% market presence. Security/privacy program ownership above annotator scope. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA SP-K-007 (Security & Privacy/Knowledge) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.493. Highest framework: O*NET at 0.493.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:48.957200Z",
+    "pipeline_version": "1.0"
+  }
+}

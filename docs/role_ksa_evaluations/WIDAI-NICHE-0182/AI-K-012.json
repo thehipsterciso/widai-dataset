@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0182",
+  "role_name": "Chief Medical Information Officer",
+  "ksa_id": "AI-K-012",
+  "ksa_text": "Knowledge of transformer architecture, attention mechanisms, and the pre-training and fine-tuning paradigm as it applies to language models.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.3873515151515151,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3697021177685951,
+        "cross_encoder_sts": 0.41378011363636363,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25216079545454545,
+        "jaccard": null,
+        "top_element_id": "102",
+        "top_element_label": "Knowledge of programming language structures and logic."
+      },
+      "ddat": {
+        "composite": 0.33324715909090913,
+        "cross_encoder_sts": 0.42283125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.09435625,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-141",
+        "top_element_label": "Security technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.36021818181818177,
+        "cross_encoder_sts": 0.3867,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2896,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-012",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.3665532551319649,
+        "cross_encoder_sts": 0.4209187096774194,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22157870967741938,
+        "jaccard": null,
+        "top_element_id": "K0055",
+        "top_element_label": "Knowledge of microprocessors"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3873515151515151,
+        "cross_encoder_sts": 0.41733333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3074,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.35668636363636363,
+        "cross_encoder_sts": 0.39765,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24745,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.3873515151515151
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "102",
+        "element_label": "Knowledge of programming language structures and logic.",
+        "score": 0.3697021177685951
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0055",
+        "element_label": "Knowledge of microprocessors",
+        "score": 0.3665532551319649
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-012",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.36021818181818177
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.35668636363636363
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-K-012 (AI & ML/Knowledge) scores 0.387 composite (highest: NIST AI RMF at 0.387). Scope is in_scope for Chief Medical Information Officer: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate. [AI is an exempt core domain for this role.]"
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with in_scope scope, AI & ML, composite 0.387. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support AI & ML for Chief Medical Information Officer?",
+    "evidence": "AI & ML appears in approximately 90% of Chief Medical Information Officer job postings. AI strategy and oversight central to modern CMIO postings.",
+    "ruling": "Include upheld. AI & ML is market-validated for Chief Medical Information Officer. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AI-K-012 (AI & ML/Knowledge) scores 0.387 composite (highest: NIST AI RMF at 0.387). Scope is in_scope for Chief Medical Information Officer: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate. [AI is an exempt core domain for this role.]",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:42.454435Z",
+    "pipeline_version": "1.0"
+  }
+}

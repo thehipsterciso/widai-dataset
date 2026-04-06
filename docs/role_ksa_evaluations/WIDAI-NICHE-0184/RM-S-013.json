@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0184",
+  "role_name": "AI Content Editor",
+  "ksa_id": "RM-S-013",
+  "ksa_text": "Skill in third-party and supply chain AI risk management, including assessment of vendor AI components, monitoring of third-party model risks, and contingency planning for AI dependencies.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-S-013 (Risk Management/Skill) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.000. Highest framework: DCWF at 0.000."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, Risk Management, composite 0.000. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Risk Management (composite 0.000)?",
+    "evidence": "Risk Management at ~8% market presence. Risk management frameworks above editor scope. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-S-013 (Risk Management/Skill) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.000. Highest framework: DCWF at 0.000.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:49:52.774757Z",
+    "pipeline_version": "1.0"
+  }
+}
