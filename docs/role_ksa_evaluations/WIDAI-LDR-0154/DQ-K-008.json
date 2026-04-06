@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0154",
+  "role_name": "Director of Data Science",
+  "ksa_id": "DQ-K-008",
+  "ksa_text": "Knowledge of master data management (MDM) principles and architecture, including golden record construction, data domain definition, MDM hub models (registry, consolidation, coexistence, centralized), and stewardship workflows.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.38700790513833994,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.37586493992291997,
+        "cross_encoder_sts": 0.43088827930174567,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2291360349127182,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3408904428904429,
+        "cross_encoder_sts": 0.4100320512820513,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1565128205128205,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-031",
+        "top_element_label": "Communicating data"
+      },
+      "eu_ai_act": {
+        "composite": 0.3477059196617336,
+        "cross_encoder_sts": 0.4101395348837209,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18121627906976745,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3823248981038455,
+        "cross_encoder_sts": 0.43588460038986354,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2394990253411306,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35066887519260403,
+        "cross_encoder_sts": 0.4352101694915254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.12522542372881357,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38700790513833994,
+        "cross_encoder_sts": 0.4422565217391305,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2396782608695652,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.38700790513833994
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3823248981038455
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.37586493992291997
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.35066887519260403
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.3477059196617336
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Data Quality KSA with insufficient signal strength (composite score 0.387) to justify inclusion for the Director of Data Science. Without stronger framework alignment, this knowledge KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain knowledge KSA be expected in real-world Director of Data Science roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Data Quality is not a standard competency expectation for Director of Data Science. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of Data Science competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.387) and edge-domain placement (Data Quality) do not meet inclusion threshold for the Director of Data Science. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.928514+00:00",
+    "pipeline_version": "1.0"
+  }
+}

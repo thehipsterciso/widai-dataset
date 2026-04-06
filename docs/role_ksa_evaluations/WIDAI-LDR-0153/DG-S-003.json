@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0153",
+  "role_name": "Director of Data Engineering",
+  "ksa_id": "DG-S-003",
+  "ksa_text": "Skill in designing and running data stewardship programs, including steward selection, training, responsibility definition, ownership and accountability assignment, service level agreements, and performance measurement.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.43266354635463544,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40602388758782204,
+        "cross_encoder_sts": 0.42708114754098364,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3498711943793911,
+        "jaccard": null,
+        "top_element_id": "1071A",
+        "top_element_label": "Ability to develop secure software according to secure software deployment methodologies, tools, and practices."
+      },
+      "ddat": {
+        "composite": 0.43266354635463544,
+        "cross_encoder_sts": 0.45993762376237624,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35993267326732675,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4220240093240093,
+        "cross_encoder_sts": 0.45268205128205125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34026923076923077,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-005",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.40476598011363635,
+        "cross_encoder_sts": 0.432658203125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33038671875,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.417175974025974,
+        "cross_encoder_sts": 0.4522910714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32353571428571426,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37296666666666667,
+        "cross_encoder_sts": 0.40229166666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2947666666666667,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.43266354635463544
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-005",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.4220240093240093
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.417175974025974
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1071A",
+        "element_label": "Ability to develop secure software according to secure software deployment methodologies, tools, and practices.",
+        "score": 0.40602388758782204
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.40476598011363635
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Data Governance is a primary or secondary domain for the Director of Data Engineering. This skill KSA is within scope for the role's expected competency profile and seniority level (director)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Data Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.433). External validation of this skill KSA for the Director of Data Engineering role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "DAMA-DMBOK, EDM Council, and enterprise CDO job descriptions universally include data governance competencies for data leadership roles.",
+    "ruling": "Upheld: domain-level relevance of Data Governance for the Director of Data Engineering is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Governance skill KSA is within scope for the Director of Data Engineering at the director tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:55.250946+00:00",
+    "pipeline_version": "1.0"
+  }
+}

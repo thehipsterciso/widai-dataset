@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0153",
+  "role_name": "Director of Data Engineering",
+  "ksa_id": "AG-T-010",
+  "ksa_text": "Operate AI governance review processes, including intake triage, stakeholder coordination, assessment scheduling, decision documentation, and escalation to executive governance bodies.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.526081038961039,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40699156250000007,
+        "cross_encoder_sts": 0.44750890625000006,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2989453125,
+        "jaccard": null,
+        "top_element_id": "515A",
+        "top_element_label": "Develop software system testing and validation procedures, programming, and documentation."
+      },
+      "ddat": {
+        "composite": 0.4061341414141414,
+        "cross_encoder_sts": 0.45221111111111106,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28326222222222225,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.5181672384219553,
+        "cross_encoder_sts": 0.5117169811320754,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.535367924528302,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.38630164789892885,
+        "cross_encoder_sts": 0.43198791540785497,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2644716012084592,
+        "jaccard": null,
+        "top_element_id": "T1528",
+        "top_element_label": "Develop software system testing and validation procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.526081038961039,
+        "cross_encoder_sts": 0.5114414285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.56512,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3706818181818182,
+        "cross_encoder_sts": 0.41987058823529416,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23951176470588234,
+        "jaccard": null,
+        "top_element_id": "2.A.2.c",
+        "top_element_label": "Learning Strategies"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.526081038961039
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.5181672384219553
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "515A",
+        "element_label": "Develop software system testing and validation procedures, programming, and documentation.",
+        "score": 0.40699156250000007
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.4061341414141414
+      },
+      {
+        "framework": "nice",
+        "element_id": "T1528",
+        "element_label": "Develop software system testing and validation procedures",
+        "score": 0.38630164789892885
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Although AI Governance is an edge domain for the Director of Data Engineering, this task KSA presents sufficient signal (composite score 0.526) and conceptual alignment to include at the director level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (AI Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.526). External reviewers may question whether this specific task KSA is sufficiently distinctive for the Director of Data Engineering versus adjacent roles.",
+    "evidence": "NIST AI RMF, EU AI Act (Article 9), and OECD AI Principles confirm AI governance as a critical competency for responsible AI leadership.",
+    "ruling": "Upheld: moderate framework signal is consistent with AI Governance appearing in job postings and role definition literature for Director of Data Engineering."
+  },
+  "final_decision": "include",
+  "decision_confidence": "low",
+  "decision_rationale": "Edge-domain AI Governance task KSA cleared adversarial review with score 0.526. Included based on sufficient framework alignment and role relevance for the Director of Data Engineering.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:55.191760+00:00",
+    "pipeline_version": "1.0"
+  }
+}

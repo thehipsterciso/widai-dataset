@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0153",
+  "role_name": "Director of Data Engineering",
+  "ksa_id": "AI-K-025",
+  "ksa_text": "Knowledge of AI risk management frameworks and safety engineering principles, including risk identification across the AI lifecycle, risk categorization methodologies, and the design of mitigation measures that balance safety with system performance.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.3938482644628099,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3938482644628099,
+        "cross_encoder_sts": 0.4246163636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3118,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.3893064393939394,
+        "cross_encoder_sts": 0.46316666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19234583333333333,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "nice": {
+        "composite": 0.3814006097560976,
+        "cross_encoder_sts": 0.4224621951219512,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2719030487804878,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3883030303030303,
+        "cross_encoder_sts": 0.4352666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26306666666666667,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.12",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.3681636363636364,
+        "cross_encoder_sts": 0.4016,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.279,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.3938482644628099
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.3893064393939394
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.12",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.3883030303030303
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3814006097560976
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.3681636363636364
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain AI/ML Engineering KSA with insufficient signal strength (composite score 0.394) to justify inclusion for the Director of Data Engineering. Without stronger framework alignment, this knowledge KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain knowledge KSA be expected in real-world Director of Data Engineering roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm AI/ML Engineering is not a standard competency expectation for Director of Data Engineering. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of Data Engineering competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.394) and edge-domain placement (AI/ML Engineering) do not meet inclusion threshold for the Director of Data Engineering. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:55.298999+00:00",
+    "pipeline_version": "1.0"
+  }
+}

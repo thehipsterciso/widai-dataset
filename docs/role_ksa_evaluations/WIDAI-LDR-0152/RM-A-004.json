@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0152",
+  "role_name": "VP Data Platform",
+  "ksa_id": "RM-A-004",
+  "ksa_text": "Ability to develop threat models, analyze threat capabilities and behaviors, and assess threat-to-capability alignment and tactical risk implications.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5259125974025974,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38647370747645593,
+        "cross_encoder_sts": 0.45375644820295985,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20705306553911204,
+        "jaccard": null,
+        "top_element_id": "5877",
+        "top_element_label": "Develop possible solutions for technical risks and limitations of planned tests on AI solutions."
+      },
+      "ddat": {
+        "composite": 0.3970379310344827,
+        "cross_encoder_sts": 0.47531034482758616,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18831149425287355,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-002",
+        "top_element_label": "Adapting to delivery methodologies"
+      },
+      "eu_ai_act": {
+        "composite": 0.4911928925619835,
+        "cross_encoder_sts": 0.5353945454545455,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37332181818181814,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3709170725108225,
+        "cross_encoder_sts": 0.4369416666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1948514880952381,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5259125974025974,
+        "cross_encoder_sts": 0.5676157142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4147042857142857,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-4.2",
+        "top_element_label": "Measurement results are communicated."
+      },
+      "onet": {
+        "composite": 0.3573550802139038,
+        "cross_encoder_sts": 0.4304058823529412,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.16255294117647057,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-4.2",
+        "element_label": "Measurement results are communicated.",
+        "score": 0.5259125974025974
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4911928925619835
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-002",
+        "element_label": "Adapting to delivery methodologies",
+        "score": 0.3970379310344827
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5877",
+        "element_label": "Develop possible solutions for technical risks and limitations of planned tests on AI solutions.",
+        "score": 0.38647370747645593
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3709170725108225
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Risk Management is a primary or secondary domain for the VP Data Platform. This ability KSA is within scope for the role's expected competency profile and seniority level (vp)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Risk Management), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.526). External reviewers may question whether this specific ability KSA is sufficiently distinctive for the VP Data Platform versus adjacent roles.",
+    "evidence": "ISO 31000, NIST RMF, and enterprise risk management frameworks confirm risk management competencies for senior data leadership.",
+    "ruling": "Upheld: moderate framework signal is consistent with Risk Management appearing in job postings and role definition literature for VP Data Platform."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk Management ability KSA is within scope for the VP Data Platform at the vp tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.639351+00:00",
+    "pipeline_version": "1.0"
+  }
+}

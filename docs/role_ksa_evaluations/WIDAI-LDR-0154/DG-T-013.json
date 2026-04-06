@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0154",
+  "role_name": "Director of Data Science",
+  "ksa_id": "DG-T-013",
+  "ksa_text": "Manage data access control, including reviewing and approving access requests, data sharing agreements, use authorizations, and ensuring compliance with established policies.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.42352689393939397,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3959457042957043,
+        "cross_encoder_sts": 0.42410494505494506,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3208543956043956,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.42352689393939397,
+        "cross_encoder_sts": 0.4598229166666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3267375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.33213030303030305,
+        "cross_encoder_sts": 0.3826666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19736666666666666,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.39310583985550873,
+        "cross_encoder_sts": 0.4256662251655629,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3062781456953642,
+        "jaccard": null,
+        "top_element_id": "K0661",
+        "top_element_label": "Knowledge of reauthorization processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.34022727272727277,
+        "cross_encoder_sts": 0.393,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1995,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.1",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.3450818181818182,
+        "cross_encoder_sts": 0.41605714285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1558142857142857,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.42352689393939397
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.3959457042957043
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0661",
+        "element_label": "Knowledge of reauthorization processes",
+        "score": 0.39310583985550873
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.7",
+        "element_label": "Category Flexibility",
+        "score": 0.3450818181818182
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-6.1",
+        "element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "score": 0.34022727272727277
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Data Governance KSA with insufficient signal strength (composite score 0.424) to justify inclusion for the Director of Data Science. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain task KSA be expected in real-world Director of Data Science roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Data Governance is not a standard competency expectation for Director of Data Science. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of Data Science competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.424) and edge-domain placement (Data Governance) do not meet inclusion threshold for the Director of Data Science. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.894196+00:00",
+    "pipeline_version": "1.0"
+  }
+}
