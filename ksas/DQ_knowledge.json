@@ -1,262 +1,199 @@
 {
   "dataset_id": "widai-dq-knowledge",
   "domain_code": "DQ",
-  "domain_title": "Data Quality & Management",
+  "domain_title": "Data Quality & Standards",
   "type": "Knowledge",
   "count": 21,
-  "schema_version": "2.0.0",
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "DQ-K-001",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of clinical data management principles, including Good Clinical Practice requirements, ICH E6(R2) guidelines, and the regulatory expectations for data integrity, audit trails, and traceability in clinical trial submissions.",
+      "statement": "Knowledge of data quality dimensions (accuracy, completeness, consistency, timeliness, uniqueness, validity, integrity) and the measurement and assessment approaches applicable to each dimension.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.05-K-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-002",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of electronic data capture systems and clinical data management platforms, including database design, edit check programming, query management workflows, and the validation requirements for 21 CFR Part 11 and Annex 11 compliance.",
+      "statement": "Knowledge of data standardization policies and procedures, including regulatory standards (ICH E6, 21 CFR Part 11, Annex 11), industry standards (CDISC CDASH, SDTM, ADaM), and submission dataset requirements for regulatory agencies.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.05-K-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-003",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of clinical data standards, including CDISC standards (CDASH, SDTM, ADaM), MedDRA coding conventions, WHO Drug Dictionary, and the submission dataset requirements for FDA and EMA regulatory filings.",
+      "statement": "Knowledge of clinical data management standards and requirements, including Good Clinical Practice (GCP) principles, Electronic Data Capture (eCDC) systems, clinical data coding conventions (MedDRA, WHO Drug Dictionary), and data integrity requirements for regulatory submissions.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.05-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-004",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data quality dimensions (accuracy, completeness, consistency, timeliness, uniqueness, validity, integrity) and the measurement approaches applicable to each dimension.",
+      "statement": "Knowledge of data quality management program design, including profiling methodologies, rule authoring standards, quality threshold setting, issue classification and prioritization, escalation path design, and continuous improvement cycles.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.01-K-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-005",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data quality management program design, including profiling methodology, rule authoring standards, threshold setting, issue classification, and escalation path design.",
+      "statement": "Knowledge of root cause analysis methods for data quality failures, including source system analysis, data transformation logic review, process failure identification, and remediation strategy development.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.01-K-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-006",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of root cause analysis methods for data quality failures, including source system analysis, transformation logic review, and process failure identification.",
+      "statement": "Knowledge of data validation techniques and methods for embedding quality checks into pipeline execution, including schema validation, data contract enforcement, freshness checks, volume anomaly detection, referential integrity verification, and appropriate failure handling and alerting.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.01-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-007",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of MDM architectural patterns, including registry, consolidation, coexistence, and centralized hub models, and the organizational and technical conditions that favor each.",
+      "statement": "Knowledge of data quality testing frameworks and methodologies, including unit testing for data transformations, integration testing across data pipelines, regression testing for data integrity, and quality assurance approaches for production datasets.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.02-K-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-008",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of entity resolution methods, including deterministic matching rules, probabilistic matching, and ML-based matching, and the precision-recall trade-offs involved.",
+      "statement": "Knowledge of master data management (MDM) principles and architecture, including golden record construction, data domain definition, MDM hub models (registry, consolidation, coexistence, centralized), and stewardship workflows.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.02-K-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-009",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of reference data management principles, including reference data taxonomy, governance of controlled vocabularies, and change management for reference data updates.",
+      "statement": "Knowledge of entity resolution methods, including deterministic matching rules, probabilistic matching, machine learning-based matching, and the precision-recall trade-offs and identity management implications of each approach.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.02-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-010",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of metadata types (business, technical, operational, process) and the systems and methods used to collect, store, and maintain each type.",
+      "statement": "Knowledge of reference data management principles, including reference data taxonomy design, governance of controlled vocabularies, change management for reference data updates, and maintaining consistency across reference datasets.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.03-K-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-011",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data catalog platform capabilities, including automated metadata harvesting, lineage visualization, search and discovery, classification, and glossary linkage.",
+      "statement": "Knowledge of metadata types (business, technical, operational, process) and the systems, methods, and tools used to collect, store, maintain, and govern each type throughout the data lifecycle.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.03-K-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-012",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data lineage concepts and documentation methods, including end-to-end lineage from source to consumption, transformation-level lineage, and impact analysis use cases.",
+      "statement": "Knowledge of data lineage concepts and documentation methods, including end-to-end lineage from source to consumption, transformation-level lineage, lineage visualization, and impact analysis use cases for data change management.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.03-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-013",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data minimization, purpose limitation, consent management, and legitimate interest assessment as operational data management practices.",
+      "statement": "Knowledge of data catalog platform capabilities, including automated metadata harvesting, lineage visualization, search and discovery mechanisms, data classification, business glossary linkage, and impact analysis features.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.04-K-004"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-014",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data product design principles, including data product definition, consumer segmentation, interface design (APIs, subscriptions, files), SLA definition, and data product lifecycle.",
+      "statement": "Knowledge of database management system (DBMS) principles and practices, including data persistence, transaction management, index optimization, query performance tuning, backup and recovery procedures, and data retention policies.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.05-K-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-015",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data mesh principles and the role of data product thinking within a federated data ownership model.",
+      "statement": "Knowledge of data administration policies and procedures, including data lifecycle management, access control and security, data retention and archival, compliance documentation, and stewardship responsibilities.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.05-K-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-016",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of product management practices as applied to data products, including roadmap prioritization, consumer discovery, feedback loops, and value measurement.",
+      "statement": "Knowledge of data asset management principles and practices, including data discovery, asset inventory and cataloging, ownership assignment, lifecycle tracking, and value assessment of data assets.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.05-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-017",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data quality validation techniques and how to embed quality checks into pipeline execution with appropriate failure handling and alerting.",
+      "statement": "Knowledge of data classification tools and techniques, including sensitivity classification (public, internal, confidential), risk-based data categorization, classification policy implementation, and use in access control and protection strategies.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.03-K-004"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-018",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data quality testing frameworks, including schema validation, data contract enforcement, freshness checks, volume anomaly detection, and referential integrity verification within automated pipelines.",
+      "statement": "Knowledge of data remediation tools and techniques, including data cleansing, standardization, deduplication, enrichment, imputation approaches, and quality improvement workflows for addressing identified data issues.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.07-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-019",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of master data management (MDM) principles, including golden record construction, data domain definition, MDM hub architectures, and stewardship workflows.",
+      "statement": "Knowledge of data privacy and minimization principles as operational data quality practices, including purpose limitation, consent management, legitimate interest assessment, data retention constraints, and personal data protection requirements.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.02-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-020",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data quality management frameworks, including DQ dimensions (accuracy, completeness, consistency, timeliness, uniqueness, validity), measurement approaches, and remediation workflows.",
+      "statement": "Knowledge of data product design principles, including data product definition, consumer segmentation, interface design (APIs, subscriptions, files), Service Level Agreement (SLA) definition, and data product lifecycle management.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.02-K-004"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-K-021",
       "type": "Knowledge",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Knowledge of data quality dimensions and how to assess, measure, and document quality issues within a specific data domain.",
+      "statement": "Knowledge of data mesh principles and federated data ownership models, including the role of data product thinking, domain ownership boundaries, platform infrastructure, and self-service analytics within decentralized data architectures.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.06-K-002"
-      ]
+      "origin_version": "0.8.0"
     }
   ]
 }

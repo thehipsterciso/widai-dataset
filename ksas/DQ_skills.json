@@ -1,130 +1,271 @@
 {
   "dataset_id": "widai-dq-skills",
   "domain_code": "DQ",
-  "domain_title": "Data Quality & Management",
+  "domain_title": "Data Quality & Standards",
   "type": "Skill",
-  "count": 10,
-  "schema_version": "2.0.0",
+  "count": 29,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "DQ-S-001",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in identifying and communicating data quality issues that affect analytical conclusions, including null handling, outlier treatment, and source system reliability caveats.",
+      "statement": "Skill in designing and implementing data quality measurement programs, including profiling, metrics definition, scoring methodologies, and quantification of business impact.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.01-S-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-S-002",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in managing clinical data quality processes, including medical coding review, query resolution, discrepancy management, and the reconciliation of clinical data across electronic data capture, safety databases, and central laboratory systems.",
+      "statement": "Skill in applying data quality standards, best practices, and compliance requirements to assess, evaluate, and improve organizational data assets.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.05-S-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-S-003",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in designing and implementing data quality measurement programs, including profiling, rule definition, scoring, and business impact quantification.",
+      "statement": "Skill in conducting data profiling to identify patterns, anomalies, and characteristics within data, including analysis of data structures and content assessment.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.01-S-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-S-004",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in producing data quality reporting for business and governance audiences, translating technical quality scores into business risk and operational impact language.",
+      "statement": "Skill in designing and implementing data validation procedures, verification workflows, completeness checks, and anomaly detection mechanisms.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.01-S-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-S-005",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in designing matching and merging rules for entity resolution, including rule documentation, threshold calibration, and exception handling workflows.",
+      "statement": "Skill in managing data handling processes, applying data handling tools and techniques, aggregating data, and managing data throughout its lifecycle.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.02-S-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-S-006",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in operating a data catalog platform, including configuring connectors, reviewing harvested metadata, curating business context, and managing access.",
+      "statement": "Skill in establishing, maintaining, and utilizing data dictionaries and metadata repositories to document data characteristics, definitions, lineage, and governance context.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.03-S-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-S-007",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in conducting data consumer discovery, translating consumer data needs into data product requirements with defined quality, freshness, and access standards.",
+      "statement": "Skill in defining data requirements, articulating specification needs, and translating business needs into data quality standards and expectations.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.05-S-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-S-008",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in defining and managing data product SLAs, including freshness, quality, availability, and access response time commitments.",
+      "statement": "Skill in designing, implementing, and managing quality control processes for data, including process improvement and operational quality assurance.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.05-S-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-S-009",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in communicating data quality and data trust issues to non-technical executive stakeholders in terms of business risk and operational impact.",
+      "statement": "Skill in producing data quality reporting for business and governance audiences, translating technical quality metrics into business risk and operational impact language.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.02-S-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "DQ-S-010",
       "type": "Skill",
-      "domain": "Data Quality & Management",
+      "domain": "Data Quality & Standards",
       "domain_code": "DQ",
-      "statement": "Skill in identifying, documenting, and escalating data quality issues through established governance processes with appropriate business impact context.",
+      "statement": "Skill in managing database systems, database administration, and data management operations to ensure data integrity and accessibility.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.06-S-002"
-      ]
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-011",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in performing data normalization, transformation, standardization, and format conversion to ensure data consistency and quality.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-012",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in conducting technical business impact analysis, assessing data-related risks, and interpreting risk assessments in organizational context.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-013",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in designing data architecture, frameworks, and approaches for data quality assurance, including planning and architectural specification.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-014",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in designing and executing testing procedures, quality inspections, and validation testing to evaluate data and process quality.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-015",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in designing and implementing AI quality management systems, including AI training data governance, monitoring, and incident management.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-016",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in cataloging and classifying organizational data assets, documenting data inventory, and managing data discovery and accessibility.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-017",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in collecting and monitoring data from diverse sources, establishing collection procedures, and ensuring source reliability and accessibility.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-018",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in evaluating and interpreting metadata to assess data characteristics, quality, lineage, and fitness for use.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-019",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in performing statistical analysis on data, applying basic statistical measures, and interpreting results to support quality assessments.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-020",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in performing data query operations, accessing and extracting data from databases and repositories for analysis and quality assessment.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-021",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in designing and implementing data remediation strategies to correct data quality issues and improve overall data fitness.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-022",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in designing decision support systems and products that translate data quality findings into actionable business intelligence.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-023",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in developing quality standards, establishing quality procedures, and implementing standardized approaches to data quality assessment and improvement.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-024",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in identifying, documenting, and tracking data dependencies, lineage relationships, and impact analysis across systems and applications.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-025",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in establishing data governance frameworks, defining data stewardship roles, and implementing accountability structures for data quality.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-026",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in establishing continuous monitoring systems for data quality metrics, configuring alerts, and managing automated quality assurance operations.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-027",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in identifying, documenting, escalating, and resolving data quality issues through established governance processes and incident workflows.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-028",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in designing and implementing entity resolution algorithms, matching rules, merging strategies, and handling duplicate and overlapping records.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "DQ-S-029",
+      "type": "Skill",
+      "domain": "Data Quality & Standards",
+      "domain_code": "DQ",
+      "statement": "Skill in managing data throughout its complete lifecycle, from creation through retention, archival, and disposal, while maintaining quality standards.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
     }
   ]
 }
