@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0164",
+  "role_name": "Chief of Staff to CDAIO",
+  "ksa_id": "DG-S-001",
+  "ksa_text": "Skill in communicating data and AI strategy, risk posture, and investment priorities to board-level and C-suite audiences using financial and business terms rather than technical language.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.464150586510264,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41488281840408986,
+        "cross_encoder_sts": 0.4252655256723717,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3871955990220049,
+        "jaccard": null,
+        "top_element_id": "108",
+        "top_element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+      },
+      "ddat": {
+        "composite": 0.43686743801652894,
+        "cross_encoder_sts": 0.46419272727272726,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.364,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-016",
+        "top_element_label": "Architecture communication"
+      },
+      "eu_ai_act": {
+        "composite": 0.42397090909090906,
+        "cross_encoder_sts": 0.40348999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47858666666666666,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40567574321413186,
+        "cross_encoder_sts": 0.4221710900473934,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3616881516587678,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.464150586510264,
+        "cross_encoder_sts": 0.4522258064516129,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49595,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42533884297520663,
+        "cross_encoder_sts": 0.44524545454545456,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37225454545454545,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.464150586510264
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-016",
+        "element_label": "Architecture communication",
+        "score": 0.43686743801652894
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.42533884297520663
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.42397090909090906
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "108",
+        "element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk).",
+        "score": 0.41488281840408986
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Data Governance is a primary or secondary domain for the Chief of Staff to CDAIO. This skill KSA is within scope for the role's expected competency profile and seniority level (senior specialist)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Data Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Pass 1 signal is moderate (composite 0.464). External reviewers may question whether this specific skill KSA is sufficiently distinctive for the Chief of Staff to CDAIO versus adjacent roles.",
+    "evidence": "DAMA-DMBOK, EDM Council, and enterprise CDO job descriptions universally include data governance competencies for data leadership roles.",
+    "ruling": "Overturn: while the domain is relevant, this specific skill KSA is better attributed to a more specialized adjacent role. Revised to exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Initially included but overturned through adversarial review. Data Governance skill KSA does not meet the quality or scope threshold for the Chief of Staff to CDAIO after cross-framework validation.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.350960+00:00",
+    "pipeline_version": "1.0"
+  }
+}

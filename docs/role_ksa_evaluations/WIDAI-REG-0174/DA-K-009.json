@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0174",
+  "role_name": "Notified Body Assessor (AI)",
+  "ksa_id": "DA-K-009",
+  "ksa_text": "Knowledge of dbt and transformation framework patterns, including model layering strategies (staging, intermediate, mart layers), testing approaches, documentation generation, and automated lineage creation.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.40502587412587415,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3912395582329318,
+        "cross_encoder_sts": 0.4111829317269077,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33805722891566264,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.40502587412587415,
+        "cross_encoder_sts": 0.44804615384615387,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2903051282051282,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3530195286195286,
+        "cross_encoder_sts": 0.4013407407407407,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22416296296296295,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.39953972133394244,
+        "cross_encoder_sts": 0.4252105527638191,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3310841708542714,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.34402130681818177,
+        "cross_encoder_sts": 0.39501875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.208028125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3883857142857143,
+        "cross_encoder_sts": 0.4096,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3318142857142857,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.40502587412587415
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39953972133394244
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.3912395582329318
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.3883857142857143
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.3530195286195286
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Architecture (affinity 0.12) with insufficient REG signals (0). Composite moderate-to-strong (0.4050). Notified Body Assessor (AI) interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working Notified Body Assessor (AI).",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Architecture (affinity 0.12) with insufficient REG signals (0). Composite moderate-to-strong (0.4050). Notified Body Assessor (AI) interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:05.043003+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0164",
+  "role_name": "Chief of Staff to CDAIO",
+  "ksa_id": "AG-T-011",
+  "ksa_text": "Conduct iterative AI risk assessment across the system lifecycle, including risk identification at inception, development-stage risk updates, deployment readiness evaluation, and post-deployment risk reassessment triggered by material changes or emerging risk signals.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5151863636363636,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40559903249361084,
+        "cross_encoder_sts": 0.43042751004016067,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33938975903614454,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.38694064171122994,
+        "cross_encoder_sts": 0.4284794117647059,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2761705882352941,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.5151863636363636,
+        "cross_encoder_sts": 0.49855000000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.55955,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.39814368162957375,
+        "cross_encoder_sts": 0.4292900414937759,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31508672199170124,
+        "jaccard": null,
+        "top_element_id": "K1260",
+        "top_element_label": "Knowledge of intelligence laws and regulations"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5114373579545455,
+        "cross_encoder_sts": 0.5028421875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5343578125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38424710743801654,
+        "cross_encoder_sts": 0.42513636363636365,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2752090909090909,
+        "jaccard": null,
+        "top_element_id": "2.B.2.i",
+        "top_element_label": "Complex Problem Solving"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.5151863636363636
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5114373579545455
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.40559903249361084
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1260",
+        "element_label": "Knowledge of intelligence laws and regulations",
+        "score": 0.39814368162957375
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.38694064171122994
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "AI Governance is a primary or secondary domain for the Chief of Staff to CDAIO. This task KSA is within scope for the role's expected competency profile and seniority level (senior specialist)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (AI Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.515). External reviewers may question whether this specific task KSA is sufficiently distinctive for the Chief of Staff to CDAIO versus adjacent roles.",
+    "evidence": "NIST AI RMF, EU AI Act (Article 9), and OECD AI Principles confirm AI governance as a critical competency for responsible AI leadership.",
+    "ruling": "Upheld: moderate framework signal is consistent with AI Governance appearing in job postings and role definition literature for Chief of Staff to CDAIO."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "AI Governance task KSA is within scope for the Chief of Staff to CDAIO at the senior specialist tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.338427+00:00",
+    "pipeline_version": "1.0"
+  }
+}

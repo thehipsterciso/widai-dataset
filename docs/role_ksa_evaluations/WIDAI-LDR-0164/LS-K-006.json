@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0164",
+  "role_name": "Chief of Staff to CDAIO",
+  "ksa_id": "LS-K-006",
+  "ksa_text": "Knowledge of data and AI maturity assessment frameworks and how to diagnose organizational capability gaps across strategy, governance, architecture, talent, and culture dimensions.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.5174590909090909,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42334128305066887,
+        "cross_encoder_sts": 0.45828064889918885,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.330169640787949,
+        "jaccard": null,
+        "top_element_id": "5869",
+        "top_element_label": "Demonstrate to executive stakeholders how data and analytics initiatives address agency challenges."
+      },
+      "ddat": {
+        "composite": 0.40847863636363635,
+        "cross_encoder_sts": 0.44440125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.312685,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.47823009404388717,
+        "cross_encoder_sts": 0.5002448275862069,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4195241379310345,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4254031996988519,
+        "cross_encoder_sts": 0.47276169772256726,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29911387163561076,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5174590909090909,
+        "cross_encoder_sts": 0.5397257142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4580814285714286,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3951969696969697,
+        "cross_encoder_sts": 0.4215333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3249666666666667,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5174590909090909
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.47823009404388717
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4254031996988519
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5869",
+        "element_label": "Demonstrate to executive stakeholders how data and analytics initiatives address agency challenges.",
+        "score": 0.42334128305066887
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.40847863636363635
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Leadership & Strategy is a primary or secondary domain for the Chief of Staff to CDAIO. This knowledge KSA is within scope for the role's expected competency profile and seniority level (senior specialist)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Leadership & Strategy), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.517). External reviewers may question whether this specific knowledge KSA is sufficiently distinctive for the Chief of Staff to CDAIO versus adjacent roles.",
+    "evidence": "McKinsey, Gartner, and Harvard Business Review consistently identify leadership and strategy skills as core differentiators for C-suite and VP data leaders.",
+    "ruling": "Upheld: moderate framework signal is consistent with Leadership & Strategy appearing in job postings and role definition literature for Chief of Staff to CDAIO."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Leadership & Strategy knowledge KSA is within scope for the Chief of Staff to CDAIO at the senior specialist tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.338046+00:00",
+    "pipeline_version": "1.0"
+  }
+}

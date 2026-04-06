@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0176",
+  "role_name": "AI System Impact Assessment Coordinator",
+  "ksa_id": "AG-A-027",
+  "ksa_text": "Ability to synthesize requirements from multiple regulatory frameworks and standards into coherent, non-duplicative governance controls that satisfy overlapping obligations without creating compliance conflicts.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: ability maps directly to AI System Impact Assessment Coordinator scope \u2014 regulatory/compliance signals detected (\"compl  :y|ies|ying|iant|iance|iances\", \"regulat  :ory|ion|ions|e|ed|ing|or|ors\", \"obligation  :s\"). Composite minimal (0.0000). Domain AG (affinity 0.82) aligns with REG competency profile. Seniority appropriate: describes regulatory interpretation, compliance program execution, or governance oversight."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 3 job-posting-level and 3 framework/certification matches (EU AI Act, ISO 42001, NIST AI RMF, CIPP/E, CRISC). Competency appears regularly in AI compliance and regulatory affairs role descriptions.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: ability maps directly to AI System Impact Assessment Coordinator scope \u2014 regulatory/compliance signals detected (\"compl  :y|ies|ying|iant|iance|iances\", \"regulat  :ory|ion|ions|e|ed|ing|or|ors\", \"obligation  :s\"). Composite minimal (0.0000). Domain AG (affinity 0.82) aligns with REG competency profile. Seniority appropriate: describes regulatory interpretation, compliance program execution, or governance oversight.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:13.441353+00:00",
+    "pipeline_version": "1.0"
+  }
+}

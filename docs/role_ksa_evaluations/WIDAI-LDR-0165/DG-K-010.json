@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0165",
+  "role_name": "Domain Data Lead",
+  "ksa_id": "DG-K-010",
+  "ksa_text": "Knowledge of DataOps frameworks and operational data management, including data pipeline reliability, data quality monitoring, data freshness SLAs, and continuous operational improvement.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4329619617224881,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4126213488677388,
+        "cross_encoder_sts": 0.4315337545126354,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36218826714801444,
+        "jaccard": null,
+        "top_element_id": "1034A",
+        "top_element_label": "Knowledge of Personally Identifiable Information (PII) data security standards."
+      },
+      "ddat": {
+        "composite": 0.4329619617224881,
+        "cross_encoder_sts": 0.4598736842105263,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36119736842105266,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4164477272727273,
+        "cross_encoder_sts": 0.432495,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.373655,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-007",
+        "top_element_label": "Registration"
+      },
+      "nice": {
+        "composite": 0.428357169361251,
+        "cross_encoder_sts": 0.4556848396501458,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35548338192419826,
+        "jaccard": null,
+        "top_element_id": "K0934",
+        "top_element_label": "Knowledge of data classification policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39570259740259744,
+        "cross_encoder_sts": 0.4198214285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3313857142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4028839160839161,
+        "cross_encoder_sts": 0.42527692307692305,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3431692307692308,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4329619617224881
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0934",
+        "element_label": "Knowledge of data classification policies and procedures",
+        "score": 0.428357169361251
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-007",
+        "element_label": "Registration",
+        "score": 0.4164477272727273
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1034A",
+        "element_label": "Knowledge of Personally Identifiable Information (PII) data security standards.",
+        "score": 0.4126213488677388
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.b",
+        "element_label": "Active Learning",
+        "score": 0.4028839160839161
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Data Governance is a primary or secondary domain for the Domain Data Lead. This knowledge KSA is within scope for the role's expected competency profile and seniority level (team lead)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Data Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.433). External validation of this knowledge KSA for the Domain Data Lead role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "DAMA-DMBOK, EDM Council, and enterprise CDO job descriptions universally include data governance competencies for data leadership roles.",
+    "ruling": "Upheld: domain-level relevance of Data Governance for the Domain Data Lead is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Governance knowledge KSA is within scope for the Domain Data Lead at the team lead tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:55.635153+00:00",
+    "pipeline_version": "1.0"
+  }
+}

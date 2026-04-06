@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0165",
+  "role_name": "Domain Data Lead",
+  "ksa_id": "SP-K-002",
+  "ksa_text": "Knowledge of global data protection regulations and privacy laws, including GDPR, CCPA/CPRA, LGPD, PDPA, and sector-specific privacy obligations, with focus on applicable legal bases for processing and regulatory enforcement.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.44373333333333337,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41883197613197615,
+        "cross_encoder_sts": 0.4274841698841699,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39575945945945945,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.4113788856304985,
+        "cross_encoder_sts": 0.42691290322580644,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36995483870967744,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.41485272727272726,
+        "cross_encoder_sts": 0.39874,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.45782,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-031",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.4275097131005876,
+        "cross_encoder_sts": 0.4477532319391635,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3735269961977186,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.402369696969697,
+        "cross_encoder_sts": 0.41383333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37179999999999996,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.44373333333333337,
+        "cross_encoder_sts": 0.4492333333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42906666666666665,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.44373333333333337
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4275097131005876
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.41883197613197615
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-031",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.41485272727272726
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.4113788856304985
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Security & Platform Strategy KSA with insufficient signal strength (composite score 0.444) to justify inclusion for the Domain Data Lead. Without stronger framework alignment, this knowledge KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": "This Knowledge KSA was excluded as an edge case, yet it has a composite score of 0.444 (moderate signal). Knowledge-dimension KSAs represent conceptual awareness rather than execution; exclusion may be too aggressive.",
+    "rebuttal": "Edge-domain Knowledge KSAs require more than moderate signal to justify inclusion; the role's scope does not regularly engage with Security & Platform Strategy. Exclusion upheld.",
+    "ruling": "Upheld: edge-domain exclusion maintained. Security & Platform Strategy is not sufficiently central to the Domain Data Lead to warrant inclusion at this signal level."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain knowledge KSA be expected in real-world Domain Data Lead roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Security & Platform Strategy is not a standard competency expectation for Domain Data Lead. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Domain Data Lead competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.444) and edge-domain placement (Security & Platform Strategy) do not meet inclusion threshold for the Domain Data Lead. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:55.625269+00:00",
+    "pipeline_version": "1.0"
+  }
+}

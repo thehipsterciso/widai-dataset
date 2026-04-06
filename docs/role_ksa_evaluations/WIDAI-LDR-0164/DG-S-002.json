@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0164",
+  "role_name": "Chief of Staff to CDAIO",
+  "ksa_id": "DG-S-002",
+  "ksa_text": "Skill in aligning data and AI program objectives to organizational strategy, translating business priorities into data and AI capability requirements with measurable outcomes.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.5284129117259553,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42819576121030395,
+        "cross_encoder_sts": 0.4598844827586207,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34369250374812593,
+        "jaccard": null,
+        "top_element_id": "296",
+        "top_element_label": "Knowledge of how information needs and collection requirements are translated, tracked, and prioritized across the extended enterprise."
+      },
+      "ddat": {
+        "composite": 0.46023796296296293,
+        "cross_encoder_sts": 0.502974074074074,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.346275,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-067",
+        "top_element_label": "Data visualisation"
+      },
+      "eu_ai_act": {
+        "composite": 0.4836680194805194,
+        "cross_encoder_sts": 0.4812017857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49024464285714286,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4178196933449326,
+        "cross_encoder_sts": 0.4616944976076555,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3008202153110048,
+        "jaccard": null,
+        "top_element_id": "S0727",
+        "top_element_label": "Skill in performing data fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5284129117259553,
+        "cross_encoder_sts": 0.5335275362318841,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5147739130434782,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-1.4",
+        "top_element_label": "Context is established and understood."
+      },
+      "onet": {
+        "composite": 0.40594545454545455,
+        "cross_encoder_sts": 0.43714000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32276,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-1.4",
+        "element_label": "Context is established and understood.",
+        "score": 0.5284129117259553
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4836680194805194
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-067",
+        "element_label": "Data visualisation",
+        "score": 0.46023796296296293
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "296",
+        "element_label": "Knowledge of how information needs and collection requirements are translated, tracked, and prioritized across the extended enterprise.",
+        "score": 0.42819576121030395
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0727",
+        "element_label": "Skill in performing data fusion",
+        "score": 0.4178196933449326
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Data Governance is a primary or secondary domain for the Chief of Staff to CDAIO. This skill KSA is within scope for the role's expected competency profile and seniority level (senior specialist)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Data Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.528). External reviewers may question whether this specific skill KSA is sufficiently distinctive for the Chief of Staff to CDAIO versus adjacent roles.",
+    "evidence": "DAMA-DMBOK, EDM Council, and enterprise CDO job descriptions universally include data governance competencies for data leadership roles.",
+    "ruling": "Upheld: moderate framework signal is consistent with Data Governance appearing in job postings and role definition literature for Chief of Staff to CDAIO."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Data Governance skill KSA is within scope for the Chief of Staff to CDAIO at the senior specialist tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.335616+00:00",
+    "pipeline_version": "1.0"
+  }
+}

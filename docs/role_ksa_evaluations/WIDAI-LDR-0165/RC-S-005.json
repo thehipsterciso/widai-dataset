@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0165",
+  "role_name": "Domain Data Lead",
+  "ksa_id": "RC-S-005",
+  "ksa_text": "Skill in regulatory horizon scanning, including monitoring legislative developments across relevant jurisdictions, assessing organizational impact of proposed and enacted regulations, and planning compliance adaptation timelines.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.45595702479338845,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4108602707930367,
+        "cross_encoder_sts": 0.42848297872340424,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3638663829787234,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.42289583333333336,
+        "cross_encoder_sts": 0.46542083333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30949583333333336,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.45595702479338845,
+        "cross_encoder_sts": 0.45221818181818185,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.46592727272727275,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4114184624017957,
+        "cross_encoder_sts": 0.4311283950617284,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35885864197530865,
+        "jaccard": null,
+        "top_element_id": "K0962",
+        "top_element_label": "Knowledge of targeting laws and regulations"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.42050519480519477,
+        "cross_encoder_sts": 0.43552857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38044285714285714,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39240489510489507,
+        "cross_encoder_sts": 0.41812307692307693,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3238230769230769,
+        "jaccard": null,
+        "top_element_id": "2.B.1.b",
+        "top_element_label": "Coordination"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.45595702479338845
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.42289583333333336
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.42050519480519477
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0962",
+        "element_label": "Knowledge of targeting laws and regulations",
+        "score": 0.4114184624017957
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.4108602707930367
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Regulatory Compliance falls outside the primary competency scope of the Domain Data Lead. This skill KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Regulatory Compliance truly out-of-scope for the Domain Data Lead? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Regulatory Compliance as a core or recommended competency for the Domain Data Lead. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Regulatory Compliance falls outside the established competency profile for the Domain Data Lead. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Regulatory Compliance is outside the competency scope of the Domain Data Lead. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:55.620068+00:00",
+    "pipeline_version": "1.0"
+  }
+}

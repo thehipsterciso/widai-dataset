@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0174",
+  "role_name": "Notified Body Assessor (AI)",
+  "ksa_id": "SP-K-009",
+  "ksa_text": "Knowledge of Data Protection Impact Assessment (DPIA) methodology, including triggering conditions, risk evaluation techniques, individual impact assessment, residual risk documentation, and supervisory authority reporting standards.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4383616600790514,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41766359373334755,
+        "cross_encoder_sts": 0.43581559202813597,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.369258264947245,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.4214225454545455,
+        "cross_encoder_sts": 0.44074800000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36988800000000005,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-013",
+        "top_element_label": "Applying statistical and analytical tools and techniques"
+      },
+      "eu_ai_act": {
+        "composite": 0.4383616600790514,
+        "cross_encoder_sts": 0.4549826086956522,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39403913043478267,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.43418523865262065,
+        "cross_encoder_sts": 0.4595065808297568,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3666616595135908,
+        "jaccard": null,
+        "top_element_id": "K0862",
+        "top_element_label": "Knowledge of data remediation tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4306699855699856,
+        "cross_encoder_sts": 0.4471825396825397,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38663650793650794,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40314,
+        "cross_encoder_sts": 0.43074,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32954,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4383616600790514
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0862",
+        "element_label": "Knowledge of data remediation tools and techniques",
+        "score": 0.43418523865262065
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4306699855699856
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-013",
+        "element_label": "Applying statistical and analytical tools and techniques",
+        "score": 0.4214225454545455
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.41766359373334755
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Edge case \u2014 included on balance: knowledge carries governance/compliance signals (\"impact assessment\", \"dpia\") in Security & Privacy context (affinity 0.52). Composite moderate-to-strong (0.4384). A Notified Body Assessor (AI) would encounter this competency in regulatory program work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 3 job-posting-level and 2 framework/certification matches (EU AI Act, ISO 42001, NIST AI RMF, CIPP/E, CRISC). Competency appears regularly in AI compliance and regulatory affairs role descriptions.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 included on balance: knowledge carries governance/compliance signals (\"impact assessment\", \"dpia\") in Security & Privacy context (affinity 0.52). Composite moderate-to-strong (0.4384). A Notified Body Assessor (AI) would encounter this competency in regulatory program work.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:04.913175+00:00",
+    "pipeline_version": "1.0"
+  }
+}

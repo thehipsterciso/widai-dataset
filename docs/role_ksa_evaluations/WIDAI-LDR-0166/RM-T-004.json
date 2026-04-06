@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0166",
+  "role_name": "Data Platform Team Lead",
+  "ksa_id": "RM-T-004",
+  "ksa_text": "Execute AI system testing activities including functional testing, integration testing, automated testing, and acceptance testing to validate system performance.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5221202597402598,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4172154584360005,
+        "cross_encoder_sts": 0.43052054208273893,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3817352353780314,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.40951325757575757,
+        "cross_encoder_sts": 0.4448666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3152375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-020",
+        "top_element_label": "Business architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.5093907550077041,
+        "cross_encoder_sts": 0.4878152542372881,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5669254237288135,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4093771147771148,
+        "cross_encoder_sts": 0.429638223938224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35534749034749036,
+        "jaccard": null,
+        "top_element_id": "K1007",
+        "top_element_label": "Knowledge of intelligence requirements tasking systems and software"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5221202597402598,
+        "cross_encoder_sts": 0.5098642857142858,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5548028571428572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4059727272727272,
+        "cross_encoder_sts": 0.4245571428571428,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3564142857142857,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5221202597402598
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.5093907550077041
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.4172154584360005
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-020",
+        "element_label": "Business architecture",
+        "score": 0.40951325757575757
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1007",
+        "element_label": "Knowledge of intelligence requirements tasking systems and software",
+        "score": 0.4093771147771148
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Risk Management falls outside the primary competency scope of the Data Platform Team Lead. This task KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Risk Management truly out-of-scope for the Data Platform Team Lead? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Risk Management as a core or recommended competency for the Data Platform Team Lead. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Risk Management falls outside the established competency profile for the Data Platform Team Lead. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Risk Management is outside the competency scope of the Data Platform Team Lead. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:55.767515+00:00",
+    "pipeline_version": "1.0"
+  }
+}

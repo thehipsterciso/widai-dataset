@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0175",
+  "role_name": "AIMS Manager",
+  "ksa_id": "SP-K-010",
+  "ksa_text": "Knowledge of privacy technologies and data protection tools, including encryption standards, anonymization and de-identification techniques, privacy-enhancing technologies, data minimization implementations, and monitoring tools for privacy compliance.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4252900867976245,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4072520080658713,
+        "cross_encoder_sts": 0.42728188539741224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3538390018484288,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.3918090909090909,
+        "cross_encoder_sts": 0.43137758620689653,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28629310344827585,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3750528925619835,
+        "cross_encoder_sts": 0.3990727272727273,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.311,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-012",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.4252900867976245,
+        "cross_encoder_sts": 0.44563492462311555,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37103718592964824,
+        "jaccard": null,
+        "top_element_id": "K0651",
+        "top_element_label": "Knowledge of trustworthiness principles"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38331818181818184,
+        "cross_encoder_sts": 0.41898,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28822000000000003,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36278585858585854,
+        "cross_encoder_sts": 0.39678888888888886,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2721111111111111,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0651",
+        "element_label": "Knowledge of trustworthiness principles",
+        "score": 0.4252900867976245
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.4072520080658713
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.3918090909090909
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38331818181818184
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-012",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.3750528925619835
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Security & Privacy (affinity 0.42) with insufficient REG signals (1). Composite moderate-to-strong (0.4253). AIMS Manager interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 4 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working AIMS Manager.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Security & Privacy (affinity 0.42) with insufficient REG signals (1). Composite moderate-to-strong (0.4253). AIMS Manager interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:08.511956+00:00",
+    "pipeline_version": "1.0"
+  }
+}

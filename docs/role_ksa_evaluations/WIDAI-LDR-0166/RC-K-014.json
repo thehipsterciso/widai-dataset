@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0166",
+  "role_name": "Data Platform Team Lead",
+  "ksa_id": "RC-K-014",
+  "ksa_text": "Knowledge of regulatory examination and audit processes, including common examination scopes, documentation expectations, evidence standards, examiner interaction protocols, and typical findings for data and AI regulatory reviews.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.448624926686217,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4103186614892645,
+        "cross_encoder_sts": 0.4234288944723618,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37535804020100505,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.39935622009569377,
+        "cross_encoder_sts": 0.4306,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31603947368421054,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.448624926686217,
+        "cross_encoder_sts": 0.4329483870967742,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49042903225806456,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4203385026737968,
+        "cross_encoder_sts": 0.44443176470588236,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3560898039215686,
+        "jaccard": null,
+        "top_element_id": "K0645",
+        "top_element_label": "Knowledge of standard operating procedures (SOPs)"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.42013223140495864,
+        "cross_encoder_sts": 0.41676590909090905,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42910909090909094,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40539772727272727,
+        "cross_encoder_sts": 0.41652500000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.375725,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.448624926686217
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0645",
+        "element_label": "Knowledge of standard operating procedures (SOPs)",
+        "score": 0.4203385026737968
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.42013223140495864
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.4103186614892645
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.40539772727272727
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Regulatory Compliance falls outside the primary competency scope of the Data Platform Team Lead. This knowledge KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Regulatory Compliance truly out-of-scope for the Data Platform Team Lead? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Regulatory Compliance as a core or recommended competency for the Data Platform Team Lead. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Regulatory Compliance falls outside the established competency profile for the Data Platform Team Lead. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Regulatory Compliance is outside the competency scope of the Data Platform Team Lead. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:55.806664+00:00",
+    "pipeline_version": "1.0"
+  }
+}

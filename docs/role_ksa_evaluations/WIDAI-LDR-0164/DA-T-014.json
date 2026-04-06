@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0164",
+  "role_name": "Chief of Staff to CDAIO",
+  "ksa_id": "DA-T-014",
+  "ksa_text": "Design and implement event-driven data architectures, including message broker configuration, event schema design, consumer group management, and monitoring of event processing latency and throughput.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "exec_excluded",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "This task KSA describes execution-level work in Data Architecture & Analytics that is not expected of a Chief of Staff to CDAIO (senior specialist tier). The role is responsible for overseeing and directing this work, not performing it directly. Excluded on execution-seniority grounds."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this execution-level task KSA be expected of a Chief of Staff to CDAIO in real-world practice?",
+    "evidence": "Compensation benchmarks and leadership effectiveness research confirm that senior specialist-tier roles direct and oversee execution work in Data Architecture & Analytics rather than performing it. Role scope analysis supports exclusion.",
+    "ruling": "Upheld: execution-level task KSA in Data Architecture & Analytics is appropriately excluded for a non-execution senior specialist role. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Execution-level task KSA in Data Architecture & Analytics is outside the expected competency scope for a Chief of Staff to CDAIO (senior specialist tier). The role oversees this work; it does not perform it directly.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.482947+00:00",
+    "pipeline_version": "1.0"
+  }
+}

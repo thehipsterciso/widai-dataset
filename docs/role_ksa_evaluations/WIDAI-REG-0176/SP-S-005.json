@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0176",
+  "role_name": "AI System Impact Assessment Coordinator",
+  "ksa_id": "SP-S-005",
+  "ksa_text": "Skill in designing and implementing data anonymization and pseudonymization techniques appropriate to the intended use, including k-anonymity, differential privacy, and synthetic data generation approaches.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.398741102021917,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38848628087135006,
+        "cross_encoder_sts": 0.4547874726875455,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21168310269482885,
+        "jaccard": null,
+        "top_element_id": "156",
+        "top_element_label": "Skill in applying confidentiality, integrity, and availability principles."
+      },
+      "ddat": {
+        "composite": 0.3857445652173913,
+        "cross_encoder_sts": 0.45969782608695653,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18853586956521737,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-002",
+        "top_element_label": "Adapting to delivery methodologies"
+      },
+      "eu_ai_act": {
+        "composite": 0.3788058441558441,
+        "cross_encoder_sts": 0.44940714285714284,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19053571428571428,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.398741102021917,
+        "cross_encoder_sts": 0.47406434634974537,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19787911714770798,
+        "jaccard": null,
+        "top_element_id": "K0941",
+        "top_element_label": "Knowledge of data concealment tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35401648690292764,
+        "cross_encoder_sts": 0.44168813559322034,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.12022542372881356,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38221871657754014,
+        "cross_encoder_sts": 0.44698823529411763,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20950000000000002,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0941",
+        "element_label": "Knowledge of data concealment tools and techniques",
+        "score": 0.398741102021917
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "156",
+        "element_label": "Skill in applying confidentiality, integrity, and availability principles.",
+        "score": 0.38848628087135006
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-002",
+        "element_label": "Adapting to delivery methodologies",
+        "score": 0.3857445652173913
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.38221871657754014
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.3788058441558441
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Security & Privacy (affinity 0.55) with insufficient REG signals (0). Composite moderate-to-strong (0.3987). AI System Impact Assessment Coordinator interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working AI System Impact Assessment Coordinator.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Security & Privacy (affinity 0.55) with insufficient REG signals (0). Composite moderate-to-strong (0.3987). AI System Impact Assessment Coordinator interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:13.215916+00:00",
+    "pipeline_version": "1.0"
+  }
+}
