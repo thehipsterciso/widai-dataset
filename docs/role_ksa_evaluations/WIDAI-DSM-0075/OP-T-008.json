@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0075",
+  "role_name": "Records Manager",
+  "ksa_id": "OP-T-008",
+  "ksa_text": "Conduct evaluations of data and AI tools and platforms, including requirements definition, vendor engagement, proof-of-concept design and execution, technical and commercial assessment, testing and compliance evaluation, and selection recommendation.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.45613054545454546,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4196150785756913,
+        "cross_encoder_sts": 0.43572997811816194,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3766420131291029,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.41192104377104377,
+        "cross_encoder_sts": 0.4324296296296296,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3572314814814815,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-037",
+        "top_element_label": "Content concepts and prototyping"
+      },
+      "eu_ai_act": {
+        "composite": 0.44411535353535353,
+        "cross_encoder_sts": 0.4422511111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4490866666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-007",
+        "top_element_label": "Registration"
+      },
+      "nice": {
+        "composite": 0.412696542893726,
+        "cross_encoder_sts": 0.4290795774647887,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36900845070422533,
+        "jaccard": null,
+        "top_element_id": "K1007",
+        "top_element_label": "Knowledge of intelligence requirements tasking systems and software"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.45613054545454546,
+        "cross_encoder_sts": 0.460462,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.44458,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.44477636363636364,
+        "cross_encoder_sts": 0.45136000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42722,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.45613054545454546
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.44477636363636364
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-007",
+        "element_label": "Registration",
+        "score": 0.44411535353535353
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.4196150785756913
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1007",
+        "element_label": "Knowledge of intelligence requirements tasking systems and software",
+        "score": 0.412696542893726
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA OP-T-008 (Operational Excellence/Task) scores 0.456 composite (highest: NIST AI RMF at 0.456) and is edge_case for the Records Manager role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Records Manager."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, NIST AI RMF signal (0.456), and Operational Excellence handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support this Operational Excellence competency for Records Manager at composite 0.456?",
+    "evidence": "Market analysis confirms Operational Excellence competencies at composite 0.456 are consistent with Records Manager hiring criteria.",
+    "ruling": "Include upheld. Market evidence supports this competency for Records Manager. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA OP-T-008 (Operational Excellence/Task) scores 0.456 composite (highest: NIST AI RMF at 0.456) and is edge_case for the Records Manager role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Records Manager.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:53.347507+00:00",
+    "pipeline_version": "1.0"
+  }
+}

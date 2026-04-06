@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0075",
+  "role_name": "Records Manager",
+  "ksa_id": "RC-T-012",
+  "ksa_text": "Conduct AI system risk classification under applicable regulatory frameworks, determining risk categories, identifying applicable requirements, selecting conformity assessment pathways, and documenting classification methodology.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.535087779433681,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3980312620495329,
+        "cross_encoder_sts": 0.41993442088091354,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33962283849918434,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.4005653198653199,
+        "cross_encoder_sts": 0.4347592592592593,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3093814814814814,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.535087779433681,
+        "cross_encoder_sts": 0.5297163934426229,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.549411475409836,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-007",
+        "top_element_label": "Registration"
+      },
+      "nice": {
+        "composite": 0.39216442687747033,
+        "cross_encoder_sts": 0.42098405797101446,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31531207729468597,
+        "jaccard": null,
+        "top_element_id": "K0675",
+        "top_element_label": "Knowledge of risk management processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5314822077922077,
+        "cross_encoder_sts": 0.5210928571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5591871428571428,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40042727272727274,
+        "cross_encoder_sts": 0.44235714285714284,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28861428571428577,
+        "jaccard": null,
+        "top_element_id": "2.B.4.h",
+        "top_element_label": "Systems Evaluation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-007",
+        "element_label": "Registration",
+        "score": 0.535087779433681
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5314822077922077
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.4005653198653199
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.4.h",
+        "element_label": "Systems Evaluation",
+        "score": 0.40042727272727274
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.3980312620495329
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RC-T-012 (Risk and Compliance/Task) scores 0.535 composite (highest: EU AI Act at 0.535) and is in_scope for the Records Manager role. Domain prior: in_scope. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Records Manager."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with in_scope scope, EU AI Act signal (0.535), and Risk and Compliance handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support this Risk and Compliance competency for Records Manager at composite 0.535?",
+    "evidence": "Market analysis confirms Risk and Compliance competencies at composite 0.535 are consistent with Records Manager hiring criteria.",
+    "ruling": "Include upheld. Market evidence supports this competency for Records Manager. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RC-T-012 (Risk and Compliance/Task) scores 0.535 composite (highest: EU AI Act at 0.535) and is in_scope for the Records Manager role. Domain prior: in_scope. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Records Manager.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:53.306127+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0075",
+  "role_name": "Records Manager",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:18:53.666721+00:00",
+  "total_ksas": 1069,
+  "included": 166,
+  "excluded": 903,
+  "inclusion_rate": 0.1553,
+  "adversarial_overturns": {
+    "pass_3": 0,
+    "pass_4": 51,
+    "total_ksas_affected": 51
+  },
+  "calibration": {
+    "min": 80,
+    "max": 135,
+    "status": "WARNING"
+  },
+  "pass_1_notes": "6 frameworks: dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet. Composite = MAX across frameworks.",
+  "role_scope_notes": "Records management: retention schedules, archival processes, destruction workflows, regulatory records requirements, and records system administration.",
+  "domain_summary": {
+    "AG": {
+      "include": 0,
+      "exclude": 107,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 42,
+      "exclude": 32,
+      "total": 74,
+      "label": "Risk and Compliance"
+    },
+    "RM": {
+      "include": 0,
+      "exclude": 101,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 0,
+      "exclude": 89,
+      "total": 89,
+      "label": "Leadership and Strategy"
+    },
+    "TF": {
+      "include": 17,
+      "exclude": 70,
+      "total": 87,
+      "label": "Technical Foundations"
+    },
+    "AI": {
+      "include": 0,
+      "exclude": 103,
+      "total": 103,
+      "label": "AI and Machine Learning"
+    },
+    "DG": {
+      "include": 38,
+      "exclude": 54,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "OP": {
+      "include": 29,
+      "exclude": 40,
+      "total": 69,
+      "label": "Operational Excellence"
+    },
+    "SP": {
+      "include": 4,
+      "exclude": 80,
+      "total": 84,
+      "label": "Security and Privacy"
+    },
+    "DA": {
+      "include": 20,
+      "exclude": 73,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 0,
+      "exclude": 82,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "AB": {
+      "include": 16,
+      "exclude": 72,
+      "total": 88,
+      "label": "Core Abilities"
+    }
+  }
+}

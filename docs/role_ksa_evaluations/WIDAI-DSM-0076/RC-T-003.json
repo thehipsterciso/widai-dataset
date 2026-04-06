@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0076",
+  "role_name": "Knowledge Manager",
+  "ksa_id": "RC-T-003",
+  "ksa_text": "Conduct periodic data compliance assessments using established methodologies, documenting findings, risk ratings, remediation recommendations, and continuous monitoring integration with governance structures.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.43961800356506237,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4218145862772805,
+        "cross_encoder_sts": 0.44829810017271154,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35119188255613126,
+        "jaccard": null,
+        "top_element_id": "537",
+        "top_element_label": "Develop methods to monitor and measure risk, compliance, and assurance efforts."
+      },
+      "ddat": {
+        "composite": 0.40199197860962566,
+        "cross_encoder_sts": 0.43216323529411765,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32153529411764703,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4090251748251748,
+        "cross_encoder_sts": 0.4349692307692307,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33984102564102564,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40631537856955724,
+        "cross_encoder_sts": 0.4368449567723343,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32490317002881847,
+        "jaccard": null,
+        "top_element_id": "K0711",
+        "top_element_label": "Knowledge of evaluation and validation principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.43961800356506237,
+        "cross_encoder_sts": 0.495078431372549,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2917235294117647,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4388831168831169,
+        "cross_encoder_sts": 0.4702857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3551428571428571,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.43961800356506237
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.4388831168831169
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "537",
+        "element_label": "Develop methods to monitor and measure risk, compliance, and assurance efforts.",
+        "score": 0.4218145862772805
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.4090251748251748
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0711",
+        "element_label": "Knowledge of evaluation and validation principles and practices",
+        "score": 0.40631537856955724
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-T-003 (Risk and Compliance/Task) excluded as out_of_scope (composite 0.440, highest: NIST AI RMF at 0.440). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Organizational knowledge management: knowledge base platforms, lessons learned capture, knowledge sharing workflows, and content/taxonomy governance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.440, and Risk and Compliance (RC) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk and Compliance KSA for Knowledge Manager?",
+    "evidence": "Risk and Compliance competencies do not appear as Knowledge Manager requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Risk and Compliance is not a Knowledge Manager core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RC-T-003 (Risk and Compliance/Task) excluded as out_of_scope (composite 0.440, highest: NIST AI RMF at 0.440). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Organizational knowledge management: knowledge base platforms, lessons learned capture, knowledge sharing workflows, and content/taxonomy governance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:58.916009+00:00",
+    "pipeline_version": "1.0"
+  }
+}

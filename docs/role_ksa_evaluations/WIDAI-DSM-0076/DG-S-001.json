@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0076",
+  "role_name": "Knowledge Manager",
+  "ksa_id": "DG-S-001",
+  "ksa_text": "Skill in communicating data and AI strategy, risk posture, and investment priorities to board-level and C-suite audiences using financial and business terms rather than technical language.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.464150586510264,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41488281840408986,
+        "cross_encoder_sts": 0.4252655256723717,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3871955990220049,
+        "jaccard": null,
+        "top_element_id": "108",
+        "top_element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+      },
+      "ddat": {
+        "composite": 0.43686743801652894,
+        "cross_encoder_sts": 0.46419272727272726,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.364,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-016",
+        "top_element_label": "Architecture communication"
+      },
+      "eu_ai_act": {
+        "composite": 0.42397090909090906,
+        "cross_encoder_sts": 0.40348999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47858666666666666,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40567574321413186,
+        "cross_encoder_sts": 0.4221710900473934,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3616881516587678,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.464150586510264,
+        "cross_encoder_sts": 0.4522258064516129,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49595,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42533884297520663,
+        "cross_encoder_sts": 0.44524545454545456,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37225454545454545,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.464150586510264
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-016",
+        "element_label": "Architecture communication",
+        "score": 0.43686743801652894
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.42533884297520663
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.42397090909090906
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "108",
+        "element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk).",
+        "score": 0.41488281840408986
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DG-S-001 (Data Governance/Skill) excluded as out_of_scope (composite 0.464, highest: NIST AI RMF at 0.464). Domain prior: edge. Core hits: 0. OOS hits: 2. Seniority: appropriate. Organizational knowledge management: knowledge base platforms, lessons learned capture, knowledge sharing workflows, and content/taxonomy governance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.464, and Data Governance (DG) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Data Governance KSA (composite 0.464)?",
+    "evidence": "Market analysis of Knowledge Manager job postings does not surface this Data Governance competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA DG-S-001 (Data Governance/Skill) excluded as out_of_scope (composite 0.464, highest: NIST AI RMF at 0.464). Domain prior: edge. Core hits: 0. OOS hits: 2. Seniority: appropriate. Organizational knowledge management: knowledge base platforms, lessons learned capture, knowledge sharing workflows, and content/taxonomy governance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:58.892515+00:00",
+    "pipeline_version": "1.0"
+  }
+}
