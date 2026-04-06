@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0036",
+  "role_name": "Cloud Platform Engineer",
+  "ksa_id": "TF-T-008",
+  "ksa_text": "Package and deploy machine learning models to production serving infrastructure including containerization, API wrapping, load testing, and rollback procedures.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.4053285714285714,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3973283942225998,
+        "cross_encoder_sts": 0.43138504672897193,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30651065420560747,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.4053285714285714,
+        "cross_encoder_sts": 0.4508964285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2838142857142857,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3504,
+        "cross_encoder_sts": 0.3856,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25653333333333334,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-019",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.3891315071770335,
+        "cross_encoder_sts": 0.4339405263157895,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2696407894736842,
+        "jaccard": null,
+        "top_element_id": "K0688",
+        "top_element_label": "Knowledge of common application vulnerabilities"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.34485151515151513,
+        "cross_encoder_sts": 0.39418333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21330000000000002,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.36798030303030305,
+        "cross_encoder_sts": 0.41016666666666673,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25548333333333334,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4053285714285714
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.3973283942225998
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0688",
+        "element_label": "Knowledge of common application vulnerabilities",
+        "score": 0.3891315071770335
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.36798030303030305
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-019",
+        "element_label": "Quality management system",
+        "score": 0.3504
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-T-008 (Technical Foundations) scores 0.405 composite (signal: weak). Scope fit for Cloud Platform Engineer: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.405. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Technical Foundations KSA TF-T-008 as a discrete competency for Cloud Platform Engineer?",
+    "evidence": "Technical Foundations is primary for Cloud Platform Engineer. Score 0.405. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. Technical Foundations is core for Cloud Platform Engineer. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Technical Foundations (primary) for Cloud Platform Engineer. Score 0.405. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:33.758770",
+    "pipeline_version": "1.0"
+  }
+}

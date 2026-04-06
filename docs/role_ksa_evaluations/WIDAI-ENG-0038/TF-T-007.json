@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0038",
+  "role_name": "Data Reliability Engineer",
+  "ksa_id": "TF-T-007",
+  "ksa_text": "Manage application dependencies and package versions for data projects including dependency specification, vulnerability scanning, upgrade planning, and cross-package compatibility verification.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.4089392113910186,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3918386587771203,
+        "cross_encoder_sts": 0.4335072978303747,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28072228796844184,
+        "jaccard": null,
+        "top_element_id": "107",
+        "top_element_label": "Knowledge of resource management principles and techniques."
+      },
+      "ddat": {
+        "composite": 0.4089392113910186,
+        "cross_encoder_sts": 0.45641084337349397,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2823481927710843,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.37262377622377624,
+        "cross_encoder_sts": 0.41143076923076927,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26913846153846155,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3916088875980249,
+        "cross_encoder_sts": 0.4355840255591054,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27434185303514375,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3725873737373738,
+        "cross_encoder_sts": 0.4250055555555556,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23280555555555557,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.1",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.38286969696969697,
+        "cross_encoder_sts": 0.43220833333333336,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2513,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4089392113910186
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "107",
+        "element_label": "Knowledge of resource management principles and techniques.",
+        "score": 0.3918386587771203
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0498",
+        "element_label": "Knowledge of operational planning processes",
+        "score": 0.3916088875980249
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.38286969696969697
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.37262377622377624
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-T-007 (Technical Foundations) scores 0.409 composite (signal: weak). Scope fit for Data Reliability Engineer: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.409. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Technical Foundations KSA TF-T-007 as a discrete competency for Data Reliability Engineer?",
+    "evidence": "Technical Foundations is primary for Data Reliability Engineer. Score 0.409. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. Technical Foundations is core for Data Reliability Engineer. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Technical Foundations (primary) for Data Reliability Engineer. Score 0.409. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:34.079247",
+    "pipeline_version": "1.0"
+  }
+}

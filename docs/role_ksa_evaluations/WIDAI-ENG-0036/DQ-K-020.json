@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0036",
+  "role_name": "Cloud Platform Engineer",
+  "ksa_id": "DQ-K-020",
+  "ksa_text": "Knowledge of data product design principles, including data product definition, consumer segmentation, interface design (APIs, subscriptions, files), Service Level Agreement (SLA) definition, and data product lifecycle management.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.42561165001218615,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4096581408345753,
+        "cross_encoder_sts": 0.4352024590163935,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34153995901639345,
+        "jaccard": null,
+        "top_element_id": "1005",
+        "top_element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
+      },
+      "ddat": {
+        "composite": 0.4074905638665133,
+        "cross_encoder_sts": 0.4364873417721519,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33016582278481016,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4153172248803828,
+        "cross_encoder_sts": 0.443421052631579,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34037368421052633,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.42561165001218615,
+        "cross_encoder_sts": 0.45450991957104553,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3485495978552278,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38224358974358974,
+        "cross_encoder_sts": 0.4247897435897436,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26878717948717945,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37475779220779226,
+        "cross_encoder_sts": 0.40256428571428576,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30060714285714285,
+        "jaccard": null,
+        "top_element_id": "2.B.4.h",
+        "top_element_label": "Systems Evaluation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.42561165001218615
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4153172248803828
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1005",
+        "element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes).",
+        "score": 0.4096581408345753
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4074905638665133
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38224358974358974
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-K-020 (Data Quality) scores 0.426 composite (signal: weak). Scope fit for Cloud Platform Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.426 is below 0.44 threshold for edge-case inclusion in Cloud Platform Engineer.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.426 insufficient for edge-case inclusion (min 0.44). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Quality KSA DQ-K-020 as a discrete competency for Cloud Platform Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for Cloud Platform Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.426 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:33.734839",
+    "pipeline_version": "1.0"
+  }
+}

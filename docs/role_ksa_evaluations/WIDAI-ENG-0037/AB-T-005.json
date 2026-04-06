@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0037",
+  "role_name": "DataOps Engineer",
+  "ksa_id": "AB-T-005",
+  "ksa_text": "Build data visualizations, dashboards, and performance reports that accurately represent analytical findings, support self-service exploration, and meet defined consumer requirements for content, layout, and refresh frequency.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4115033826638478,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38798581466842336,
+        "cross_encoder_sts": 0.42053719806763284,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30118212560386476,
+        "jaccard": null,
+        "top_element_id": "1020A",
+        "top_element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance)."
+      },
+      "ddat": {
+        "composite": 0.4115033826638478,
+        "cross_encoder_sts": 0.4730325581395349,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24742558139534884,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.37634475524475525,
+        "cross_encoder_sts": 0.4215,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25593076923076924,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3864248484848485,
+        "cross_encoder_sts": 0.42208666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2913266666666667,
+        "jaccard": null,
+        "top_element_id": "S0015",
+        "top_element_label": "Skill in conducting test events"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3633946022727273,
+        "cross_encoder_sts": 0.411553125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.234971875,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.3715768595041323,
+        "cross_encoder_sts": 0.4040909090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2848727272727273,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4115033826638478
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1020A",
+        "element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance).",
+        "score": 0.38798581466842336
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0015",
+        "element_label": "Skill in conducting test events",
+        "score": 0.3864248484848485
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.37634475524475525
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.3715768595041323
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-T-005 (Core Abilities) scores 0.412 composite (signal: weak). Scope fit for DataOps Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.412 is below 0.48 threshold for edge-case inclusion in DataOps Engineer.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.412 insufficient for edge-case inclusion (min 0.48). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Core Abilities KSA AB-T-005 as a discrete competency for DataOps Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for DataOps Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.412 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:33.917498",
+    "pipeline_version": "1.0"
+  }
+}

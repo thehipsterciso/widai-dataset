@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0037",
+  "role_name": "DataOps Engineer",
+  "ksa_id": "SP-K-006",
+  "ksa_text": "Knowledge of the regulatory and compliance landscape governing enterprise data and AI systems, including data protection law, AI-specific regulation, sector-specific obligations, cross-jurisdictional requirements, and regulatory authority oversight mechanisms.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.5054996212121212,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.43358704545454546,
+        "cross_encoder_sts": 0.44047375000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41522249999999994,
+        "jaccard": null,
+        "top_element_id": "7036",
+        "top_element_label": "Knowledge of laws, regulations, and policies related to AI, data security/privacy, and use of publicly procured data for government."
+      },
+      "ddat": {
+        "composite": 0.41650363636363635,
+        "cross_encoder_sts": 0.4406333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35215777777777774,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-035",
+        "top_element_label": "Community collaboration"
+      },
+      "eu_ai_act": {
+        "composite": 0.5054996212121212,
+        "cross_encoder_sts": 0.4927854166666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5394041666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4279764389456697,
+        "cross_encoder_sts": 0.4371633136094675,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4034781065088757,
+        "jaccard": null,
+        "top_element_id": "K1260",
+        "top_element_label": "Knowledge of intelligence laws and regulations"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4663742946708464,
+        "cross_encoder_sts": 0.46887586206896553,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.45970344827586207,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42022363636363635,
+        "cross_encoder_sts": 0.43757999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37394,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.5054996212121212
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4663742946708464
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "7036",
+        "element_label": "Knowledge of laws, regulations, and policies related to AI, data security/privacy, and use of publicly procured data for government.",
+        "score": 0.43358704545454546
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1260",
+        "element_label": "Knowledge of intelligence laws and regulations",
+        "score": 0.4279764389456697
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.42022363636363635
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA SP-K-006 (Security and Privacy) scores 0.505 composite (signal: moderate). Scope fit for DataOps Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Edge-case scope, score 0.505 meets threshold. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Security and Privacy KSA SP-K-006 as a discrete competency for DataOps Engineer?",
+    "evidence": "Reviewed against DataOps Engineer market data. Security content is policy/compliance level, not DataOps security implementation. Score 0.505 with no role-specific keyword match confirms exclusion.",
+    "ruling": "Revised to exclude. Security content is policy/compliance level, not DataOps security implementation. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Pass 4 overturn: Security content is policy/compliance level, not DataOps security implementation.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:33.866821",
+    "pipeline_version": "1.0"
+  }
+}

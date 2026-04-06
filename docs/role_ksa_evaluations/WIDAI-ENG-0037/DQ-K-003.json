@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0037",
+  "role_name": "DataOps Engineer",
+  "ksa_id": "DQ-K-003",
+  "ksa_text": "Knowledge of clinical data management standards and requirements, including Good Clinical Practice (GCP) principles, Electronic Data Capture (eCDC) systems, clinical data coding conventions (MedDRA, WHO Drug Dictionary), and data integrity requirements for regulatory submissions.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.41325909090909085,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3858184917355372,
+        "cross_encoder_sts": 0.4149284090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3081920454545454,
+        "jaccard": null,
+        "top_element_id": "1034A",
+        "top_element_label": "Knowledge of Personally Identifiable Information (PII) data security standards."
+      },
+      "ddat": {
+        "composite": 0.3802181818181818,
+        "cross_encoder_sts": 0.43867999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22432000000000002,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.34263636363636363,
+        "cross_encoder_sts": 0.3695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.271,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-019",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.41325909090909085,
+        "cross_encoder_sts": 0.4577649484536082,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29457680412371134,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3531757575757576,
+        "cross_encoder_sts": 0.3962666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23826666666666665,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38735909090909093,
+        "cross_encoder_sts": 0.3967,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36245,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.41325909090909085
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.38735909090909093
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1034A",
+        "element_label": "Knowledge of Personally Identifiable Information (PII) data security standards.",
+        "score": 0.3858184917355372
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.3802181818181818
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3531757575757576
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-K-003 (Data Quality) scores 0.413 composite (signal: weak). Scope fit for DataOps Engineer: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.413. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Quality KSA DQ-K-003 as a discrete competency for DataOps Engineer?",
+    "evidence": "Data Quality is primary for DataOps Engineer. Score 0.413. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. Data Quality is core for DataOps Engineer. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality (primary) for DataOps Engineer. Score 0.413. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:33.915591",
+    "pipeline_version": "1.0"
+  }
+}
