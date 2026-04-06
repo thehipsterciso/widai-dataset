@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0178",
+  "role_name": "AI Data Quality Manager (ISO)",
+  "ksa_id": "RM-A-010",
+  "ksa_text": "Ability to design and implement post-market monitoring systems for AI applications, including performance data collection, analysis, and serious incident investigation and reporting.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Edge case \u2014 included on balance: ability carries governance/compliance signals (\"post.market   :monitor|surveil\", \"serious incident\") in Risk Management context (affinity 0.52). Composite minimal (0.0000). A AI Data Quality Manager (ISO) would encounter this competency in regulatory program work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 3 job-posting-level and 2 framework/certification matches (EU AI Act, ISO 42001, NIST AI RMF, CIPP/E, CRISC). Competency appears regularly in AI compliance and regulatory affairs role descriptions.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 included on balance: ability carries governance/compliance signals (\"post.market   :monitor|surveil\", \"serious incident\") in Risk Management context (affinity 0.52). Composite minimal (0.0000). A AI Data Quality Manager (ISO) would encounter this competency in regulatory program work.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:47:51.780143+00:00",
+    "pipeline_version": "1.0"
+  }
+}

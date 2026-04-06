@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0178",
+  "role_name": "AI Data Quality Manager (ISO)",
+  "ksa_id": "SP-S-002",
+  "ksa_text": "Skill in mapping personal data flows across systems, vendors, and jurisdictions to produce records of processing activities (RoPA) in compliance with regulatory requirements.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.43799600886917966,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40759619450317125,
+        "cross_encoder_sts": 0.4286523255813954,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35144651162790697,
+        "jaccard": null,
+        "top_element_id": "1074A",
+        "top_element_label": "Knowledge of transmission records (e.g., Bluetooth, Radio Frequency Identification (RFID), Infrared Networking (IR), Wireless Fidelity (Wi-Fi). paging, cellular, satellite dishes, Voice over Internet Protocol (VoIP)), and jamming techniques that enable transmission of undesirable information, or prevent installed systems from operating correctly."
+      },
+      "ddat": {
+        "composite": 0.42067805194805197,
+        "cross_encoder_sts": 0.4531914285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33397571428571426,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.43799600886917966,
+        "cross_encoder_sts": 0.4498390243902439,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4064146341463415,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-006",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.4096961091398507,
+        "cross_encoder_sts": 0.44091695827725436,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32644051144010766,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3984515909090909,
+        "cross_encoder_sts": 0.421105,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3380425,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40074848484848485,
+        "cross_encoder_sts": 0.4232916666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34063333333333334,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.6",
+        "top_element_label": "Information Ordering"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-006",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.43799600886917966
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.42067805194805197
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4096961091398507
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1074A",
+        "element_label": "Knowledge of transmission records (e.g., Bluetooth, Radio Frequency Identification (RFID), Infrared Networking (IR), Wireless Fidelity (Wi-Fi). paging, cellular, satellite dishes, Voice over Internet Protocol (VoIP)), and jamming techniques that enable transmission of undesirable information, or prevent installed systems from operating correctly.",
+        "score": 0.40759619450317125
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.6",
+        "element_label": "Information Ordering",
+        "score": 0.40074848484848485
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Edge case \u2014 included on balance: skill carries governance/compliance signals (\"compl  :y|ies|ying|iant|iance|iances\", \"regulat  :ory|ion|ions|e|ed|ing|or|ors\") in Security & Privacy context (affinity 0.38). Composite moderate-to-strong (0.4380). A AI Data Quality Manager (ISO) would encounter this competency in regulatory program work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 4 match(es) in AI compliance job postings or certification curricula. Sufficient to uphold inclusion.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 included on balance: skill carries governance/compliance signals (\"compl  :y|ies|ying|iant|iance|iances\", \"regulat  :ory|ion|ions|e|ed|ing|or|ors\") in Security & Privacy context (affinity 0.38). Composite moderate-to-strong (0.4380). A AI Data Quality Manager (ISO) would encounter this competency in regulatory program work.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:47:51.453390+00:00",
+    "pipeline_version": "1.0"
+  }
+}

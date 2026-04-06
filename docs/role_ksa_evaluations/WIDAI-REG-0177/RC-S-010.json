@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0177",
+  "role_name": "AI Lifecycle Manager",
+  "ksa_id": "RC-S-010",
+  "ksa_text": "Skill in drafting and reviewing data processing agreements, including controller-processor terms, sub-processor obligations, cross-border transfer provisions, and regulatory compliance clauses.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.41279209486166,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3886145567827811,
+        "cross_encoder_sts": 0.4078165109034268,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3374093457943925,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.40797471074380165,
+        "cross_encoder_sts": 0.4506327272727273,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29422,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.41279209486166,
+        "cross_encoder_sts": 0.42144347826086953,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3897217391304348,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40150062862669245,
+        "cross_encoder_sts": 0.42090212765957447,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3497632978723404,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3898326704545455,
+        "cross_encoder_sts": 0.42036875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.308403125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38605050505050503,
+        "cross_encoder_sts": 0.4182111111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3002888888888889,
+        "jaccard": null,
+        "top_element_id": "2.C.1.b",
+        "top_element_label": "Administrative"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.41279209486166
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.40797471074380165
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40150062862669245
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3898326704545455
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.3886145567827811
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to AI Lifecycle Manager scope \u2014 regulatory/compliance signals detected (\"compl  :y|ies|ying|iant|iance|iances\", \"regulat  :ory|ion|ions|e|ed|ing|or|ors\", \"obligation  :s\"). Composite moderate-to-strong (0.4128). Domain RC (affinity 0.85) aligns with REG competency profile. Seniority appropriate: describes regulatory interpretation, compliance program execution, or governance oversight."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 4 match(es) in AI compliance job postings or certification curricula. Sufficient to uphold inclusion.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to AI Lifecycle Manager scope \u2014 regulatory/compliance signals detected (\"compl  :y|ies|ying|iant|iance|iances\", \"regulat  :ory|ion|ions|e|ed|ing|or|ors\", \"obligation  :s\"). Composite moderate-to-strong (0.4128). Domain RC (affinity 0.85) aligns with REG competency profile. Seniority appropriate: describes regulatory interpretation, compliance program execution, or governance oversight.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:47:46.784139+00:00",
+    "pipeline_version": "1.0"
+  }
+}

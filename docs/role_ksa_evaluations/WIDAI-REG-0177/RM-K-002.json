@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0177",
+  "role_name": "AI Lifecycle Manager",
+  "ksa_id": "RM-K-002",
+  "ksa_text": "Knowledge of model evaluation methodologies, including train/validation/test set design, cross-validation approaches, and evaluation metric selection criteria.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.42297598280098286,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.416183631713555,
+        "cross_encoder_sts": 0.4355056265984655,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36465831202046034,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.38521515151515157,
+        "cross_encoder_sts": 0.42600000000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27645555555555557,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.39715050505050503,
+        "cross_encoder_sts": 0.42395555555555553,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32567037037037033,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.42297598280098286,
+        "cross_encoder_sts": 0.44639459459459463,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36052635135135136,
+        "jaccard": null,
+        "top_element_id": "K0646",
+        "top_element_label": "Knowledge of system optimization techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4064563973063973,
+        "cross_encoder_sts": 0.4392574074074074,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31898703703703707,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3762553719008264,
+        "cross_encoder_sts": 0.39492727272727274,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32646363636363634,
+        "jaccard": null,
+        "top_element_id": "2.C.1.e",
+        "top_element_label": "Customer and Personal Service"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0646",
+        "element_label": "Knowledge of system optimization techniques",
+        "score": 0.42297598280098286
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.416183631713555
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.5",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4064563973063973
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.39715050505050503
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.38521515151515157
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Risk Management (affinity 0.58) with insufficient REG signals (0). Composite moderate-to-strong (0.4230). AI Lifecycle Manager interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working AI Lifecycle Manager.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Risk Management (affinity 0.58) with insufficient REG signals (0). Composite moderate-to-strong (0.4230). AI Lifecycle Manager interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:47:46.743333+00:00",
+    "pipeline_version": "1.0"
+  }
+}
