@@ -3,6 +3,29 @@
 All notable changes to the WIDAI dataset are documented here.
 This project uses [Semantic Versioning](https://semver.org/).
 
+## [0.8.2] - 2026-04-05
+
+### TF Domain Re-Synthesis — Full Evidence-Driven Synthesis with Programmatic Enforcement
+
+**TF (Technology Foundations) domain fully re-synthesized with programmatic enforcement and adversarial validation.** Final domain of the 12-domain re-synthesis campaign. All 4 dimensions processed through enforced methodology: `dimension_synthesis.py` → `synthesis_enforcer.py` → full analysis (dedup + gap analysis) → synthesis doc → JSON update → `adversarial_validator.py`. All 4 dimensions pass 8/8 adversarial validation checks.
+
+**TF Knowledge: 24 → 22 KSAs**
+14,000 total mappings across 6 frameworks. 204 elements at STS ≥ 0.60. Evidence density 9.3:1 post-merge. 4 duplicate pairs examined, 2 merges: K-022 (alternative API protocols: GraphQL, gRPC, WebSocket, message queues) merged into K-011 (API design patterns — now comprehensive communication protocols entry); K-023 (computer architecture fundamentals) merged into K-014 (computing fundamentals — now covers full hardware-software stack). 73 gap signals analyzed across 3 clusters (generic infrastructure, data management, top STS) — all covered by existing entries. Top STS: 1073 at 0.7424. 8 post-STRM entries validated with indirect evidence. Former K-024 renumbered to K-022. Synthesis doc: `docs/synthesis/TF-KNOWLEDGE-SYNTHESIS.md`.
+
+**TF Skills: 25 → 25 KSAs (validated, no changes)**
+16,615 total mappings. 268 elements at STS ≥ 0.60 — richest of all 4 TF dimensions. Evidence density 10.7:1. 4 duplicate pairs examined, 0 merges. 77 gap signals analyzed: all generic technology elements with broad mapping patterns (data handling, technology integration, operational testing) — no distinct concept gaps. Top STS: 5960 at 0.7221 (cloud computing solutions design). 13 post-STRM entries validated. Synthesis doc: `docs/synthesis/TF-SKILLS-SYNTHESIS.md`.
+
+**TF Abilities: 24 → 25 KSAs**
+8,475 total mappings. 303 elements at STS ≥ 0.60 — highest evidence density across all TF dimensions at 12.1:1. 4 duplicate pairs examined, 0 merges. 10 gap signals: 5 broad mappings + 5 overloads. 1 gap identified — element 416 "analyze design constraints and trade-offs" maps to 5 entries but none captures systematic sensitivity analysis and trade-off evaluation. New entry TF-A-025 (sensitivity analysis and technical alternatives evaluation) closes this gap. Evidence: 416 (STS 0.6413), S0114 (STS 0.6405), S0891 (STS 0.6112). Top STS: T1424 at 0.7366. 19 post-STRM entries validated. Domain_title corrected ("Technical" → "Technology"). Legacy_ids removed (Schema 3.0.0 compliance). Synthesis doc: `docs/synthesis/TF-ABILITIES-SYNTHESIS.md`.
+
+**TF Tasks: 15 → 15 KSAs (validated, no changes)**
+6,169 total mappings. 82 elements at STS ≥ 0.60. Evidence density 5.5:1 — lowest TF dimension, expected because task-level framework descriptions produce narrower STS matches. 4 duplicate pairs examined, 0 merges. 10 gap signals: 4 broad mappings + 6 overloads — all covered by existing entries. Low entry count addressed: 15 entries comprehensively cover the TF task space (CI/CD, testing, data standards, code review, monitoring, environments, dependencies, ML deployment, data testing, test infrastructure, containerization, database management, telemetry, recovery, data lifecycle). Top STS: 5944 at 0.7005. 7 post-STRM entries validated. Synthesis doc: `docs/synthesis/TF-TASKS-SYNTHESIS.md`.
+
+- Rewrote all 4 synthesis analysis documents with enforced methodology
+- All 4 dimensions pass 8/8 adversarial validation checks
+- TF domain total: 24+25+24+15 = 88 KSAs → 22+25+25+15 = 87 KSAs (−1 net: 2 knowledge merges, 1 ability addition)
+- **All 12 WIDAI domains now fully re-synthesized.** Grand total: 1,069 KSAs across 48 dimension files.
+
 ## [0.8.1] - 2026-04-05
 
 ### LS Domain Tasks Synthesis — Evidence-Driven Expansion

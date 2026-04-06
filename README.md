@@ -8,7 +8,7 @@
 
 The labor market has had O\*NET for forty years. Cybersecurity has had NICE for a decade. Data and AI — the function that boards are betting their competitive future on — has nothing. No shared language for its workforce. No standard for who these people are, what they should know, or how to measure the gap between where an organization is and where it needs to be.
 
-WIDAI fills that gap. 187 roles. 689 KSAs across 12 knowledge domains. 70+ source frameworks unified with full provenance. Every mapping computationally scored and independently validated — not expert opinion, not manual classification. 536,737 rationale files across 2.76 million scored pairs. One taxonomy that speaks every framework's language simultaneously.
+WIDAI fills that gap. 187 roles. 1,069 KSAs across 12 knowledge domains. 70+ source frameworks unified with full provenance. Every mapping computationally scored and independently validated — not expert opinion, not manual classification. 536,737 rationale files across 2.76 million scored pairs. One taxonomy that speaks every framework's language simultaneously.
 
 ---
 
@@ -34,7 +34,7 @@ WIDAI fills that gap. 187 roles. 689 KSAs across 12 knowledge domains. 70+ sourc
 
 ## Current State
 
-Version 0.6.0. Six framework STRMs complete on the domain-exhaustive scoring pipeline:
+Version 0.8.2. All 12 domains re-synthesized with programmatic enforcement across 4 dimensions (48 files, 1,069 KSAs). Six framework STRMs complete on the domain-exhaustive scoring pipeline:
 
 | Framework | Elements | Scored Pairs | Mappings | Rationale Files |
 |-----------|----------|-------------|----------|-----------------|
@@ -95,5 +95,5 @@ Built by [Thomas Jones](https://www.linkedin.com/in/yourprofilehere) — The Hip
 ---
 
 <p align="center">
-  <sub>Version 0.6.0 · Copyright 2026 Thomas Jones · All rights reserved</sub>
+  <sub>Version 0.8.2 · Copyright 2026 Thomas Jones · All rights reserved</sub>
 </p>
