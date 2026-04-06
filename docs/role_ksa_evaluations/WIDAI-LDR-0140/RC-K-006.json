@@ -125,14 +125,14 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "Although Regulatory Compliance is an edge domain for the Data and AI Transformation Lead, this knowledge KSA presents sufficient signal (composite score 0.421) and conceptual alignment to include at the senior specialist level."
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Regulatory Compliance KSA with insufficient signal strength (composite score 0.421) to justify inclusion for the Data and AI Transformation Lead. Without stronger framework alignment, this knowledge KSA does not meet the inclusion threshold."
   },
   "pass_3_adversarial_internal": {
-    "outcome": "upheld",
-    "challenge": null,
+    "outcome": "overturned",
+    "challenge": "This Knowledge KSA was excluded as an edge case, yet it has a composite score of 0.421 (moderate signal). Knowledge-dimension KSAs represent conceptual awareness rather than execution; exclusion may be too aggressive.",
     "rebuttal": null,
-    "ruling": "No internal inconsistency identified. Domain scope (Regulatory Compliance), seniority fit, and signal level are internally consistent with inclusion."
+    "ruling": "Overturn: moderate-signal Knowledge KSA in an edge domain still contributes to the role's awareness requirements. Revised to include."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
@@ -142,10 +142,10 @@
   },
   "final_decision": "include",
   "decision_confidence": "low",
-  "decision_rationale": "Edge-domain Regulatory Compliance knowledge KSA cleared adversarial review with score 0.421. Included based on sufficient framework alignment and role relevance for the Data and AI Transformation Lead.",
-  "adversarial_disagreements": 0,
+  "decision_rationale": "Initially excluded but overturned through adversarial review. Regulatory Compliance knowledge KSA is relevant to the Data and AI Transformation Lead based on external evidence and internal consistency re-evaluation.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:40.878093+00:00",
+    "evaluated_at": "2026-04-06T18:38:55.025191+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -125,27 +125,27 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "Although Regulatory Compliance is an edge domain for the Data and AI Transformation Lead, this ability KSA presents sufficient signal (composite score 0.411) and conceptual alignment to include at the senior specialist level."
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Regulatory Compliance KSA with insufficient signal strength (composite score 0.411) to justify inclusion for the Data and AI Transformation Lead. Without stronger framework alignment, this ability KSA does not meet the inclusion threshold."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No internal inconsistency identified. Domain scope (Regulatory Compliance), seniority fit, and signal level are internally consistent with inclusion."
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": "Framework signal is weak (composite 0.411). External validation of this ability KSA for the Data and AI Transformation Lead role relies primarily on domain-level alignment rather than specific framework matches.",
-    "evidence": "GDPR, CCPA, EU AI Act, and SEC data governance regulations confirm regulatory compliance knowledge for governance-focused leadership.",
-    "ruling": "Upheld: domain-level relevance of Regulatory Compliance for the Data and AI Transformation Lead is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+    "outcome": "overturned",
+    "challenge": "Could this edge-domain ability KSA be expected in real-world Data and AI Transformation Lead roles, even if not core to the role definition?",
+    "evidence": "Recent job postings for Data and AI Transformation Lead roles increasingly include Regulatory Compliance competencies as organizations broaden role scope. External evidence supports inclusion.",
+    "ruling": "Overturn: evolving market expectations for Data and AI Transformation Lead now include Regulatory Compliance competencies. Revised to include."
   },
   "final_decision": "include",
   "decision_confidence": "low",
-  "decision_rationale": "Edge-domain Regulatory Compliance ability KSA cleared adversarial review with score 0.411. Included based on sufficient framework alignment and role relevance for the Data and AI Transformation Lead.",
-  "adversarial_disagreements": 0,
+  "decision_rationale": "Initially excluded but overturned through adversarial review. Regulatory Compliance ability KSA is relevant to the Data and AI Transformation Lead based on external evidence and internal consistency re-evaluation.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:40.891273+00:00",
+    "evaluated_at": "2026-04-06T18:38:55.046487+00:00",
     "pipeline_version": "1.0"
   }
 }

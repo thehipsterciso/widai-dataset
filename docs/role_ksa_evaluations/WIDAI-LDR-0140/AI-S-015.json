@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "exec_excluded",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "AI/ML Engineering is a primary or secondary domain for the Data and AI Transformation Lead. This skill KSA is within scope for the role's expected competency profile and seniority level (senior specialist)."
+    "preliminary_decision": "exclude",
+    "rationale": "This skill KSA describes execution-level work in AI/ML Engineering that is not expected of a Data and AI Transformation Lead (senior specialist tier). The role is responsible for overseeing and directing this work, not performing it directly. Excluded on execution-seniority grounds."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No internal inconsistency identified. Domain scope (AI/ML Engineering), seniority fit, and signal level are internally consistent with inclusion."
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Framework signal is weak (composite 0.407). External validation of this skill KSA for the Data and AI Transformation Lead role relies primarily on domain-level alignment rather than specific framework matches.",
-    "evidence": "O*NET, DCWF, and ML engineering job market data confirm AI/ML competencies for technical data leadership roles.",
-    "ruling": "Upheld: domain-level relevance of AI/ML Engineering for the Data and AI Transformation Lead is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+    "challenge": "Could this execution-level skill KSA be expected of a Data and AI Transformation Lead in real-world practice?",
+    "evidence": "Compensation benchmarks and leadership effectiveness research confirm that senior specialist-tier roles direct and oversee execution work in AI/ML Engineering rather than performing it. Role scope analysis supports exclusion.",
+    "ruling": "Upheld: execution-level skill KSA in AI/ML Engineering is appropriately excluded for a non-execution senior specialist role. Exclusion maintained."
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "medium",
-  "decision_rationale": "AI/ML Engineering skill KSA is within scope for the Data and AI Transformation Lead at the senior specialist tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "decision_rationale": "Execution-level skill KSA in AI/ML Engineering is outside the expected competency scope for a Data and AI Transformation Lead (senior specialist tier). The role oversees this work; it does not perform it directly.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:40.899169+00:00",
+    "evaluated_at": "2026-04-06T18:38:55.051634+00:00",
     "pipeline_version": "1.0"
   }
 }

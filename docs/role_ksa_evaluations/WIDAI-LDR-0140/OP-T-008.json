@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "exec_excluded",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "Operations & Program Management is a primary or secondary domain for the Data and AI Transformation Lead. This task KSA is within scope for the role's expected competency profile and seniority level (senior specialist)."
+    "preliminary_decision": "exclude",
+    "rationale": "This task KSA describes execution-level work in Operations & Program Management that is not expected of a Data and AI Transformation Lead (senior specialist tier). The role is responsible for overseeing and directing this work, not performing it directly. Excluded on execution-seniority grounds."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No internal inconsistency identified. Domain scope (Operations & Program Management), seniority fit, and signal level are internally consistent with inclusion."
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Pass 1 signal is moderate (composite 0.456). External reviewers may question whether this specific task KSA is sufficiently distinctive for the Data and AI Transformation Lead versus adjacent roles.",
-    "evidence": "PMI, TOGAF operational frameworks, and CDO survey data (NewVantage Partners) confirm operational program management as a key competency for data leaders.",
-    "ruling": "Upheld: moderate framework signal is consistent with Operations & Program Management appearing in job postings and role definition literature for Data and AI Transformation Lead."
+    "challenge": "Could this execution-level task KSA be expected of a Data and AI Transformation Lead in real-world practice?",
+    "evidence": "Compensation benchmarks and leadership effectiveness research confirm that senior specialist-tier roles direct and oversee execution work in Operations & Program Management rather than performing it. Role scope analysis supports exclusion.",
+    "ruling": "Upheld: execution-level task KSA in Operations & Program Management is appropriately excluded for a non-execution senior specialist role. Exclusion maintained."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "Operations & Program Management task KSA is within scope for the Data and AI Transformation Lead at the senior specialist tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Execution-level task KSA in Operations & Program Management is outside the expected competency scope for a Data and AI Transformation Lead (senior specialist tier). The role oversees this work; it does not perform it directly.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:40.836559+00:00",
+    "evaluated_at": "2026-04-06T18:38:54.982157+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0141",
+  "role_name": "Data and AI Research Scientist",
+  "ksa_id": "AI-K-023",
+  "ksa_text": "Knowledge of experimental design for ML research, including ablation study design, statistical significance in ML evaluation, benchmark construction, and reproducibility standards.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.40405730568525133,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40405730568525133,
+        "cross_encoder_sts": 0.4275536253776435,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34140045317220546,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.37061831955922864,
+        "cross_encoder_sts": 0.4165439393939394,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24815,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-014",
+        "top_element_label": "Applying user-centred insights"
+      },
+      "eu_ai_act": {
+        "composite": 0.3996267045454545,
+        "cross_encoder_sts": 0.41695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35343125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-027",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.39852622175512353,
+        "cross_encoder_sts": 0.4241234104046243,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3302670520231214,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38186019656019654,
+        "cross_encoder_sts": 0.41474594594594594,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2941648648648649,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.35819469696969697,
+        "cross_encoder_sts": 0.40845833333333337,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22415833333333335,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.40405730568525133
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-027",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.3996267045454545
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39852622175512353
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-6.2",
+        "element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "score": 0.38186019656019654
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-014",
+        "element_label": "Applying user-centred insights",
+        "score": 0.37061831955922864
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "AI/ML Engineering is a primary or secondary domain for the Data and AI Research Scientist. This knowledge KSA is within scope for the role's expected competency profile and seniority level (senior specialist)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (AI/ML Engineering), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.404). External validation of this knowledge KSA for the Data and AI Research Scientist role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "O*NET, DCWF, and ML engineering job market data confirm AI/ML competencies for technical data leadership roles.",
+    "ruling": "Upheld: domain-level relevance of AI/ML Engineering for the Data and AI Research Scientist is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "AI/ML Engineering knowledge KSA is within scope for the Data and AI Research Scientist at the senior specialist tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:18.857814+00:00",
+    "pipeline_version": "1.0"
+  }
+}

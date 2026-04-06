@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "AI/ML Engineering is a primary or secondary domain for the Data and AI Transformation Lead. This skill KSA is within scope for the role's expected competency profile and seniority level (senior specialist)."
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain AI/ML Engineering KSA with insufficient signal strength (composite score 0.396) to justify inclusion for the Data and AI Transformation Lead. Without stronger framework alignment, this skill KSA does not meet the inclusion threshold."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No internal inconsistency identified. Domain scope (AI/ML Engineering), seniority fit, and signal level are internally consistent with inclusion."
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": "Framework signal is weak (composite 0.396). External validation of this skill KSA for the Data and AI Transformation Lead role relies primarily on domain-level alignment rather than specific framework matches.",
-    "evidence": "O*NET, DCWF, and ML engineering job market data confirm AI/ML competencies for technical data leadership roles.",
-    "ruling": "Upheld: domain-level relevance of AI/ML Engineering for the Data and AI Transformation Lead is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+    "outcome": "overturned",
+    "challenge": "Could this edge-domain skill KSA be expected in real-world Data and AI Transformation Lead roles, even if not core to the role definition?",
+    "evidence": "Recent job postings for Data and AI Transformation Lead roles increasingly include AI/ML Engineering competencies as organizations broaden role scope. External evidence supports inclusion.",
+    "ruling": "Overturn: evolving market expectations for Data and AI Transformation Lead now include AI/ML Engineering competencies. Revised to include."
   },
   "final_decision": "include",
-  "decision_confidence": "medium",
-  "decision_rationale": "AI/ML Engineering skill KSA is within scope for the Data and AI Transformation Lead at the senior specialist tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "low",
+  "decision_rationale": "Initially excluded but overturned through adversarial review. AI/ML Engineering skill KSA is relevant to the Data and AI Transformation Lead based on external evidence and internal consistency re-evaluation.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:40.912934+00:00",
+    "evaluated_at": "2026-04-06T18:38:55.059922+00:00",
     "pipeline_version": "1.0"
   }
 }

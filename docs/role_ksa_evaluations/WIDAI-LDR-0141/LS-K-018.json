@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0141",
+  "role_name": "Data and AI Research Scientist",
+  "ksa_id": "LS-K-018",
+  "ksa_text": "Knowledge of building and managing diverse AI risk management teams, including cross-disciplinary expertise requirements, stakeholder engagement strategies, inclusion of domain experts, and team composition principles.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Leadership & Strategy falls outside the primary competency scope of the Data and AI Research Scientist. This knowledge KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Leadership & Strategy truly out-of-scope for the Data and AI Research Scientist? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Leadership & Strategy as a core or recommended competency for the Data and AI Research Scientist. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Leadership & Strategy falls outside the established competency profile for the Data and AI Research Scientist. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Leadership & Strategy is outside the competency scope of the Data and AI Research Scientist. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:18.908608+00:00",
+    "pipeline_version": "1.0"
+  }
+}

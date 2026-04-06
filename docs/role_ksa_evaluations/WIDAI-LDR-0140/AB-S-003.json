@@ -125,27 +125,27 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "Although Applied Analytics & BI is an edge domain for the Data and AI Transformation Lead, this skill KSA presents sufficient signal (composite score 0.417) and conceptual alignment to include at the senior specialist level."
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Applied Analytics & BI KSA with insufficient signal strength (composite score 0.417) to justify inclusion for the Data and AI Transformation Lead. Without stronger framework alignment, this skill KSA does not meet the inclusion threshold."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No internal inconsistency identified. Domain scope (Applied Analytics & BI), seniority fit, and signal level are internally consistent with inclusion."
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Framework signal is weak (composite 0.417). External validation of this skill KSA for the Data and AI Transformation Lead role relies primarily on domain-level alignment rather than specific framework matches.",
-    "evidence": "Gartner analytics maturity model and BI leadership surveys confirm applied analytics and BI competencies for analytics leadership.",
-    "ruling": "Upheld: domain-level relevance of Applied Analytics & BI for the Data and AI Transformation Lead is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+    "challenge": "Could this edge-domain skill KSA be expected in real-world Data and AI Transformation Lead roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Applied Analytics & BI is not a standard competency expectation for Data and AI Transformation Lead. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Data and AI Transformation Lead competency profile. Exclusion maintained."
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "low",
-  "decision_rationale": "Edge-domain Applied Analytics & BI skill KSA cleared adversarial review with score 0.417. Included based on sufficient framework alignment and role relevance for the Data and AI Transformation Lead.",
+  "decision_rationale": "Insufficient signal (score 0.417) and edge-domain placement (Applied Analytics & BI) do not meet inclusion threshold for the Data and AI Transformation Lead. All passes support exclusion.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:40.883063+00:00",
+    "evaluated_at": "2026-04-06T18:38:55.039191+00:00",
     "pipeline_version": "1.0"
   }
 }
