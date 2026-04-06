@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0122",
+  "role_name": "AI Governance Professional (IAPP)",
+  "ksa_id": "OP-T-011",
+  "ksa_text": "Manage data service level agreements and operational commitments with internal consumers, including SLA definition, performance measurement, monitoring program execution, breach reporting, and service improvement planning.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.42365936639118457,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3908770877378436,
+        "cross_encoder_sts": 0.4195308139534884,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31446715116279067,
+        "jaccard": null,
+        "top_element_id": "1120",
+        "top_element_label": "Ability to interpret and incorporate data from multiple tool sources."
+      },
+      "ddat": {
+        "composite": 0.42365936639118457,
+        "cross_encoder_sts": 0.4520060606060606,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34806818181818183,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.37888863636363634,
+        "cross_encoder_sts": 0.397175,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.330125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3711779061102832,
+        "cross_encoder_sts": 0.4127422131147541,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26033975409836063,
+        "jaccard": null,
+        "top_element_id": "S0045",
+        "top_element_label": "Skill in optimizing database performance"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3511818181818182,
+        "cross_encoder_sts": 0.37588,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28532,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3665809917355372,
+        "cross_encoder_sts": 0.4003818181818182,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27644545454545455,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.42365936639118457
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1120",
+        "element_label": "Ability to interpret and incorporate data from multiple tool sources.",
+        "score": 0.3908770877378436
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.37888863636363634
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0045",
+        "element_label": "Skill in optimizing database performance",
+        "score": 0.3711779061102832
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.3665809917355372
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Operations & Program Management domain has low AI Governance Professional (IAPP) affinity (0.25), and the text \u2014 'Manage data service level agreements and operational commitments with internal consumers, including ...' \u2014 describes competencies outside the AI Governance Professional (IAPP) practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4237)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Governance Professional (IAPP).",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Operations & Program Management domain has low AI Governance Professional (IAPP) affinity (0.25), and the text \u2014 'Manage data service level agreements and operational commitments with internal consumers, including ...' \u2014 describes competencies outside the AI Governance Professional (IAPP) practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4237).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:36.080728+00:00",
+    "pipeline_version": "1.0"
+  }
+}

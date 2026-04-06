@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0121",
+  "role_name": "HIPAA Privacy and Security Officer",
+  "ksa_id": "LS-T-007",
+  "ksa_text": "Manage the data and AI investment portfolio, including initiative prioritization, funding allocation, performance tracking against value hypotheses, portfolio rebalancing based on realized outcomes, and resource allocation decisions.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.42744848484848486,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40028913043478265,
+        "cross_encoder_sts": 0.4344899456521739,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3090869565217391,
+        "jaccard": null,
+        "top_element_id": "5874",
+        "top_element_label": "Develop a data management strategy that helps to prioritize investments and resource allocations (e.g., data analytics, data infrastructure)."
+      },
+      "ddat": {
+        "composite": 0.40876151515151515,
+        "cross_encoder_sts": 0.4586383333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2757566666666667,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4239612440191388,
+        "cross_encoder_sts": 0.4187421052631579,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.43787894736842103,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3834937287311619,
+        "cross_encoder_sts": 0.4340588235294118,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24865347593582887,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.42744848484848486,
+        "cross_encoder_sts": 0.4234291666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.43816666666666665,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36583863636363634,
+        "cross_encoder_sts": 0.4004375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.273575,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.42744848484848486
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4239612440191388
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.40876151515151515
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5874",
+        "element_label": "Develop a data management strategy that helps to prioritize investments and resource allocations (e.g., data analytics, data infrastructure).",
+        "score": 0.40028913043478265
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0655",
+        "element_label": "Knowledge of intelligence fusion",
+        "score": 0.3834937287311619
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Leadership & Strategy domain has low HIPAA Privacy and Security Officer affinity (0.35), and the text \u2014 'Manage the data and AI investment portfolio, including initiative prioritization, funding allocation...' \u2014 describes competencies outside the HIPAA Privacy and Security Officer practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4274)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working HIPAA Privacy and Security Officer.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Leadership & Strategy domain has low HIPAA Privacy and Security Officer affinity (0.35), and the text \u2014 'Manage the data and AI investment portfolio, including initiative prioritization, funding allocation...' \u2014 describes competencies outside the HIPAA Privacy and Security Officer practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4274).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:35.466657+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0120",
+  "role_name": "Data Security Administrator",
+  "ksa_id": "AI-T-001",
+  "ksa_text": "Design, train, evaluate, and document machine learning models, including feature engineering decisions, algorithm selection rationale, and evaluation results against baseline.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4298311294765841,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39165336048879834,
+        "cross_encoder_sts": 0.43884134419551935,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26581873727087574,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.36982792207792203,
+        "cross_encoder_sts": 0.4378017857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1885642857142857,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.42894038054968286,
+        "cross_encoder_sts": 0.4804604651162791,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.291553488372093,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-041",
+        "top_element_label": "Obligations for providers of general-purpose AI models"
+      },
+      "nice": {
+        "composite": 0.3731619861030689,
+        "cross_encoder_sts": 0.4296828025477707,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22243980891719747,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4298311294765841,
+        "cross_encoder_sts": 0.4804257575757576,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2949121212121212,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.41737363636363634,
+        "cross_encoder_sts": 0.46917,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27925,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4298311294765841
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-041",
+        "element_label": "Obligations for providers of general-purpose AI models",
+        "score": 0.42894038054968286
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.41737363636363634
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.39165336048879834
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3731619861030689
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: task from AI & ML Infrastructure (affinity 0.45); insufficient RSK signal density (1 signal(s)) for AI & ML Infrastructure affinity 0.45. STRM composite is moderate (0.4298). A Data Security Administrator would be adjacent to but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working Data Security Administrator.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: task from AI & ML Infrastructure (affinity 0.45); insufficient RSK signal density (1 signal(s)) for AI & ML Infrastructure affinity 0.45. STRM composite is moderate (0.4298). A Data Security Administrator would be adjacent to but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:34.854016+00:00",
+    "pipeline_version": "1.0"
+  }
+}

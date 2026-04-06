@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0120",
+  "role_name": "Data Security Administrator",
+  "ksa_id": "SP-A-004",
+  "ksa_text": "Ability to assess, evaluate, and monitor compliance with organizational and regulatory privacy requirements across systems, services, and business agreements.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4266099343955013,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3973251931075461,
+        "cross_encoder_sts": 0.42312875816993467,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32851568627450983,
+        "jaccard": null,
+        "top_element_id": "5886",
+        "top_element_label": "Facilitate cross-sharing of best practices for data usage."
+      },
+      "ddat": {
+        "composite": 0.4266099343955013,
+        "cross_encoder_sts": 0.4583030927835051,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34209484536082474,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.38940419580419583,
+        "cross_encoder_sts": 0.4167692307692308,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31643076923076924,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3876347238967929,
+        "cross_encoder_sts": 0.418185676392573,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3061655172413793,
+        "jaccard": null,
+        "top_element_id": "S0097",
+        "top_element_label": "Skill in applying security controls"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3973631016042781,
+        "cross_encoder_sts": 0.4353676470588235,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29601764705882355,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3916272727272727,
+        "cross_encoder_sts": 0.4308625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.287,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.4266099343955013
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3973631016042781
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5886",
+        "element_label": "Facilitate cross-sharing of best practices for data usage.",
+        "score": 0.3973251931075461
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.7",
+        "element_label": "Category Flexibility",
+        "score": 0.3916272727272727
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.38940419580419583
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Security & Privacy domain has low Data Security Administrator affinity (0.85), and the text \u2014 'Ability to assess, evaluate, and monitor compliance with organizational and regulatory privacy requi...' \u2014 describes competencies outside the Data Security Administrator practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4266)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working Data Security Administrator.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low Data Security Administrator affinity (0.85), and the text \u2014 'Ability to assess, evaluate, and monitor compliance with organizational and regulatory privacy requi...' \u2014 describes competencies outside the Data Security Administrator practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4266).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:34.869139+00:00",
+    "pipeline_version": "1.0"
+  }
+}
