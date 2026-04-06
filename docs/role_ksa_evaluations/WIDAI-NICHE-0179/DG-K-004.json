@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0179",
+  "role_name": "Clinical AI Specialist",
+  "ksa_id": "DG-K-004",
+  "ksa_text": "Knowledge of data catalog and metadata management platforms, including active metadata principles, automated lineage tracking, and business glossary governance.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.422387839433294,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41016142857142857,
+        "cross_encoder_sts": 0.44026673469387756,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32988061224489795,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.4068097496706192,
+        "cross_encoder_sts": 0.4338057971014493,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33482028985507245,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.38787392344497607,
+        "cross_encoder_sts": 0.4238236842105263,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2920078947368421,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.422387839433294,
+        "cross_encoder_sts": 0.46171055194805194,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3175272727272727,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38192094155844153,
+        "cross_encoder_sts": 0.4307464285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2517196428571428,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4009118181818182,
+        "cross_encoder_sts": 0.42948000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32473,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.422387839433294
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.41016142857142857
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4068097496706192
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.a",
+        "element_label": "Administration and Management",
+        "score": 0.4009118181818182
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.38787392344497607
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-K-004 (Data Governance/Knowledge) scores 0.422 composite (highest: NICE at 0.422). Scope is edge_case for Clinical AI Specialist: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Data Governance, composite 0.422. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Data Governance for Clinical AI Specialist at this seniority?",
+    "evidence": "Data Governance appears in ~40% of Clinical AI Specialist postings as a secondary competency. Healthcare data governance appears as supporting competency in senior clinical AI profiles. Zero role-specific signals insufficient for inclusion.",
+    "ruling": "Revised to exclude. Data Governance without role signals not market-supported. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Data Governance without role signals not market-supported. Final decision: exclude.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:38.435507Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0053",
+  "role_name": "AI Engineer",
+  "ksa_id": "RC-T-013",
+  "ksa_text": "Manage consent lifecycle across organizational systems, including collection configuration, preference storage, withdrawal processing, re-consent campaign execution, and audit record maintenance.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.40860012453300126,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3938877534336167,
+        "cross_encoder_sts": 0.4327843525179856,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2901634892086331,
+        "jaccard": null,
+        "top_element_id": "1061A",
+        "top_element_label": "Knowledge of the acquisition/procurement life cycle process."
+      },
+      "ddat": {
+        "composite": 0.40860012453300126,
+        "cross_encoder_sts": 0.45404246575342466,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2874205479452055,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-017",
+        "top_element_label": "Asset and configuration management"
+      },
+      "eu_ai_act": {
+        "composite": 0.39189878787878785,
+        "cross_encoder_sts": 0.4416533333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25922,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.38470098164746047,
+        "cross_encoder_sts": 0.432125117370892,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25823661971830986,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.362975,
+        "cross_encoder_sts": 0.4165142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22020357142857144,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3853681818181818,
+        "cross_encoder_sts": 0.43434999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25475,
+        "jaccard": null,
+        "top_element_id": "2.B.1.b",
+        "top_element_label": "Coordination"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-017",
+        "element_label": "Asset and configuration management",
+        "score": 0.40860012453300126
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1061A",
+        "element_label": "Knowledge of the acquisition/procurement life cycle process.",
+        "score": 0.3938877534336167
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.39189878787878785
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.b",
+        "element_label": "Coordination",
+        "score": 0.3853681818181818
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.38470098164746047
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-T-013 (Risk and Compliance/Task) is excluded as out_of_scope (composite 0.409, highest: DDaT at 0.409). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk and Compliance at this signal level does not meet inclusion threshold for AI Engineer."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.409, and Risk and Compliance (RC) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk and Compliance KSA (composite 0.409)?",
+    "evidence": "Market analysis does not surface this Risk and Compliance competency as a standard AI Engineer requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RC-T-013 (Risk and Compliance/Task) is excluded as out_of_scope (composite 0.409, highest: DDaT at 0.409). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk and Compliance at this signal level does not meet inclusion threshold for AI Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:03.473665+00:00",
+    "pipeline_version": "1.0"
+  }
+}

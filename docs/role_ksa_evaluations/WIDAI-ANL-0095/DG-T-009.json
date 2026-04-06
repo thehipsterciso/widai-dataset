@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0095",
+  "role_name": "Geospatial Data Analyst",
+  "ksa_id": "DG-T-009",
+  "ksa_text": "Manage the enterprise data stewardship network, including steward onboarding, role clarity, tools access, accountability assignment, and regular steward community engagement.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4286552906110283,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39834726390114744,
+        "cross_encoder_sts": 0.4230929611650486,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3323587378640777,
+        "jaccard": null,
+        "top_element_id": "1073",
+        "top_element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+      },
+      "ddat": {
+        "composite": 0.4286552906110283,
+        "cross_encoder_sts": 0.4572540983606557,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3523918032786885,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3802563636363636,
+        "cross_encoder_sts": 0.3995,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32894,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.38624539270253555,
+        "cross_encoder_sts": 0.41946190476190476,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2976680272108843,
+        "jaccard": null,
+        "top_element_id": "K0849",
+        "top_element_label": "Knowledge of network systems management tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.37641363636363634,
+        "cross_encoder_sts": 0.39423125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3289,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.4",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.35932909090909093,
+        "cross_encoder_sts": 0.38808,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28266,
+        "jaccard": null,
+        "top_element_id": "2.B.1.f",
+        "top_element_label": "Service Orientation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4286552906110283
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1073",
+        "element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools.",
+        "score": 0.39834726390114744
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0849",
+        "element_label": "Knowledge of network systems management tools and techniques",
+        "score": 0.38624539270253555
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.3802563636363636
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.4",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.37641363636363634
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DG-T-009 (DG, Task) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4287 is insufficient to establish relevance to geospatial data analysis, GIS, and location intelligence at IC-to-senior-IC level. Framework signals (ddat=0.429, dcwf=0.398, nice=0.386) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4287 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DG-domain KSA DG-T-009 (composite 0.4287) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4287 for DG domain does not meet the evidentiary bar for ANL IC-level inclusion per DAMA DMBOK governance competencies; governance awareness at practitioner level appears in O*NET 15-2051 expanded skill sets. External sources confirm this competency is not a standard expectation for Geospatial Data Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DG domain KSA at composite 0.4287 is not a standard requirement for Geospatial Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4287, domain DG, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.931489+00:00",
+    "pipeline_version": "1.0"
+  }
+}

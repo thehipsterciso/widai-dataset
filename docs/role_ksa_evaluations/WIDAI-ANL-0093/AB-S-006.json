@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0093",
+  "role_name": "Health Informatics Specialist",
+  "ksa_id": "AB-S-006",
+  "ksa_text": "Skill in creating and validating statistical models for business applications, including regression analysis, model specification, assumption checking, parameter estimation, and performance evaluation against business criteria.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4014269746646796,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3922556027904949,
+        "cross_encoder_sts": 0.4372484412470024,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27227470023980815,
+        "jaccard": null,
+        "top_element_id": "4237",
+        "top_element_label": "Ability to develop dashboards to better visualize data"
+      },
+      "ddat": {
+        "composite": 0.3970927770859278,
+        "cross_encoder_sts": 0.444172602739726,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27154657534246573,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.3828585227272727,
+        "cross_encoder_sts": 0.44346875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22123125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3883300626304802,
+        "cross_encoder_sts": 0.4366620041753654,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.259444885177453,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4014269746646796,
+        "cross_encoder_sts": 0.4668918032786885,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22685409836065576,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38566363636363643,
+        "cross_encoder_sts": 0.4259478260869566,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2782391304347826,
+        "jaccard": null,
+        "top_element_id": "1.A.1.a.3",
+        "top_element_label": "Oral Expression"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4014269746646796
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.3970927770859278
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "4237",
+        "element_label": "Ability to develop dashboards to better visualize data",
+        "score": 0.3922556027904949
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3883300626304802
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.a.3",
+        "element_label": "Oral Expression",
+        "score": 0.38566363636363643
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-S-006 (AB, Skill) maps to Health Informatics Specialist scope as strong fit. Composite score 0.4014 clears the strong fit threshold of 0.35. Top framework anchors: nist_ai_rmf=0.401, ddat=0.397, dcwf=0.392. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within health informatics, clinical data analysis, and healthcare BI."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4014 for strong fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AB-S-006 (AB, composite 0.4014) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4014 with signal across nist_ai_rmf=0.401, ddat=0.397, dcwf=0.392 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AB-domain frameworks confirms KSA relevance to Health Informatics Specialist at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4014, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.607617+00:00",
+    "pipeline_version": "1.0"
+  }
+}

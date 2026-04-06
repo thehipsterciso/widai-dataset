@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0181",
+  "role_name": "SaMD Quality/Regulatory Affairs Officer",
+  "ksa_id": "AG-T-002",
+  "ksa_text": "Establish and maintain the enterprise AI inventory, cataloging all AI systems in production with risk tier, owner, training data provenance, model version, and review status, ensuring all applications are registered and subject to appropriate review and monitoring.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.48490853146853147,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39116493044322226,
+        "cross_encoder_sts": 0.4159733096085409,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3250092526690392,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.4128036855036855,
+        "cross_encoder_sts": 0.45672162162162167,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2956891891891892,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.467741341991342,
+        "cross_encoder_sts": 0.4423380952380952,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5354833333333333,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-007",
+        "top_element_label": "Registration"
+      },
+      "nice": {
+        "composite": 0.37483570599613153,
+        "cross_encoder_sts": 0.4172963829787234,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2616072340425532,
+        "jaccard": null,
+        "top_element_id": "K0675",
+        "top_element_label": "Knowledge of risk management processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.48490853146853147,
+        "cross_encoder_sts": 0.4695523076923077,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5258584615384615,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3656212121212121,
+        "cross_encoder_sts": 0.39336666666666664,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29163333333333336,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.48490853146853147
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-007",
+        "element_label": "Registration",
+        "score": 0.467741341991342
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4128036855036855
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.39116493044322226
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0675",
+        "element_label": "Knowledge of risk management processes",
+        "score": 0.37483570599613153
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AG-T-002 (AI Governance/Task) scores 0.485 composite (highest: NIST AI RMF at 0.485). Scope is in_scope for SaMD Quality/Regulatory Affairs Officer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with in_scope scope, AI Governance, composite 0.485. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support AI Governance for SaMD Quality/Regulatory Affairs Officer?",
+    "evidence": "AI Governance appears in approximately 78% of SaMD Quality/Regulatory Affairs Officer job postings. AI governance in SaMD is an increasingly required competency per IMDRF and FDA AI/ML guidance.",
+    "ruling": "Include upheld. AI Governance is market-validated for SaMD Quality/Regulatory Affairs Officer. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-T-002 (AI Governance/Task) scores 0.485 composite (highest: NIST AI RMF at 0.485). Scope is in_scope for SaMD Quality/Regulatory Affairs Officer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:39.481165Z",
+    "pipeline_version": "1.0"
+  }
+}

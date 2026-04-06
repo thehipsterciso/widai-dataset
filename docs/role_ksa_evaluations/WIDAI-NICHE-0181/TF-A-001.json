@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0181",
+  "role_name": "SaMD Quality/Regulatory Affairs Officer",
+  "ksa_id": "TF-A-001",
+  "ksa_text": "Ability to evaluate network infrastructure, system architectures, and platform capabilities, analyzing vulnerabilities and performance characteristics across interconnected systems.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.4664571146245059,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.43457873331654495,
+        "cross_encoder_sts": 0.4462891966759003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4033508310249307,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.42668500000000004,
+        "cross_encoder_sts": 0.45737,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3448583333333334,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4664571146245059,
+        "cross_encoder_sts": 0.45816086956521734,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.48858043478260865,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4087963322884013,
+        "cross_encoder_sts": 0.42899724137931033,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35492724137931037,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4622026825633383,
+        "cross_encoder_sts": 0.45001803278688524,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4946950819672131,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.41293529411764707,
+        "cross_encoder_sts": 0.42968235294117646,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3682764705882353,
+        "jaccard": null,
+        "top_element_id": "2.C.3.a",
+        "top_element_label": "Computers and Electronics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4664571146245059
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4622026825633383
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.43457873331654495
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.42668500000000004
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.a",
+        "element_label": "Computers and Electronics",
+        "score": 0.41293529411764707
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-A-001 (Technology Fundamentals/Ability) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.466. Highest framework: EU AI Act at 0.466."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, Technology Fundamentals, composite 0.466. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Technology Fundamentals (composite 0.466)?",
+    "evidence": "Technology Fundamentals at ~18% market presence. Pure technical fundamentals are below SaMD QRA officer scope; engineers handle implementation. Exclusion consistent with role-level scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA TF-A-001 (Technology Fundamentals/Ability) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.466. Highest framework: EU AI Act at 0.466.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:39.490634Z",
+    "pipeline_version": "1.0"
+  }
+}

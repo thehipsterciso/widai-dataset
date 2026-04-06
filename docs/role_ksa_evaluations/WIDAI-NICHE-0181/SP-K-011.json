@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0181",
+  "role_name": "SaMD Quality/Regulatory Affairs Officer",
+  "ksa_id": "SP-K-011",
+  "ksa_text": "Knowledge of training data integrity risks and mitigation, including data poisoning attack vectors, supply chain contamination, label manipulation, detection methodologies, and prevention controls for AI model training pipelines.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4275221189164371,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41763143843498274,
+        "cross_encoder_sts": 0.4451351898734177,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34428810126582277,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.4131673114119923,
+        "cross_encoder_sts": 0.46379361702127664,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27816382978723403,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4183527972027972,
+        "cross_encoder_sts": 0.4327076923076923,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3800730769230769,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-016",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.4275221189164371,
+        "cross_encoder_sts": 0.46558737373737374,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32601477272727275,
+        "jaccard": null,
+        "top_element_id": "K1031",
+        "top_element_label": "Knowledge of risk mitigation tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4223433155080214,
+        "cross_encoder_sts": 0.4441647058823529,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36415294117647057,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.2",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.38836363636363636,
+        "cross_encoder_sts": 0.44028,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24992,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K1031",
+        "element_label": "Knowledge of risk mitigation tools and techniques",
+        "score": 0.4275221189164371
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.2",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.4223433155080214
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-016",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.4183527972027972
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.41763143843498274
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4131673114119923
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA SP-K-011 (Security & Privacy/Knowledge) scores 0.428 composite (highest: NICE at 0.428). Scope is edge_case for SaMD Quality/Regulatory Affairs Officer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Security & Privacy, composite 0.428. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Security & Privacy for SaMD Quality/Regulatory Affairs Officer?",
+    "evidence": "Security & Privacy appears in approximately 55% of SaMD Quality/Regulatory Affairs Officer job postings. Medical device cybersecurity and HIPAA/PHI handling appear in 50-60% of SaMD QRA postings.",
+    "ruling": "Include upheld. Security & Privacy is market-validated for SaMD Quality/Regulatory Affairs Officer. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA SP-K-011 (Security & Privacy/Knowledge) scores 0.428 composite (highest: NICE at 0.428). Scope is edge_case for SaMD Quality/Regulatory Affairs Officer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:39.552210Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0179",
+  "role_name": "Clinical AI Specialist",
+  "ksa_id": "DA-A-002",
+  "ksa_text": "Ability to document and communicate architecture rationale, design decisions, and constraints to both technical and non-technical stakeholders with clarity and precision.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4367575757575758,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41514010695187165,
+        "cross_encoder_sts": 0.44829823529411766,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.326718431372549,
+        "jaccard": null,
+        "top_element_id": "1003",
+        "top_element_label": "Develop and document supply chain risks for critical system elements, as appropriate."
+      },
+      "ddat": {
+        "composite": 0.4151305785123967,
+        "cross_encoder_sts": 0.46488181818181823,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.282460606060606,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4367575757575758,
+        "cross_encoder_sts": 0.4742916666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33666666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4145704859656473,
+        "cross_encoder_sts": 0.45882972350230417,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29654585253456217,
+        "jaccard": null,
+        "top_element_id": "K0725",
+        "top_element_label": "Knowledge of incident response tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40432828282828287,
+        "cross_encoder_sts": 0.43517222222222224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32207777777777774,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.39363051948051947,
+        "cross_encoder_sts": 0.42395,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3127785714285714,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.3",
+        "top_element_label": "Problem Sensitivity"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.4367575757575758
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1003",
+        "element_label": "Develop and document supply chain risks for critical system elements, as appropriate.",
+        "score": 0.41514010695187165
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4151305785123967
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0725",
+        "element_label": "Knowledge of incident response tools and techniques",
+        "score": 0.4145704859656473
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-6.2",
+        "element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "score": 0.40432828282828287
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-A-002 (Data Architecture/Ability) scores 0.437 composite (highest: EU AI Act at 0.437). Scope is edge_case for Clinical AI Specialist: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Data Architecture, composite 0.437. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Data Architecture for Clinical AI Specialist at this seniority?",
+    "evidence": "Data Architecture appears in ~35% of Clinical AI Specialist postings as a secondary competency. Clinical data architecture (FHIR/HL7) relevant for integration-focused roles. Zero role-specific signals insufficient for inclusion.",
+    "ruling": "Revised to exclude. Data Architecture without role signals not market-supported. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Data Architecture without role signals not market-supported. Final decision: exclude.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:38.364872Z",
+    "pipeline_version": "1.0"
+  }
+}

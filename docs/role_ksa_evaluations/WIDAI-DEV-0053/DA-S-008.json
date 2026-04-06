@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0053",
+  "role_name": "AI Engineer",
+  "ksa_id": "DA-S-008",
+  "ksa_text": "Skill in implementing data platform cost management practices, including resource tagging, usage monitoring, cost allocation, and rightsizing recommendations.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4268850439882698,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40315366265965435,
+        "cross_encoder_sts": 0.4316456611570248,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.327175,
+        "jaccard": null,
+        "top_element_id": "107",
+        "top_element_label": "Knowledge of resource management principles and techniques."
+      },
+      "ddat": {
+        "composite": 0.4268850439882698,
+        "cross_encoder_sts": 0.45077903225806454,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3631677419354839,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-013",
+        "top_element_label": "Applying statistical and analytical tools and techniques"
+      },
+      "eu_ai_act": {
+        "composite": 0.37952386363636365,
+        "cross_encoder_sts": 0.40329375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3161375,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4089670170454546,
+        "cross_encoder_sts": 0.44095000000000006,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3236790625,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.382479020979021,
+        "cross_encoder_sts": 0.4307653846153846,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2537153846153846,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.370712987012987,
+        "cross_encoder_sts": 0.4025285714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2858714285714286,
+        "jaccard": null,
+        "top_element_id": "2.B.4.e",
+        "top_element_label": "Judgment and Decision Making"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-013",
+        "element_label": "Applying statistical and analytical tools and techniques",
+        "score": 0.4268850439882698
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.4089670170454546
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "107",
+        "element_label": "Knowledge of resource management principles and techniques.",
+        "score": 0.40315366265965435
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.382479020979021
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.37952386363636365
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-S-008 (Data Architecture/Skill) scores 0.427 composite (highest: DDaT at 0.427) and is edge_case for the AI Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, DDaT signal (0.427), and Data Architecture handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this DA KSA reflect AI Engineer requirements?",
+    "evidence": "Data architecture for AI (vector DBs, knowledge bases) appears in 40-60% of AI Engineer postings.",
+    "ruling": "Include upheld. Data architecture for AI (vector DBs, knowledge bases) appears in 40-60% of AI Engineer postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DA-S-008 (Data Architecture/Skill) scores 0.427 composite (highest: DDaT at 0.427) and is edge_case for the AI Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:03.438048+00:00",
+    "pipeline_version": "1.0"
+  }
+}

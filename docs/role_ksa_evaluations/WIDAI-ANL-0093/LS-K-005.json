@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0093",
+  "role_name": "Health Informatics Specialist",
+  "ksa_id": "LS-K-005",
+  "ksa_text": "Knowledge of innovation program design, including ideation methods, prototype development approaches, value hypothesis construction, and stage-gate evaluation criteria.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.41124565567176186,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40840395157606213,
+        "cross_encoder_sts": 0.43229623115577887,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34469120603015074,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.4038191222570533,
+        "cross_encoder_sts": 0.43873103448275863,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3107206896551724,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.37509545454545457,
+        "cross_encoder_sts": 0.4062,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29215,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-014",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.41124565567176186,
+        "cross_encoder_sts": 0.440620796460177,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33291194690265485,
+        "jaccard": null,
+        "top_element_id": "K0068",
+        "top_element_label": "Knowledge of programming language structures and logic"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.37639854545454543,
+        "cross_encoder_sts": 0.401616,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.309152,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.1",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.37033409090909086,
+        "cross_encoder_sts": 0.3885625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.321725,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0068",
+        "element_label": "Knowledge of programming language structures and logic",
+        "score": 0.41124565567176186
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
+        "score": 0.40840395157606213
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.4038191222570533
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-1.1",
+        "element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",
+        "score": 0.37639854545454543
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-014",
+        "element_label": "Human oversight",
+        "score": 0.37509545454545457
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-K-005 (LS, Knowledge) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4112 is insufficient to establish relevance to health informatics, clinical data analysis, and healthcare BI at IC-to-senior-IC level. Framework signals (nice=0.411, dcwf=0.408, ddat=0.404) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4112 below threshold for weak fit domain. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does LS-domain KSA LS-K-005 (composite 0.4112) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4112 for LS domain does not meet the evidentiary bar for ANL IC-level inclusion per Leadership competencies in IC-to-senior-IC analytics roles are limited to peer influence and technical mentorship, not organizational strategy. External sources confirm this competency is not a standard expectation for Health Informatics Specialist at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms LS domain KSA at composite 0.4112 is not a standard requirement for Health Informatics Specialist at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4112, domain LS, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.599322+00:00",
+    "pipeline_version": "1.0"
+  }
+}

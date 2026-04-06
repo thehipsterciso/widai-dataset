@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0066",
+  "role_name": "Data Quality Manager",
+  "ksa_id": "TF-T-002",
+  "ksa_text": "Design and implement automated testing frameworks and test automation infrastructure for data and AI systems including test case generation, test execution, and result analysis.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.4166460815047022,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40361581027667986,
+        "cross_encoder_sts": 0.41378043478260873,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3765101449275362,
+        "jaccard": null,
+        "top_element_id": "1120",
+        "top_element_label": "Ability to interpret and incorporate data from multiple tool sources."
+      },
+      "ddat": {
+        "composite": 0.4166460815047022,
+        "cross_encoder_sts": 0.47405517241379314,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2635551724137931,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.3375818181818182,
+        "cross_encoder_sts": 0.3621,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2722,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-028",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.3924781201848998,
+        "cross_encoder_sts": 0.4053864406779661,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3580559322033898,
+        "jaccard": null,
+        "top_element_id": "K0705",
+        "top_element_label": "Knowledge of database query language capabilities and applications"
+      },
+      "onet": {
+        "composite": 0.3843,
+        "cross_encoder_sts": 0.4059,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3267,
+        "jaccard": null,
+        "top_element_id": "1.A.1.d.1",
+        "top_element_label": "Memorization"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4166460815047022
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1120",
+        "element_label": "Ability to interpret and incorporate data from multiple tool sources.",
+        "score": 0.40361581027667986
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0705",
+        "element_label": "Knowledge of database query language capabilities and applications",
+        "score": 0.3924781201848998
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.d.1",
+        "element_label": "Memorization",
+        "score": 0.3843
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-028",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.3375818181818182
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "nist_ai_rmf"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-T-002 (Technical Foundations/Task) excluded as edge_case (composite 0.417, highest: DDaT at 0.417). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data quality framework management, DQ metrics/profiling/monitoring, quality rules, remediation oversight, and cross-functional quality standards at a manager level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.417, and Technical Foundations (TF) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Technical Foundations KSA (composite 0.417)?",
+    "evidence": "Market analysis of Data Quality Manager job postings does not surface this Technical Foundations competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA TF-T-002 (Technical Foundations/Task) excluded as edge_case (composite 0.417, highest: DDaT at 0.417). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data quality framework management, DQ metrics/profiling/monitoring, quality rules, remediation oversight, and cross-functional quality standards at a manager level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:44.419817+00:00",
+    "pipeline_version": "1.0"
+  }
+}

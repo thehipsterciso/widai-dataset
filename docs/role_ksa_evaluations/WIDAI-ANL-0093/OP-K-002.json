@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0093",
+  "role_name": "Health Informatics Specialist",
+  "ksa_id": "OP-K-002",
+  "ksa_text": "Knowledge of data and AI program risk types, including technical risk, data availability risk, model performance risk, adoption risk, and regulatory compliance risk.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.4655540308747856,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41164271775345074,
+        "cross_encoder_sts": 0.4170931937172775,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39710811518324607,
+        "jaccard": null,
+        "top_element_id": "1021",
+        "top_element_label": "Knowledge of risk threat assessment."
+      },
+      "ddat": {
+        "composite": 0.3996751420454545,
+        "cross_encoder_sts": 0.4304796875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3175296875,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4655540308747856,
+        "cross_encoder_sts": 0.4488415094339622,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5101207547169812,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41788903896103896,
+        "cross_encoder_sts": 0.42575714285714283,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3969074285714286,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.46491529581529584,
+        "cross_encoder_sts": 0.45441746031746033,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4929095238095238,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3856581818181819,
+        "cross_encoder_sts": 0.40122,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34416,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4655540308747856
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.46491529581529584
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.41788903896103896
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1021",
+        "element_label": "Knowledge of risk threat assessment.",
+        "score": 0.41164271775345074
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.3996751420454545
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA OP-K-002 (OP, Knowledge) maps to Health Informatics Specialist scope as moderate fit. Composite score 0.4656 clears the moderate fit threshold of 0.43. Top framework anchors: eu_ai_act=0.466, nist_ai_rmf=0.465, nice=0.418. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within health informatics, clinical data analysis, and healthcare BI."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4656 for moderate fit domain is consistent with ANL IC-level scope. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "External validation: does KSA OP-K-002 (OP, composite 0.4656) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "Survey of DDAT Senior Data Analyst and Lead Analyst profiles; operational workflow competencies documented in IC-to-senior-IC analytics roles does not surface this OP-domain content as a core or common requirement for IC-to-senior-IC data analyst roles. Score 0.4656 may reflect incidental framework overlap. Without direct analytics-domain text confirmation, external ground truth does not support inclusion at this signal level.",
+    "ruling": "P3 include overturned. Insufficient external evidence for OP domain content at composite 0.4656 without confirming text signals. Revised to exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P4 external ground truth. Final decision: exclude. Composite 0.4656, domain OP. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.543063+00:00",
+    "pipeline_version": "1.0"
+  }
+}

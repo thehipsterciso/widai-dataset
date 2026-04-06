@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0095",
+  "role_name": "Geospatial Data Analyst",
+  "ksa_id": "DG-K-005",
+  "ksa_text": "Knowledge of data maturity assessment frameworks, including DCAM, DAMA DMBOK, and CMMI-DMM, and how maturity scores translate to organizational investment priorities.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.41142597402597403,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3843613190730838,
+        "cross_encoder_sts": 0.40845,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3201248366013072,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.41142597402597403,
+        "cross_encoder_sts": 0.4305285714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36048571428571424,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.37283030303030307,
+        "cross_encoder_sts": 0.3871,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3347777777777778,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-046",
+        "top_element_label": "Obligations of providers of GPAI models with systemic risk"
+      },
+      "nice": {
+        "composite": 0.3984366610025489,
+        "cross_encoder_sts": 0.4250443925233645,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32748271028037385,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3708536363636364,
+        "cross_encoder_sts": 0.40105,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29033,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3724545454545454,
+        "cross_encoder_sts": 0.4075,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.279,
+        "jaccard": null,
+        "top_element_id": "2.C.1.e",
+        "top_element_label": "Customer and Personal Service"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.41142597402597403
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.3984366610025489
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.3843613190730838
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-046",
+        "element_label": "Obligations of providers of GPAI models with systemic risk",
+        "score": 0.37283030303030307
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.e",
+        "element_label": "Customer and Personal Service",
+        "score": 0.3724545454545454
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DG-K-005 (DG, Knowledge) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4114 is insufficient to establish relevance to geospatial data analysis, GIS, and location intelligence at IC-to-senior-IC level. Framework signals (ddat=0.411, nice=0.398, dcwf=0.384) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4114 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DG-domain KSA DG-K-005 (composite 0.4114) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4114 for DG domain does not meet the evidentiary bar for ANL IC-level inclusion per DAMA DMBOK governance competencies; governance awareness at practitioner level appears in O*NET 15-2051 expanded skill sets. External sources confirm this competency is not a standard expectation for Geospatial Data Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DG domain KSA at composite 0.4114 is not a standard requirement for Geospatial Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4114, domain DG, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.952271+00:00",
+    "pipeline_version": "1.0"
+  }
+}

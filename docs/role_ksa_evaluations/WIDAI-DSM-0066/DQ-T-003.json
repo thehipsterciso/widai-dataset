@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0066",
+  "role_name": "Data Quality Manager",
+  "ksa_id": "DQ-T-003",
+  "ksa_text": "Continuously monitor data systems and operations, detect anomalies, assess data quality characteristics, and react to triggered events.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4146811912225705,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4021158817086528,
+        "cross_encoder_sts": 0.4329373493975904,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31992530120481927,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4146811912225705,
+        "cross_encoder_sts": 0.4578275862068965,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2996241379310345,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-004",
+        "top_element_label": "Agile research practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.39022454545454544,
+        "cross_encoder_sts": 0.44075,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25549,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3992538502673797,
+        "cross_encoder_sts": 0.4359064705882353,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30151352941176474,
+        "jaccard": null,
+        "top_element_id": "K0809",
+        "top_element_label": "Knowledge of digital forensics data characteristics"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3728101398601399,
+        "cross_encoder_sts": 0.42447307692307695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23504230769230766,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.1",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.39477727272727275,
+        "cross_encoder_sts": 0.43320000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29231666666666667,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-004",
+        "element_label": "Agile research practices",
+        "score": 0.4146811912225705
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.4021158817086528
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0809",
+        "element_label": "Knowledge of digital forensics data characteristics",
+        "score": 0.3992538502673797
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.e.1",
+        "element_label": "Speed of Closure",
+        "score": 0.39477727272727275
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.39022454545454544
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-T-003 (Data Quality/Task) scores 0.415 composite (highest: DDaT at 0.415) and is in_scope for the Data Quality Manager role. Domain prior: in_scope. Core signal hits: 1. OOS hits: 0. Seniority is appropriate for manager-level Data Quality Manager."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with in_scope scope, DDaT signal (0.415), and Data Quality handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does DDaT signal (0.415) for this Data Quality KSA reflect actual Data Quality Manager requirements?",
+    "evidence": "Data Quality appears in 50-80% of Data Quality Manager job postings. KSA content aligns with hiring criteria at manager level.",
+    "ruling": "Include upheld. Data Quality at composite 0.415 is market-validated for Data Quality Manager. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA DQ-T-003 (Data Quality/Task) scores 0.415 composite (highest: DDaT at 0.415) and is in_scope for the Data Quality Manager role. Domain prior: in_scope. Core signal hits: 1. OOS hits: 0. Seniority is appropriate for manager-level Data Quality Manager.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:44.425722+00:00",
+    "pipeline_version": "1.0"
+  }
+}

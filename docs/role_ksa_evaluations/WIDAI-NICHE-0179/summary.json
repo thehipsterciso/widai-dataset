@@ -1,0 +1,95 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0179",
+  "role_name": "Clinical AI Specialist",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:16:38.714303Z",
+  "total_ksas": 1069,
+  "included": 319,
+  "excluded": 750,
+  "inclusion_rate": 0.2984,
+  "adversarial_overturns": {
+    "pass_3": 2,
+    "pass_4": 81,
+    "total_ksas_affected": 83
+  },
+  "calibration": {
+    "min": 100,
+    "max": 185,
+    "status": "WARNING"
+  },
+  "domain_summary": {
+    "AG": {
+      "include": 37,
+      "exclude": 70,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 42,
+      "exclude": 32,
+      "total": 74,
+      "label": "Risk & Compliance"
+    },
+    "RM": {
+      "include": 15,
+      "exclude": 86,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 0,
+      "exclude": 89,
+      "total": 89,
+      "label": "Leadership & Strategy"
+    },
+    "TF": {
+      "include": 39,
+      "exclude": 48,
+      "total": 87,
+      "label": "Technology Fundamentals"
+    },
+    "AI": {
+      "include": 71,
+      "exclude": 32,
+      "total": 103,
+      "label": "AI & ML"
+    },
+    "DG": {
+      "include": 17,
+      "exclude": 75,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "OP": {
+      "include": 0,
+      "exclude": 69,
+      "total": 69,
+      "label": "Operations & Program Management"
+    },
+    "SP": {
+      "include": 31,
+      "exclude": 53,
+      "total": 84,
+      "label": "Security & Privacy"
+    },
+    "DA": {
+      "include": 12,
+      "exclude": 81,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 51,
+      "exclude": 31,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "AB": {
+      "include": 4,
+      "exclude": 84,
+      "total": 88,
+      "label": "Core Abilities"
+    }
+  }
+}

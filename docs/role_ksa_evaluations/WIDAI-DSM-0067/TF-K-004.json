@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0067",
+  "role_name": "Master Data Manager",
+  "ksa_id": "TF-K-004",
+  "ksa_text": "Knowledge of NoSQL database categories and their use cases, including document stores, key-value stores, wide-column stores, graph databases, and vector databases, with understanding of when each is preferred over relational alternatives.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.3825707317073171,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3767033656484361,
+        "cross_encoder_sts": 0.4133692152917505,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2789277665995976,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.3825707317073171,
+        "cross_encoder_sts": 0.4406536585365854,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2276829268292683,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.31318787878787885,
+        "cross_encoder_sts": 0.37743333333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.14186666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3747711774230858,
+        "cross_encoder_sts": 0.4190506361323155,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25669262086513994,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.34338008658008656,
+        "cross_encoder_sts": 0.40847619047619044,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.16979047619047619,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-1.1",
+        "top_element_label": "Context is established and understood."
+      },
+      "onet": {
+        "composite": 0.33430227272727275,
+        "cross_encoder_sts": 0.3775875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21887500000000001,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.3825707317073171
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.3767033656484361
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3747711774230858
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-1.1",
+        "element_label": "Context is established and understood.",
+        "score": 0.34338008658008656
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.33430227272727275
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-K-004 (Technical Foundations/Knowledge) excluded as edge_case (composite 0.383, highest: DDaT at 0.383). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Master data management: MDM platforms, golden records, entity resolution, data matching/merging, reference data management, and master data governance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.383, and Technical Foundations (TF) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Technical Foundations KSA (composite 0.383)?",
+    "evidence": "Market analysis of Master Data Manager job postings does not surface this Technical Foundations competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA TF-K-004 (Technical Foundations/Knowledge) excluded as edge_case (composite 0.383, highest: DDaT at 0.383). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Master data management: MDM platforms, golden records, entity resolution, data matching/merging, reference data management, and master data governance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:08.484702+00:00",
+    "pipeline_version": "1.0"
+  }
+}

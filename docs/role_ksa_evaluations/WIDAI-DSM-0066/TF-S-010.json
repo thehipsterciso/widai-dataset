@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0066",
+  "role_name": "Data Quality Manager",
+  "ksa_id": "TF-S-010",
+  "ksa_text": "Skill in analyzing and optimizing SQL query execution plans, identifying performance bottlenecks, and implementing indexing, partitioning, and query restructuring strategies to improve data retrieval performance.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.37796699332777317,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.37708958527252046,
+        "cross_encoder_sts": 0.4359381114903299,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22016018202502846,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.37317703962703963,
+        "cross_encoder_sts": 0.43619871794871795,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20511923076923078,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.34927818181818177,
+        "cross_encoder_sts": 0.41868999999999995,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.16418,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.37796699332777317,
+        "cross_encoder_sts": 0.4440716743119266,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20168784403669726,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3352710437710438,
+        "cross_encoder_sts": 0.4129185185185185,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1282111111111111,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3574744318181818,
+        "cross_encoder_sts": 0.419075,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19320625,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.37796699332777317
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.37708958527252046
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.37317703962703963
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.3574744318181818
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.34927818181818177
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-S-010 (Technical Foundations/Skill) excluded as edge_case (composite 0.378, highest: NICE at 0.378). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data quality framework management, DQ metrics/profiling/monitoring, quality rules, remediation oversight, and cross-functional quality standards at a manager level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.378, and Technical Foundations (TF) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Technical Foundations KSA (composite 0.378)?",
+    "evidence": "Market analysis of Data Quality Manager job postings does not surface this Technical Foundations competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA TF-S-010 (Technical Foundations/Skill) excluded as edge_case (composite 0.378, highest: NICE at 0.378). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data quality framework management, DQ metrics/profiling/monitoring, quality rules, remediation oversight, and cross-functional quality standards at a manager level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:44.468115+00:00",
+    "pipeline_version": "1.0"
+  }
+}

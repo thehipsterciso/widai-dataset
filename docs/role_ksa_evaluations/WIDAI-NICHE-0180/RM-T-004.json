@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0180",
+  "role_name": "Algorithmic Trading Engineer",
+  "ksa_id": "RM-T-004",
+  "ksa_text": "Execute AI system testing activities including functional testing, integration testing, automated testing, and acceptance testing to validate system performance.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5221202597402598,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4172154584360005,
+        "cross_encoder_sts": 0.43052054208273893,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3817352353780314,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.40951325757575757,
+        "cross_encoder_sts": 0.4448666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3152375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-020",
+        "top_element_label": "Business architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.5093907550077041,
+        "cross_encoder_sts": 0.4878152542372881,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5669254237288135,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4093771147771148,
+        "cross_encoder_sts": 0.429638223938224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35534749034749036,
+        "jaccard": null,
+        "top_element_id": "K1007",
+        "top_element_label": "Knowledge of intelligence requirements tasking systems and software"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5221202597402598,
+        "cross_encoder_sts": 0.5098642857142858,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5548028571428572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4059727272727272,
+        "cross_encoder_sts": 0.4245571428571428,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3564142857142857,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5221202597402598
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.5093907550077041
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.4172154584360005
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-020",
+        "element_label": "Business architecture",
+        "score": 0.40951325757575757
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1007",
+        "element_label": "Knowledge of intelligence requirements tasking systems and software",
+        "score": 0.4093771147771148
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RM-T-004 (Risk Management/Task) scores 0.522 composite (highest: NIST AI RMF at 0.522). Scope is edge_case for Algorithmic Trading Engineer: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Risk Management, composite 0.522. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Risk Management for Algorithmic Trading Engineer at this seniority?",
+    "evidence": "Risk Management appears in ~45% of Algorithmic Trading Engineer postings as a secondary competency. Risk modeling (VaR, drawdown, stress) appears in senior ATE profiles. Zero role-specific signals insufficient for inclusion.",
+    "ruling": "Revised to exclude. Risk Management without role signals not market-supported. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Risk Management without role signals not market-supported. Final decision: exclude.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:38.787767Z",
+    "pipeline_version": "1.0"
+  }
+}

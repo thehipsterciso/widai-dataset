@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0095",
+  "role_name": "Geospatial Data Analyst",
+  "ksa_id": "LS-S-008",
+  "ksa_text": "Skill in developing enterprise data and AI strategies that connect organizational business objectives to data capabilities, AI initiatives, governance requirements, and measurable value outcomes.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.5539346753246753,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4307726559968898,
+        "cross_encoder_sts": 0.4653491090520314,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3385687811831789,
+        "jaccard": null,
+        "top_element_id": "5872",
+        "top_element_label": "Design, develop, and implement AI tools and techniques to achieve organizational objectives."
+      },
+      "ddat": {
+        "composite": 0.4618330434782609,
+        "cross_encoder_sts": 0.4982086956521739,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36483130434782607,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.5235577922077922,
+        "cross_encoder_sts": 0.5292714285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5083214285714286,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4186077348066298,
+        "cross_encoder_sts": 0.4635560220994475,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.298745635359116,
+        "jaccard": null,
+        "top_element_id": "S0669",
+        "top_element_label": "Skill in integrating technology processes and solutions"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5539346753246753,
+        "cross_encoder_sts": 0.5659514285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.52189,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3874440191387559,
+        "cross_encoder_sts": 0.41639473684210526,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3102421052631579,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5539346753246753
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.5235577922077922
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.4618330434782609
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5872",
+        "element_label": "Design, develop, and implement AI tools and techniques to achieve organizational objectives.",
+        "score": 0.4307726559968898
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0669",
+        "element_label": "Skill in integrating technology processes and solutions",
+        "score": 0.4186077348066298
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA LS-S-008 (LS, Skill) maps to Geospatial Data Analyst scope as weak fit. Composite score 0.5539 clears the weak fit threshold of 0.52. Top framework anchors: nist_ai_rmf=0.554, eu_ai_act=0.524, ddat=0.462. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within geospatial data analysis, GIS, and location intelligence."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "weak fit domain KSA LS-S-008 with composite 0.5539 was preliminarily included, but the KSA text contains no direct analytics-domain signals. Internal consistency requires this to be re-examined against ANL scope.",
+    "rebuttal": "Composite 0.5539 above the weak_fit threshold of 0.52 but absence of analytics terminology in the LS domain text means the signal is framework-incidental rather than role-specific. Exclusion is more internally consistent with ANL scope definition.",
+    "ruling": "P2 include overturned. LS domain KSA with no analytics text signals at composite 0.5539 does not survive internal consistency review. Revised to exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does LS-domain KSA LS-S-008 (composite 0.5539) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.5539 for LS domain does not meet the evidentiary bar for ANL IC-level inclusion per Leadership competencies in IC-to-senior-IC analytics roles are limited to peer influence and technical mentorship, not organizational strategy. External sources confirm this competency is not a standard expectation for Geospatial Data Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms LS domain KSA at composite 0.5539 is not a standard requirement for Geospatial Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: exclude. Composite 0.5539, domain LS. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.892160+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0053",
+  "role_name": "AI Engineer",
+  "ksa_id": "AB-K-006",
+  "ksa_text": "Knowledge of data visualization tools and techniques, including chart type selection, visual encoding principles, cognitive load management, accessibility requirements, and the distinction between exploratory and explanatory visualization.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4158622098646034,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4158622098646034,
+        "cross_encoder_sts": 0.43018749999999994,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37766143617021275,
+        "jaccard": null,
+        "top_element_id": "1005",
+        "top_element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
+      },
+      "ddat": {
+        "composite": 0.39171450676982594,
+        "cross_encoder_sts": 0.4164404255319149,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32577872340425534,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-056",
+        "top_element_label": "Data integration design"
+      },
+      "eu_ai_act": {
+        "composite": 0.3888559228650138,
+        "cross_encoder_sts": 0.41490303030303033,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31939696969696973,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40957300538849295,
+        "cross_encoder_sts": 0.4322059273422562,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34921854684512427,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38366136363636366,
+        "cross_encoder_sts": 0.413675,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.303625,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38255324675324676,
+        "cross_encoder_sts": 0.39481428571428573,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3498571428571428,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1005",
+        "element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes).",
+        "score": 0.4158622098646034
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.40957300538849295
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-056",
+        "element_label": "Data integration design",
+        "score": 0.39171450676982594
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.3888559228650138
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38366136363636366
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AB-K-006 (Core Abilities/Knowledge) is excluded as edge_case (composite 0.416, highest: DCWF at 0.416). Core signal: 0, OOS signals: 0, seniority: appropriate. Core Abilities at this signal level does not meet inclusion threshold for AI Engineer."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.416, and Core Abilities (AB) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Core Abilities KSA (composite 0.416)?",
+    "evidence": "Market analysis does not surface this Core Abilities competency as a standard AI Engineer requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AB-K-006 (Core Abilities/Knowledge) is excluded as edge_case (composite 0.416, highest: DCWF at 0.416). Core signal: 0, OOS signals: 0, seniority: appropriate. Core Abilities at this signal level does not meet inclusion threshold for AI Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:03.462224+00:00",
+    "pipeline_version": "1.0"
+  }
+}

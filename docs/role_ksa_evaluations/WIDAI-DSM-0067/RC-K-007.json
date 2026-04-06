@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0067",
+  "role_name": "Master Data Manager",
+  "ksa_id": "RC-K-007",
+  "ksa_text": "Knowledge of international data transfer mechanisms under applicable regulations, including adequacy decisions, Standard Contractual Clauses, Binding Corporate Rules, Transfer Impact Assessments, and supplementary safeguards requirements.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4196651353965184,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3994375186289121,
+        "cross_encoder_sts": 0.4137069672131148,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3613856557377049,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.41047301136363634,
+        "cross_encoder_sts": 0.429603125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.359459375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.40787878787878784,
+        "cross_encoder_sts": 0.3939333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.44506666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-019",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.4196651353965184,
+        "cross_encoder_sts": 0.44026010638297874,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3647452127659575,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40191818181818184,
+        "cross_encoder_sts": 0.4131,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3721,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40226103896103893,
+        "cross_encoder_sts": 0.42188571428571425,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3499285714285714,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4196651353965184
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.41047301136363634
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-019",
+        "element_label": "Quality management system",
+        "score": 0.40787878787878784
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.40226103896103893
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.40191818181818184
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-K-007 (Risk and Compliance/Knowledge) excluded as edge_case (composite 0.420, highest: NICE at 0.420). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Master data management: MDM platforms, golden records, entity resolution, data matching/merging, reference data management, and master data governance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.420, and Risk and Compliance (RC) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk and Compliance KSA (composite 0.420)?",
+    "evidence": "Market analysis of Master Data Manager job postings does not surface this Risk and Compliance competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA RC-K-007 (Risk and Compliance/Knowledge) excluded as edge_case (composite 0.420, highest: NICE at 0.420). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Master data management: MDM platforms, golden records, entity resolution, data matching/merging, reference data management, and master data governance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:08.421883+00:00",
+    "pipeline_version": "1.0"
+  }
+}

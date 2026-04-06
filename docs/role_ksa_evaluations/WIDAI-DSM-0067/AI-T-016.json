@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0067",
+  "role_name": "Master Data Manager",
+  "ksa_id": "AI-T-016",
+  "ksa_text": "Design and execute research projects that advance organizational AI capability, including hypothesis formulation, experimental design, execution, and findings documentation.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4170082644628099,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39546508481036785,
+        "cross_encoder_sts": 0.4410205450733753,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27398385744234804,
+        "jaccard": null,
+        "top_element_id": "1006",
+        "top_element_label": "Create auditable evidence of security measures."
+      },
+      "ddat": {
+        "composite": 0.4126714946070878,
+        "cross_encoder_sts": 0.464364406779661,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2748237288135593,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-132",
+        "top_element_label": "Programming and build (data and analytics engineering)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4170082644628099,
+        "cross_encoder_sts": 0.4419863636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3504,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-010",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.3724293577981651,
+        "cross_encoder_sts": 0.4227288990825688,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23829724770642202,
+        "jaccard": null,
+        "top_element_id": "K1071",
+        "top_element_label": "Knowledge of continuous monitoring processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41275611285266456,
+        "cross_encoder_sts": 0.44391379310344825,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32966896551724134,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3812858585858586,
+        "cross_encoder_sts": 0.43062222222222224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24972222222222223,
+        "jaccard": null,
+        "top_element_id": "2.A.2.c",
+        "top_element_label": "Learning Strategies"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-010",
+        "element_label": "Record-keeping",
+        "score": 0.4170082644628099
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41275611285266456
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-132",
+        "element_label": "Programming and build (data and analytics engineering)",
+        "score": 0.4126714946070878
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1006",
+        "element_label": "Create auditable evidence of security measures.",
+        "score": 0.39546508481036785
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.c",
+        "element_label": "Learning Strategies",
+        "score": 0.3812858585858586
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-T-016 (AI and Machine Learning/Task) excluded as edge_case (composite 0.417, highest: EU AI Act at 0.417). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Master data management: MDM platforms, golden records, entity resolution, data matching/merging, reference data management, and master data governance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.417, and AI and Machine Learning (AI) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.417)?",
+    "evidence": "Market analysis of Master Data Manager job postings does not surface this AI and Machine Learning competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AI-T-016 (AI and Machine Learning/Task) excluded as edge_case (composite 0.417, highest: EU AI Act at 0.417). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Master data management: MDM platforms, golden records, entity resolution, data matching/merging, reference data management, and master data governance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:08.429379+00:00",
+    "pipeline_version": "1.0"
+  }
+}

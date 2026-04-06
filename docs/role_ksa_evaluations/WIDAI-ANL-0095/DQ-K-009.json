@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0095",
+  "role_name": "Geospatial Data Analyst",
+  "ksa_id": "DQ-K-009",
+  "ksa_text": "Knowledge of entity resolution methods, including deterministic matching rules, probabilistic matching, machine learning-based matching, and the precision-recall trade-offs and identity management implications of each approach.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.40539077176599836,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38352168206125425,
+        "cross_encoder_sts": 0.40839411764705885,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3171951871657754,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.39607891414141416,
+        "cross_encoder_sts": 0.4351861111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29179305555555557,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3569313131313131,
+        "cross_encoder_sts": 0.38865555555555553,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2723333333333333,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.40539077176599836,
+        "cross_encoder_sts": 0.4258996978851964,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35070030211480363,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35305482093663915,
+        "cross_encoder_sts": 0.4024606060606061,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2213060606060606,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-3.2",
+        "top_element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle."
+      },
+      "onet": {
+        "composite": 0.3604064171122995,
+        "cross_encoder_sts": 0.3994529411764706,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25628235294117646,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.40539077176599836
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.39607891414141416
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.38352168206125425
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.b",
+        "element_label": "Active Learning",
+        "score": 0.3604064171122995
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.3569313131313131
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-K-009 (DQ, Knowledge) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4054 is insufficient to establish relevance to geospatial data analysis, GIS, and location intelligence at IC-to-senior-IC level. Framework signals (nice=0.405, ddat=0.396, dcwf=0.384) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4054 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DQ-domain KSA DQ-K-009 (composite 0.4054) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4054 for DQ domain does not meet the evidentiary bar for ANL IC-level inclusion per DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles. External sources confirm this competency is not a standard expectation for Geospatial Data Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DQ domain KSA at composite 0.4054 is not a standard requirement for Geospatial Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4054, domain DQ, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.959153+00:00",
+    "pipeline_version": "1.0"
+  }
+}

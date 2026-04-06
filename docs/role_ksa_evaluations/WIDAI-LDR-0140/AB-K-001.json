@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0140",
+  "role_name": "Data and AI Transformation Lead",
+  "ksa_id": "AB-K-001",
+  "ksa_text": "Knowledge of statistical foundations, including descriptive statistics, inferential statistics, probability theory, distributions, hypothesis testing, confidence intervals, and the distinction between statistical significance and practical significance.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4073425619834711,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39573722943722944,
+        "cross_encoder_sts": 0.4223202380952381,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32484920634920633,
+        "jaccard": null,
+        "top_element_id": "108",
+        "top_element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+      },
+      "ddat": {
+        "composite": 0.4073425619834711,
+        "cross_encoder_sts": 0.4484090909090909,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2978318181818182,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.36435757575757577,
+        "cross_encoder_sts": 0.40926666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2446,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-007",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4022744588744589,
+        "cross_encoder_sts": 0.44176190476190474,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29697460317460317,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3344828282828283,
+        "cross_encoder_sts": 0.38482222222222223,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20024444444444445,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.4",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.4071818181818182,
+        "cross_encoder_sts": 0.4238571428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3627142857142857,
+        "jaccard": null,
+        "top_element_id": "2.C.4.a",
+        "top_element_label": "Mathematics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4073425619834711
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.4.a",
+        "element_label": "Mathematics",
+        "score": 0.4071818181818182
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4022744588744589
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "108",
+        "element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk).",
+        "score": 0.39573722943722944
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-007",
+        "element_label": "Data and data governance",
+        "score": 0.36435757575757577
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Although Applied Analytics & BI is an edge domain for the Data and AI Transformation Lead, this knowledge KSA presents sufficient signal (composite score 0.407) and conceptual alignment to include at the senior specialist level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Applied Analytics & BI), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.407). External validation of this knowledge KSA for the Data and AI Transformation Lead role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "Gartner analytics maturity model and BI leadership surveys confirm applied analytics and BI competencies for analytics leadership.",
+    "ruling": "Upheld: domain-level relevance of Applied Analytics & BI for the Data and AI Transformation Lead is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "low",
+  "decision_rationale": "Edge-domain Applied Analytics & BI knowledge KSA cleared adversarial review with score 0.407. Included based on sufficient framework alignment and role relevance for the Data and AI Transformation Lead.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:40.898846+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0180",
+  "role_name": "Algorithmic Trading Engineer",
+  "ksa_id": "SP-T-001",
+  "ksa_text": "Develop and maintain comprehensive organizational privacy programs and policies that integrate privacy considerations across business operations, projects, and systems.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4623344696969697,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4300040139616056,
+        "cross_encoder_sts": 0.4435830715532286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39379319371727745,
+        "jaccard": null,
+        "top_element_id": "1006",
+        "top_element_label": "Create auditable evidence of security measures."
+      },
+      "ddat": {
+        "composite": 0.4015388714733542,
+        "cross_encoder_sts": 0.4407758620689655,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29690689655172414,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.45750419580419577,
+        "cross_encoder_sts": 0.4327153846153846,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5236076923076923,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.43621818181818184,
+        "cross_encoder_sts": 0.45276249999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3921,
+        "jaccard": null,
+        "top_element_id": "K1072",
+        "top_element_label": "Knowledge of automated security control testing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4623344696969697,
+        "cross_encoder_sts": 0.4537083333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4853375,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3589151515151515,
+        "cross_encoder_sts": 0.3697333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3300666666666667,
+        "jaccard": null,
+        "top_element_id": "4.A.1.a.2",
+        "top_element_label": "Monitoring Processes, Materials, or Surroundings"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4623344696969697
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.45750419580419577
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1072",
+        "element_label": "Knowledge of automated security control testing tools and techniques",
+        "score": 0.43621818181818184
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1006",
+        "element_label": "Create auditable evidence of security measures.",
+        "score": 0.4300040139616056
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4015388714733542
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA SP-T-001 (Security & Privacy/Task) scores 0.462 composite (highest: NIST AI RMF at 0.462). Scope is edge_case for Algorithmic Trading Engineer: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Security & Privacy, composite 0.462. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Security & Privacy for Algorithmic Trading Engineer at this seniority?",
+    "evidence": "Security & Privacy appears in ~40% of Algorithmic Trading Engineer postings as a secondary competency. Secure comms and access control relevant especially at hedge funds/banks. Zero role-specific signals insufficient for inclusion.",
+    "ruling": "Revised to exclude. Security & Privacy without role signals not market-supported. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Security & Privacy without role signals not market-supported. Final decision: exclude.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:38.826358Z",
+    "pipeline_version": "1.0"
+  }
+}

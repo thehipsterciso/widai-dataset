@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0053",
+  "role_name": "AI Engineer",
+  "ksa_id": "AB-S-005",
+  "ksa_text": "Skill in preprocessing, transforming, and normalizing data for analysis, including format conversion, data cleansing, joining disparate sources, handling missing values, and creating standard data representations.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.39960374800637954,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.396464935064935,
+        "cross_encoder_sts": 0.42746734693877547,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3137918367346939,
+        "jaccard": null,
+        "top_element_id": "1062",
+        "top_element_label": "Knowledge of software reverse engineering techniques."
+      },
+      "ddat": {
+        "composite": 0.39169520202020197,
+        "cross_encoder_sts": 0.43945277777777775,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26434166666666664,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-056",
+        "top_element_label": "Data integration design"
+      },
+      "eu_ai_act": {
+        "composite": 0.3798858585858586,
+        "cross_encoder_sts": 0.4175388888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27947777777777777,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-012",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.39960374800637954,
+        "cross_encoder_sts": 0.43339956140350877,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30948157894736844,
+        "jaccard": null,
+        "top_element_id": "K0176",
+        "top_element_label": "Knowledge of Extensible Markup Language (XML) schemas"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36724220779220773,
+        "cross_encoder_sts": 0.40954999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2544214285714286,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.37723636363636365,
+        "cross_encoder_sts": 0.41419999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2786666666666667,
+        "jaccard": null,
+        "top_element_id": "2.B.3.b",
+        "top_element_label": "Technology Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0176",
+        "element_label": "Knowledge of Extensible Markup Language (XML) schemas",
+        "score": 0.39960374800637954
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1062",
+        "element_label": "Knowledge of software reverse engineering techniques.",
+        "score": 0.396464935064935
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-056",
+        "element_label": "Data integration design",
+        "score": 0.39169520202020197
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-012",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.3798858585858586
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.b",
+        "element_label": "Technology Design",
+        "score": 0.37723636363636365
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AB-S-005 (Core Abilities/Skill) is excluded as edge_case (composite 0.400, highest: NICE at 0.400). Core signal: 0, OOS signals: 0, seniority: appropriate. Core Abilities at this signal level does not meet inclusion threshold for AI Engineer."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.400, and Core Abilities (AB) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Core Abilities KSA (composite 0.400)?",
+    "evidence": "Market analysis does not surface this Core Abilities competency as a standard AI Engineer requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AB-S-005 (Core Abilities/Skill) is excluded as edge_case (composite 0.400, highest: NICE at 0.400). Core signal: 0, OOS signals: 0, seniority: appropriate. Core Abilities at this signal level does not meet inclusion threshold for AI Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:03.484757+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0095",
+  "role_name": "Geospatial Data Analyst",
+  "ksa_id": "TF-K-001",
+  "ksa_text": "Knowledge of SQL for data querying and manipulation, including joins, aggregations, window functions, subqueries, and query optimization fundamentals.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.4073458230958231,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4047852363636364,
+        "cross_encoder_sts": 0.4203152,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36337200000000003,
+        "jaccard": null,
+        "top_element_id": "104",
+        "top_element_label": "Knowledge of query languages such as SQL (structured query language)."
+      },
+      "ddat": {
+        "composite": 0.3744585227272727,
+        "cross_encoder_sts": 0.4619375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.14118125,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "nice": {
+        "composite": 0.4073458230958231,
+        "cross_encoder_sts": 0.433427027027027,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.337795945945946,
+        "jaccard": null,
+        "top_element_id": "K0476",
+        "top_element_label": "Knowledge of language processing tools and techniques"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0476",
+        "element_label": "Knowledge of language processing tools and techniques",
+        "score": 0.4073458230958231
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "104",
+        "element_label": "Knowledge of query languages such as SQL (structured query language).",
+        "score": 0.4047852363636364
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.3744585227272727
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-K-001 (TF, Knowledge) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4073 is insufficient to establish relevance to geospatial data analysis, GIS, and location intelligence at IC-to-senior-IC level. Framework signals (nice=0.407, dcwf=0.405, ddat=0.374) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "TF domain KSA TF-K-001 excluded at composite 0.4073, but KSA text contains direct analytics-domain signals. Internal consistency: the presence of analytics terminology in a moderate fit KSA at score 0.4073 suggests the threshold is excluding genuinely relevant content.",
+    "rebuttal": "Composite 0.4073 with confirmed analytics-domain terminology for a TF (moderate fit) KSA indicates real role relevance for Geospatial Data Analyst. The 0.43 threshold is a calibration heuristic; text-signal confirmation overrides marginal score shortfall at this level.",
+    "ruling": "P2 exclude overturned. TF KSA with composite 0.4073 and confirmed analytics-domain text signals included on internal consistency grounds."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA TF-K-001 (TF, composite 0.4073) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 tools/technology section; DCWF technical foundations competencies for analytics work roles. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4073 with signal across nice=0.407, dcwf=0.405, ddat=0.374 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from TF-domain frameworks confirms KSA relevance to Geospatial Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: include. Composite 0.4073, domain TF. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.956927+00:00",
+    "pipeline_version": "1.0"
+  }
+}

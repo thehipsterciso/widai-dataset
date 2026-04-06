@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0053",
+  "role_name": "AI Engineer",
+  "ksa_id": "DQ-T-016",
+  "ksa_text": "Profile, assess, and evaluate data quality, completeness, consistency, and fitness for purpose against quality standards.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4704857142857143,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4193923614846692,
+        "cross_encoder_sts": 0.4278396449704142,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39686627218934917,
+        "jaccard": null,
+        "top_element_id": "2127",
+        "top_element_label": "Conduct quality control in order to determine validity and relevance of information gathered about networks."
+      },
+      "ddat": {
+        "composite": 0.4292285714285714,
+        "cross_encoder_sts": 0.4660714285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3309809523809524,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.40246363636363636,
+        "cross_encoder_sts": 0.4423875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.296,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4147919891989199,
+        "cross_encoder_sts": 0.4346257425742574,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36190198019801983,
+        "jaccard": null,
+        "top_element_id": "K1071",
+        "top_element_label": "Knowledge of continuous monitoring processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36843939393939396,
+        "cross_encoder_sts": 0.4025666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27743333333333337,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.4704857142857143,
+        "cross_encoder_sts": 0.48205714285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4396285714285714,
+        "jaccard": null,
+        "top_element_id": "2.B.2.i",
+        "top_element_label": "Complex Problem Solving"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.2.i",
+        "element_label": "Complex Problem Solving",
+        "score": 0.4704857142857143
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4292285714285714
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2127",
+        "element_label": "Conduct quality control in order to determine validity and relevance of information gathered about networks.",
+        "score": 0.4193923614846692
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1071",
+        "element_label": "Knowledge of continuous monitoring processes",
+        "score": 0.4147919891989199
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.40246363636363636
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-T-016 (Data Quality/Task) scores 0.470 composite (highest: O*NET at 0.470) and is edge_case for the AI Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, O*NET signal (0.470), and Data Quality handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this DQ KSA reflect AI Engineer requirements?",
+    "evidence": "Data quality for AI systems (eval datasets, ground truth, benchmark quality) appears in 30-50% of AI Eng postings.",
+    "ruling": "Include upheld. Data quality for AI systems (eval datasets, ground truth, benchmark quality) appears in 30-50% of AI Eng postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DQ-T-016 (Data Quality/Task) scores 0.470 composite (highest: O*NET at 0.470) and is edge_case for the AI Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:03.393452+00:00",
+    "pipeline_version": "1.0"
+  }
+}

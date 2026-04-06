@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0093",
+  "role_name": "Health Informatics Specialist",
+  "ksa_id": "DA-T-003",
+  "ksa_text": "Design, build, and maintain automated data ingestion pipelines from source systems to the data platform, including schema mapping, transformation logic, error handling, and data quality validation at ingestion points.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.42156889204545456,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3966488328445748,
+        "cross_encoder_sts": 0.4351743225806452,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2939141935483871,
+        "jaccard": null,
+        "top_element_id": "815",
+        "top_element_label": "Provide recommendations on new database technologies and architectures."
+      },
+      "ddat": {
+        "composite": 0.42156889204545456,
+        "cross_encoder_sts": 0.4677765625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2983484375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.3859109717868338,
+        "cross_encoder_sts": 0.4193896551724138,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29663448275862064,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-007",
+        "top_element_label": "Registration"
+      },
+      "nice": {
+        "composite": 0.3900312770562771,
+        "cross_encoder_sts": 0.4257104166666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29488690476190477,
+        "jaccard": null,
+        "top_element_id": "T1296",
+        "top_element_label": "Recommend data structures for use in the production of reports"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4082137291280148,
+        "cross_encoder_sts": 0.45107755102040814,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29391020408163265,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38532513368983956,
+        "cross_encoder_sts": 0.4310294117647059,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2634470588235294,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.42156889204545456
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4082137291280148
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "815",
+        "element_label": "Provide recommendations on new database technologies and architectures.",
+        "score": 0.3966488328445748
+      },
+      {
+        "framework": "nice",
+        "element_id": "T1296",
+        "element_label": "Recommend data structures for use in the production of reports",
+        "score": 0.3900312770562771
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-007",
+        "element_label": "Registration",
+        "score": 0.3859109717868338
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DA-T-003 (DA, Task) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4216 is insufficient to establish relevance to health informatics, clinical data analysis, and healthcare BI at IC-to-senior-IC level. Framework signals (ddat=0.422, nist_ai_rmf=0.408, dcwf=0.397) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4216 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DA-domain KSA DA-T-003 (composite 0.4216) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4216 for DA domain does not meet the evidentiary bar for ANL IC-level inclusion per DCWF 421 and DDAT Data Architect profiles; DA competencies at awareness level appear in senior IC data analyst role profiles. External sources confirm this competency is not a standard expectation for Health Informatics Specialist at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DA domain KSA at composite 0.4216 is not a standard requirement for Health Informatics Specialist at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4216, domain DA, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.587146+00:00",
+    "pipeline_version": "1.0"
+  }
+}

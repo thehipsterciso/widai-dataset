@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0095",
+  "role_name": "Geospatial Data Analyst",
+  "ksa_id": "AI-A-014",
+  "ksa_text": "Ability to design and reason about automated AI operations, anticipating failure modes in automated pipelines, planning for graceful degradation, and maintaining reliability in systems that operate without continuous human oversight.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-A-014 (AI, Ability) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.0000 is insufficient to establish relevance to geospatial data analysis, GIS, and location intelligence at IC-to-senior-IC level. Framework signals () do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.0000 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does AI-domain KSA AI-A-014 (composite 0.0000) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.0000 for AI domain does not meet the evidentiary bar for ANL IC-level inclusion per NIST AI RMF; EU AI Act practitioner obligations; AI-adjacent competencies appear in senior analytics IC roles at awareness level only. External sources confirm this competency is not a standard expectation for Geospatial Data Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms AI domain KSA at composite 0.0000 is not a standard requirement for Geospatial Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.0000, domain AI, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:59.003928+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0095",
+  "role_name": "Geospatial Data Analyst",
+  "ksa_id": "DQ-T-016",
+  "ksa_text": "Profile, assess, and evaluate data quality, completeness, consistency, and fitness for purpose against quality standards.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4704857142857143,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4193923614846692,
+        "cross_encoder_sts": 0.4278396449704142,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39686627218934917,
+        "jaccard": null,
+        "top_element_id": "2127",
+        "top_element_label": "Conduct quality control in order to determine validity and relevance of information gathered about networks."
+      },
+      "ddat": {
+        "composite": 0.4292285714285714,
+        "cross_encoder_sts": 0.4660714285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3309809523809524,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.40246363636363636,
+        "cross_encoder_sts": 0.4423875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.296,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4147919891989199,
+        "cross_encoder_sts": 0.4346257425742574,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36190198019801983,
+        "jaccard": null,
+        "top_element_id": "K1071",
+        "top_element_label": "Knowledge of continuous monitoring processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36843939393939396,
+        "cross_encoder_sts": 0.4025666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27743333333333337,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.4704857142857143,
+        "cross_encoder_sts": 0.48205714285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4396285714285714,
+        "jaccard": null,
+        "top_element_id": "2.B.2.i",
+        "top_element_label": "Complex Problem Solving"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.2.i",
+        "element_label": "Complex Problem Solving",
+        "score": 0.4704857142857143
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4292285714285714
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2127",
+        "element_label": "Conduct quality control in order to determine validity and relevance of information gathered about networks.",
+        "score": 0.4193923614846692
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1071",
+        "element_label": "Knowledge of continuous monitoring processes",
+        "score": 0.4147919891989199
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.40246363636363636
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-T-016 (DQ, Task) maps to Geospatial Data Analyst scope as moderate fit. Composite score 0.4705 clears the moderate fit threshold of 0.43. Top framework anchors: onet=0.470, ddat=0.429, dcwf=0.419. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within geospatial data analysis, GIS, and location intelligence."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4705 for moderate fit domain is consistent with ANL IC-level scope. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "External validation: does KSA DQ-T-016 (DQ, composite 0.4705) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "Survey of DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles does not surface this DQ-domain content as a core or common requirement for IC-to-senior-IC data analyst roles. Score 0.4705 may reflect incidental framework overlap. Without direct analytics-domain text confirmation, external ground truth does not support inclusion at this signal level.",
+    "ruling": "P3 include overturned. Insufficient external evidence for DQ domain content at composite 0.4705 without confirming text signals. Revised to exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P4 external ground truth. Final decision: exclude. Composite 0.4705, domain DQ. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:58.906611+00:00",
+    "pipeline_version": "1.0"
+  }
+}

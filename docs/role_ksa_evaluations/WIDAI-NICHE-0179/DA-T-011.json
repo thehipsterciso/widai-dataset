@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0179",
+  "role_name": "Clinical AI Specialist",
+  "ksa_id": "DA-T-011",
+  "ksa_text": "Execute data platform capacity planning, including workload characterization, growth forecasting, resource utilization analysis, and scaling recommendations that balance performance and cost.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4354674715909091,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41238510101010106,
+        "cross_encoder_sts": 0.4514798611111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30813240740740744,
+        "jaccard": null,
+        "top_element_id": "1071",
+        "top_element_label": "Knowledge of secure software deployment methodologies, tools, and practices."
+      },
+      "ddat": {
+        "composite": 0.4354674715909091,
+        "cross_encoder_sts": 0.4800515625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3165765625,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-132",
+        "top_element_label": "Programming and build (data and analytics engineering)"
+      },
+      "eu_ai_act": {
+        "composite": 0.39427233201581025,
+        "cross_encoder_sts": 0.4373608695652174,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27936956521739126,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.38944761325630883,
+        "cross_encoder_sts": 0.438495652173913,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2586528428093645,
+        "jaccard": null,
+        "top_element_id": "K1072",
+        "top_element_label": "Knowledge of automated security control testing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3815761904761905,
+        "cross_encoder_sts": 0.42550476190476194,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2644333333333333,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38743090909090905,
+        "cross_encoder_sts": 0.44337,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23826,
+        "jaccard": null,
+        "top_element_id": "1.A.1.c.2",
+        "top_element_label": "Number Facility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-132",
+        "element_label": "Programming and build (data and analytics engineering)",
+        "score": 0.4354674715909091
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1071",
+        "element_label": "Knowledge of secure software deployment methodologies, tools, and practices.",
+        "score": 0.41238510101010106
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.39427233201581025
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1072",
+        "element_label": "Knowledge of automated security control testing tools and techniques",
+        "score": 0.38944761325630883
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.c.2",
+        "element_label": "Number Facility",
+        "score": 0.38743090909090905
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-T-011 (Data Architecture/Task) scores 0.435 composite (highest: DDaT at 0.435). Scope is edge_case for Clinical AI Specialist: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Data Architecture, composite 0.435. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Architecture for Clinical AI Specialist at this seniority?",
+    "evidence": "Data Architecture appears in ~35% of Clinical AI Specialist postings as a secondary competency. Clinical data architecture (FHIR/HL7) relevant for integration-focused roles.",
+    "ruling": "Include upheld. Data Architecture with role-relevant signals (1) is market-supported. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DA-T-011 (Data Architecture/Task) scores 0.435 composite (highest: DDaT at 0.435). Scope is edge_case for Clinical AI Specialist: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:16:38.375550Z",
+    "pipeline_version": "1.0"
+  }
+}
