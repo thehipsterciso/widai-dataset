@@ -3,7 +3,7 @@
   "domain_code": "TF",
   "domain_title": "Technology Foundations",
   "type": "Knowledge",
-  "count": 17,
+  "count": 24,
   "schema_version": "3.0.0",
   "entries": [
     {
@@ -156,6 +156,69 @@
       "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Knowledge of DevOps and MLOps operational practices for data and AI systems, including system monitoring and observability, logging and tracing, performance metrics collection, incident detection, and automated remediation workflows.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-018",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of operating system fundamentals and kernel concepts relevant to data engineering, including virtualization mechanisms, memory management and paging, process scheduling, I/O systems, file system operations, and resource allocation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-019",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of system performance optimization and tuning principles for data systems, including profiling and bottleneck analysis, resource utilization optimization, query optimization, caching strategies, and trade-offs between performance and resource consumption.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-020",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of data partitioning, sharding, and replication strategies in distributed systems, including partition key selection, replication models, consistency levels, and trade-offs between availability, partition tolerance, and consistency.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-021",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of automated testing and quality assurance practices for software and data systems, including unit testing frameworks, integration testing, performance and load testing, chaos engineering, test automation in CI/CD pipelines, and test metrics.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-022",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of alternative API protocols and communication patterns for data services, including GraphQL query language and schema design, gRPC service definitions and protocol buffers, WebSocket real-time communication, and message queue protocols for asynchronous integration.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-023",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of computer architecture fundamentals relevant to data processing systems, including processor architectures and instruction sets, memory hierarchy and cache behavior, storage device characteristics, and how architectural features affect data processing performance.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-024",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of data workflow orchestration and pipeline execution frameworks, including directed acyclic graph (DAG) execution models, task scheduling and dependency management, error handling and retry mechanisms, and monitoring of complex data pipelines.",
       "origin_framework": "WIDAI",
       "origin_version": "0.8.0"
     }
