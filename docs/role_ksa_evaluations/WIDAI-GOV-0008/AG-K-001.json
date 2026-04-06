@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0008",
+  "role_name": "AI Governance Manager",
+  "ksa_id": "AG-K-001",
+  "ksa_text": "Knowledge of AI explainability and interpretability methods, including SHAP values, LIME, partial dependence plots, counterfactual explanations, attention visualization, and the appropriate application of each method type by model class and explanation requirement.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.39743831033831034,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3848275982638051,
+        "cross_encoder_sts": 0.4234665782493368,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28179031830238727,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3732201533406353,
+        "cross_encoder_sts": 0.4270361445783133,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22971084337349396,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.38529636363636366,
+        "cross_encoder_sts": 0.42029,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29197999999999996,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.39743831033831034,
+        "cross_encoder_sts": 0.4396802494802495,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2847931392931393,
+        "jaccard": null,
+        "top_element_id": "K0476",
+        "top_element_label": "Knowledge of language processing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38625491651205934,
+        "cross_encoder_sts": 0.42399591836734696,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28561224489795917,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36708214285714286,
+        "cross_encoder_sts": 0.40993928571428573,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25279642857142853,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0476",
+        "element_label": "Knowledge of language processing tools and techniques",
+        "score": 0.39743831033831034
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38625491651205934
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.38529636363636366
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.3848275982638051
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.3732201533406353
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to AI Governance Manager scope \u2014 GOV-specific signals detected (\"ai explainab\"). STRM composite is moderate-to-strong (0.3974). Domain AI Governance (affinity 0.92) is a natural fit for this governance role. Seniority is appropriate for manager-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in governance job postings or certification curricula (CDMP, DAMA, IAPP CIPP/CIPM, NIST AI RMF, ISO 42001). Would a working AI Governance Manager self-report this as a required competency?",
+    "evidence": "Challenge answered: the governance competency is implicit in AI Governance Manager practice (domain affinity 0.92, 1 GOV signal(s)). Framework vocabulary matching underrepresents many legitimate governance competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to AI Governance Manager scope \u2014 GOV-specific signals detected (\"ai explainab\"). STRM composite is moderate-to-strong (0.3974). Domain AI Governance (affinity 0.92) is a natural fit for this governance role. Seniority is appropriate for manager-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:48.900798Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0008",
+  "role_name": "AI Governance Manager",
+  "ksa_id": "DQ-T-005",
+  "ksa_text": "Design and implement data quality processes, workflows, automation approaches, and remediation procedures.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4277489898989899,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4062218933521259,
+        "cross_encoder_sts": 0.42463436692506457,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3571219638242894,
+        "jaccard": null,
+        "top_element_id": "1107",
+        "top_element_label": "Identify and analyze anomalies in network traffic using metadata (e.g., CENTAUR)."
+      },
+      "ddat": {
+        "composite": 0.4277489898989899,
+        "cross_encoder_sts": 0.45001944444444447,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3683611111111111,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4119123376623377,
+        "cross_encoder_sts": 0.43381428571428576,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35350714285714285,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.39806114190687364,
+        "cross_encoder_sts": 0.416125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3498908536585366,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3723866028708134,
+        "cross_encoder_sts": 0.4053894736842105,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28437894736842106,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3948113636363636,
+        "cross_encoder_sts": 0.41761,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.334015,
+        "jaccard": null,
+        "top_element_id": "2.B.3.k",
+        "top_element_label": "Troubleshooting"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4277489898989899
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4119123376623377
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1107",
+        "element_label": "Identify and analyze anomalies in network traffic using metadata (e.g., CENTAUR).",
+        "score": 0.4062218933521259
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.39806114190687364
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.k",
+        "element_label": "Troubleshooting",
+        "score": 0.3948113636363636
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Quality domain has low affinity (0.40) for AI Governance Manager, and the text \u2014 'Design and implement data quality processes, workflows, automation approaches, and remediation proce...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4277)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working AI Governance Manager whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low affinity (0.40) for AI Governance Manager, and the text \u2014 'Design and implement data quality processes, workflows, automation approaches, and remediation proce...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4277).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:48.652040Z",
+    "pipeline_version": "1.0"
+  }
+}

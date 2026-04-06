@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0007",
+  "role_name": "Data Governance Director",
+  "ksa_id": "SP-S-014",
+  "ksa_text": "Skill in designing and implementing AI system transparency and interpretability mechanisms that enable users and security personnel to understand system decision-making and oversight.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: skill from Security & Privacy (affinity 0.55); strategic/implementation framing outweighs governance signals. STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). A Data Governance Director would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Data Governance Director whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: skill from Security & Privacy (affinity 0.55); strategic/implementation framing outweighs governance signals. STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). A Data Governance Director would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:41.898561Z",
+    "pipeline_version": "1.0"
+  }
+}

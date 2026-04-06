@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0009",
+  "role_name": "Data Steward",
+  "ksa_id": "RC-K-004",
+  "ksa_text": "Knowledge of sector-specific data regulations and their interaction with general data protection law, including HIPAA (healthcare), GLBA and SOX (financial services), FERPA (education), and PCI DSS (payment card industry).",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.409797601010101,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40084231264486225,
+        "cross_encoder_sts": 0.41877733711048154,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35301558073654393,
+        "jaccard": null,
+        "top_element_id": "1027A",
+        "top_element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy."
+      },
+      "ddat": {
+        "composite": 0.4097785299806576,
+        "cross_encoder_sts": 0.43871489361702126,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3326148936170213,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.38105384615384613,
+        "cross_encoder_sts": 0.38156153846153845,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3797,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-031",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.409797601010101,
+        "cross_encoder_sts": 0.43147638888888884,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3519875,
+        "jaccard": null,
+        "top_element_id": "K0644",
+        "top_element_label": "Knowledge of cybersecurity operation policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38344242424242425,
+        "cross_encoder_sts": 0.4018333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33440000000000003,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3814772727272727,
+        "cross_encoder_sts": 0.410425,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30428333333333335,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0644",
+        "element_label": "Knowledge of cybersecurity operation policies and procedures",
+        "score": 0.409797601010101
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4097785299806576
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1027A",
+        "element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy.",
+        "score": 0.40084231264486225
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38344242424242425
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.3814772727272727
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to Data Steward scope \u2014 GOV-specific signals detected (\"hipaa\", \"ferpa\", \"glba\"). STRM composite is moderate-to-strong (0.4098). Domain Risk & Compliance (affinity 0.55) is a natural fit for this governance role. Seniority is appropriate for IC level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 2 match(es) in governance job postings or certification scope (CDMP, IAPP, NIST AI RMF). Competency appears in Data Steward role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to Data Steward scope \u2014 GOV-specific signals detected (\"hipaa\", \"ferpa\", \"glba\"). STRM composite is moderate-to-strong (0.4098). Domain Risk & Compliance (affinity 0.55) is a natural fit for this governance role. Seniority is appropriate for IC level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:55.505827Z",
+    "pipeline_version": "1.0"
+  }
+}

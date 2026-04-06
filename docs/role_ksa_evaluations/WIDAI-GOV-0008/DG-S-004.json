@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0008",
+  "role_name": "AI Governance Manager",
+  "ksa_id": "DG-S-004",
+  "ksa_text": "Skill in building, managing, and operating a Data Governance Council, including membership design, decision authority, meeting cadence, agenda management, issue escalation, decision documentation, and multi-stakeholder conflict resolution.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4261025691699605,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3994624139384572,
+        "cross_encoder_sts": 0.42455471406491496,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33254961360123647,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.4261025691699605,
+        "cross_encoder_sts": 0.4408532608695652,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38676739130434784,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.41684688995215313,
+        "cross_encoder_sts": 0.43917894736842106,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3572947368421053,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40894608244608244,
+        "cross_encoder_sts": 0.4380903903903904,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33122792792792793,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4051148221343874,
+        "cross_encoder_sts": 0.4309782608695652,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33614565217391307,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3966531468531469,
+        "cross_encoder_sts": 0.4343,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29626153846153847,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.5",
+        "top_element_label": "Inductive Reasoning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4261025691699605
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.41684688995215313
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40894608244608244
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4051148221343874
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.3994624139384572
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to AI Governance Manager scope \u2014 GOV-specific signals detected (\"data governance\", \"governance   :council|committee|board|body|structure|model|program|office\", \"data   :council|committee|board|working group|governance body\"). STRM composite is strong (0.4261). Domain Data Governance (affinity 0.72) is a natural fit for this governance role. Seniority is appropriate for manager-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 3 job-posting-level and 0 certification-level matches (CDMP, DAMA, IAPP, NIST AI RMF, ISO 42001). Competency appears regularly in AI Governance Manager role descriptions and/or governance certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to AI Governance Manager scope \u2014 GOV-specific signals detected (\"data governance\", \"governance   :council|committee|board|body|structure|model|program|office\", \"data   :council|committee|board|working group|governance body\"). STRM composite is strong (0.4261). Domain Data Governance (affinity 0.72) is a natural fit for this governance role. Seniority is appropriate for manager-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:48.668037Z",
+    "pipeline_version": "1.0"
+  }
+}
