@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0113",
+  "role_name": "AI Risk Owner",
+  "ksa_id": "AB-A-003",
+  "ksa_text": "Ability to quickly make sense of complex information, recognize patterns and relationships across seemingly unrelated data sets, decompose problems into constituent parts, and identify non-obvious organizational or operational dynamics.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.42741969696969695,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39492254784688996,
+        "cross_encoder_sts": 0.41549605263157896,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3400598684210527,
+        "jaccard": null,
+        "top_element_id": "2251",
+        "top_element_label": "Apply analytic techniques to gain more target information."
+      },
+      "ddat": {
+        "composite": 0.42091033057851246,
+        "cross_encoder_sts": 0.4676,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2964045454545455,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "nice": {
+        "composite": 0.3907371900826446,
+        "cross_encoder_sts": 0.416,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3233696969696969,
+        "jaccard": null,
+        "top_element_id": "S0386",
+        "top_element_label": "Skill in communicating verbally"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3803939393939394,
+        "cross_encoder_sts": 0.40796666666666664,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3068666666666667,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.9",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.42741969696969695,
+        "cross_encoder_sts": 0.44895833333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36998333333333333,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.42741969696969695
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.42091033057851246
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2251",
+        "element_label": "Apply analytic techniques to gain more target information.",
+        "score": 0.39492254784688996
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0386",
+        "element_label": "Skill in communicating verbally",
+        "score": 0.3907371900826446
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.9",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.3803939393939394
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Analytics & BI domain has low AI Risk Owner affinity (0.06), and the text \u2014 'Ability to quickly make sense of complex information, recognize patterns and relationships across se...' \u2014 describes competencies outside the AI Risk Owner practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4274)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Risk Owner.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Analytics & BI domain has low AI Risk Owner affinity (0.06), and the text \u2014 'Ability to quickly make sense of complex information, recognize patterns and relationships across se...' \u2014 describes competencies outside the AI Risk Owner practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4274).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:55.648235+00:00",
+    "pipeline_version": "1.0"
+  }
+}

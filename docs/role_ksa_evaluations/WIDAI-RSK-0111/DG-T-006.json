@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0111",
+  "role_name": "Model Governance Analyst",
+  "ksa_id": "DG-T-006",
+  "ksa_text": "Establish and maintain the enterprise data catalog, including asset classification, metadata management, data lineage documentation, and discoverability infrastructure.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4363253918495298,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4120665194140898,
+        "cross_encoder_sts": 0.42356521739130437,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3814033248081842,
+        "jaccard": null,
+        "top_element_id": "1030",
+        "top_element_label": "Collect intrusion artifacts (e.g., source code, malware, trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise."
+      },
+      "ddat": {
+        "composite": 0.4363253918495298,
+        "cross_encoder_sts": 0.46453103448275856,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36111034482758625,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.41743232323232327,
+        "cross_encoder_sts": 0.4535111111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32122222222222224,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.395308504398827,
+        "cross_encoder_sts": 0.42154285714285716,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32535023041474653,
+        "jaccard": null,
+        "top_element_id": "K1323",
+        "top_element_label": "Knowledge of data de-identification tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3790967532467533,
+        "cross_encoder_sts": 0.42135,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2664214285714286,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42237272727272723,
+        "cross_encoder_sts": 0.43485,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3891,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4363253918495298
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.e.1",
+        "element_label": "Speed of Closure",
+        "score": 0.42237272727272723
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.41743232323232327
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1030",
+        "element_label": "Collect intrusion artifacts (e.g., source code, malware, trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.",
+        "score": 0.4120665194140898
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1323",
+        "element_label": "Knowledge of data de-identification tools and techniques",
+        "score": 0.395308504398827
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Governance domain has low Model Governance Analyst affinity (0.55), and the text \u2014 'Establish and maintain the enterprise data catalog, including asset classification, metadata managem...' \u2014 describes competencies outside the Model Governance Analyst practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4363)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working Model Governance Analyst.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Governance domain has low Model Governance Analyst affinity (0.55), and the text \u2014 'Establish and maintain the enterprise data catalog, including asset classification, metadata managem...' \u2014 describes competencies outside the Model Governance Analyst practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4363).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:54.496997+00:00",
+    "pipeline_version": "1.0"
+  }
+}

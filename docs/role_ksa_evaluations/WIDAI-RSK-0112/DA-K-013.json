@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0112",
+  "role_name": "AI System Owner",
+  "ksa_id": "DA-K-013",
+  "ksa_text": "Knowledge of data pipeline monitoring and observability, including data freshness tracking, volume anomaly detection, schema change detection, job failure pattern analysis, and alerting system design.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.40140054477357845,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39166784738577487,
+        "cross_encoder_sts": 0.4387147150259067,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2662095336787565,
+        "jaccard": null,
+        "top_element_id": "1005",
+        "top_element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
+      },
+      "ddat": {
+        "composite": 0.38308378970427165,
+        "cross_encoder_sts": 0.4345240963855422,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24590963855421685,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.39555350649350646,
+        "cross_encoder_sts": 0.44637428571428567,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2600314285714286,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.40140054477357845,
+        "cross_encoder_sts": 0.451651872659176,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26739700374531833,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38474612794612795,
+        "cross_encoder_sts": 0.440887037037037,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23503703703703704,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3534170454545455,
+        "cross_encoder_sts": 0.41248125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1959125,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40140054477357845
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.39555350649350646
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1005",
+        "element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes).",
+        "score": 0.39166784738577487
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38474612794612795
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.38308378970427165
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Architecture domain has low AI System Owner affinity (0.10), and the text \u2014 'Knowledge of data pipeline monitoring and observability, including data freshness tracking, volume a...' \u2014 describes competencies outside the AI System Owner practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4014)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI System Owner.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Architecture domain has low AI System Owner affinity (0.10), and the text \u2014 'Knowledge of data pipeline monitoring and observability, including data freshness tracking, volume a...' \u2014 describes competencies outside the AI System Owner practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4014).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:55.194213+00:00",
+    "pipeline_version": "1.0"
+  }
+}

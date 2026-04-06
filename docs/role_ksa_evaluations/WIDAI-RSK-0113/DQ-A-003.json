@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0113",
+  "role_name": "AI Risk Owner",
+  "ksa_id": "DQ-A-003",
+  "ksa_text": "Ability to design effective data structures, models, and schemas that balance organizational needs, technical constraints, and long-term maintainability.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.44184184952978056,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3780306707239762,
+        "cross_encoder_sts": 0.42204463040446305,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26066011157601116,
+        "jaccard": null,
+        "top_element_id": "1073",
+        "top_element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+      },
+      "ddat": {
+        "composite": 0.44184184952978056,
+        "cross_encoder_sts": 0.4918896551724138,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3083810344827586,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.3902105263157895,
+        "cross_encoder_sts": 0.4356368421052632,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2690736842105263,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.37613187571921747,
+        "cross_encoder_sts": 0.41926227848101266,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2611174683544304,
+        "jaccard": null,
+        "top_element_id": "K0702",
+        "top_element_label": "Knowledge of data warehousing principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38597337662337666,
+        "cross_encoder_sts": 0.44604642857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2257785714285714,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.403227807486631,
+        "cross_encoder_sts": 0.44988823529411764,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2788,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.44184184952978056
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.403227807486631
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.3902105263157895
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38597337662337666
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1073",
+        "element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools.",
+        "score": 0.3780306707239762
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Quality domain has low AI Risk Owner affinity (0.22), and the text \u2014 'Ability to design effective data structures, models, and schemas that balance organizational needs, ...' \u2014 describes competencies outside the AI Risk Owner practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4418)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Risk Owner.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low AI Risk Owner affinity (0.22), and the text \u2014 'Ability to design effective data structures, models, and schemas that balance organizational needs, ...' \u2014 describes competencies outside the AI Risk Owner practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4418).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:55.603136+00:00",
+    "pipeline_version": "1.0"
+  }
+}

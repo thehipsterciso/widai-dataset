@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0111",
+  "role_name": "Model Governance Analyst",
+  "ksa_id": "SP-T-020",
+  "ksa_text": "Integrate trustworthy AI principles including validity, reliability, safety, security, resilience, and accountability into organizational processes and systems.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Edge case \u2014 included on balance: task contains 3 RSK-relevant signal(s) (\"ai principles\", \"accountabilit\") within Security & Privacy (domain affinity 0.35). STRM composite is zero (0.0000 \u2014 note: STRM frameworks underweight pure risk vocabulary). A practicing Model Governance Analyst would encounter this competency regularly."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in RSK job postings or cert curricula (CRISC, FRM, NIST AI RMF, CISM). Would a working Model Governance Analyst self-report this as required?",
+    "evidence": "Challenge answered: the competency is implicit in Model Governance Analyst work (domain affinity 0.35, 3 RSK signal(s)). Framework vocabulary matching systematically underrepresents risk management and governance KSAs.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 included on balance: task contains 3 RSK-relevant signal(s) (\"ai principles\", \"accountabilit\") within Security & Privacy (domain affinity 0.35). STRM composite is zero (0.0000 \u2014 note: STRM frameworks underweight pure risk vocabulary). A practicing Model Governance Analyst would encounter this competency regularly.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:54.704527+00:00",
+    "pipeline_version": "1.0"
+  }
+}

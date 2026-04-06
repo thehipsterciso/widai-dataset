@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0111",
+  "role_name": "Model Governance Analyst",
+  "ksa_id": "RC-T-011",
+  "ksa_text": "Coordinate regulatory examination responses, managing examiner interactions, fulfilling information requests, preparing findings responses, developing corrective action plans, and tracking remediation closure.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4072305785123967,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39325467865467867,
+        "cross_encoder_sts": 0.41986556776556777,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32229230769230766,
+        "jaccard": null,
+        "top_element_id": "1027A",
+        "top_element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy."
+      },
+      "ddat": {
+        "composite": 0.3920078282828283,
+        "cross_encoder_sts": 0.45179722222222224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23256944444444447,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4072305785123967,
+        "cross_encoder_sts": 0.4244545454545454,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3613,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.37861042424242425,
+        "cross_encoder_sts": 0.41528533333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28081066666666665,
+        "jaccard": null,
+        "top_element_id": "K1059",
+        "top_element_label": "Knowledge of request for information processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36767412587412596,
+        "cross_encoder_sts": 0.39890769230769235,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2843846153846154,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37951212121212125,
+        "cross_encoder_sts": 0.4117166666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29363333333333336,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.4",
+        "top_element_label": "Deductive Reasoning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.4072305785123967
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1027A",
+        "element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy.",
+        "score": 0.39325467865467867
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.3920078282828283
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.4",
+        "element_label": "Deductive Reasoning",
+        "score": 0.37951212121212125
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1059",
+        "element_label": "Knowledge of request for information processes",
+        "score": 0.37861042424242425
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Risk & Compliance domain has low Model Governance Analyst affinity (0.75), and the text \u2014 'Coordinate regulatory examination responses, managing examiner interactions, fulfilling information ...' \u2014 describes competencies outside the Model Governance Analyst practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4072)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working Model Governance Analyst.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Risk & Compliance domain has low Model Governance Analyst affinity (0.75), and the text \u2014 'Coordinate regulatory examination responses, managing examiner interactions, fulfilling information ...' \u2014 describes competencies outside the Model Governance Analyst practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4072).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:54.612815+00:00",
+    "pipeline_version": "1.0"
+  }
+}

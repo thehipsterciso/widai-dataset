@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0111",
+  "role_name": "Model Governance Analyst",
+  "ksa_id": "AG-S-005",
+  "ksa_text": "Skill in developing AI system documentation and technical specifications, including creating model cards, system cards, datasheets, documenting system context and intended use, and producing documentation meeting regulatory compliance standards for EU AI Act and NIST AI RMF.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.6287425974025974,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42368673175416127,
+        "cross_encoder_sts": 0.4554824823943662,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3388980633802817,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.3938757123473542,
+        "cross_encoder_sts": 0.4379313432835821,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2763940298507463,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.573508651026393,
+        "cross_encoder_sts": 0.581291935483871,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5527532258064516,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4182703051273986,
+        "cross_encoder_sts": 0.45325380622837375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3249809688581315,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.6287425974025974,
+        "cross_encoder_sts": 0.6325042857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.6187114285714286,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.4",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.3767909090909091,
+        "cross_encoder_sts": 0.41195909090909094,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2830090909090909,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.4",
+        "top_element_label": "Deductive Reasoning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-1.4",
+        "element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",
+        "score": 0.6287425974025974
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.573508651026393
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.42368673175416127
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0655",
+        "element_label": "Knowledge of intelligence fusion",
+        "score": 0.4182703051273986
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.3938757123473542
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to Model Governance Analyst scope \u2014 RSK-specific signals detected (\"regulatory compliance\", \"eu ai act\", \"nist.{0,5}ai\"). STRM composite is strong (0.6287); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 2 match(es) in RSK job postings or certification scope. Competency appears in RSK role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to Model Governance Analyst scope \u2014 RSK-specific signals detected (\"regulatory compliance\", \"eu ai act\", \"nist.{0,5}ai\"). STRM composite is strong (0.6287); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:54.376816+00:00",
+    "pipeline_version": "1.0"
+  }
+}
