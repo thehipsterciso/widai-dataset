@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0070",
+  "role_name": "Data Product Manager",
+  "ksa_id": "AG-K-014",
+  "ksa_text": "Knowledge of AI risk measurement and quantification methods, including risk metrics design, proxy indicators for unmeasurable or emerging risks, fairness measurement across protected attributes, and the translation of risk measurement results into governance decisions.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.531123896103896,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4052285768549,
+        "cross_encoder_sts": 0.4501509749303621,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2854355153203343,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.3751755793226381,
+        "cross_encoder_sts": 0.4325156862745098,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2222686274509804,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.522835,
+        "cross_encoder_sts": 0.57252,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3903416666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.41047055807533034,
+        "cross_encoder_sts": 0.45918503253796095,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2805652928416486,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.531123896103896,
+        "cross_encoder_sts": 0.5773199999999999,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4079342857142857,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3304818181818182,
+        "cross_encoder_sts": 0.3747142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21252857142857143,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.531123896103896
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.522835
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41047055807533034
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.4052285768549
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.3751755793226381
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-K-014 (AI Governance/Knowledge) excluded as out_of_scope (composite 0.531, highest: NIST AI RMF at 0.531). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data product management: product roadmap, data product design, consumer needs, data contracts, SLAs, self-serve data infrastructure, and cross-functional stakeholder alignment."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.531, and AI Governance (AG) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Data Product Manager?",
+    "evidence": "AI Governance competencies do not appear as Data Product Manager requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Data Product Manager core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-K-014 (AI Governance/Knowledge) excluded as out_of_scope (composite 0.531, highest: NIST AI RMF at 0.531). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data product management: product roadmap, data product design, consumer needs, data contracts, SLAs, self-serve data infrastructure, and cross-functional stakeholder alignment.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:58.875625+00:00",
+    "pipeline_version": "1.0"
+  }
+}

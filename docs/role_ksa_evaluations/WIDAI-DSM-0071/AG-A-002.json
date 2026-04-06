@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0071",
+  "role_name": "Data Quality Analyst",
+  "ksa_id": "AG-A-002",
+  "ksa_text": "Ability to interpret, apply, and integrate evolving regulations, laws, and standards into organizational governance processes; resolve conflicts between multiple regulatory frameworks.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.4383946784922395,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4057233439926907,
+        "cross_encoder_sts": 0.422335175879397,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36142512562814066,
+        "jaccard": null,
+        "top_element_id": "156",
+        "top_element_label": "Skill in applying confidentiality, integrity, and availability principles."
+      },
+      "ddat": {
+        "composite": 0.3995462121212121,
+        "cross_encoder_sts": 0.441075,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2888027777777778,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-048",
+        "top_element_label": "Data compliance and security"
+      },
+      "eu_ai_act": {
+        "composite": 0.4282411483253588,
+        "cross_encoder_sts": 0.39995789473684207,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5036631578947368,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3804070909090909,
+        "cross_encoder_sts": 0.430392,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.247114,
+        "jaccard": null,
+        "top_element_id": "S0891",
+        "top_element_label": "Skill in performing trade-off analysis"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4383946784922395,
+        "cross_encoder_sts": 0.41482439024390244,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.501248780487805,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3876636363636363,
+        "cross_encoder_sts": 0.42419999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29023333333333334,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4383946784922395
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4282411483253588
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "156",
+        "element_label": "Skill in applying confidentiality, integrity, and availability principles.",
+        "score": 0.4057233439926907
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-048",
+        "element_label": "Data compliance and security",
+        "score": 0.3995462121212121
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.3876636363636363
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-A-002 (AI Governance/Ability) excluded as out_of_scope (composite 0.438, highest: NIST AI RMF at 0.438). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. IC-level data quality analysis: profiling, quality rule authoring, reporting, exception handling, and quality metrics measurement."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.438, and AI Governance (AG) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Data Quality Analyst?",
+    "evidence": "AI Governance competencies do not appear as Data Quality Analyst requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Data Quality Analyst core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-A-002 (AI Governance/Ability) excluded as out_of_scope (composite 0.438, highest: NIST AI RMF at 0.438). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. IC-level data quality analysis: profiling, quality rule authoring, reporting, exception handling, and quality metrics measurement.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:02.983479+00:00",
+    "pipeline_version": "1.0"
+  }
+}

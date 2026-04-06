@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0071",
+  "role_name": "Data Quality Analyst",
+  "ksa_id": "DG-T-014",
+  "ksa_text": "Conduct data and AI strategy engagements, including current state assessment, future state design, gap analysis, and roadmap development with defined milestones and investment estimates.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.47488987012987005,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41101124633431085,
+        "cross_encoder_sts": 0.43723758064516133,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3410743548387097,
+        "jaccard": null,
+        "top_element_id": "1070A",
+        "top_element_label": "Ability to monitor and assess the potential impact of emerging technologies on laws, regulations, and/or policies."
+      },
+      "ddat": {
+        "composite": 0.4195651515151515,
+        "cross_encoder_sts": 0.45857179487179484,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3155474358974359,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.438800185528757,
+        "cross_encoder_sts": 0.44327346938775514,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42687142857142857,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.39075475986277874,
+        "cross_encoder_sts": 0.4207740566037736,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31070330188679246,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.47488987012987005,
+        "cross_encoder_sts": 0.48037714285714284,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4602571428571428,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39188727272727275,
+        "cross_encoder_sts": 0.43131,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28676,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.47488987012987005
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.438800185528757
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.4195651515151515
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1070A",
+        "element_label": "Ability to monitor and assess the potential impact of emerging technologies on laws, regulations, and/or policies.",
+        "score": 0.41101124633431085
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.b",
+        "element_label": "Active Learning",
+        "score": 0.39188727272727275
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-T-014 (Data Governance/Task) scores 0.475 composite (highest: NIST AI RMF at 0.475) and is edge_case for the Data Quality Analyst role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for analyst-level Data Quality Analyst."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, NIST AI RMF signal (0.475), and Data Governance handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does NIST AI RMF signal (0.475) for this Data Governance KSA reflect actual Data Quality Analyst requirements?",
+    "evidence": "Data Governance appears in 50-80% of Data Quality Analyst job postings. KSA content aligns with hiring criteria at analyst level.",
+    "ruling": "Include upheld. Data Governance at composite 0.475 is market-validated for Data Quality Analyst. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DG-T-014 (Data Governance/Task) scores 0.475 composite (highest: NIST AI RMF at 0.475) and is edge_case for the Data Quality Analyst role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for analyst-level Data Quality Analyst.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:02.947979+00:00",
+    "pipeline_version": "1.0"
+  }
+}

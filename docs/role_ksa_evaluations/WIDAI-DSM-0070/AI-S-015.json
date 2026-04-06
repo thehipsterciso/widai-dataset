@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0070",
+  "role_name": "Data Product Manager",
+  "ksa_id": "AI-S-015",
+  "ksa_text": "Skill in designing and implementing CI/CD pipelines for ML models, including automated testing at unit, integration, and model quality levels, artifact versioning, and deployment automation with rollback capability.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.40704,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.37790244051250765,
+        "cross_encoder_sts": 0.4258167785234899,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25013087248322147,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.3748235795454546,
+        "cross_encoder_sts": 0.447928125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.179878125,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-049",
+        "top_element_label": "Data development process"
+      },
+      "eu_ai_act": {
+        "composite": 0.39311100478468897,
+        "cross_encoder_sts": 0.4389105263157895,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27097894736842104,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.38343752417794974,
+        "cross_encoder_sts": 0.43961702127659574,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2336255319148936,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38145656565656566,
+        "cross_encoder_sts": 0.43654444444444446,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23455555555555552,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40704,
+        "cross_encoder_sts": 0.46494,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25264,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.40704
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.39311100478468897
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.38343752417794974
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38145656565656566
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.37790244051250765
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-S-015 (AI and Machine Learning/Skill) excluded as edge_case (composite 0.407, highest: O*NET at 0.407). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data product management: product roadmap, data product design, consumer needs, data contracts, SLAs, self-serve data infrastructure, and cross-functional stakeholder alignment."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.407, and AI and Machine Learning (AI) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.407)?",
+    "evidence": "Market analysis of Data Product Manager job postings does not surface this AI and Machine Learning competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AI-S-015 (AI and Machine Learning/Skill) excluded as edge_case (composite 0.407, highest: O*NET at 0.407). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data product management: product roadmap, data product design, consumer needs, data contracts, SLAs, self-serve data infrastructure, and cross-functional stakeholder alignment.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:59.040399+00:00",
+    "pipeline_version": "1.0"
+  }
+}

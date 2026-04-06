@@ -1,0 +1,97 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0070",
+  "role_name": "Data Product Manager",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:17:59.280518+00:00",
+  "total_ksas": 1069,
+  "included": 179,
+  "excluded": 890,
+  "inclusion_rate": 0.1674,
+  "adversarial_overturns": {
+    "pass_3": 5,
+    "pass_4": 30,
+    "total_ksas_affected": 35
+  },
+  "calibration": {
+    "min": 100,
+    "max": 165,
+    "status": "WARNING"
+  },
+  "pass_1_notes": "6 frameworks: dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet. Composite = MAX across frameworks.",
+  "role_scope_notes": "Data product management: product roadmap, data product design, consumer needs, data contracts, SLAs, self-serve data infrastructure, and cross-functional stakeholder alignment.",
+  "domain_summary": {
+    "AG": {
+      "include": 0,
+      "exclude": 107,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 0,
+      "exclude": 74,
+      "total": 74,
+      "label": "Risk and Compliance"
+    },
+    "RM": {
+      "include": 0,
+      "exclude": 101,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 38,
+      "exclude": 51,
+      "total": 89,
+      "label": "Leadership and Strategy"
+    },
+    "TF": {
+      "include": 17,
+      "exclude": 70,
+      "total": 87,
+      "label": "Technical Foundations"
+    },
+    "AI": {
+      "include": 0,
+      "exclude": 103,
+      "total": 103,
+      "label": "AI and Machine Learning"
+    },
+    "DG": {
+      "include": 29,
+      "exclude": 63,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "OP": {
+      "include": 29,
+      "exclude": 40,
+      "total": 69,
+      "label": "Operational Excellence"
+    },
+    "SP": {
+      "include": 0,
+      "exclude": 84,
+      "total": 84,
+      "label": "Security and Privacy"
+    },
+    "DA": {
+      "include": 20,
+      "exclude": 73,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 30,
+      "exclude": 52,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "AB": {
+      "include": 16,
+      "exclude": 72,
+      "total": 88,
+      "label": "Core Abilities"
+    }
+  }
+}

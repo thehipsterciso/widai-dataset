@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0071",
+  "role_name": "Data Quality Analyst",
+  "ksa_id": "RM-S-020",
+  "ksa_text": "Skill in designing AI system resilience and error handling architectures, including fault tolerance implementation, graceful degradation design, and recovery procedure specification.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-S-020 (Risk Management/Skill) excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. IC-level data quality analysis: profiling, quality rule authoring, reporting, exception handling, and quality metrics measurement."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.000, and Risk Management (RM) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Zero-signal exclusion: does absence of framework signal reliably indicate irrelevance?",
+    "evidence": "Composite 0.0 across all 6 frameworks confirms no semantic alignment with Data Quality Analyst reference elements.",
+    "ruling": "Exclusion upheld. Zero framework signal confirmed by market absence. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-S-020 (Risk Management/Skill) excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. IC-level data quality analysis: profiling, quality rule authoring, reporting, exception handling, and quality metrics measurement.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:03.092493+00:00",
+    "pipeline_version": "1.0"
+  }
+}

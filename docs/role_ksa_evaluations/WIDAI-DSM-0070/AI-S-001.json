@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0070",
+  "role_name": "Data Product Manager",
+  "ksa_id": "AI-S-001",
+  "ksa_text": "Skill in formulating business problems as machine learning problems, including defining the prediction target, identifying appropriate inputs, and establishing measurable success criteria.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.451679476584022,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40549381528596545,
+        "cross_encoder_sts": 0.45001820250284413,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28676211604095564,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.40481216783216784,
+        "cross_encoder_sts": 0.4559569230769231,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26842615384615387,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-019",
+        "top_element_label": "Business analysis (IT operations)"
+      },
+      "eu_ai_act": {
+        "composite": 0.42764772727272726,
+        "cross_encoder_sts": 0.46783749999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.320475,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.40468022851465474,
+        "cross_encoder_sts": 0.4519513661202186,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2786238615664845,
+        "jaccard": null,
+        "top_element_id": "K0055",
+        "top_element_label": "Knowledge of microprocessors"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.451679476584022,
+        "cross_encoder_sts": 0.49613030303030303,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3331439393939394,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4130307359307359,
+        "cross_encoder_sts": 0.45144761904761904,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3105857142857143,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.451679476584022
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.42764772727272726
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.4130307359307359
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.40549381528596545
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-019",
+        "element_label": "Business analysis (IT operations)",
+        "score": 0.40481216783216784
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-S-001 (AI and Machine Learning/Skill) scores 0.452 composite (highest: NIST AI RMF at 0.452) and is edge_case for the Data Product Manager role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Data Product Manager."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, NIST AI RMF signal (0.452), and AI and Machine Learning handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support AI/ML competencies for Data Product Manager at manager level?",
+    "evidence": "AI/ML overlap appears in 15-40% of Data Product Manager postings depending on seniority. Core signals: 0. OOS signals: 0.",
+    "ruling": "Revised to exclude. AI/ML content without sufficient core signals is not market-supported for Data Product Manager. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. AI/ML content without sufficient core signals is not market-supported for Data Product Manager. Final decision: exclude.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:58.938011+00:00",
+    "pipeline_version": "1.0"
+  }
+}
