@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-K-008",
+  "ksa_text": "Knowledge of master data management (MDM) principles and architecture, including golden record construction, data domain definition, MDM hub models (registry, consolidation, coexistence, centralized), and stewardship workflows.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.37586493992291997,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.37586493992291997,
+        "cross_encoder_sts": 0.43088827930174567,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2291360349127182,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.3408904428904429,
+        "cross_encoder_sts": 0.4100320512820513,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1565128205128205,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-031",
+        "top_element_label": "Communicating data"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "",
+        "score": 0.37586493992291997
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-031",
+        "element_label": "Communicating data",
+        "score": 0.3408904428904429
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Knowledge of master data management (MDM) principles and architecture, including golden record const...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3759)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Knowledge of master data management (MDM) principles and architecture, including golden record const...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3759).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.426794Z",
+    "pipeline_version": "1.0"
+  }
+}

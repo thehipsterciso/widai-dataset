@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-K-014",
+  "ksa_text": "Knowledge of database management system (DBMS) principles and practices, including data persistence, transaction management, index optimization, query performance tuning, backup and recovery procedures, and data retention policies.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.40474687499999995,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39997226697353283,
+        "cross_encoder_sts": 0.41788227848101267,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35221223628691983,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.40474687499999995,
+        "cross_encoder_sts": 0.427290625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3446302083333333,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.40474687499999995
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "",
+        "score": 0.39997226697353283
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"query perform\", \"data retention\"). STRM composite score is moderate-to-strong (0.4047); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 1 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"query perform\", \"data retention\"). STRM composite score is moderate-to-strong (0.4047); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.351199Z",
+    "pipeline_version": "1.0"
+  }
+}

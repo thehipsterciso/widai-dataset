@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DA-T-008",
+  "ksa_text": "Implement and maintain data backup and disaster recovery procedures, including automated backup scheduling, recovery testing, failover execution, and validation that recovery objectives are achievable.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.39792777777777777,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3875652363636364,
+        "cross_encoder_sts": 0.4192592,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.303048,
+        "jaccard": null,
+        "top_element_id": "1000",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.39792777777777777,
+        "cross_encoder_sts": 0.44266666666666665,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2786240740740741,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.39792777777777777
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000",
+        "element_label": "",
+        "score": 0.3875652363636364
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: task from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.3979). A working DE would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: task from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.3979). A working DE would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.376531Z",
+    "pipeline_version": "1.0"
+  }
+}

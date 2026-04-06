@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "AI-T-015",
+  "ksa_text": "Provision, configure, and maintain the data platform infrastructure, including compute environments, storage systems, networking, and security controls.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4441143939393939,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4245842389411355,
+        "cross_encoder_sts": 0.44798716475095784,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36217643678160916,
+        "jaccard": null,
+        "top_element_id": "5829",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.4441143939393939,
+        "cross_encoder_sts": 0.4768854166666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.356725,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4441143939393939
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5829",
+        "element_label": "",
+        "score": 0.4245842389411355
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data infrastructure\", \"compute environments?\", \"data platform\"). STRM composite score is strong (0.4441, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 1 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data infrastructure\", \"compute environments?\", \"data platform\"). STRM composite score is strong (0.4441, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.134048Z",
+    "pipeline_version": "1.0"
+  }
+}

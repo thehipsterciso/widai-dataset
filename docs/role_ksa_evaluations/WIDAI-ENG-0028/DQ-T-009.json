@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-T-009",
+  "ksa_text": "Document data lineage, supply chain risks, and develop comprehensive risk management documentation for data assets.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4131956112852665,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.384647079094191,
+        "cross_encoder_sts": 0.4223835740072202,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28401642599277976,
+        "jaccard": null,
+        "top_element_id": "1000",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.4131956112852665,
+        "cross_encoder_sts": 0.4594637931034483,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2898137931034483,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4131956112852665
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000",
+        "element_label": "",
+        "score": 0.384647079094191
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data lineage\", \"data asset\"). STRM composite score is moderate-to-strong (0.4132); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 1 job-posting-level and 2 certification-level matches (AWS DE, Databricks, dbt, GCP DE). Competency appears regularly in DE role descriptions and/or certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data lineage\", \"data asset\"). STRM composite score is moderate-to-strong (0.4132); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.282489Z",
+    "pipeline_version": "1.0"
+  }
+}

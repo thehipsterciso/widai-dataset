@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "TF-S-005",
+  "ksa_text": "Skill in writing automated tests for data applications, including unit tests for transformation logic, integration tests for pipeline components, and data validation tests using appropriate testing frameworks.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.41623030303030306,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41053725882148445,
+        "cross_encoder_sts": 0.4473366156787763,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31240564053537284,
+        "jaccard": null,
+        "top_element_id": "190",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.41623030303030306,
+        "cross_encoder_sts": 0.45873589743589743,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3028820512820513,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.41623030303030306
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "190",
+        "element_label": "",
+        "score": 0.41053725882148445
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"transformation logic\", \"data validat\"). STRM composite score is moderate-to-strong (0.4162); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 2 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"transformation logic\", \"data validat\"). STRM composite score is moderate-to-strong (0.4162); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.261569Z",
+    "pipeline_version": "1.0"
+  }
+}

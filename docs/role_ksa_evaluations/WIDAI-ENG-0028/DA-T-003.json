@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DA-T-003",
+  "ksa_text": "Design, build, and maintain automated data ingestion pipelines from source systems to the data platform, including schema mapping, transformation logic, error handling, and data quality validation at ingestion points.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.42156889204545456,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3966488328445748,
+        "cross_encoder_sts": 0.4351743225806452,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2939141935483871,
+        "jaccard": null,
+        "top_element_id": "815",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.42156889204545456,
+        "cross_encoder_sts": 0.4677765625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2983484375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.42156889204545456
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "815",
+        "element_label": "",
+        "score": 0.3966488328445748
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"data ingest\", \"transformation logic\"). STRM composite score is strong (0.4216, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 3 job-posting-level and 0 certification-level matches (AWS DE, Databricks, dbt, GCP DE). Competency appears regularly in DE role descriptions and/or certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"data ingest\", \"transformation logic\"). STRM composite score is strong (0.4216, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.216663Z",
+    "pipeline_version": "1.0"
+  }
+}

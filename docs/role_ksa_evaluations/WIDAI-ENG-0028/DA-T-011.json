@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DA-T-011",
+  "ksa_text": "Execute data platform capacity planning, including workload characterization, growth forecasting, resource utilization analysis, and scaling recommendations that balance performance and cost.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4354674715909091,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41238510101010106,
+        "cross_encoder_sts": 0.4514798611111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30813240740740744,
+        "jaccard": null,
+        "top_element_id": "1071",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.4354674715909091,
+        "cross_encoder_sts": 0.4800515625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3165765625,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-132",
+        "top_element_label": "Programming and build (data and analytics engineering)"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-132",
+        "element_label": "Programming and build (data and analytics engineering)",
+        "score": 0.4354674715909091
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1071",
+        "element_label": "",
+        "score": 0.41238510101010106
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: task from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is strong (0.4355, top tier for this dataset). A working DE would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: task from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is strong (0.4355, top tier for this dataset). A working DE would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.156538Z",
+    "pipeline_version": "1.0"
+  }
+}

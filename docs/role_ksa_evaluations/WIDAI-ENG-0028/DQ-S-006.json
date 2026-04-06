@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-S-006",
+  "ksa_text": "Skill in establishing, maintaining, and utilizing data dictionaries and metadata repositories to document data characteristics, definitions, lineage, and governance context.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4420710303030303,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42944676358373896,
+        "cross_encoder_sts": 0.45567568740955133,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35950296671490595,
+        "jaccard": null,
+        "top_element_id": "3298",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.4420710303030303,
+        "cross_encoder_sts": 0.46327066666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38553866666666664,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.4420710303030303
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "3298",
+        "element_label": "",
+        "score": 0.42944676358373896
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Skill in establishing, maintaining, and utilizing data dictionaries and metadata repositories to doc...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4421, top tier for this dataset)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 3 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Skill in establishing, maintaining, and utilizing data dictionaries and metadata repositories to doc...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4421, top tier for this dataset).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.137975Z",
+    "pipeline_version": "1.0"
+  }
+}

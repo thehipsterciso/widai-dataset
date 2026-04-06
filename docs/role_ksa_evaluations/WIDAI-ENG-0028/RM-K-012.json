@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "RM-K-012",
+  "ksa_text": "Knowledge of enterprise risk management integration, including how data risk, AI risk, model risk, and technology risk roll up into enterprise risk taxonomy and board-level reporting.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.4027611650485437,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40013089375479255,
+        "cross_encoder_sts": 0.4367161199625117,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30257029053420803,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.4027611650485437,
+        "cross_encoder_sts": 0.4426087378640777,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2965009708737864,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.4027611650485437
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "",
+        "score": 0.40013089375479255
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "too_senior",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on seniority grounds: the knowledge contains explicit executive/organizational scope signals ('board.level'), placing it above IC-to-senior-IC Data Engineer level. STRM composite score is moderate-to-strong (0.4028); semantic alignment with data frameworks may be present, but the described responsibilities involve setting or leading organizational programs rather than executing technical data work. Data Engineers implement within structures they do not establish."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on seniority grounds: the knowledge contains explicit executive/organizational scope signals ('board.level'), placing it above IC-to-senior-IC Data Engineer level. STRM composite score is moderate-to-strong (0.4028); semantic alignment with data frameworks may be present, but the described responsibilities involve setting or leading organizational programs rather than executing technical data work. Data Engineers implement within structures they do not establish.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.361303Z",
+    "pipeline_version": "1.0"
+  }
+}

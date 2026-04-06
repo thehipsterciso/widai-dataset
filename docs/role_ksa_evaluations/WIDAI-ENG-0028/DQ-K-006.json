@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-K-006",
+  "ksa_text": "Knowledge of data validation techniques and methods for embedding quality checks into pipeline execution, including schema validation, data contract enforcement, freshness checks, volume anomaly detection, referential integrity verification, and appropriate failure handling and alerting.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.3869449494949495,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3869449494949495,
+        "cross_encoder_sts": 0.4296405982905983,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27308988603988604,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.3746748353096179,
+        "cross_encoder_sts": 0.4312985507246377,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22367826086956522,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "",
+        "score": 0.3869449494949495
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.3746748353096179
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"schemas?\", \"data validat\"). STRM composite score is moderate-to-strong (0.3869); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 2 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"schemas?\", \"data validat\"). STRM composite score is moderate-to-strong (0.3869); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.409418Z",
+    "pipeline_version": "1.0"
+  }
+}

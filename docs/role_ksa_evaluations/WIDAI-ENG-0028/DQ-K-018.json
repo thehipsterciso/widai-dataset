@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-K-018",
+  "ksa_text": "Knowledge of data remediation tools and techniques, including data cleansing, standardization, deduplication, enrichment, imputation approaches, and quality improvement workflows for addressing identified data issues.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4013978409090909,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40007677397415553,
+        "cross_encoder_sts": 0.43743690773067334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3004497506234414,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.4013978409090909,
+        "cross_encoder_sts": 0.4397525,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29911875,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4013978409090909
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "",
+        "score": 0.40007677397415553
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data clean\"). STRM composite score is moderate-to-strong (0.4014); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in DE job postings or cert curricula (AWS DE, Databricks, dbt, GCP DE). Would a working Data Engineer self-report this as required?",
+    "evidence": "Challenge answered: the technical practice is implicit in DE work (domain affinity 0.72, 1 DE signal(s)). Framework vocabulary matching underrepresents many legitimate DE competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data clean\"). STRM composite score is moderate-to-strong (0.4014); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.364604Z",
+    "pipeline_version": "1.0"
+  }
+}

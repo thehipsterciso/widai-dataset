@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "LS-K-003",
+  "ksa_text": "Knowledge of enterprise transformation program design, including operating model change, capability maturity progression, transformation roadmap construction, and change sequencing principles.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4066455100907239,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4066455100907239,
+        "cross_encoder_sts": 0.43255682281059066,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3375486761710794,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.3997221343873517,
+        "cross_encoder_sts": 0.43503043478260867,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30556666666666665,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "",
+        "score": 0.4066455100907239
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.3997221343873517
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Leadership & Strategy domain has low DE affinity (0.06), and the text \u2014 'Knowledge of enterprise transformation program design, including operating model change, capability ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4066)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Leadership & Strategy domain has low DE affinity (0.06), and the text \u2014 'Knowledge of enterprise transformation program design, including operating model change, capability ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4066).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.335602Z",
+    "pipeline_version": "1.0"
+  }
+}

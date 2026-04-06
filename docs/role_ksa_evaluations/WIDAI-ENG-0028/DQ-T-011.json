@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-T-011",
+  "ksa_text": "Design, develop, implement, and maintain automated data pipelines and data warehousing systems with built-in quality controls.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.43372772727272724,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40086694214876034,
+        "cross_encoder_sts": 0.42098656126482215,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3472146245059288,
+        "jaccard": null,
+        "top_element_id": "1099",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.43372772727272724,
+        "cross_encoder_sts": 0.45857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36748166666666665,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.43372772727272724
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1099",
+        "element_label": "",
+        "score": 0.40086694214876034
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"data pipelin\"). STRM composite score is strong (0.4337, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in DE job postings or cert curricula (AWS DE, Databricks, dbt, GCP DE). Would a working Data Engineer self-report this as required?",
+    "evidence": "Challenge answered: the technical practice is implicit in DE work (domain affinity 0.72, 2 DE signal(s)). Framework vocabulary matching underrepresents many legitimate DE competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"data pipelin\"). STRM composite score is strong (0.4337, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.161723Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DA-T-004",
+  "ksa_text": "Design and maintain the analytics transformation layer, including staging models, intermediate transformations, conformed dimensions, fact tables, and consumption-ready data mart models for BI and analytics.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.43851341991341986,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.409173149451168,
+        "cross_encoder_sts": 0.43020743034055725,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35308173374613006,
+        "jaccard": null,
+        "top_element_id": "1027A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.43851341991341986,
+        "cross_encoder_sts": 0.4647523809523809,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3685428571428571,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-020",
+        "top_element_label": "Business architecture"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-020",
+        "element_label": "Business architecture",
+        "score": 0.43851341991341986
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1027A",
+        "element_label": "",
+        "score": 0.409173149451168
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"transform  ?:data|layer|logic|pipeline|model\", \"staging model\", \"intermediate transform\"). STRM composite score is strong (0.4385, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in DE job postings or cert curricula (AWS DE, Databricks, dbt, GCP DE). Would a working Data Engineer self-report this as required?",
+    "evidence": "Challenge answered: the technical practice is implicit in DE work (domain affinity 0.60, 3 DE signal(s)). Framework vocabulary matching underrepresents many legitimate DE competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"transform  ?:data|layer|logic|pipeline|model\", \"staging model\", \"intermediate transform\"). STRM composite score is strong (0.4385, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.147167Z",
+    "pipeline_version": "1.0"
+  }
+}

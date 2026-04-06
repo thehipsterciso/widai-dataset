@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-T-007",
+  "ksa_text": "Operate, maintain, and optimize data systems, databases, and infrastructure to ensure performance, availability, and reliability.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.40475714285714287,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3845850649350649,
+        "cross_encoder_sts": 0.41755,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2966785714285714,
+        "jaccard": null,
+        "top_element_id": "109A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.40475714285714287,
+        "cross_encoder_sts": 0.4563,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26730952380952383,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.40475714285714287
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "109A",
+        "element_label": "",
+        "score": 0.3845850649350649
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Operate, maintain, and optimize data systems, databases, and infrastructure to ensure performance, a...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4048)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 2 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Operate, maintain, and optimize data systems, databases, and infrastructure to ensure performance, a...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4048).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.350482Z",
+    "pipeline_version": "1.0"
+  }
+}

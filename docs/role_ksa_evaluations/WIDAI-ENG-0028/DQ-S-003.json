@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-S-003",
+  "ksa_text": "Skill in conducting data profiling to identify patterns, anomalies, and characteristics within data, including analysis of data structures and content assessment.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.43637519260400615,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4149894026974952,
+        "cross_encoder_sts": 0.44810500963391137,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3266811175337187,
+        "jaccard": null,
+        "top_element_id": "1005",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.43637519260400615,
+        "cross_encoder_sts": 0.4696042372881356,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34776440677966103,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.43637519260400615
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1005",
+        "element_label": "",
+        "score": 0.4149894026974952
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data profil\", \"data struct\"). STRM composite score is strong (0.4364, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in DE job postings or cert curricula (AWS DE, Databricks, dbt, GCP DE). Would a working Data Engineer self-report this as required?",
+    "evidence": "Challenge answered: the technical practice is implicit in DE work (domain affinity 0.72, 2 DE signal(s)). Framework vocabulary matching underrepresents many legitimate DE competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data profil\", \"data struct\"). STRM composite score is strong (0.4364, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.153017Z",
+    "pipeline_version": "1.0"
+  }
+}

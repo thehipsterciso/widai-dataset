@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "AB-S-010",
+  "ksa_text": "Skill in conducting market research and user research using quantitative and qualitative methods, including survey design, competitor analysis, secondary data analysis, and synthesis of findings into actionable recommendations.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.43153487460815043,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40611482607424726,
+        "cross_encoder_sts": 0.4640099678456591,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2517277813504823,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.43153487460815043,
+        "cross_encoder_sts": 0.4892362068965517,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2776646551724138,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.43153487460815043
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "",
+        "score": 0.40611482607424726
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Skill in conducting market research and user research using quantitative and qualitative methods, in...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4315, top tier for this dataset)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Skill in conducting market research and user research using quantitative and qualitative methods, in...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4315, top tier for this dataset).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.169254Z",
+    "pipeline_version": "1.0"
+  }
+}

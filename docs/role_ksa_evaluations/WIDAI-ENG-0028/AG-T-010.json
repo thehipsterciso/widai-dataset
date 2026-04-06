@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "AG-T-010",
+  "ksa_text": "Operate AI governance review processes, including intake triage, stakeholder coordination, assessment scheduling, decision documentation, and escalation to executive governance bodies.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.40699156250000007,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40699156250000007,
+        "cross_encoder_sts": 0.44750890625000006,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2989453125,
+        "jaccard": null,
+        "top_element_id": "515A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.4061341414141414,
+        "cross_encoder_sts": 0.45221111111111106,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28326222222222225,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "515A",
+        "element_label": "",
+        "score": 0.40699156250000007
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.4061341414141414
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Operate AI governance review processes, including intake triage, stakeholder coordination, assessmen...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4070)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Operate AI governance review processes, including intake triage, stakeholder coordination, assessmen...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4070).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.331219Z",
+    "pipeline_version": "1.0"
+  }
+}

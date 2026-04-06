@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "TF-A-004",
+  "ksa_text": "Ability to design data systems, databases, and integration mechanisms, determining data requirements and managing data flows.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.42754387878787875,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42167755775577553,
+        "cross_encoder_sts": 0.44983201320132016,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3465990099009901,
+        "jaccard": null,
+        "top_element_id": "1038A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.42754387878787875,
+        "cross_encoder_sts": 0.4694773333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31572133333333335,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-017",
+        "top_element_label": "Asset and configuration management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-017",
+        "element_label": "Asset and configuration management",
+        "score": 0.42754387878787875
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1038A",
+        "element_label": "",
+        "score": 0.42167755775577553
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: ability maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data flows?\"). STRM composite score is strong (0.4275, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in DE job postings or cert curricula (AWS DE, Databricks, dbt, GCP DE). Would a working Data Engineer self-report this as required?",
+    "evidence": "Challenge answered: the technical practice is implicit in DE work (domain affinity 0.82, 1 DE signal(s)). Framework vocabulary matching underrepresents many legitimate DE competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: ability maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data flows?\"). STRM composite score is strong (0.4275, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.182496Z",
+    "pipeline_version": "1.0"
+  }
+}

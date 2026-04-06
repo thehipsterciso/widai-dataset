@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-K-011",
+  "ksa_text": "Knowledge of metadata types (business, technical, operational, process) and the systems, methods, and tools used to collect, store, maintain, and govern each type throughout the data lifecycle.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4171872149416985,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4171872149416985,
+        "cross_encoder_sts": 0.4520177071509648,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.324305902383655,
+        "jaccard": null,
+        "top_element_id": "3298",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.3999698863636364,
+        "cross_encoder_sts": 0.44101250000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2905229166666667,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "3298",
+        "element_label": "",
+        "score": 0.4171872149416985
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.3999698863636364
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data lifecycle\"). STRM composite score is moderate-to-strong (0.4172); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in DE job postings or cert curricula (AWS DE, Databricks, dbt, GCP DE). Would a working Data Engineer self-report this as required?",
+    "evidence": "Challenge answered: the technical practice is implicit in DE work (domain affinity 0.72, 1 DE signal(s)). Framework vocabulary matching underrepresents many legitimate DE competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data lifecycle\"). STRM composite score is moderate-to-strong (0.4172); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.251797Z",
+    "pipeline_version": "1.0"
+  }
+}

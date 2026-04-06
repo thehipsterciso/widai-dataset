@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "AI-K-010",
+  "ksa_text": "Knowledge of agentic AI design patterns, including tool use, multi-agent coordination, memory systems, and the safety and reliability challenges specific to agentic architectures.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4067374802767326,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4067374802767326,
+        "cross_encoder_sts": 0.4397407209612817,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31872883845126837,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.381100845665962,
+        "cross_encoder_sts": 0.43800697674418604,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22935116279069767,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "",
+        "score": 0.4067374802767326
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.381100845665962
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low DE affinity (0.38), and the text \u2014 'Knowledge of agentic AI design patterns, including tool use, multi-agent coordination, memory system...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4067)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low DE affinity (0.38), and the text \u2014 'Knowledge of agentic AI design patterns, including tool use, multi-agent coordination, memory system...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4067).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.334994Z",
+    "pipeline_version": "1.0"
+  }
+}

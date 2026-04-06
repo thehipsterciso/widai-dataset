@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "RC-S-007",
+  "ksa_text": "Skill in designing consent management processes that satisfy applicable regulatory requirements, including granular consent collection, preference management, withdrawal mechanisms, and audit trail maintenance.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4062976284584981,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4048736144717134,
+        "cross_encoder_sts": 0.44092332065906215,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30874106463878326,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.4062976284584981,
+        "cross_encoder_sts": 0.4517369565217392,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28512608695652175,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4062976284584981
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "",
+        "score": 0.4048736144717134
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Risk & Compliance domain has low DE affinity (0.18), and the text \u2014 'Skill in designing consent management processes that satisfy applicable regulatory requirements, inc...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4063)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Risk & Compliance domain has low DE affinity (0.18), and the text \u2014 'Skill in designing consent management processes that satisfy applicable regulatory requirements, inc...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4063).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.336891Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DQ-K-005",
+  "ksa_text": "Knowledge of root cause analysis methods for data quality failures, including source system analysis, data transformation logic review, process failure identification, and remediation strategy development.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.41867987012987007,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40549639121940007,
+        "cross_encoder_sts": 0.434831605562579,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32726915297092285,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.41867987012987007,
+        "cross_encoder_sts": 0.449754081632653,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.335815306122449,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.41867987012987007
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "",
+        "score": 0.40549639121940007
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"transformation logic\", \"data quality\", \"transform  ?:data|layer|logic|pipeline|model\"). STRM composite score is moderate-to-strong (0.4187); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 1 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"transformation logic\", \"data quality\", \"transform  ?:data|layer|logic|pipeline|model\"). STRM composite score is moderate-to-strong (0.4187); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.239639Z",
+    "pipeline_version": "1.0"
+  }
+}

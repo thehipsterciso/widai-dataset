@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "DA-K-016",
+  "ksa_text": "Knowledge of data backup, recovery, and disaster recovery strategies, including backup scheduling and retention policies, recovery point and recovery time objectives (RPO/RTO), and recoverability testing procedures.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4069534942256441,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4069534942256441,
+        "cross_encoder_sts": 0.4277415309446254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35151872964169384,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.4035734976887519,
+        "cross_encoder_sts": 0.43429830508474576,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3216406779661017,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "",
+        "score": 0.4069534942256441
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4035734976887519
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: knowledge from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4070). A working DE would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: knowledge from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4070). A working DE would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.331884Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "AI-T-001",
+  "ksa_text": "Design, train, evaluate, and document machine learning models, including feature engineering decisions, algorithm selection rationale, and evaluation results against baseline.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.39165336048879834,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39165336048879834,
+        "cross_encoder_sts": 0.43884134419551935,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26581873727087574,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.36982792207792203,
+        "cross_encoder_sts": 0.4378017857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1885642857142857,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "",
+        "score": 0.39165336048879834
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.36982792207792203
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: task from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.3917). A working DE would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: task from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.3917). A working DE would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.400159Z",
+    "pipeline_version": "1.0"
+  }
+}

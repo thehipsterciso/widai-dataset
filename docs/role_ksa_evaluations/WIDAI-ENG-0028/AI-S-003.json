@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0028",
+  "role_name": "Data Engineer",
+  "ksa_id": "AI-S-003",
+  "ksa_text": "Skill in writing and refactoring ML code to production quality, including data processing, feature engineering, model training, evaluation pipelines, documentation, unit testing, and the transformation of research-quality prototypes into deployable systems.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4117570674486804,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4117570674486804,
+        "cross_encoder_sts": 0.43619483870967746,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34658967741935487,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": ""
+      },
+      "ddat": {
+        "composite": 0.37719629629629636,
+        "cross_encoder_sts": 0.44630740740740743,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19290000000000002,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "",
+        "score": 0.4117570674486804
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.37719629629629636
+      }
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"unit test\", \"feature engineer\"). STRM composite score is moderate-to-strong (0.4118); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in DE job postings or cert curricula (AWS DE, Databricks, dbt, GCP DE). Would a working Data Engineer self-report this as required?",
+    "evidence": "Challenge answered: the technical practice is implicit in DE work (domain affinity 0.38, 3 DE signal(s)). Framework vocabulary matching underrepresents many legitimate DE competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"unit test\", \"feature engineer\"). STRM composite score is moderate-to-strong (0.4118); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T17:27:37.293418Z",
+    "pipeline_version": "1.0"
+  }
+}
