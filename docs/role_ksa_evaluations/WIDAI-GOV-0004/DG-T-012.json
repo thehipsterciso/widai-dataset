@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0004",
+  "role_name": "Chief Analytics Officer",
+  "ksa_id": "DG-T-012",
+  "ksa_text": "Participate in the data governance council and stewardship community, representing the assigned domain's interests and escalating unresolved issues through established channels.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4298181818181818,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40911146245059293,
+        "cross_encoder_sts": 0.41628478260869567,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38998260869565216,
+        "jaccard": null,
+        "top_element_id": "424B",
+        "top_element_label": "Assess policy needs and collaborate with stakeholders to develop policies to govern cyber activities."
+      },
+      "ddat": {
+        "composite": 0.4212155844155844,
+        "cross_encoder_sts": 0.4238142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41428571428571426,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "nice": {
+        "composite": 0.41700000000000004,
+        "cross_encoder_sts": 0.43104000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37956,
+        "jaccard": null,
+        "top_element_id": "T1184",
+        "top_element_label": "Establish stakeholder communication channels"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4298181818181818,
+        "cross_encoder_sts": 0.4464,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3856,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.3",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.39263636363636367,
+        "cross_encoder_sts": 0.3859,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4106,
+        "jaccard": null,
+        "top_element_id": "4.A.4.a.7",
+        "top_element_label": "Resolving Conflicts and Negotiating with Others"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-2.3",
+        "element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",
+        "score": 0.4298181818181818
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.4212155844155844
+      },
+      {
+        "framework": "nice",
+        "element_id": "T1184",
+        "element_label": "Establish stakeholder communication channels",
+        "score": 0.41700000000000004
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "424B",
+        "element_label": "Assess policy needs and collaborate with stakeholders to develop policies to govern cyber activities.",
+        "score": 0.40911146245059293
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.4.a.7",
+        "element_label": "Resolving Conflicts and Negotiating with Others",
+        "score": 0.39263636363636367
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to Chief Analytics Officer scope \u2014 GOV-specific signals detected (\"data governance\", \"governance   :council|committee|board|body|structure|model|program|office\", \"data   :council|committee|board|working group|governance body\"). STRM composite is strong (0.4298). Domain Data Governance (affinity 0.65) is a natural fit for this governance role. Seniority is appropriate for C-suite executive level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 3 job-posting-level and 0 certification-level matches (CDMP, DAMA, IAPP, NIST AI RMF, ISO 42001). Competency appears regularly in Chief Analytics Officer role descriptions and/or governance certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to Chief Analytics Officer scope \u2014 GOV-specific signals detected (\"data governance\", \"governance   :council|committee|board|body|structure|model|program|office\", \"data   :council|committee|board|working group|governance body\"). STRM composite is strong (0.4298). Domain Data Governance (affinity 0.65) is a natural fit for this governance role. Seniority is appropriate for C-suite executive level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:45.093343Z",
+    "pipeline_version": "1.0"
+  }
+}

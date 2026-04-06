@@ -1,0 +1,125 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0005",
+  "role_name": "Chief AI Ethics Officer",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:19:51.518729Z",
+  "total_evaluated": 1069,
+  "include_count": 241,
+  "exclude_count": 828,
+  "inclusion_rate": 0.2254,
+  "calibration_status": "OK",
+  "calibration_note": "241 included KSAs within 100\u2013250 calibration target.",
+  "confidence_distribution": {
+    "high": 1069,
+    "medium": 0,
+    "low": 0
+  },
+  "adversarial_overturn_distribution": {
+    "zero_overturns": 1069,
+    "one_overturn": 0,
+    "two_overturns": 0
+  },
+  "domain_breakdown": {
+    "TF": {
+      "include": 0,
+      "exclude": 87,
+      "total": 87,
+      "inclusion_rate": 0.0
+    },
+    "DA": {
+      "include": 0,
+      "exclude": 93,
+      "total": 93,
+      "inclusion_rate": 0.0
+    },
+    "DQ": {
+      "include": 8,
+      "exclude": 74,
+      "total": 82,
+      "inclusion_rate": 0.098
+    },
+    "DG": {
+      "include": 47,
+      "exclude": 45,
+      "total": 92,
+      "inclusion_rate": 0.511
+    },
+    "SP": {
+      "include": 16,
+      "exclude": 68,
+      "total": 84,
+      "inclusion_rate": 0.19
+    },
+    "AI": {
+      "include": 6,
+      "exclude": 97,
+      "total": 103,
+      "inclusion_rate": 0.058
+    },
+    "AG": {
+      "include": 70,
+      "exclude": 37,
+      "total": 107,
+      "inclusion_rate": 0.654
+    },
+    "RC": {
+      "include": 34,
+      "exclude": 40,
+      "total": 74,
+      "inclusion_rate": 0.459
+    },
+    "RM": {
+      "include": 23,
+      "exclude": 78,
+      "total": 101,
+      "inclusion_rate": 0.228
+    },
+    "LS": {
+      "include": 32,
+      "exclude": 57,
+      "total": 89,
+      "inclusion_rate": 0.36
+    },
+    "OP": {
+      "include": 5,
+      "exclude": 64,
+      "total": 69,
+      "inclusion_rate": 0.072
+    },
+    "AB": {
+      "include": 0,
+      "exclude": 88,
+      "total": 88,
+      "inclusion_rate": 0.0
+    }
+  },
+  "dimension_breakdown": {
+    "Skill": {
+      "included": 79,
+      "excluded": 249
+    },
+    "Task": {
+      "included": 46,
+      "excluded": 201
+    },
+    "Knowledge": {
+      "included": 88,
+      "excluded": 193
+    },
+    "Ability": {
+      "included": 28,
+      "excluded": 185
+    }
+  },
+  "score_analysis": {
+    "avg_composite_included": 0.1967,
+    "avg_composite_excluded": 0.2132
+  },
+  "adversarial_challenge_counts": {
+    "pass_3_challenges": 0,
+    "pass_3_overturns": 0,
+    "pass_4_challenges": 24,
+    "pass_4_overturns": 0
+  }
+}
