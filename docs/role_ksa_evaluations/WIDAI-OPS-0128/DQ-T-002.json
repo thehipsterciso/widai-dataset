@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0128",
+  "role_name": "Data Operations Specialist",
+  "ksa_id": "DQ-T-002",
+  "ksa_text": "Define, document, and maintain enterprise data quality standards, policies, procedures, and measurement methodologies.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4163524926686217,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39637855714505466,
+        "cross_encoder_sts": 0.42335820642978006,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32443282571912013,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4163524926686217,
+        "cross_encoder_sts": 0.4551822580645161,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3128064516129032,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4063766233766234,
+        "cross_encoder_sts": 0.41885,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37311428571428573,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3911262716450217,
+        "cross_encoder_sts": 0.42565654761904764,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2990455357142857,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3658527272727272,
+        "cross_encoder_sts": 0.40846499999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25222,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4076893939393939,
+        "cross_encoder_sts": 0.43931666666666663,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32334999999999997,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4163524926686217
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.7",
+        "element_label": "Category Flexibility",
+        "score": 0.4076893939393939
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4063766233766234
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.39637855714505466
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.3911262716450217
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope: Data Quality (affinity 0.72) \u2014 \"Define, document, and maintain enterprise data quality standards, policies, proc...\" \u2014 no role signals. STRM: moderate (0.4164)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 0 match(es). Gap not material to Data Operations Specialist.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope: Data Quality (affinity 0.72) \u2014 \"Define, document, and maintain enterprise data quality standards, policies, proc...\" \u2014 no role signals. STRM: moderate (0.4164).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:04:43.012546+00:00",
+    "pipeline_version": "1.0"
+  }
+}

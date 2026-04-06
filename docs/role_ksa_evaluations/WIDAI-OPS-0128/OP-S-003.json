@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0128",
+  "role_name": "Data Operations Specialist",
+  "ksa_id": "OP-S-003",
+  "ksa_text": "Skill in measuring data and AI adoption and identifying adoption barriers, including usage analytics analysis, stakeholder feedback gathering, friction point diagnosis, and adoption strategy adjustment.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.41582658662092625,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39615701598579034,
+        "cross_encoder_sts": 0.4420889875666074,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27367175843694497,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.41582658662092625,
+        "cross_encoder_sts": 0.4607905660377359,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2959226415094339,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-013",
+        "top_element_label": "Applying statistical and analytical tools and techniques"
+      },
+      "eu_ai_act": {
+        "composite": 0.3547300395256917,
+        "cross_encoder_sts": 0.4107695652173913,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2052913043478261,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40326161316428377,
+        "cross_encoder_sts": 0.4533575667655786,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26967240356083083,
+        "jaccard": null,
+        "top_element_id": "K0692",
+        "top_element_label": "Knowledge of vulnerability assessment tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39161902748414373,
+        "cross_encoder_sts": 0.4464720930232558,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24534418604651162,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.1",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.3851615384615385,
+        "cross_encoder_sts": 0.42910000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2679923076923077,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-013",
+        "element_label": "Applying statistical and analytical tools and techniques",
+        "score": 0.41582658662092625
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0692",
+        "element_label": "Knowledge of vulnerability assessment tools and techniques",
+        "score": 0.40326161316428377
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.39615701598579034
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-1.1",
+        "element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",
+        "score": 0.39161902748414373
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.3851615384615385
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps to Data Operations Specialist scope \u2014 role signals (\"stakeholder\", \"adopt\", \"adoption   :metric|rate|barrier|driver|strategy|plan|roadmap\"). STRM: moderate (0.4158). Domain Operations & Program Management (affinity 0.82), seniority appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External strong: 3 job-posting + 0 cert matches for Data Operations Specialist role.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps to Data Operations Specialist scope \u2014 role signals (\"stakeholder\", \"adopt\", \"adoption   :metric|rate|barrier|driver|strategy|plan|roadmap\"). STRM: moderate (0.4158). Domain Operations & Program Management (affinity 0.82), seniority appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:04:43.016025+00:00",
+    "pipeline_version": "1.0"
+  }
+}

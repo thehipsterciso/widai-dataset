@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0127",
+  "role_name": "Data and AI Literacy Trainer",
+  "ksa_id": "DG-T-007",
+  "ksa_text": "Establish and operate comprehensive AI risk assessment, monitoring, and compliance infrastructure, including risk evaluation frameworks, performance thresholds, drift detection, incident reporting, and regulatory adherence.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.5150280868385346,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41709178885630505,
+        "cross_encoder_sts": 0.43489585253456225,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36961428571428573,
+        "jaccard": null,
+        "top_element_id": "5868",
+        "top_element_label": "Define and/or implement policies and procedures to enable an AI risk assessment process and assess risk mitigation efforts."
+      },
+      "ddat": {
+        "composite": 0.40811293706293705,
+        "cross_encoder_sts": 0.44614423076923077,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30669615384615384,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-020",
+        "top_element_label": "Business architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.509265034965035,
+        "cross_encoder_sts": 0.4993173076923077,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5357923076923077,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41082390490865067,
+        "cross_encoder_sts": 0.4398498789346247,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33342130750605325,
+        "jaccard": null,
+        "top_element_id": "K0946",
+        "top_element_label": "Knowledge of incident reporting policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5150280868385346,
+        "cross_encoder_sts": 0.5130477611940298,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5203089552238807,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3850645454545455,
+        "cross_encoder_sts": 0.40601000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32921,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5150280868385346
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.509265034965035
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5868",
+        "element_label": "Define and/or implement policies and procedures to enable an AI risk assessment process and assess risk mitigation efforts.",
+        "score": 0.41709178885630505
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0946",
+        "element_label": "Knowledge of incident reporting policies and procedures",
+        "score": 0.41082390490865067
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-020",
+        "element_label": "Business architecture",
+        "score": 0.40811293706293705
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope: Data Governance (affinity 0.38) \u2014 \"Establish and operate comprehensive AI risk assessment, monitoring, and complian...\" \u2014 no role signals. STRM: strong (0.5150)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 2 match(es). Gap not material to Data and AI Literacy Trainer.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope: Data Governance (affinity 0.38) \u2014 \"Establish and operate comprehensive AI risk assessment, monitoring, and complian...\" \u2014 no role signals. STRM: strong (0.5150).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:04:42.292018+00:00",
+    "pipeline_version": "1.0"
+  }
+}

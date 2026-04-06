@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0131",
+  "role_name": "AI Adoption / Change Manager",
+  "ksa_id": "AG-T-007",
+  "ksa_text": "Execute bias audits on AI systems in development and production, documenting methodology, findings, and recommended interventions.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5183226446280992,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39897786918963396,
+        "cross_encoder_sts": 0.43443506787330316,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3044253393665159,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.39295674931129476,
+        "cross_encoder_sts": 0.4529757575757576,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23290606060606062,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-039",
+        "top_element_label": "Continual service improvement"
+      },
+      "eu_ai_act": {
+        "composite": 0.5183226446280992,
+        "cross_encoder_sts": 0.5193163636363637,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5156727272727273,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-050",
+        "top_element_label": "Post-market monitoring by providers"
+      },
+      "nice": {
+        "composite": 0.3998678321678321,
+        "cross_encoder_sts": 0.4428505494505494,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28524725274725277,
+        "jaccard": null,
+        "top_element_id": "K1007",
+        "top_element_label": "Knowledge of intelligence requirements tasking systems and software"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5081393048128342,
+        "cross_encoder_sts": 0.5202455882352941,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47585588235294113,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3917295454545454,
+        "cross_encoder_sts": 0.424975,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.303075,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-050",
+        "element_label": "Post-market monitoring by providers",
+        "score": 0.5183226446280992
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5081393048128342
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1007",
+        "element_label": "Knowledge of intelligence requirements tasking systems and software",
+        "score": 0.3998678321678321
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.39897786918963396
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-039",
+        "element_label": "Continual service improvement",
+        "score": 0.39295674931129476
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded: task in AI Governance (affinity 0.35); insufficient signal match for domain affinity. STRM: strong (0.5183)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 0 match(es). Gap not material to AI Adoption / Change Manager.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded: task in AI Governance (affinity 0.35); insufficient signal match for domain affinity. STRM: strong (0.5183).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:04:59.593652+00:00",
+    "pipeline_version": "1.0"
+  }
+}

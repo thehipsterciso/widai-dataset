@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0131",
+  "role_name": "AI Adoption / Change Manager",
+  "ksa_id": "AI-S-007",
+  "ksa_text": "Skill in designing and evaluating prompt engineering strategies, including few-shot prompting, chain-of-thought prompting, and structured output generation.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.40249935064935066,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3800150026274304,
+        "cross_encoder_sts": 0.4224323699421965,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2669020231213873,
+        "jaccard": null,
+        "top_element_id": "1062",
+        "top_element_label": "Knowledge of software reverse engineering techniques."
+      },
+      "ddat": {
+        "composite": 0.3780412587412587,
+        "cross_encoder_sts": 0.4489115384615384,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18905384615384616,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.38765272727272726,
+        "cross_encoder_sts": 0.40252999999999994,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34798,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-029",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.38359515776319897,
+        "cross_encoder_sts": 0.429554295532646,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2610374570446735,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40249935064935066,
+        "cross_encoder_sts": 0.4351857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3153357142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.31422727272727274,
+        "cross_encoder_sts": 0.3745,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1535,
+        "jaccard": null,
+        "top_element_id": "1.A.1.g.2",
+        "top_element_label": "Time Sharing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-5.2",
+        "element_label": "Processes are in place for robust engagement with relevant AI actors.",
+        "score": 0.40249935064935066
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-029",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.38765272727272726
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.38359515776319897
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1062",
+        "element_label": "Knowledge of software reverse engineering techniques.",
+        "score": 0.3800150026274304
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.3780412587412587
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded: skill in AI & ML Infrastructure (affinity 0.45); insufficient signal match for domain affinity. STRM: moderate (0.4025)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 1 match(es). Gap not material to AI Adoption / Change Manager.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded: skill in AI & ML Infrastructure (affinity 0.45); insufficient signal match for domain affinity. STRM: moderate (0.4025).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:04:59.793327+00:00",
+    "pipeline_version": "1.0"
+  }
+}

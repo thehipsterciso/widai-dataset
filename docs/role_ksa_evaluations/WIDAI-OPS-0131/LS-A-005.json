@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0131",
+  "role_name": "AI Adoption / Change Manager",
+  "ksa_id": "LS-A-005",
+  "ksa_text": "Ability to collaborate and coordinate across diverse internal and external stakeholders, sustaining cross-functional teamwork, external partnerships, and stakeholder alignment throughout organizational initiatives.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4370454545454545,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.422981475128645,
+        "cross_encoder_sts": 0.4463044025157233,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3607870020964361,
+        "jaccard": null,
+        "top_element_id": "6923",
+        "top_element_label": "Ability to relate strategy, business, and technology in the context of organizational dynamics."
+      },
+      "ddat": {
+        "composite": 0.4370454545454545,
+        "cross_encoder_sts": 0.47917846153846155,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3246907692307692,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.3923888111888112,
+        "cross_encoder_sts": 0.4170076923076923,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32673846153846153,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41034080897076486,
+        "cross_encoder_sts": 0.4445770925110132,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3190440528634361,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41288378378378376,
+        "cross_encoder_sts": 0.4419675675675675,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33532702702702705,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.43688,
+        "cross_encoder_sts": 0.45133999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39832,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4370454545454545
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.b",
+        "element_label": "Active Learning",
+        "score": 0.43688
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "6923",
+        "element_label": "Ability to relate strategy, business, and technology in the context of organizational dynamics.",
+        "score": 0.422981475128645
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41288378378378376
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41034080897076486
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: ability maps to AI Adoption / Change Manager scope \u2014 role signals (\"stakeholder   :manage|align|communicat|engag|report|present\", \"stakeholder\", \"cross.functional\"). STRM: strong (0.4370). Domain Leadership & Strategy (affinity 0.78), seniority appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External present: 1 match(es) \u2014 sufficient to uphold for AI Adoption / Change Manager.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: ability maps to AI Adoption / Change Manager scope \u2014 role signals (\"stakeholder   :manage|align|communicat|engag|report|present\", \"stakeholder\", \"cross.functional\"). STRM: strong (0.4370). Domain Leadership & Strategy (affinity 0.78), seniority appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:04:59.677682+00:00",
+    "pipeline_version": "1.0"
+  }
+}

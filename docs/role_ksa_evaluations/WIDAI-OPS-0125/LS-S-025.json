@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0125",
+  "role_name": "Data and AI Program Manager",
+  "ksa_id": "LS-S-025",
+  "ksa_text": "Skill in designing stakeholder communication strategies that tailor data and AI value propositions for different audiences, including executives, technical teams, and operational users.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps to Data and AI Program Manager scope \u2014 role signals (\"stakeholder\"). STRM: minimal (0.0000). Domain Leadership & Strategy (affinity 0.75), seniority appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External present: 2 match(es) in PM job postings/certs.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps to Data and AI Program Manager scope \u2014 role signals (\"stakeholder\"). STRM: minimal (0.0000). Domain Leadership & Strategy (affinity 0.75), seniority appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:55.389131+00:00",
+    "pipeline_version": "1.0"
+  }
+}

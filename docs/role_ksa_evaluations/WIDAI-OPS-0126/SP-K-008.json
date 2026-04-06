@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0126",
+  "role_name": "Data and AI Adoption Specialist",
+  "ksa_id": "SP-K-008",
+  "ksa_text": "Knowledge of the Data Protection Officer role and responsibilities, including statutory independence requirements under GDPR Articles 37-39, reporting structures, conflict-of-interest prohibitions, advisory authority, and coordination with supervisory authorities.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4117563636363636,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39527712765957446,
+        "cross_encoder_sts": 0.4108898936170213,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.353643085106383,
+        "jaccard": null,
+        "top_element_id": "110A",
+        "top_element_label": "Knowledge of security management."
+      },
+      "ddat": {
+        "composite": 0.4017727272727273,
+        "cross_encoder_sts": 0.427615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33286,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4117563636363636,
+        "cross_encoder_sts": 0.38761999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47612,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-008",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.41148407212622085,
+        "cross_encoder_sts": 0.43779504132231406,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3413214876033058,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38543863636363634,
+        "cross_encoder_sts": 0.3876,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.379675,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3979181818181817,
+        "cross_encoder_sts": 0.41164999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36129999999999995,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-008",
+        "element_label": "Data and data governance",
+        "score": 0.4117563636363636
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.41148407212622085
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.4017727272727273
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.3979181818181817
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "110A",
+        "element_label": "Knowledge of security management.",
+        "score": 0.39527712765957446
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope: Security & Privacy (affinity 0.12) \u2014 \"Knowledge of the Data Protection Officer role and responsibilities, including st...\" \u2014 no role signals. STRM: moderate (0.4118)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 0 match(es). Gap not material to Data and AI Adoption Specialist.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope: Security & Privacy (affinity 0.12) \u2014 \"Knowledge of the Data Protection Officer role and responsibilities, including st...\" \u2014 no role signals. STRM: moderate (0.4118).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:04:37.673907+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0125",
+  "role_name": "Data and AI Program Manager",
+  "ksa_id": "LS-K-023",
+  "ksa_text": "Knowledge of AI resource allocation and alternative analysis methodologies, including assessing resource requirements for AI initiatives, conducting cost-benefit analysis across competing AI projects, and optimizing resource utilization.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps to Data and AI Program Manager scope \u2014 role signals (\"ai   :program|initiative|portfolio|transformation|\", \"resource   :alloc|plan|manage|prior\"). STRM: minimal (0.0000). Domain Leadership & Strategy (affinity 0.75), seniority appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External: no matches in PM job postings or cert curricula.",
+    "evidence": "Challenge answered: PM competency implicit (affinity 0.75, 2 signal(s)).",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps to Data and AI Program Manager scope \u2014 role signals (\"ai   :program|initiative|portfolio|transformation|\", \"resource   :alloc|plan|manage|prior\"). STRM: minimal (0.0000). Domain Leadership & Strategy (affinity 0.75), seniority appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:55.421508+00:00",
+    "pipeline_version": "1.0"
+  }
+}

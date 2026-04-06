@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0126",
+  "role_name": "Data and AI Adoption Specialist",
+  "ksa_id": "AI-T-030",
+  "ksa_text": "Design and deliver AI literacy and training programs, including competency assessment, curriculum development for technical and non-technical audiences, and evaluation of training effectiveness in building organizational AI fluency.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps to Data and AI Adoption Specialist scope \u2014 role signals (\"training   :program|material|session|workshop|course|module|\", \"curricul\", \"literac\"). STRM: minimal (0.0000). Domain AI & ML Infrastructure (affinity 0.42), seniority appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External strong: 2 job-posting + 1 cert matches for Data and AI Adoption Specialist role.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps to Data and AI Adoption Specialist scope \u2014 role signals (\"training   :program|material|session|workshop|course|module|\", \"curricul\", \"literac\"). STRM: minimal (0.0000). Domain AI & ML Infrastructure (affinity 0.42), seniority appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:04:37.926187+00:00",
+    "pipeline_version": "1.0"
+  }
+}
