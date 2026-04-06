@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0016",
+  "role_name": "Data Protection Officer",
+  "ksa_id": "RM-S-016",
+  "ksa_text": "Skill in AI fairness assessment and bias detection, including application of fairness metrics, measurement of algorithmic bias across demographic groups, and evaluation of bias mitigation effectiveness.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to Data Protection Officer scope \u2014 GOV-specific signals detected (\"ai fairness\", \"ai assess\"). STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). Domain Risk Management (affinity 0.82) is a natural fit for this governance role. Seniority is appropriate for manager-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in governance job postings or certification curricula (CDMP, DAMA, IAPP CIPP/CIPM, NIST AI RMF, ISO 42001). Would a working Data Protection Officer self-report this as a required competency?",
+    "evidence": "Challenge answered: the governance competency is implicit in Data Protection Officer practice (domain affinity 0.82, 2 GOV signal(s)). Framework vocabulary matching underrepresents many legitimate governance competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to Data Protection Officer scope \u2014 GOV-specific signals detected (\"ai fairness\", \"ai assess\"). STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). Domain Risk Management (affinity 0.82) is a natural fit for this governance role. Seniority is appropriate for manager-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:32:04.544449Z",
+    "pipeline_version": "1.0"
+  }
+}

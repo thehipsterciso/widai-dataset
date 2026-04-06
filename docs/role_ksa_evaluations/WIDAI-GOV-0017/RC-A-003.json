@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0017",
+  "role_name": "Privacy Program Manager",
+  "ksa_id": "RC-A-003",
+  "ksa_text": "Ability to conduct risk analyses of systems, applications, and business processes to identify compliance-related risks and assess organizational impact.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4692260442260442,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42699675324675324,
+        "cross_encoder_sts": 0.4483747899159664,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36998865546218485,
+        "jaccard": null,
+        "top_element_id": "1027A",
+        "top_element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy."
+      },
+      "ddat": {
+        "composite": 0.4692260442260442,
+        "cross_encoder_sts": 0.5237891891891892,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32372432432432435,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-016",
+        "top_element_label": "Architecture communication"
+      },
+      "eu_ai_act": {
+        "composite": 0.4253785714285715,
+        "cross_encoder_sts": 0.42762857142857147,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41937857142857143,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-009",
+        "top_element_label": "Technical documentation"
+      },
+      "nice": {
+        "composite": 0.42012126823793494,
+        "cross_encoder_sts": 0.4527253086419753,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3331771604938272,
+        "jaccard": null,
+        "top_element_id": "K0476",
+        "top_element_label": "Knowledge of language processing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4335684210526316,
+        "cross_encoder_sts": 0.4364578947368421,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42586315789473683,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.430892513368984,
+        "cross_encoder_sts": 0.46385882352941177,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34298235294117646,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-016",
+        "element_label": "Architecture communication",
+        "score": 0.4692260442260442
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4335684210526316
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.430892513368984
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1027A",
+        "element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy.",
+        "score": 0.42699675324675324
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-009",
+        "element_label": "Technical documentation",
+        "score": 0.4253785714285715
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: ability from Risk & Compliance (affinity 0.85); no GOV-specific signals and low domain affinity. STRM composite is strong (0.4692). A Privacy Program Manager would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 2 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Privacy Program Manager whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: ability from Risk & Compliance (affinity 0.85); no GOV-specific signals and low domain affinity. STRM composite is strong (0.4692). A Privacy Program Manager would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:32:05.331268Z",
+    "pipeline_version": "1.0"
+  }
+}

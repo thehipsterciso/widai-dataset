@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0018",
+  "role_name": "Privacy Engineer",
+  "ksa_id": "SP-S-007",
+  "ksa_text": "Skill in designing data classification frameworks and implementing classification controls that enforce handling, access, and retention requirements based on data sensitivity and regulatory classification.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4233152804642166,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40102157287157286,
+        "cross_encoder_sts": 0.43446031746031744,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3118515873015873,
+        "jaccard": null,
+        "top_element_id": "1027A",
+        "top_element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy."
+      },
+      "ddat": {
+        "composite": 0.4173946330777656,
+        "cross_encoder_sts": 0.4642734939759036,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2923843373493976,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4233152804642166,
+        "cross_encoder_sts": 0.44837021276595745,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3565021276595745,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-006",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.408300826446281,
+        "cross_encoder_sts": 0.44398829389788297,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31313424657534245,
+        "jaccard": null,
+        "top_element_id": "K0639",
+        "top_element_label": "Knowledge of code tailoring tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3969681818181818,
+        "cross_encoder_sts": 0.4352111111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29498703703703705,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40374755244755245,
+        "cross_encoder_sts": 0.44326153846153843,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29837692307692304,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-006",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.4233152804642166
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4173946330777656
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0639",
+        "element_label": "Knowledge of code tailoring tools and techniques",
+        "score": 0.408300826446281
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.40374755244755245
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1027A",
+        "element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy.",
+        "score": 0.40102157287157286
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to Privacy Engineer scope \u2014 GOV-specific signals detected (\"data classif\"). STRM composite is strong (0.4233). Domain Security & Privacy (affinity 0.88) is a natural fit for this governance role. Seniority is appropriate for IC level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 2 match(es) in governance job postings or certification scope (CDMP, IAPP, NIST AI RMF). Competency appears in Privacy Engineer role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to Privacy Engineer scope \u2014 GOV-specific signals detected (\"data classif\"). STRM composite is strong (0.4233). Domain Security & Privacy (affinity 0.88) is a natural fit for this governance role. Seniority is appropriate for IC level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:32:06.911150Z",
+    "pipeline_version": "1.0"
+  }
+}
