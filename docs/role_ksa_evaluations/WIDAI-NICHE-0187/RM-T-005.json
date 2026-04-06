@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0187",
+  "role_name": "AI Agent Developer",
+  "ksa_id": "RM-T-005",
+  "ksa_text": "Manage test data for AI systems, including test data generation, validation, sensitivity analysis of test cases, and protection of sensitive test data.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.49725272727272724,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40688986742424244,
+        "cross_encoder_sts": 0.4376389583333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32489229166666667,
+        "jaccard": null,
+        "top_element_id": "5905",
+        "top_element_label": "Perform risk assessment whenever an AI application or AI-enabled system undergoes a major change, when emergent behaviors are detected, and/or unintended consequences are reported."
+      },
+      "ddat": {
+        "composite": 0.39287408123791107,
+        "cross_encoder_sts": 0.4449765957446809,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2539340425531915,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4692912959381045,
+        "cross_encoder_sts": 0.4629617021276596,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.48617021276595745,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4086764386989158,
+        "cross_encoder_sts": 0.44357201834862386,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3156215596330275,
+        "jaccard": null,
+        "top_element_id": "K1063",
+        "top_element_label": "Knowledge of operation assessment processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.49725272727272724,
+        "cross_encoder_sts": 0.4949307692307692,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5034446153846154,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.4",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.3791402597402597,
+        "cross_encoder_sts": 0.4009857142857142,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3208857142857143,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.4",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.49725272727272724
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4692912959381045
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1063",
+        "element_label": "Knowledge of operation assessment processes",
+        "score": 0.4086764386989158
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5905",
+        "element_label": "Perform risk assessment whenever an AI application or AI-enabled system undergoes a major change, when emergent behaviors are detected, and/or unintended consequences are reported.",
+        "score": 0.40688986742424244
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.39287408123791107
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RM-T-005 (Risk Management/Task) scores 0.497 composite (highest: NIST AI RMF at 0.497). Scope is edge_case for AI Agent Developer: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Risk Management, composite 0.497. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Risk Management for AI Agent Developer?",
+    "evidence": "Risk Management appears in ~40% of AI Agent Developer postings. Risk from autonomous actions in senior AI Agent Developer profiles. Zero role-specific signals insufficient for edge inclusion at 40% market penetration.",
+    "ruling": "Revised to exclude. Risk Management without role signals not market-supported. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Risk Management without role signals not market-supported. Final decision: exclude.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:53:13.847591Z",
+    "pipeline_version": "1.0"
+  }
+}

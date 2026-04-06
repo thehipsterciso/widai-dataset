@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0185",
+  "role_name": "Memory Engineer",
+  "ksa_id": "DG-T-023",
+  "ksa_text": "Analyze and define enterprise data requirements and specifications, translating business needs into technical specifications and ensuring alignment with strategic objectives.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DG-T-023 (Data Governance/Task) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.000. Highest framework: DCWF at 0.000."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, Data Governance, composite 0.000. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Data Governance (composite 0.000)?",
+    "evidence": "Data Governance at ~8% market presence. Data governance programs above IC engineering scope. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA DG-T-023 (Data Governance/Task) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.000. Highest framework: DCWF at 0.000.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:53:13.222083Z",
+    "pipeline_version": "1.0"
+  }
+}

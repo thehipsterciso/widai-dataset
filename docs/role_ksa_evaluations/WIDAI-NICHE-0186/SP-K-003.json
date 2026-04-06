@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0186",
+  "role_name": "Trust Engineer",
+  "ksa_id": "SP-K-003",
+  "ksa_text": "Knowledge of privacy-by-design and privacy-by-default principles, including integration into system architecture, data minimization, purpose limitation, storage limitation, and consent management design patterns across data and AI systems.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.41255493230174084,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39359977753058956,
+        "cross_encoder_sts": 0.4380575083426029,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27504582869855393,
+        "jaccard": null,
+        "top_element_id": "99A",
+        "top_element_label": "Knowledge of principles and methods for integrating system components."
+      },
+      "ddat": {
+        "composite": 0.38920590909090913,
+        "cross_encoder_sts": 0.43592375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.264625,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.41255493230174084,
+        "cross_encoder_sts": 0.4324872340425532,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35940212765957447,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4043479286536249,
+        "cross_encoder_sts": 0.44656392405063294,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2917719409282701,
+        "jaccard": null,
+        "top_element_id": "K0958",
+        "top_element_label": "Knowledge of system integration principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39314230769230774,
+        "cross_encoder_sts": 0.4242673076923077,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3101423076923077,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.35754393939393936,
+        "cross_encoder_sts": 0.40796666666666664,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22308333333333333,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.41255493230174084
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0958",
+        "element_label": "Knowledge of system integration principles and practices",
+        "score": 0.4043479286536249
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "99A",
+        "element_label": "Knowledge of principles and methods for integrating system components.",
+        "score": 0.39359977753058956
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.39314230769230774
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.38920590909090913
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-K-003 (Security & Privacy/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.413. Highest framework: EU AI Act at 0.413."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Security & Privacy, composite 0.413. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Security & Privacy (composite 0.413)?",
+    "evidence": "Security & Privacy at ~55% market presence. Adversarial testing and AI red-teaming overlap with security in ~55% of JDs. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA SP-K-003 (Security & Privacy/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.413. Highest framework: EU AI Act at 0.413.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:53:13.575178Z",
+    "pipeline_version": "1.0"
+  }
+}

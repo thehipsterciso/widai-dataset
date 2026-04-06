@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-NICHE-0187",
+  "role_name": "AI Agent Developer",
+  "ksa_id": "DQ-T-001",
+  "ksa_text": "Design, implement, and conduct quality assurance testing and validation procedures for data systems, datasets, and analytical processes.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.42006065128900955,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3799136808397082,
+        "cross_encoder_sts": 0.43359099804305284,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23677416829745598,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.42006065128900955,
+        "cross_encoder_sts": 0.48660000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24262238805970152,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3944566433566433,
+        "cross_encoder_sts": 0.4550923076923077,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23276153846153846,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3697715067340067,
+        "cross_encoder_sts": 0.4313828703703704,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20547453703703702,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3593355731225297,
+        "cross_encoder_sts": 0.423904347826087,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18715217391304348,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.38440707070707075,
+        "cross_encoder_sts": 0.4426888888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2289888888888889,
+        "jaccard": null,
+        "top_element_id": "2.B.3.g",
+        "top_element_label": "Operations Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.42006065128900955
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.3944566433566433
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.g",
+        "element_label": "Operations Monitoring",
+        "score": 0.38440707070707075
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.3799136808397082
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.3697715067340067
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-T-001 (Data Quality/Task) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.420. Highest framework: DDaT at 0.420."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Data Quality, composite 0.420. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Data Quality (composite 0.420)?",
+    "evidence": "Data Quality at ~52% market presence. Agent output quality, eval harnesses, and data validation in ~50% of JDs. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DQ-T-001 (Data Quality/Task) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.420. Highest framework: DDaT at 0.420.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:53:13.932466Z",
+    "pipeline_version": "1.0"
+  }
+}
