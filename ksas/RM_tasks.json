@@ -3,98 +3,37 @@
   "domain_code": "RM",
   "domain_title": "Risk Management",
   "type": "Task",
-  "count": 10,
+  "count": 29,
   "schema_version": "3.0.0",
   "entries": [
-    {
-      "ksa_id": "RM-T-001",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Conduct comprehensive AI risk assessments to identify and document technical, organizational, and mission risks, including threat identification, vulnerability analysis, and risk mitigation strategies for AI systems and components.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    },
-    {
-      "ksa_id": "RM-T-002",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Perform AI architecture security reviews and threat assessments to identify security gaps, evaluate vulnerabilities, analyze threat actors and attack surfaces, and develop security risk management plans.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    },
-    {
-      "ksa_id": "RM-T-003",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Design and execute comprehensive AI system testing and validation programs, including test plan development, evaluation master plans, automated testing frameworks, test data management, and results analysis to identify failure modes.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    },
-    {
-      "ksa_id": "RM-T-004",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Conduct threat modeling and assessment to identify threat actors, characterize attack surfaces, evaluate threat criticality, analyze insider risks, and develop threat profiles for AI systems.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    },
-    {
-      "ksa_id": "RM-T-005",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Establish and operate continuous monitoring programs for deployed AI systems to assess operational performance, measure compliance with risk controls, detect performance degradation and behavioral drift, and report monitoring findings.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    },
-    {
-      "ksa_id": "RM-T-006",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Develop and maintain enterprise risk management documentation including AI system design specifications, testing procedures, validation standards, model cards, evaluation reports, and audit records meeting governance and regulatory requirements.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    },
-    {
-      "ksa_id": "RM-T-007",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Produce and communicate risk management reports for senior leadership and board governance bodies, including aggregate AI risk assessments, continuous monitoring findings, remediation progress, and strategic risk mitigation recommendations.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    },
-    {
-      "ksa_id": "RM-T-008",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Establish and maintain enterprise model inventory and governance structures, including AI model registration, risk-based tiering, development standards, approval gates, validation cadences, and lifecycle management through retirement.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    },
-    {
-      "ksa_id": "RM-T-009",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Develop machine learning and AI code testing and validation procedures, including model behavior analysis, performance metric evaluation, failure mode identification, and reliability assessment methodologies.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    },
-    {
-      "ksa_id": "RM-T-010",
-      "type": "Task",
-      "domain": "Risk Management",
-      "domain_code": "RM",
-      "statement": "Define and implement risk measurement methodologies and quantitative metrics for assessing AI system risks, including sensitivity analysis, performance measurement requirements, and continuous monitoring metrics.",
-      "origin_framework": "WIDAI",
-      "origin_version": "0.8.0"
-    }
+    {"ksa_id": "RM-T-001", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Conduct comprehensive AI risk assessments to identify and document technical, organizational, and mission-level risks, including threat identification, vulnerability analysis, and risk prioritization.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-002", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Perform AI architecture security reviews and gap analysis to evaluate security controls, identify architectural vulnerabilities, and develop security risk management plans.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-003", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Design comprehensive Test and Evaluation Master Plans for AI systems, including test strategy, scope, methodologies, and resource allocation.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-004", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Execute AI system testing activities including functional testing, integration testing, automated testing, and acceptance testing to validate system performance.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-005", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Manage test data for AI systems, including test data generation, validation, sensitivity analysis of test cases, and protection of sensitive test data.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-006", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Conduct threat modeling and assessment to identify threat actors, characterize attack surfaces, analyze threat criticality, and evaluate insider threats.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-007", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Establish and operate continuous monitoring programs for deployed AI systems to track operational performance, detect degradation and behavioral drift.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-008", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Develop continuous monitoring measurement strategies, performance indicators, and automated reporting requirements for ongoing risk assessment.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-009", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Produce AI system design specifications, technical documentation, and architectural records meeting governance and regulatory standards.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-010", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Develop system testing procedures, test specifications, testing standards, and quality standards for AI system development.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-011", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Create system administration standard operating procedures and implementation guidance for AI system deployment and operation.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-012", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Produce AI system model cards, evaluation reports, and quality assurance documentation meeting governance review and regulatory submission requirements.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-013", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Develop machine learning and AI code-specific testing and validation procedures, including model behavior analysis and performance metric evaluation.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-014", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Produce risk management reports and aggregate risk assessments for senior leadership and governance bodies, including monitoring findings and remediation tracking.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-015", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Define and implement quantitative and qualitative risk measurement methodologies, including sensitivity analysis, risk metrics, and performance measurement frameworks.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-016", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Establish and maintain enterprise AI model inventory and governance structures, including model registration, risk-based tiering, and lifecycle management.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-017", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Develop risk assessment policies, procedures, and frameworks to enable organizational AI risk assessment processes and risk mitigation execution.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-018", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Conduct and document test evaluation results, including failure analysis, performance findings, deployment readiness assessment, and technical recommendations.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-019", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Assess and document AI system performance characteristics, including reliability, functionality, security, compatibility, and robustness of AI tools.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-020", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Appoint and coordinate multidisciplinary AI expert teams to identify, assess, and manage risk throughout the AI system development lifecycle.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-021", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Conduct control system risk assessments, including identification of cyber-physical risks, threat evaluation, and development of mitigation strategies.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-022", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Develop and maintain AI risk management frameworks, including policies for risk governance, responsibility assignment, and organizational alignment.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-023", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Integrate continuous monitoring programs into organizational governance structures, establishing reporting relationships and escalation procedures.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-024", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Design and execute exercise scenarios, testing, and simulation activities to assess AI system resilience and evaluate risk mitigation effectiveness.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-025", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Establish performance measurement requirements and assessment methodologies for continuous monitoring tools and risk mitigation technologies.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-026", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Evaluate threat decision-making processes, threat effectiveness, and emerging threat patterns to inform AI system security assessments.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-027", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Develop quality assurance processes for AI products throughout their lifecycle, including validation protocols and quality assessment criteria.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-028", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Create assurance cases for AI systems, documenting how systems satisfy stakeholder needs including safety, security, and regulatory requirements.", "origin_framework": "WIDAI", "origin_version": "0.8.0"},
+    {"ksa_id": "RM-T-029", "type": "Task", "domain": "Risk Management", "domain_code": "RM", "statement": "Assess limitations of machine learning model development and testing methods, identifying knowledge gaps and recommending alternative approaches.", "origin_framework": "WIDAI", "origin_version": "0.8.0"}
   ]
 }
