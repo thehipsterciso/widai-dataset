@@ -135,17 +135,17 @@
     "ruling": "No inconsistency identified. Include consistent with edge_case scope, DDaT signal (0.463), and Operational Excellence handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
+    "outcome": "overturned",
     "challenge": "Does this OP KSA reflect AI Engineer requirements?",
-    "evidence": "AI system operations (monitoring, deployment pipeline, infrastructure) appears in 40-60% of AI Eng postings.",
-    "ruling": "Include upheld. AI system operations (monitoring, deployment pipeline, infrastructure) appears in 40-60% of AI Eng postings. Final decision: include."
+    "evidence": "AI system operations (monitoring, deployment pipeline) in 40-60% of AI Eng postings. Org-level ops (change mgmt, training programs) are not AI Engineer requirements.",
+    "ruling": "Revised to exclude. AI system operations (monitoring, deployment pipeline) in 40-60% of AI Eng postings. Final decision: exclude."
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "medium",
-  "decision_rationale": "KSA OP-A-003 (Operational Excellence/Ability) scores 0.463 composite (highest: DDaT at 0.463) and is edge_case for the AI Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
-  "adversarial_disagreements": 0,
+  "decision_rationale": "Revised to exclude. AI system operations (monitoring, deployment pipeline) in 40-60% of AI Eng postings. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:03.398317+00:00",
+    "evaluated_at": "2026-04-06T18:25:51.734141+00:00",
     "pipeline_version": "1.0"
   }
 }

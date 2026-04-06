@@ -123,16 +123,16 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "KSA DQ-K-012 (Data Quality/Knowledge) is excluded as edge_case (composite 0.402, highest: NICE at 0.402). Core signal: 0, OOS signals: 0, seniority: appropriate. Data Quality at this signal level does not meet inclusion threshold for ML Engineer."
+    "rationale": "KSA DQ-K-012 (Data Quality/Knowledge) is excluded as out_of_scope (composite 0.402, highest: NICE at 0.402). Core signal: 0, OOS signals: 1, seniority: appropriate. Data Quality at this signal level does not meet inclusion threshold for ML Engineer."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.402, and Data Quality (DQ) handling. Decision stands."
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.402, and Data Quality (DQ) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
@@ -141,11 +141,11 @@
     "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "medium",
-  "decision_rationale": "KSA DQ-K-012 (Data Quality/Knowledge) is excluded as edge_case (composite 0.402, highest: NICE at 0.402). Core signal: 0, OOS signals: 0, seniority: appropriate. Data Quality at this signal level does not meet inclusion threshold for ML Engineer.",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA DQ-K-012 (Data Quality/Knowledge) is excluded as out_of_scope (composite 0.402, highest: NICE at 0.402). Core signal: 0, OOS signals: 1, seniority: appropriate. Data Quality at this signal level does not meet inclusion threshold for ML Engineer.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:03.130526+00:00",
+    "evaluated_at": "2026-04-06T18:25:51.384399+00:00",
     "pipeline_version": "1.0"
   }
 }

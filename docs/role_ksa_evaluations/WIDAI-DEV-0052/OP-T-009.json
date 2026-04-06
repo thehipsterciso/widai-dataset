@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "KSA OP-T-009 (Operational Excellence/Task) scores 0.423 composite (highest: NIST AI RMF at 0.423) and is in_scope for the ML Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+    "rationale": "KSA OP-T-009 (Operational Excellence/Task) scores 0.423 composite (highest: NIST AI RMF at 0.423) and is edge_case for the ML Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NIST AI RMF signal (0.423), and Operational Excellence handling. Decision stands."
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, NIST AI RMF signal (0.423), and Operational Excellence handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": "Does this Operations KSA reflect ML Engineer requirements?",
-    "evidence": "MLOps (model monitoring, deployment pipelines, infrastructure) appears in 60-80% of ML Engineer postings.",
-    "ruling": "Include upheld. MLOps (model monitoring, deployment pipelines, infrastructure) appears in 60-80% of ML Engineer postings. Final decision: include."
+    "outcome": "overturned",
+    "challenge": "Does this OP KSA reflect ML Engineer requirements?",
+    "evidence": "MLOps operational items (pipeline monitoring, DataOps) in 50-70% of ML Engineer postings. Org-level operational tasks (change mgmt, training programs) are not ML Engineer requirements.",
+    "ruling": "Revised to exclude. MLOps operational items (pipeline monitoring, DataOps) in 50-70% of ML Engineer postings. Final decision: exclude."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "KSA OP-T-009 (Operational Excellence/Task) scores 0.423 composite (highest: NIST AI RMF at 0.423) and is in_scope for the ML Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
-  "adversarial_disagreements": 0,
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. MLOps operational items (pipeline monitoring, DataOps) in 50-70% of ML Engineer postings. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:03.094082+00:00",
+    "evaluated_at": "2026-04-06T18:25:51.334607+00:00",
     "pipeline_version": "1.0"
   }
 }

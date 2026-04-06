@@ -123,16 +123,16 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "KSA OP-K-003 (Operational Excellence/Knowledge) is excluded as edge_case (composite 0.414, highest: EU AI Act at 0.414). Core signal: 1, OOS signals: 0, seniority: appropriate. Operational Excellence at this signal level does not meet inclusion threshold for AI Engineer."
+    "rationale": "KSA OP-K-003 (Operational Excellence/Knowledge) is excluded as out_of_scope (composite 0.414, highest: EU AI Act at 0.414). Core signal: 1, OOS signals: 4, seniority: appropriate. Operational Excellence at this signal level does not meet inclusion threshold for AI Engineer."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.414, and Operational Excellence (OP) handling. Decision stands."
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.414, and Operational Excellence (OP) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
@@ -141,11 +141,11 @@
     "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "medium",
-  "decision_rationale": "KSA OP-K-003 (Operational Excellence/Knowledge) is excluded as edge_case (composite 0.414, highest: EU AI Act at 0.414). Core signal: 1, OOS signals: 0, seniority: appropriate. Operational Excellence at this signal level does not meet inclusion threshold for AI Engineer.",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA OP-K-003 (Operational Excellence/Knowledge) is excluded as out_of_scope (composite 0.414, highest: EU AI Act at 0.414). Core signal: 1, OOS signals: 4, seniority: appropriate. Operational Excellence at this signal level does not meet inclusion threshold for AI Engineer.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:03.464679+00:00",
+    "evaluated_at": "2026-04-06T18:25:51.820391+00:00",
     "pipeline_version": "1.0"
   }
 }

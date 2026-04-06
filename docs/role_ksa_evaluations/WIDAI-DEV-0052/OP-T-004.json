@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA OP-T-004 (Operational Excellence/Task) scores 0.481 composite (highest: EU AI Act at 0.481) and is in_scope for the ML Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA OP-T-004 (Operational Excellence/Task) is excluded as out_of_scope (composite 0.481, highest: EU AI Act at 0.481). Core signal: 0, OOS signals: 1, seniority: appropriate. Operational Excellence at this signal level does not meet inclusion threshold for ML Engineer."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency identified. Include consistent with in_scope scope, EU AI Act signal (0.481), and Operational Excellence handling. Decision stands."
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.481, and Operational Excellence (OP) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Does this Operations KSA reflect ML Engineer requirements?",
-    "evidence": "MLOps (model monitoring, deployment pipelines, infrastructure) appears in 60-80% of ML Engineer postings.",
-    "ruling": "Include upheld. MLOps (model monitoring, deployment pipelines, infrastructure) appears in 60-80% of ML Engineer postings. Final decision: include."
+    "challenge": "Challenge exclusion of OP KSA for ML Engineer?",
+    "evidence": "MLOps/DataOps operational items with strong ML core signals market-supported for ML Engineer.",
+    "ruling": "Exclusion upheld. MLOps/DataOps operational items with strong ML core signals market-supported for ML Engineer. Final decision: exclude."
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "KSA OP-T-004 (Operational Excellence/Task) scores 0.481 composite (highest: EU AI Act at 0.481) and is in_scope for the ML Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "decision_rationale": "KSA OP-T-004 (Operational Excellence/Task) is excluded as out_of_scope (composite 0.481, highest: EU AI Act at 0.481). Core signal: 0, OOS signals: 1, seniority: appropriate. Operational Excellence at this signal level does not meet inclusion threshold for ML Engineer.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:03.035399+00:00",
+    "evaluated_at": "2026-04-06T18:25:51.244341+00:00",
     "pipeline_version": "1.0"
   }
 }

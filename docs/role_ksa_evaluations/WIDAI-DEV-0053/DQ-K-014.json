@@ -126,7 +126,7 @@
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "KSA DQ-K-014 (Data Quality/Knowledge) scores 0.421 composite (highest: NICE at 0.421) and is edge_case for the AI Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+    "rationale": "KSA DQ-K-014 (Data Quality/Knowledge) scores 0.421 composite (highest: NICE at 0.421) and is edge_case for the AI Engineer role. Core role signal: 1 pattern match(es). Seniority is appropriate for this role."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
@@ -137,15 +137,15 @@
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": "Does this DQ KSA reflect AI Engineer requirements?",
-    "evidence": "Data quality for AI systems (eval datasets, ground truth, benchmark quality) appears in 30-50% of AI Eng postings.",
-    "ruling": "Include upheld. Data quality for AI systems (eval datasets, ground truth, benchmark quality) appears in 30-50% of AI Eng postings. Final decision: include."
+    "evidence": "AI evaluation data quality in 30-50% of AI Engineer postings.",
+    "ruling": "Include upheld. AI evaluation data quality in 30-50% of AI Engineer postings. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "medium",
-  "decision_rationale": "KSA DQ-K-014 (Data Quality/Knowledge) scores 0.421 composite (highest: NICE at 0.421) and is edge_case for the AI Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "decision_rationale": "KSA DQ-K-014 (Data Quality/Knowledge) scores 0.421 composite (highest: NICE at 0.421) and is edge_case for the AI Engineer role. Core role signal: 1 pattern match(es). Seniority is appropriate for this role.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:03.451228+00:00",
+    "evaluated_at": "2026-04-06T18:25:51.802573+00:00",
     "pipeline_version": "1.0"
   }
 }

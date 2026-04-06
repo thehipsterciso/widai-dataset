@@ -136,16 +136,16 @@
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Does this Core Ability reflect AI Engineer requirements?",
-    "evidence": "Core abilities appear implicitly. Explicit inclusion requires strong AI Eng signals and composite >= 0.42.",
-    "ruling": "Include upheld. Core abilities appear implicitly. Final decision: include."
+    "challenge": "Core Ability for AI Engineer?",
+    "evidence": "General abilities excluded without strong AI Eng signals and composite >= 0.42.",
+    "ruling": "Include upheld. General abilities excluded without strong AI Eng signals and composite >= 0. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "medium",
   "decision_rationale": "KSA AB-T-009 (Core Abilities/Task) scores 0.423 composite (highest: DDaT at 0.423) and is edge_case for the AI Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:03.446690+00:00",
+    "evaluated_at": "2026-04-06T18:25:51.796819+00:00",
     "pipeline_version": "1.0"
   }
 }
