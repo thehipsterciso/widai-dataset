@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0081",
+  "role_name": "Data Monetization Manager",
+  "ksa_id": "TF-T-003",
+  "ksa_text": "Implement and maintain enterprise data management standards, specifications, and requirements across all data processing activities and systems.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.40701833855799374,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40112537236774526,
+        "cross_encoder_sts": 0.43584632768361586,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3085361581920904,
+        "jaccard": null,
+        "top_element_id": "1085",
+        "top_element_label": "Utilize deployable forensics tool kit to support operations as necessary."
+      },
+      "ddat": {
+        "composite": 0.40701833855799374,
+        "cross_encoder_sts": 0.4497758620689655,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29299827586206895,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.3907987012987013,
+        "cross_encoder_sts": 0.43857857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2633857142857143,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-015",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.39669509943181813,
+        "cross_encoder_sts": 0.43131953125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30436328125,
+        "jaccard": null,
+        "top_element_id": "K1072",
+        "top_element_label": "Knowledge of automated security control testing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38153977272727274,
+        "cross_encoder_sts": 0.4348,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23951250000000002,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36477454545454546,
+        "cross_encoder_sts": 0.40636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25388,
+        "jaccard": null,
+        "top_element_id": "2.B.3.g",
+        "top_element_label": "Operations Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.40701833855799374
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1085",
+        "element_label": "Utilize deployable forensics tool kit to support operations as necessary.",
+        "score": 0.40112537236774526
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1072",
+        "element_label": "Knowledge of automated security control testing tools and techniques",
+        "score": 0.39669509943181813
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-015",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.3907987012987013
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38153977272727274
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-T-003 (Technical Foundations/Task) excluded as out_of_scope (composite 0.407, highest: DDaT at 0.407). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data monetization strategy and execution: data revenue models, data-as-a-product commercialization, data valuation, partnership-based data exchange, and monetization program management."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.407, and Technical Foundations (TF) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Technical Foundations KSA (composite 0.407)?",
+    "evidence": "Market analysis of Data Monetization Manager job postings does not surface this Technical Foundations competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA TF-T-003 (Technical Foundations/Task) excluded as out_of_scope (composite 0.407, highest: DDaT at 0.407). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data monetization strategy and execution: data revenue models, data-as-a-product commercialization, data valuation, partnership-based data exchange, and monetization program management.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:58.126500+00:00",
+    "pipeline_version": "1.0"
+  }
+}

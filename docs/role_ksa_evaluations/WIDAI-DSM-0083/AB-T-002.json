@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0083",
+  "role_name": "Domain Data Product Owner",
+  "ksa_id": "AB-T-002",
+  "ksa_text": "Collect and integrate data from databases, APIs, external sources, and organizational systems, including identifying data consolidation opportunities and integrating information across disparate sources to support analytical workflows.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4206409090909091,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3861095238095238,
+        "cross_encoder_sts": 0.41429576719576716,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31094620811287477,
+        "jaccard": null,
+        "top_element_id": "4237",
+        "top_element_label": "Ability to develop dashboards to better visualize data"
+      },
+      "ddat": {
+        "composite": 0.4143508417508418,
+        "cross_encoder_sts": 0.44474074074074077,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3333111111111111,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3822676767676768,
+        "cross_encoder_sts": 0.41755555555555557,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2881666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-011",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.3830924242424242,
+        "cross_encoder_sts": 0.4142938596491228,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29988859649122807,
+        "jaccard": null,
+        "top_element_id": "S0029",
+        "top_element_label": "Skill in developing data models"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3684337662337662,
+        "cross_encoder_sts": 0.4059742857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26832571428571433,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.4206409090909091,
+        "cross_encoder_sts": 0.45715,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3232833333333333,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.4206409090909091
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4143508417508418
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "4237",
+        "element_label": "Ability to develop dashboards to better visualize data",
+        "score": 0.3861095238095238
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0029",
+        "element_label": "Skill in developing data models",
+        "score": 0.3830924242424242
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-011",
+        "element_label": "Record-keeping",
+        "score": 0.3822676767676768
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-T-002 (Core Abilities/Task) scores 0.421 composite (highest: O*NET at 0.421) and is edge_case for the Domain Data Product Owner role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Domain Data Product Owner."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, O*NET signal (0.421), and Core Abilities handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support this Core Abilities competency for Domain Data Product Owner at composite 0.421?",
+    "evidence": "Market analysis confirms Core Abilities competencies at composite 0.421 are consistent with Domain Data Product Owner hiring criteria.",
+    "ruling": "Include upheld. Market evidence supports this competency for Domain Data Product Owner. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AB-T-002 (Core Abilities/Task) scores 0.421 composite (highest: O*NET at 0.421) and is edge_case for the Domain Data Product Owner role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Domain Data Product Owner.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:06.177775+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0082",
+  "role_name": "Data Valuation Analyst",
+  "ksa_id": "AI-K-020",
+  "ksa_text": "Knowledge of data storage technologies, including columnar storage formats (Parquet, ORC), transactional databases, NoSQL stores, object storage, and their appropriate use cases.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.40800293024585477,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40800293024585477,
+        "cross_encoder_sts": 0.43375408805031446,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3393331761006289,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.40006897546897546,
+        "cross_encoder_sts": 0.440784126984127,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2914952380952381,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.3614727272727273,
+        "cross_encoder_sts": 0.4074666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2388222222222222,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.40406854349951127,
+        "cross_encoder_sts": 0.43576344086021507,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3195488172043011,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.33573636363636367,
+        "cross_encoder_sts": 0.396755,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.17302,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3678715909090909,
+        "cross_encoder_sts": 0.3862125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3189625,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.40800293024585477
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40406854349951127
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.40006897546897546
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.3678715909090909
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.3614727272727273
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-K-020 (AI and Machine Learning/Knowledge) excluded as edge_case (composite 0.408, highest: DCWF at 0.408). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data asset valuation analysis: data ROI measurement, value quantification frameworks, infonomics application, and data quality-value correlation analysis."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.408, and AI and Machine Learning (AI) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.408)?",
+    "evidence": "Market analysis of Data Valuation Analyst job postings does not surface this AI and Machine Learning competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AI-K-020 (AI and Machine Learning/Knowledge) excluded as edge_case (composite 0.408, highest: DCWF at 0.408). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data asset valuation analysis: data ROI measurement, value quantification frameworks, infonomics application, and data quality-value correlation analysis.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:02.170565+00:00",
+    "pipeline_version": "1.0"
+  }
+}

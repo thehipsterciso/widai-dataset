@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0081",
+  "role_name": "Data Monetization Manager",
+  "ksa_id": "DG-S-007",
+  "ksa_text": "Skill in developing actionable data and AI strategy recommendations, including prioritized roadmaps, capability investment plans, and organizational design recommendations.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.41040332906530086,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3879662241224123,
+        "cross_encoder_sts": 0.42881212871287133,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2790438118811881,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.41040332906530086,
+        "cross_encoder_sts": 0.4438788732394366,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32113521126760564,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4094921630094044,
+        "cross_encoder_sts": 0.43767241379310345,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33434482758620687,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-004",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.3988752958152958,
+        "cross_encoder_sts": 0.44489460317460316,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2761571428571429,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40122337662337665,
+        "cross_encoder_sts": 0.4403530612244898,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2968775510204082,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.384379797979798,
+        "cross_encoder_sts": 0.42665555555555557,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2716444444444444,
+        "jaccard": null,
+        "top_element_id": "2.B.4.h",
+        "top_element_label": "Systems Evaluation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.41040332906530086
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-004",
+        "element_label": "Quality management system",
+        "score": 0.4094921630094044
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.40122337662337665
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.3988752958152958
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.3879662241224123
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DG-S-007 (Data Governance/Skill) excluded as edge_case (composite 0.410, highest: DDaT at 0.410). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data monetization strategy and execution: data revenue models, data-as-a-product commercialization, data valuation, partnership-based data exchange, and monetization program management."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.410, and Data Governance (DG) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Data Governance KSA (composite 0.410)?",
+    "evidence": "Market analysis of Data Monetization Manager job postings does not surface this Data Governance competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DG-S-007 (Data Governance/Skill) excluded as edge_case (composite 0.410, highest: DDaT at 0.410). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data monetization strategy and execution: data revenue models, data-as-a-product commercialization, data valuation, partnership-based data exchange, and monetization program management.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:58.119171+00:00",
+    "pipeline_version": "1.0"
+  }
+}

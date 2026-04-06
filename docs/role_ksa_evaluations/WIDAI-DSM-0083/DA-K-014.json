@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0083",
+  "role_name": "Domain Data Product Owner",
+  "ksa_id": "DA-K-014",
+  "ksa_text": "Knowledge of data classification, cataloging, and metadata management systems, including automated data discovery, business glossary integration, metadata standards, and the role of metadata in enabling governance and self-service consumption.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4935847402597403,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4125541034523952,
+        "cross_encoder_sts": 0.4485017082785808,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3166938239159001,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.40656133162612035,
+        "cross_encoder_sts": 0.44980281690140844,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2912507042253521,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.45535384615384616,
+        "cross_encoder_sts": 0.47095384615384617,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4137538461538461,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40475095693779906,
+        "cross_encoder_sts": 0.44104398496240604,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3079695488721804,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4935847402597403,
+        "cross_encoder_sts": 0.519375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4248107142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3353247933884298,
+        "cross_encoder_sts": 0.3875272727272728,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19611818181818183,
+        "jaccard": null,
+        "top_element_id": "4.A.1.b.1",
+        "top_element_label": "Identifying Objects, Actions, and Events"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.1",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.4935847402597403
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.45535384615384616
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.4125541034523952
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.40656133162612035
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40475095693779906
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-K-014 (Data Architecture/Knowledge) scores 0.494 composite (highest: NIST AI RMF at 0.494) and is in_scope for the Domain Data Product Owner role. Domain prior: edge. Core signal hits: 5. OOS hits: 0. Seniority is appropriate for manager-level Domain Data Product Owner."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with in_scope scope, NIST AI RMF signal (0.494), and Data Architecture handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does NIST AI RMF signal (0.494) for this Data Architecture KSA reflect actual Domain Data Product Owner requirements?",
+    "evidence": "Data Architecture appears in 50-80% of Domain Data Product Owner job postings. KSA content aligns with hiring criteria at manager level.",
+    "ruling": "Include upheld. Data Architecture at composite 0.494 is market-validated for Domain Data Product Owner. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA DA-K-014 (Data Architecture/Knowledge) scores 0.494 composite (highest: NIST AI RMF at 0.494) and is in_scope for the Domain Data Product Owner role. Domain prior: edge. Core signal hits: 5. OOS hits: 0. Seniority is appropriate for manager-level Domain Data Product Owner.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:06.064028+00:00",
+    "pipeline_version": "1.0"
+  }
+}
