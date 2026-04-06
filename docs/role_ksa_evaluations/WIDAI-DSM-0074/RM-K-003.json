@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0074",
+  "role_name": "Data Lineage Analyst",
+  "ksa_id": "RM-K-003",
+  "ksa_text": "Knowledge of evaluation frameworks for specific AI modalities, including NLP metrics (BLEU, ROUGE, BERTScore), computer vision metrics, and domain-specific evaluation methodologies.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.3844748011363636,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.37566381245872776,
+        "cross_encoder_sts": 0.42759709443099275,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23717506053268764,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3515012987012987,
+        "cross_encoder_sts": 0.4149142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18239999999999998,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-089",
+        "top_element_label": "Financial decision making for technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.37255206611570246,
+        "cross_encoder_sts": 0.4053909090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28498181818181817,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-004",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.3844748011363636,
+        "cross_encoder_sts": 0.445381875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22205593750000002,
+        "jaccard": null,
+        "top_element_id": "K0068",
+        "top_element_label": "Knowledge of programming language structures and logic"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36348484848484847,
+        "cross_encoder_sts": 0.3947266666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28017333333333333,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.2",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.36482857142857145,
+        "cross_encoder_sts": 0.41514285714285715,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23065714285714287,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0068",
+        "element_label": "Knowledge of programming language structures and logic",
+        "score": 0.3844748011363636
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.37566381245872776
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-004",
+        "element_label": "Quality management system",
+        "score": 0.37255206611570246
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.a",
+        "element_label": "Administration and Management",
+        "score": 0.36482857142857145
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.2",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.36348484848484847
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-K-003 (Risk Management/Knowledge) excluded as out_of_scope (composite 0.384, highest: NICE at 0.384). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lineage tracking and analysis: provenance documentation, data flow mapping, upstream/downstream impact analysis, and lineage tooling."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.384, and Risk Management (RM) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk Management KSA for Data Lineage Analyst?",
+    "evidence": "Risk Management competencies do not appear as Data Lineage Analyst requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Risk Management is not a Data Lineage Analyst core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-K-003 (Risk Management/Knowledge) excluded as out_of_scope (composite 0.384, highest: NICE at 0.384). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lineage tracking and analysis: provenance documentation, data flow mapping, upstream/downstream impact analysis, and lineage tooling.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:35.140566+00:00",
+    "pipeline_version": "1.0"
+  }
+}

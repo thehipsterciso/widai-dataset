@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0074",
+  "role_name": "Data Lineage Analyst",
+  "ksa_id": "LS-S-004",
+  "ksa_text": "Skill in designing and executing applied research projects with clear organizational relevance, balancing research rigor with practical applicability.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4136895721925134,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40520782879092737,
+        "cross_encoder_sts": 0.43770945674044265,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31853682092555335,
+        "jaccard": null,
+        "top_element_id": "102A",
+        "top_element_label": "Ability to apply programming language structures (e.g., source code review) and logic."
+      },
+      "ddat": {
+        "composite": 0.4136895721925134,
+        "cross_encoder_sts": 0.4564808823529412,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2995794117647059,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.38810909090909096,
+        "cross_encoder_sts": 0.4407192307692308,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2478153846153846,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4099382135306554,
+        "cross_encoder_sts": 0.4387104651162791,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3332122093023256,
+        "jaccard": null,
+        "top_element_id": "K0757",
+        "top_element_label": "Knowledge of system design tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40906735537190086,
+        "cross_encoder_sts": 0.4576772727272727,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27944090909090913,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4072909090909091,
+        "cross_encoder_sts": 0.4485642857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29722857142857145,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.4136895721925134
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0757",
+        "element_label": "Knowledge of system design tools and techniques",
+        "score": 0.4099382135306554
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.40906735537190086
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.4072909090909091
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "102A",
+        "element_label": "Ability to apply programming language structures (e.g., source code review) and logic.",
+        "score": 0.40520782879092737
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-S-004 (Leadership and Strategy/Skill) excluded as out_of_scope (composite 0.414, highest: DDaT at 0.414). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lineage tracking and analysis: provenance documentation, data flow mapping, upstream/downstream impact analysis, and lineage tooling."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.414, and Leadership and Strategy (LS) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Leadership and Strategy KSA for Data Lineage Analyst?",
+    "evidence": "Leadership and Strategy competencies do not appear as Data Lineage Analyst requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Leadership and Strategy is not a Data Lineage Analyst core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA LS-S-004 (Leadership and Strategy/Skill) excluded as out_of_scope (composite 0.414, highest: DDaT at 0.414). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lineage tracking and analysis: provenance documentation, data flow mapping, upstream/downstream impact analysis, and lineage tooling.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:35.098610+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0074",
+  "role_name": "Data Lineage Analyst",
+  "ksa_id": "LS-K-013",
+  "ksa_text": "Knowledge of data monetization models and data product strategy, including internal data products, external data licensing, data-enabled services, and data marketplace design principles.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.40820681818181814,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3949277575757576,
+        "cross_encoder_sts": 0.42110000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3251351111111111,
+        "jaccard": null,
+        "top_element_id": "107",
+        "top_element_label": "Knowledge of resource management principles and techniques."
+      },
+      "ddat": {
+        "composite": 0.40820681818181814,
+        "cross_encoder_sts": 0.43736710526315786,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33044605263157895,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3933218181818182,
+        "cross_encoder_sts": 0.41790000000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32778,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4012975895316805,
+        "cross_encoder_sts": 0.4345492424242424,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3126265151515151,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35985064935064937,
+        "cross_encoder_sts": 0.38845,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2835857142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40311168831168825,
+        "cross_encoder_sts": 0.43318571428571423,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32291428571428576,
+        "jaccard": null,
+        "top_element_id": "2.C.1.d",
+        "top_element_label": "Sales and Marketing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.40820681818181814
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.d",
+        "element_label": "Sales and Marketing",
+        "score": 0.40311168831168825
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4012975895316805
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "107",
+        "element_label": "Knowledge of resource management principles and techniques.",
+        "score": 0.3949277575757576
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.3933218181818182
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-K-013 (Leadership and Strategy/Knowledge) excluded as out_of_scope (composite 0.408, highest: DDaT at 0.408). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lineage tracking and analysis: provenance documentation, data flow mapping, upstream/downstream impact analysis, and lineage tooling."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.408, and Leadership and Strategy (LS) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Leadership and Strategy KSA for Data Lineage Analyst?",
+    "evidence": "Leadership and Strategy competencies do not appear as Data Lineage Analyst requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Leadership and Strategy is not a Data Lineage Analyst core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA LS-K-013 (Leadership and Strategy/Knowledge) excluded as out_of_scope (composite 0.408, highest: DDaT at 0.408). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lineage tracking and analysis: provenance documentation, data flow mapping, upstream/downstream impact analysis, and lineage tooling.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:35.113339+00:00",
+    "pipeline_version": "1.0"
+  }
+}
