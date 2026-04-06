@@ -1,0 +1,938 @@
+{
+  "$schema": "https://widai.cdaio.gov/schemas/pe-assessment-workflow/v1.0.0",
+  "workflow_id": "WIDAI-PE-WF-001",
+  "workflow_version": "1.0.0",
+  "workflow_name": "PE Workforce Due Diligence Assessment (30-Day Engagement)",
+  "description": "Standard 30-day engagement workflow for assessing target company data/AI team capability. Phases: Scoping → Data Collection → Assessment → Analysis → Delivery.",
+  "total_engagement_duration_days": 30,
+  "suitable_for": [
+    "PE acquisition due diligence",
+    "Portfolio company integration planning",
+    "Workforce risk validation"
+  ],
+  "timeline_summary": {
+    "phase_1_scoping_days": "1-3",
+    "phase_2_data_collection_days": "4-10",
+    "phase_3_assessment_days": "11-20",
+    "phase_4_analysis_days": "21-28",
+    "phase_5_delivery_days": "29-30"
+  },
+  "phases": [
+    {
+      "phase_id": "PHASE-1",
+      "phase_name": "Scoping & Kickoff",
+      "phase_sequence": 1,
+      "duration_days": 3,
+      "day_range": "1-3",
+      "objectives": [
+        "Align on value creation plan and assessment scope",
+        "Select reference architecture (size/maturity profile)",
+        "Identify target data collection contacts",
+        "Set expectations for target company cooperation"
+      ],
+      "activities": [
+        {
+          "activity_id": "A1-1",
+          "activity_name": "Engagement Kickoff Call",
+          "day": 1,
+          "duration_minutes": 60,
+          "participants": {
+            "assessor": "WIDAI assessment lead",
+            "client": "PE deal sponsor (operating partner or investment manager)",
+            "optional": [
+              "target CFO or HR lead (context-setting only)"
+            ]
+          },
+          "agenda": [
+            "Review deal thesis and value creation plan",
+            "Discuss data/AI role in value drivers",
+            "Clarify assessment scope (which teams, which roles)",
+            "Explain WIDAI methodology at high level",
+            "Confirm timeline and target company contact(s)"
+          ],
+          "deliverables_produced": [
+            "Engagement kickoff summary (internal notes)"
+          ],
+          "decision_points": [
+            "Is value creation plan clearly defined? (If not, defer assessment or scope narrowly)"
+          ]
+        },
+        {
+          "activity_id": "A1-2",
+          "activity_name": "Value Creation Plan & Reference Architecture Review",
+          "day": 1,
+          "duration_hours": 2,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Assessor reviews deal materials: operating plan, value creation thesis, relevant team org charts. Maps value drivers (e.g., 'build ML pricing model', 'improve data governance') to WIDAI role requirements. Selects reference architecture (Early-Stage, Growth, Scaled, Enterprise).",
+          "inputs": [
+            "Value creation plan (provided by PE firm)",
+            "Org chart snapshot (if available)",
+            "Job descriptions (if available)"
+          ],
+          "decision_points": [
+            "Which reference architecture is closest fit? (Determines baseline expectations)",
+            "What are the 3-5 critical roles for this specific deal? (Inputs criticality scoring later)"
+          ],
+          "deliverables_produced": [
+            "Architecture selection memo (1-2 pages)",
+            "Preliminary role list (roles to assess)"
+          ]
+        },
+        {
+          "activity_id": "A1-3",
+          "activity_name": "Data Request Preparation & Transmission",
+          "day": 2,
+          "duration_hours": 2,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Assessor prepares data request package for target company: org chart template, role description template, team profile template, evidence checklist (certifications, work samples). Request is sent to PE firm for transmission to target.",
+          "inputs": [
+            "Architecture selection memo",
+            "WIDAI role templates"
+          ],
+          "outputs": [
+            "Data request email (template)",
+            "Org chart template (Excel/Sheets)",
+            "Role description template",
+            "Team profile template (for each person)",
+            "Evidence checklist (certifications, projects, etc.)"
+          ],
+          "delivery_method": "Email from PE firm sponsor to target company (or target HR/IT contact identified in A1-1)",
+          "key_messaging": "Request emphasizes: (1) 30-day timeline, (2) confidentiality, (3) data will inform integration planning and talent strategy, (4) 2-hour time commitment per person for optional interviews"
+        },
+        {
+          "activity_id": "A1-4",
+          "activity_name": "Target Company Data Collection Kickoff (Optional)",
+          "day": 3,
+          "duration_minutes": 30,
+          "participants": {
+            "assessor": "WIDAI assessment lead",
+            "target_company": "HR lead or IT lead"
+          },
+          "description": "Brief call with target company to clarify data request, answer questions, confirm timeline. Sets tone for cooperation. Optional but recommended for complex orgs.",
+          "key_messages": [
+            "Explain WIDAI assessment at high level (what it measures, what it doesn't)",
+            "Emphasize confidentiality",
+            "Confirm data deadline (typically Day 8-10)",
+            "Offer to walk through templates if helpful"
+          ],
+          "decision_points": [
+            "Is target company willing to provide data on time? (If not, defer assessment)",
+            "Are there sensitive roles or information restrictions?"
+          ]
+        }
+      ],
+      "phase_decision_gate": {
+        "gate_name": "Scope Validation",
+        "gate_question": "Do we have a clear value creation plan, reference architecture, and committed target company cooperation?",
+        "proceed_criteria": [
+          "Value creation plan is documented (even if preliminary)",
+          "Reference architecture has been selected",
+          "Target company has been sent data request",
+          "Target company has confirmed willingness to participate"
+        ],
+        "block_criteria": [
+          "Value creation plan is vague or absent",
+          "Target company is uncooperative or timeline-constrained"
+        ],
+        "blocked_action": "Defer assessment to later date; recommend PE firm clarify value creation thesis first"
+      },
+      "phase_summary": "Scoping phase ensures alignment on deal thesis, establishes assessment scope, and triggers target company data collection. By end of Phase 1, assessor has selected reference architecture and target company is providing data."
+    },
+    {
+      "phase_id": "PHASE-2",
+      "phase_name": "Data Collection & Role Mapping",
+      "phase_sequence": 2,
+      "duration_days": 7,
+      "day_range": "4-10",
+      "objectives": [
+        "Receive target company org chart and team profiles",
+        "Map each person to WIDAI roles",
+        "Collect capability evidence (certifications, work history)",
+        "Compile assessment input data"
+      ],
+      "activities": [
+        {
+          "activity_id": "A2-1",
+          "activity_name": "Data Receipt & Validation",
+          "day": 8,
+          "duration_hours": 3,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Assessor receives data package from target company. Validates completeness: org chart, role descriptions, team profiles, evidence artifacts (LinkedIn profiles, resumes, certifications, work samples).",
+          "inputs": [
+            "Org chart (Excel/CSV format)",
+            "Role descriptions (for each team member)",
+            "Team profiles (compiled from templates)",
+            "Evidence artifacts (certifications, links, documents)"
+          ],
+          "data_completeness_checklist": [
+            "Org chart includes reporting structure and headcount",
+            "Role descriptions document key responsibilities",
+            "Team profile includes name, title, years in role, years in company",
+            "Evidence artifacts are sufficient for KSA assessment (certifications, work history, project descriptions)"
+          ],
+          "decision_points": [
+            "Is data complete enough to proceed? (If not, request follow-up within 48 hours)",
+            "Are there any data quality issues (missing titles, unclear reporting lines)? (Flag for follow-up)"
+          ],
+          "outputs": [
+            "Data validation report (internal)",
+            "Follow-up data request (if gaps exist)"
+          ]
+        },
+        {
+          "activity_id": "A2-2",
+          "activity_name": "Person-to-Role Mapping",
+          "day": 9,
+          "duration_hours": 4,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Assessor maps each person in target org to 1-2 WIDAI roles based on title, responsibilities, and reporting structure. Uses fuzzy matching: person's job title → WIDAI canonical role. Records primary role and (if applicable) secondary role.",
+          "mapping_process": [
+            "1. Extract job title from org chart",
+            "2. Parse role description (responsibilities, reports-to, team size managed)",
+            "3. Match against WIDAI role inventory (GOV, ENG, DEV, ANL, OPS, RSK, REG, LDR, DSM, NICHE)",
+            "4. Assign primary role (most likely) and secondary role (if person has dual responsibilities)",
+            "5. Record confidence level (high/medium/low) for each mapping"
+          ],
+          "mapping_output_structure": [
+            {
+              "person_name": "...",
+              "person_id": "...",
+              "job_title": "...",
+              "primary_widai_role": "...",
+              "primary_role_confidence": "high/medium/low",
+              "secondary_widai_role": "... or null",
+              "secondary_role_confidence": "high/medium/low or null",
+              "mapping_justification": "..."
+            }
+          ],
+          "fuzzy_matching_examples": [
+            "'Data Engineering Manager' → WIDAI-ENG-0005 (Senior Data Engineer, assuming lead responsibilities)",
+            "'ML Scientist' → WIDAI-DEV-0010 (Data Scientist / ML Engineer)",
+            "'BI Analyst' → WIDAI-ANL-0008 (BI Developer / Analytics Developer)",
+            "'VP Data' → WIDAI-ENG-0001 (Head of Data Engineering / Chief Data Engineer) or WIDAI-GOV-0002 (Chief Data Officer, depending on scope)"
+          ],
+          "decision_points": [
+            "Are there roles in target org that don't map to WIDAI? (Flag as coverage gap; may indicate specialized role or new role type)",
+            "Are there ambiguous mappings? (Use secondary role or document uncertainty)"
+          ],
+          "outputs": [
+            "Role mapping matrix (person → WIDAI role, with confidence)"
+          ]
+        },
+        {
+          "activity_id": "A2-3",
+          "activity_name": "Capability Evidence Compilation",
+          "day": 9,
+          "duration_hours": 3,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "For each mapped role, assessor compiles evidence of person's KSA attainment. Evidence sources: certifications, work history (LinkedIn), project descriptions (from role description), work samples (code repos, dashboards, reports), educational background.",
+          "evidence_hierarchy": [
+            "Certification (IAPP CIPM, ISACA CDPSE, cloud certifications, etc.)",
+            "Academic/credential (Master's degree, bootcamp completion, etc.)",
+            "Work experience (projects, years in similar role, company progression)",
+            "Interview/assessment (optional; optional technical interview or problem-solving scenario)"
+          ],
+          "evidence_collection_process": [
+            "1. Identify WIDAI KSAs required for person's primary role",
+            "2. Extract evidence from provided artifacts (resumes, LinkedIn, certifications, work samples)",
+            "3. Compile in structured evidence template (one template per person)",
+            "4. Flag gaps: KSAs with no evidence",
+            "5. Recommend optional interviews for high-criticality roles with weak evidence"
+          ],
+          "evidence_template_structure": [
+            {
+              "person_id": "...",
+              "widai_role": "...",
+              "ksa_id": "...",
+              "ksa_statement": "...",
+              "evidence_found": "yes/no",
+              "evidence_description": "...",
+              "evidence_source": "certification/work_history/interview/other",
+              "evidence_strength": "strong/moderate/weak",
+              "notes": "..."
+            }
+          ],
+          "outputs": [
+            "Capability evidence matrix (person × KSA, with evidence)"
+          ]
+        },
+        {
+          "activity_id": "A2-4",
+          "activity_name": "Interview Recommendation & Scheduling (Optional)",
+          "day": 10,
+          "duration_hours": 2,
+          "participants": {
+            "assessor": "WIDAI assessment lead",
+            "optional_target": "HR lead for interview scheduling"
+          },
+          "description": "For roles with high criticality and weak capability evidence, assessor recommends optional interviews (3-5 people). Interviews are brief (30-45 min) and targeted: assess depth of KSA knowledge, not performance evaluation.",
+          "interview_recommendation_criteria": [
+            "Role criticality ≥4 AND capability evidence is weak (weak evidence on 3+ KSAs)",
+            "Role is key person risk candidate (concentration risk suspected)",
+            "Role is gate-item for value creation plan"
+          ],
+          "recommended_interview_count": "3-5 people (typically CDAO, top engineers, ML lead, governance lead)",
+          "interview_depth": "30-45 minutes per person. Format: open-ended questions about experience, technical depth, understanding of org data architecture/ML roadmap.",
+          "example_interview_questions": [
+            "Walk me through the data architecture you inherited / built. What are the key components? (Tests data architecture knowledge)",
+            "Describe your experience with [relevant technology from KSAs]. What scale? What challenges? (Tests hands-on expertise)",
+            "If you left the company tomorrow, what would be hardest to replace? (Tests concentration risk awareness)"
+          ],
+          "outputs": [
+            "Interview recommendation memo (names, reasons, suggested questions)"
+          ],
+          "decision_point": "Does target company agree to interviews? (Ideal but not required; assessment proceeds with desk-based evidence if interviews not possible)"
+        }
+      ],
+      "phase_decision_gate": {
+        "gate_name": "Data Completeness Validation",
+        "gate_question": "Do we have sufficient data to score all mapped roles?",
+        "proceed_criteria": [
+          "All people are mapped to WIDAI roles",
+          "Capability evidence is collected for all primary roles",
+          "No critical data gaps remain"
+        ],
+        "block_criteria": [
+          "Org chart is incomplete (missing roles or people)",
+          "Evidence is too sparse to score capability (no certifications, no work history)"
+        ],
+        "blocked_action": "Request follow-up from target company; delay scoring until data is complete"
+      },
+      "phase_summary": "Data collection phase gathers org structure, maps people to WIDAI roles, and compiles capability evidence. By end of Phase 2, assessor has complete data for scoring."
+    },
+    {
+      "phase_id": "PHASE-3",
+      "phase_name": "Assessment Scoring",
+      "phase_sequence": 3,
+      "duration_days": 10,
+      "day_range": "11-20",
+      "objectives": [
+        "Score each role on coverage, capability, and criticality",
+        "Calculate concentration risk for each person",
+        "Compute composite scores (TCI, KPRS, GSI)",
+        "Generate WRS and interpret findings"
+      ],
+      "activities": [
+        {
+          "activity_id": "A3-1",
+          "activity_name": "Coverage Scoring",
+          "day": 11,
+          "duration_hours": 3,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "For each mapped role, score coverage: is role filled, at what seniority, at what FTE? Reference architecture defines expected coverage per role. Scoring model: coverage_score = (actual_headcount / reference_headcount) × seniority_adjustment × fte_adjustment.",
+          "inputs": [
+            "Role mapping matrix (from A2-2)",
+            "Reference architecture role definitions (from Phase 1)",
+            "Org chart and person data (from A2-1)"
+          ],
+          "scoring_process": [
+            "1. For each role in reference architecture:",
+            "2. Count actual headcount in target org for that role",
+            "3. Compare to reference architecture expectation (e.g., 'expect 2.0 FTE Data Engineers')",
+            "4. Assess seniority: is actual person at required seniority? (adjust if above/below)",
+            "5. Record FTE allocation (full-time, part-time, shared role)",
+            "6. Calculate coverage_score per role",
+            "7. Identify unfilled roles (coverage_score = 0)"
+          ],
+          "seniority_adjustment_table": [
+            "Above requirement: 1.0 (no penalty for over-qualification)",
+            "Exactly at requirement: 1.0",
+            "One tier below: 0.75",
+            "Two+ tiers below: 0.5"
+          ],
+          "fte_adjustment": "Proportional: 1.0 FTE = 1.0, 0.5 FTE = 0.5, etc.",
+          "outputs": [
+            "Coverage scoring matrix (role × coverage_score)"
+          ]
+        },
+        {
+          "activity_id": "A3-2",
+          "activity_name": "Capability Scoring",
+          "day": 12,
+          "duration_hours": 4,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "For each person, score capability: do they have the KSAs required for their mapped role? Score based on evidence hierarchy (certifications, academic, work experience, optional interview).",
+          "inputs": [
+            "Capability evidence matrix (from A2-3)",
+            "Interview notes (if interviews were conducted)"
+          ],
+          "scoring_process": [
+            "1. For each person and their mapped WIDAI role:",
+            "2. Extract WIDAI KSA requirements for that role",
+            "3. For each KSA, assess evidence (certification, work history, interview)",
+            "4. Assign evidence_strength: strong/moderate/weak",
+            "5. Calculate KSA_attainment_score = (KSAs with evidence / total KSAs required)",
+            "6. Calculate capability_score = KSA_attainment × evidence_quality_weight + interview_depth (if conducted)"
+          ],
+          "evidence_strength_weights": [
+            "Strong evidence (direct certification or work project): 1.0",
+            "Moderate evidence (related experience or partial indicator): 0.7",
+            "Weak evidence (general background, no direct indicator): 0.4",
+            "No evidence: 0.0"
+          ],
+          "capability_score_formula": "capability_score = (Σ[evidence_strength_i × weight_i] / Σ[total_ksas]) × 100 + (optional_interview_score × 0.25)",
+          "outputs": [
+            "Capability scoring matrix (person × capability_score)"
+          ]
+        },
+        {
+          "activity_id": "A3-3",
+          "activity_name": "Criticality Assignment",
+          "day": 13,
+          "duration_hours": 3,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "For each role, assign criticality: how critical is this role to achieving the value creation plan? Criticality is specific to this deal (not generic). Scored 1-5; higher = more critical.",
+          "inputs": [
+            "Value creation plan (from Phase 1)",
+            "Identified value drivers",
+            "Role responsibility mapping"
+          ],
+          "criticality_assignment_process": [
+            "1. Review value creation plan: identify 3-5 main value drivers",
+            "2. For each role, map to value drivers: which drivers depend on this role?",
+            "3. Assign criticality level (1-5) based on impact:",
+            "   - 5: Single point of failure; role is irreplaceable; loss = deal re-scope",
+            "   - 4: Essential; on critical path; loss requires external hire",
+            "   - 3: Core; supports value creation; loss creates delay",
+            "   - 2: Supporting; important but not critical path",
+            "   - 1: Minimal; could be outsourced"
+          ],
+          "example": {
+            "value_driver": "Build real-time pricing ML model",
+            "dependent_roles": [
+              {"role": "ML Engineer", "criticality": 5, "reason": "Builds the model"},
+              {"role": "Data Engineer", "criticality": 4, "reason": "Builds data pipeline for model"},
+              {"role": "BI Developer", "criticality": 2, "reason": "Reporting on model performance"}
+            ]
+          },
+          "outputs": [
+            "Criticality assignment matrix (role × criticality_level)"
+          ]
+        },
+        {
+          "activity_id": "A3-4",
+          "activity_name": "Concentration Risk Scoring",
+          "day": 14,
+          "duration_hours": 3,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "For each person, score concentration risk: how much unique knowledge is held by this person? How hard to replace? What's the flight risk? Composite = unique_knowledge × replacement_difficulty × tenure_risk.",
+          "inputs": [
+            "Role mapping and responsibilities (from A2-2)",
+            "Person tenure and career history",
+            "Org chart (reporting structure, team composition)",
+            "Evidence of unique knowledge (CODEOWNERS, architecture docs, etc.)"
+          ],
+          "concentration_risk_components": [
+            {
+              "component": "unique_knowledge_coverage",
+              "assessment": "What % of org's domain knowledge is held exclusively by this person?",
+              "scale": ["0-20% (distributed)", "21-40% (concentrated)", "41-60% (highly concentrated)", "61-100% (sole holder)"],
+              "score_range": [0.25, 0.5, 0.75, 1.0]
+            },
+            {
+              "component": "replacement_difficulty",
+              "assessment": "How long to backfill this role with external hire?",
+              "scale": ["Low (1-2 months)", "Moderate (3-6 months)", "High (6-12 months)"],
+              "score_range": [0.33, 0.66, 1.0]
+            },
+            {
+              "component": "tenure_risk_factor",
+              "assessment": "Years in role/company + flight risk indicators",
+              "modifiers": [
+                "Recent hire (< 1 year): +0.2",
+                "PE ownership change: +0.2",
+                "Hot market for skillset: +0.15",
+                "Strong equity incentives: -0.1"
+              ]
+            }
+          ],
+          "concentration_risk_formula": "concentration_risk_score = unique_knowledge × replacement_difficulty × tenure_risk × 100",
+          "outputs": [
+            "Concentration risk matrix (person × concentration_risk_score)",
+            "Top key person risk report (top 5 people by score)"
+          ]
+        },
+        {
+          "activity_id": "A3-5",
+          "activity_name": "Composite Score Calculation",
+          "day": 15,
+          "duration_hours": 2,
+          "participants": {
+            "assessor": "WIDAI assessment lead or data analyst"
+          },
+          "description": "Aggregate individual scores into three composite indices: Team Capability Index (TCI), Key Person Risk Score (KPRS), and Gap Severity Index (GSI). Then compute final Workforce Readiness Score (WRS).",
+          "inputs": [
+            "Coverage scoring matrix",
+            "Capability scoring matrix",
+            "Criticality assignment matrix",
+            "Concentration risk matrix"
+          ],
+          "composite_score_calculations": [
+            {
+              "score": "Team Capability Index (TCI)",
+              "formula": "TCI = Σ[(coverage_score_i × capability_score_i × criticality_weight_i)] / Σ[criticality_weight_i]",
+              "description": "Weighted average of capability across all roles, weighted by criticality"
+            },
+            {
+              "score": "Key Person Risk Score (KPRS)",
+              "formula": "KPRS = max(concentration_risk_i) if N_high_risk > 0, else avg(concentration_risk_i)",
+              "description": "Identifies single highest concentration risk; if multiple high-risk people, captures max"
+            },
+            {
+              "score": "Gap Severity Index (GSI)",
+              "formula": "GSI = (Σ[gap_criticality_weight_i × (1 - coverage_score_i)] × gap_count_factor) / reference_headcount",
+              "description": "Quantifies unfilled/under-filled roles, weighted by criticality"
+            },
+            {
+              "score": "Workforce Readiness Score (WRS)",
+              "formula": "WRS = (TCI × 0.5) + ((100 - KPRS) × 0.3) + ((100 - GSI) × 0.2)",
+              "description": "Final composite score; primary deliverable to PE investment committee"
+            }
+          ],
+          "outputs": [
+            "Composite score report (TCI, KPRS, GSI, WRS)"
+          ]
+        },
+        {
+          "activity_id": "A3-6",
+          "activity_name": "WRS Band Classification & Interpretation",
+          "day": 16,
+          "duration_hours": 2,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Classify WRS into band (Critical, At-Risk, Adequate, Strong, Exceptional) and interpret implications for PE investment committee.",
+          "inputs": [
+            "WRS score (from A3-5)"
+          ],
+          "band_classification": [
+            {
+              "band": "Critical (0-39)",
+              "interpretation": "Team not ready; deal thesis at material risk",
+              "pe_signal": "RED FLAG: Recommend deal termination or major workforce overhaul"
+            },
+            {
+              "band": "At-Risk (40-59)",
+              "interpretation": "Baseline capability with significant gaps",
+              "pe_signal": "CAUTION: Requires detailed integration plan"
+            },
+            {
+              "band": "Adequate (60-74)",
+              "interpretation": "Adequately prepared with manageable gaps",
+              "pe_signal": "PROCEED WITH PLANNING: Standard execution plan"
+            },
+            {
+              "band": "Strong (75-89)",
+              "interpretation": "Well-prepared; low workforce risk",
+              "pe_signal": "GREEN LIGHT: Retain incumbent leadership"
+            },
+            {
+              "band": "Exceptional (90-100)",
+              "interpretation": "Exceptionally well-prepared; rare scenario",
+              "pe_signal": "EXCEPTIONAL: Workforce is strategic asset"
+            }
+          ],
+          "outputs": [
+            "WRS band classification and PE signal"
+          ]
+        }
+      ],
+      "phase_decision_gate": {
+        "gate_name": "Scoring Validation",
+        "gate_question": "Are all scores defensible and traceable to evidence?",
+        "proceed_criteria": [
+          "All roles are scored on coverage, capability, criticality",
+          "All concentration risks are documented",
+          "WRS is computed and classified",
+          "Every score can be traced back to evidence or reference architecture"
+        ],
+        "validation_checks": [
+          "Coverage scores sum to reference headcount (or less if under-staffed)",
+          "Capability scores correlate with evidence strength",
+          "Criticality assignments are aligned with value creation plan",
+          "Concentration risk identifies realistic key person dependencies"
+        ]
+      },
+      "phase_summary": "Assessment phase scores all dimensions (coverage, capability, criticality, concentration risk) and produces composite indices. By end of Phase 3, WRS and key findings are determined."
+    },
+    {
+      "phase_id": "PHASE-4",
+      "phase_name": "Analysis & Deliverable Production",
+      "phase_sequence": 4,
+      "duration_days": 8,
+      "day_range": "21-28",
+      "objectives": [
+        "Analyze gaps and create hiring priorities",
+        "Identify top key person risks and mitigation strategies",
+        "Produce four deliverables (Executive Summary, Workforce Map, Gap Analysis, Key Person Risk Assessment)",
+        "Prepare presentation for investment committee"
+      ],
+      "activities": [
+        {
+          "activity_id": "A4-1",
+          "activity_name": "Gap Analysis & Hiring Priority Modeling",
+          "day": 21,
+          "duration_hours": 4,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Analyze unfilled and under-filled roles. For each gap, recommend hiring sequence, required seniority, and WIDAI job description seed.",
+          "inputs": [
+            "Coverage scoring matrix (identifies unfilled/under-filled roles)",
+            "Criticality assignment matrix",
+            "Gap Severity Index (GSI) calculation"
+          ],
+          "gap_analysis_process": [
+            "1. Identify all roles with coverage_score < 100",
+            "2. Rank by: (1 - coverage_score) × criticality_weight (gap impact × role importance)",
+            "3. For each gap, recommend:",
+            "   - Required seniority level and years of experience",
+            "   - Key KSA profile (from WIDAI role definition)",
+            "   - Estimated market scarcity (using WIDAI job market data)",
+            "   - Hiring timeline (how urgent given value creation plan)",
+            "4. Sequence hiring: critical-path roles first, support functions later"
+          ],
+          "hiring_priority_output": [
+            {
+              "rank": 1,
+              "role": "Senior Data Engineer",
+              "gap_type": "unfilled",
+              "rationale": "Pipeline architecture is critical to real-time ML model; currently understaffed",
+              "required_profile": "5+ years data engineering; experience with Spark, Kafka, cloud warehousing",
+              "market_scarcity": "moderate (3-6 month search typical)",
+              "timeline": "weeks 1-4 (critical path)"
+            }
+          ],
+          "outputs": [
+            "Hiring priority matrix (ranked by gap impact × criticality)"
+          ]
+        },
+        {
+          "activity_id": "A4-2",
+          "activity_name": "Key Person Risk Mitigation Planning",
+          "day": 22,
+          "duration_hours": 3,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "For top 3-5 concentration risk people, develop mitigation recommendations: retention bonuses, knowledge documentation, succession planning.",
+          "inputs": [
+            "Concentration risk matrix (from A3-4)",
+            "Role criticality assignments"
+          ],
+          "mitigation_strategies": [
+            {
+              "strategy": "Retention Incentive",
+              "target": "High concentration risk + high criticality + early-tenure",
+              "rationale": "Reduce flight risk during PE transition",
+              "example_structure": "12-month or 24-month equity vest or cash bonus, tied to staying through defined milestones"
+            },
+            {
+              "strategy": "Knowledge Documentation",
+              "target": "High concentration risk regardless of criticality",
+              "rationale": "Reduce single-point-of-failure risk",
+              "example": "Architecture docs, runbooks, CODEOWNERS handoff, lunch-and-learns for team"
+            },
+            {
+              "strategy": "Succession Planning / Mentoring",
+              "target": "High concentration risk + high criticality",
+              "rationale": "Develop backup",
+              "example": "Pair with junior engineer; mentor 1-2 people over 6 months"
+            },
+            {
+              "strategy": "External Support / Consulting Bridge",
+              "target": "High concentration risk + gap in market availability",
+              "rationale": "Reduce backfill timeline risk",
+              "example": "Hire consultant for first 3-6 months while recruiting permanent replacement"
+            }
+          ],
+          "outputs": [
+            "Key person risk mitigation plan (for each top 5 risk person)"
+          ]
+        },
+        {
+          "activity_id": "A4-3",
+          "activity_name": "Executive Summary Production",
+          "day": 23,
+          "duration_hours": 3,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Produce 1-2 page executive summary for investment committee. Includes: WRS score, TCI/KPRS/GSI breakdown, 3 key findings, go/no-go signal, top 3 hiring priorities.",
+          "inputs": [
+            "WRS score and band classification",
+            "TCI, KPRS, GSI scores",
+            "Gap analysis and hiring priorities",
+            "Key person risk mitigation"
+          ],
+          "executive_summary_sections": [
+            "1. Workforce Readiness Score (WRS): [X/100, Band]",
+            "2. Three Key Findings:",
+            "   - Finding 1: (e.g., 'Team is strong in data engineering but lacks ML capability')",
+            "   - Finding 2: (e.g., 'CDO is single point of failure for governance')",
+            "   - Finding 3: (e.g., '3 critical roles are unfilled; search timeline is 6+ months')",
+            "3. Investment Committee Signal: (e.g., 'Proceed with standard planning. Team is adequate. Monitor CDO retention. Plan hiring for ML engineer and data analysts.')",
+            "4. Top 3 Hiring Priorities with estimated timeline and market difficulty",
+            "5. Key Person Risk Summary: (top 2-3 concentration risks with mitigation)"
+          ],
+          "outputs": [
+            "Executive Summary (1-2 pages, formatted for board presentation)"
+          ]
+        },
+        {
+          "activity_id": "A4-4",
+          "activity_name": "Workforce Capability Map Production",
+          "day": 24,
+          "duration_hours": 4,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Produce 5-10 page Workforce Capability Map: every team member mapped to WIDAI roles, with coverage and capability scores visualized as heat map.",
+          "inputs": [
+            "Role mapping matrix",
+            "Coverage and capability scoring matrices",
+            "Criticality assignments"
+          ],
+          "capability_map_sections": [
+            "1. Org Chart with WIDAI Role Overlays (visual): Each person → WIDAI role, color-coded by coverage/capability band (Red=<50%, Yellow=50-75%, Green=75%+)",
+            "2. Team Summary Table: All people, with primary role, coverage score, capability score, criticality, concentration risk",
+            "3. Role-Level Heat Map: Each role from reference architecture, with current coverage, capability, and criticality",
+            "4. KSA Coverage Analysis: For each role, which KSAs are covered by the team, which are gaps?",
+            "5. Supporting narrative: Brief description of team strengths and gaps"
+          ],
+          "visual_elements": [
+            "Org chart with WIDAI role labels",
+            "Capability score heat map (person × role capability)",
+            "Coverage progress against reference architecture",
+            "KSA coverage by role (stacked bar chart)"
+          ],
+          "outputs": [
+            "Workforce Capability Map (5-10 pages, heavily visual)"
+          ]
+        },
+        {
+          "activity_id": "A4-5",
+          "activity_name": "Gap Analysis & Hiring Plan Production",
+          "day": 25,
+          "duration_hours": 3,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Produce 3-5 page Gap Analysis & Hiring Priority Plan: unfilled roles, under-filled roles, capability gaps, ranked by impact. Includes job description seeds from WIDAI role definitions.",
+          "inputs": [
+            "Gap analysis from A4-1",
+            "WIDAI role definitions (with KSA and job description seeds)"
+          ],
+          "gap_analysis_sections": [
+            "1. Gap Summary Table: All gaps ranked by (1 - coverage) × criticality; includes role, gap type (unfilled/under-filled), impact, timeline",
+            "2. Critical Hiring Priority List: Top 5-7 roles to hire, with recommended profile and market difficulty",
+            "3. WIDAI Job Description Seeds: For each recommended hire, starting job description sourced from WIDAI role definition",
+            "4. Hiring Timeline & Resource Plan: Recruiting timeline, required seniority, estimated salary range (from WIDAI job market data, if available)",
+            "5. Alternative Approaches: For hard-to-fill roles, recommend: internal upskilling, consultant bridge, outsource to vendor"
+          ],
+          "outputs": [
+            "Gap Analysis & Hiring Priority Plan (3-5 pages)"
+          ]
+        },
+        {
+          "activity_id": "A4-6",
+          "activity_name": "Key Person Risk Assessment Production",
+          "day": 26,
+          "duration_hours": 3,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Produce 2-3 page Key Person Risk Assessment: top 5 concentration risks, mitigation strategies, succession planning inputs.",
+          "inputs": [
+            "Concentration risk matrix (from A3-4)",
+            "Mitigation planning (from A4-2)"
+          ],
+          "key_person_risk_sections": [
+            "1. Key Person Risk Summary: Top 5 people by concentration risk; risk level (high/moderate/low); key knowledge areas",
+            "2. Individual Risk Profiles: For each top 5 person:",
+            "   - Name, title, primary role, years in company",
+            "   - Concentration risk score and components (unique knowledge %, replacement difficulty, tenure risk)",
+            "   - Knowledge areas held exclusively by this person",
+            "   - Identified successors or learning opportunities",
+            "3. Mitigation Recommendations: For each high-risk person, recommended retention strategy, knowledge documentation plan, succession plan",
+            "4. Succession Planning Roadmap: Timeline for developing backup capabilities",
+            "5. Retention Strategy: Recommended incentives, milestone-based vesting, key person insurance"
+          ],
+          "outputs": [
+            "Key Person Risk Assessment (2-3 pages)"
+          ]
+        },
+        {
+          "activity_id": "A4-7",
+          "activity_name": "Deliverable Review & Quality Check",
+          "day": 27,
+          "duration_hours": 2,
+          "participants": {
+            "assessor": "WIDAI assessment lead"
+          },
+          "description": "Internal quality check: verify all scores are traceable, findings are supported by evidence, narrative is clear, deliverables are complete.",
+          "quality_checklist": [
+            "Are all composite scores (TCI, KPRS, GSI, WRS) clearly documented and defensible?",
+            "Are key findings supported by specific evidence (coverage gaps, capability shortfalls, concentration risks)?",
+            "Are hiring recommendations realistic given market scarcity and timeline?",
+            "Are all four deliverables complete and professionally formatted?",
+            "Is the executive summary actionable for investment committee?",
+            "Are there any factual errors or inconsistencies?"
+          ],
+          "outputs": [
+            "Deliverable package (4 documents): (1) Executive Summary, (2) Workforce Capability Map, (3) Gap Analysis, (4) Key Person Risk Assessment"
+          ]
+        }
+      ],
+      "phase_decision_gate": {
+        "gate_name": "Deliverable Completeness",
+        "gate_question": "Are all four deliverables complete, accurate, and ready for investment committee?",
+        "proceed_criteria": [
+          "Executive Summary is 1-2 pages with clear WRS, key findings, and go/no-go signal",
+          "Workforce Capability Map shows all team members mapped to WIDAI roles",
+          "Gap Analysis prioritizes hiring and provides WIDAI job description seeds",
+          "Key Person Risk Assessment identifies top risks and mitigation strategies"
+        ]
+      },
+      "phase_summary": "Analysis phase produces gap analysis, hiring priorities, and four deliverables. By end of Phase 4, assessment is ready for delivery to PE investment committee."
+    },
+    {
+      "phase_id": "PHASE-5",
+      "phase_name": "Delivery & Discussion",
+      "phase_sequence": 5,
+      "duration_days": 2,
+      "day_range": "29-30",
+      "objectives": [
+        "Present assessment to PE investment committee",
+        "Answer questions and clarify findings",
+        "Confirm next steps (hiring, integration planning, key person retention)"
+      ],
+      "activities": [
+        {
+          "activity_id": "A5-1",
+          "activity_name": "Assessment Delivery Presentation",
+          "day": 29,
+          "duration_minutes": 90,
+          "participants": {
+            "assessor": "WIDAI assessment lead",
+            "audience": "PE investment committee (typical: investment manager, operating partner, deal sponsor)"
+          },
+          "description": "Present assessment findings to investment committee. Focus: WRS score, key findings, hiring priorities, key person risks, next steps.",
+          "presentation_agenda": [
+            "1. (10 min) Methodology overview: What WIDAI measures, what it doesn't; reference architecture used",
+            "2. (15 min) Workforce Readiness Score (WRS): Overall assessment, band classification, PE signal",
+            "3. (10 min) Team Capability Index (TCI): Strengths and gaps by role/function",
+            "4. (10 min) Gap Severity Index (GSI): Unfilled roles, hiring priorities, timeline",
+            "5. (10 min) Key Person Risk Score (KPRS): Top 3-5 concentration risks, mitigation recommendations",
+            "6. (15 min) Workforce Capability Map: Visual walkthrough of team strengths and gaps",
+            "7. (10 min) Hiring Plan: Top 5 priorities, market difficulty, estimated timeline",
+            "8. (10 min) Next Steps: Succession planning, retention bonuses, integration roadmap"
+          ],
+          "key_messaging": [
+            "This is not a performance evaluation — it's an assessment of team readiness for the value creation plan",
+            "Scores are based on observable evidence (certifications, work history, WIDAI KSA requirements), not subjective judgment",
+            "Gaps are addressable; the assessment tells you where to focus hiring and development"
+          ],
+          "deliverables_shared": [
+            "Executive Summary (slides)",
+            "Workforce Capability Map (printable poster)",
+            "Gap Analysis & Hiring Plan (handout)",
+            "Key Person Risk Assessment (handout)"
+          ]
+        },
+        {
+          "activity_id": "A5-2",
+          "activity_name": "Q&A and Discussion",
+          "day": 29,
+          "duration_minutes": 60,
+          "participants": {
+            "assessor": "WIDAI assessment lead",
+            "audience": "PE investment committee"
+          },
+          "description": "Open discussion: answer questions about methodology, explore findings, discuss implications for integration plan and valuation.",
+          "common_questions": [
+            "Why is this role scored as critical? (Answer: Because it directly supports [value driver])",
+            "Can we hire quickly for this role? (Answer: Market data suggests 3-6 month search; here's the profile)",
+            "What if [key person] leaves? (Answer: That's the concentration risk score; here's the mitigation plan)",
+            "How confident are you in this score? (Answer: Score is based on [evidence]; confidence is [high/medium] because [evidence quality])"
+          ],
+          "outputs": [
+            "Q&A summary (internal notes)"
+          ]
+        },
+        {
+          "activity_id": "A5-3",
+          "activity_name": "Next Steps & Close",
+          "day": 30,
+          "duration_minutes": 30,
+          "participants": {
+            "assessor": "WIDAI assessment lead",
+            "client": "PE deal sponsor / operating partner"
+          },
+          "description": "Confirm next steps: when will hiring begin, how will key person retention be handled, when will integration planning start, what follow-up is needed from WIDAI.",
+          "next_steps_topics": [
+            "Integration planning timeline (when does integration team stand up?)",
+            "Hiring plan execution (who owns recruiting for the gaps?)",
+            "Key person retention (when do retention conversations happen?)",
+            "Follow-up from WIDAI (post-diligence methodology refinement, 90-day check-in, etc.)",
+            "Confidentiality and data handling (assessment findings are sensitive; confirm how they'll be shared/protected)"
+          ],
+          "outputs": [
+            "Engagement close summary (internal notes)"
+          ]
+        }
+      ],
+      "phase_summary": "Delivery phase presents assessment to investment committee, answers questions, and confirms next steps for integration planning."
+    }
+  ],
+  "engagement_quality_checklist": {
+    "data_quality": [
+      "Org chart is complete and unambiguous",
+      "All people are mapped to WIDAI roles with documented rationale",
+      "Capability evidence is sufficient for scoring (not purely anecdotal)",
+      "No critical data gaps or conflicts"
+    ],
+    "scoring_rigor": [
+      "All scores are defensible and traceable to evidence",
+      "Coverage scores align with org chart headcount",
+      "Capability scores reflect KSA evidence, not personality assessment",
+      "Criticality assignments are specific to value creation plan, not generic",
+      "Concentration risk identification is realistic (based on knowledge distribution, not just tenure)"
+    ],
+    "deliverable_quality": [
+      "Executive Summary is concise and actionable",
+      "Workforce Capability Map is clear and visual",
+      "Gap Analysis provides specific hiring recommendations",
+      "Key Person Risk Assessment includes credible mitigation strategies"
+    ],
+    "pe_readiness": [
+      "Findings are in PE language (investment thesis, value drivers, risk signals)",
+      "Presentation is professional and board-ready",
+      "Recommendations are practical (can be implemented in 30-90 day timeline)",
+      "No overstated or unsupported claims"
+    ]
+  },
+  "common_variations": {
+    "compressed_timeline": "If PE needs assessment in <30 days: skip interviews (use desk-based evidence only), parallel phases where possible, reduce depth of Gap Analysis. Minimum viable scope: WRS score + Executive Summary + Hiring Priorities.",
+    "large_organization": "If target has 100+ person data/AI team: may need to assess by function (e.g., separate assessments for Data Engineering, ML/AI, Analytics, Governance). Adjust reference architecture to reflect functional structure.",
+    "special_situations": "If target company is in sensitive industry (healthcare, defense, finance): may need additional controls for data handling, security clearances, or regulatory review. Adjust phase 1 accordingly."
+  }
+}

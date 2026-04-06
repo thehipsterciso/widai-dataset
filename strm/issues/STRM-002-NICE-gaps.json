@@ -1,0 +1,110 @@
+{
+  "strm_id": "STRM-002-NICE",
+  "framework_id": "NICE",
+  "framework_version": "2.1.0",
+  "widai_version": "0.5.2",
+  "assessment_date": "2026-04-01",
+  "total_gap_signals": 5,
+  "note": "Gap signals are thematic clusters derived from the NICE STRM analysis. Unlike O*NET (which surfaced foundational skill gaps), NICE surfaces boundary-zone gaps between cybersecurity and data/AI domains. All 428 'No relationship' elements are correctly classified as cybersecurity-specific. Gap signals here emerge from: (1) borderline no-rel items with legitimate WIDAI relevance, (2) weak-strength mappings revealing thin WIDAI coverage, and (3) thematic patterns in the cybersecurity-data/AI boundary. Per ADR-014, gaps are registered here and resolved during Phase 1D Synthesis.",
+  "gap_register_updated": "2026-04-01",
+
+  "gaps": [
+    {
+      "gap_id": "NICE-GAP-001",
+      "title": "Data De-identification and Anonymization Techniques",
+      "severity": "moderate",
+      "triggering_fdes": [
+        {"id": "K1323", "name": "Knowledge of data de-identification tools and techniques", "fde_type": "knowledge"}
+      ],
+      "domains_searched": ["SP", "DG", "RC"],
+      "nearest_miss": "SP-K-010 (privacy-by-design principles), RC-K-007 (data protection regulatory requirements)",
+      "description": "NICE defines K1323 (data de-identification tools and techniques) as a standalone knowledge element. WIDAI covers privacy-by-design principles (SP-K-010) and data protection regulation (RC domain) but lacks a dedicated KSA for the specific technical competency of data de-identification, anonymization, pseudonymization, and re-identification risk assessment. This is a cross-domain competency: cybersecurity uses it for data protection, data/AI uses it for privacy-preserving analytics, regulatory compliance, and responsible AI training data preparation.",
+      "suggested_domain": "SP",
+      "authoring_guidance": "Consider a Knowledge KSA: 'Knowledge of data de-identification techniques, including anonymization, pseudonymization, k-anonymity, l-diversity, differential privacy, and synthetic data generation, along with re-identification risk assessment methodologies.' This would serve privacy engineering, AI training data preparation, and regulatory compliance roles. It sits naturally in the SP domain as a technical privacy competency.",
+      "synthesis_recommendation": "High priority. De-identification is a critical competency for data/AI professionals working with sensitive data. Expect corroboration from EU AI Act STRM (AI literacy requirements include understanding of privacy-preserving techniques) and potentially DAMA DMBOK (data security chapter)."
+    },
+    {
+      "gap_id": "NICE-GAP-002",
+      "title": "Data/AI Incident Response and Recovery",
+      "severity": "moderate",
+      "triggering_fdes": [
+        {"id": "T0510", "name": "Coordinate incident response functions", "fde_type": "task"},
+        {"id": "K0824", "name": "Knowledge of incident response roles and responsibilities", "fde_type": "knowledge"},
+        {"id": "K1181", "name": "Knowledge of organizational cybersecurity incident response plans", "fde_type": "knowledge"}
+      ],
+      "domains_searched": ["OP", "RM", "AG"],
+      "nearest_miss": "RM-K-001 (risk quantification frameworks), OP-K-007 (IT service management principles)",
+      "description": "NICE defines comprehensive incident response competencies (coordination, roles, plans) for cybersecurity events. WIDAI covers risk management and operational monitoring but lacks structured incident response competencies specific to data/AI failures — data breach response coordination, AI model failure escalation, data pipeline disaster recovery, and model rollback procedures. These are distinct from cybersecurity IR because the root causes, stakeholders, and remediation paths differ (e.g., a poisoned training dataset requires model retraining, not network containment).",
+      "suggested_domain": "OP",
+      "authoring_guidance": "Consider KSAs such as: 'Knowledge of data and AI incident response frameworks, including data breach notification requirements, AI model failure escalation procedures, data pipeline disaster recovery, and model rollback protocols' (Knowledge, OP domain) and 'Skill in coordinating cross-functional response to data quality incidents, model failures, or data breach events, including evidence preservation, impact assessment, stakeholder notification, and root cause analysis' (Skill, OP domain). Counter-argument: incident response may be adequately covered by WIDAI's risk management KSAs at a higher level of abstraction. Evaluate whether the operational specificity of IR planning adds value beyond what RM-K-001 and OP-K-007 provide.",
+      "synthesis_recommendation": "Moderate priority. Corroborate against NIST AI RMF STRM (which defines AI incident response expectations in the GOVERN function). If AI RMF confirms, this gap is validated as a distinct WIDAI need separate from cybersecurity IR."
+    },
+    {
+      "gap_id": "NICE-GAP-003",
+      "title": "Technical Audit and Compliance Verification for Data Systems",
+      "severity": "low",
+      "triggering_fdes": [
+        {"id": "S0619", "name": "Skill in auditing technical systems", "fde_type": "skill", "strength": 3, "mapped_to": "AB-S-002"},
+        {"id": "T1955", "name": "Establish automated control assessment reporting requirements", "fde_type": "task", "strength": 3, "mapped_to": "RC-K-010"},
+        {"id": "T1511", "name": "Identify alleged violations of law, regulations, policy, or guidance", "fde_type": "task", "strength": 3, "mapped_to": "RC-S-002"}
+      ],
+      "domains_searched": ["RC", "DG", "OP"],
+      "nearest_miss": "RC-S-002 (regulatory interpretation), RC-K-010 (DPIA requirements), DG-T-005 (governance compliance monitoring)",
+      "description": "Multiple NICE elements related to technical auditing and automated compliance verification map to WIDAI with low strength scores (2-4). WIDAI covers regulatory interpretation (RC domain) and governance compliance monitoring (DG domain) but lacks dedicated KSAs for the mechanical aspects of technical compliance auditing — automated control testing, evidence collection, audit trail management, and compliance gap remediation tracking. The weak-strength pattern suggests WIDAI addresses compliance at a policy/regulatory level but may underserve the operational audit execution competency.",
+      "suggested_domain": "RC",
+      "authoring_guidance": "Consider a Skill: 'Skill in designing and executing technical compliance audits for data and AI systems, including automated control testing, evidence collection, audit trail analysis, finding remediation tracking, and compliance posture reporting.' Alternatively, this may be adequately covered if DG and RC domain KSAs are strengthened during synthesis. The current weak mappings may reflect KSA wording gaps rather than true competency gaps.",
+      "synthesis_recommendation": "Low priority as standalone. Evaluate against DCAM STRM (which likely defines data management audit competencies) and EU AI Act STRM (which requires conformity assessment capabilities). If multiple frameworks surface audit-specific competencies, upgrade to moderate."
+    },
+    {
+      "gap_id": "NICE-GAP-004",
+      "title": "Process Maturity Assessment and Capability Modeling",
+      "severity": "low",
+      "triggering_fdes": [
+        {"id": "K0869", "name": "Knowledge of process maturity models and frameworks", "fde_type": "knowledge", "strength": 3, "mapped_to": "OP-A-002"},
+        {"id": "T0542", "name": "Translate proposed capabilities into technical requirements", "fde_type": "task", "strength": 4, "mapped_to": "TF-A-001"}
+      ],
+      "domains_searched": ["OP", "LS", "DG"],
+      "nearest_miss": "OP-A-002 (operational process scaling), OP-K-007 (IT service management)",
+      "description": "NICE K0869 (process maturity models and frameworks — CMMI, COBIT, etc.) maps weakly to WIDAI. WIDAI covers operational process design (OP domain) and strategic planning (LS domain) but lacks explicit competency in applying maturity models to assess and improve data/AI organizational capability. This corroborates O*NET GAP-004 (Project and Time Management) — both frameworks surface an operational maturity assessment gap. Data/AI maturity assessment is a distinct competency used in PE due diligence, CDAIO program planning, and organizational readiness evaluation.",
+      "suggested_domain": "OP",
+      "authoring_guidance": "Consider a Knowledge KSA: 'Knowledge of data and AI capability maturity models, including DCAM, CMMI for data management, and bespoke maturity assessment frameworks, with the ability to assess organizational maturity levels, identify capability gaps, and design improvement roadmaps.' This is particularly relevant for CDAIO roles and PE-facing assessment work.",
+      "synthesis_recommendation": "Moderate priority when combined with O*NET GAP-004 corroboration. If DCAM or SFIA also define maturity assessment competencies, the cross-framework evidence becomes compelling. This gap directly serves the PE assessment use case."
+    },
+    {
+      "gap_id": "NICE-GAP-005",
+      "title": "Supply Chain Integrity for Data and AI",
+      "severity": "low",
+      "triggering_fdes": [
+        {"id": "T1206", "name": "Recommend cybersecurity or cybersecurity-enabled products for use within a system", "fde_type": "task"},
+        {"id": "T1169", "name": "Define acquisition life cycle systems security engineering requirements", "fde_type": "task"}
+      ],
+      "domains_searched": ["RM", "AG", "OP"],
+      "nearest_miss": "RM-K-003 (third-party risk assessment), AG-K-008 (AI supply chain concepts)",
+      "description": "NICE defines comprehensive supply chain security competencies (acquisition lifecycle, product evaluation, vendor assessment for security). WIDAI covers third-party risk assessment (RM domain) and has emerging AI supply chain concepts (AG domain) but lacks dedicated supply chain integrity competencies specific to data/AI — training data provenance verification, model supply chain validation (pre-trained model sourcing), data vendor quality assurance, and AI component bill-of-materials management. These are classified as 'No relationship' in the STRM because NICE frames them entirely as cybersecurity concerns, but the underlying competency pattern translates directly to data/AI supply chain integrity.",
+      "suggested_domain": "AG",
+      "authoring_guidance": "Consider KSAs such as: 'Knowledge of AI supply chain integrity principles, including training data provenance verification, pre-trained model sourcing evaluation, data vendor quality assurance, and AI component bill-of-materials (AI BOM) management' (Knowledge, AG domain). Counter-argument: this may be too early-stage — AI BOM and model supply chain are emerging concepts not yet standardized. Evaluate whether the EU AI Act STRM surfaces similar requirements (the Act includes supply chain documentation obligations).",
+      "synthesis_recommendation": "Low priority as standalone. Likely to be corroborated by EU AI Act STRM (supply chain documentation requirements) and NIST AI RMF STRM (MAP function includes third-party AI component assessment). If corroborated, upgrade to moderate — this is a differentiator for WIDAI given few frameworks address data/AI supply chain as a workforce competency."
+    }
+  ],
+
+  "per_fde_gap_detection": {
+    "method": "Retroactive multi-method signal analysis (gap_detection.py)",
+    "criteria": [
+      "domain_mismatch: NLI contradiction >80% on Equal/Superset (critical) or >50% (moderate)",
+      "threshold_fragility: STS 0.50-0.55 on Superset/Equal (moderate)",
+      "vocabulary_inflation: bi-encoder/STS gap >0.15 with STS <0.60 (moderate) or >0.12 (low)"
+    ],
+    "total_flagged": 516,
+    "severity_counts": {
+      "critical": 23,
+      "moderate": 428,
+      "low": 65
+    },
+    "criterion_counts": {
+      "domain_mismatch": 139,
+      "threshold_fragility": 185,
+      "vocabulary_inflation": 330
+    },
+    "note": "Per-FDE gap signals are recorded in individual rationale files. This section summarizes the aggregate findings. Existing thematic gap analysis above is preserved and remains valid."
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "framework": "EU AI Act (Regulation (EU) 2024/1689)",
+  "gap_register_date": "2026-04-01",
+  "gap_register_updated": "2026-04-01",
+  "total_elements_evaluated": 62,
+  "no_relationship_count": 0,
+  "per_fde_gap_detection": {
+    "method": "Retroactive multi-method signal analysis (gap_detection.py)",
+    "criteria": [
+      "domain_mismatch: NLI contradiction >80% on Equal/Superset (critical) or >50% (moderate)",
+      "threshold_fragility: STS 0.50-0.55 on Superset/Equal (moderate)",
+      "vocabulary_inflation: bi-encoder/STS gap >0.15 with STS <0.60 (moderate) or >0.12 (low)"
+    ],
+    "total_flagged": 24,
+    "severity_counts": {
+      "critical": 11,
+      "moderate": 8,
+      "low": 5
+    },
+    "criterion_counts": {
+      "domain_mismatch": 13,
+      "threshold_fragility": 4,
+      "vocabulary_inflation": 10
+    }
+  },
+  "critical_elements": [
+    {
+      "fde_id": "EUAIA-C-006",
+      "article": "26(6)",
+      "title": "Deployer workforce AI literacy",
+      "ref_ksa": "RM-K-008",
+      "relationship": "Superset of",
+      "sts_raw": 0.511,
+      "nli_contradiction": 1.0,
+      "criteria": ["domain_mismatch", "threshold_fragility"],
+      "issue": "Matched to Risk Management KSA but obligation is about workforce AI literacy for deployers. Functional domain is LS/AG, not RM."
+    },
+    {
+      "fde_id": "EUAIA-O-007",
+      "article": "10(3)",
+      "title": "Data and data governance — representative data",
+      "ref_ksa": "AG-S-006",
+      "relationship": "Superset of",
+      "sts_raw": 0.558,
+      "nli_contradiction": 0.999,
+      "criteria": ["domain_mismatch"],
+      "issue": "Matched to AG governance skill but obligation is about ensuring training data representativeness. Functional domain is DQ, not AG."
+    },
+    {
+      "fde_id": "EUAIA-O-033",
+      "article": "27(3)",
+      "title": "Fundamental rights impact assessment — content",
+      "ref_ksa": "SP-K-009",
+      "relationship": "Superset of",
+      "sts_raw": 0.619,
+      "nli_contradiction": 0.999,
+      "criteria": ["domain_mismatch"],
+      "issue": "Matched to Security/Privacy knowledge but obligation is about fundamental rights impact assessment methodology. May need RC or AG domain KSA."
+    },
+    {
+      "fde_id": "EUAIA-O-047",
+      "article": "55(1)(c)",
+      "title": "GPAI systemic risk — adversarial testing",
+      "ref_ksa": "AG-S-005",
+      "relationship": "Superset of",
+      "sts_raw": 0.65,
+      "nli_contradiction": 0.994,
+      "criteria": ["domain_mismatch"],
+      "issue": "Matched to AG governance skill but obligation is about adversarial testing (red-teaming) for GPAI models. Functional domain is AI/SP, not AG."
+    },
+    {
+      "fde_id": "EUAIA-O-032",
+      "article": "27(1)",
+      "title": "Fundamental rights impact assessment — obligation",
+      "ref_ksa": "AG-S-005",
+      "relationship": "Superset of",
+      "sts_raw": 0.645,
+      "nli_contradiction": 0.983,
+      "criteria": ["domain_mismatch"],
+      "issue": "Matched to AG governance skill but obligation is about conducting fundamental rights impact assessments. Overlaps with AG but may need dedicated RC/AG KSA for rights-based AI assessment."
+    },
+    {
+      "fde_id": "EUAIA-O-029",
+      "article": "26(5)",
+      "title": "Deployer input data relevance",
+      "ref_ksa": "DG-T-007",
+      "relationship": "Superset of",
+      "sts_raw": 0.6,
+      "nli_contradiction": 0.979,
+      "criteria": ["domain_mismatch"],
+      "issue": "Matched to Data Governance task but obligation is about ensuring input data relevance and representativeness for deployed AI. May need DQ-domain KSA for operational data quality in AI deployment."
+    },
+    {
+      "fde_id": "EUAIA-O-010",
+      "article": "12(1)",
+      "title": "Record-keeping — automatic logging",
+      "ref_ksa": "SP-T-001",
+      "relationship": "Superset of",
+      "sts_raw": 0.563,
+      "nli_contradiction": 0.974,
+      "criteria": ["domain_mismatch"],
+      "issue": "Matched to Security/Privacy task but obligation is about designing automatic logging capabilities for AI systems. Functional domain is AI/TF, not SP."
+    },
+    {
+      "fde_id": "EUAIA-O-015",
+      "article": "15(1)",
+      "title": "Accuracy, robustness and cybersecurity",
+      "ref_ksa": "AG-K-006",
+      "relationship": "Superset of",
+      "sts_raw": 0.558,
+      "nli_contradiction": 0.956,
+      "criteria": ["domain_mismatch"],
+      "issue": "Matched to AG governance framework knowledge but obligation requires AI quality engineering — accuracy measurement, robustness testing, cybersecurity integration. Functional domain is AI/SP, not AG. NLI contradiction 95.6% is the clearest domain mismatch signal in this STRM."
+    },
+    {
+      "fde_id": "EUAIA-O-049",
+      "article": "72(1)",
+      "title": "Post-market monitoring",
+      "ref_ksa": "AG-S-005",
+      "relationship": "Equal",
+      "sts_raw": 0.729,
+      "nli_contradiction": 0.906,
+      "criteria": ["domain_mismatch"],
+      "issue": "Classified Equal at STS 0.729 but NLI contradiction 90.6%. Post-market monitoring for AI systems may require operational monitoring KSAs beyond governance skill."
+    },
+    {
+      "fde_id": "EUAIA-O-052",
+      "article": "73(4)",
+      "title": "Serious incident reporting details",
+      "ref_ksa": "AG-S-005",
+      "relationship": "Equal",
+      "sts_raw": 0.695,
+      "nli_contradiction": 0.861,
+      "criteria": ["domain_mismatch"],
+      "issue": "Classified Equal but NLI contradiction 86.1%. Incident reporting may need dedicated RC-domain KSA for AI incident response and regulatory notification procedures."
+    },
+    {
+      "fde_id": "EUAIA-O-011",
+      "article": "12(2)",
+      "title": "Record-keeping — traceability",
+      "ref_ksa": "AG-S-005",
+      "relationship": "Equal",
+      "sts_raw": 0.714,
+      "nli_contradiction": 0.854,
+      "criteria": ["domain_mismatch"],
+      "issue": "Classified Equal but NLI contradiction 85.4%. AI traceability and audit trail design may require TF or AI domain KSA rather than AG governance skill."
+    }
+  ],
+  "analysis": {
+    "summary": "24 of 62 elements (38.7%) flagged with gap signals. 11 critical, 8 moderate, 5 low. The initial assessment of zero gaps was incorrect — it was an artifact of missing gap detection logic in the scoring pipeline.",
+    "correction_note": "The original gap register (2026-04-01) reported zero gap signals because the scoring pipeline hardcoded gap_signal to null for all elements. Retroactive gap detection using multi-method signal analysis revealed 24 flagged elements, 11 of which are critical domain mismatches.",
+    "pattern_analysis": {
+      "ag_gravity_well": "The most consistent pattern is AG-domain KSAs being matched to obligations from other functional domains. AG vocabulary (governance, framework, oversight, assessment) shares surface-level tokens with regulatory language from any domain, creating a gravity well in candidate selection. 5 of 11 critical elements matched to AG-S-005 alone.",
+      "candidate_selection_bias": "The bi-encoder candidate identification step (all-MiniLM-L6-v2) preferentially surfaces AG KSAs for regulatory text because governance language is shared vocabulary. Top-5 candidates may systematically exclude functionally correct KSAs from DQ, AI, TF, and SP domains.",
+      "regulatory_vocabulary_gap": "Legal prose shares vocabulary patterns with governance/compliance KSAs, inflating similarity scores for AG and RC domains while suppressing scores for technically specific domains (AI quality engineering, data quality operations, adversarial testing)."
+    },
+    "strongest_domain_coverage": {
+      "AG": "AI Governance — highest representation but over-represented due to vocabulary overlap. Legitimately covers AI literacy (Art. 4), human oversight (Art. 14), quality management (Art. 17).",
+      "RC": "Regulatory Compliance — covers provider/deployer obligations (Art. 16, 26), conformity assessment (Art. 34, 43).",
+      "RM": "Risk Management — covers risk management system (Art. 9), technical documentation (Art. 53)."
+    },
+    "gap_themes": [
+      {
+        "theme": "AI Quality Engineering",
+        "elements": ["EUAIA-O-015"],
+        "description": "Accuracy measurement, robustness testing, cybersecurity integration for AI systems. No WIDAI KSA directly addresses the engineering discipline of building AI systems to quality standards.",
+        "suggested_domain": "AI",
+        "priority": "high"
+      },
+      {
+        "theme": "AI Adversarial Testing / Red-Teaming",
+        "elements": ["EUAIA-O-047"],
+        "description": "Structured adversarial testing of GPAI models for systemic risk identification. Distinct from general security testing — requires AI-specific attack methodology.",
+        "suggested_domain": "SP or AI",
+        "priority": "high"
+      },
+      {
+        "theme": "Fundamental Rights Impact Assessment",
+        "elements": ["EUAIA-O-032", "EUAIA-O-033"],
+        "description": "Conducting and documenting fundamental rights impact assessments for high-risk AI. Requires intersection of legal/ethical analysis with technical AI assessment.",
+        "suggested_domain": "RC or AG",
+        "priority": "high"
+      },
+      {
+        "theme": "AI System Observability and Traceability",
+        "elements": ["EUAIA-O-010", "EUAIA-O-011"],
+        "description": "Designing automatic logging, audit trails, and traceability mechanisms for AI systems. Technical engineering competency, not governance.",
+        "suggested_domain": "TF or AI",
+        "priority": "moderate"
+      },
+      {
+        "theme": "AI Training Data Quality and Representativeness",
+        "elements": ["EUAIA-O-007", "EUAIA-O-029"],
+        "description": "Ensuring training data representativeness and input data relevance. Data quality discipline applied to AI-specific contexts.",
+        "suggested_domain": "DQ",
+        "priority": "moderate"
+      },
+      {
+        "theme": "AI Incident Response and Regulatory Notification",
+        "elements": ["EUAIA-O-049", "EUAIA-O-052"],
+        "description": "Post-market monitoring, serious incident identification, and regulatory notification procedures for AI systems.",
+        "suggested_domain": "RC",
+        "priority": "moderate"
+      }
+    ],
+    "cross_strm_note": "Several gap themes corroborate findings from previous STRMs: AI incident response (NICE-GAP-002, DCWF-GAP-001), supply chain integrity for AI (NICE-GAP-005, DCWF-GAP-003). The fundamental rights impact assessment theme is novel to the EU AI Act STRM. Cross-STRM corroboration strengthens the case for KSA creation during Phase 1D synthesis."
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "test_id": "R02",
+  "test_name": "AI-Assisted KSA Quality Test for WIDAI Dataset",
+  "test_date": "2026-03-26",
+  "test_hypothesis": "AI-assisted KSA authoring produces competency models of comparable quality to manually-authored KSAs, meeting the bar of 'editable' rather than 'rewrite-required' quality.",
+  "roles_tested": [
+    {
+      "role_id": "WIDAI-OPS-0131",
+      "canonical_title": "AI Adoption/Change Manager",
+      "category": "OPS",
+      "work_role_code": "WR-OPS-07.05",
+      "seniority_level": "Manager",
+      "ksas_authored": 8,
+      "ksa_ids": [
+        "OPS-07.05-K-001",
+        "OPS-07.05-K-002",
+        "OPS-07.05-K-003",
+        "OPS-07.05-S-001",
+        "OPS-07.05-S-002",
+        "OPS-07.05-A-001",
+        "OPS-07.05-T-001",
+        "OPS-07.05-T-002"
+      ],
+      "type_distribution": {
+        "Knowledge": 3,
+        "Skill": 2,
+        "Ability": 1,
+        "Task": 2
+      },
+      "scores": {
+        "completeness": 4,
+        "granularity_match": 4,
+        "statement_quality": 4,
+        "source_framework_accuracy": 4,
+        "style_consistency": 4,
+        "assessment_utility": 4
+      },
+      "overall_score": 4.0,
+      "assessment_notes": "AI captured the full scope of change management for data/AI adoption. Statements are specific and actionable, matching the granularity of existing OPS KSAs. Framework references (ADKAR, Kotter, McKinsey 7S) are appropriate and well-grounded. Minor observation: could have included more on resistance tactics, but the set is complete for assessment purposes. Slightly generic phrasing in a few Ability/Skill statements (compare OPS-07.05-A-001 against GOV-01.01-A-003 for style refinement).",
+      "failure_modes": "None. Slight stylistic polish needed but no substantive gaps.",
+      "recommendations": "Approve with light editorial review. Particularly strong on Knowledge statements grounding in real adoption barriers."
+    },
+    {
+      "role_id": "WIDAI-RSK-0107",
+      "canonical_title": "AI Auditor",
+      "category": "RSK",
+      "work_role_code": "WR-RSK-06.05",
+      "seniority_level": "Mid\u2013Senior",
+      "ksas_authored": 9,
+      "ksa_ids": [
+        "RSK-06.05-K-001",
+        "RSK-06.05-K-002",
+        "RSK-06.05-K-003",
+        "RSK-06.05-K-004",
+        "RSK-06.05-S-001",
+        "RSK-06.05-S-002",
+        "RSK-06.05-A-001",
+        "RSK-06.05-T-001",
+        "RSK-06.05-T-002"
+      ],
+      "type_distribution": {
+        "Knowledge": 4,
+        "Skill": 2,
+        "Ability": 1,
+        "Task": 2
+      },
+      "scores": {
+        "completeness": 5,
+        "granularity_match": 4,
+        "statement_quality": 5,
+        "source_framework_accuracy": 5,
+        "framework_references": 5,
+        "style_consistency": 4,
+        "assessment_utility": 5
+      },
+      "overall_score": 4.7,
+      "assessment_notes": "Excellent. AI correctly identified the full scope of AI auditing, grounded in ISACA (AAIA), IIA, and AICPA frameworks explicitly mentioned in the role definition. Knowledge statements reflect the AI lifecycle audit perspective (governance, data provenance, controls, testing). Skill and Task statements are specific and assessable. Strong framework accuracy. One minor issue: RSK-06.05-K-001 lists four frameworks but could be split into two KSAs (audit frameworks vs. compliance standards), but grouping is defensible.",
+      "failure_modes": "Minor: RSK-06.05-K-004 (testing methodologies) feels slightly adjacent to RSK-06.02 (AI Security Specialist). Distinct but overlapping domain.",
+      "recommendations": "Approve. Strongest KSA set in the R02 test. Framework grounding is exemplary and directly supports the auditor role."
+    },
+    {
+      "role_id": "WIDAI-NICHE-0180",
+      "canonical_title": "Algorithmic Trading Engineer",
+      "category": "NICHE",
+      "work_role_code": "WR-NICHE-01.01",
+      "seniority_level": "Mid\u2013Senior",
+      "ksas_authored": 9,
+      "ksa_ids": [
+        "NICHE-01.01-K-001",
+        "NICHE-01.01-K-002",
+        "NICHE-01.01-K-003",
+        "NICHE-01.01-K-004",
+        "NICHE-01.01-S-001",
+        "NICHE-01.01-S-002",
+        "NICHE-01.01-A-001",
+        "NICHE-01.01-T-001",
+        "NICHE-01.01-T-002"
+      ],
+      "type_distribution": {
+        "Knowledge": 4,
+        "Skill": 2,
+        "Ability": 1,
+        "Task": 2
+      },
+      "scores": {
+        "completeness": 4,
+        "granularity_match": 4,
+        "statement_quality": 4,
+        "source_framework_accuracy": 4,
+        "style_consistency": 4,
+        "assessment_utility": 4
+      },
+      "overall_score": 4.0,
+      "assessment_notes": "Good coverage of the highly specialized algorithmic trading domain. Knowledge statements span quantitative strategy theory, financial instruments, backtesting methodology, and regulatory landscape \u2014 appropriate breadth for a mid-senior role. Skills focus on implementation and optimization. Regulatory knowledge is important and well-covered (SEC, FCA, MiFID II). Assessment utility is strong \u2014 each KSA is independently measurable.",
+      "failure_modes": "Minor: The domain is inherently quantitative and dense. Some statements (NICHE-01.01-K-001, NICHE-01.01-K-002) are quite broad and could be split. For example, K-001 conflates trading strategy theory with ML-based approaches \u2014 separate those for finer granularity. K-002 (instruments + microstructure) could also be split. Not wrong, but slightly coarser than manual KSA standards.",
+      "recommendations": "Approve with note to split K-001 and K-002 in review. Strong on domain specificity, but granularity could be refined. This is the hardest domain (NICHE + highly specialized), so KSA coarseness is forgivable."
+    },
+    {
+      "role_id": "WIDAI-REG-0173",
+      "canonical_title": "Authorized Representative (AI)",
+      "category": "REG",
+      "work_role_code": "WR-REG-01.01",
+      "seniority_level": "Senior",
+      "ksas_authored": 9,
+      "ksa_ids": [
+        "REG-01.01-K-001",
+        "REG-01.01-K-002",
+        "REG-01.01-K-003",
+        "REG-01.01-K-004",
+        "REG-01.01-S-001",
+        "REG-01.01-S-002",
+        "REG-01.01-A-001",
+        "REG-01.01-T-001",
+        "REG-01.01-T-002"
+      ],
+      "type_distribution": {
+        "Knowledge": 4,
+        "Skill": 2,
+        "Ability": 1,
+        "Task": 2
+      },
+      "scores": {
+        "completeness": 5,
+        "granularity_match": 4,
+        "statement_quality": 5,
+        "source_framework_accuracy": 5,
+        "style_consistency": 4,
+        "assessment_utility": 5
+      },
+      "overall_score": 4.6,
+      "assessment_notes": "Excellent grounding in EU AI Act (the primary source framework for this role). AI correctly identified the key competency areas: high-risk AI classification, technical documentation requirements, regulatory landscape, notified body procedures, and submission processes. Knowledge statements are specific to EU AI Act articles and requirements. The role is scaffold-only (REG category has no existing KSAs), so there's no risk of overfitting. Statements match the Senior seniority level in scope and complexity.",
+      "failure_modes": "Very minor: REG-01.01-K-003 (related frameworks) is somewhat generic and could be more specific to which sectors are in scope for AR-AI roles (medical, high-risk categories). But defensible as-is.",
+      "recommendations": "Approve. Strongest REG category KSAs in the dataset. Framework accuracy is flawless (EU AI Act citations are precise). This set demonstrates AI can handle regulatory frameworks as well as technical ones."
+    },
+    {
+      "role_id": "WIDAI-OPS-0135",
+      "canonical_title": "AI Solutions Engineer",
+      "category": "OPS",
+      "work_role_code": "WR-OPS-07.06",
+      "seniority_level": "Mid\u2013Senior",
+      "ksas_authored": 9,
+      "ksa_ids": [
+        "OPS-07.06-K-001",
+        "OPS-07.06-K-002",
+        "OPS-07.06-K-003",
+        "OPS-07.06-K-004",
+        "OPS-07.06-S-001",
+        "OPS-07.06-S-002",
+        "OPS-07.06-A-001",
+        "OPS-07.06-T-001",
+        "OPS-07.06-T-002"
+      ],
+      "type_distribution": {
+        "Knowledge": 4,
+        "Skill": 2,
+        "Ability": 1,
+        "Task": 2
+      },
+      "scores": {
+        "completeness": 4,
+        "granularity_match": 4,
+        "statement_quality": 4,
+        "source_framework_accuracy": 4,
+        "style_consistency": 4,
+        "assessment_utility": 4
+      },
+      "overall_score": 4.0,
+      "assessment_notes": "Solid coverage of the AI Solutions Engineer role. Knowledge spans AI architectures (RAG, agentic, ensembles), deployment platforms (cloud and on-prem), business case development, and production monitoring. Appropriate balance of technical depth and business acumen for a Mid\u2013Senior SE role. Skills and tasks are well-scoped. The role is newly defined (no existing KSAs in OPS for this position), so grounding is against OPS-07 patterns and the role definition.",
+      "failure_modes": "None significant. OPS-07.06-K-002 (cloud platforms) lists specific vendors (AWS, Azure, GCP) which is good for granularity but dates faster than framework-based KSAs. Acceptable tradeoff for assessment utility. OPS-07.06-A-001 (rapid prototyping) is somewhat generic but fits the role.",
+      "recommendations": "Approve. Good fit for a newly defined operations role. Strong on both technical architectures and business case development. Assessment utility is high."
+    }
+  ],
+  "summary": {
+    "total_roles_tested": 5,
+    "total_ksas_authored": 44,
+    "average_ksas_per_role": 8.8,
+    "average_completeness_score": 4.4,
+    "average_granularity_match_score": 4.0,
+    "average_statement_quality_score": 4.4,
+    "average_source_framework_accuracy_score": 4.4,
+    "average_style_consistency_score": 4.0,
+    "average_assessment_utility_score": 4.4,
+    "average_overall_score": 4.26,
+    "quality_comparable_to_manual": true,
+    "quality_level_assessment": "Comparable to human-authored KSAs in the reference set (GOV, ENG, RSK, ANL, etc.). No role requires substantive rewriting; all sets require only editorial refinement.",
+    "failure_modes": [
+      "Granularity coarseness in highly specialized domains (NICHE-01.01 trading strategies) \u2014 addressable by splitting compound Knowledge statements during review",
+      "Minor stylistic consistency issues (some Ability statements are slightly more generic than manual equivalents) \u2014 addressable through light editorial revision",
+      "Framework specificity depth varies (e.g., REG-01.01 is deeply specific to EU AI Act; OPS-07.06 references commercial platforms which date faster than frameworks) \u2014 both approaches are valid"
+    ],
+    "strengths": [
+      "Complete role coverage \u2014 all five roles have KSA sets that address full job scope",
+      "Excellent framework grounding \u2014 AI correctly identified and referenced source frameworks (ISACA, IIA, EU AI Act, O*NET) where applicable",
+      "Appropriate K/S/A/T distribution \u2014 all sets follow the ~4:2:1:2 pattern observed in manual KSAs",
+      "Assessment utility \u2014 each KSA is independently assessable; no vague or aspirational statements",
+      "Style compatibility \u2014 AI-authored KSAs read like part of the same dataset; no jarring tone shifts",
+      "No missing competencies \u2014 role coverage is complete; no major gaps identified"
+    ],
+    "risk_assessment": "Low. AI-assisted authoring produces output at the 'edit' level, not 'rewrite' level. Quality gate for scaling: if >80% of roles have average overall_score >= 4.0 with no rewrite-level failures, proceed with AI-assisted workflow for remaining 150 roles. Current result: 5/5 roles >= 4.0, average 4.26. Gate: PASS."
+  },
+  "decision_gate": {
+    "result": "ADOPT",
+    "implication": "AI-assisted KSA authoring clears the R02 quality test. Quality is comparable to manual authoring. Recommend proceeding with AI-assisted workflow for the remaining 150 scaffold-only roles (LDR, OPS, RSK, ANL partial; all of NICHE, REG). Timeline impact: estimated 10-12 weeks to complete all remaining KSAs with concurrent review, versus 6-12 months of manual-only authoring.",
+    "success_criteria_met": [
+      "Completeness: all five role sets cover full job scope (avg score 4.4/5)",
+      "Granularity: AI-authored granularity matches manual KSA standards (avg score 4.0/5)",
+      "Statement quality: correct format, clear, assessable (avg score 4.4/5)",
+      "Framework accuracy: appropriate source frameworks identified and referenced (avg score 4.4/5)",
+      "Style consistency: reads as cohesive part of WIDAI dataset (avg score 4.0/5)",
+      "Assessment utility: each KSA independently measurable against job requirements (avg score 4.4/5)",
+      "Rewrite threshold: zero roles at 'rewrite-required' quality; all at 'edit' level or higher"
+    ],
+    "conditions_for_scaling": [
+      "Require Thomas human review of all AI-drafted KSAs before publication (no auto-publish)",
+      "Tag each AI-drafted KSA with origin_framework='WIDAI (AI-assisted)' to distinguish from fully manual KSAs during transition",
+      "Batch process by category (complete OPS, RSK, ANL, LDR before moving to NICHE, REG for highest-value coverage)",
+      "Schedule review at ~15 roles per week (Thomas ~60 min per role \u00d7 15 = 15 hours/week), aligning with product development work",
+      "Establish a rapid feedback loop: if failure modes emerge during review, pause and iterate the authoring prompt before continuing"
+    ],
+    "provenance_tagging": "All AI-drafted KSAs should be tagged with generation_method='AI-assisted with human expert review' in the KSA metadata. Transparent provenance is important for credibility \u2014 WIDAI users should know the authoring methodology.",
+    "next_steps": [
+      "1. Thomas reviews R02 KSAs and provides feedback on specific refinements needed",
+      "2. Iterate authoring prompt based on feedback to improve granularity/style consistency",
+      "3. If feedback is minor (editorial only), proceed to scale on remaining 150 roles",
+      "4. If feedback identifies systematic issues, run second validation round on 3-5 roles from different categories before scaling",
+      "5. Once scaled, integrate AI-assisted KSA workflow into the WIDAI development cycle for any new roles added to the taxonomy"
+    ]
+  }
+}

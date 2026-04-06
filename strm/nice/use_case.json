@@ -1,0 +1,69 @@
+{
+  "strm_id": "STRM-002-NICE",
+  "framework_id": "NIST_NICE",
+  "framework_version": "2.1.0",
+  "framework_date": "2025-12-03",
+  "framework_source": "NIST SP 800-181 Rev. 1 (November 2020), Components v2.1.0 (December 2025)",
+  "widai_ksa_pool_version": "0.5.2",
+  "widai_ksa_pool_size": 497,
+  "execution_date": "2026-04-01",
+  "priority": 2,
+  "tier": 1,
+  "use_case_per_ir8477_section3": {
+    "target_audience": "WIDAI framework developers, cybersecurity workforce planners, and stakeholders evaluating how WIDAI's data/AI workforce taxonomy relates to the U.S. government's cybersecurity workforce standard. Secondary audience: organizations building bridge programs between cybersecurity and data/AI career paths.",
+    "why_this_mapping": "NICE is the model WIDAI emulates structurally \u2014 both use Task, Knowledge, and Skill building blocks organized into work roles. This STRM serves three purposes: (1) validate WIDAI's KSA taxonomy design against the framework it was modeled after, (2) identify governance, risk, and management competencies that bridge cybersecurity and data/AI workforce domains, (3) map the overlap boundary between cybersecurity and data/AI to inform career pathway development. NICE is Tier 1 Priority 2 \u2014 the structural validation framework after O*NET's breadth validation.",
+    "concept_types_mapped": {
+      "focal_document": {
+        "source": "NICE Framework Components v2.1.0",
+        "concept_types": [
+          "Task statements (T*) \u2014 946 elements",
+          "Knowledge statements (K*) \u2014 662 elements",
+          "Skill statements (S*) \u2014 540 elements"
+        ],
+        "total_fdes_in_scope": 2148,
+        "total_fdes_excluded": 0,
+        "exclusion_rationale": "No elements excluded. Unlike O*NET where physical/psychomotor/sensory abilities were categorically irrelevant, NICE TKS elements span a continuum from purely tactical cyber operations to governance and management. Pre-filtering would introduce subjectivity. All 2,148 TKS elements are evaluated; those outside WIDAI scope produce 'No relationship' results that document the scope boundary."
+      },
+      "reference_document": {
+        "source": "WIDAI KSA Pool v0.5.2",
+        "concept_types": [
+          "Knowledge (K) \u2014 domain-organized",
+          "Skills (S) \u2014 domain-organized",
+          "Tasks (T) \u2014 domain-organized",
+          "Abilities (A) \u2014 domain-organized"
+        ],
+        "total_reference_elements": 497,
+        "domains": 12
+      },
+      "structural_note": "NICE v2.1.0 uses TKS (Task, Knowledge, Skill) building blocks. The original SP 800-181 (2017) used KSA (Knowledge, Skills, Abilities); Revision 1 (2020) dropped Abilities as a separate element type and elevated Tasks to building-block status. WIDAI retains Abilities as a distinct type. This structural difference means NICE has no direct Ability-type elements to compare against WIDAI Abilities \u2014 but NICE Skills and Tasks may functionally overlap with WIDAI Abilities."
+    },
+    "direction_of_mapping": "Focal \u2192 Reference. Each NICE TKS element (focal) is evaluated against the WIDAI KSA pool (reference). A NICE element with 'No relationship' to any WIDAI KSA indicates either (a) a cybersecurity-specific competency outside WIDAI scope, or (b) a potential gap in WIDAI coverage.",
+    "exhaustiveness_level": "Exhaustive. Every NICE TKS element (2,148) is evaluated. For each element, the most semantically relevant WIDAI KSA is identified via bi-encoder candidate identification, then scored through the full multi-method pipeline (identical to STRM-001-ONET). Where multiple WIDAI KSAs relate to a single NICE element, the strongest relationship is recorded as primary with secondary candidates noted in rationale.",
+    "rationale_type": "Semantic (primary). NICE and WIDAI use different vocabularies \u2014 NICE uses cybersecurity-centered language ('cybersecurity policy', 'system security posture') while WIDAI uses data/AI-centered language ('data governance policy frameworks', 'AI risk quantification'). The conceptual overlap is real but the terminology diverges. Semantic rationale evaluates whether differently-worded concepts describe overlapping competencies. Functional rationale is used as secondary for Task elements where the operational outcome matters more than vocabulary similarity.",
+    "rationale_justification": "NICE is a cybersecurity workforce framework. WIDAI is a data and AI workforce framework. The domain overlap exists in governance, risk management, compliance, privacy, architecture, leadership, and workforce management \u2014 areas where both disciplines share competency requirements. Semantic rationale is necessary because the same underlying competency (e.g., 'risk management') is expressed through domain-specific vocabulary in each framework."
+  },
+  "scope_decisions": {
+    "all_tks_in_scope": true,
+    "note": "All 2,148 TKS elements evaluated without categorical exclusions. The 428 'No relationship' results are analytically valuable \u2014 they map the boundary between cybersecurity and data/AI workforce competencies.",
+    "structural_elements_excluded": {
+      "work_roles": "41 work roles are structural containers, not FDEs. Work roles group TKS elements; the TKS elements themselves are the mappable concepts.",
+      "categories": "5 work role categories (OG, DD, IO, PD, IN) are organizational groupings.",
+      "competency_areas": "11 competency areas are thematic groupings, not individual competency statements.",
+      "opm_codes": "40 OPM codes are federal classification identifiers.",
+      "sort_elements": "45 sort elements are ordering metadata."
+    }
+  },
+  "fde_count_summary": {
+    "tasks": 946,
+    "knowledge": 662,
+    "skills": 540,
+    "total_in_scope": 2148,
+    "excluded": 0
+  },
+  "candidate_identification": {
+    "description": "Due to the volume of elements (2,148 × 497 = 1.07M potential pairs), bi-encoder embeddings (all-MiniLM-L6-v2) were used to identify the most semantically relevant WIDAI KSA candidate for each NICE element. This is a preprocessing step for pairing, not a scoring method. Once pairs were established, every mapped pair was scored through the identical multi-method pipeline used in STRM-001-ONET: Cross-Encoder STS primary, plus BERTScore, NLI, Bi-Encoder Cosine, and Jaccard Token Overlap. Same models, same scoring logic, same rigor.",
+    "model": "all-MiniLM-L6-v2",
+    "candidate_data": "sources/nice_framework/nice_tks_candidates.json",
+    "note": "Candidate identification determines which WIDAI KSA each NICE element is paired with. All scoring, classification, and significance generation is performed by the STRM scoring pipeline (strm/nice/strm_scoring_pipeline.py), which is methodologically identical to STRM-001-ONET."
+  }
+}

@@ -1,0 +1,2740 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "model": "all-MiniLM-L6-v2",
+  "widai_ksa_count": 497,
+  "element_count": 70,
+  "top_k": 5,
+  "total_pairs_evaluated": 34790,
+  "candidates": [
+    {
+      "element_id": "AIRMF-GV-1.1",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-1.1",
+      "competency_implication": "Knowledge of AI-related legal and regulatory requirements, including the ability to identify applicable regulations, assess organizational compliance status, manage regulatory obligations, and maintain documentation of legal requirements across the AI lifecycle.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-008",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI regulatory compliance requirements, including EU AI Act conformity assessment obligations, prohibited use categories, and documentation requirements for high-risk AI systems.",
+          "cosine_similarity": 0.8236
+        },
+        {
+          "ksa_id": "AG-K-013",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI regulatory requirements, including the EU AI Act prohibited use categories, high-risk system obligations, conformity assessment requirements, and technical documentation standards.",
+          "cosine_similarity": 0.8062
+        },
+        {
+          "ksa_id": "SP-K-006",
+          "domain_code": "SP",
+          "statement": "Knowledge of the regulatory and compliance landscape governing enterprise data and AI, including data protection law, AI-specific regulation, sector-specific obligations, and cross-jurisdictional compliance requirements.",
+          "cosine_similarity": 0.7569
+        },
+        {
+          "ksa_id": "AG-K-005",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI regulatory frameworks, including the EU AI Act risk classification structure, conformity assessment requirements, prohibited use categories, and obligations on providers versus deployers.",
+          "cosine_similarity": 0.7432
+        },
+        {
+          "ksa_id": "RC-K-003",
+          "domain_code": "RC",
+          "statement": "Knowledge of AI-specific regulatory frameworks, including the EU AI Act risk classification system, prohibited practices, high-risk AI system requirements, conformity assessment obligations, and AI literacy mandates.",
+          "cosine_similarity": 0.743
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-1.2",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-1.2",
+      "competency_implication": "Skill in integrating trustworthy AI principles \u2014 including validity, reliability, safety, security, resilience, accountability, transparency, explainability, interpretability, privacy, and fairness \u2014 into organizational governance documents, operational procedures, and business processes.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-007",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+          "cosine_similarity": 0.7547
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.7282
+        },
+        {
+          "ksa_id": "AG-A-003",
+          "domain_code": "AG",
+          "statement": "Ability to build organizational commitment to responsible AI practices by demonstrating their business value and risk reduction benefits rather than relying solely on compliance mandates.",
+          "cosine_similarity": 0.7216
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.7197
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.6987
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-1.3",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-1.3",
+      "competency_implication": "Ability to design and implement risk management processes calibrated to organizational risk tolerance, including risk appetite definition, threshold-setting for AI systems, and escalation procedures that reflect the organization's acceptable risk levels.",
+      "candidates": [
+        {
+          "ksa_id": "RM-S-008",
+          "domain_code": "RM",
+          "statement": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+          "cosine_similarity": 0.7111
+        },
+        {
+          "ksa_id": "RM-A-001",
+          "domain_code": "RM",
+          "statement": "Ability to calibrate risk assessment depth and rigor to the materiality and complexity of the model or AI system under review, allocating assessment resources proportionally to actual risk.",
+          "cosine_similarity": 0.6275
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6034
+        },
+        {
+          "ksa_id": "RC-T-012",
+          "domain_code": "RC",
+          "statement": "Conduct AI system risk classification under the EU AI Act, documenting risk category determination, applicable requirements identification, and conformity assessment pathway selection.",
+          "cosine_similarity": 0.5973
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.5841
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-1.4",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-1.4",
+      "competency_implication": "Skill in establishing transparent AI risk management governance, including development of risk policies, procedural controls, and accountability mechanisms that reflect organizational risk priorities and enable stakeholder visibility into risk management outcomes.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.7363
+        },
+        {
+          "ksa_id": "AG-A-001",
+          "domain_code": "AG",
+          "statement": "Ability to calibrate AI governance oversight proportionally to the actual risk level of AI applications, avoiding both under-governance of high-risk systems and excessive governance that impedes low-risk innovation.",
+          "cosine_similarity": 0.6969
+        },
+        {
+          "ksa_id": "AG-S-003",
+          "domain_code": "AG",
+          "statement": "Skill in constructing and communicating AI risk assessments to non-technical executive and board audiences using business risk framing and financial impact language.",
+          "cosine_similarity": 0.6846
+        },
+        {
+          "ksa_id": "DG-K-002",
+          "domain_code": "DG",
+          "statement": "Knowledge of enterprise risk management frameworks and how data risk, AI risk, and technology risk are integrated into enterprise risk reporting and board-level risk governance.",
+          "cosine_similarity": 0.68
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6775
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-1.5",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-1.5",
+      "competency_implication": "Knowledge of AI risk management monitoring and review design, including defining organizational roles and responsibilities for risk oversight, establishing review frequency and methodology, and planning continuous monitoring activities for AI risk management effectiveness.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.752
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.7151
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7052
+        },
+        {
+          "ksa_id": "AG-K-007",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+          "cosine_similarity": 0.6785
+        },
+        {
+          "ksa_id": "DG-K-002",
+          "domain_code": "DG",
+          "statement": "Knowledge of enterprise risk management frameworks and how data risk, AI risk, and technology risk are integrated into enterprise risk reporting and board-level risk governance.",
+          "cosine_similarity": 0.6733
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-1.6",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-1.6",
+      "competency_implication": "Skill in designing and maintaining AI system inventory mechanisms, including cataloging deployed AI systems, tracking system attributes relevant to risk assessment, and allocating inventory resources according to organizational risk priorities.",
+      "candidates": [
+        {
+          "ksa_id": "AG-T-002",
+          "domain_code": "AG",
+          "statement": "Establish and maintain the enterprise AI inventory, cataloging all AI systems in production with risk tier, owner, training data provenance, model version, and review status.",
+          "cosine_similarity": 0.7481
+        },
+        {
+          "ksa_id": "AG-T-005",
+          "domain_code": "AG",
+          "statement": "Maintain the enterprise AI system inventory, ensuring all AI applications are registered, risk-tiered, owned, and subject to appropriate review and monitoring.",
+          "cosine_similarity": 0.737
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.7096
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6799
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.6644
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-1.7",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-1.7",
+      "competency_implication": "Knowledge of AI system decommissioning procedures, including safe phase-out planning, risk assessment during decommissioning, data handling and retention requirements, stakeholder communication, and maintaining organizational trustworthiness throughout the system retirement process.",
+      "candidates": [
+        {
+          "ksa_id": "DG-K-006",
+          "domain_code": "DG",
+          "statement": "Knowledge of AI model lifecycle management, including model versioning, drift detection, performance monitoring, retraining triggers, and decommissioning criteria.",
+          "cosine_similarity": 0.6333
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.5712
+        },
+        {
+          "ksa_id": "AG-T-001",
+          "domain_code": "AG",
+          "statement": "Define and maintain the enterprise AI governance framework, including the AI system inventory, risk tiering, review thresholds, and decommissioning criteria.",
+          "cosine_similarity": 0.5664
+        },
+        {
+          "ksa_id": "AG-T-002",
+          "domain_code": "AG",
+          "statement": "Establish and maintain the enterprise AI inventory, cataloging all AI systems in production with risk tier, owner, training data provenance, model version, and review status.",
+          "cosine_similarity": 0.5621
+        },
+        {
+          "ksa_id": "AG-T-005",
+          "domain_code": "AG",
+          "statement": "Maintain the enterprise AI system inventory, ensuring all AI applications are registered, risk-tiered, owned, and subject to appropriate review and monitoring.",
+          "cosine_similarity": 0.5607
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-2.1",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-2.1",
+      "competency_implication": "Skill in defining and documenting AI risk management roles, responsibilities, and communication structures, including RACI-style accountability assignment, cross-functional coordination mechanisms, and ensuring clarity of risk management expectations across organizational levels.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.7213
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7197
+        },
+        {
+          "ksa_id": "AG-S-003",
+          "domain_code": "AG",
+          "statement": "Skill in constructing and communicating AI risk assessments to non-technical executive and board audiences using business risk framing and financial impact language.",
+          "cosine_similarity": 0.6791
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.6723
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.6692
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-2.2",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-2.2",
+      "competency_implication": "Skill in designing and delivering AI risk management training programs for organizational personnel and external partners, including needs assessment, curriculum development, training delivery, competency evaluation, and alignment with organizational policies and contractual agreements.",
+      "candidates": [
+        {
+          "ksa_id": "OP-T-004",
+          "domain_code": "OP",
+          "statement": "Design, develop, and deliver data and AI training programs for defined organizational audiences, including needs assessment, curriculum development, delivery execution, and effectiveness measurement.",
+          "cosine_similarity": 0.7151
+        },
+        {
+          "ksa_id": "OP-S-002",
+          "domain_code": "OP",
+          "statement": "Skill in designing data and AI training programs for diverse organizational audiences, from executives to operational staff, with role-appropriate content and delivery formats.",
+          "cosine_similarity": 0.6831
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6603
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.6595
+        },
+        {
+          "ksa_id": "RM-S-008",
+          "domain_code": "RM",
+          "statement": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+          "cosine_similarity": 0.6586
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-2.3",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-2.3",
+      "competency_implication": "Knowledge of executive-level AI risk governance, including board and C-suite accountability structures, executive decision-making frameworks for AI risk acceptance, and leadership responsibility models for AI system development and deployment decisions.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.869
+        },
+        {
+          "ksa_id": "LS-K-010",
+          "domain_code": "LS",
+          "statement": "Knowledge of data and AI governance structures at the board and executive committee level, including oversight responsibilities, reporting cadences, decision rights allocation, and escalation frameworks.",
+          "cosine_similarity": 0.7552
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.7335
+        },
+        {
+          "ksa_id": "AG-A-001",
+          "domain_code": "AG",
+          "statement": "Ability to calibrate AI governance oversight proportionally to the actual risk level of AI applications, avoiding both under-governance of high-risk systems and excessive governance that impedes low-risk innovation.",
+          "cosine_similarity": 0.7269
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.715
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-3.1",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-3.1",
+      "competency_implication": "Skill in building and managing diverse AI risk management teams, including assembling cross-disciplinary expertise, incorporating varied domain experience, ensuring demographic representation, and integrating diverse perspectives into AI risk decision-making processes.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7368
+        },
+        {
+          "ksa_id": "RM-A-003",
+          "domain_code": "RM",
+          "statement": "Ability to synthesize risk findings across multiple models and AI systems into coherent enterprise-level risk narratives suitable for senior management and board reporting.",
+          "cosine_similarity": 0.6774
+        },
+        {
+          "ksa_id": "RM-S-008",
+          "domain_code": "RM",
+          "statement": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+          "cosine_similarity": 0.6769
+        },
+        {
+          "ksa_id": "AG-S-003",
+          "domain_code": "AG",
+          "statement": "Skill in constructing and communicating AI risk assessments to non-technical executive and board audiences using business risk framing and financial impact language.",
+          "cosine_similarity": 0.6703
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.67
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-3.2",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-3.2",
+      "competency_implication": "Knowledge of human-AI interaction governance, including defining roles for human oversight of AI systems, establishing human-in-the-loop and human-on-the-loop configurations, and creating policies that differentiate responsibilities between human operators and AI system functions.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-007",
+          "domain_code": "AG",
+          "statement": "Skill in designing human oversight mechanisms for AI-assisted decision-making, including escalation triggers, override procedures, human-in-the-loop protocols, and meaningful human control verification.",
+          "cosine_similarity": 0.7657
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.7305
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.6904
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6846
+        },
+        {
+          "ksa_id": "AG-S-002",
+          "domain_code": "AG",
+          "statement": "Skill in designing AI governance frameworks that address the full AI lifecycle from procurement or build through development, testing, deployment, monitoring, and retirement.",
+          "cosine_similarity": 0.6649
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-4.1",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-4.1",
+      "competency_implication": "Skill in cultivating organizational AI safety culture, including embedding critical thinking practices into AI development workflows, establishing safety-first design principles, and creating organizational norms that prioritize harm prevention in AI system design, development, deployment, and use.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.6325
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6242
+        },
+        {
+          "ksa_id": "AI-S-010",
+          "domain_code": "AI",
+          "statement": "Skill in implementing AI application guardrails, including input validation, output filtering, safety classifiers, and human-in-the-loop intervention points.",
+          "cosine_similarity": 0.6167
+        },
+        {
+          "ksa_id": "RM-S-002",
+          "domain_code": "RM",
+          "statement": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+          "cosine_similarity": 0.6091
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.6072
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-4.2",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-4.2",
+      "competency_implication": "Skill in AI risk documentation and communication, including documenting identified risks and potential impacts of AI systems, tailoring risk communication for different stakeholder audiences, and establishing transparency practices for internal and external risk reporting.",
+      "candidates": [
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.7819
+        },
+        {
+          "ksa_id": "AG-S-003",
+          "domain_code": "AG",
+          "statement": "Skill in constructing and communicating AI risk assessments to non-technical executive and board audiences using business risk framing and financial impact language.",
+          "cosine_similarity": 0.7335
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.715
+        },
+        {
+          "ksa_id": "RM-A-003",
+          "domain_code": "RM",
+          "statement": "Ability to synthesize risk findings across multiple models and AI systems into coherent enterprise-level risk narratives suitable for senior management and board reporting.",
+          "cosine_similarity": 0.713
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6972
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-4.3",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-4.3",
+      "competency_implication": "Knowledge of AI testing and incident management infrastructure, including establishing testing environments and protocols, implementing AI incident identification and tracking mechanisms, and creating information-sharing practices for AI-related findings across organizational boundaries.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-007",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+          "cosine_similarity": 0.6684
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.6658
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.6646
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6507
+        },
+        {
+          "ksa_id": "DG-T-007",
+          "domain_code": "DG",
+          "statement": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+          "cosine_similarity": 0.627
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-5.1",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-5.1",
+      "competency_implication": "Skill in external stakeholder engagement for AI risk management, including designing feedback collection mechanisms, prioritizing external input on individual and societal AI impacts, and integrating stakeholder feedback into AI risk assessment and mitigation processes.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7128
+        },
+        {
+          "ksa_id": "AG-S-003",
+          "domain_code": "AG",
+          "statement": "Skill in constructing and communicating AI risk assessments to non-technical executive and board audiences using business risk framing and financial impact language.",
+          "cosine_similarity": 0.7111
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.6821
+        },
+        {
+          "ksa_id": "AG-S-004",
+          "domain_code": "AG",
+          "statement": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+          "cosine_similarity": 0.6687
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.6583
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-5.2",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-5.2",
+      "competency_implication": "Skill in designing feedback incorporation mechanisms for AI systems, including establishing adjudication processes for conflicting feedback, creating systematic channels for AI actor input, and integrating adjudicated feedback into ongoing AI system design and implementation cycles.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-007",
+          "domain_code": "AG",
+          "statement": "Skill in designing human oversight mechanisms for AI-assisted decision-making, including escalation triggers, override procedures, human-in-the-loop protocols, and meaningful human control verification.",
+          "cosine_similarity": 0.6438
+        },
+        {
+          "ksa_id": "AG-S-004",
+          "domain_code": "AG",
+          "statement": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+          "cosine_similarity": 0.6312
+        },
+        {
+          "ksa_id": "AG-T-009",
+          "domain_code": "AG",
+          "statement": "Execute bias audits on AI systems in development and production, documenting methodology, findings, and recommended interventions.",
+          "cosine_similarity": 0.5921
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.5811
+        },
+        {
+          "ksa_id": "AG-S-008",
+          "domain_code": "AG",
+          "statement": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
+          "cosine_similarity": 0.5769
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-6.1",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-6.1",
+      "competency_implication": "Knowledge of AI supply chain risk management, including assessing third-party AI component risks, evaluating intellectual property implications of third-party AI software and data, and establishing contractual and procedural safeguards for third-party AI relationships.",
+      "candidates": [
+        {
+          "ksa_id": "DA-K-014",
+          "domain_code": "DA",
+          "statement": "Knowledge of vendor and third-party risk management as it applies to data platform providers, AI model suppliers, cloud infrastructure vendors, and data service providers.",
+          "cosine_similarity": 0.7379
+        },
+        {
+          "ksa_id": "LS-K-011",
+          "domain_code": "LS",
+          "statement": "Knowledge of the data and AI vendor ecosystem, including major platform providers, emerging technology categories, vendor lock-in risks, open-source alternatives, and strategic partnership evaluation criteria.",
+          "cosine_similarity": 0.7233
+        },
+        {
+          "ksa_id": "AG-T-002",
+          "domain_code": "AG",
+          "statement": "Establish and maintain the enterprise AI inventory, cataloging all AI systems in production with risk tier, owner, training data provenance, model version, and review status.",
+          "cosine_similarity": 0.6487
+        },
+        {
+          "ksa_id": "SP-K-001",
+          "domain_code": "SP",
+          "statement": "Knowledge of AI application security risks, including prompt injection, jailbreaking, data exfiltration via LLM outputs, and model supply chain vulnerabilities.",
+          "cosine_similarity": 0.648
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.6438
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-GV-6.2",
+      "element_type": "outcome",
+      "function": "GOVERN",
+      "subcategory_id": "GV-6.2",
+      "competency_implication": "Skill in developing contingency plans for third-party AI dependencies, including backup strategies for third-party system failures, data continuity planning, alternative sourcing procedures, and business continuity measures for AI supply chain disruptions.",
+      "candidates": [
+        {
+          "ksa_id": "LS-S-013",
+          "domain_code": "LS",
+          "statement": "Skill in negotiating strategic vendor partnerships for data and AI platforms, including commercial terms, roadmap alignment, dependency management, and exit strategy planning.",
+          "cosine_similarity": 0.642
+        },
+        {
+          "ksa_id": "AG-A-003",
+          "domain_code": "AG",
+          "statement": "Ability to build organizational commitment to responsible AI practices by demonstrating their business value and risk reduction benefits rather than relying solely on compliance mandates.",
+          "cosine_similarity": 0.6084
+        },
+        {
+          "ksa_id": "AG-T-005",
+          "domain_code": "AG",
+          "statement": "Maintain the enterprise AI system inventory, ensuring all AI applications are registered, risk-tiered, owned, and subject to appropriate review and monitoring.",
+          "cosine_similarity": 0.6037
+        },
+        {
+          "ksa_id": "AG-T-002",
+          "domain_code": "AG",
+          "statement": "Establish and maintain the enterprise AI inventory, cataloging all AI systems in production with risk tier, owner, training data provenance, model version, and review status.",
+          "cosine_similarity": 0.6023
+        },
+        {
+          "ksa_id": "AG-T-010",
+          "domain_code": "AG",
+          "statement": "Develop and maintain responsible AI assessment tools, templates, and rubrics for use across the enterprise AI development lifecycle.",
+          "cosine_similarity": 0.5988
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-1.1",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-1.1",
+      "competency_implication": "Skill in AI system context documentation, including articulating intended purposes and beneficial uses, documenting operational context and known requirements, and identifying and recording assumptions and limitations relevant to AI system deployment.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-008",
+          "domain_code": "AG",
+          "statement": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
+          "cosine_similarity": 0.7087
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.706
+        },
+        {
+          "ksa_id": "RM-K-008",
+          "domain_code": "RM",
+          "statement": "Knowledge of AI system documentation standards, including model cards, system cards, datasheets for datasets, and the evaluation evidence standards required for regulatory conformity assessment.",
+          "cosine_similarity": 0.6666
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6531
+        },
+        {
+          "ksa_id": "TF-S-011",
+          "domain_code": "TF",
+          "statement": "Skill in writing technical documentation for data systems, including architecture diagrams, API specifications, operational runbooks, data dictionaries, and troubleshooting guides that enable team independence.",
+          "cosine_similarity": 0.6394
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-1.2",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-1.2",
+      "competency_implication": "Knowledge of interdisciplinary team composition requirements for AI context-setting, including assembling diverse domain expertise, ensuring demographic representation, documenting team roles and competencies, and leveraging broad user experience to inform AI system context.",
+      "candidates": [
+        {
+          "ksa_id": "OP-S-010",
+          "domain_code": "OP",
+          "statement": "Skill in facilitating data and AI communities of practice, including knowledge sharing forums, best practice documentation, cross-team collaboration initiatives, and capability building activities.",
+          "cosine_similarity": 0.6427
+        },
+        {
+          "ksa_id": "TF-A-001",
+          "domain_code": "TF",
+          "statement": "Ability to select appropriate technical tools, languages, and platforms for data and AI requirements, evaluating trade-offs between performance, maintainability, team capability, ecosystem maturity, and cost.",
+          "cosine_similarity": 0.5905
+        },
+        {
+          "ksa_id": "LS-S-009",
+          "domain_code": "LS",
+          "statement": "Skill in building and developing high-performing data and AI teams, including talent acquisition, onboarding design, performance management, career development planning, and succession preparation.",
+          "cosine_similarity": 0.5877
+        },
+        {
+          "ksa_id": "OP-S-002",
+          "domain_code": "OP",
+          "statement": "Skill in designing data and AI training programs for diverse organizational audiences, from executives to operational staff, with role-appropriate content and delivery formats.",
+          "cosine_similarity": 0.5695
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.5691
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-1.3",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-1.3",
+      "competency_implication": "Ability to evaluate AI system business value and relevance, including defining business use cases for new AI systems, assessing ongoing business alignment of existing AI systems, and conducting relevance evaluations against evolving business requirements and operational contexts.",
+      "candidates": [
+        {
+          "ksa_id": "AI-S-018",
+          "domain_code": "AI",
+          "statement": "Skill in evaluating AI use case feasibility, including data availability assessment, technical complexity estimation, and business value quantification.",
+          "cosine_similarity": 0.7267
+        },
+        {
+          "ksa_id": "LS-S-008",
+          "domain_code": "LS",
+          "statement": "Skill in developing enterprise data and AI strategies that connect organizational business objectives to data capabilities, AI initiatives, governance requirements, and measurable value outcomes.",
+          "cosine_similarity": 0.6479
+        },
+        {
+          "ksa_id": "DG-S-002",
+          "domain_code": "DG",
+          "statement": "Skill in aligning data and AI program objectives to organizational strategy, translating business priorities into data and AI capability requirements with measurable outcomes.",
+          "cosine_similarity": 0.6458
+        },
+        {
+          "ksa_id": "DG-T-002",
+          "domain_code": "DG",
+          "statement": "Develop and maintain the enterprise data and AI strategy, aligned to business objectives, with defined investment priorities, milestones, accountability assignments, and success metrics.",
+          "cosine_similarity": 0.6389
+        },
+        {
+          "ksa_id": "AI-K-029",
+          "domain_code": "AI",
+          "statement": "Knowledge of AI capability landscape, including current capabilities and limitations of generative AI, predictive AI, and autonomous systems as applied to enterprise business problems.",
+          "cosine_similarity": 0.6343
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-1.4",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-1.4",
+      "competency_implication": "Knowledge of organizational mission alignment for AI technology, including understanding how AI systems relate to organizational strategic objectives, interpreting mission-relevant goals in terms of AI capabilities, and ensuring AI technology decisions align with organizational purpose.",
+      "candidates": [
+        {
+          "ksa_id": "DG-S-002",
+          "domain_code": "DG",
+          "statement": "Skill in aligning data and AI program objectives to organizational strategy, translating business priorities into data and AI capability requirements with measurable outcomes.",
+          "cosine_similarity": 0.6937
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.6363
+        },
+        {
+          "ksa_id": "AI-T-018",
+          "domain_code": "AI",
+          "statement": "Design and execute research projects that advance organizational AI capability, including hypothesis formulation, experimental design, execution, and findings documentation.",
+          "cosine_similarity": 0.6265
+        },
+        {
+          "ksa_id": "LS-K-008",
+          "domain_code": "LS",
+          "statement": "Knowledge of data and AI strategy development approaches, including strategy formulation methods, alignment with enterprise business strategy, competitive positioning through data capabilities, and strategy communication frameworks.",
+          "cosine_similarity": 0.6215
+        },
+        {
+          "ksa_id": "LS-S-008",
+          "domain_code": "LS",
+          "statement": "Skill in developing enterprise data and AI strategies that connect organizational business objectives to data capabilities, AI initiatives, governance requirements, and measurable value outcomes.",
+          "cosine_similarity": 0.6086
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-1.5",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-1.5",
+      "competency_implication": "Skill in determining and documenting organizational AI risk tolerance, including conducting risk appetite assessments, defining quantitative and qualitative risk thresholds for AI systems, and establishing documented risk tolerance statements that guide AI development and deployment decisions.",
+      "candidates": [
+        {
+          "ksa_id": "RM-S-008",
+          "domain_code": "RM",
+          "statement": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+          "cosine_similarity": 0.7403
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.7084
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7065
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.7017
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6912
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-1.6",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-1.6",
+      "competency_implication": "Skill in documenting AI system requirements and design decisions, including specifying human-AI teaming configurations, defining testing protocols, establishing safety and performance goals, and tracing design decisions to intended purpose and operational context.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-008",
+          "domain_code": "AG",
+          "statement": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
+          "cosine_similarity": 0.7037
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.6719
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6647
+        },
+        {
+          "ksa_id": "AG-S-007",
+          "domain_code": "AG",
+          "statement": "Skill in designing human oversight mechanisms for AI-assisted decision-making, including escalation triggers, override procedures, human-in-the-loop protocols, and meaningful human control verification.",
+          "cosine_similarity": 0.6555
+        },
+        {
+          "ksa_id": "LS-S-009",
+          "domain_code": "LS",
+          "statement": "Skill in building and developing high-performing data and AI teams, including talent acquisition, onboarding design, performance management, career development planning, and succession preparation.",
+          "cosine_similarity": 0.6501
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-2.1",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-2.1",
+      "competency_implication": "Knowledge of AI system task specification and method selection, including defining the specific tasks an AI system will perform, selecting appropriate implementation methods (classification, generation, recommendation), and documenting the relationship between tasks and implementation approaches.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.6388
+        },
+        {
+          "ksa_id": "RM-K-008",
+          "domain_code": "RM",
+          "statement": "Knowledge of AI system documentation standards, including model cards, system cards, datasheets for datasets, and the evaluation evidence standards required for regulatory conformity assessment.",
+          "cosine_similarity": 0.6287
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.6163
+        },
+        {
+          "ksa_id": "AI-T-018",
+          "domain_code": "AI",
+          "statement": "Design and execute research projects that advance organizational AI capability, including hypothesis formulation, experimental design, execution, and findings documentation.",
+          "cosine_similarity": 0.6092
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6065
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-2.2",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-2.2",
+      "competency_implication": "Skill in documenting AI system knowledge limits, human oversight requirements, and trustworthiness assumptions, including specifying system output utilization boundaries, defining human oversight mechanisms, and recording limitations relevant to each trustworthy AI characteristic.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-008",
+          "domain_code": "AG",
+          "statement": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
+          "cosine_similarity": 0.7628
+        },
+        {
+          "ksa_id": "RM-K-008",
+          "domain_code": "RM",
+          "statement": "Knowledge of AI system documentation standards, including model cards, system cards, datasheets for datasets, and the evaluation evidence standards required for regulatory conformity assessment.",
+          "cosine_similarity": 0.7497
+        },
+        {
+          "ksa_id": "AG-K-007",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+          "cosine_similarity": 0.7367
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.7281
+        },
+        {
+          "ksa_id": "DG-A-003",
+          "domain_code": "DG",
+          "statement": "Ability to distinguish between AI use cases that require formal governance review and those that can proceed under standard operating procedures, calibrating oversight to actual risk.",
+          "cosine_similarity": 0.7265
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-2.3",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-2.3",
+      "competency_implication": "Knowledge of AI scientific integrity and test, evaluation, verification, and validation (TEVV) methodology, including experimental design for AI systems, data collection and curation practices, bias identification and documentation, and credibility and reliability assessment of AI technologies.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-007",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+          "cosine_similarity": 0.679
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.647
+        },
+        {
+          "ksa_id": "AG-S-006",
+          "domain_code": "AG",
+          "statement": "Skill in designing and executing bias audits for AI systems, including test dataset construction, metric selection, results interpretation, and remediation recommendation.",
+          "cosine_similarity": 0.6404
+        },
+        {
+          "ksa_id": "AG-T-009",
+          "domain_code": "AG",
+          "statement": "Execute bias audits on AI systems in development and production, documenting methodology, findings, and recommended interventions.",
+          "cosine_similarity": 0.6176
+        },
+        {
+          "ksa_id": "RM-K-008",
+          "domain_code": "RM",
+          "statement": "Knowledge of AI system documentation standards, including model cards, system cards, datasheets for datasets, and the evaluation evidence standards required for regulatory conformity assessment.",
+          "cosine_similarity": 0.6091
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-3.1",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-3.1",
+      "competency_implication": "Ability to assess and document potential benefits of AI system functionality, including conducting benefit analysis, identifying value propositions for stakeholders, and documenting expected positive outcomes from AI system deployment.",
+      "candidates": [
+        {
+          "ksa_id": "AG-T-009",
+          "domain_code": "AG",
+          "statement": "Execute bias audits on AI systems in development and production, documenting methodology, findings, and recommended interventions.",
+          "cosine_similarity": 0.6955
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6877
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.6858
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6433
+        },
+        {
+          "ksa_id": "AI-T-007",
+          "domain_code": "AI",
+          "statement": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+          "cosine_similarity": 0.6393
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-3.2",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-3.2",
+      "competency_implication": "Skill in AI cost-risk analysis, including evaluating monetary and non-monetary costs of AI errors, assessing trustworthiness failures against organizational risk tolerance, and documenting the relationship between system functionality, error rates, and organizational impact.",
+      "candidates": [
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.6797
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6743
+        },
+        {
+          "ksa_id": "RM-A-001",
+          "domain_code": "RM",
+          "statement": "Ability to calibrate risk assessment depth and rigor to the materiality and complexity of the model or AI system under review, allocating assessment resources proportionally to actual risk.",
+          "cosine_similarity": 0.6695
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.666
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6588
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-3.3",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-3.3",
+      "competency_implication": "Skill in defining and documenting AI system application scope, including specifying deployment boundaries based on system capabilities, aligning scope with established operational context, and documenting scope constraints derived from AI system requirements.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6651
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.6298
+        },
+        {
+          "ksa_id": "AG-S-008",
+          "domain_code": "AG",
+          "statement": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
+          "cosine_similarity": 0.6256
+        },
+        {
+          "ksa_id": "OP-T-001",
+          "domain_code": "OP",
+          "statement": "Develop and maintain program plans for data and AI initiatives, including scope definition, workstream structure, milestone schedule, resource plan, and risk register.",
+          "cosine_similarity": 0.6239
+        },
+        {
+          "ksa_id": "AG-S-002",
+          "domain_code": "AG",
+          "statement": "Skill in designing AI governance frameworks that address the full AI lifecycle from procurement or build through development, testing, deployment, monitoring, and retirement.",
+          "cosine_similarity": 0.6087
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-3.4",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-3.4",
+      "competency_implication": "Ability to evaluate and compare TEVV approach trade-offs for AI systems, including assessing the risks and benefits of different testing, evaluation, verification, and validation methodologies, and documenting the rationale for selected TEVV approaches.",
+      "candidates": [
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6154
+        },
+        {
+          "ksa_id": "AI-T-007",
+          "domain_code": "AI",
+          "statement": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+          "cosine_similarity": 0.5927
+        },
+        {
+          "ksa_id": "RM-K-006",
+          "domain_code": "RM",
+          "statement": "Knowledge of AI evaluation frameworks, including functional performance testing, behavioral testing, red-teaming, fairness evaluation, robustness testing, and safety evaluation.",
+          "cosine_similarity": 0.5875
+        },
+        {
+          "ksa_id": "AG-S-006",
+          "domain_code": "AG",
+          "statement": "Skill in designing and executing bias audits for AI systems, including test dataset construction, metric selection, results interpretation, and remediation recommendation.",
+          "cosine_similarity": 0.586
+        },
+        {
+          "ksa_id": "TF-A-001",
+          "domain_code": "TF",
+          "statement": "Ability to select appropriate technical tools, languages, and platforms for data and AI requirements, evaluating trade-offs between performance, maintainability, team capability, ecosystem maturity, and cost.",
+          "cosine_similarity": 0.5768
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-3.5",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-3.5",
+      "competency_implication": "Skill in AI impact likelihood and magnitude assessment, including using historical data, public incident reports, external feedback, and comparable system analysis to identify, quantify, and document the likelihood and severity of potential AI system impacts.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7926
+        },
+        {
+          "ksa_id": "AG-T-008",
+          "domain_code": "AG",
+          "statement": "Conduct AI impact assessments for new and materially modified AI systems, producing documented risk findings with recommended mitigations and residual risk statements.",
+          "cosine_similarity": 0.705
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.6698
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.6398
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.6207
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-4.1",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-4.1",
+      "competency_implication": "Knowledge of AI component risk mapping methodology, including assessing legal and technology risks of AI system components, evaluating third-party data and software risks, identifying intellectual property infringement risks, and documenting component-level risk assessments.",
+      "candidates": [
+        {
+          "ksa_id": "RC-T-012",
+          "domain_code": "RC",
+          "statement": "Conduct AI system risk classification under the EU AI Act, documenting risk category determination, applicable requirements identification, and conformity assessment pathway selection.",
+          "cosine_similarity": 0.7132
+        },
+        {
+          "ksa_id": "OP-K-002",
+          "domain_code": "OP",
+          "statement": "Knowledge of data and AI program risk types, including technical risk, data availability risk, model performance risk, adoption risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6943
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6815
+        },
+        {
+          "ksa_id": "AG-K-005",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI regulatory frameworks, including the EU AI Act risk classification structure, conformity assessment requirements, prohibited use categories, and obligations on providers versus deployers.",
+          "cosine_similarity": 0.6797
+        },
+        {
+          "ksa_id": "AG-K-013",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI regulatory requirements, including the EU AI Act prohibited use categories, high-risk system obligations, conformity assessment requirements, and technical documentation standards.",
+          "cosine_similarity": 0.6774
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-4.2",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-4.2",
+      "competency_implication": "Skill in identifying and documenting internal risk controls for AI system components, including evaluating control effectiveness for third-party AI technologies, mapping control coverage across system architecture, and documenting control mechanisms and their operational parameters.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-008",
+          "domain_code": "AG",
+          "statement": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
+          "cosine_similarity": 0.7414
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.7033
+        },
+        {
+          "ksa_id": "RM-S-002",
+          "domain_code": "RM",
+          "statement": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+          "cosine_similarity": 0.7002
+        },
+        {
+          "ksa_id": "RC-T-012",
+          "domain_code": "RC",
+          "statement": "Conduct AI system risk classification under the EU AI Act, documenting risk category determination, applicable requirements identification, and conformity assessment pathway selection.",
+          "cosine_similarity": 0.6976
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6933
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-5.1",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-5.1",
+      "competency_implication": "Skill in societal and individual impact assessment for AI systems, including characterizing impacts across different population groups, analyzing historical AI deployment outcomes, incorporating public incident data and external stakeholder feedback, and documenting impact likelihood and magnitude for diverse affected communities.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7518
+        },
+        {
+          "ksa_id": "AG-T-008",
+          "domain_code": "AG",
+          "statement": "Conduct AI impact assessments for new and materially modified AI systems, producing documented risk findings with recommended mitigations and residual risk statements.",
+          "cosine_similarity": 0.6759
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6338
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.63
+        },
+        {
+          "ksa_id": "AG-T-006",
+          "domain_code": "AG",
+          "statement": "Conduct AI impact assessments for new and materially modified AI systems prior to production deployment.",
+          "cosine_similarity": 0.6235
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MP-5.2",
+      "element_type": "outcome",
+      "function": "MAP",
+      "subcategory_id": "MP-5.2",
+      "competency_implication": "Knowledge of AI stakeholder engagement practices, including establishing regular engagement mechanisms with affected communities, designing feedback integration processes for unanticipated impacts, and documenting engagement personnel and practices for ongoing AI impact monitoring.",
+      "candidates": [
+        {
+          "ksa_id": "OP-T-005",
+          "domain_code": "OP",
+          "statement": "Manage the data and AI adoption program, including stakeholder engagement plans, adoption milestone tracking, barrier identification, and intervention deployment.",
+          "cosine_similarity": 0.6751
+        },
+        {
+          "ksa_id": "AG-S-004",
+          "domain_code": "AG",
+          "statement": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+          "cosine_similarity": 0.6564
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6523
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.644
+        },
+        {
+          "ksa_id": "AG-T-010",
+          "domain_code": "AG",
+          "statement": "Develop and maintain responsible AI assessment tools, templates, and rubrics for use across the enterprise AI development lifecycle.",
+          "cosine_similarity": 0.6366
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-1.1",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-1.1",
+      "competency_implication": "Skill in designing AI risk measurement approaches and metrics, including software testing and performance evaluation methodology, trustworthiness characteristic assessment, compliance measurement against legal, regulatory, and industry standards, and ongoing performance monitoring against organizational risk tolerances.",
+      "candidates": [
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.7567
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.7544
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7382
+        },
+        {
+          "ksa_id": "AG-K-007",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+          "cosine_similarity": 0.7231
+        },
+        {
+          "ksa_id": "AI-T-007",
+          "domain_code": "AI",
+          "statement": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+          "cosine_similarity": 0.7201
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-1.2",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-1.2",
+      "competency_implication": "Ability to evaluate and update AI measurement effectiveness, including assessing metric appropriateness over time, incorporating error reports and community impact data into measurement refinement, and maintaining measurement system currency as AI systems and their impacts evolve.",
+      "candidates": [
+        {
+          "ksa_id": "AG-T-008",
+          "domain_code": "AG",
+          "statement": "Conduct AI impact assessments for new and materially modified AI systems, producing documented risk findings with recommended mitigations and residual risk statements.",
+          "cosine_similarity": 0.6346
+        },
+        {
+          "ksa_id": "AG-S-006",
+          "domain_code": "AG",
+          "statement": "Skill in designing and executing bias audits for AI systems, including test dataset construction, metric selection, results interpretation, and remediation recommendation.",
+          "cosine_similarity": 0.6254
+        },
+        {
+          "ksa_id": "AG-T-010",
+          "domain_code": "AG",
+          "statement": "Develop and maintain responsible AI assessment tools, templates, and rubrics for use across the enterprise AI development lifecycle.",
+          "cosine_similarity": 0.6247
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6209
+        },
+        {
+          "ksa_id": "AG-T-009",
+          "domain_code": "AG",
+          "statement": "Execute bias audits on AI systems in development and production, documenting methodology, findings, and recommended interventions.",
+          "cosine_similarity": 0.6204
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-1.3",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-1.3",
+      "competency_implication": "Knowledge of independent AI assessment practices, including engaging internal experts outside the development team, coordinating independent assessor reviews, consulting domain experts and affected communities, and structuring assessment involvement according to organizational risk tolerance levels.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6974
+        },
+        {
+          "ksa_id": "AG-T-010",
+          "domain_code": "AG",
+          "statement": "Develop and maintain responsible AI assessment tools, templates, and rubrics for use across the enterprise AI development lifecycle.",
+          "cosine_similarity": 0.6841
+        },
+        {
+          "ksa_id": "LS-S-006",
+          "domain_code": "LS",
+          "statement": "Skill in conducting organizational data and AI diagnostic assessments, including stakeholder interviews, artifact review, maturity scoring, and finding synthesis.",
+          "cosine_similarity": 0.6737
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.6574
+        },
+        {
+          "ksa_id": "AG-S-004",
+          "domain_code": "AG",
+          "statement": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+          "cosine_similarity": 0.6413
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.1",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.1",
+      "competency_implication": "Skill in AI TEVV documentation, including recording test set compositions and selection criteria, documenting metrics and measurement tools, and maintaining comprehensive records of testing, evaluation, verification, and validation activities and their results.",
+      "candidates": [
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.6558
+        },
+        {
+          "ksa_id": "RM-S-005",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI test results to technical and non-technical stakeholders, including limitation documentation and clear go/no-go recommendations.",
+          "cosine_similarity": 0.6386
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6347
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.6328
+        },
+        {
+          "ksa_id": "OP-S-010",
+          "domain_code": "OP",
+          "statement": "Skill in facilitating data and AI communities of practice, including knowledge sharing forums, best practice documentation, cross-team collaboration initiatives, and capability building activities.",
+          "cosine_similarity": 0.6279
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.2",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.2",
+      "competency_implication": "Knowledge of human subjects evaluation requirements for AI systems, including informed consent procedures, population representativeness in evaluation design, ethical review board requirements, and ensuring evaluations meet applicable legal and ethical standards for human participation.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-007",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+          "cosine_similarity": 0.6901
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.6774
+        },
+        {
+          "ksa_id": "RM-K-008",
+          "domain_code": "RM",
+          "statement": "Knowledge of AI system documentation standards, including model cards, system cards, datasheets for datasets, and the evaluation evidence standards required for regulatory conformity assessment.",
+          "cosine_similarity": 0.663
+        },
+        {
+          "ksa_id": "AG-K-008",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI regulatory compliance requirements, including EU AI Act conformity assessment obligations, prohibited use categories, and documentation requirements for high-risk AI systems.",
+          "cosine_similarity": 0.641
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.6407
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.3",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.3",
+      "competency_implication": "Skill in AI system performance measurement under deployment-representative conditions, including designing qualitative and quantitative performance assessments, establishing assurance criteria, conducting measurements in simulated deployment environments, and documenting measurement results and conditions.",
+      "candidates": [
+        {
+          "ksa_id": "RM-T-005",
+          "domain_code": "RM",
+          "statement": "Operate continuous evaluation processes for deployed AI systems, monitoring for performance degradation, behavioral drift, and emerging failure modes.",
+          "cosine_similarity": 0.7048
+        },
+        {
+          "ksa_id": "AI-T-007",
+          "domain_code": "AI",
+          "statement": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+          "cosine_similarity": 0.6796
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6792
+        },
+        {
+          "ksa_id": "DG-T-007",
+          "domain_code": "DG",
+          "statement": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+          "cosine_similarity": 0.6558
+        },
+        {
+          "ksa_id": "AI-S-018",
+          "domain_code": "AI",
+          "statement": "Skill in evaluating AI use case feasibility, including data availability assessment, technical complexity estimation, and business value quantification.",
+          "cosine_similarity": 0.6144
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.4",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.4",
+      "competency_implication": "Skill in production AI system monitoring, including implementing observability for AI system functionality and behavior, tracking component-level performance against MAP-phase specifications, and maintaining production monitoring aligned with pre-deployment risk assessments.",
+      "candidates": [
+        {
+          "ksa_id": "RM-T-005",
+          "domain_code": "RM",
+          "statement": "Operate continuous evaluation processes for deployed AI systems, monitoring for performance degradation, behavioral drift, and emerging failure modes.",
+          "cosine_similarity": 0.7124
+        },
+        {
+          "ksa_id": "DG-T-007",
+          "domain_code": "DG",
+          "statement": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+          "cosine_similarity": 0.6999
+        },
+        {
+          "ksa_id": "SP-T-009",
+          "domain_code": "SP",
+          "statement": "Execute security testing for AI systems prior to production deployment, including adversarial robustness testing, prompt injection testing, and supply chain verification.",
+          "cosine_similarity": 0.6599
+        },
+        {
+          "ksa_id": "AG-T-005",
+          "domain_code": "AG",
+          "statement": "Maintain the enterprise AI system inventory, ensuring all AI applications are registered, risk-tiered, owned, and subject to appropriate review and monitoring.",
+          "cosine_similarity": 0.65
+        },
+        {
+          "ksa_id": "AG-T-002",
+          "domain_code": "AG",
+          "statement": "Establish and maintain the enterprise AI inventory, cataloging all AI systems in production with risk tier, owner, training data provenance, model version, and review status.",
+          "cosine_similarity": 0.6425
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.5",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.5",
+      "competency_implication": "Knowledge of AI system validity and reliability demonstration, including validation methodology, reliability testing, generalizability limitation identification, and documenting the boundaries of system applicability beyond development conditions.",
+      "candidates": [
+        {
+          "ksa_id": "AI-T-007",
+          "domain_code": "AI",
+          "statement": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+          "cosine_similarity": 0.7462
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6745
+        },
+        {
+          "ksa_id": "RM-K-008",
+          "domain_code": "RM",
+          "statement": "Knowledge of AI system documentation standards, including model cards, system cards, datasheets for datasets, and the evaluation evidence standards required for regulatory conformity assessment.",
+          "cosine_similarity": 0.6449
+        },
+        {
+          "ksa_id": "RM-K-006",
+          "domain_code": "RM",
+          "statement": "Knowledge of AI evaluation frameworks, including functional performance testing, behavioral testing, red-teaming, fairness evaluation, robustness testing, and safety evaluation.",
+          "cosine_similarity": 0.6351
+        },
+        {
+          "ksa_id": "AI-S-018",
+          "domain_code": "AI",
+          "statement": "Skill in evaluating AI use case feasibility, including data availability assessment, technical complexity estimation, and business value quantification.",
+          "cosine_similarity": 0.6274
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.6",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.6",
+      "competency_implication": "Skill in AI safety evaluation and safe failure design, including conducting regular safety risk assessments, demonstrating residual risk within tolerance, designing fail-safe mechanisms, establishing safety metrics for reliability, robustness, and response time, and implementing real-time safety monitoring.",
+      "candidates": [
+        {
+          "ksa_id": "AI-T-007",
+          "domain_code": "AI",
+          "statement": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+          "cosine_similarity": 0.732
+        },
+        {
+          "ksa_id": "AI-S-010",
+          "domain_code": "AI",
+          "statement": "Skill in implementing AI application guardrails, including input validation, output filtering, safety classifiers, and human-in-the-loop intervention points.",
+          "cosine_similarity": 0.7155
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7035
+        },
+        {
+          "ksa_id": "RM-S-002",
+          "domain_code": "RM",
+          "statement": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+          "cosine_similarity": 0.6757
+        },
+        {
+          "ksa_id": "RM-K-006",
+          "domain_code": "RM",
+          "statement": "Knowledge of AI evaluation frameworks, including functional performance testing, behavioral testing, red-teaming, fairness evaluation, robustness testing, and safety evaluation.",
+          "cosine_similarity": 0.6706
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.7",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.7",
+      "competency_implication": "Knowledge of AI system security and resilience evaluation, including assessing AI-specific attack surfaces, evaluating system resilience to adversarial inputs and operational disruptions, and documenting security posture against risks identified during the MAP function.",
+      "candidates": [
+        {
+          "ksa_id": "RM-T-002",
+          "domain_code": "RM",
+          "statement": "Conduct threat model assessments for AI systems, identifying AI-specific attack surfaces, threat actors, and applicable mitigating controls.",
+          "cosine_similarity": 0.7006
+        },
+        {
+          "ksa_id": "RM-S-002",
+          "domain_code": "RM",
+          "statement": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+          "cosine_similarity": 0.6993
+        },
+        {
+          "ksa_id": "AG-K-003",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk taxonomy, including model risk, algorithmic bias, opacity, adversarial vulnerability, data poisoning, training data integrity failures, and systemic AI failure modes.",
+          "cosine_similarity": 0.652
+        },
+        {
+          "ksa_id": "SP-S-008",
+          "domain_code": "SP",
+          "statement": "Skill in conducting security assessments of data platforms and AI systems, including vulnerability identification, penetration testing coordination, and security architecture review.",
+          "cosine_similarity": 0.6491
+        },
+        {
+          "ksa_id": "SP-T-009",
+          "domain_code": "SP",
+          "statement": "Execute security testing for AI systems prior to production deployment, including adversarial robustness testing, prompt injection testing, and supply chain verification.",
+          "cosine_similarity": 0.6458
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.8",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.8",
+      "competency_implication": "Skill in evaluating AI transparency and accountability risks, including assessing the adequacy of explainability mechanisms, evaluating accountability structures for AI system decisions, and documenting transparency and accountability risk findings against MAP-phase identified risks.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-007",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+          "cosine_similarity": 0.654
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.6306
+        },
+        {
+          "ksa_id": "AG-A-002",
+          "domain_code": "AG",
+          "statement": "Ability to navigate ethical trade-offs in AI deployment where competing values such as fairness versus accuracy, transparency versus privacy, or speed versus safety require principled resolution.",
+          "cosine_similarity": 0.6167
+        },
+        {
+          "ksa_id": "DG-A-003",
+          "domain_code": "DG",
+          "statement": "Ability to distinguish between AI use cases that require formal governance review and those that can proceed under standard operating procedures, calibrating oversight to actual risk.",
+          "cosine_similarity": 0.615
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6129
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.9",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.9",
+      "competency_implication": "Knowledge of AI model explanation, validation, and contextual interpretation, including developing model explanations appropriate for different audiences, validating model behavior and outputs, and interpreting AI system outputs within their operational context to support responsible use and governance decisions.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.6968
+        },
+        {
+          "ksa_id": "AG-K-002",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance structures, including model risk management, AI lifecycle oversight, accountability assignment, and the organizational conditions that enable responsible AI deployment at scale.",
+          "cosine_similarity": 0.693
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6708
+        },
+        {
+          "ksa_id": "AG-K-009",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI literacy concepts, including what AI is and is not, how ML models work at a conceptual level, AI limitations and failure modes, and responsible AI principles for non-technical audiences.",
+          "cosine_similarity": 0.6704
+        },
+        {
+          "ksa_id": "AG-K-012",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI explainability methods, including SHAP, LIME, counterfactual explanations, attention visualization, and the appropriate application of each method type by model class.",
+          "cosine_similarity": 0.6578
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.10",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.10",
+      "competency_implication": "Skill in AI privacy risk assessment, including examining privacy risks throughout the AI lifecycle, evaluating data protection adequacy, assessing re-identification and inference risks, and documenting privacy risk findings against MAP-phase identified risks.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6745
+        },
+        {
+          "ksa_id": "SP-S-001",
+          "domain_code": "SP",
+          "statement": "Skill in conducting privacy impact assessments (PIAs) and data protection impact assessments (DPIAs) for new data processing activities and AI systems.",
+          "cosine_similarity": 0.6708
+        },
+        {
+          "ksa_id": "SP-A-002",
+          "domain_code": "SP",
+          "statement": "Ability to design security and privacy architectures that enable data utility and AI innovation while maintaining protection levels appropriate to the data sensitivity and regulatory context.",
+          "cosine_similarity": 0.6702
+        },
+        {
+          "ksa_id": "RM-S-002",
+          "domain_code": "RM",
+          "statement": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+          "cosine_similarity": 0.6142
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.614
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.11",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.11",
+      "competency_implication": "Skill in AI fairness and bias evaluation, including applying fairness metrics, detecting and measuring bias in AI system outputs, assessing disparate impact across population groups, and documenting evaluation results against MAP-phase fairness and bias risk assessments.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-007",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and audit methods, including fairness metric selection, bias test design, explainability documentation standards, and human oversight protocols.",
+          "cosine_similarity": 0.6888
+        },
+        {
+          "ksa_id": "AG-K-011",
+          "domain_code": "AG",
+          "statement": "Knowledge of algorithmic fairness concepts, including group fairness metrics (demographic parity, equalized odds, calibration), individual fairness, and the mathematical trade-offs between competing fairness definitions.",
+          "cosine_similarity": 0.6881
+        },
+        {
+          "ksa_id": "AG-S-006",
+          "domain_code": "AG",
+          "statement": "Skill in designing and executing bias audits for AI systems, including test dataset construction, metric selection, results interpretation, and remediation recommendation.",
+          "cosine_similarity": 0.6681
+        },
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.6583
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6505
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.12",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.12",
+      "competency_implication": "Knowledge of AI environmental impact assessment, including evaluating computational resource consumption during model training, assessing sustainability of AI management activities, measuring carbon footprint and energy usage, and documenting environmental impact findings.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-004",
+          "domain_code": "AG",
+          "statement": "Knowledge of responsible AI principles and their operationalization, including fairness metrics, explainability methods, human oversight requirements, and AI impact assessment methodologies.",
+          "cosine_similarity": 0.595
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.593
+        },
+        {
+          "ksa_id": "AG-T-006",
+          "domain_code": "AG",
+          "statement": "Conduct AI impact assessments for new and materially modified AI systems prior to production deployment.",
+          "cosine_similarity": 0.5756
+        },
+        {
+          "ksa_id": "AG-T-008",
+          "domain_code": "AG",
+          "statement": "Conduct AI impact assessments for new and materially modified AI systems, producing documented risk findings with recommended mitigations and residual risk statements.",
+          "cosine_similarity": 0.5715
+        },
+        {
+          "ksa_id": "AG-T-010",
+          "domain_code": "AG",
+          "statement": "Develop and maintain responsible AI assessment tools, templates, and rubrics for use across the enterprise AI development lifecycle.",
+          "cosine_similarity": 0.5679
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-2.13",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-2.13",
+      "competency_implication": "Ability to assess TEVV process effectiveness for AI systems, including evaluating whether testing, evaluation, verification, and validation metrics are achieving their intended purpose, identifying measurement gaps, and documenting process effectiveness findings and recommendations.",
+      "candidates": [
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6431
+        },
+        {
+          "ksa_id": "AI-T-007",
+          "domain_code": "AI",
+          "statement": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+          "cosine_similarity": 0.6355
+        },
+        {
+          "ksa_id": "RM-T-005",
+          "domain_code": "RM",
+          "statement": "Operate continuous evaluation processes for deployed AI systems, monitoring for performance degradation, behavioral drift, and emerging failure modes.",
+          "cosine_similarity": 0.6244
+        },
+        {
+          "ksa_id": "AG-T-010",
+          "domain_code": "AG",
+          "statement": "Develop and maintain responsible AI assessment tools, templates, and rubrics for use across the enterprise AI development lifecycle.",
+          "cosine_similarity": 0.5966
+        },
+        {
+          "ksa_id": "AG-T-009",
+          "domain_code": "AG",
+          "statement": "Execute bias audits on AI systems in development and production, documenting methodology, findings, and recommended interventions.",
+          "cosine_similarity": 0.5939
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-3.1",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-3.1",
+      "competency_implication": "Skill in establishing AI risk tracking infrastructure, including designing approaches for identifying existing, unanticipated, and emergent risks, assigning tracking personnel and responsibilities, and maintaining documentation of risk evolution based on deployed system performance.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.714
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.6663
+        },
+        {
+          "ksa_id": "RM-S-002",
+          "domain_code": "RM",
+          "statement": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+          "cosine_similarity": 0.6597
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.6546
+        },
+        {
+          "ksa_id": "RC-T-012",
+          "domain_code": "RC",
+          "statement": "Conduct AI system risk classification under the EU AI Act, documenting risk category determination, applicable requirements identification, and conformity assessment pathway selection.",
+          "cosine_similarity": 0.6511
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-3.2",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-3.2",
+      "competency_implication": "Knowledge of risk tracking methodology for unmeasurable or emerging AI risks, including developing proxy indicators for difficult-to-quantify risks, designing qualitative risk tracking approaches, and adapting tracking methods for scenarios where standard measurement techniques are insufficient.",
+      "candidates": [
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6743
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.6515
+        },
+        {
+          "ksa_id": "RC-T-012",
+          "domain_code": "RC",
+          "statement": "Conduct AI system risk classification under the EU AI Act, documenting risk category determination, applicable requirements identification, and conformity assessment pathway selection.",
+          "cosine_similarity": 0.634
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6315
+        },
+        {
+          "ksa_id": "AG-K-014",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI and machine learning-specific model risk considerations, including data drift, concept drift, black-box explainability requirements, and how traditional model risk frameworks must adapt for non-parametric, ensemble, and foundation models.",
+          "cosine_similarity": 0.6275
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-3.3",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-3.3",
+      "competency_implication": "Skill in designing end-user and community feedback mechanisms for AI systems, including establishing problem reporting channels, creating outcome appeal processes, and integrating feedback data into AI system evaluation metrics and risk tracking.",
+      "candidates": [
+        {
+          "ksa_id": "AG-T-009",
+          "domain_code": "AG",
+          "statement": "Execute bias audits on AI systems in development and production, documenting methodology, findings, and recommended interventions.",
+          "cosine_similarity": 0.6533
+        },
+        {
+          "ksa_id": "AG-S-006",
+          "domain_code": "AG",
+          "statement": "Skill in designing and executing bias audits for AI systems, including test dataset construction, metric selection, results interpretation, and remediation recommendation.",
+          "cosine_similarity": 0.6262
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.6236
+        },
+        {
+          "ksa_id": "AG-S-004",
+          "domain_code": "AG",
+          "statement": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+          "cosine_similarity": 0.617
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6098
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-4.1",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-4.1",
+      "competency_implication": "Skill in AI measurement result validation and communication, including soliciting domain expert input on trustworthiness measurements, validating performance consistency across deployment contexts and lifecycle stages, and documenting validated measurement results for stakeholder communication.",
+      "candidates": [
+        {
+          "ksa_id": "LS-S-006",
+          "domain_code": "LS",
+          "statement": "Skill in conducting organizational data and AI diagnostic assessments, including stakeholder interviews, artifact review, maturity scoring, and finding synthesis.",
+          "cosine_similarity": 0.6593
+        },
+        {
+          "ksa_id": "AI-T-007",
+          "domain_code": "AI",
+          "statement": "Evaluate AI application performance against defined quality, safety, and reliability criteria, documenting test results and identified failure modes.",
+          "cosine_similarity": 0.6536
+        },
+        {
+          "ksa_id": "AG-S-004",
+          "domain_code": "AG",
+          "statement": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+          "cosine_similarity": 0.6254
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6239
+        },
+        {
+          "ksa_id": "DG-T-007",
+          "domain_code": "DG",
+          "statement": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+          "cosine_similarity": 0.6234
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MS-4.2",
+      "element_type": "outcome",
+      "function": "MEASURE",
+      "subcategory_id": "MS-4.2",
+      "competency_implication": "Ability to integrate AI measurement results into risk management decision-making, including translating trustworthiness measurements into risk management actions, updating risk assessments based on measurement findings, and ensuring measurement data flows into GOVERN, MAP, and MANAGE function activities.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6963
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.6743
+        },
+        {
+          "ksa_id": "RC-T-012",
+          "domain_code": "RC",
+          "statement": "Conduct AI system risk classification under the EU AI Act, documenting risk category determination, applicable requirements identification, and conformity assessment pathway selection.",
+          "cosine_similarity": 0.6619
+        },
+        {
+          "ksa_id": "AG-T-008",
+          "domain_code": "AG",
+          "statement": "Conduct AI impact assessments for new and materially modified AI systems, producing documented risk findings with recommended mitigations and residual risk statements.",
+          "cosine_similarity": 0.6573
+        },
+        {
+          "ksa_id": "RM-A-001",
+          "domain_code": "RM",
+          "statement": "Ability to calibrate risk assessment depth and rigor to the materiality and complexity of the model or AI system under review, allocating assessment resources proportionally to actual risk.",
+          "cosine_similarity": 0.6487
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-1.1",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-1.1",
+      "competency_implication": "Skill in AI system go/no-go determination, including evaluating whether an AI system achieves its intended purpose against stated objectives, conducting readiness assessments for development progression or deployment, and making evidence-based proceed/halt decisions.",
+      "candidates": [
+        {
+          "ksa_id": "RM-S-005",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI test results to technical and non-technical stakeholders, including limitation documentation and clear go/no-go recommendations.",
+          "cosine_similarity": 0.6791
+        },
+        {
+          "ksa_id": "AI-S-018",
+          "domain_code": "AI",
+          "statement": "Skill in evaluating AI use case feasibility, including data availability assessment, technical complexity estimation, and business value quantification.",
+          "cosine_similarity": 0.5919
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.5516
+        },
+        {
+          "ksa_id": "RM-T-005",
+          "domain_code": "RM",
+          "statement": "Operate continuous evaluation processes for deployed AI systems, monitoring for performance degradation, behavioral drift, and emerging failure modes.",
+          "cosine_similarity": 0.5394
+        },
+        {
+          "ksa_id": "AG-S-002",
+          "domain_code": "AG",
+          "statement": "Skill in designing AI governance frameworks that address the full AI lifecycle from procurement or build through development, testing, deployment, monitoring, and retirement.",
+          "cosine_similarity": 0.5355
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-1.2",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-1.2",
+      "competency_implication": "Skill in AI risk prioritization, including ranking risks by impact and likelihood, assessing available mitigation resources and methods, and developing prioritized risk treatment plans that align with organizational capacity and risk tolerance.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7502
+        },
+        {
+          "ksa_id": "RM-S-008",
+          "domain_code": "RM",
+          "statement": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+          "cosine_similarity": 0.7153
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6913
+        },
+        {
+          "ksa_id": "RM-A-001",
+          "domain_code": "RM",
+          "statement": "Ability to calibrate risk assessment depth and rigor to the materiality and complexity of the model or AI system under review, allocating assessment resources proportionally to actual risk.",
+          "cosine_similarity": 0.6895
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.657
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-1.3",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-1.3",
+      "competency_implication": "Knowledge of AI risk response strategy development, including designing mitigation measures, evaluating risk transfer options, defining risk avoidance criteria, establishing risk acceptance thresholds, and documenting planned responses for high-priority AI risks identified through MAP and MEASURE activities.",
+      "candidates": [
+        {
+          "ksa_id": "RC-T-012",
+          "domain_code": "RC",
+          "statement": "Conduct AI system risk classification under the EU AI Act, documenting risk category determination, applicable requirements identification, and conformity assessment pathway selection.",
+          "cosine_similarity": 0.7273
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7252
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.7153
+        },
+        {
+          "ksa_id": "RM-S-008",
+          "domain_code": "RM",
+          "statement": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+          "cosine_similarity": 0.7069
+        },
+        {
+          "ksa_id": "AG-K-003",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk taxonomy, including model risk, algorithmic bias, opacity, adversarial vulnerability, data poisoning, training data integrity failures, and systemic AI failure modes.",
+          "cosine_similarity": 0.6864
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-1.4",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-1.4",
+      "competency_implication": "Skill in AI residual risk documentation, including identifying and characterizing negative residual risks after mitigation, documenting residual risks for downstream AI system acquirers and end users, and communicating remaining risk levels to stakeholders.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7224
+        },
+        {
+          "ksa_id": "AG-K-003",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk taxonomy, including model risk, algorithmic bias, opacity, adversarial vulnerability, data poisoning, training data integrity failures, and systemic AI failure modes.",
+          "cosine_similarity": 0.6639
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.6524
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.6482
+        },
+        {
+          "ksa_id": "RM-A-003",
+          "domain_code": "RM",
+          "statement": "Ability to synthesize risk findings across multiple models and AI systems into coherent enterprise-level risk narratives suitable for senior management and board reporting.",
+          "cosine_similarity": 0.6434
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-2.1",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-2.1",
+      "competency_implication": "Ability to conduct AI resource and alternative analysis, including assessing resources needed for AI risk management, evaluating non-AI alternative systems and approaches, and making comparative decisions that reduce potential impact magnitude and likelihood.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7422
+        },
+        {
+          "ksa_id": "AG-T-009",
+          "domain_code": "AG",
+          "statement": "Execute bias audits on AI systems in development and production, documenting methodology, findings, and recommended interventions.",
+          "cosine_similarity": 0.6877
+        },
+        {
+          "ksa_id": "RM-A-001",
+          "domain_code": "RM",
+          "statement": "Ability to calibrate risk assessment depth and rigor to the materiality and complexity of the model or AI system under review, allocating assessment resources proportionally to actual risk.",
+          "cosine_similarity": 0.6811
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.6786
+        },
+        {
+          "ksa_id": "DG-A-003",
+          "domain_code": "DG",
+          "statement": "Ability to distinguish between AI use cases that require formal governance review and those that can proceed under standard operating procedures, calibrating oversight to actual risk.",
+          "cosine_similarity": 0.6762
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-2.2",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-2.2",
+      "competency_implication": "Skill in sustaining deployed AI system value, including implementing mechanisms for ongoing value assessment, maintaining system performance and relevance, and applying continuous improvement practices to ensure deployed AI systems continue delivering intended benefits.",
+      "candidates": [
+        {
+          "ksa_id": "RM-T-005",
+          "domain_code": "RM",
+          "statement": "Operate continuous evaluation processes for deployed AI systems, monitoring for performance degradation, behavioral drift, and emerging failure modes.",
+          "cosine_similarity": 0.7352
+        },
+        {
+          "ksa_id": "AG-T-010",
+          "domain_code": "AG",
+          "statement": "Develop and maintain responsible AI assessment tools, templates, and rubrics for use across the enterprise AI development lifecycle.",
+          "cosine_similarity": 0.6418
+        },
+        {
+          "ksa_id": "AG-T-005",
+          "domain_code": "AG",
+          "statement": "Maintain the enterprise AI system inventory, ensuring all AI applications are registered, risk-tiered, owned, and subject to appropriate review and monitoring.",
+          "cosine_similarity": 0.6404
+        },
+        {
+          "ksa_id": "AI-S-018",
+          "domain_code": "AI",
+          "statement": "Skill in evaluating AI use case feasibility, including data availability assessment, technical complexity estimation, and business value quantification.",
+          "cosine_similarity": 0.6378
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6274
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-2.3",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-2.3",
+      "competency_implication": "Skill in AI risk management stakeholder engagement, including identifying and informing relevant AI actors about risk management activities, involving stakeholders in risk response decisions, and maintaining communication channels for ongoing risk management participation.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-003",
+          "domain_code": "AG",
+          "statement": "Skill in constructing and communicating AI risk assessments to non-technical executive and board audiences using business risk framing and financial impact language.",
+          "cosine_similarity": 0.7455
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.7069
+        },
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.7015
+        },
+        {
+          "ksa_id": "DG-S-001",
+          "domain_code": "DG",
+          "statement": "Skill in communicating data and AI strategy, risk posture, and investment priorities to board-level and C-suite audiences using financial and business terms rather than technical language.",
+          "cosine_similarity": 0.6693
+        },
+        {
+          "ksa_id": "RM-S-008",
+          "domain_code": "RM",
+          "statement": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+          "cosine_similarity": 0.6661
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-2.4",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-2.4",
+      "competency_implication": "Skill in designing AI feedback incorporation systems, including establishing adjudication mechanisms for stakeholder feedback, documenting feedback integration approaches, and ensuring regular incorporation of validated feedback into AI system design and implementation processes.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-004",
+          "domain_code": "AG",
+          "statement": "Skill in managing AI governance review processes, including intake, triage, stakeholder coordination, assessment execution, and decision documentation.",
+          "cosine_similarity": 0.738
+        },
+        {
+          "ksa_id": "LS-S-006",
+          "domain_code": "LS",
+          "statement": "Skill in conducting organizational data and AI diagnostic assessments, including stakeholder interviews, artifact review, maturity scoring, and finding synthesis.",
+          "cosine_similarity": 0.6737
+        },
+        {
+          "ksa_id": "RM-T-004",
+          "domain_code": "RM",
+          "statement": "Produce AI system documentation (model cards, evaluation reports) meeting the standards required for governance review, regulatory submission, or external audit.",
+          "cosine_similarity": 0.6488
+        },
+        {
+          "ksa_id": "AG-S-008",
+          "domain_code": "AG",
+          "statement": "Skill in developing AI system documentation including model cards, system cards, and datasheets for datasets that meet both internal governance review and external regulatory conformity assessment requirements.",
+          "cosine_similarity": 0.6323
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6288
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-3.1",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-3.1",
+      "competency_implication": "Skill in third-party AI risk monitoring and control, including implementing regular monitoring of AI risks from third-party resources, applying and documenting risk controls for third-party AI components, and maintaining ongoing assessment of third-party AI benefit realization.",
+      "candidates": [
+        {
+          "ksa_id": "AG-S-005",
+          "domain_code": "AG",
+          "statement": "Skill in conducting AI impact assessments, including risk tiering, harm identification, bias evaluation, human oversight documentation, and residual risk determination.",
+          "cosine_similarity": 0.6909
+        },
+        {
+          "ksa_id": "AG-K-010",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI risk categories, including performance risk, bias and fairness risk, explainability risk, robustness risk, safety risk, privacy risk, and regulatory compliance risk.",
+          "cosine_similarity": 0.6511
+        },
+        {
+          "ksa_id": "RM-S-001",
+          "domain_code": "RM",
+          "statement": "Skill in communicating AI risk findings to technical and non-technical audiences, translating statistical risk measures into business impact terms.",
+          "cosine_similarity": 0.6495
+        },
+        {
+          "ksa_id": "RC-S-008",
+          "domain_code": "RC",
+          "statement": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+          "cosine_similarity": 0.6484
+        },
+        {
+          "ksa_id": "AG-A-001",
+          "domain_code": "AG",
+          "statement": "Ability to calibrate AI governance oversight proportionally to the actual risk level of AI applications, avoiding both under-governance of high-risk systems and excessive governance that impedes low-risk innovation.",
+          "cosine_similarity": 0.6409
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-3.2",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-3.2",
+      "competency_implication": "Knowledge of pre-trained model monitoring requirements, including integrating pre-trained model monitoring into AI system maintenance workflows, tracking model drift and performance degradation, and assessing pre-trained model risks as part of regular AI system monitoring activities.",
+      "candidates": [
+        {
+          "ksa_id": "DG-K-006",
+          "domain_code": "DG",
+          "statement": "Knowledge of AI model lifecycle management, including model versioning, drift detection, performance monitoring, retraining triggers, and decommissioning criteria.",
+          "cosine_similarity": 0.7337
+        },
+        {
+          "ksa_id": "AI-K-024",
+          "domain_code": "AI",
+          "statement": "Knowledge of model monitoring requirements, including data drift detection, prediction drift, performance degradation metrics, and the alerting thresholds and retraining triggers appropriate for different model types and serving patterns.",
+          "cosine_similarity": 0.7033
+        },
+        {
+          "ksa_id": "AI-K-007",
+          "domain_code": "AI",
+          "statement": "Knowledge of model monitoring approaches, including prediction drift detection, input data distribution monitoring, and latency and throughput tracking.",
+          "cosine_similarity": 0.6145
+        },
+        {
+          "ksa_id": "DG-T-007",
+          "domain_code": "DG",
+          "statement": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+          "cosine_similarity": 0.6109
+        },
+        {
+          "ksa_id": "AI-T-017",
+          "domain_code": "AI",
+          "statement": "Implement model monitoring and observability systems that detect data drift, prediction drift, and performance degradation, triggering alerts or automated retraining workflows when defined thresholds are exceeded.",
+          "cosine_similarity": 0.6007
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-4.1",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-4.1",
+      "competency_implication": "Skill in post-deployment AI system monitoring and incident management, including implementing user feedback capture mechanisms, establishing appeal and override procedures, planning decommissioning protocols, designing incident response and recovery processes, and managing AI system changes throughout the operational lifecycle.",
+      "candidates": [
+        {
+          "ksa_id": "DG-T-007",
+          "domain_code": "DG",
+          "statement": "Establish post-deployment AI monitoring standards, including performance threshold definitions, drift detection protocols, incident reporting procedures, and remediation timelines.",
+          "cosine_similarity": 0.7717
+        },
+        {
+          "ksa_id": "RM-T-005",
+          "domain_code": "RM",
+          "statement": "Operate continuous evaluation processes for deployed AI systems, monitoring for performance degradation, behavioral drift, and emerging failure modes.",
+          "cosine_similarity": 0.6717
+        },
+        {
+          "ksa_id": "RM-T-003",
+          "domain_code": "RM",
+          "statement": "Design and execute AI system test and evaluation programs, producing documented test plans, results, identified failure modes, and deployment recommendations.",
+          "cosine_similarity": 0.6532
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.6463
+        },
+        {
+          "ksa_id": "AG-S-007",
+          "domain_code": "AG",
+          "statement": "Skill in designing human oversight mechanisms for AI-assisted decision-making, including escalation triggers, override procedures, human-in-the-loop protocols, and meaningful human control verification.",
+          "cosine_similarity": 0.629
+        }
+      ]
+    },
+    {
+      "element_id": "AIRMF-MG-4.2",
+      "element_type": "outcome",
+      "function": "MANAGE",
+      "subcategory_id": "MG-4.2",
+      "competency_implication": "Knowledge of AI continuous improvement methodology, including integrating measurable improvement activities into AI system update cycles, establishing regular engagement cadences with interested parties and AI actors, and tracking improvement metrics across AI system iterations.",
+      "candidates": [
+        {
+          "ksa_id": "DG-K-006",
+          "domain_code": "DG",
+          "statement": "Knowledge of AI model lifecycle management, including model versioning, drift detection, performance monitoring, retraining triggers, and decommissioning criteria.",
+          "cosine_similarity": 0.6367
+        },
+        {
+          "ksa_id": "RM-T-005",
+          "domain_code": "RM",
+          "statement": "Operate continuous evaluation processes for deployed AI systems, monitoring for performance degradation, behavioral drift, and emerging failure modes.",
+          "cosine_similarity": 0.6341
+        },
+        {
+          "ksa_id": "AG-T-010",
+          "domain_code": "AG",
+          "statement": "Develop and maintain responsible AI assessment tools, templates, and rubrics for use across the enterprise AI development lifecycle.",
+          "cosine_similarity": 0.6001
+        },
+        {
+          "ksa_id": "AG-K-006",
+          "domain_code": "AG",
+          "statement": "Knowledge of AI governance framework components, including AI system registries, tiered review processes, impact assessment methodologies, and post-deployment monitoring requirements.",
+          "cosine_similarity": 0.5848
+        },
+        {
+          "ksa_id": "DG-T-002",
+          "domain_code": "DG",
+          "statement": "Develop and maintain the enterprise data and AI strategy, aligned to business objectives, with defined investment priorities, milestones, accountability assignments, and success metrics.",
+          "cosine_similarity": 0.5824
+        }
+      ]
+    }
+  ]
+}

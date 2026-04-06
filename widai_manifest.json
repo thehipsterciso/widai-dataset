@@ -1,0 +1,203 @@
+{
+  "dataset_id": "WIDAI-DATASET",
+  "dataset_title": "WIDAI — A Workforce Framework for Talent, Leadership, and Skills in Data and AI",
+  "version": "0.5.7",
+  "schema_version": "2.0.0",
+  "status": "development",
+  "created_date": "2026-03-26",
+  "last_modified": "2026-04-01",
+  "scope": "Covers the full data and AI profession. Explicitly excludes the CISO and cybersecurity workforce, covered by NIST NICE.",
+  "architecture": {
+    "pattern": "Shared-pool KSA model with domain-based organization and many-to-many role mappings",
+    "ksa_model": "KSAs are independent entities organized by knowledge domain (not role category). Roles reference KSAs from any domain via relationship tables. One KSA can be referenced by multiple roles. KSA IDs are role-independent.",
+    "ksa_id_format": "{DOMAIN_CODE}-{TYPE}-{SEQUENCE} (e.g., DG-K-001, AI-S-012)",
+    "mapping_model": "Many-to-many. Each mapping includes proficiency_context (strategic, operational, technical, oversight) to differentiate how roles apply the same KSA.",
+    "primary_keys": "role_id for roles, ksa_id for KSAs (domain-based)",
+    "adr": "ADR-013 (shared-pool architecture), supersedes role-centric model"
+  },
+  "ksa_domains": {
+    "DG": "Data Governance & Policy",
+    "DA": "Data Architecture & Infrastructure",
+    "DQ": "Data Quality & Management",
+    "AI": "AI/ML Foundations",
+    "AG": "AI Governance & Ethics",
+    "SP": "Security & Privacy",
+    "AB": "Analytics & BI",
+    "LS": "Leadership & Strategy",
+    "OP": "Operations & Enablement",
+    "RC": "Regulatory & Compliance",
+    "RM": "Risk Management",
+    "TF": "Technical Foundations"
+  },
+  "directories": {
+    "roles": {
+      "description": "One file per category_code. Each contains role identity, title, seniority, variants, and source references. No KSAs embedded.",
+      "files": {
+        "ANL.json": { "role_count": 14 },
+        "DEV.json": { "role_count": 15 },
+        "DSM.json": { "role_count": 21 },
+        "ENG.json": { "role_count": 25 },
+        "GOV.json": { "role_count": 25 },
+        "LDR.json": { "role_count": 31 },
+        "NICHE.json": { "role_count": 9 },
+        "OPS.json": { "role_count": 15 },
+        "REG.json": { "role_count": 8 },
+        "RSK.json": { "role_count": 24 }
+      }
+    },
+    "ksas": {
+      "description": "Shared KSA pool organized by knowledge domain. Each KSA has a domain-based ID and can be referenced by any role. Schema version 2.0.0.",
+      "files": {
+        "AB_ksas.json": { "domain": "Analytics & BI", "ksa_count": 34 },
+        "AG_ksas.json": { "domain": "AI Governance & Ethics", "ksa_count": 37 },
+        "AI_ksas.json": { "domain": "AI/ML Foundations", "ksa_count": 72 },
+        "DA_ksas.json": { "domain": "Data Architecture & Infrastructure", "ksa_count": 40 },
+        "DG_ksas.json": { "domain": "Data Governance & Policy", "ksa_count": 40 },
+        "DQ_ksas.json": { "domain": "Data Quality & Management", "ksa_count": 51 },
+        "LS_ksas.json": { "domain": "Leadership & Strategy", "ksa_count": 41 },
+        "OP_ksas.json": { "domain": "Operations & Enablement", "ksa_count": 35 },
+        "RC_ksas.json": { "domain": "Regulatory & Compliance", "ksa_count": 42 },
+        "RM_ksas.json": { "domain": "Risk Management", "ksa_count": 32 },
+        "SP_ksas.json": { "domain": "Security & Privacy", "ksa_count": 36 },
+        "TF_ksas.json": { "domain": "Technical Foundations", "ksa_count": 37 },
+        "_legacy_id_map.json": { "description": "Maps old role-coupled KSA IDs (v0.4.x) to new domain-based IDs (v0.5.0) for audit trail" }
+      }
+    },
+    "frameworks": {
+      "description": "Reference data for each source framework (NICE, SFIA, O*NET, DAMA, etc.)",
+      "files": {
+        "frameworks.json": { "framework_count": 70 }
+      }
+    },
+    "mappings": {
+      "description": "Relationship tables. role_ksa_* files link roles to KSAs (many-to-many with proficiency_context). roles_to_* files link roles to framework references.",
+      "role_ksa_files": {
+        "role_ksa_ANL.json": { "relationship_count": 38 },
+        "role_ksa_DEV.json": { "relationship_count": 46 },
+        "role_ksa_DSM.json": { "relationship_count": 38 },
+        "role_ksa_ENG.json": { "relationship_count": 69 },
+        "role_ksa_GOV.json": { "relationship_count": 82 },
+        "role_ksa_LDR.json": { "relationship_count": 24 },
+        "role_ksa_OPS.json": { "relationship_count": 23 },
+        "role_ksa_RSK.json": { "relationship_count": 44 }
+      },
+      "framework_mapping_count": 70
+    },
+    "methodology": {
+      "description": "Product methodology specifications — scoring models, engagement workflows, deliverable templates.",
+      "files": {
+        "pe-assessment-scoring-model.json": { "description": "R04 PE Assessment Scoring Model" },
+        "pe-assessment-workflow.json": { "description": "R04 PE Assessment Engagement Workflow" },
+        "pe-assessment-deliverables.json": { "description": "R04 PE Assessment Deliverables" },
+        "R04-pe-assessment-methodology.md": { "description": "R04 PE Assessment Methodology (human-readable)" }
+      }
+    },
+    "scripts": {
+      "description": "Validation, quality gates, and maintenance scripts.",
+      "files": {
+        "validate.py": { "description": "Referential integrity validation" },
+        "check_consistency.py": { "description": "Pre-commit consistency validation" },
+        "check_ksa_depth.py": { "description": "KSA Depth Coverage Index (DCI) — benchmarks against NICE v2.1.0 (ADR-012)" },
+        "adversarial_quality_gate.py": { "description": "Adversarial Quality Gate (AQG) — 5-pass review (ADR-012)" },
+        "migrate_to_domain_pool.py": { "description": "Migration script — role-centric to shared domain pool (ADR-013)" },
+        "coverage_gap_test.py": { "description": "R01 Coverage Gap Test" },
+        "ksa_quality_audit.py": { "description": "R24 KSA Quality Consistency Audit" },
+        "update_framework_licensing.py": { "description": "R05 Licensing Update" }
+      }
+    },
+    "schema": {
+      "description": "JSON Schema definitions for validation.",
+      "files": {
+        "role_record.json": { "description": "JSON Schema for role records" }
+      }
+    },
+    "docs": {
+      "description": "Architecture decisions, research, and assessments.",
+      "adr_count": 19
+    },
+    "sources": {
+      "description": "Canonical source citations and working copies for STRM framework mapping.",
+      "files": {
+        "onet_30_2_citation.json": { "description": "O*NET 30.2 canonical source citation" },
+        "onet_30_2/": { "description": "O*NET 30.2 raw database (CC BY 4.0)" },
+        "nice_framework/": { "description": "NICE Framework v2.1.0 source data (NIST JSON, XLSX, citation, candidate screening, build scripts)" },
+        "dcwf/": { "description": "DCWF v5.1 source data (Work Role Tool XLSX, extracted elements, citation, candidate screening)" },
+        "ddat/": { "description": "DDaT Capability Framework source data (CSV exports, extracted elements, citation, candidate screening)" },
+        "eu_ai_act/": { "description": "EU AI Act source data (element extraction, citation, candidate screening, candidate generation script)" }
+      }
+    },
+    "strm": {
+      "description": "NIST IR 8477 Set Theory Relationship Mapping deliverables per ADR-014.",
+      "completed_strms": 5,
+      "frameworks": {
+        "onet": {
+          "strm_id": "STRM-001-ONET",
+          "framework_version": "30.2",
+          "fdes_evaluated": 126,
+          "status": "complete",
+          "adr": "ADR-015"
+        },
+        "nice": {
+          "strm_id": "STRM-002-NICE",
+          "framework_version": "2.1.0",
+          "fdes_evaluated": 2148,
+          "status": "complete",
+          "adr": "ADR-016"
+        },
+        "dcwf": {
+          "strm_id": "STRM-003-DCWF",
+          "framework_version": "5.1",
+          "fdes_evaluated": 2945,
+          "status": "complete",
+          "adr": "ADR-017"
+        },
+        "ddat": {
+          "strm_id": "STRM-004-DDAT",
+          "framework_version": "2026-03-23",
+          "fdes_evaluated": 189,
+          "status": "complete",
+          "adr": "ADR-018"
+        },
+        "eu_ai_act": {
+          "strm_id": "STRM-005-EU-AI-ACT",
+          "framework_version": "Regulation (EU) 2024/1689",
+          "fdes_evaluated": 62,
+          "status": "complete",
+          "adr": "ADR-019",
+          "note": "First regulatory framework. Functional rationale. Dual-provenance elements (obligation_text + competency_implication)."
+        }
+      },
+      "issues_directory": "strm/issues/"
+    }
+  },
+  "additional_files": {
+    "ATTRIBUTION.md": { "description": "Framework licensing attribution" },
+    "CONTRIBUTING.md": { "description": "Pre-commit discipline checklist" },
+    ".github/workflows/consistency.yml": { "description": "CI gate — consistency, DCI, and AQG checks" },
+    ".github/workflows/validate.yml": { "description": "CI gate — validation on push/PR" }
+  },
+  "commercial_audit": {
+    "date_completed": "2026-03-26",
+    "audit_name": "R05 Source Framework License Audit",
+    "frameworks_audited": 70,
+    "green_frameworks": 19,
+    "yellow_frameworks": 28,
+    "red_frameworks": 23,
+    "result": "CONDITIONAL",
+    "reference": "R05-license-audit.md, R05-dependency-analysis.md, ATTRIBUTION.md"
+  },
+  "statistics": {
+    "total_roles": 187,
+    "total_unique_ksas": 497,
+    "total_role_ksa_relationships": 364,
+    "total_frameworks": 70,
+    "ksa_domains": 12,
+    "roles_with_ksa_mappings": 42,
+    "ksa_architecture": "shared-pool (ADR-013)",
+    "domain_distribution": {
+      "AB": 34, "AG": 37, "AI": 72, "DA": 40, "DG": 40,
+      "DQ": 51, "LS": 41, "OP": 35, "RC": 42, "RM": 32,
+      "SP": 36, "TF": 37
+    }
+  }
+}

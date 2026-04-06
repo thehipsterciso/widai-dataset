@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <defs>
+    <linearGradient id="bgDM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAFBFC"/>
+      <stop offset="100%" stop-color="#F0F2F5"/>
+    </linearGradient>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0,0 8,3 0,6" fill="#2E75B6" opacity="0.5"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0,0 8,3 0,6" fill="#0E8A16" opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="12" fill="url(#bgDM)"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#1A1A2E">WIDAI Data Model</text>
+  <text x="450" y="60" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#888">Graph-native entity-relationship architecture — shared-pool KSA model (ADR-013)</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ROLES ENTITY (left) -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="40" y="90" width="240" height="260" rx="8" fill="#fff" stroke="#2E75B6" stroke-width="1.5" stroke-opacity="0.5"/>
+  <rect x="40" y="90" width="240" height="30" rx="8" fill="#2E75B6" opacity="0.12"/>
+  <rect x="40" y="112" width="240" height="8" rx="0" fill="#fff"/>
+  <text x="160" y="111" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#2E75B6">Roles</text>
+  <text x="240" y="111" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#2E75B6" opacity="0.6">187 defined</text>
+
+  <!-- Role schema fields -->
+  <text x="58" y="142" font-family="Georgia, serif" font-size="10" fill="#1A1A2E" font-weight="bold">widai_work_role_id</text>
+  <text x="200" y="142" font-family="Georgia, serif" font-size="9" fill="#888">WR-GOV-01.01</text>
+  <text x="58" y="160" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">canonical_title</text>
+  <text x="58" y="178" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">category_code</text>
+  <text x="58" y="196" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">seniority_level</text>
+  <text x="58" y="214" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">key_variants[]</text>
+  <text x="58" y="232" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">sources[]</text>
+
+  <line x1="55" y1="244" x2="265" y2="244" stroke="#1A1A2E" stroke-width="0.5" opacity="0.12"/>
+  <text x="58" y="262" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1A1A2E">Categories</text>
+  <!-- Category mini-pills in 2 columns -->
+  <rect x="56" y="270" width="54" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="83" y="281" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">GOV 25</text>
+  <rect x="115" y="270" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="141" y="281" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">ENG 25</text>
+  <rect x="172" y="270" width="50" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="197" y="281" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">LDR 31</text>
+  <rect x="227" y="270" width="48" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="251" y="281" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">RSK 24</text>
+
+  <rect x="56" y="290" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="82" y="301" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">DSM 21</text>
+  <rect x="113" y="290" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="139" y="301" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">DEV 15</text>
+  <rect x="170" y="290" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="196" y="301" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">OPS 15</text>
+  <rect x="227" y="290" width="48" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="251" y="301" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">ANL 14</text>
+
+  <rect x="56" y="310" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="82" y="321" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">NICHE 9</text>
+  <rect x="113" y="310" width="48" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="137" y="321" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">REG 8</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- MAPPINGS (center - junction) -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Role-KSA mapping relationship -->
+  <rect x="320" y="140" width="260" height="100" rx="8" fill="#fff" stroke="#1A1A2E" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="5,3"/>
+  <text x="450" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#1A1A2E">Mappings</text>
+  <text x="450" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#555">Many-to-many junction tables</text>
+
+  <text x="340" y="202" font-family="Georgia, serif" font-size="9" fill="#1A1A2E">work_role_id</text>
+  <text x="340" y="216" font-family="Georgia, serif" font-size="9" fill="#1A1A2E">ksa_id</text>
+  <text x="450" y="202" font-family="Georgia, serif" font-size="9" fill="#1A1A2E">relationship_type</text>
+  <text x="450" y="216" font-family="Georgia, serif" font-size="9" fill="#1A1A2E">proficiency_context</text>
+
+  <text x="450" y="234" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">364+ role-KSA relationships · 4 proficiency levels</text>
+
+  <!-- Connection: Roles → Mappings -->
+  <line x1="280" y1="190" x2="318" y2="190" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- Connection: Mappings → KSAs -->
+  <line x1="582" y1="190" x2="618" y2="190" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- KSAs ENTITY (right) -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="620" y="90" width="240" height="260" rx="8" fill="#fff" stroke="#2E75B6" stroke-width="1.5" stroke-opacity="0.5"/>
+  <rect x="620" y="90" width="240" height="30" rx="8" fill="#2E75B6" opacity="0.12"/>
+  <rect x="620" y="112" width="240" height="8" rx="0" fill="#fff"/>
+  <text x="740" y="111" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#2E75B6">KSAs</text>
+  <text x="820" y="111" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#2E75B6" opacity="0.6">504 unique</text>
+
+  <!-- KSA schema fields -->
+  <text x="638" y="142" font-family="Georgia, serif" font-size="10" fill="#1A1A2E" font-weight="bold">ksa_id</text>
+  <text x="760" y="142" font-family="Georgia, serif" font-size="9" fill="#888">DG-K-001</text>
+  <text x="638" y="160" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">type</text>
+  <text x="760" y="160" font-family="Georgia, serif" font-size="9" fill="#888">K / S / A / T</text>
+  <text x="638" y="178" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">domain</text>
+  <text x="638" y="196" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">domain_code</text>
+  <text x="638" y="214" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">statement</text>
+  <text x="638" y="232" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">origin_framework</text>
+
+  <line x1="635" y1="244" x2="845" y2="244" stroke="#1A1A2E" stroke-width="0.5" opacity="0.12"/>
+  <text x="638" y="262" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1A1A2E">12 Knowledge Domains</text>
+  <!-- Domain pills -->
+  <rect x="636" y="270" width="70" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="671" y="281" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">AI/ML 72</text>
+  <rect x="711" y="270" width="55" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="738" y="281" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">DQ 51</text>
+  <rect x="771" y="270" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="797" y="281" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">RC 42</text>
+  <rect x="636" y="290" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="662" y="301" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">LS 41</text>
+  <rect x="693" y="290" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="719" y="301" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">DA 40</text>
+  <rect x="750" y="290" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="776" y="301" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">DG 40</text>
+  <rect x="636" y="310" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="662" y="321" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">AG 37</text>
+  <rect x="693" y="310" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="719" y="321" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">TF 37</text>
+  <rect x="750" y="310" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="776" y="321" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">SP 36</text>
+  <rect x="636" y="330" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="662" y="341" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">OP 35</text>
+  <rect x="693" y="330" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="719" y="341" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">AB 34</text>
+  <rect x="750" y="330" width="52" height="16" rx="8" fill="#2E75B6" opacity="0.08"/>
+  <text x="776" y="341" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">RM 32</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FRAMEWORKS ENTITY (bottom center) -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="220" y="390" width="460" height="120" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="220" y="390" width="460" height="30" rx="8" fill="#0E8A16" opacity="0.08"/>
+  <rect x="220" y="412" width="460" height="8" rx="0" fill="#fff"/>
+  <text x="450" y="411" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#0E8A16">Source Frameworks</text>
+  <text x="640" y="411" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#0E8A16" opacity="0.6">70 frameworks</text>
+
+  <text x="240" y="440" font-family="Georgia, serif" font-size="10" fill="#1A1A2E" font-weight="bold">framework_id</text>
+  <text x="240" y="458" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">framework_name</text>
+  <text x="240" y="476" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">commercial_status</text>
+  <text x="430" y="440" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">license_type</text>
+  <text x="430" y="458" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">url_statuses[]</text>
+  <text x="430" y="476" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">roles_referencing</text>
+
+  <!-- STRM connection badges -->
+  <text x="240" y="500" font-family="Georgia, serif" font-size="9" fill="#0E8A16">6 completed STRM mappings · 5,540+ rationale files · full scoring provenance</text>
+
+  <!-- Connection: Frameworks → Roles (via role-framework mappings) -->
+  <path d="M 310 390 C 310 370 200 370 200 350" stroke="#0E8A16" stroke-width="1.5" fill="none" stroke-dasharray="5,3" opacity="0.4"/>
+  <text x="225" y="375" font-family="Georgia, serif" font-size="8" fill="#0E8A16">role-framework</text>
+
+  <!-- Connection: Frameworks → KSAs (via STRM) -->
+  <path d="M 590 390 C 590 370 700 370 700 350" stroke="#0E8A16" stroke-width="1.5" fill="none" stroke-dasharray="5,3" opacity="0.4"/>
+  <text x="660" y="375" font-family="Georgia, serif" font-size="8" fill="#0E8A16">STRM evidence</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SCHEMA BADGE -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="330" y="540" width="240" height="36" rx="18" fill="#1A1A2E" opacity="0.06" stroke="#1A1A2E" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="450" y="562" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1A1A2E">Schema v2.0.0 · JSON Draft 2020-12</text>
+
+  <!-- Footer -->
+  <text x="450" y="610" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-style="italic" fill="#888">Entity-separated flat files load directly into Neo4j without transformation.</text>
+</svg>

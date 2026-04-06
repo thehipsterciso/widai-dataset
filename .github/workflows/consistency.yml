@@ -1,0 +1,38 @@
+name: WIDAI Consistency Check
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  consistency:
+    name: Check dataset consistency
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Run WIDAI consistency check
+        run: python scripts/check_consistency.py
+
+      - name: Run KSA Depth Coverage Index (DCI)
+        run: python scripts/check_ksa_depth.py
+
+      - name: Run Adversarial Quality Gate (AQG)
+        run: python scripts/adversarial_quality_gate.py
+
+      - name: Report results
+        if: always()
+        run: |
+          echo "All quality gates completed. Review output above for any errors."

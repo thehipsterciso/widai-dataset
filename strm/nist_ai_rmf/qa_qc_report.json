@@ -1,0 +1,131 @@
+{
+  "strm_id": "STRM-006-NIST-AI-RMF",
+  "framework": "NIST AI Risk Management Framework 1.0 (NIST AI 100-1)",
+  "qa_qc_date": "2026-04-01",
+  "widai_version": "0.5.6",
+  "reviewer": "AI-assisted (Claude) with human review",
+
+  "completeness_checks": {
+    "total_fdes_in_scope": 70,
+    "total_fdes_evaluated": 70,
+    "fdes_with_rationale_files": 70,
+    "blank_evaluations": 0,
+    "completeness_percentage": 100.0,
+    "status": "PASS",
+    "note": "All 70 NIST AI RMF subcategory outcome elements evaluated. Each element scored using competency_implication text against WIDAI KSA pool. Both outcome_text and competency_implication preserved in every rationale file."
+  },
+
+  "rationale_documentation": {
+    "total_rationale_files": 70,
+    "scored_rationale_files_with_all_methods": 70,
+    "no_relationship_rationale_files": 0,
+    "files_missing_rationale": 0,
+    "invalid_json_files": 0,
+    "status": "PASS",
+    "note": "Every rationale file validated as well-formed JSON with complete method coverage. All 70 files contain STS primary + 4 secondary methods (BERTScore, NLI, Bi-Encoder, Jaccard) with content-specific significance text. Each file preserves dual provenance (outcome_text + competency_implication)."
+  },
+
+  "relationship_type_consistency": {
+    "relationship_distribution": {
+      "Equal": {"count": 43, "percentage": 61.4},
+      "Superset of": {"count": 26, "percentage": 37.1},
+      "Intersects with": {"count": 1, "percentage": 1.4},
+      "No relationship": {"count": 0, "percentage": 0.0}
+    },
+    "subset_of_count": 0,
+    "subset_of_note": "No 'Subset of' relationships. Expected: NIST AI RMF competency implications describe organizational risk management outcomes — they are equal to or broader than individual WIDAI KSAs, never narrower.",
+    "no_relationship_note": "Zero no-relationship results. Expected for a risk management framework whose workforce requirements are within WIDAI's core data/AI governance domain.",
+    "equal_strength_range": {"min": 6.5, "max": 8.1, "mean": 7.05},
+    "superset_strength_range": {"min": 5.5, "max": 6.5, "mean": 6.01},
+    "intersects_strength_range": {"min": 4.1, "max": 4.1, "mean": 4.1},
+    "strength_mapping_consistency_check": "PASS — Equal (mean 7.05) > Superset (mean 6.01) > Intersects (mean 4.1). Monotonically decreasing strength across relationship types, consistent with all five prior STRMs.",
+    "status": "PASS"
+  },
+
+  "strength_scoring": {
+    "scoring_methodology": "Cross-Encoder STS (stsb-roberta-base) as primary for all elements, raw 0-1 mapped to 0-10 integer. Functional rationale per NIST IR 8477.",
+    "scored_pairs": 70,
+    "strength_statistics_scored": {
+      "mean": 6.62,
+      "median": 6.7,
+      "std": 0.68,
+      "min": 4.1,
+      "max": 8.1
+    },
+    "strength_statistics_all": {
+      "mean": 6.63,
+      "median": 7.0,
+      "std": 0.7,
+      "min": 4.0,
+      "max": 8.0
+    },
+    "by_function": {
+      "GOVERN": {"count": 19, "mean": 6.87, "median": 6.9, "std": 0.56, "min": 5.8, "max": 7.9},
+      "MAP": {"count": 18, "mean": 6.56, "median": 6.5, "std": 0.64, "min": 5.5, "max": 8.1},
+      "MEASURE": {"count": 21, "mean": 6.43, "median": 6.7, "std": 0.81, "min": 4.1, "max": 8.0},
+      "MANAGE": {"count": 12, "mean": 6.64, "median": 6.75, "std": 0.52, "min": 5.7, "max": 7.3}
+    },
+    "function_consistency": "PASS — GOVERN (mean 6.87) highest, consistent with WIDAI's strong governance domain coverage. MEASURE lowest (mean 6.43), reflecting measurement-specific vocabulary not fully captured by WIDAI KSAs. All functions within 0.5 of overall mean.",
+    "mapping_strength_rationale_consistency": {
+      "mismatches": 0,
+      "status": "PASS",
+      "note": "All strength values in strm_mapping.json match corresponding rationale files."
+    },
+    "comparison_to_prior_strms": {
+      "strm_001_scored_mean": 4.18,
+      "strm_002_scored_mean": 5.12,
+      "strm_003_scored_mean": 4.79,
+      "strm_004_scored_mean": 4.72,
+      "strm_005_scored_mean": 6.34,
+      "strm_006_scored_mean": 6.62,
+      "note": "STRM-006 scored mean (6.62) is the highest across all STRMs. This is expected: (1) competency_implication text was authored to describe workforce competencies implied by risk management outcomes — naturally closer to competency language than raw framework descriptions; (2) NIST AI RMF scope (70 outcomes across 4 functions) is entirely within WIDAI's data/AI governance/risk domain; (3) NIST AI RMF vocabulary strongly overlaps with WIDAI's governance and risk management domains. STRM-006 mean is comparable to STRM-005 (6.34), the other dual-provenance regulatory STRM.",
+      "consistency_assessment": "CONSISTENT — Higher mean is methodologically explained by dual-provenance approach and narrow domain scope, not scoring drift."
+    }
+  },
+
+  "methodology_validation": {
+    "dual_provenance": {
+      "description": "Each rationale file preserves both outcome_text (NIST AI RMF original) and competency_implication (workforce interpretation). Scoring uses competency_implication.",
+      "status": "PASS"
+    },
+    "rationale_type_validation": {
+      "rationale_type": "Functional",
+      "prior_strms_rationale": "Semantic (STRM-001–004), Functional (STRM-005)",
+      "justification": "Mapping direction is outcome→competency (what workforce capability achieves this outcome?). This is a Functional question per NIST IR 8477. Consistent with STRM-005 EU AI Act methodology.",
+      "status": "PASS — Rationale type consistent with STRM-005 and justified by element type"
+    }
+  },
+
+  "gap_analysis": {
+    "no_relationship_count": 0,
+    "gap_signals_registered": 14,
+    "gap_register_file": "strm/issues/STRM-006-NIST-AI-RMF-gaps.json",
+    "per_fde_detection": {
+      "total_flagged": 14,
+      "critical": 7,
+      "moderate": 3,
+      "low": 4,
+      "detection_method": "Multi-method signal analysis (gap_detection.py)",
+      "criteria": "NLI domain mismatch, STS threshold fragility, bi-encoder vocabulary inflation"
+    },
+    "note": "14 elements (20.0%) flagged with gap signals. 7 critical domain mismatches — AG gravity well pattern continues (3 of 7 critical gaps matched to AG KSAs). All 70 elements map to at least one WIDAI KSA with strength ≥ 4. Gap signals represent potential domain mismatches, not missing coverage.",
+    "status": "PASS — Gap detection ran at pipeline time. 14 gaps documented in gap register."
+  },
+
+  "cross_strm_consistency": {
+    "prior_strms_completed": 5,
+    "methodology_consistent": true,
+    "rationale_type_deviation": "Functional (consistent with STRM-005, deviation from STRM-001–004 Semantic). Justified by outcome→competency mapping direction.",
+    "scoring_method_consistent": true,
+    "scoring_method_note": "STS-primary for all elements, same as STRM-001–005.",
+    "relationship_type_distribution_consistent": true,
+    "distribution_note": "STRM-006 has 0% No relationship, consistent with STRM-004 (0%) and STRM-005 (0%). Zero no-relationship is expected for narrow, in-domain frameworks.",
+    "status": "PASS"
+  },
+
+  "overall_status": "PASS — 7/7 checks pass.",
+  "checks_passed": 7,
+  "checks_corrected": 0,
+  "checks_failed": 0,
+  "checks_total": 7
+}

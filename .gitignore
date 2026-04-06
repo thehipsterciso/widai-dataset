@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
+*.bak
+*.tmp
+
+# STRM canonical source raw data (downloadable, large)
+sources/onet_30_2/
+sources/*.zip
+
+# STRM rationale files (generated pipeline output — regenerate via strm_scoring_pipeline.py)
+strm/*/rationale/
+
+# STRM mapping files (generated pipeline output, large — regenerate via strm_scoring_pipeline.py)
+strm/*/strm_mapping.json

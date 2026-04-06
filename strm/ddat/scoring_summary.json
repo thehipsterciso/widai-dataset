@@ -1,0 +1,49 @@
+{
+  "pipeline_run_date": "2026-04-01",
+  "strm_id": "STRM-004-DDAT",
+  "pipeline_version": "domain-exhaustive",
+  "methodology": {
+    "approach": "Exhaustive scoring \u2014 all elements against all KSAs",
+    "total_pairs_scored": 95256,
+    "note": "189 elements x 504 KSAs = 95,256 pairs"
+  },
+  "statistics": {
+    "total_fdes": 189,
+    "total_mapping_rows": 28837,
+    "scored_mappings": 28837,
+    "no_relationship_fdes": 0,
+    "unique_ksas_matched": 504,
+    "rationale_files": 28837,
+    "relationship_distribution": {
+      "Intersects With": 28827,
+      "Subset Of": 10
+    },
+    "strength_distribution": {
+      "3": 15148,
+      "5": 13679,
+      "8": 10
+    },
+    "domain_distribution": {
+      "DQ": 3521,
+      "AI": 3202,
+      "LS": 2852,
+      "OP": 2578,
+      "DG": 2489,
+      "DA": 2244,
+      "TF": 2175,
+      "AB": 2090,
+      "RC": 2078,
+      "SP": 1985,
+      "AG": 1891,
+      "RM": 1732
+    },
+    "sts_statistics_scored": {
+      "count": 28837,
+      "mean": 0.4519,
+      "median": 0.4444,
+      "std": 0.0694,
+      "min": 0.35,
+      "max": 0.7316
+    }
+  }
+}

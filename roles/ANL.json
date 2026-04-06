@@ -1,0 +1,348 @@
+{
+  "dataset_id": "WIDAI-MASTER-ROLES",
+  "category_code": "ANL",
+  "category_title": "Analytics, BI, and Insight",
+  "role_count": 14,
+  "schema_version": "1.0.0",
+  "roles": [
+    {
+      "role_id": "WIDAI-ANL-0087",
+      "canonical_title": "Data Analyst",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 87,
+      "in_widai_v030": true,
+      "widai_work_role_id": "WR-ANL-05.01",
+      "seniority_level": "IC–Senior",
+      "key_variants": [
+        "Marketing Data Analyst",
+        "Financial Data Analyst",
+        "Healthcare Data Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 15-2051.01",
+          "url": "https://www.onetonline.org/link/summary/15-2051.01",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DDaT",
+          "reference": "UK Government Data Profession Capability Framework",
+          "url": "https://www.gov.uk/guidance/data-profession-capability-framework",
+          "url_status": "framework_level"
+        },
+        {
+          "framework": "NIST NICE",
+          "reference": "NICE Framework Work Role IO-WRL-001 (Implementation and Operation) — Analyzing data to provide cybersecurity and privacy insight",
+          "url": "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/NICE_FRAMEWORK_V1_0_0/home",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DCWF",
+          "reference": "DoD DCWF Work Role 422",
+          "url": "https://dodcio.defense.gov/Cyber-Workforce/DCWF/",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0088",
+      "canonical_title": "Senior Data Analyst",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 88,
+      "in_widai_v030": true,
+      "widai_work_role_id": "WR-ANL-05.02",
+      "seniority_level": "Senior",
+      "key_variants": [
+        "Principal Data Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "DDaT",
+          "reference": "UK Government Data Profession Capability Framework",
+          "url": "https://www.gov.uk/guidance/data-profession-capability-framework",
+          "url_status": "framework_level"
+        },
+        {
+          "framework": "BLS-SOC",
+          "reference": "BLS Standard Occupational Classification (SOC) 2018",
+          "url": "https://www.bls.gov/soc/2018/home.htm",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0089",
+      "canonical_title": "BI Developer",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 89,
+      "in_widai_v030": true,
+      "widai_work_role_id": "WR-ANL-05.03",
+      "seniority_level": "IC–Senior",
+      "key_variants": [
+        "BI Analyst",
+        "BI Engineer",
+        "Report Developer"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 15-2051.01",
+          "url": "https://www.onetonline.org/link/summary/15-2051.01",
+          "url_status": "resolvable"
+        },
+        {
+          "framework": "DAMA-DMBOK",
+          "reference": "DAMA DMBOK2 — Ch.11 — Data Warehousing and Business Intelligence",
+          "url": "urn:isbn:978-1-634622-36-1",
+          "url_status": "paywalled"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0090",
+      "canonical_title": "Quantitative Analyst",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 90,
+      "in_widai_v030": true,
+      "widai_work_role_id": "WR-ANL-05.04",
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Quant",
+        "Financial Quant"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 13-2099.01",
+          "url": "https://www.onetonline.org/link/summary/13-2099.01",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0091",
+      "canonical_title": "Performance Analyst",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 91,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "IC–Senior",
+      "key_variants": [
+        "Technical Specialist Performance Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "DDaT",
+          "reference": "UK Government Data Profession Capability Framework",
+          "url": "https://www.gov.uk/guidance/data-profession-capability-framework",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0092",
+      "canonical_title": "Clinical Data Manager",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 92,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "CDM Manager",
+        "Clinical Informatics Manager"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 15-2051.02",
+          "url": "https://www.onetonline.org/link/summary/15-2051.02",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0093",
+      "canonical_title": "Health Informatics Specialist",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 93,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Clinical Informatics Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 15-1211.01",
+          "url": "https://www.onetonline.org/link/summary/15-1211.01",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0094",
+      "canonical_title": "Market Research Analyst",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 94,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Customer Analytics Specialist",
+        "Consumer Insights Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 13-1161.00",
+          "url": "https://www.onetonline.org/link/summary/13-1161.00",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0095",
+      "canonical_title": "Geospatial Data Analyst",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 95,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "GIS Analyst",
+        "GIS Specialist"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 15-1299.02",
+          "url": "https://www.onetonline.org/link/summary/15-1299.02",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0096",
+      "canonical_title": "Financial Risk Specialist",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 96,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "Mid–Senior",
+      "key_variants": [
+        "Risk Analyst",
+        "Model Risk Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 13-2054.00",
+          "url": "https://www.onetonline.org/link/summary/13-2054.00",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0097",
+      "canonical_title": "Survey Researcher",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 97,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Survey Methodologist"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 19-3022.00",
+          "url": "https://www.onetonline.org/link/summary/19-3022.00",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0098",
+      "canonical_title": "Bioinformatics Technician",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 98,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "Mid",
+      "key_variants": [
+        "Genomics Data Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "O*NET",
+          "reference": "O*NET-SOC 15-2099.01",
+          "url": "https://www.onetonline.org/link/summary/15-2099.01",
+          "url_status": "resolvable"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0099",
+      "canonical_title": "Digital Evaluator",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 99,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "IC–Senior",
+      "key_variants": [
+        "Program Evaluator"
+      ],
+      "sources": [
+        {
+          "framework": "DDaT",
+          "reference": "UK Government Data Profession Capability Framework",
+          "url": "https://www.gov.uk/guidance/data-profession-capability-framework",
+          "url_status": "framework_level"
+        }
+      ]
+    },
+    {
+      "role_id": "WIDAI-ANL-0100",
+      "canonical_title": "Citizen Data Scientist",
+      "category_code": "ANL",
+      "category_title": "Analytics, BI, and Insight",
+      "inventory_sequence": 100,
+      "in_widai_v030": false,
+      "widai_work_role_id": null,
+      "seniority_level": "IC (business)",
+      "key_variants": [
+        "Citizen Analyst"
+      ],
+      "sources": [
+        {
+          "framework": "Gartner",
+          "reference": "Gartner research",
+          "url": "PLACEHOLDER — Gartner paywalled analyst research; no stable public URL",
+          "url_status": "placeholder"
+        },
+        {
+          "framework": "Practitioner Community",
+          "reference": "Practitioner community / industry practice",
+          "url": "PLACEHOLDER — no single canonical URL; sourced from practitioner community",
+          "url_status": "placeholder"
+        }
+      ]
+    }
+  ]
+}

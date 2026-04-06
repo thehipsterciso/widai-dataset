@@ -1,0 +1,729 @@
+{
+  "test_date": "2026-03-26",
+  "test_version": "R01",
+  "widai_version": "0.4.0",
+  "archetype_count": 5,
+  "total_roles_analyzed": 64,
+  "total_roles_mapped": 64,
+  "overall_coverage_pct": 100.0,
+  "overall_ksa_coverage_pct": 92.2,
+  "most_common_gaps": [],
+  "archetypes": {
+    "PE-Backed Manufacturer": {
+      "description": "Manufacturing company with growing data/analytics function",
+      "declared_headcount": 18,
+      "roles_in_team": [
+        {
+          "title": "Chief Data Officer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-GOV-0002",
+          "canonical_title": "Chief Data Officer",
+          "category": "GOV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Governance Director",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-GOV-0007",
+          "canonical_title": "Data Governance Director",
+          "category": "GOV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Senior Data Engineer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0028",
+          "canonical_title": "Data Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Engineer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0028",
+          "canonical_title": "Data Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Senior Data Analyst",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0088",
+          "canonical_title": "Senior Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Analyst",
+          "count": 3,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0087",
+          "canonical_title": "Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "BI Developer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0089",
+          "canonical_title": "BI Developer",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Quality Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0066",
+          "canonical_title": "Data Quality Manager",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Analytics Engineer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0029",
+          "canonical_title": "Analytics Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Architect",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0026",
+          "canonical_title": "Data Architect",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        }
+      ],
+      "mapping_summary": {
+        "total_roles": 10,
+        "roles_mapped": 10,
+        "roles_mapped_pct": 100.0,
+        "roles_with_full_ksa": 10,
+        "roles_with_full_ksa_pct": 100.0,
+        "unmapped_roles": []
+      }
+    },
+    "Mid-Market Financial Services": {
+      "description": "Regional bank/insurance with model risk and regulatory overlay",
+      "declared_headcount": 30,
+      "roles_in_team": [
+        {
+          "title": "Chief Data Officer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-GOV-0002",
+          "canonical_title": "Chief Data Officer",
+          "category": "GOV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Chief AI Officer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-GOV-0003",
+          "canonical_title": "Chief AI Officer",
+          "category": "GOV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Governance Director",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-GOV-0007",
+          "canonical_title": "Data Governance Director",
+          "category": "GOV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "AI Risk and Ethics Specialist",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-RSK-0101",
+          "canonical_title": "AI Risk and Ethics Specialist",
+          "category": "RSK",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Compliance Analyst",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-RSK-0104",
+          "canonical_title": "Data Compliance Analyst",
+          "category": "RSK",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Model Risk Officer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-RSK-0108",
+          "canonical_title": "Model Risk Manager",
+          "category": "RSK",
+          "has_ksa": false,
+          "readiness": "Partial"
+        },
+        {
+          "title": "Senior Data Engineer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0028",
+          "canonical_title": "Data Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Engineer",
+          "count": 3,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0028",
+          "canonical_title": "Data Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Architect",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0026",
+          "canonical_title": "Data Architect",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Senior Data Analyst",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0088",
+          "canonical_title": "Senior Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Analyst",
+          "count": 4,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0087",
+          "canonical_title": "Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "BI Developer",
+          "count": 3,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0089",
+          "canonical_title": "BI Developer",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Scientist",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-DEV-0051",
+          "canonical_title": "Data Scientist",
+          "category": "DEV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "ML Engineer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DEV-0052",
+          "canonical_title": "ML Engineer",
+          "category": "DEV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Quality Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0066",
+          "canonical_title": "Data Quality Manager",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Master Data Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0067",
+          "canonical_title": "Master Data Manager",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Product Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0070",
+          "canonical_title": "Data Product Manager",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        }
+      ],
+      "mapping_summary": {
+        "total_roles": 17,
+        "roles_mapped": 17,
+        "roles_mapped_pct": 100.0,
+        "roles_with_full_ksa": 16,
+        "roles_with_full_ksa_pct": 94.1,
+        "unmapped_roles": []
+      }
+    },
+    "PE-Backed SaaS/Technology": {
+      "description": "SaaS or platform company with technical data/AI team",
+      "declared_headcount": 25,
+      "roles_in_team": [
+        {
+          "title": "Chief Data Officer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-GOV-0002",
+          "canonical_title": "Chief Data Officer",
+          "category": "GOV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Architect",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0026",
+          "canonical_title": "Data Architect",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Senior Data Engineer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0028",
+          "canonical_title": "Data Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Engineer",
+          "count": 3,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0028",
+          "canonical_title": "Data Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Scientist",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-DEV-0051",
+          "canonical_title": "Data Scientist",
+          "category": "DEV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "ML Engineer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-DEV-0052",
+          "canonical_title": "ML Engineer",
+          "category": "DEV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "MLOps Engineer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0041",
+          "canonical_title": "MLOps Engineer",
+          "category": "ENG",
+          "has_ksa": false,
+          "readiness": "Partial"
+        },
+        {
+          "title": "AI Engineer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DEV-0053",
+          "canonical_title": "AI Engineer",
+          "category": "DEV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Analytics Engineer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0029",
+          "canonical_title": "Analytics Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Senior Data Analyst",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0088",
+          "canonical_title": "Senior Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Analyst",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0087",
+          "canonical_title": "Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "BI Developer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0089",
+          "canonical_title": "BI Developer",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Quality Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0066",
+          "canonical_title": "Data Quality Manager",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Product Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0070",
+          "canonical_title": "Data Product Manager",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "DataOps Engineer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0037",
+          "canonical_title": "DataOps Engineer",
+          "category": "ENG",
+          "has_ksa": false,
+          "readiness": "Partial"
+        }
+      ],
+      "mapping_summary": {
+        "total_roles": 15,
+        "roles_mapped": 15,
+        "roles_mapped_pct": 100.0,
+        "roles_with_full_ksa": 13,
+        "roles_with_full_ksa_pct": 86.7,
+        "unmapped_roles": []
+      }
+    },
+    "Healthcare/Life Sciences": {
+      "description": "Regulated industry with clinical/privacy focus",
+      "declared_headcount": 22,
+      "roles_in_team": [
+        {
+          "title": "Chief Data Officer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-GOV-0002",
+          "canonical_title": "Chief Data Officer",
+          "category": "GOV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Governance Director",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-GOV-0007",
+          "canonical_title": "Data Governance Director",
+          "category": "GOV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Compliance Analyst",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-RSK-0104",
+          "canonical_title": "Data Compliance Analyst",
+          "category": "RSK",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Protection Officer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-GOV-0016",
+          "canonical_title": "Data Protection Officer",
+          "category": "GOV",
+          "has_ksa": false,
+          "readiness": "Partial"
+        },
+        {
+          "title": "Data Privacy Specialist",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0069",
+          "canonical_title": "Data Privacy Specialist",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Senior Data Engineer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0028",
+          "canonical_title": "Data Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Engineer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0028",
+          "canonical_title": "Data Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Scientist",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DEV-0051",
+          "canonical_title": "Data Scientist",
+          "category": "DEV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Senior Data Analyst",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0088",
+          "canonical_title": "Senior Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Analyst",
+          "count": 3,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0087",
+          "canonical_title": "Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "BI Developer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0089",
+          "canonical_title": "BI Developer",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Clinical Data Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0092",
+          "canonical_title": "Clinical Data Manager",
+          "category": "ANL",
+          "has_ksa": false,
+          "readiness": "Partial"
+        },
+        {
+          "title": "Data Quality Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0066",
+          "canonical_title": "Data Quality Manager",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Master Data Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0067",
+          "canonical_title": "Master Data Manager",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        }
+      ],
+      "mapping_summary": {
+        "total_roles": 14,
+        "roles_mapped": 14,
+        "roles_mapped_pct": 100.0,
+        "roles_with_full_ksa": 12,
+        "roles_with_full_ksa_pct": 85.7,
+        "unmapped_roles": []
+      }
+    },
+    "Mid-Market Retail/Consumer": {
+      "description": "Smaller, analytics-heavy team with minimal governance structure",
+      "declared_headcount": 12,
+      "roles_in_team": [
+        {
+          "title": "Senior Data Analyst",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0088",
+          "canonical_title": "Senior Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Analyst",
+          "count": 3,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0087",
+          "canonical_title": "Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "BI Developer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0089",
+          "canonical_title": "BI Developer",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Engineer",
+          "count": 2,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0028",
+          "canonical_title": "Data Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Analytics Engineer",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ENG-0029",
+          "canonical_title": "Analytics Engineer",
+          "category": "ENG",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Scientist",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DEV-0051",
+          "canonical_title": "Data Scientist",
+          "category": "DEV",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Data Quality Manager",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-DSM-0066",
+          "canonical_title": "Data Quality Manager",
+          "category": "DSM",
+          "has_ksa": true,
+          "readiness": "Full"
+        },
+        {
+          "title": "Marketing Analyst",
+          "count": 1,
+          "matched": true,
+          "role_id": "WIDAI-ANL-0087",
+          "canonical_title": "Data Analyst",
+          "category": "ANL",
+          "has_ksa": true,
+          "readiness": "Full"
+        }
+      ],
+      "mapping_summary": {
+        "total_roles": 8,
+        "roles_mapped": 8,
+        "roles_mapped_pct": 100.0,
+        "roles_with_full_ksa": 8,
+        "roles_with_full_ksa_pct": 100.0,
+        "unmapped_roles": []
+      }
+    }
+  },
+  "decision_gate": {
+    "threshold": 60,
+    "measured": 92.2,
+    "result": "PASS",
+    "interpretation": "Can proceed to Tier 1"
+  }
+}

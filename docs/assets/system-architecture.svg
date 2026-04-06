@@ -1,0 +1,327 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 740">
+  <defs>
+    <linearGradient id="bgIso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAFBFC"/>
+      <stop offset="100%" stop-color="#F0F2F5"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3.5"/>
+      <feOffset dx="2" dy="4"/>
+      <feFlood flood-color="#1A1A2E" flood-opacity="0.10"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="740" rx="12" fill="url(#bgIso)"/>
+
+  <!-- Title -->
+  <text x="450" y="32" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#1A1A2E">The WIDAI System</text>
+  <text x="450" y="54" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#888">Five integrated layers — each a building block in a unified workforce intelligence platform</text>
+
+  <!-- ═════════════════════════════════════════════════════════════ -->
+  <!-- ISOMETRIC CONSTANTS:                                         -->
+  <!-- leftX=85  W=640  DX=38  DY=22  T=55                         -->
+  <!-- Layer spacing=130  Cube: w=var  h=10  dx=7  dy=4             -->
+  <!-- ═════════════════════════════════════════════════════════════ -->
+
+  <!-- ============================================================ -->
+  <!-- LAYER 1: SOURCE FRAMEWORKS (bottom of stack)                 -->
+  <!-- baseY=635                                                    -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <!-- Top face -->
+    <polygon points="123,613 763,613 725,635 85,635" fill="#2E75B6" opacity="0.12"/>
+    <!-- Front face -->
+    <polygon points="85,635 725,635 725,690 85,690" fill="#2E75B6" opacity="0.20"/>
+    <!-- Right face -->
+    <polygon points="725,635 763,613 763,668 725,690" fill="#2E75B6" opacity="0.32"/>
+    <!-- Outline -->
+    <polygon points="123,613 763,613 763,668 725,690 85,690 85,635" fill="none" stroke="#2E75B6" stroke-width="1" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- Component cubes on top face -->
+  <!-- Cube: O*NET at cx=105 -->
+  <polygon points="105,635 185,635 185,625 105,625" fill="#2E75B6" opacity="0.32"/>
+  <polygon points="112,621 192,621 185,625 105,625" fill="#2E75B6" opacity="0.22"/>
+  <polygon points="185,635 192,631 192,621 185,625" fill="#2E75B6" opacity="0.42"/>
+  <text x="145" y="633" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">O*NET</text>
+
+  <!-- Cube: NICE at cx=200 -->
+  <polygon points="200,635 280,635 280,625 200,625" fill="#2E75B6" opacity="0.32"/>
+  <polygon points="207,621 287,621 280,625 200,625" fill="#2E75B6" opacity="0.22"/>
+  <polygon points="280,635 287,631 287,621 280,625" fill="#2E75B6" opacity="0.42"/>
+  <text x="240" y="633" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">NICE</text>
+
+  <!-- Cube: DCWF at cx=295 -->
+  <polygon points="295,635 375,635 375,625 295,625" fill="#2E75B6" opacity="0.32"/>
+  <polygon points="302,621 382,621 375,625 295,625" fill="#2E75B6" opacity="0.22"/>
+  <polygon points="375,635 382,631 382,621 375,625" fill="#2E75B6" opacity="0.42"/>
+  <text x="335" y="633" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">DCWF</text>
+
+  <!-- Cube: EU AI Act at cx=390 -->
+  <polygon points="390,635 480,635 480,625 390,625" fill="#2E75B6" opacity="0.32"/>
+  <polygon points="397,621 487,621 480,625 390,625" fill="#2E75B6" opacity="0.22"/>
+  <polygon points="480,635 487,631 487,621 480,625" fill="#2E75B6" opacity="0.42"/>
+  <text x="435" y="633" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">EU AI Act</text>
+
+  <!-- Cube: AI RMF at cx=495 -->
+  <polygon points="495,635 575,635 575,625 495,625" fill="#2E75B6" opacity="0.32"/>
+  <polygon points="502,621 582,621 575,625 495,625" fill="#2E75B6" opacity="0.22"/>
+  <polygon points="575,635 582,631 582,621 575,625" fill="#2E75B6" opacity="0.42"/>
+  <text x="535" y="633" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">AI RMF</text>
+
+  <!-- Cube: +64 at cx=590 -->
+  <polygon points="590,635 660,635 660,625 590,625" fill="#2E75B6" opacity="0.25"/>
+  <polygon points="597,621 667,621 660,625 590,625" fill="#2E75B6" opacity="0.15"/>
+  <polygon points="660,635 667,631 667,621 660,625" fill="#2E75B6" opacity="0.35"/>
+  <text x="625" y="633" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#2E75B6">+64 more</text>
+
+  <!-- Front face text -->
+  <text x="100" y="658" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#2E75B6" letter-spacing="1">SOURCE FRAMEWORKS</text>
+  <text x="710" y="658" text-anchor="end" font-family="Georgia, serif" font-size="11" fill="#2E75B6" opacity="0.7">70+</text>
+  <text x="100" y="676" font-family="Georgia, serif" font-size="10" fill="#555">O*NET · NIST NICE · DCWF · DDaT · EU AI Act · NIST AI RMF · ISO 42001 · SFIA</text>
+
+  <!-- Connection arrow L1 → L2 -->
+  <line x1="405" y1="618" x2="405" y2="575" stroke="#2E75B6" stroke-width="1.5" opacity="0.3"/>
+  <polygon points="400,578 405,568 410,578" fill="#2E75B6" opacity="0.3"/>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 2: STRM ENRICHMENT ENGINE                              -->
+  <!-- baseY=505                                                    -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <polygon points="123,483 763,483 725,505 85,505" fill="#0E8A16" opacity="0.10"/>
+    <polygon points="85,505 725,505 725,560 85,560" fill="#0E8A16" opacity="0.18"/>
+    <polygon points="725,505 763,483 763,538 725,560" fill="#0E8A16" opacity="0.28"/>
+    <polygon points="123,483 763,483 763,538 725,560 85,560 85,505" fill="none" stroke="#0E8A16" stroke-width="1" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Component cubes: Pipeline stages -->
+  <!-- Extract -->
+  <polygon points="120,505 210,505 210,495 120,495" fill="#0E8A16" opacity="0.28"/>
+  <polygon points="127,491 217,491 210,495 120,495" fill="#0E8A16" opacity="0.18"/>
+  <polygon points="210,505 217,501 217,491 210,495" fill="#0E8A16" opacity="0.38"/>
+  <text x="165" y="503" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">Extract</text>
+
+  <!-- Screen -->
+  <polygon points="230,505 320,505 320,495 230,495" fill="#0E8A16" opacity="0.28"/>
+  <polygon points="237,491 327,491 320,495 230,495" fill="#0E8A16" opacity="0.18"/>
+  <polygon points="320,505 327,501 327,491 320,495" fill="#0E8A16" opacity="0.38"/>
+  <text x="275" y="503" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">Screen</text>
+
+  <!-- Score (larger, emphasized) -->
+  <polygon points="340,505 460,505 460,492 340,492" fill="#0E8A16" opacity="0.35"/>
+  <polygon points="347,488 467,488 460,492 340,492" fill="#0E8A16" opacity="0.25"/>
+  <polygon points="460,505 467,501 467,488 460,492" fill="#0E8A16" opacity="0.45"/>
+  <text x="400" y="501" text-anchor="middle" font-family="Georgia, serif" font-size="8" font-weight="bold" fill="#0E8A16">Multi-Method Score</text>
+
+  <!-- Rationale -->
+  <polygon points="480,505 570,505 570,495 480,495" fill="#0E8A16" opacity="0.28"/>
+  <polygon points="487,491 577,491 570,495 480,495" fill="#0E8A16" opacity="0.18"/>
+  <polygon points="570,505 577,501 577,491 570,495" fill="#0E8A16" opacity="0.38"/>
+  <text x="525" y="503" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">Rationale</text>
+
+  <!-- Gap Detect -->
+  <polygon points="590,505 670,505 670,495 590,495" fill="#0E8A16" opacity="0.28"/>
+  <polygon points="597,491 677,491 670,495 590,495" fill="#0E8A16" opacity="0.18"/>
+  <polygon points="670,505 677,501 677,491 670,495" fill="#0E8A16" opacity="0.38"/>
+  <text x="630" y="503" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#1A1A2E">Gap Detect</text>
+
+  <!-- Front face text -->
+  <text x="100" y="528" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#0E8A16" letter-spacing="1">STRM ENRICHMENT ENGINE</text>
+  <text x="710" y="528" text-anchor="end" font-family="Georgia, serif" font-size="11" fill="#0E8A16" opacity="0.7">NIST IR 8477</text>
+  <text x="100" y="546" font-family="Georgia, serif" font-size="10" fill="#555">6 frameworks complete · 5,540+ rationale files · Multi-method computational scoring</text>
+
+  <!-- Connection arrow L2 → L3 -->
+  <line x1="405" y1="488" x2="405" y2="445" stroke="#0E8A16" stroke-width="1.5" opacity="0.3"/>
+  <polygon points="400,448 405,438 410,448" fill="#0E8A16" opacity="0.3"/>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 3: DATA MODEL (core)                                   -->
+  <!-- baseY=375                                                    -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <polygon points="123,353 763,353 725,375 85,375" fill="#4A90D9" opacity="0.12"/>
+    <polygon points="85,375 725,375 725,430 85,430" fill="#4A90D9" opacity="0.20"/>
+    <polygon points="725,375 763,353 763,408 725,430" fill="#4A90D9" opacity="0.32"/>
+    <polygon points="123,353 763,353 763,408 725,430 85,430 85,375" fill="none" stroke="#4A90D9" stroke-width="1.5" stroke-opacity="0.40"/>
+  </g>
+
+  <!-- Component cubes: Data entities -->
+  <!-- Roles -->
+  <polygon points="110,375 210,375 210,362 110,362" fill="#4A90D9" opacity="0.35"/>
+  <polygon points="117,358 217,358 210,362 110,362" fill="#4A90D9" opacity="0.25"/>
+  <polygon points="210,375 217,371 217,358 210,362" fill="#4A90D9" opacity="0.45"/>
+  <text x="160" y="371" text-anchor="middle" font-family="Georgia, serif" font-size="8" font-weight="bold" fill="#1A1A2E">Roles</text>
+  <text x="160" y="362" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#4A90D9">187</text>
+
+  <!-- KSAs -->
+  <polygon points="230,375 330,375 330,362 230,362" fill="#4A90D9" opacity="0.35"/>
+  <polygon points="237,358 337,358 330,362 230,362" fill="#4A90D9" opacity="0.25"/>
+  <polygon points="330,375 337,371 337,358 330,362" fill="#4A90D9" opacity="0.45"/>
+  <text x="280" y="371" text-anchor="middle" font-family="Georgia, serif" font-size="8" font-weight="bold" fill="#1A1A2E">KSAs</text>
+  <text x="280" y="362" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#4A90D9">504</text>
+
+  <!-- Mappings -->
+  <polygon points="350,375 460,375 460,362 350,362" fill="#4A90D9" opacity="0.35"/>
+  <polygon points="357,358 467,358 460,362 350,362" fill="#4A90D9" opacity="0.25"/>
+  <polygon points="460,375 467,371 467,358 460,362" fill="#4A90D9" opacity="0.45"/>
+  <text x="405" y="371" text-anchor="middle" font-family="Georgia, serif" font-size="8" font-weight="bold" fill="#1A1A2E">Mappings</text>
+  <text x="405" y="362" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#4A90D9">364+</text>
+
+  <!-- Frameworks -->
+  <polygon points="480,375 590,375 590,362 480,362" fill="#4A90D9" opacity="0.35"/>
+  <polygon points="487,358 597,358 590,362 480,362" fill="#4A90D9" opacity="0.25"/>
+  <polygon points="590,375 597,371 597,358 590,362" fill="#4A90D9" opacity="0.45"/>
+  <text x="535" y="371" text-anchor="middle" font-family="Georgia, serif" font-size="8" font-weight="bold" fill="#1A1A2E">Frameworks</text>
+  <text x="535" y="362" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#4A90D9">70</text>
+
+  <!-- Schema badge cube -->
+  <polygon points="610,375 700,375 700,365 610,365" fill="#4A90D9" opacity="0.25"/>
+  <polygon points="617,361 707,361 700,365 610,365" fill="#4A90D9" opacity="0.15"/>
+  <polygon points="700,375 707,371 707,361 700,365" fill="#4A90D9" opacity="0.35"/>
+  <text x="655" y="373" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#4A90D9">Schema v2.0</text>
+
+  <!-- Front face text -->
+  <text x="100" y="398" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#4A90D9" letter-spacing="1">DATA MODEL</text>
+  <text x="710" y="398" text-anchor="end" font-family="Georgia, serif" font-size="11" fill="#4A90D9" opacity="0.7">graph-native</text>
+  <text x="100" y="416" font-family="Georgia, serif" font-size="10" fill="#555">187 Roles · 504 KSAs · 12 domains · Many-to-many mappings · Full source provenance</text>
+
+  <!-- Connection arrow L3 → L4 -->
+  <line x1="405" y1="358" x2="405" y2="315" stroke="#4A90D9" stroke-width="1.5" opacity="0.3"/>
+  <polygon points="400,318 405,308 410,318" fill="#4A90D9" opacity="0.3"/>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 4: QUALITY ASSURANCE                                   -->
+  <!-- baseY=245                                                    -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <polygon points="123,223 763,223 725,245 85,245" fill="#B89B00" opacity="0.10"/>
+    <polygon points="85,245 725,245 725,300 85,300" fill="#B89B00" opacity="0.18"/>
+    <polygon points="725,245 763,223 763,278 725,300" fill="#B89B00" opacity="0.28"/>
+    <polygon points="123,223 763,223 763,278 725,300 85,300 85,245" fill="none" stroke="#B89B00" stroke-width="1" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Component cubes: QA gates -->
+  <!-- Validate -->
+  <polygon points="110,245 190,245 190,235 110,235" fill="#B89B00" opacity="0.28"/>
+  <polygon points="117,231 197,231 190,235 110,235" fill="#B89B00" opacity="0.18"/>
+  <polygon points="190,245 197,241 197,231 190,235" fill="#B89B00" opacity="0.38"/>
+  <text x="150" y="243" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">Validate</text>
+
+  <!-- Consistency -->
+  <polygon points="208,245 300,245 300,235 208,235" fill="#B89B00" opacity="0.28"/>
+  <polygon points="215,231 307,231 300,235 208,235" fill="#B89B00" opacity="0.18"/>
+  <polygon points="300,245 307,241 307,231 300,235" fill="#B89B00" opacity="0.38"/>
+  <text x="254" y="243" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">Consistency</text>
+
+  <!-- DCI -->
+  <polygon points="318,245 388,245 388,235 318,235" fill="#B89B00" opacity="0.28"/>
+  <polygon points="325,231 395,231 388,235 318,235" fill="#B89B00" opacity="0.18"/>
+  <polygon points="388,245 395,241 395,231 388,235" fill="#B89B00" opacity="0.38"/>
+  <text x="353" y="243" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">DCI</text>
+
+  <!-- Adversarial QA -->
+  <polygon points="406,245 510,245 510,235 406,235" fill="#B89B00" opacity="0.28"/>
+  <polygon points="413,231 517,231 510,235 406,235" fill="#B89B00" opacity="0.18"/>
+  <polygon points="510,245 517,241 517,231 510,235" fill="#B89B00" opacity="0.38"/>
+  <text x="458" y="243" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">Adversarial QA</text>
+
+  <!-- Gap Detection -->
+  <polygon points="528,245 620,245 620,235 528,235" fill="#B89B00" opacity="0.28"/>
+  <polygon points="535,231 627,231 620,235 528,235" fill="#B89B00" opacity="0.18"/>
+  <polygon points="620,245 627,241 627,231 620,235" fill="#B89B00" opacity="0.38"/>
+  <text x="574" y="243" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">Gap Detect</text>
+
+  <!-- 19 ADRs -->
+  <polygon points="638,245 710,245 710,235 638,235" fill="#B89B00" opacity="0.22"/>
+  <polygon points="645,231 717,231 710,235 638,235" fill="#B89B00" opacity="0.12"/>
+  <polygon points="710,245 717,241 717,231 710,235" fill="#B89B00" opacity="0.32"/>
+  <text x="674" y="243" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#B89B00">19 ADRs</text>
+
+  <!-- Front face text -->
+  <text x="100" y="268" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#B89B00" letter-spacing="1">QUALITY ASSURANCE</text>
+  <text x="710" y="268" text-anchor="end" font-family="Georgia, serif" font-size="11" fill="#B89B00" opacity="0.7">CI/CD enforced</text>
+  <text x="100" y="286" font-family="Georgia, serif" font-size="10" fill="#555">Schema validation · Consistency · KSA depth · Adversarial QA · Gap detection · 19 ADRs</text>
+
+  <!-- Connection arrow L4 → L5 -->
+  <line x1="405" y1="228" x2="405" y2="185" stroke="#B89B00" stroke-width="1.5" opacity="0.3"/>
+  <polygon points="400,188 405,178 410,188" fill="#B89B00" opacity="0.3"/>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 5: PRODUCT APPLICATIONS (top of stack)                 -->
+  <!-- baseY=115                                                    -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <polygon points="123,93 763,93 725,115 85,115" fill="#1A1A2E" opacity="0.10"/>
+    <polygon points="85,115 725,115 725,170 85,170" fill="#1A1A2E" opacity="0.18"/>
+    <polygon points="725,115 763,93 763,148 725,170" fill="#1A1A2E" opacity="0.28"/>
+    <polygon points="123,93 763,93 763,148 725,170 85,170 85,115" fill="none" stroke="#1A1A2E" stroke-width="1" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Component cubes: Products -->
+  <!-- PE Due Diligence -->
+  <polygon points="105,115 215,115 215,103 105,103" fill="#1A1A2E" opacity="0.28"/>
+  <polygon points="112,99 222,99 215,103 105,103" fill="#1A1A2E" opacity="0.18"/>
+  <polygon points="215,115 222,111 222,99 215,103" fill="#1A1A2E" opacity="0.38"/>
+  <text x="160" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">PE Diligence</text>
+
+  <!-- EU AI Act -->
+  <polygon points="235,115 335,115 335,103 235,103" fill="#1A1A2E" opacity="0.28"/>
+  <polygon points="242,99 342,99 335,103 235,103" fill="#1A1A2E" opacity="0.18"/>
+  <polygon points="335,115 342,111 342,99 335,103" fill="#1A1A2E" opacity="0.38"/>
+  <text x="285" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">EU AI Act</text>
+
+  <!-- SR 11-7 -->
+  <polygon points="355,115 445,115 445,103 355,103" fill="#1A1A2E" opacity="0.28"/>
+  <polygon points="362,99 452,99 445,103 355,103" fill="#1A1A2E" opacity="0.18"/>
+  <polygon points="445,115 452,111 452,99 445,103" fill="#1A1A2E" opacity="0.38"/>
+  <text x="400" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">SR 11-7</text>
+
+  <!-- Agentic AI -->
+  <polygon points="465,115 565,115 565,103 465,103" fill="#1A1A2E" opacity="0.28"/>
+  <polygon points="472,99 572,99 565,103 465,103" fill="#1A1A2E" opacity="0.18"/>
+  <polygon points="565,115 572,111 572,99 565,103" fill="#1A1A2E" opacity="0.38"/>
+  <text x="515" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">Agentic AI</text>
+
+  <!-- CDAIO Wk 1 -->
+  <polygon points="585,115 680,115 680,103 585,103" fill="#1A1A2E" opacity="0.22"/>
+  <polygon points="592,99 687,99 680,103 585,103" fill="#1A1A2E" opacity="0.12"/>
+  <polygon points="680,115 687,111 687,99 680,103" fill="#1A1A2E" opacity="0.32"/>
+  <text x="632" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="#1A1A2E">CDAIO Wk 1</text>
+
+  <!-- Front face text -->
+  <text x="100" y="138" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#1A1A2E" letter-spacing="1">PRODUCT APPLICATIONS</text>
+  <text x="710" y="138" text-anchor="end" font-family="Georgia, serif" font-size="11" fill="#1A1A2E" opacity="0.5">5 use cases</text>
+  <text x="100" y="156" font-family="Georgia, serif" font-size="10" fill="#555">PE Due Diligence · EU AI Act · SR 11-7 · Agentic AI Roles · CDAIO Assessment</text>
+
+  <!-- ============================================================ -->
+  <!-- SIDE LABELS (layer numbers along the right edge)             -->
+  <!-- ============================================================ -->
+  <text x="780" y="658" font-family="Georgia, serif" font-size="10" fill="#2E75B6" opacity="0.5">L1</text>
+  <text x="780" y="528" font-family="Georgia, serif" font-size="10" fill="#0E8A16" opacity="0.5">L2</text>
+  <text x="780" y="398" font-family="Georgia, serif" font-size="10" fill="#4A90D9" opacity="0.5">L3</text>
+  <text x="780" y="268" font-family="Georgia, serif" font-size="10" fill="#B89B00" opacity="0.5">L4</text>
+  <text x="780" y="138" font-family="Georgia, serif" font-size="10" fill="#1A1A2E" opacity="0.5">L5</text>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <text x="450" y="720" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-style="italic" fill="#888">Each layer independently versioned, validated, and documented. Every mapping traces back to its source.</text>
+
+  <!-- Legend -->
+  <rect x="120" y="700" width="10" height="10" rx="2" fill="#2E75B6" opacity="0.25"/>
+  <text x="136" y="709" font-family="Georgia, serif" font-size="8" fill="#888">Sources</text>
+  <rect x="190" y="700" width="10" height="10" rx="2" fill="#0E8A16" opacity="0.25"/>
+  <text x="206" y="709" font-family="Georgia, serif" font-size="8" fill="#888">Enrichment</text>
+  <rect x="275" y="700" width="10" height="10" rx="2" fill="#4A90D9" opacity="0.25"/>
+  <text x="291" y="709" font-family="Georgia, serif" font-size="8" fill="#888">Data Model</text>
+  <rect x="365" y="700" width="10" height="10" rx="2" fill="#B89B00" opacity="0.25"/>
+  <text x="381" y="709" font-family="Georgia, serif" font-size="8" fill="#888">Quality</text>
+  <rect x="435" y="700" width="10" height="10" rx="2" fill="#1A1A2E" opacity="0.25"/>
+  <text x="451" y="709" font-family="Georgia, serif" font-size="8" fill="#888">Products</text>
+</svg>

@@ -1,0 +1,51 @@
+{
+  "pipeline_run_date": "2026-04-01",
+  "strm_id": "STRM-005-EU-AI-ACT",
+  "pipeline_version": "domain-exhaustive",
+  "methodology": {
+    "approach": "Exhaustive scoring \u2014 all elements against all KSAs",
+    "total_pairs_scored": 31248,
+    "note": "62 elements x 504 KSAs = 31,248 pairs"
+  },
+  "statistics": {
+    "total_fdes": 62,
+    "total_mapping_rows": 13481,
+    "scored_mappings": 13481,
+    "no_relationship_fdes": 0,
+    "unique_ksas_matched": 487,
+    "rationale_files": 13481,
+    "relationship_distribution": {
+      "Subset Of": 60,
+      "Intersects With": 13420,
+      "Equal": 1
+    },
+    "strength_distribution": {
+      "3": 6697,
+      "5": 6707,
+      "8": 76,
+      "10": 1
+    },
+    "domain_distribution": {
+      "AG": 1904,
+      "AI": 1561,
+      "LS": 1325,
+      "RM": 1311,
+      "OP": 1166,
+      "RC": 1152,
+      "SP": 1003,
+      "DQ": 977,
+      "DG": 923,
+      "TF": 782,
+      "AB": 698,
+      "DA": 679
+    },
+    "sts_statistics_scored": {
+      "count": 13481,
+      "mean": 0.4634,
+      "median": 0.4507,
+      "std": 0.0799,
+      "min": 0.35,
+      "max": 0.8238
+    }
+  }
+}

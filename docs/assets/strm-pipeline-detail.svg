@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680">
+  <defs>
+    <linearGradient id="bgSP" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAFBFC"/>
+      <stop offset="100%" stop-color="#F0F2F5"/>
+    </linearGradient>
+    <marker id="arwG" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0,0 7,2.5 0,5" fill="#0E8A16" opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="680" rx="12" fill="url(#bgSP)"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#1A1A2E">STRM Enrichment Pipeline</text>
+  <text x="450" y="60" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#888">NIST IR 8477 Set Theory Relationship Mapping — evidence-based KSA enrichment</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- PIPELINE STAGES -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Stage 1: Source Ingestion -->
+  <rect x="40" y="85" width="160" height="100" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="40" y="85" width="160" height="26" rx="8" fill="#0E8A16" opacity="0.1"/>
+  <rect x="40" y="103" width="160" height="8" rx="0" fill="#fff"/>
+  <text x="52" y="102" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#0E8A16">01</text>
+  <text x="120" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#0E8A16">Source Ingestion</text>
+  <text x="120" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">Raw framework data</text>
+  <text x="120" y="144" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">XLSX, CSV, JSON, PDF</text>
+  <text x="120" y="160" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Citation + licensing</text>
+  <text x="120" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">stored in /sources/</text>
+
+  <line x1="200" y1="135" x2="225" y2="135" stroke="#0E8A16" stroke-width="1.5" marker-end="url(#arwG)"/>
+
+  <!-- Stage 2: Element Extraction -->
+  <rect x="230" y="85" width="160" height="100" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="230" y="85" width="160" height="26" rx="8" fill="#0E8A16" opacity="0.1"/>
+  <rect x="230" y="103" width="160" height="8" rx="0" fill="#fff"/>
+  <text x="242" y="102" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#0E8A16">02</text>
+  <text x="310" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#0E8A16">Element Extraction</text>
+  <text x="310" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">Atomic statements</text>
+  <text x="310" y="144" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">KSA-equivalent units</text>
+  <text x="310" y="160" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Structured JSON output</text>
+  <text x="310" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Provenance preserved</text>
+
+  <line x1="390" y1="135" x2="415" y2="135" stroke="#0E8A16" stroke-width="1.5" marker-end="url(#arwG)"/>
+
+  <!-- Stage 3: Candidate Screening -->
+  <rect x="420" y="85" width="160" height="100" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="420" y="85" width="160" height="26" rx="8" fill="#0E8A16" opacity="0.1"/>
+  <rect x="420" y="103" width="160" height="8" rx="0" fill="#fff"/>
+  <text x="432" y="102" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#0E8A16">03</text>
+  <text x="500" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#0E8A16">Candidate Screening</text>
+  <text x="500" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">Boundary scoping</text>
+  <text x="500" y="144" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Domain relevance filter</text>
+  <text x="500" y="160" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Inclusion/exclusion rules</text>
+  <text x="500" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Candidate set defined</text>
+
+  <line x1="580" y1="135" x2="605" y2="135" stroke="#0E8A16" stroke-width="1.5" marker-end="url(#arwG)"/>
+
+  <!-- Stage 4: Multi-Method Scoring (highlighted) -->
+  <rect x="610" y="80" width="250" height="110" rx="8" fill="#0E8A16" opacity="0.06" stroke="#0E8A16" stroke-width="2" stroke-opacity="0.5"/>
+  <rect x="610" y="80" width="250" height="26" rx="8" fill="#0E8A16" opacity="0.15"/>
+  <rect x="610" y="98" width="250" height="8" rx="0" fill="#0E8A16" opacity="0.06"/>
+  <text x="622" y="97" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#0E8A16">04</text>
+  <text x="735" y="97" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#0E8A16">Multi-Method Scoring</text>
+
+  <rect x="625" y="114" width="220" height="22" rx="4" fill="#0E8A16" opacity="0.12"/>
+  <text x="735" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0E8A16">Primary: Cross-Encoder STS</text>
+
+  <rect x="625" y="142" width="105" height="18" rx="4" fill="#1A1A2E" opacity="0.05"/>
+  <text x="677" y="155" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#555">BERTScore P/R/F1</text>
+  <rect x="738" y="142" width="105" height="18" rx="4" fill="#1A1A2E" opacity="0.05"/>
+  <text x="790" y="155" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#555">NLI Cross-Encoder</text>
+  <rect x="625" y="164" width="105" height="18" rx="4" fill="#1A1A2E" opacity="0.05"/>
+  <text x="677" y="177" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#555">Bi-Encoder Cosine</text>
+  <rect x="738" y="164" width="105" height="18" rx="4" fill="#1A1A2E" opacity="0.05"/>
+  <text x="790" y="177" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#555">Jaccard Token</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SCORING OUTPUT -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Arrow down from scoring -->
+  <line x1="735" y1="190" x2="735" y2="220" stroke="#0E8A16" stroke-width="1.5" marker-end="url(#arwG)"/>
+
+  <!-- Output block -->
+  <rect x="40" y="225" width="820" height="85" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="60" y="248" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#0E8A16">Per-Element Output</text>
+
+  <rect x="60" y="258" width="145" height="38" rx="6" fill="#0E8A16" opacity="0.06"/>
+  <text x="132" y="274" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1A1A2E">Relationship Type</text>
+  <text x="132" y="288" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">NIST 5-way classification</text>
+
+  <rect x="218" y="258" width="130" height="38" rx="6" fill="#0E8A16" opacity="0.06"/>
+  <text x="283" y="274" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1A1A2E">Strength Score</text>
+  <text x="283" y="288" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Discrete: 3, 5, 8, 10</text>
+
+  <rect x="361" y="258" width="150" height="38" rx="6" fill="#0E8A16" opacity="0.06"/>
+  <text x="436" y="274" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1A1A2E">5 Method Scores</text>
+  <text x="436" y="288" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Consensus + significance</text>
+
+  <rect x="524" y="258" width="150" height="38" rx="6" fill="#0E8A16" opacity="0.06"/>
+  <text x="599" y="274" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1A1A2E">Provenance Chain</text>
+  <text x="599" y="288" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Source → element → KSA</text>
+
+  <rect x="687" y="258" width="155" height="38" rx="6" fill="#0E8A16" opacity="0.06"/>
+  <text x="764" y="274" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1A1A2E">Rationale File</text>
+  <text x="764" y="288" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Full scoring narrative</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- DIVIDER -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <line x1="60" y1="330" x2="840" y2="330" stroke="#1A1A2E" stroke-width="1" opacity="0.1"/>
+  <text x="450" y="355" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#1A1A2E">Completed STRM Mappings</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- STRM CARDS -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Row 1 -->
+  <!-- STRM-001 O*NET -->
+  <rect x="40" y="375" width="265" height="120" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.35"/>
+  <rect x="40" y="375" width="265" height="26" rx="8" fill="#0E8A16" opacity="0.1"/>
+  <rect x="40" y="393" width="265" height="8" rx="0" fill="#fff"/>
+  <text x="55" y="393" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0E8A16">STRM-001</text>
+  <text x="290" y="393" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#0E8A16">O*NET 30.2</text>
+  <text x="55" y="420" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">126 Foundational Data Elements</text>
+  <text x="55" y="438" font-family="Georgia, serif" font-size="9" fill="#888">v3 domain-exhaustive pipeline</text>
+  <text x="55" y="454" font-family="Georgia, serif" font-size="9" fill="#888">34,763 pairs scored</text>
+  <text x="55" y="470" font-family="Georgia, serif" font-size="9" fill="#888">97.4% KSA pool utilization</text>
+  <rect x="55" y="478" width="65" height="14" rx="7" fill="#0E8A16" opacity="0.15"/>
+  <text x="87" y="489" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#0E8A16">CC BY 4.0</text>
+  <rect x="127" y="478" width="100" height="14" rx="7" fill="#2E75B6" opacity="0.12"/>
+  <text x="177" y="489" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#2E75B6">5,440 rationale files</text>
+
+  <!-- STRM-002 NICE -->
+  <rect x="318" y="375" width="265" height="120" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.35"/>
+  <rect x="318" y="375" width="265" height="26" rx="8" fill="#0E8A16" opacity="0.1"/>
+  <rect x="318" y="393" width="265" height="8" rx="0" fill="#fff"/>
+  <text x="333" y="393" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0E8A16">STRM-002</text>
+  <text x="568" y="393" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#0E8A16">NIST NICE v2.1.0</text>
+  <text x="333" y="420" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">2,148 KSA elements</text>
+  <text x="333" y="438" font-family="Georgia, serif" font-size="9" fill="#888">Full multi-method scoring</text>
+  <text x="333" y="454" font-family="Georgia, serif" font-size="9" fill="#888">First cross-STRM corroboration</text>
+  <text x="333" y="470" font-family="Georgia, serif" font-size="9" fill="#888">Cybersecurity boundary scope</text>
+  <rect x="333" y="478" width="80" height="14" rx="7" fill="#0E8A16" opacity="0.15"/>
+  <text x="373" y="489" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#0E8A16">Public domain</text>
+
+  <!-- STRM-003 DCWF -->
+  <rect x="596" y="375" width="265" height="120" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.35"/>
+  <rect x="596" y="375" width="265" height="26" rx="8" fill="#0E8A16" opacity="0.1"/>
+  <rect x="596" y="393" width="265" height="8" rx="0" fill="#fff"/>
+  <text x="611" y="393" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0E8A16">STRM-003</text>
+  <text x="846" y="393" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#0E8A16">DoD DCWF v5.1</text>
+  <text x="611" y="420" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">2,945 elements</text>
+  <text x="611" y="438" font-family="Georgia, serif" font-size="9" fill="#888">Defense workforce framework</text>
+  <text x="611" y="454" font-family="Georgia, serif" font-size="9" fill="#888">v1 pipeline (v2/v3 pending)</text>
+  <text x="611" y="470" font-family="Georgia, serif" font-size="9" fill="#888">Cross-framework validation</text>
+  <rect x="611" y="478" width="80" height="14" rx="7" fill="#0E8A16" opacity="0.15"/>
+  <text x="651" y="489" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#0E8A16">Public domain</text>
+
+  <!-- Row 2 -->
+  <!-- STRM-004 DDaT -->
+  <rect x="40" y="510" width="265" height="105" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.35"/>
+  <rect x="40" y="510" width="265" height="26" rx="8" fill="#0E8A16" opacity="0.1"/>
+  <rect x="40" y="528" width="265" height="8" rx="0" fill="#fff"/>
+  <text x="55" y="528" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0E8A16">STRM-004</text>
+  <text x="290" y="528" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#0E8A16">UK DDaT</text>
+  <text x="55" y="555" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">189 elements</text>
+  <text x="55" y="573" font-family="Georgia, serif" font-size="9" fill="#888">UK Digital, Data, Technology</text>
+  <text x="55" y="589" font-family="Georgia, serif" font-size="9" fill="#888">Gov capability framework</text>
+  <rect x="55" y="597" width="95" height="14" rx="7" fill="#0E8A16" opacity="0.15"/>
+  <text x="102" y="608" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#0E8A16">Open Government</text>
+
+  <!-- STRM-005 EU AI Act -->
+  <rect x="318" y="510" width="265" height="105" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.35"/>
+  <rect x="318" y="510" width="265" height="26" rx="8" fill="#0E8A16" opacity="0.1"/>
+  <rect x="318" y="528" width="265" height="8" rx="0" fill="#fff"/>
+  <text x="333" y="528" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0E8A16">STRM-005</text>
+  <text x="568" y="528" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#0E8A16">EU AI Act</text>
+  <text x="333" y="555" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">62 regulatory elements</text>
+  <text x="333" y="573" font-family="Georgia, serif" font-size="9" fill="#888">Functional rationale method</text>
+  <text x="333" y="589" font-family="Georgia, serif" font-size="9" fill="#888">Dual-provenance (obligation → competency)</text>
+  <rect x="333" y="597" width="55" height="14" rx="7" fill="#0E8A16" opacity="0.15"/>
+  <text x="360" y="608" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#0E8A16">Public</text>
+
+  <!-- STRM-006 NIST AI RMF -->
+  <rect x="596" y="510" width="265" height="105" rx="8" fill="#fff" stroke="#0E8A16" stroke-width="1.5" stroke-opacity="0.35"/>
+  <rect x="596" y="510" width="265" height="26" rx="8" fill="#0E8A16" opacity="0.1"/>
+  <rect x="596" y="528" width="265" height="8" rx="0" fill="#fff"/>
+  <text x="611" y="528" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0E8A16">STRM-006</text>
+  <text x="846" y="528" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#0E8A16">NIST AI RMF 1.0</text>
+  <text x="611" y="555" font-family="Georgia, serif" font-size="10" fill="#1A1A2E">70 elements</text>
+  <text x="611" y="573" font-family="Georgia, serif" font-size="9" fill="#888">Functional rationale method</text>
+  <text x="611" y="589" font-family="Georgia, serif" font-size="9" fill="#888">Outcome → competency mapping</text>
+  <rect x="611" y="597" width="80" height="14" rx="7" fill="#0E8A16" opacity="0.15"/>
+  <text x="651" y="608" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#0E8A16">Public domain</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- AGGREGATE STATS -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <line x1="60" y1="635" x2="840" y2="635" stroke="#1A1A2E" stroke-width="1" opacity="0.1"/>
+
+  <text x="150" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#0E8A16">5,540</text>
+  <text x="150" y="676" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#888">elements mapped</text>
+
+  <text x="350" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#0E8A16">5,540+</text>
+  <text x="350" y="676" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#888">rationale files</text>
+
+  <text x="550" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#0E8A16">5</text>
+  <text x="550" y="676" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#888">scoring methods</text>
+
+  <text x="750" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#0E8A16">39</text>
+  <text x="750" y="676" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#888">gap signals detected</text>
+</svg>

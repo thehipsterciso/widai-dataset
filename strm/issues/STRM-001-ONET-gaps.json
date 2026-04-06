@@ -1,0 +1,120 @@
+{
+  "strm_id": "STRM-001-ONET",
+  "framework_id": "O*NET",
+  "framework_version": "30.2",
+  "pipeline_version": "v3-domain-exhaustive",
+  "widai_version": "0.5.9",
+  "assessment_date": "2026-04-01",
+  "total_elements_evaluated": 126,
+  "no_relationship_count": 18,
+  "total_gap_signals": 10,
+  "genuine_gaps": 1,
+  "out_of_scope_weak_matches": 9,
+  "v2_gaps_resolved": 6,
+  "note": "Reprocessed with v3 domain-exhaustive pipeline. 34,763 pairs scored (vs v2's 629). Gap signals identified from FDEs where all scored mappings were strength 3 (weakest qualifying match). Of 10 gap signals, 1 is a genuine WIDAI gap (Staffing — existing KSA LS-T-011 scores below 0.35 threshold against its triggering FDE). 9 are out-of-scope or foundational O*NET elements. 6 of 7 KSAs created in v2 gap analysis are now top matches in their triggering FDEs, validating the gap resolution approach.",
+
+  "no_relationship_elements": {
+    "count": 18,
+    "assessment": "All 18 No Relationship FDEs are genuinely outside WIDAI scope. No KSA creation warranted. 14 were identified as out-of-scope by domain routing (never scored). 4 additional scored but had no qualifying matches (all STS < 0.35).",
+    "elements": [
+      {"fde_id": "2.C.2.b", "name": "Food Production", "reason": "Physical manufacturing — outside data/AI scope"},
+      {"fde_id": "2.C.3.d", "name": "Building and Construction", "reason": "Physical construction — outside data/AI scope"},
+      {"fde_id": "2.C.3.e", "name": "Mechanical", "reason": "Physical engineering — outside data/AI scope"},
+      {"fde_id": "2.C.4.b", "name": "Physics", "reason": "Natural science — outside data/AI scope"},
+      {"fde_id": "2.C.4.c", "name": "Chemistry", "reason": "Natural science — outside data/AI scope"},
+      {"fde_id": "2.C.4.d", "name": "Biology", "reason": "Natural science — outside data/AI scope"},
+      {"fde_id": "2.C.4.g", "name": "Geography", "reason": "Physical geography — outside data/AI scope"},
+      {"fde_id": "2.C.5.a", "name": "Medicine and Dentistry", "reason": "Healthcare practice — outside data/AI scope"},
+      {"fde_id": "2.C.7.c", "name": "Fine Arts", "reason": "Arts — outside data/AI scope"},
+      {"fde_id": "2.C.7.d", "name": "History and Archeology", "reason": "Humanities — outside data/AI scope"},
+      {"fde_id": "2.C.7.e", "name": "Philosophy and Theology", "reason": "Humanities — outside data/AI scope (ethics covered in AG domain)"},
+      {"fde_id": "2.C.10", "name": "Transportation", "reason": "Logistics — outside data/AI scope"},
+      {"fde_id": "2.B.5.a", "name": "Time Management", "reason": "General workplace skill — foundational but not data/AI-specific"},
+      {"fde_id": "1.A.1.f.1", "name": "Spatial Orientation", "reason": "Physical ability — outside data/AI scope"},
+      {"fde_id": "1.A.1.g.1", "name": "Selective Attention", "reason": "General cognitive ability — foundational but not data/AI-specific"},
+      {"fde_id": "4.A.3.b.4", "name": "Repairing and Maintaining Mechanical Equipment", "reason": "Physical maintenance — outside data/AI scope"},
+      {"fde_id": "4.A.4.a.5", "name": "Assisting and Caring for Others", "reason": "Personal care — outside data/AI scope"},
+      {"fde_id": "4.A.4.a.8", "name": "Performing for or Working Directly with the Public", "reason": "Public-facing work — outside data/AI scope"}
+    ]
+  },
+
+  "gap_signals": [
+    {
+      "gap_id": "ONET-GAP-001v3",
+      "title": "Data/AI Organizational Staffing (PERSISTENT)",
+      "severity": "moderate",
+      "triggering_fde": {"id": "4.A.4.c.2", "name": "Staffing Organizational Units", "best_sts": 0.425, "best_match": "LS-K-009"},
+      "description": "Recruiting, selecting, and hiring for data/AI teams. LS-T-011 was created in v2 gap analysis to address this, but scores below the 0.35 threshold against this FDE in v3 exhaustive scoring. LS-K-009 (talent management knowledge) remains the best match at strength 3. The LS-T-011 statement may need refinement to better align with O*NET staffing language.",
+      "new_ksa": null,
+      "status": "OPEN — KSA refinement needed"
+    }
+  ],
+
+  "v2_gap_resolution": [
+    {
+      "gap_id": "ONET-GAP-001 (v2)",
+      "title": "Stakeholder Influence and Persuasion",
+      "triggering_fde": "2.B.1.c Persuasion",
+      "ksa_created": "LS-S-014",
+      "v3_status": "RESOLVED — LS-S-014 is now top match (STS 0.597, strength 5)"
+    },
+    {
+      "gap_id": "ONET-GAP-002 (v2)",
+      "title": "Data/AI Organizational Staffing",
+      "triggering_fde": "4.A.4.c.2 Staffing Organizational Units",
+      "ksa_created": "LS-T-011",
+      "v3_status": "PERSISTENT — LS-T-011 scores below 0.35 threshold against this FDE. Needs refinement."
+    },
+    {
+      "gap_id": "ONET-GAP-003 (v2)",
+      "title": "Structured Judgment Under Analytical Uncertainty",
+      "triggering_fde": "2.B.4.e Judgment and Decision Making",
+      "ksa_created": "AB-A-004",
+      "v3_status": "RESOLVED — AB-A-004 is now top match (STS 0.598, strength 5)"
+    },
+    {
+      "gap_id": "ONET-GAP-004 (v2)",
+      "title": "Computing Fundamentals",
+      "triggering_fde": "2.C.3.a Computers and Electronics",
+      "ksa_created": "TF-K-014",
+      "v3_status": "RESOLVED — TF-K-014 is now top match (STS 0.644, strength 5)"
+    },
+    {
+      "gap_id": "ONET-GAP-005 (v2)",
+      "title": "Systems Thinking and Impact Analysis",
+      "triggering_fde": "2.B.4.g Systems Analysis",
+      "ksa_created": "TF-A-005",
+      "v3_status": "RESOLVED — TF-A-005 is now top match (STS 0.524, strength 5)"
+    },
+    {
+      "gap_id": "ONET-GAP-006 (v2)",
+      "title": "Cross-Functional Conflict Resolution",
+      "triggering_fde": "4.A.4.a.7 Resolving Conflicts and Negotiating",
+      "ksa_created": "OP-S-011",
+      "v3_status": "RESOLVED — OP-S-011 is now top match (STS 0.620, strength 5)"
+    },
+    {
+      "gap_id": "ONET-GAP-007 (v2)",
+      "title": "Professional Development and Technical Currency",
+      "triggering_fde": "4.A.2.b.3 Updating and Using Relevant Knowledge",
+      "ksa_created": "OP-K-011",
+      "v3_status": "RESOLVED — TF-K-014 is top match (STS 0.507, strength 5). Cross-validated by a different gap KSA."
+    }
+  ],
+
+  "out_of_scope_weak_matches": {
+    "note": "9 FDEs had only strength-3 mappings but are out-of-scope or foundational O*NET elements. No KSA creation warranted.",
+    "count": 9,
+    "elements": [
+      {"fde_id": "2.C.4.f", "name": "Sociology and Anthropology", "assessment": "Out of scope — general social science"},
+      {"fde_id": "2.C.9.b", "name": "Communications and Media", "assessment": "Out of scope — media production broadly, not data/AI specific"},
+      {"fde_id": "2.B.1.a", "name": "Social Perceptiveness", "assessment": "Out of scope — general interpersonal ability"},
+      {"fde_id": "2.B.5.c", "name": "Management of Material Resources", "assessment": "Out of scope — physical resource management"},
+      {"fde_id": "2.C.7.a", "name": "English Language", "assessment": "Out of scope — general linguistics"},
+      {"fde_id": "1.A.1.f.2", "name": "Visualization", "assessment": "Out of scope — O*NET defines as spatial/mental rotation ability, not data visualization"},
+      {"fde_id": "2.C.7.b", "name": "Foreign Language", "assessment": "Out of scope — NLP-adjacent but general linguistics"},
+      {"fde_id": "2.C.2.a", "name": "Production and Processing", "assessment": "Out of scope — physical manufacturing/production"},
+      {"fde_id": "2.C.9.a", "name": "Telecommunications", "assessment": "Borderline — network infrastructure has some data/AI overlap but too general"}
+    ]
+  }
+}

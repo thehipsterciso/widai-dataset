@@ -1,0 +1,277 @@
+Current OP skills: 11 entries
+Domain: Operations & Enablement
+Prefix: OP-S-*
+  Processing O*NET 30.2... 283 mappings
+  Processing NIST NICE v2.1.0... 6394 mappings
+  Processing DoD DCWF v5.1... 10887 mappings
+  Processing DDaT... 935 mappings
+  Processing EU AI Act... 487 mappings
+  Processing NIST AI RMF 1.0... 671 mappings
+
+Total OP-S-* mappings: 19657
+
+================================================================================
+EVIDENCE MATRIX — OP Skills
+================================================================================
+
+KSA ID       FW Cov  Strong  Total  Max STS
+---------------------------------------------
+OP-S-001       6/6       0   1763    0.6693
+OP-S-002       6/6       3   1972    0.7319
+OP-S-003       6/6       0   1032    0.6803
+OP-S-004       6/6       0    976    0.6876
+OP-S-005       6/6       0   2352    0.6888
+OP-S-006       6/6       1   2674    0.7039
+OP-S-007       6/6       0   1277    0.6702
+OP-S-008       6/6       0   1856    0.6767
+OP-S-009       6/6       6   2999    0.7394
+OP-S-010       6/6       1   1472    0.7844
+OP-S-011       6/6       0   1284    0.6719
+
+================================================================================
+HIGH WATERMARK — Unique FDE count per framework
+================================================================================
+
+Framework                   >=0.45   >=0.50   >=0.55   >=0.60
+------------------------------------------------------------
+O*NET 30.2                      51       31       14        7
+NIST NICE v2.1.0               995      666      387      209
+DoD DCWF v5.1                 1614     1121      626      223
+DDaT                           123       89       45       18
+EU AI Act                       52       43       32       17
+NIST AI RMF 1.0                 69       65       51       29
+
+================================================================================
+O*NET 30.2 — WIDAI-relevant elements at STS >= 0.50
+================================================================================
+  Total: 31
+  WIDAI-relevant: 21
+  Noise filtered: 10
+
+All WIDAI-relevant elements at STS >= 0.55:
+    1. STS=0.6603 [1.A.1.a.3] The ability to communicate information and ideas in speaking so others will understand.
+       -> OP-S-004
+    2. STS=0.6320 [4.A.4.a.1] Translating or explaining what information means and how it can be used.
+       -> OP-S-004
+    3. STS=0.6238 [1.A.1.a.4] The ability to communicate information and ideas in writing so others will understand.
+       -> OP-S-004
+    4. STS=0.6200 [4.A.4.a.7] Handling complaints, settling disputes, and resolving grievances and conflicts, or otherwise negotiating with others.
+       -> OP-S-011
+    5. STS=0.6004 [1.A.1.e.1] The ability to quickly make sense of, combine, and organize information into meaningful patterns.
+       -> OP-S-001, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-010, OP-S-011
+    6. STS=0.5792 [4.A.3.b.1] Using computers and computer systems (including hardware and software) to program, write software, set up functions, ent
+       -> OP-S-001, OP-S-002, OP-S-006, OP-S-008
+    7. STS=0.5710 [2.C.3.c] Knowledge of design techniques, tools, and principles involved in production of precision technical plans, blueprints, d
+       -> OP-S-002, OP-S-006
+    8. STS=0.5698 [1.A.1.a.1] The ability to listen to and understand information and ideas presented through spoken words and sentences.
+       -> OP-S-004
+    9. STS=0.5697 [2.C.3.b] Knowledge of the practical application of engineering science and technology. This includes applying principles, techniq
+       -> OP-S-006
+   10. STS=0.5682 [2.A.2.c] Selecting and using training/instructional methods and procedures appropriate for the situation when learning or teachin
+       -> OP-S-002
+   11. STS=0.5535 [2.C.1.b] Knowledge of administrative and office procedures and systems such as word processing, managing files and records, steno
+       -> OP-S-002, OP-S-008
+
+================================================================================
+NIST NICE v2.1.0 — WIDAI-relevant elements at STS >= 0.50
+================================================================================
+  Total: 666
+  WIDAI-relevant: 458
+  Noise filtered: 208
+
+All WIDAI-relevant elements at STS >= 0.55:
+    1. STS=0.7394 [S0820] Skill in cataloging data
+       -> OP-S-005, OP-S-006, OP-S-007, OP-S-009, OP-S-010
+    2. STS=0.7211 [S0028] Skill in developing data dictionaries
+       -> OP-S-002, OP-S-004, OP-S-006, OP-S-009
+    3. STS=0.7068 [K1151] Knowledge of digital evidence cataloging tools and techniques
+       -> OP-S-009
+    4. STS=0.7007 [T1864] Develop organizational information infrastructure
+       -> OP-S-002, OP-S-006, OP-S-009
+    5. STS=0.6970 [S0451] Skill in deploying continuous monitoring technologies
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-007, OP-S-008
+    6. STS=0.6885 [T1419] Develop organizational training materials
+       -> OP-S-002
+    7. STS=0.6877 [T1491] Design data management systems
+       -> OP-S-001, OP-S-002, OP-S-006, OP-S-008, OP-S-009
+    8. STS=0.6863 [K1125] Knowledge of continuous monitoring tools and techniques
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-007, OP-S-008
+    9. STS=0.6847 [K1247] Knowledge of data monitoring tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-003, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009
+   10. STS=0.6803 [S0893] Skill in performing user needs analysis
+       -> OP-S-003, OP-S-005, OP-S-009
+   11. STS=0.6780 [T1956] Conduct continuous monitoring data assessments
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009
+   12. STS=0.6767 [S0644] Skill in performing transformation analytics
+       -> OP-S-001, OP-S-002, OP-S-003, OP-S-005, OP-S-006, OP-S-007, OP-S-008
+   13. STS=0.6754 [S0587] Skill in maintaining directory services
+       -> OP-S-009
+   14. STS=0.6729 [S0861] Skill in performing gap analysis
+       -> OP-S-003, OP-S-005, OP-S-011
+   15. STS=0.6715 [K1322] Knowledge of data aggregation tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-003, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-010, OP-S-011
+   16. STS=0.6697 [S0822] Skill in collaborating with stakeholders
+       -> OP-S-001, OP-S-003, OP-S-007, OP-S-010, OP-S-011
+   17. STS=0.6653 [S0668] Skill in designing technology processes and solutions
+       -> OP-S-001, OP-S-002, OP-S-006, OP-S-008, OP-S-009
+   18. STS=0.6642 [K0768] Knowledge of automated systems analysis tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-006, OP-S-008
+   19. STS=0.6640 [K0907] Knowledge of cross-domain solutions
+       -> OP-S-001, OP-S-002, OP-S-006, OP-S-009, OP-S-010, OP-S-011
+   20. STS=0.6633 [S0846] Skill in monitoring system activity
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009
+   21. STS=0.6630 [S0821] Skill in collaborating with internal and external stakeholders
+       -> OP-S-001, OP-S-003, OP-S-010, OP-S-011
+   22. STS=0.6623 [S0458] Skill in coordinating efforts between stakeholders
+       -> OP-S-001, OP-S-010, OP-S-011
+   23. STS=0.6623 [S0669] Skill in integrating technology processes and solutions
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-010, OP-S-011
+   24. STS=0.6614 [S0568] Skill in designing data analysis structures
+       -> OP-S-001, OP-S-002, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009
+   25. STS=0.6607 [K0862] Knowledge of data remediation tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-010, OP-S-011
+   26. STS=0.6602 [K1246] Knowledge of data handling tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009
+   27. STS=0.6600 [S0843] Skill in maintaining data
+       -> OP-S-001, OP-S-002, OP-S-005, OP-S-006, OP-S-007, OP-S-009
+   28. STS=0.6586 [K1298] Knowledge of anomaly detection tools and techniques
+       -> OP-S-003, OP-S-005, OP-S-006
+   29. STS=0.6583 [S0832] Skill in cooperating with internal and external stakeholders
+       -> OP-S-001, OP-S-010, OP-S-011
+   30. STS=0.6578 [S0381] Skill in developing training programs
+       -> OP-S-002
+   31. STS=0.6572 [S0375] Skill in developing information requirements
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-006, OP-S-007, OP-S-009, OP-S-010
+   32. STS=0.6571 [T1523] Design organizational knowledge management frameworks
+       -> OP-S-002
+   33. STS=0.6557 [S0863] Skill in performing incident analysis
+       -> OP-S-005, OP-S-006
+   34. STS=0.6551 [T1420] Develop organizational training programs
+       -> OP-S-002
+   35. STS=0.6531 [S0029] Skill in developing data models
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-005, OP-S-006, OP-S-009, OP-S-010
+   36. STS=0.6526 [S0419] Skill in designing systems
+       -> OP-S-002, OP-S-006, OP-S-008, OP-S-009
+   37. STS=0.6526 [T1142] Validate data mining and data warehousing programs, processes, and requirements
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-010
+   38. STS=0.6523 [K0646] Knowledge of system optimization techniques
+       -> OP-S-006, OP-S-008
+   39. STS=0.6517 [K1071] Knowledge of continuous monitoring processes
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-007, OP-S-008
+   40. STS=0.6509 [K0866] Knowledge of data classification tools and techniques
+       -> OP-S-002, OP-S-003, OP-S-005, OP-S-006, OP-S-008, OP-S-009
+   41. STS=0.6486 [T1568] Implement cross-domain solutions
+       -> OP-S-001, OP-S-002, OP-S-009, OP-S-010, OP-S-011
+   42. STS=0.6478 [S0891] Skill in performing trade-off analysis
+       -> OP-S-003, OP-S-005, OP-S-007, OP-S-008, OP-S-011
+   43. STS=0.6458 [S0580] Skill in monitoring system performance
+       -> OP-S-005, OP-S-006, OP-S-007, OP-S-008
+   44. STS=0.6457 [S0391] Skill in creating technical documentation
+       -> OP-S-004, OP-S-009
+   45. STS=0.6457 [T1954] Perform continuous monitoring
+       -> OP-S-003, OP-S-005, OP-S-006
+   46. STS=0.6441 [K0757] Knowledge of system design tools and techniques
+       -> OP-S-002, OP-S-006, OP-S-008, OP-S-009
+   47. STS=0.6440 [S0854] Skill in performing data analysis
+       -> OP-S-001, OP-S-002, OP-S-003, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009
+   48. STS=0.6437 [S0436] Skill in creating target intelligence products
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-006, OP-S-009
+   49. STS=0.6437 [S0953] Skill in developing prompts for generative AI systems
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-010
+   50. STS=0.6428 [K0776] Knowledge of collaboration tools and techniques
+       -> OP-S-001, OP-S-010, OP-S-011
+   51. STS=0.6416 [K0476] Knowledge of language processing tools and techniques
+       -> OP-S-004
+   52. STS=0.6414 [S0048] Skill in systems integration testing
+       -> OP-S-004, OP-S-005, OP-S-006, OP-S-008
+   53. STS=0.6413 [S0885] Skill in performing system activity analysis
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-008, OP-S-009
+   54. STS=0.6407 [S0433] Skill in creating analytics
+       -> OP-S-002, OP-S-003, OP-S-005, OP-S-006, OP-S-007, OP-S-009
+   55. STS=0.6404 [S0385] Skill in communicating complex concepts
+       -> OP-S-004
+   56. STS=0.6397 [K1078] Knowledge of risk assessment tools and techniques
+       -> OP-S-003, OP-S-005, OP-S-006
+   57. STS=0.6393 [K1063] Knowledge of operation assessment processes
+       -> OP-S-006, OP-S-008
+   58. STS=0.6390 [S0420] Skill in integrating multiple technologies
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-010, OP-S-011
+   59. STS=0.6388 [S0545] Skill in designing data storage solutions
+       -> OP-S-002, OP-S-006, OP-S-009
+   60. STS=0.6379 [K0927] Knowledge of configuration management tools and techniques
+       -> OP-S-006
+   61. STS=0.6370 [S0494] Skill in performing operational environment analysis
+       -> OP-S-006, OP-S-008
+   62. STS=0.6366 [S0118] Skill in developing machine understandable semantic ontologies
+       -> OP-S-002, OP-S-004
+   63. STS=0.6362 [S0571] Skill in designing the integration of software solutions
+       -> OP-S-001, OP-S-002, OP-S-006, OP-S-008, OP-S-009
+   64. STS=0.6352 [K1030] Knowledge of operational planning tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-005, OP-S-006, OP-S-007, OP-S-008
+   65. STS=0.6346 [S0686] Skill in performing risk assessments
+       -> OP-S-003, OP-S-005
+   66. STS=0.6345 [S0675] Skill in optimizing system performance
+       -> OP-S-006, OP-S-008
+   67. STS=0.6345 [T1259] Identify opportunities for new and improved business process solutions
+       -> OP-S-008
+   68. STS=0.6343 [S0797] Skill in negotiating vendor agreements
+       -> OP-S-007, OP-S-011
+   69. STS=0.6341 [S0430] Skill in collaborating with others
+       -> OP-S-010, OP-S-011
+   70. STS=0.6336 [K1097] Knowledge of data mapping tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-003, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-010
+   71. STS=0.6336 [S0554] Skill in performing systems analysis
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-008, OP-S-009
+   72. STS=0.6333 [S0818] Skill in building internal and external stakeholder relationships
+       -> OP-S-001, OP-S-011
+   73. STS=0.6332 [S0921] Skill in performing telemetry analysis
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-007, OP-S-008
+   74. STS=0.6332 [T0460] Develop and implement data mining and data warehousing programs
+       -> OP-S-001, OP-S-002, OP-S-006, OP-S-009, OP-S-010
+   75. STS=0.6329 [K1096] Knowledge of data analysis tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-003, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009
+   76. STS=0.6321 [S0546] Skill in implementing data storage solutions
+       -> OP-S-001, OP-S-002, OP-S-005, OP-S-006, OP-S-009, OP-S-011
+   77. STS=0.6313 [S0940] Skill in performing risk-based gap analysis
+       -> OP-S-003, OP-S-005
+   78. STS=0.6312 [S0558] Skill in developing algorithms
+       -> OP-S-002, OP-S-006
+   79. STS=0.6303 [K0775] Knowledge of information management tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-010, OP-S-011
+   80. STS=0.6295 [K0726] Knowledge of incident handling tools and techniques
+       -> OP-S-005, OP-S-006
+   81. STS=0.6294 [K0774] Knowledge of content creation tools and techniques
+       -> OP-S-002
+   82. STS=0.6287 [S0429] Skill in designing frameworks
+       -> OP-S-002, OP-S-006, OP-S-008, OP-S-009
+   83. STS=0.6287 [T1411] Develop technical training curriculum and resources
+       -> OP-S-002
+   84. STS=0.6277 [S0399] Skill in creating complex data structures
+       -> OP-S-001, OP-S-002, OP-S-006, OP-S-007, OP-S-009
+   85. STS=0.6274 [K1146] Knowledge of data gathering tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-003, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-010
+   86. STS=0.6274 [S0570] Skill in designing the integration of hardware solutions
+       -> OP-S-006, OP-S-009
+   87. STS=0.6274 [S0726] Skill in performing data normalization
+       -> OP-S-001, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-008, OP-S-009, OP-S-011
+   88. STS=0.6271 [S0933] Skill in designing enhanced controls for critical assets
+       -> OP-S-002, OP-S-006, OP-S-008, OP-S-009
+   89. STS=0.6266 [S0739] Skill in analyzing intelligence products
+       -> OP-S-001, OP-S-002, OP-S-003, OP-S-004, OP-S-005, OP-S-006, OP-S-007, OP-S-009, OP-S-010
+   90. STS=0.6263 [S0886] Skill in performing system analysis
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-008, OP-S-009
+   91. STS=0.6249 [T1135] Design and develop software systems
+       -> OP-S-002, OP-S-006, OP-S-009
+   92. STS=0.6244 [K0647] Knowledge of data visualization tools and techniques
+       -> OP-S-001, OP-S-002, OP-S-004, OP-S-005, OP-S-006, OP-S-008, OP-S-010
+   93. STS=0.6240 [S0464] Skill in applying stakeholder management within a system development life cycle
+       -> OP-S-001, OP-S-007, OP-S-011
+   94. STS=0.6236 [T0513] Perform operational testing
+       -> OP-S-005, OP-S-006, OP-S-008
+   95. STS=0.6225 [S0918] Skill in conducting ongoing monitoring of system properties and behaviors
+       -> OP-S-003, OP-S-005, OP-S-006, OP-S-008, OP-S-009
+   96. STS=0.6224 [T1458] Develop data gathering processes
+       -> OP-S-001, OP-S-002, OP-S-005, OP-S-006, OP-S-008, OP-S-009, OP-S-010, OP-S-011
+   97. STS=0.6218 [K1323] Knowledge of data de-identification tools and techniques
+       -> OP-S-002, OP-S-003, OP-S-005, OP-S-006, OP-S-008, OP-S-009
+   98. STS=0.6200 [K0092] Knowledge of technology integration processes
