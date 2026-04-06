@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0021",
+  "role_name": "Cloud Data Governance Lead",
+  "ksa_id": "AG-T-009",
+  "ksa_text": "Monitor AI regulatory developments and assess their implications for the enterprise AI system portfolio, producing compliance gap analyses for impacted systems.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5257180397727272,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40425667655786346,
+        "cross_encoder_sts": 0.4309851632047477,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3329807121661721,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.3916822410147991,
+        "cross_encoder_sts": 0.4266325581395348,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2984813953488372,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.483763807890223,
+        "cross_encoder_sts": 0.4613867924528302,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5434358490566038,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.37815554760200426,
+        "cross_encoder_sts": 0.41462047244094485,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28091574803149605,
+        "jaccard": null,
+        "top_element_id": "K0768",
+        "top_element_label": "Knowledge of automated systems analysis tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5257180397727272,
+        "cross_encoder_sts": 0.505959375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5784078125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.13",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.3811754545454546,
+        "cross_encoder_sts": 0.40994,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30447,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.13",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.5257180397727272
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.483763807890223
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.40425667655786346
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.3916822410147991
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.3811754545454546
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: AI Governance domain has low affinity (0.55) for Cloud Data Governance Lead, and the text \u2014 'Monitor AI regulatory developments and assess their implications for the enterprise AI system portfo...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.5257)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 3 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Cloud Data Governance Lead whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: AI Governance domain has low affinity (0.55) for Cloud Data Governance Lead, and the text \u2014 'Monitor AI regulatory developments and assess their implications for the enterprise AI system portfo...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.5257).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:35:45.129478Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0019",
+  "role_name": "AI Governance Professional",
+  "ksa_id": "LS-A-003",
+  "ksa_text": "Ability to develop organizational data and technology strategy that supports organizational objectives, identifying underlying causes of gaps and establishing strategic direction for data and technology capabilities.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4294828877005348,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39795146103896106,
+        "cross_encoder_sts": 0.41296875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35790535714285715,
+        "jaccard": null,
+        "top_element_id": "2052",
+        "top_element_label": "Assess target vulnerabilities and/or operational capabilities to determine course of action."
+      },
+      "ddat": {
+        "composite": 0.4294828877005348,
+        "cross_encoder_sts": 0.46642941176470587,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33095882352941175,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.34783939393939395,
+        "cross_encoder_sts": 0.37646666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2715,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4039698347107438,
+        "cross_encoder_sts": 0.4213090909090909,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35773181818181815,
+        "jaccard": null,
+        "top_element_id": "K1343",
+        "top_element_label": "Knowledge of uncertainty measurement principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4107262626262626,
+        "cross_encoder_sts": 0.4373944444444444,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33961111111111114,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.39508787878787877,
+        "cross_encoder_sts": 0.4148,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34252222222222223,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4294828877005348
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-5.2",
+        "element_label": "Processes are in place for robust engagement with relevant AI actors.",
+        "score": 0.4107262626262626
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1343",
+        "element_label": "Knowledge of uncertainty measurement principles and practices",
+        "score": 0.4039698347107438
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2052",
+        "element_label": "Assess target vulnerabilities and/or operational capabilities to determine course of action.",
+        "score": 0.39795146103896106
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.39508787878787877
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Leadership & Strategy domain has low affinity (0.50) for AI Governance Professional, and the text \u2014 'Ability to develop organizational data and technology strategy that supports organizational objectiv...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4295)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working AI Governance Professional whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Leadership & Strategy domain has low affinity (0.50) for AI Governance Professional, and the text \u2014 'Ability to develop organizational data and technology strategy that supports organizational objectiv...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4295).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:35:42.690614Z",
+    "pipeline_version": "1.0"
+  }
+}

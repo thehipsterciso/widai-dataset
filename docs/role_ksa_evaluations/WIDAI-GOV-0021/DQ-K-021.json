@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0021",
+  "role_name": "Cloud Data Governance Lead",
+  "ksa_id": "DQ-K-021",
+  "ksa_text": "Knowledge of data mesh principles and federated data ownership models, including the role of data product thinking, domain ownership boundaries, platform infrastructure, and self-service analytics within decentralized data architectures.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.41884530008826126,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4114019158527423,
+        "cross_encoder_sts": 0.43507582644628096,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3482714876033058,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.41306194805194807,
+        "cross_encoder_sts": 0.44477,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32850714285714283,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.41114242424242425,
+        "cross_encoder_sts": 0.43833333333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33863333333333334,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.41884530008826126,
+        "cross_encoder_sts": 0.44781529126213593,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3415919902912621,
+        "jaccard": null,
+        "top_element_id": "K1247",
+        "top_element_label": "Knowledge of data monitoring tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39543890909090906,
+        "cross_encoder_sts": 0.44046399999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.275372,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.41318863636363634,
+        "cross_encoder_sts": 0.4518375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.310125,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K1247",
+        "element_label": "Knowledge of data monitoring tools and techniques",
+        "score": 0.41884530008826126
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.41318863636363634
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.41306194805194807
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.4114019158527423
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.41114242424242425
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to Cloud Data Governance Lead scope \u2014 GOV-specific signals detected (\"data ownership\", \"data   :principle|value|belief|ethic\", \"data   :monetiz|valuation|product|asset management\"). STRM composite is moderate-to-strong (0.4188). Domain Data Quality (affinity 0.65) is a natural fit for this governance role. Seniority is appropriate for manager-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in governance job postings or certification curricula (CDMP, DAMA, IAPP CIPP/CIPM, NIST AI RMF, ISO 42001). Would a working Cloud Data Governance Lead self-report this as a required competency?",
+    "evidence": "Challenge answered: the governance competency is implicit in Cloud Data Governance Lead practice (domain affinity 0.65, 3 GOV signal(s)). Framework vocabulary matching underrepresents many legitimate governance competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to Cloud Data Governance Lead scope \u2014 GOV-specific signals detected (\"data ownership\", \"data   :principle|value|belief|ethic\", \"data   :monetiz|valuation|product|asset management\"). STRM composite is moderate-to-strong (0.4188). Domain Data Quality (affinity 0.65) is a natural fit for this governance role. Seniority is appropriate for manager-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:35:45.564807Z",
+    "pipeline_version": "1.0"
+  }
+}

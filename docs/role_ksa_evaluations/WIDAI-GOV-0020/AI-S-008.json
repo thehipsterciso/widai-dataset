@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0020",
+  "role_name": "Data Ethics Officer",
+  "ksa_id": "AI-S-008",
+  "ksa_text": "Skill in building and evaluating RAG pipelines, including embedding model selection, retrieval quality measurement, and end-to-end system evaluation.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4239473413379074,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40532359767891685,
+        "cross_encoder_sts": 0.43996237402015675,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3129535274356103,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.4003619565217391,
+        "cross_encoder_sts": 0.4421891304347826,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28882282608695653,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4158053977272727,
+        "cross_encoder_sts": 0.4666375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.280253125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-012",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.40555646711012566,
+        "cross_encoder_sts": 0.4467489837398374,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.295709756097561,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4239473413379074,
+        "cross_encoder_sts": 0.4675358490566038,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.307711320754717,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4214796238244514,
+        "cross_encoder_sts": 0.45770344827586207,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32488275862068966,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4239473413379074
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.4214796238244514
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-012",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.4158053977272727
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40555646711012566
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.40532359767891685
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low affinity (0.55) for Data Ethics Officer, and the text \u2014 'Skill in building and evaluating RAG pipelines, including embedding model selection, retrieval quali...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4239)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Data Ethics Officer whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low affinity (0.55) for Data Ethics Officer, and the text \u2014 'Skill in building and evaluating RAG pipelines, including embedding model selection, retrieval quali...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4239).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:35:44.063656Z",
+    "pipeline_version": "1.0"
+  }
+}
