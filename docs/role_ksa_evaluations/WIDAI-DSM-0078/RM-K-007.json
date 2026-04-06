@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0078",
+  "role_name": "Data Lifecycle Manager",
+  "ksa_id": "RM-K-007",
+  "ksa_text": "Knowledge of evaluation dataset design principles, including test set construction to avoid contamination, representative sampling methodologies, edge case coverage, and coverage gap measurement.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.4054739726027397,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39685104212860306,
+        "cross_encoder_sts": 0.42829024390243897,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3130131707317073,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.3964006993006993,
+        "cross_encoder_sts": 0.44397692307692305,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26953076923076924,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.3929884012539185,
+        "cross_encoder_sts": 0.43247931034482756,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28767931034482763,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4054739726027397,
+        "cross_encoder_sts": 0.43792842465753423,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31892876712328766,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.393369898989899,
+        "cross_encoder_sts": 0.4388711111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27203333333333335,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.3",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.3640232323232323,
+        "cross_encoder_sts": 0.3983111111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2725888888888889,
+        "jaccard": null,
+        "top_element_id": "4.A.2.b.1",
+        "top_element_label": "Making Decisions and Solving Problems"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4054739726027397
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.39685104212860306
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.3964006993006993
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-1.3",
+        "element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",
+        "score": 0.393369898989899
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.3929884012539185
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-K-007 (Risk Management/Knowledge) excluded as edge_case (composite 0.405, highest: NICE at 0.405). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lifecycle management: creation-to-disposal governance, retention policies, archival strategies, tiered storage management, and lifecycle compliance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.405, and Risk Management (RM) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk Management KSA for Data Lifecycle Manager?",
+    "evidence": "Risk Management competencies do not appear as Data Lifecycle Manager requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Risk Management is not a Data Lifecycle Manager core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA RM-K-007 (Risk Management/Knowledge) excluded as edge_case (composite 0.405, highest: NICE at 0.405). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lifecycle management: creation-to-disposal governance, retention policies, archival strategies, tiered storage management, and lifecycle compliance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:20.456193+00:00",
+    "pipeline_version": "1.0"
+  }
+}

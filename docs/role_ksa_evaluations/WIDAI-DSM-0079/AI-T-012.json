@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0079",
+  "role_name": "AI Product Manager",
+  "ksa_id": "AI-T-012",
+  "ksa_text": "Define MLOps standards and pipeline templates that enable data science teams to move models to production without bespoke engineering effort for each use case.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.40979345454545457,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3868663484486874,
+        "cross_encoder_sts": 0.41995226730310264,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29863723150357996,
+        "jaccard": null,
+        "top_element_id": "1064",
+        "top_element_label": "Knowledge of Extensible Markup Language (XML) schemas."
+      },
+      "ddat": {
+        "composite": 0.40979345454545457,
+        "cross_encoder_sts": 0.437052,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.337104,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.37593030303030306,
+        "cross_encoder_sts": 0.3908666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3361,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-012",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.3813344574780059,
+        "cross_encoder_sts": 0.4210629032258065,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.275391935483871,
+        "jaccard": null,
+        "top_element_id": "K0176",
+        "top_element_label": "Knowledge of Extensible Markup Language (XML) schemas"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3472969696969697,
+        "cross_encoder_sts": 0.38283333333333336,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25253333333333333,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.1",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.3507929292929293,
+        "cross_encoder_sts": 0.40307777777777776,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21136666666666667,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.40979345454545457
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1064",
+        "element_label": "Knowledge of Extensible Markup Language (XML) schemas.",
+        "score": 0.3868663484486874
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0176",
+        "element_label": "Knowledge of Extensible Markup Language (XML) schemas",
+        "score": 0.3813344574780059
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-012",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.37593030303030306
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.3507929292929293
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-T-012 (AI and Machine Learning/Task) scores 0.410 composite (highest: DDaT at 0.410) and is in_scope for the AI Product Manager role. Domain prior: in_scope. Core signal hits: 1. OOS hits: 0. Seniority is appropriate for manager-level AI Product Manager."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with in_scope scope, DDaT signal (0.410), and AI and Machine Learning handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support AI/ML competencies for AI Product Manager at manager level?",
+    "evidence": "AI/ML overlap appears in 15-40% of AI Product Manager postings depending on seniority. Core signals: 1. OOS signals: 0.",
+    "ruling": "Revised to exclude. AI/ML content without sufficient core signals is not market-supported for AI Product Manager. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. AI/ML content without sufficient core signals is not market-supported for AI Product Manager. Final decision: exclude.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:28.618277+00:00",
+    "pipeline_version": "1.0"
+  }
+}

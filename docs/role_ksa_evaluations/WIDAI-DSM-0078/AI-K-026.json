@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0078",
+  "role_name": "Data Lifecycle Manager",
+  "ksa_id": "AI-K-026",
+  "ksa_text": "Knowledge of AI ethics principles and fairness evaluation methods, including bias detection and measurement techniques, fairness metrics, representativeness assessment, and the relationship between training data characteristics and model equity outcomes.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.39473841113841107,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.377681500761808,
+        "cross_encoder_sts": 0.4125115921787709,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2848012569832402,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3753262626262627,
+        "cross_encoder_sts": 0.41882020202020204,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25934242424242426,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.37085113636363637,
+        "cross_encoder_sts": 0.3804375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3452875,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.39473841113841107,
+        "cross_encoder_sts": 0.4336603603603603,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29094654654654656,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35535757575757576,
+        "cross_encoder_sts": 0.38778666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26888,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3426121212121212,
+        "cross_encoder_sts": 0.39271666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.209,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39473841113841107
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.377681500761808
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.3753262626262627
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.37085113636363637
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.35535757575757576
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-K-026 (AI and Machine Learning/Knowledge) excluded as out_of_scope (composite 0.395, highest: NICE at 0.395). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lifecycle management: creation-to-disposal governance, retention policies, archival strategies, tiered storage management, and lifecycle compliance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.395, and AI and Machine Learning (AI) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.395)?",
+    "evidence": "Market analysis of Data Lifecycle Manager job postings does not surface this AI and Machine Learning competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AI-K-026 (AI and Machine Learning/Knowledge) excluded as out_of_scope (composite 0.395, highest: NICE at 0.395). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lifecycle management: creation-to-disposal governance, retention policies, archival strategies, tiered storage management, and lifecycle compliance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:20.470381+00:00",
+    "pipeline_version": "1.0"
+  }
+}

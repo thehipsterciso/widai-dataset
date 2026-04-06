@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0079",
+  "role_name": "AI Product Manager",
+  "ksa_id": "DA-K-015",
+  "ksa_text": "Knowledge of database administration and lifecycle management, including database provisioning, configuration, maintenance, performance monitoring, patching, version upgrades, and end-of-life migration planning.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4188272727272727,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3936292250700841,
+        "cross_encoder_sts": 0.4303556167400881,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2956921806167401,
+        "jaccard": null,
+        "top_element_id": "1021",
+        "top_element_label": "Knowledge of risk threat assessment."
+      },
+      "ddat": {
+        "composite": 0.3957873863636364,
+        "cross_encoder_sts": 0.432085,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29899375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4188272727272727,
+        "cross_encoder_sts": 0.4461,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3461,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4032686939820742,
+        "cross_encoder_sts": 0.44391281690140844,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2948843661971831,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3833366028708134,
+        "cross_encoder_sts": 0.4211236842105263,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28257105263157895,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37806507177033494,
+        "cross_encoder_sts": 0.41849473684210525,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27025263157894736,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.4188272727272727
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4032686939820742
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.3957873863636364
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1021",
+        "element_label": "Knowledge of risk threat assessment.",
+        "score": 0.3936292250700841
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.5",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3833366028708134
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DA-K-015 (Data Architecture/Knowledge) excluded as edge_case (composite 0.419, highest: EU AI Act at 0.419). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. AI product management: AI/ML feature strategy, model deployment decisions, responsible AI in products, AI product roadmap, and cross-functional AI feature delivery."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.419, and Data Architecture (DA) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Data Architecture KSA (composite 0.419)?",
+    "evidence": "Market analysis of AI Product Manager job postings does not surface this Data Architecture competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DA-K-015 (Data Architecture/Knowledge) excluded as edge_case (composite 0.419, highest: EU AI Act at 0.419). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. AI product management: AI/ML feature strategy, model deployment decisions, responsible AI in products, AI product roadmap, and cross-functional AI feature delivery.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:28.598986+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0080",
+  "role_name": "Data Marketplace Manager",
+  "ksa_id": "AI-K-015",
+  "ksa_text": "Knowledge of cloud data platform services and infrastructure across major providers, including managed compute, serverless processing, object storage, data warehouse, streaming platforms, and their architectural implications for data and ML workloads.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4098233449477352,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4098233449477352,
+        "cross_encoder_sts": 0.4412731707317073,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3259571428571429,
+        "jaccard": null,
+        "top_element_id": "1038A",
+        "top_element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability."
+      },
+      "ddat": {
+        "composite": 0.40327272727272734,
+        "cross_encoder_sts": 0.4593464285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25374285714285716,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.39484545454545456,
+        "cross_encoder_sts": 0.3916,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4035,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.39191535162950253,
+        "cross_encoder_sts": 0.4328594339622641,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2827311320754717,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35741818181818186,
+        "cross_encoder_sts": 0.395,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-4.1",
+        "top_element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data."
+      },
+      "onet": {
+        "composite": 0.33657272727272725,
+        "cross_encoder_sts": 0.3702,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2469,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.1",
+        "top_element_label": "Working with Computers"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1038A",
+        "element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability.",
+        "score": 0.4098233449477352
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.40327272727272734
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.39484545454545456
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39191535162950253
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-4.1",
+        "element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data.",
+        "score": 0.35741818181818186
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-K-015 (AI and Machine Learning/Knowledge) excluded as edge_case (composite 0.410, highest: DCWF at 0.410). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data marketplace operations: data product listing, discovery, subscription management, marketplace platform administration, pricing models, and data exchange facilitation."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.410, and AI and Machine Learning (AI) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.410)?",
+    "evidence": "Market analysis of Data Marketplace Manager job postings does not surface this AI and Machine Learning competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AI-K-015 (AI and Machine Learning/Knowledge) excluded as edge_case (composite 0.410, highest: DCWF at 0.410). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data marketplace operations: data product listing, discovery, subscription management, marketplace platform administration, pricing models, and data exchange facilitation.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:32.279473+00:00",
+    "pipeline_version": "1.0"
+  }
+}

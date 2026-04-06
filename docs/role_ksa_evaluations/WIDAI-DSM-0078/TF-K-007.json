@@ -1,0 +1,110 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0078",
+  "role_name": "Data Lifecycle Manager",
+  "ksa_id": "TF-K-007",
+  "ksa_text": "Knowledge of data serialization formats and their trade-offs for different workloads, including JSON, Apache Avro, Apache Parquet, and Protocol Buffers, with understanding of schema evolution, compression characteristics, and query performance implications.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.3903380808080808,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.37349396694214876,
+        "cross_encoder_sts": 0.4116636363636364,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2717081818181818,
+        "jaccard": null,
+        "top_element_id": "1095",
+        "top_element_label": "Knowledge of how different file types can be used for anomalous behavior."
+      },
+      "ddat": {
+        "composite": 0.3578047138047138,
+        "cross_encoder_sts": 0.43275925925925923,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.15792592592592594,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "nice": {
+        "composite": 0.3903380808080808,
+        "cross_encoder_sts": 0.43132444444444445,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28104111111111113,
+        "jaccard": null,
+        "top_element_id": "K0055",
+        "top_element_label": "Knowledge of microprocessors"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0055",
+        "element_label": "Knowledge of microprocessors",
+        "score": 0.3903380808080808
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1095",
+        "element_label": "Knowledge of how different file types can be used for anomalous behavior.",
+        "score": 0.37349396694214876
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.3578047138047138
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-K-007 (Technical Foundations/Knowledge) excluded as edge_case (composite 0.390, highest: NICE at 0.390). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lifecycle management: creation-to-disposal governance, retention policies, archival strategies, tiered storage management, and lifecycle compliance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.390, and Technical Foundations (TF) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Technical Foundations KSA (composite 0.390)?",
+    "evidence": "Market analysis of Data Lifecycle Manager job postings does not surface this Technical Foundations competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA TF-K-007 (Technical Foundations/Knowledge) excluded as edge_case (composite 0.390, highest: NICE at 0.390). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data lifecycle management: creation-to-disposal governance, retention policies, archival strategies, tiered storage management, and lifecycle compliance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:20.473379+00:00",
+    "pipeline_version": "1.0"
+  }
+}

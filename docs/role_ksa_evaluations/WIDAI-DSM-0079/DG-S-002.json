@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0079",
+  "role_name": "AI Product Manager",
+  "ksa_id": "DG-S-002",
+  "ksa_text": "Skill in aligning data and AI program objectives to organizational strategy, translating business priorities into data and AI capability requirements with measurable outcomes.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.5284129117259553,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42819576121030395,
+        "cross_encoder_sts": 0.4598844827586207,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34369250374812593,
+        "jaccard": null,
+        "top_element_id": "296",
+        "top_element_label": "Knowledge of how information needs and collection requirements are translated, tracked, and prioritized across the extended enterprise."
+      },
+      "ddat": {
+        "composite": 0.46023796296296293,
+        "cross_encoder_sts": 0.502974074074074,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.346275,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-067",
+        "top_element_label": "Data visualisation"
+      },
+      "eu_ai_act": {
+        "composite": 0.4836680194805194,
+        "cross_encoder_sts": 0.4812017857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49024464285714286,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4178196933449326,
+        "cross_encoder_sts": 0.4616944976076555,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3008202153110048,
+        "jaccard": null,
+        "top_element_id": "S0727",
+        "top_element_label": "Skill in performing data fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5284129117259553,
+        "cross_encoder_sts": 0.5335275362318841,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5147739130434782,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-1.4",
+        "top_element_label": "Context is established and understood."
+      },
+      "onet": {
+        "composite": 0.40594545454545455,
+        "cross_encoder_sts": 0.43714000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32276,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-1.4",
+        "element_label": "Context is established and understood.",
+        "score": 0.5284129117259553
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4836680194805194
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-067",
+        "element_label": "Data visualisation",
+        "score": 0.46023796296296293
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "296",
+        "element_label": "Knowledge of how information needs and collection requirements are translated, tracked, and prioritized across the extended enterprise.",
+        "score": 0.42819576121030395
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0727",
+        "element_label": "Skill in performing data fusion",
+        "score": 0.4178196933449326
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-S-002 (Data Governance/Skill) scores 0.528 composite (highest: NIST AI RMF at 0.528) and is edge_case for the AI Product Manager role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level AI Product Manager."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, NIST AI RMF signal (0.528), and Data Governance handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does NIST AI RMF signal (0.528) for this Data Governance KSA reflect actual AI Product Manager requirements?",
+    "evidence": "Data Governance appears in 50-80% of AI Product Manager job postings. KSA content aligns with hiring criteria at manager level.",
+    "ruling": "Include upheld. Data Governance at composite 0.528 is market-validated for AI Product Manager. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DG-S-002 (Data Governance/Skill) scores 0.528 composite (highest: NIST AI RMF at 0.528) and is edge_case for the AI Product Manager role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level AI Product Manager.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:28.504412+00:00",
+    "pipeline_version": "1.0"
+  }
+}

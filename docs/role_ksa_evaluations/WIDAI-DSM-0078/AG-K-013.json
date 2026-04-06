@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0078",
+  "role_name": "Data Lifecycle Manager",
+  "ksa_id": "AG-K-013",
+  "ksa_text": "Knowledge of AI conformity assessment and compliance lifecycle management, including conformity assessment procedures, CE marking requirements, notified body engagement, post-market surveillance obligations, and AI value chain liability triggers.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5264882352941176,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4147420889748549,
+        "cross_encoder_sts": 0.4160204255319149,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41133319148936165,
+        "jaccard": null,
+        "top_element_id": "1037",
+        "top_element_label": "Knowledge of information technology (IT) supply chain security and risk management policies, requirements, and procedures."
+      },
+      "ddat": {
+        "composite": 0.3865479797979798,
+        "cross_encoder_sts": 0.4324388888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2641722222222222,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-089",
+        "top_element_label": "Financial decision making for technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.5264882352941176,
+        "cross_encoder_sts": 0.4998470588235294,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5975313725490196,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4138451825951826,
+        "cross_encoder_sts": 0.431115811965812,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3677901709401709,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4654040998217469,
+        "cross_encoder_sts": 0.43689607843137257,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5414254901960784,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3965545454545455,
+        "cross_encoder_sts": 0.4031,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3791,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.5264882352941176
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4654040998217469
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1037",
+        "element_label": "Knowledge of information technology (IT) supply chain security and risk management policies, requirements, and procedures.",
+        "score": 0.4147420889748549
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4138451825951826
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.3",
+        "element_label": "Evaluating Information to Determine Compliance with Standards",
+        "score": 0.3965545454545455
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-K-013 (AI Governance/Knowledge) excluded as out_of_scope (composite 0.526, highest: EU AI Act at 0.526). Domain prior: out. Core hits: 1. OOS hits: 0. Seniority: appropriate. Data lifecycle management: creation-to-disposal governance, retention policies, archival strategies, tiered storage management, and lifecycle compliance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.526, and AI Governance (AG) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Data Lifecycle Manager?",
+    "evidence": "AI Governance competencies do not appear as Data Lifecycle Manager requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Data Lifecycle Manager core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-K-013 (AI Governance/Knowledge) excluded as out_of_scope (composite 0.526, highest: EU AI Act at 0.526). Domain prior: out. Core hits: 1. OOS hits: 0. Seniority: appropriate. Data lifecycle management: creation-to-disposal governance, retention policies, archival strategies, tiered storage management, and lifecycle compliance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:20.308495+00:00",
+    "pipeline_version": "1.0"
+  }
+}

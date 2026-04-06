@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0079",
+  "role_name": "AI Product Manager",
+  "ksa_id": "LS-T-009",
+  "ksa_text": "Establish and operate data and AI governance committees, including charter development, membership selection, decision authority definition, meeting cadence management, accountability structure design, and oversight operation.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4332937062937063,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4001794812532101,
+        "cross_encoder_sts": 0.4137146892655368,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.364085593220339,
+        "jaccard": null,
+        "top_element_id": "1154",
+        "top_element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems."
+      },
+      "ddat": {
+        "composite": 0.4133427719821163,
+        "cross_encoder_sts": 0.44185573770491804,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3373081967213115,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4332937062937063,
+        "cross_encoder_sts": 0.4106153846153846,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4937692307692308,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-018",
+        "top_element_label": "Obligations of providers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.38873423848878397,
+        "cross_encoder_sts": 0.4203142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30452077922077925,
+        "jaccard": null,
+        "top_element_id": "T0068",
+        "top_element_label": "Develop data standards, policies, and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.42850814393939396,
+        "cross_encoder_sts": 0.41176666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47315208333333336,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37110727272727273,
+        "cross_encoder_sts": 0.39634,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30382,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-018",
+        "element_label": "Obligations of providers of high-risk AI systems",
+        "score": 0.4332937062937063
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.42850814393939396
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4133427719821163
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1154",
+        "element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems.",
+        "score": 0.4001794812532101
+      },
+      {
+        "framework": "nice",
+        "element_id": "T0068",
+        "element_label": "Develop data standards, policies, and procedures",
+        "score": 0.38873423848878397
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA LS-T-009 (Leadership and Strategy/Task) scores 0.433 composite (highest: EU AI Act at 0.433) and is in_scope for the AI Product Manager role. Domain prior: in_scope. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level AI Product Manager."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with in_scope scope, EU AI Act signal (0.433), and Leadership and Strategy handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support this Leadership and Strategy competency for AI Product Manager at composite 0.433?",
+    "evidence": "Market analysis confirms Leadership and Strategy competencies at composite 0.433 are consistent with AI Product Manager hiring criteria.",
+    "ruling": "Include upheld. Market evidence supports this competency for AI Product Manager. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA LS-T-009 (Leadership and Strategy/Task) scores 0.433 composite (highest: EU AI Act at 0.433) and is in_scope for the AI Product Manager role. Domain prior: in_scope. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level AI Product Manager.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:28.566066+00:00",
+    "pipeline_version": "1.0"
+  }
+}
