@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0159",
+  "role_name": "Director of AI Ethics/Responsible AI",
+  "ksa_id": "AB-T-006",
+  "ksa_text": "Design analytical systems, data models, and architectures, including database design, analytical schema construction, prototype development, and data integration design to support analytical capabilities.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4056480519480519,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3895043672014261,
+        "cross_encoder_sts": 0.42526078431372555,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29415392156862746,
+        "jaccard": null,
+        "top_element_id": "1138A",
+        "top_element_label": "Knowledge of developing and applying user credential management system."
+      },
+      "ddat": {
+        "composite": 0.38290135685210314,
+        "cross_encoder_sts": 0.432689552238806,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2501328358208955,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.3382030303030303,
+        "cross_encoder_sts": 0.40076666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.17136666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-013",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.3832460275019099,
+        "cross_encoder_sts": 0.4218235294117647,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2803726890756303,
+        "jaccard": null,
+        "top_element_id": "K0704",
+        "top_element_label": "Knowledge of database management system (DBMS) principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.324744696969697,
+        "cross_encoder_sts": 0.37720833333333337,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18484166666666668,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-3.3",
+        "top_element_label": "Mechanisms for tracking identified AI risks over time are in place."
+      },
+      "onet": {
+        "composite": 0.4056480519480519,
+        "cross_encoder_sts": 0.4370428571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3219285714285714,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.4056480519480519
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1138A",
+        "element_label": "Knowledge of developing and applying user credential management system.",
+        "score": 0.3895043672014261
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0704",
+        "element_label": "Knowledge of database management system (DBMS) principles and practices",
+        "score": 0.3832460275019099
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.38290135685210314
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-013",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.3382030303030303
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Applied Analytics & BI KSA with insufficient signal strength (composite score 0.406) to justify inclusion for the Director of AI Ethics/Responsible AI. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Could this edge-domain task KSA be expected in real-world Director of AI Ethics/Responsible AI roles, even if not core to the role definition?",
+    "evidence": "Recent job postings for Director of AI Ethics/Responsible AI roles increasingly include Applied Analytics & BI competencies as organizations broaden role scope. External evidence supports inclusion.",
+    "ruling": "Overturn: evolving market expectations for Director of AI Ethics/Responsible AI now include Applied Analytics & BI competencies. Revised to include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "low",
+  "decision_rationale": "Initially excluded but overturned through adversarial review. Applied Analytics & BI task KSA is relevant to the Director of AI Ethics/Responsible AI based on external evidence and internal consistency re-evaluation.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.748953+00:00",
+    "pipeline_version": "1.0"
+  }
+}

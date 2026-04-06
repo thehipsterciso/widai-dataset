@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0159",
+  "role_name": "Director of AI Ethics/Responsible AI",
+  "ksa_id": "TF-K-018",
+  "ksa_text": "Knowledge of operating system fundamentals and kernel concepts relevant to data engineering, including virtualization mechanisms, memory management and paging, process scheduling, I/O systems, file system operations, and resource allocation.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "too_junior",
+    "preliminary_decision": "exclude",
+    "rationale": "Technical Foundations falls outside the primary competency scope of the Director of AI Ethics/Responsible AI. This knowledge KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": "Seniority fit was marked 'too_junior', but the dimension is Knowledge \u2014 awareness-level KSAs are typically appropriate across seniority tiers.",
+    "rebuttal": "Even Knowledge-level KSAs that describe specific low-level technical details (e.g., implementation internals) are not expected at the director level. Exclusion upheld.",
+    "ruling": "Exclusion upheld: Knowledge KSAs with predominantly execution-oriented framing are appropriately excluded at the director tier."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Technical Foundations truly out-of-scope for the Director of AI Ethics/Responsible AI? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Technical Foundations as a core or recommended competency for the Director of AI Ethics/Responsible AI. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Technical Foundations falls outside the established competency profile for the Director of AI Ethics/Responsible AI. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Technical Foundations is outside the competency scope of the Director of AI Ethics/Responsible AI. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.805392+00:00",
+    "pipeline_version": "1.0"
+  }
+}

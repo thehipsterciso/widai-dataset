@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0158",
+  "role_name": "Director of Data Operations",
+  "ksa_id": "DQ-A-003",
+  "ksa_text": "Ability to design effective data structures, models, and schemas that balance organizational needs, technical constraints, and long-term maintainability.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.44184184952978056,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3780306707239762,
+        "cross_encoder_sts": 0.42204463040446305,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26066011157601116,
+        "jaccard": null,
+        "top_element_id": "1073",
+        "top_element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+      },
+      "ddat": {
+        "composite": 0.44184184952978056,
+        "cross_encoder_sts": 0.4918896551724138,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3083810344827586,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.3902105263157895,
+        "cross_encoder_sts": 0.4356368421052632,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2690736842105263,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.37613187571921747,
+        "cross_encoder_sts": 0.41926227848101266,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2611174683544304,
+        "jaccard": null,
+        "top_element_id": "K0702",
+        "top_element_label": "Knowledge of data warehousing principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38597337662337666,
+        "cross_encoder_sts": 0.44604642857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2257785714285714,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.403227807486631,
+        "cross_encoder_sts": 0.44988823529411764,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2788,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.44184184952978056
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.403227807486631
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.3902105263157895
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38597337662337666
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1073",
+        "element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools.",
+        "score": 0.3780306707239762
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Data Quality is a primary or secondary domain for the Director of Data Operations. This ability KSA is within scope for the role's expected competency profile and seniority level (director)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Data Quality), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.442). External validation of this ability KSA for the Director of Data Operations role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "DAMA-DMBOK Data Quality Management chapter and industry surveys confirm data quality competencies for quality-focused leadership roles.",
+    "ruling": "Upheld: domain-level relevance of Data Quality for the Director of Data Operations is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality ability KSA is within scope for the Director of Data Operations at the director tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.552812+00:00",
+    "pipeline_version": "1.0"
+  }
+}

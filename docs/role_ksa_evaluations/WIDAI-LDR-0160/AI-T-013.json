@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0160",
+  "role_name": "Director of Data Quality",
+  "ksa_id": "AI-T-013",
+  "ksa_text": "Evaluate and select ML platform tooling, producing architectural decision records with documented rationale and re-evaluation criteria.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4311527272727273,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40947921505806967,
+        "cross_encoder_sts": 0.4325735682819383,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3478942731277533,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.42215454545454545,
+        "cross_encoder_sts": 0.4668264705882353,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3030294117647059,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.40034114832535883,
+        "cross_encoder_sts": 0.4228842105263158,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34022631578947365,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3990558749550844,
+        "cross_encoder_sts": 0.42294268774703553,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3353577075098814,
+        "jaccard": null,
+        "top_element_id": "K0176",
+        "top_element_label": "Knowledge of Extensible Markup Language (XML) schemas"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4311527272727273,
+        "cross_encoder_sts": 0.45861,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3579333333333333,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.1",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.3925097402597403,
+        "cross_encoder_sts": 0.41564285714285715,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33082142857142854,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-2.1",
+        "element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",
+        "score": 0.4311527272727273
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.42215454545454545
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
+        "score": 0.40947921505806967
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.40034114832535883
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0176",
+        "element_label": "Knowledge of Extensible Markup Language (XML) schemas",
+        "score": 0.3990558749550844
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain AI/ML Engineering KSA with insufficient signal strength (composite score 0.431) to justify inclusion for the Director of Data Quality. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain task KSA be expected in real-world Director of Data Quality roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm AI/ML Engineering is not a standard competency expectation for Director of Data Quality. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of Data Quality competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.431) and edge-domain placement (AI/ML Engineering) do not meet inclusion threshold for the Director of Data Quality. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.889495+00:00",
+    "pipeline_version": "1.0"
+  }
+}

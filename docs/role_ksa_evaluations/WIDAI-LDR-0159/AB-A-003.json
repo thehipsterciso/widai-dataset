@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0159",
+  "role_name": "Director of AI Ethics/Responsible AI",
+  "ksa_id": "AB-A-003",
+  "ksa_text": "Ability to quickly make sense of complex information, recognize patterns and relationships across seemingly unrelated data sets, decompose problems into constituent parts, and identify non-obvious organizational or operational dynamics.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.42741969696969695,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39492254784688996,
+        "cross_encoder_sts": 0.41549605263157896,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3400598684210527,
+        "jaccard": null,
+        "top_element_id": "2251",
+        "top_element_label": "Apply analytic techniques to gain more target information."
+      },
+      "ddat": {
+        "composite": 0.42091033057851246,
+        "cross_encoder_sts": 0.4676,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2964045454545455,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "nice": {
+        "composite": 0.3907371900826446,
+        "cross_encoder_sts": 0.416,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3233696969696969,
+        "jaccard": null,
+        "top_element_id": "S0386",
+        "top_element_label": "Skill in communicating verbally"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3803939393939394,
+        "cross_encoder_sts": 0.40796666666666664,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3068666666666667,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.9",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.42741969696969695,
+        "cross_encoder_sts": 0.44895833333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36998333333333333,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.42741969696969695
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.42091033057851246
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2251",
+        "element_label": "Apply analytic techniques to gain more target information.",
+        "score": 0.39492254784688996
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0386",
+        "element_label": "Skill in communicating verbally",
+        "score": 0.3907371900826446
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.9",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.3803939393939394
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Applied Analytics & BI KSA with insufficient signal strength (composite score 0.427) to justify inclusion for the Director of AI Ethics/Responsible AI. Without stronger framework alignment, this ability KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain ability KSA be expected in real-world Director of AI Ethics/Responsible AI roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Applied Analytics & BI is not a standard competency expectation for Director of AI Ethics/Responsible AI. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of AI Ethics/Responsible AI competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.427) and edge-domain placement (Applied Analytics & BI) do not meet inclusion threshold for the Director of AI Ethics/Responsible AI. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.722234+00:00",
+    "pipeline_version": "1.0"
+  }
+}

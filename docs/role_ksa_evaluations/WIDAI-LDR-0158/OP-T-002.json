@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0158",
+  "role_name": "Director of Data Operations",
+  "ksa_id": "OP-T-002",
+  "ksa_text": "Manage ongoing data and AI program operations, including monitoring execution schedules, coordinating responses to operational issues, automating routine operations, and capacity planning for anticipated resource needs.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.4340181818181818,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4056771159874608,
+        "cross_encoder_sts": 0.4079818965517241,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3995310344827586,
+        "jaccard": null,
+        "top_element_id": "132A",
+        "top_element_label": "Ability to execute technology integration processes."
+      },
+      "ddat": {
+        "composite": 0.41678680351906155,
+        "cross_encoder_sts": 0.44873548387096773,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3315903225806452,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-024",
+        "top_element_label": "Change management"
+      },
+      "eu_ai_act": {
+        "composite": 0.3508681818181818,
+        "cross_encoder_sts": 0.36715,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30745,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4016933660933661,
+        "cross_encoder_sts": 0.4145918918918919,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3672972972972973,
+        "jaccard": null,
+        "top_element_id": "S0424",
+        "top_element_label": "Skill in executing command line tools"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38534545454545455,
+        "cross_encoder_sts": 0.40440000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33453333333333335,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-4.1",
+        "top_element_label": "Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly."
+      },
+      "onet": {
+        "composite": 0.4340181818181818,
+        "cross_encoder_sts": 0.4437428571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4080857142857143,
+        "jaccard": null,
+        "top_element_id": "4.A.2.b.5",
+        "top_element_label": "Scheduling Work and Activities"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.b.5",
+        "element_label": "Scheduling Work and Activities",
+        "score": 0.4340181818181818
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-024",
+        "element_label": "Change management",
+        "score": 0.41678680351906155
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "132A",
+        "element_label": "Ability to execute technology integration processes.",
+        "score": 0.4056771159874608
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0424",
+        "element_label": "Skill in executing command line tools",
+        "score": 0.4016933660933661
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-4.1",
+        "element_label": "Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly.",
+        "score": 0.38534545454545455
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Operations & Program Management is a primary or secondary domain for the Director of Data Operations. This task KSA is within scope for the role's expected competency profile and seniority level (director)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Operations & Program Management), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.434). External validation of this task KSA for the Director of Data Operations role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "PMI, TOGAF operational frameworks, and CDO survey data (NewVantage Partners) confirm operational program management as a key competency for data leaders.",
+    "ruling": "Upheld: domain-level relevance of Operations & Program Management for the Director of Data Operations is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Operations & Program Management task KSA is within scope for the Director of Data Operations at the director tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.559768+00:00",
+    "pipeline_version": "1.0"
+  }
+}

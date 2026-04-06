@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0159",
+  "role_name": "Director of AI Ethics/Responsible AI",
+  "ksa_id": "SP-S-015",
+  "ksa_text": "Skill in implementing secure data handling practices, including secure application development, encrypted communications, and secure deployment of data systems and services.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Security & Platform Strategy KSA with insufficient signal strength (composite score 0.0) to justify inclusion for the Director of AI Ethics/Responsible AI. Without stronger framework alignment, this skill KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain skill KSA be expected in real-world Director of AI Ethics/Responsible AI roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Security & Platform Strategy is not a standard competency expectation for Director of AI Ethics/Responsible AI. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of AI Ethics/Responsible AI competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Insufficient signal (score 0.0) and edge-domain placement (Security & Platform Strategy) do not meet inclusion threshold for the Director of AI Ethics/Responsible AI. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.832469+00:00",
+    "pipeline_version": "1.0"
+  }
+}

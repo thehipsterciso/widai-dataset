@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0159",
+  "role_name": "Director of AI Ethics/Responsible AI",
+  "ksa_id": "LS-T-010",
+  "ksa_text": "Build organizational data and AI culture through executive sponsorship, success story amplification, recognition programs, visible leadership commitment to data-informed decision-making, and cultural transformation initiatives.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4583772727272727,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40257714853452553,
+        "cross_encoder_sts": 0.4154333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3682939890710383,
+        "jaccard": null,
+        "top_element_id": "2290",
+        "top_element_label": "Allocate collection assets based on leadership's guidance, priorities, and/or operational emphasis."
+      },
+      "ddat": {
+        "composite": 0.45250936639118455,
+        "cross_encoder_sts": 0.4739333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3953787878787879,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.36817272727272726,
+        "cross_encoder_sts": 0.3619,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3849,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3894233566433567,
+        "cross_encoder_sts": 0.4142969230769231,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3230938461538462,
+        "jaccard": null,
+        "top_element_id": "S0762",
+        "top_element_label": "Skill in integrating organization objectives"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4583772727272727,
+        "cross_encoder_sts": 0.48385,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39044999999999996,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-2.3",
+        "top_element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks."
+      },
+      "onet": {
+        "composite": 0.38492499999999996,
+        "cross_encoder_sts": 0.39902499999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.347325,
+        "jaccard": null,
+        "top_element_id": "2.B.1.c",
+        "top_element_label": "Persuasion"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-2.3",
+        "element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",
+        "score": 0.4583772727272727
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.45250936639118455
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2290",
+        "element_label": "Allocate collection assets based on leadership's guidance, priorities, and/or operational emphasis.",
+        "score": 0.40257714853452553
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0762",
+        "element_label": "Skill in integrating organization objectives",
+        "score": 0.3894233566433567
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.c",
+        "element_label": "Persuasion",
+        "score": 0.38492499999999996
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Leadership & Strategy is a primary or secondary domain for the Director of AI Ethics/Responsible AI. This task KSA is within scope for the role's expected competency profile and seniority level (director)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Leadership & Strategy), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.458). External reviewers may question whether this specific task KSA is sufficiently distinctive for the Director of AI Ethics/Responsible AI versus adjacent roles.",
+    "evidence": "McKinsey, Gartner, and Harvard Business Review consistently identify leadership and strategy skills as core differentiators for C-suite and VP data leaders.",
+    "ruling": "Upheld: moderate framework signal is consistent with Leadership & Strategy appearing in job postings and role definition literature for Director of AI Ethics/Responsible AI."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Leadership & Strategy task KSA is within scope for the Director of AI Ethics/Responsible AI at the director tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.699156+00:00",
+    "pipeline_version": "1.0"
+  }
+}
