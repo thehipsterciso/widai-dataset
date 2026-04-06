@@ -1,0 +1,101 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0106",
+  "role_name": "AI Incident Response Manager",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:24:24.768099+00:00",
+  "total_ksas": 1069,
+  "included": 167,
+  "excluded": 902,
+  "inclusion_rate": 0.1562,
+  "adversarial_overturns": {
+    "pass_3": 0,
+    "pass_4": 0,
+    "total_ksas_affected": 0
+  },
+  "calibration": {
+    "min": 100,
+    "max": 200,
+    "status": "ok"
+  },
+  "pass_1_notes": "6 frameworks: dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet. Composite = MAX across frameworks.",
+  "role_scope_notes": "AI incident management, incident response coordination, root cause analysis, post-incident review, escalation procedures, AI failure response",
+  "domain_summary": {
+    "TF": {
+      "include": 0,
+      "exclude": 87,
+      "total": 87,
+      "label": "Technology Fundamentals"
+    },
+    "DA": {
+      "include": 0,
+      "exclude": 93,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 0,
+      "exclude": 82,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "DG": {
+      "include": 12,
+      "exclude": 80,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "SP": {
+      "include": 28,
+      "exclude": 56,
+      "total": 84,
+      "label": "Security & Privacy"
+    },
+    "AI": {
+      "include": 14,
+      "exclude": 89,
+      "total": 103,
+      "label": "AI & ML Infrastructure"
+    },
+    "AG": {
+      "include": 53,
+      "exclude": 54,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 11,
+      "exclude": 63,
+      "total": 74,
+      "label": "Risk & Compliance"
+    },
+    "RM": {
+      "include": 43,
+      "exclude": 58,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 4,
+      "exclude": 85,
+      "total": 89,
+      "label": "Leadership & Strategy"
+    },
+    "OP": {
+      "include": 2,
+      "exclude": 67,
+      "total": 69,
+      "label": "Operations & Program Management"
+    },
+    "AB": {
+      "include": 0,
+      "exclude": 88,
+      "total": 88,
+      "label": "Analytics & BI"
+    }
+  },
+  "score_analysis": {
+    "avg_composite_included": 0.1899,
+    "avg_composite_excluded": 0.2131
+  }
+}
