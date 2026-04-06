@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0087",
+  "role_name": "Data Analyst",
+  "ksa_id": "RM-K-012",
+  "ksa_text": "Knowledge of enterprise risk management integration, including how data risk, AI risk, model risk, and technology risk roll up into enterprise risk taxonomy and board-level reporting.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5094014705882353,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40013089375479255,
+        "cross_encoder_sts": 0.4367161199625117,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30257029053420803,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.4027611650485437,
+        "cross_encoder_sts": 0.4426087378640777,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2965009708737864,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.4612639794168096,
+        "cross_encoder_sts": 0.4804433962264151,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4101188679245283,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.4033130124777184,
+        "cross_encoder_sts": 0.4397798039215686,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30606823529411764,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5094014705882353,
+        "cross_encoder_sts": 0.5351264705882353,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.44080147058823527,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-4.1",
+        "top_element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data."
+      },
+      "onet": {
+        "composite": 0.36390717703349285,
+        "cross_encoder_sts": 0.4167789473684211,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22291578947368423,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-4.1",
+        "element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data.",
+        "score": 0.5094014705882353
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.4612639794168096
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4033130124777184
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.4027611650485437
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.40013089375479255
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "too_senior",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-K-012 (RM, Knowledge) excluded on seniority grounds. Text contains executive-level content not aligned with IC-to-senior-IC ANL scope. Composite 0.5094. Framework signals: nist_ai_rmf=0.509, eu_ai_act=0.461, nice=0.403. ANL roles in scope are individual contributors through senior ICs; organizational or C-suite-level responsibilities fall outside this band."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Seniority concerns confirmed. Score 0.5094 below threshold for weak fit domain. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does RM-domain KSA RM-K-012 (composite 0.5094) appear in published data analyst or BI role profiles?",
+    "evidence": "RM domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per COSO ERM framework; risk competencies in IC ANL scope limited to data risk identification, not enterprise risk management. Composite 0.5094 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms RM domain KSA at composite 0.5094 is not a standard requirement for Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.5094, domain RM, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:12.133822+00:00",
+    "pipeline_version": "1.0"
+  }
+}

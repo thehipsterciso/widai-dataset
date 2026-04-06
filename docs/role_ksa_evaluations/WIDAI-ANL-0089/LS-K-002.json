@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0089",
+  "role_name": "BI Developer",
+  "ksa_id": "LS-K-002",
+  "ksa_text": "Knowledge of organizational change management principles as applied to large-scale data and AI transformation programs, including adoption barriers, culture change levers, and executive sponsorship requirements.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.42184247542997544,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40471642645971917,
+        "cross_encoder_sts": 0.4377918699186992,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31651524390243907,
+        "jaccard": null,
+        "top_element_id": "1004A",
+        "top_element_label": "Knowledge of information technology (IT) acquisition/procurement requirements."
+      },
+      "ddat": {
+        "composite": 0.4009633838383838,
+        "cross_encoder_sts": 0.4425777777777778,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28999166666666665,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.403227012987013,
+        "cross_encoder_sts": 0.42474285714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3458514285714286,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.42184247542997544,
+        "cross_encoder_sts": 0.46035,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31915574324324325,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4113764204545455,
+        "cross_encoder_sts": 0.4394796875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.336434375,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4058777777777778,
+        "cross_encoder_sts": 0.44787777777777776,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29387777777777774,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.42184247542997544
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4113764204545455
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.a",
+        "element_label": "Administration and Management",
+        "score": 0.4058777777777778
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1004A",
+        "element_label": "Knowledge of information technology (IT) acquisition/procurement requirements.",
+        "score": 0.40471642645971917
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.403227012987013
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "too_senior",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-K-002 (LS, Knowledge) excluded on seniority grounds. Text contains executive-level content not aligned with IC-to-senior-IC ANL scope. Composite 0.4218. Framework signals: nice=0.422, nist_ai_rmf=0.411, onet=0.406. ANL roles in scope are individual contributors through senior ICs; organizational or C-suite-level responsibilities fall outside this band."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Seniority concerns confirmed. Score 0.4218 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does LS-domain KSA LS-K-002 (composite 0.4218) appear in published data analyst or BI role profiles?",
+    "evidence": "Executive-level content in KSA text is not found in IC-to-senior-IC role profiles per Leadership competencies in IC-to-senior-IC analytics roles are limited to peer influence and technical mentorship, not organizational strategy. External ground truth confirms seniority mismatch. Exclusion upheld.",
+    "ruling": "P3 exclude upheld. External evidence confirms LS domain KSA at composite 0.4218 is not a standard requirement for BI Developer at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4218, domain LS, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:40.207151+00:00",
+    "pipeline_version": "1.0"
+  }
+}

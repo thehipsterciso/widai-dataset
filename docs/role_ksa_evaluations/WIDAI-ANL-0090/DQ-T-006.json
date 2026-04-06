@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "DQ-T-006",
+  "ksa_text": "Produce comprehensive documentation of data quality assessments, trend analysis reports, and findings for governance and stakeholder decision-making.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4204226666666667,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39918586984046595,
+        "cross_encoder_sts": 0.4315816155988858,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3127972144846797,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4204226666666667,
+        "cross_encoder_sts": 0.4508106666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.339388,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.38223006993006997,
+        "cross_encoder_sts": 0.40483076923076927,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32196153846153847,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-047",
+        "top_element_label": "Obligations of providers of GPAI models with systemic risk"
+      },
+      "nice": {
+        "composite": 0.39247403288201166,
+        "cross_encoder_sts": 0.4279941489361702,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2977537234042553,
+        "jaccard": null,
+        "top_element_id": "S0398",
+        "top_element_label": "Skill in analyzing organizational objectives"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3831342857142857,
+        "cross_encoder_sts": 0.4320942857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2525742857142857,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.4",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.3886987012987013,
+        "cross_encoder_sts": 0.42126428571428576,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3018571428571429,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.4204226666666667
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.39918586984046595
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0398",
+        "element_label": "Skill in analyzing organizational objectives",
+        "score": 0.39247403288201166
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.3886987012987013
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-1.4",
+        "element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",
+        "score": 0.3831342857142857
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-T-006 (DQ, Task) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4204 is insufficient to establish relevance to quantitative analysis, statistical modeling, and financial analytics at IC-to-senior-IC level. Framework signals (ddat=0.420, dcwf=0.399, nice=0.392) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "DQ domain KSA DQ-T-006 excluded at composite 0.4204, but KSA text contains direct analytics-domain signals. Internal consistency: the presence of analytics terminology in a moderate fit KSA at score 0.4204 suggests the threshold is excluding genuinely relevant content.",
+    "rebuttal": "Composite 0.4204 with confirmed analytics-domain terminology for a DQ (moderate fit) KSA indicates real role relevance for Quantitative Analyst. The 0.43 threshold is a calibration heuristic; text-signal confirmation overrides marginal score shortfall at this level.",
+    "ruling": "P2 exclude overturned. DQ KSA with composite 0.4204 and confirmed analytics-domain text signals included on internal consistency grounds."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA DQ-T-006 (DQ, composite 0.4204) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4204 with signal across ddat=0.420, dcwf=0.399, nice=0.392 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from DQ-domain frameworks confirms KSA relevance to Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: include. Composite 0.4204, domain DQ. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.240601+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0092",
+  "role_name": "Clinical Data Manager",
+  "ksa_id": "AI-S-013",
+  "ksa_text": "Skill in training, evaluating, and optimizing computer vision models, including performance profiling, inference optimization, and edge deployment considerations.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.41323240093240093,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38150594652406417,
+        "cross_encoder_sts": 0.44006235294117646,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2253555294117647,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.3839058181818182,
+        "cross_encoder_sts": 0.45516799999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19387333333333334,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.41323240093240093,
+        "cross_encoder_sts": 0.46838974358974356,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26614615384615387,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3877111688311689,
+        "cross_encoder_sts": 0.4482103571428572,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22638,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.405088961038961,
+        "cross_encoder_sts": 0.45770535714285715,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2647785714285714,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-2.2",
+        "top_element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks."
+      },
+      "onet": {
+        "composite": 0.35750346320346316,
+        "cross_encoder_sts": 0.4231333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1824904761904762,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.41323240093240093
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-2.2",
+        "element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",
+        "score": 0.405088961038961
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3877111688311689
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.3839058181818182
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.38150594652406417
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-S-013 (AI, Skill) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4132 is insufficient to establish relevance to clinical data management, regulatory compliance, and healthcare analytics at IC-to-senior-IC level. Framework signals (eu_ai_act=0.413, nist_ai_rmf=0.405, nice=0.388) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4132 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does AI-domain KSA AI-S-013 (composite 0.4132) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4132 for AI domain does not meet the evidentiary bar for ANL IC-level inclusion per NIST AI RMF; EU AI Act practitioner obligations; AI-adjacent competencies appear in senior analytics IC roles at awareness level only. External sources confirm this competency is not a standard expectation for Clinical Data Manager at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms AI domain KSA at composite 0.4132 is not a standard requirement for Clinical Data Manager at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4132, domain AI, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.645448+00:00",
+    "pipeline_version": "1.0"
+  }
+}

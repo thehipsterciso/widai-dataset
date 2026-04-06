@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "AB-K-004",
+  "ksa_text": "Knowledge of regression analysis methods, including ordinary least squares, generalized linear models, tree-based methods, regularization approaches, model assumptions, and diagnostic procedures for assessing model fit.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.3958654729109275,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3862881337412587,
+        "cross_encoder_sts": 0.44337716346153844,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23405072115384615,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3660224598930481,
+        "cross_encoder_sts": 0.4299176470588235,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19563529411764705,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.3586029090909091,
+        "cross_encoder_sts": 0.431924,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.16308,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3958654729109275,
+        "cross_encoder_sts": 0.4604444444444445,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22365488215488216,
+        "jaccard": null,
+        "top_element_id": "K0641",
+        "top_element_label": "Knowledge of market research tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3549290513833992,
+        "cross_encoder_sts": 0.43306956521739126,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.14655434782608695,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.35265530303030307,
+        "cross_encoder_sts": 0.4035666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21689166666666668,
+        "jaccard": null,
+        "top_element_id": "2.C.6",
+        "top_element_label": "Education and Training"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0641",
+        "element_label": "Knowledge of market research tools and techniques",
+        "score": 0.3958654729109275
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.3862881337412587
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.3660224598930481
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.3586029090909091
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.5",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3549290513833992
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-K-004 (AB, Knowledge) maps to Quantitative Analyst scope as strong fit. Composite score 0.3959 clears the strong fit threshold of 0.35. Top framework anchors: nice=0.396, dcwf=0.386, ddat=0.366. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within quantitative analysis, statistical modeling, and financial analytics."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.3959 for strong fit domain is consistent with ANL IC-level scope. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AB-K-004 (AB, composite 0.3959) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. Composite 0.3959 with signal across nice=0.396, dcwf=0.386, ddat=0.366 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AB-domain frameworks confirms KSA relevance to Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.3959, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.269973+00:00",
+    "pipeline_version": "1.0"
+  }
+}

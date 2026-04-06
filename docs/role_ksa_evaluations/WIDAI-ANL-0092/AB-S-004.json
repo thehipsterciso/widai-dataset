@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0092",
+  "role_name": "Clinical Data Manager",
+  "ksa_id": "AB-S-004",
+  "ksa_text": "Skill in building data visualizations and dashboards that accurately represent analytical findings, selecting appropriate chart types, applying cognitive load principles, and supporting self-service exploration by business users.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4540064935064935,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4024071861471862,
+        "cross_encoder_sts": 0.4224466666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3489685714285714,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.40353924611973396,
+        "cross_encoder_sts": 0.44574146341463416,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29100000000000004,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.3529742424242424,
+        "cross_encoder_sts": 0.3849833333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26761666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.40638260188087777,
+        "cross_encoder_sts": 0.42101724137931035,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3673568965517241,
+        "jaccard": null,
+        "top_element_id": "K0639",
+        "top_element_label": "Knowledge of code tailoring tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.37236981818181825,
+        "cross_encoder_sts": 0.40407600000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28782,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.1",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.4540064935064935,
+        "cross_encoder_sts": 0.46952857142857146,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4126142857142857,
+        "jaccard": null,
+        "top_element_id": "2.C.6",
+        "top_element_label": "Education and Training"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.6",
+        "element_label": "Education and Training",
+        "score": 0.4540064935064935
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0639",
+        "element_label": "Knowledge of code tailoring tools and techniques",
+        "score": 0.40638260188087777
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.40353924611973396
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.4024071861471862
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.1",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.37236981818181825
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-S-004 (AB, Skill) maps to Clinical Data Manager scope as strong fit. Composite score 0.4540 clears the strong fit threshold of 0.35. Top framework anchors: onet=0.454, nice=0.406, ddat=0.404. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within clinical data management, regulatory compliance, and healthcare analytics."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4540 for strong fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AB-S-004 (AB, composite 0.4540) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4540 with signal across onet=0.454, nice=0.406, ddat=0.404 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AB-domain frameworks confirms KSA relevance to Clinical Data Manager at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4540, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.601578+00:00",
+    "pipeline_version": "1.0"
+  }
+}

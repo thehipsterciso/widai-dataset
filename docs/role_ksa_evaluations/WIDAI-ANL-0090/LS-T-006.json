@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "LS-T-006",
+  "ksa_text": "Evaluate and develop AI workforce structure, resources, and requirements, including competency framework definition, role design, hiring process management, and team composition for technical depth and cross-functional capability balance.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4833962337662338,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4191221021099245,
+        "cross_encoder_sts": 0.44306704871060176,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3552689111747851,
+        "jaccard": null,
+        "top_element_id": "1004A",
+        "top_element_label": "Knowledge of information technology (IT) acquisition/procurement requirements."
+      },
+      "ddat": {
+        "composite": 0.40582378580323786,
+        "cross_encoder_sts": 0.4483109589041096,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29252465753424656,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4584538720538721,
+        "cross_encoder_sts": 0.4571962962962963,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4618074074074074,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.40591267379679147,
+        "cross_encoder_sts": 0.4328091176470588,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33418882352941176,
+        "jaccard": null,
+        "top_element_id": "K0652",
+        "top_element_label": "Knowledge of workforce trends"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4833962337662338,
+        "cross_encoder_sts": 0.4891457142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4680642857142857,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37982323232323234,
+        "cross_encoder_sts": 0.40974444444444447,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3000333333333333,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4833962337662338
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4584538720538721
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1004A",
+        "element_label": "Knowledge of information technology (IT) acquisition/procurement requirements.",
+        "score": 0.4191221021099245
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0652",
+        "element_label": "Knowledge of workforce trends",
+        "score": 0.40591267379679147
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.40582378580323786
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-T-006 (LS, Task) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4834 is insufficient to establish relevance to quantitative analysis, statistical modeling, and financial analytics at IC-to-senior-IC level. Framework signals (nist_ai_rmf=0.483, eu_ai_act=0.458, dcwf=0.419) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4834 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does LS-domain KSA LS-T-006 (composite 0.4834) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4834 for LS domain does not meet the evidentiary bar for ANL IC-level inclusion per Leadership competencies in IC-to-senior-IC analytics roles are limited to peer influence and technical mentorship, not organizational strategy. External sources confirm this competency is not a standard expectation for Quantitative Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms LS domain KSA at composite 0.4834 is not a standard requirement for Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4834, domain LS, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.180659+00:00",
+    "pipeline_version": "1.0"
+  }
+}

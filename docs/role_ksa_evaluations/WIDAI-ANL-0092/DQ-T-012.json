@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0092",
+  "role_name": "Clinical Data Manager",
+  "ksa_id": "DQ-T-012",
+  "ksa_text": "Operate data quality issue management processes including intake, prioritization, remediation tracking, and closure verification.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.412895374800638,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3837781777506609,
+        "cross_encoder_sts": 0.41965883668903803,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28809642058165547,
+        "jaccard": null,
+        "top_element_id": "1099",
+        "top_element_label": "Skill in analyzing volatile data."
+      },
+      "ddat": {
+        "composite": 0.412895374800638,
+        "cross_encoder_sts": 0.4486982456140351,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31742105263157894,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3674752066115703,
+        "cross_encoder_sts": 0.3906,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3058090909090909,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.38599258431985706,
+        "cross_encoder_sts": 0.4276002457002457,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2750388206388206,
+        "jaccard": null,
+        "top_element_id": "K1071",
+        "top_element_label": "Knowledge of continuous monitoring processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35937954545454553,
+        "cross_encoder_sts": 0.39285000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.270125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.37323181818181816,
+        "cross_encoder_sts": 0.4018,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29705,
+        "jaccard": null,
+        "top_element_id": "4.A.1.a.2",
+        "top_element_label": "Monitoring Processes, Materials, or Surroundings"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.412895374800638
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1071",
+        "element_label": "Knowledge of continuous monitoring processes",
+        "score": 0.38599258431985706
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1099",
+        "element_label": "Skill in analyzing volatile data.",
+        "score": 0.3837781777506609
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.1.a.2",
+        "element_label": "Monitoring Processes, Materials, or Surroundings",
+        "score": 0.37323181818181816
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.3674752066115703
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-T-012 (DQ, Task) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4129 is insufficient to establish relevance to clinical data management, regulatory compliance, and healthcare analytics at IC-to-senior-IC level. Framework signals (ddat=0.413, nice=0.386, dcwf=0.384) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4129 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DQ-domain KSA DQ-T-012 (composite 0.4129) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4129 for DQ domain does not meet the evidentiary bar for ANL IC-level inclusion per DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles. External sources confirm this competency is not a standard expectation for Clinical Data Manager at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DQ domain KSA at composite 0.4129 is not a standard requirement for Clinical Data Manager at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4129, domain DQ, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.645922+00:00",
+    "pipeline_version": "1.0"
+  }
+}

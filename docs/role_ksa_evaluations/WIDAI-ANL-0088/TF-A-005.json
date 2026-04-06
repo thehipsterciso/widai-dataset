@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0088",
+  "role_name": "Senior Data Analyst",
+  "ksa_id": "TF-A-005",
+  "ksa_text": "Ability to perform systems analysis and assessments, analyzing system capabilities, architecture, and technical characteristics across complex environments.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.5536802597402597,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4249776074146119,
+        "cross_encoder_sts": 0.4669876651982379,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31295078665827564,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.44923668543845535,
+        "cross_encoder_sts": 0.5011823008849557,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31071504424778756,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-080",
+        "top_element_label": "Digital and data systems analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.5160172727272728,
+        "cross_encoder_sts": 0.5409400000000001,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4495566666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.41018395379757355,
+        "cross_encoder_sts": 0.45696371115173673,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2854379341864716,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5536802597402597,
+        "cross_encoder_sts": 0.5818257142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47862571428571427,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.1",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.41696776859504137,
+        "cross_encoder_sts": 0.47248181818181817,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2689303030303031,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-2.1",
+        "element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",
+        "score": 0.5536802597402597
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.5160172727272728
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-080",
+        "element_label": "Digital and data systems analysis",
+        "score": 0.44923668543845535
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.4249776074146119
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.41696776859504137
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-A-005 (TF, Ability) maps to Senior Data Analyst scope as moderate fit. Composite score 0.5537 clears the moderate fit threshold of 0.43. Top framework anchors: nist_ai_rmf=0.554, eu_ai_act=0.516, ddat=0.449. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within senior-level analytics and business intelligence."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.5537 for moderate fit domain is consistent with ANL IC-level scope. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA TF-A-005 (TF, composite 0.5537) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "Composite 0.5537 for TF domain provides sufficient cross-framework signal per O*NET 15-2051.00 tools/technology section; DCWF technical foundations competencies for analytics work roles. Strong signal across nist_ai_rmf=0.554, eu_ai_act=0.516, ddat=0.449 indicates genuine competency overlap despite absence of direct analytics terminology. External ground truth upholds inclusion.",
+    "ruling": "P3 include upheld. Score 0.5537 exceeds external evidence threshold for TF domain inclusion in Senior Data Analyst."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.5537, domain TF, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:31.637019+00:00",
+    "pipeline_version": "1.0"
+  }
+}

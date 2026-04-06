@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0089",
+  "role_name": "BI Developer",
+  "ksa_id": "RC-T-012",
+  "ksa_text": "Conduct AI system risk classification under applicable regulatory frameworks, determining risk categories, identifying applicable requirements, selecting conformity assessment pathways, and documenting classification methodology.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.535087779433681,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3980312620495329,
+        "cross_encoder_sts": 0.41993442088091354,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33962283849918434,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.4005653198653199,
+        "cross_encoder_sts": 0.4347592592592593,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3093814814814814,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.535087779433681,
+        "cross_encoder_sts": 0.5297163934426229,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.549411475409836,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-007",
+        "top_element_label": "Registration"
+      },
+      "nice": {
+        "composite": 0.39216442687747033,
+        "cross_encoder_sts": 0.42098405797101446,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31531207729468597,
+        "jaccard": null,
+        "top_element_id": "K0675",
+        "top_element_label": "Knowledge of risk management processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5314822077922077,
+        "cross_encoder_sts": 0.5210928571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5591871428571428,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40042727272727274,
+        "cross_encoder_sts": 0.44235714285714284,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28861428571428577,
+        "jaccard": null,
+        "top_element_id": "2.B.4.h",
+        "top_element_label": "Systems Evaluation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-007",
+        "element_label": "Registration",
+        "score": 0.535087779433681
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5314822077922077
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.4005653198653199
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.4.h",
+        "element_label": "Systems Evaluation",
+        "score": 0.40042727272727274
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.3980312620495329
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RC-T-012 (RC, Task) maps to BI Developer scope as weak fit. Composite score 0.5351 clears the weak fit threshold of 0.52. Top framework anchors: eu_ai_act=0.535, nist_ai_rmf=0.531, ddat=0.401. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within business intelligence development and analytics engineering."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "weak fit domain KSA RC-T-012 with composite 0.5351 was preliminarily included, but the KSA text contains no direct analytics-domain signals. Internal consistency requires this to be re-examined against ANL scope.",
+    "rebuttal": "Composite 0.5351 above the weak_fit threshold of 0.52 but absence of analytics terminology in the RC domain text means the signal is framework-incidental rather than role-specific. Exclusion is more internally consistent with ANL scope definition.",
+    "ruling": "P2 include overturned. RC domain KSA with no analytics text signals at composite 0.5351 does not survive internal consistency review. Revised to exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does RC-domain KSA RC-T-012 (composite 0.5351) appear in published data analyst or BI role profiles?",
+    "evidence": "RC domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per GDPR, CCPA, SOX; compliance competencies in IC ANL scope limited to data handling obligations, not compliance program ownership. Composite 0.5351 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms RC domain KSA at composite 0.5351 is not a standard requirement for BI Developer at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: exclude. Composite 0.5351, domain RC. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:40.150577+00:00",
+    "pipeline_version": "1.0"
+  }
+}

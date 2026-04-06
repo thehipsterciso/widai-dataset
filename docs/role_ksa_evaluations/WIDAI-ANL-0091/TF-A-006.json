@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0091",
+  "role_name": "Performance Analyst",
+  "ksa_id": "TF-A-006",
+  "ksa_text": "Ability to establish and maintain continuous monitoring of system activity, properties, and performance, identifying anomalies and changes.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-A-006 (TF, Ability) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.0000 is insufficient to establish relevance to performance metrics, KPI analysis, and operational reporting at IC-to-senior-IC level. Framework signals () do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.0000 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does TF-domain KSA TF-A-006 (composite 0.0000) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.0000 for TF domain does not meet the evidentiary bar for ANL IC-level inclusion per O*NET 15-2051.00 tools/technology section; DCWF technical foundations competencies for analytics work roles. External sources confirm this competency is not a standard expectation for Performance Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms TF domain KSA at composite 0.0000 is not a standard requirement for Performance Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.0000, domain TF, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.505235+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0087",
+  "role_name": "Data Analyst",
+  "ksa_id": "AB-S-002",
+  "ksa_text": "Skill in querying and extracting data from relational databases, data warehouses, and analytical repositories using SQL and programmatic methods, including writing performant queries against large datasets.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.43288707850013486,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4242296600790514,
+        "cross_encoder_sts": 0.4378286956521739,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3879655652173913,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.4111549242424243,
+        "cross_encoder_sts": 0.43660208333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34329583333333336,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.40965768025078364,
+        "cross_encoder_sts": 0.4352103448275862,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34151724137931033,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.43288707850013486,
+        "cross_encoder_sts": 0.44980118694362015,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3877827893175075,
+        "jaccard": null,
+        "top_element_id": "K1096",
+        "top_element_label": "Knowledge of data analysis tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41326870629370627,
+        "cross_encoder_sts": 0.44898076923076924,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31803653846153845,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4275186602870813,
+        "cross_encoder_sts": 0.4431315789473684,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38588421052631583,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K1096",
+        "element_label": "Knowledge of data analysis tools and techniques",
+        "score": 0.43288707850013486
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.4275186602870813
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.4242296600790514
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41326870629370627
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.4111549242424243
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-S-002 (AB, Skill) maps to Data Analyst scope as strong fit. Composite score 0.4329 clears the strong fit threshold of 0.35. Top framework anchors: nice=0.433, onet=0.428, dcwf=0.424. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within analytics and business intelligence."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4329 for strong fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AB-S-002 (AB, composite 0.4329) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4329 with signal across nice=0.433, onet=0.428, dcwf=0.424 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AB-domain frameworks confirms KSA relevance to Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4329, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:12.161872+00:00",
+    "pipeline_version": "1.0"
+  }
+}

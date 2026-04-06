@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "RM-A-004",
+  "ksa_text": "Ability to develop threat models, analyze threat capabilities and behaviors, and assess threat-to-capability alignment and tactical risk implications.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5259125974025974,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38647370747645593,
+        "cross_encoder_sts": 0.45375644820295985,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20705306553911204,
+        "jaccard": null,
+        "top_element_id": "5877",
+        "top_element_label": "Develop possible solutions for technical risks and limitations of planned tests on AI solutions."
+      },
+      "ddat": {
+        "composite": 0.3970379310344827,
+        "cross_encoder_sts": 0.47531034482758616,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18831149425287355,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-002",
+        "top_element_label": "Adapting to delivery methodologies"
+      },
+      "eu_ai_act": {
+        "composite": 0.4911928925619835,
+        "cross_encoder_sts": 0.5353945454545455,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37332181818181814,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3709170725108225,
+        "cross_encoder_sts": 0.4369416666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1948514880952381,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5259125974025974,
+        "cross_encoder_sts": 0.5676157142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4147042857142857,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-4.2",
+        "top_element_label": "Measurement results are communicated."
+      },
+      "onet": {
+        "composite": 0.3573550802139038,
+        "cross_encoder_sts": 0.4304058823529412,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.16255294117647057,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-4.2",
+        "element_label": "Measurement results are communicated.",
+        "score": 0.5259125974025974
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4911928925619835
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-002",
+        "element_label": "Adapting to delivery methodologies",
+        "score": 0.3970379310344827
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5877",
+        "element_label": "Develop possible solutions for technical risks and limitations of planned tests on AI solutions.",
+        "score": 0.38647370747645593
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3709170725108225
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RM-A-004 (RM, Ability) maps to Quantitative Analyst scope as weak fit. Composite score 0.5259 clears the weak fit threshold of 0.52. Top framework anchors: nist_ai_rmf=0.526, eu_ai_act=0.491, ddat=0.397. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within quantitative analysis, statistical modeling, and financial analytics."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "weak fit domain KSA RM-A-004 with composite 0.5259 was preliminarily included, but the KSA text contains no direct analytics-domain signals. Internal consistency requires this to be re-examined against ANL scope.",
+    "rebuttal": "Composite 0.5259 above the weak_fit threshold of 0.52 but absence of analytics terminology in the RM domain text means the signal is framework-incidental rather than role-specific. Exclusion is more internally consistent with ANL scope definition.",
+    "ruling": "P2 include overturned. RM domain KSA with no analytics text signals at composite 0.5259 does not survive internal consistency review. Revised to exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does RM-domain KSA RM-A-004 (composite 0.5259) appear in published data analyst or BI role profiles?",
+    "evidence": "RM domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per COSO ERM framework; risk competencies in IC ANL scope limited to data risk identification, not enterprise risk management. Composite 0.5259 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms RM domain KSA at composite 0.5259 is not a standard requirement for Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: exclude. Composite 0.5259, domain RM. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.170186+00:00",
+    "pipeline_version": "1.0"
+  }
+}

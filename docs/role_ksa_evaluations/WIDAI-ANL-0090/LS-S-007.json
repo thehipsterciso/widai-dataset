@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "LS-S-007",
+  "ksa_text": "Skill in producing executive-level program status reporting, including milestone tracking, risk registers, budget status, and decision requests.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.41578432601880877,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41141812865497074,
+        "cross_encoder_sts": 0.4184654970760234,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39262514619883043,
+        "jaccard": null,
+        "top_element_id": "162",
+        "top_element_label": "Skill in conducting capabilities and requirements analysis."
+      },
+      "ddat": {
+        "composite": 0.41578432601880877,
+        "cross_encoder_sts": 0.4467689655172414,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3331586206896552,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4047454545454546,
+        "cross_encoder_sts": 0.40152727272727273,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4133272727272727,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-029",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.41390939849624064,
+        "cross_encoder_sts": 0.4344605263157895,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3591063909774436,
+        "jaccard": null,
+        "top_element_id": "K0775",
+        "top_element_label": "Knowledge of information management tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41451818181818184,
+        "cross_encoder_sts": 0.4278088235294118,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3790764705882353,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4041606060606061,
+        "cross_encoder_sts": 0.4147666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3758777777777778,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.41578432601880877
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41451818181818184
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0775",
+        "element_label": "Knowledge of information management tools and techniques",
+        "score": 0.41390939849624064
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "162",
+        "element_label": "Skill in conducting capabilities and requirements analysis.",
+        "score": 0.41141812865497074
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-029",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.4047454545454546
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-S-007 (LS, Skill) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4158 is insufficient to establish relevance to quantitative analysis, statistical modeling, and financial analytics at IC-to-senior-IC level. Framework signals (ddat=0.416, nist_ai_rmf=0.415, nice=0.414) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4158 below threshold for weak fit domain. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does LS-domain KSA LS-S-007 (composite 0.4158) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4158 for LS domain does not meet the evidentiary bar for ANL IC-level inclusion per Leadership competencies in IC-to-senior-IC analytics roles are limited to peer influence and technical mentorship, not organizational strategy. External sources confirm this competency is not a standard expectation for Quantitative Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms LS domain KSA at composite 0.4158 is not a standard requirement for Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4158, domain LS, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.249115+00:00",
+    "pipeline_version": "1.0"
+  }
+}

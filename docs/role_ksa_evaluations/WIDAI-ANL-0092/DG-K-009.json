@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0092",
+  "role_name": "Clinical Data Manager",
+  "ksa_id": "DG-K-009",
+  "ksa_text": "Knowledge of specific data domain context, including business purpose, system sources, consumer use cases, data lineage, and applicable regulatory classifications.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.43472727272727274,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40521946902654865,
+        "cross_encoder_sts": 0.4151938053097345,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3786212389380531,
+        "jaccard": null,
+        "top_element_id": "1036",
+        "top_element_label": "Knowledge of applicable laws (e.g., Electronic Communications Privacy Act, Foreign Intelligence Surveillance Act, Protect America Act, search and seizure laws, civil liberties and privacy laws), statutes (e.g., in Titles 10, 18, 32, 50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures relevant to work performed."
+      },
+      "ddat": {
+        "composite": 0.43472727272727274,
+        "cross_encoder_sts": 0.44980000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3945333333333333,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.39204999999999995,
+        "cross_encoder_sts": 0.384775,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41145,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4231423597678917,
+        "cross_encoder_sts": 0.43526276595744684,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39082127659574467,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38475681818181817,
+        "cross_encoder_sts": 0.401775,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.339375,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-2.2",
+        "top_element_label": "Categorization of the AI system is performed."
+      },
+      "onet": {
+        "composite": 0.35600000000000004,
+        "cross_encoder_sts": 0.39002857142857145,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26525714285714286,
+        "jaccard": null,
+        "top_element_id": "2.C.1.d",
+        "top_element_label": "Sales and Marketing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.43472727272727274
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4231423597678917
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1036",
+        "element_label": "Knowledge of applicable laws (e.g., Electronic Communications Privacy Act, Foreign Intelligence Surveillance Act, Protect America Act, search and seizure laws, civil liberties and privacy laws), statutes (e.g., in Titles 10, 18, 32, 50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures relevant to work performed.",
+        "score": 0.40521946902654865
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.39204999999999995
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-2.2",
+        "element_label": "Categorization of the AI system is performed.",
+        "score": 0.38475681818181817
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-K-009 (DG, Knowledge) maps to Clinical Data Manager scope as moderate fit. Composite score 0.4347 clears the moderate fit threshold of 0.43. Top framework anchors: ddat=0.435, nice=0.423, dcwf=0.405. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within clinical data management, regulatory compliance, and healthcare analytics."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4347 for moderate fit domain is consistent with ANL IC-level scope. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "External validation: does KSA DG-K-009 (DG, composite 0.4347) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "Survey of DAMA DMBOK governance competencies; governance awareness at practitioner level appears in O*NET 15-2051 expanded skill sets does not surface this DG-domain content as a core or common requirement for IC-to-senior-IC data analyst roles. Score 0.4347 may reflect incidental framework overlap. Without direct analytics-domain text confirmation, external ground truth does not support inclusion at this signal level.",
+    "ruling": "P3 include overturned. Insufficient external evidence for DG domain content at composite 0.4347 without confirming text signals. Revised to exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P4 external ground truth. Final decision: exclude. Composite 0.4347, domain DG. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.615271+00:00",
+    "pipeline_version": "1.0"
+  }
+}

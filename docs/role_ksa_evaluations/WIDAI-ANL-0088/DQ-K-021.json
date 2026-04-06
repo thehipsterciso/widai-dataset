@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0088",
+  "role_name": "Senior Data Analyst",
+  "ksa_id": "DQ-K-021",
+  "ksa_text": "Knowledge of data mesh principles and federated data ownership models, including the role of data product thinking, domain ownership boundaries, platform infrastructure, and self-service analytics within decentralized data architectures.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.41884530008826126,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4114019158527423,
+        "cross_encoder_sts": 0.43507582644628096,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3482714876033058,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.41306194805194807,
+        "cross_encoder_sts": 0.44477,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32850714285714283,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.41114242424242425,
+        "cross_encoder_sts": 0.43833333333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33863333333333334,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.41884530008826126,
+        "cross_encoder_sts": 0.44781529126213593,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3415919902912621,
+        "jaccard": null,
+        "top_element_id": "K1247",
+        "top_element_label": "Knowledge of data monitoring tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39543890909090906,
+        "cross_encoder_sts": 0.44046399999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.275372,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.41318863636363634,
+        "cross_encoder_sts": 0.4518375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.310125,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K1247",
+        "element_label": "Knowledge of data monitoring tools and techniques",
+        "score": 0.41884530008826126
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.41318863636363634
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.41306194805194807
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.4114019158527423
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.41114242424242425
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-K-021 (DQ, Knowledge) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4188 is insufficient to establish relevance to senior-level analytics and business intelligence at IC-to-senior-IC level. Framework signals (nice=0.419, onet=0.413, ddat=0.413) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "DQ domain KSA DQ-K-021 excluded at composite 0.4188, but KSA text contains direct analytics-domain signals. Internal consistency: the presence of analytics terminology in a moderate fit KSA at score 0.4188 suggests the threshold is excluding genuinely relevant content.",
+    "rebuttal": "Composite 0.4188 with confirmed analytics-domain terminology for a DQ (moderate fit) KSA indicates real role relevance for Senior Data Analyst. The 0.43 threshold is a calibration heuristic; text-signal confirmation overrides marginal score shortfall at this level.",
+    "ruling": "P2 exclude overturned. DQ KSA with composite 0.4188 and confirmed analytics-domain text signals included on internal consistency grounds."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA DQ-K-021 (DQ, composite 0.4188) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4188 with signal across nice=0.419, onet=0.413, ddat=0.413 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from DQ-domain frameworks confirms KSA relevance to Senior Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: include. Composite 0.4188, domain DQ. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:31.703194+00:00",
+    "pipeline_version": "1.0"
+  }
+}

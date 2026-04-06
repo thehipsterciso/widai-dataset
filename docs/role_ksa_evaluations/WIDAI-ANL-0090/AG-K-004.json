@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "AG-K-004",
+  "ksa_text": "Knowledge of responsible AI principles, their operationalization, and audit methods, including fairness metrics and metric selection, explainability methods and documentation standards, human oversight requirements and protocols, AI impact assessment methodologies, and bias test design.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.55531,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42513104950974456,
+        "cross_encoder_sts": 0.4427656458055925,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37810545938748336,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.37703078149920255,
+        "cross_encoder_sts": 0.4081561403508772,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2940298245614035,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-035",
+        "top_element_label": "Community collaboration"
+      },
+      "eu_ai_act": {
+        "composite": 0.5546703030303031,
+        "cross_encoder_sts": 0.5417816666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.58904,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4279894218684541,
+        "cross_encoder_sts": 0.4644433179723502,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3307790322580645,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.55531,
+        "cross_encoder_sts": 0.5390457142857142,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5986814285714286,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.9",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.40599870129870136,
+        "cross_encoder_sts": 0.4377071428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3214428571428572,
+        "jaccard": null,
+        "top_element_id": "2.C.1.d",
+        "top_element_label": "Sales and Marketing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.9",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.55531
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.5546703030303031
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4279894218684541
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.42513104950974456
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.d",
+        "element_label": "Sales and Marketing",
+        "score": 0.40599870129870136
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AG-K-004 (AG, Knowledge) maps to Quantitative Analyst scope as weak fit. Composite score 0.5553 clears the weak fit threshold of 0.52. Top framework anchors: nist_ai_rmf=0.555, eu_ai_act=0.555, nice=0.428. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within quantitative analysis, statistical modeling, and financial analytics."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.5553 for weak fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AG-K-004 (AG, composite 0.5553) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with NIST AI RMF; EU AI Act governance obligations; governance competencies are primarily above IC ANL scope. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.5553 with signal across nist_ai_rmf=0.555, eu_ai_act=0.555, nice=0.428 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AG-domain frameworks confirms KSA relevance to Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.5553, domain AG, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.165510+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0051",
+  "role_name": "Data Scientist",
+  "ksa_id": "RM-S-004",
+  "ksa_text": "Skill in designing comprehensive AI test plans covering functional performance, fairness, robustness, safety, and operational requirements, with defined pass/fail criteria for each dimension.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.518257839262187,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41122775263951733,
+        "cross_encoder_sts": 0.4447173453996983,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3219221719457014,
+        "jaccard": null,
+        "top_element_id": "1005",
+        "top_element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
+      },
+      "ddat": {
+        "composite": 0.3758117988394584,
+        "cross_encoder_sts": 0.4225914893617021,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25106595744680854,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.5108140495867768,
+        "cross_encoder_sts": 0.523310909090909,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4774890909090909,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4027753643303262,
+        "cross_encoder_sts": 0.4441793893129771,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.292364631043257,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.518257839262187,
+        "cross_encoder_sts": 0.5314289855072464,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4831347826086957,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-1.6",
+        "top_element_label": "Context is established and understood."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-1.6",
+        "element_label": "Context is established and understood.",
+        "score": 0.518257839262187
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.5108140495867768
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1005",
+        "element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes).",
+        "score": 0.41122775263951733
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0655",
+        "element_label": "Knowledge of intelligence fusion",
+        "score": 0.4027753643303262
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.3758117988394584
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-S-004 (Risk Management/Skill) is excluded as out_of_scope (composite 0.518, highest: NIST AI RMF at 0.518). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk Management at this signal level does not meet inclusion threshold for Data Scientist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.518, and Risk Management (RM) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk Management KSA (composite 0.518)?",
+    "evidence": "Market analysis does not surface this Risk Management competency as a standard Data Scientist requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-S-004 (Risk Management/Skill) is excluded as out_of_scope (composite 0.518, highest: NIST AI RMF at 0.518). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk Management at this signal level does not meet inclusion threshold for Data Scientist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:13:22.028608+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0092",
+  "role_name": "Clinical Data Manager",
+  "ksa_id": "AB-K-018",
+  "ksa_text": "Knowledge of reporting and information management practices, including reporting standards and procedures, information management principles, content lifecycle management, and the design of systematic reporting processes.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AB-K-018 (AB, Knowledge) does not clear the strong fit inclusion threshold of 0.35. Composite score 0.0000 is insufficient to establish relevance to clinical data management, regulatory compliance, and healthcare analytics at IC-to-senior-IC level. Framework signals () do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.0000 below threshold for strong fit domain. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does AB-domain KSA AB-K-018 (composite 0.0000) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.0000 for AB domain does not meet the evidentiary bar for ANL IC-level inclusion per O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. External sources confirm this competency is not a standard expectation for Clinical Data Manager at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms AB domain KSA at composite 0.0000 is not a standard requirement for Clinical Data Manager at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.0000, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.739648+00:00",
+    "pipeline_version": "1.0"
+  }
+}

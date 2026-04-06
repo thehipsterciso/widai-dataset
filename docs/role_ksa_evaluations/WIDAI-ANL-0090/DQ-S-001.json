@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "DQ-S-001",
+  "ksa_text": "Skill in designing and implementing data quality measurement programs, including profiling, metrics definition, scoring methodologies, and quantification of business impact.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.42376268939393935,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4065952380952381,
+        "cross_encoder_sts": 0.4302430641821946,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3435343685300207,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.41100792207792214,
+        "cross_encoder_sts": 0.4576271428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28669,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4100341692789969,
+        "cross_encoder_sts": 0.4401413793103448,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32974827586206895,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4097256598240469,
+        "cross_encoder_sts": 0.42986612903225807,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35601774193548386,
+        "jaccard": null,
+        "top_element_id": "K0723",
+        "top_element_label": "Knowledge of vulnerability data sources"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.42376268939393935,
+        "cross_encoder_sts": 0.46500416666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31378541666666665,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.7",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39388181818181817,
+        "cross_encoder_sts": 0.42722,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30498,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.7",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.42376268939393935
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.41100792207792214
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4100341692789969
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0723",
+        "element_label": "Knowledge of vulnerability data sources",
+        "score": 0.4097256598240469
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.4065952380952381
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-S-001 (DQ, Skill) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4238 is insufficient to establish relevance to quantitative analysis, statistical modeling, and financial analytics at IC-to-senior-IC level. Framework signals (nist_ai_rmf=0.424, ddat=0.411, eu_ai_act=0.410) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "DQ domain KSA DQ-S-001 excluded at composite 0.4238, but KSA text contains direct analytics-domain signals. Internal consistency: the presence of analytics terminology in a moderate fit KSA at score 0.4238 suggests the threshold is excluding genuinely relevant content.",
+    "rebuttal": "Composite 0.4238 with confirmed analytics-domain terminology for a DQ (moderate fit) KSA indicates real role relevance for Quantitative Analyst. The 0.43 threshold is a calibration heuristic; text-signal confirmation overrides marginal score shortfall at this level.",
+    "ruling": "P2 exclude overturned. DQ KSA with composite 0.4238 and confirmed analytics-domain text signals included on internal consistency grounds."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA DQ-S-001 (DQ, composite 0.4238) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4238 with signal across nist_ai_rmf=0.424, ddat=0.411, eu_ai_act=0.410 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from DQ-domain frameworks confirms KSA relevance to Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: include. Composite 0.4238, domain DQ. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.230742+00:00",
+    "pipeline_version": "1.0"
+  }
+}

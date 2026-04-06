@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0087",
+  "role_name": "Data Analyst",
+  "ksa_id": "AI-S-012",
+  "ksa_text": "Skill in preparing image and video datasets for model training, including annotation pipeline design, quality control, augmentation strategy, and train/validation split construction.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.41720371057513916,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39193338910578174,
+        "cross_encoder_sts": 0.4374124744376278,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2706558282208589,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.374352766798419,
+        "cross_encoder_sts": 0.42877608695652175,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22922391304347825,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-049",
+        "top_element_label": "Data development process"
+      },
+      "eu_ai_act": {
+        "composite": 0.40924903581267214,
+        "cross_encoder_sts": 0.4476969696969697,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3067212121212121,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-005",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.39262442407728515,
+        "cross_encoder_sts": 0.43939209809264307,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26791062670299726,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41720371057513916,
+        "cross_encoder_sts": 0.4470795918367347,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33753469387755103,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3802545454545454,
+        "cross_encoder_sts": 0.424,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2636,
+        "jaccard": null,
+        "top_element_id": "2.B.3.m",
+        "top_element_label": "Quality Control Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41720371057513916
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-005",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.40924903581267214
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.39262442407728515
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.39193338910578174
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.m",
+        "element_label": "Quality Control Analysis",
+        "score": 0.3802545454545454
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-S-012 (AI, Skill) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4172 is insufficient to establish relevance to analytics and business intelligence at IC-to-senior-IC level. Framework signals (nist_ai_rmf=0.417, eu_ai_act=0.409, nice=0.393) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4172 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does AI-domain KSA AI-S-012 (composite 0.4172) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4172 for AI domain does not meet the evidentiary bar for ANL IC-level inclusion per NIST AI RMF; EU AI Act practitioner obligations; AI-adjacent competencies appear in senior analytics IC roles at awareness level only. External sources confirm this competency is not a standard expectation for Data Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms AI domain KSA at composite 0.4172 is not a standard requirement for Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4172, domain AI, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:12.180410+00:00",
+    "pipeline_version": "1.0"
+  }
+}

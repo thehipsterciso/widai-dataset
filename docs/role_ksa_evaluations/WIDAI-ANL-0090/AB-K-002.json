@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "AB-K-002",
+  "ksa_text": "Knowledge of sampling methodology, including probability and non-probability sampling designs, sample size determination, margin of error calculation, representativeness assessment, and the impact of sampling choices on analytical validity.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.3995317016317016,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3859208532695375,
+        "cross_encoder_sts": 0.41658377192982454,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30415307017543863,
+        "jaccard": null,
+        "top_element_id": "120",
+        "top_element_label": "Knowledge of sources, characteristics, and uses of the organization\u2019s data assets."
+      },
+      "ddat": {
+        "composite": 0.3995317016317016,
+        "cross_encoder_sts": 0.4298435897435897,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3187,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-011",
+        "top_element_label": "Applied maths, statistics and scientific practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.3667424242424242,
+        "cross_encoder_sts": 0.4082333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2561,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3985792561983471,
+        "cross_encoder_sts": 0.4363445454545455,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2978718181818182,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.32630757575757574,
+        "cross_encoder_sts": 0.36956666666666665,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21095,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.35319886363636366,
+        "cross_encoder_sts": 0.3756375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29336249999999997,
+        "jaccard": null,
+        "top_element_id": "2.C.6",
+        "top_element_label": "Education and Training"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-011",
+        "element_label": "Applied maths, statistics and scientific practices",
+        "score": 0.3995317016317016
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.3985792561983471
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "120",
+        "element_label": "Knowledge of sources, characteristics, and uses of the organization\u2019s data assets.",
+        "score": 0.3859208532695375
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.3667424242424242
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.6",
+        "element_label": "Education and Training",
+        "score": 0.35319886363636366
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-K-002 (AB, Knowledge) maps to Quantitative Analyst scope as strong fit. Composite score 0.3995 clears the strong fit threshold of 0.35. Top framework anchors: ddat=0.400, nice=0.399, dcwf=0.386. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within quantitative analysis, statistical modeling, and financial analytics."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.3995 for strong fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AB-K-002 (AB, composite 0.3995) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.3995 with signal across ddat=0.400, nice=0.399, dcwf=0.386 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AB-domain frameworks confirms KSA relevance to Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.3995, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.267169+00:00",
+    "pipeline_version": "1.0"
+  }
+}

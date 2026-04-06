@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0088",
+  "role_name": "Senior Data Analyst",
+  "ksa_id": "RM-S-008",
+  "ksa_text": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.568804935064935,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42256780017368245,
+        "cross_encoder_sts": 0.46481784816490695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3099010055304173,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.42838759630200307,
+        "cross_encoder_sts": 0.4710601694915254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3145940677966102,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.525045,
+        "cross_encoder_sts": 0.548265,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.463125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-011",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.4118502049847075,
+        "cross_encoder_sts": 0.4581776664280601,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2883103078024338,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.568804935064935,
+        "cross_encoder_sts": 0.5874442857142856,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5191,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4069490909090908,
+        "cross_encoder_sts": 0.44372799999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.308872,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.568804935064935
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-011",
+        "element_label": "Record-keeping",
+        "score": 0.525045
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.42838759630200307
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.42256780017368245
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4118502049847075
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RM-S-008 (RM, Skill) maps to Senior Data Analyst scope as weak fit. Composite score 0.5688 clears the weak fit threshold of 0.52. Top framework anchors: nist_ai_rmf=0.569, eu_ai_act=0.525, ddat=0.428. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within senior-level analytics and business intelligence."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "weak fit domain KSA RM-S-008 with composite 0.5688 was preliminarily included, but the KSA text contains no direct analytics-domain signals. Internal consistency requires this to be re-examined against ANL scope.",
+    "rebuttal": "Composite 0.5688 above the weak_fit threshold of 0.52 but absence of analytics terminology in the RM domain text means the signal is framework-incidental rather than role-specific. Exclusion is more internally consistent with ANL scope definition.",
+    "ruling": "P2 include overturned. RM domain KSA with no analytics text signals at composite 0.5688 does not survive internal consistency review. Revised to exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does RM-domain KSA RM-S-008 (composite 0.5688) appear in published data analyst or BI role profiles?",
+    "evidence": "RM domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per COSO ERM framework; risk competencies in IC ANL scope limited to data risk identification, not enterprise risk management. Composite 0.5688 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms RM domain KSA at composite 0.5688 is not a standard requirement for Senior Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: exclude. Composite 0.5688, domain RM. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:31.635997+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "TF-S-003",
+  "ksa_text": "Skill in translating business metric definitions from domain stakeholders into precise, unambiguous SQL logic with documented assumptions and edge case handling.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.422981038961039,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3879109917355372,
+        "cross_encoder_sts": 0.42107818181818185,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2994651515151515,
+        "jaccard": null,
+        "top_element_id": "102",
+        "top_element_label": "Knowledge of programming language structures and logic."
+      },
+      "ddat": {
+        "composite": 0.422981038961039,
+        "cross_encoder_sts": 0.4663571428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30731142857142857,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.3625712121212121,
+        "cross_encoder_sts": 0.39176666666666665,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2847166666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-007",
+        "top_element_label": "Registration"
+      },
+      "nice": {
+        "composite": 0.3842739764052741,
+        "cross_encoder_sts": 0.42190076335877863,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2839358778625954,
+        "jaccard": null,
+        "top_element_id": "K0068",
+        "top_element_label": "Knowledge of programming language structures and logic"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3746648484848485,
+        "cross_encoder_sts": 0.41930666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25562,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4013227272727273,
+        "cross_encoder_sts": 0.4408,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29605,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.422981038961039
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.4013227272727273
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "102",
+        "element_label": "Knowledge of programming language structures and logic.",
+        "score": 0.3879109917355372
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0068",
+        "element_label": "Knowledge of programming language structures and logic",
+        "score": 0.3842739764052741
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-5.2",
+        "element_label": "Processes are in place for robust engagement with relevant AI actors.",
+        "score": 0.3746648484848485
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-S-003 (TF, Skill) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4230 is insufficient to establish relevance to quantitative analysis, statistical modeling, and financial analytics at IC-to-senior-IC level. Framework signals (ddat=0.423, onet=0.401, dcwf=0.388) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "TF domain KSA TF-S-003 excluded at composite 0.4230, but KSA text contains direct analytics-domain signals. Internal consistency: the presence of analytics terminology in a moderate fit KSA at score 0.4230 suggests the threshold is excluding genuinely relevant content.",
+    "rebuttal": "Composite 0.4230 with confirmed analytics-domain terminology for a TF (moderate fit) KSA indicates real role relevance for Quantitative Analyst. The 0.43 threshold is a calibration heuristic; text-signal confirmation overrides marginal score shortfall at this level.",
+    "ruling": "P2 exclude overturned. TF KSA with composite 0.4230 and confirmed analytics-domain text signals included on internal consistency grounds."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA TF-S-003 (TF, composite 0.4230) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 tools/technology section; DCWF technical foundations competencies for analytics work roles. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4230 with signal across ddat=0.423, onet=0.401, dcwf=0.388 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from TF-domain frameworks confirms KSA relevance to Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: include. Composite 0.4230, domain TF. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.236093+00:00",
+    "pipeline_version": "1.0"
+  }
+}

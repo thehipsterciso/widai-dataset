@@ -1,0 +1,119 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0125",
+  "role_name": "Data and AI Program Manager",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:14:41.042225+00:00",
+  "total_ksas": 1069,
+  "included": 30,
+  "excluded": 1039,
+  "inclusion_rate": 0.0281,
+  "calibration": {
+    "min": 80,
+    "max": 160,
+    "status": "out_of_range"
+  },
+  "pass_1_notes": "6 frameworks: dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet.",
+  "role_scope_notes": "Data and AI Program Manager \u2014 mid-to-senior manager. Core: program/project management of data/AI initiatives, stakeholder alignment, delivery governance, roadmap ownership, risk/issue management, budget oversight, cross-functional coordination. Extends into LS (leadership) and DG (governance coordination). NOT C-suite strategy setting; NOT individual technical execution.",
+  "domain_summary": {
+    "TF": {
+      "include": 0,
+      "exclude": 87,
+      "total": 87,
+      "label": "Technology Fundamentals"
+    },
+    "DA": {
+      "include": 0,
+      "exclude": 93,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 0,
+      "exclude": 82,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "DG": {
+      "include": 0,
+      "exclude": 92,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "SP": {
+      "include": 0,
+      "exclude": 84,
+      "total": 84,
+      "label": "Security & Privacy"
+    },
+    "AI": {
+      "include": 0,
+      "exclude": 103,
+      "total": 103,
+      "label": "AI & ML Infrastructure"
+    },
+    "AG": {
+      "include": 0,
+      "exclude": 107,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 0,
+      "exclude": 74,
+      "total": 74,
+      "label": "Risk & Compliance"
+    },
+    "RM": {
+      "include": 0,
+      "exclude": 101,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 23,
+      "exclude": 66,
+      "total": 89,
+      "label": "Leadership & Strategy"
+    },
+    "OP": {
+      "include": 7,
+      "exclude": 62,
+      "total": 69,
+      "label": "Operations & Program Management"
+    },
+    "AB": {
+      "include": 0,
+      "exclude": 88,
+      "total": 88,
+      "label": "Analytics & BI"
+    }
+  },
+  "dimension_summary": {
+    "Skill": {
+      "include": 10,
+      "exclude": 318
+    },
+    "Task": {
+      "include": 9,
+      "exclude": 238
+    },
+    "Knowledge": {
+      "include": 9,
+      "exclude": 272
+    },
+    "Ability": {
+      "include": 2,
+      "exclude": 211
+    }
+  },
+  "score_analysis": {
+    "avg_composite_included": 0.2526,
+    "avg_composite_excluded": 0.2082
+  },
+  "adversarial_overturns": {
+    "pass_3": 0,
+    "pass_4": 0,
+    "total_ksas_affected": 0
+  }
+}

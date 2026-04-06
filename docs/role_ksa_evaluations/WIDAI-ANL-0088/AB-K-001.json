@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0088",
+  "role_name": "Senior Data Analyst",
+  "ksa_id": "AB-K-001",
+  "ksa_text": "Knowledge of statistical foundations, including descriptive statistics, inferential statistics, probability theory, distributions, hypothesis testing, confidence intervals, and the distinction between statistical significance and practical significance.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4073425619834711,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39573722943722944,
+        "cross_encoder_sts": 0.4223202380952381,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32484920634920633,
+        "jaccard": null,
+        "top_element_id": "108",
+        "top_element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+      },
+      "ddat": {
+        "composite": 0.4073425619834711,
+        "cross_encoder_sts": 0.4484090909090909,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2978318181818182,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.36435757575757577,
+        "cross_encoder_sts": 0.40926666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2446,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-007",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4022744588744589,
+        "cross_encoder_sts": 0.44176190476190474,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29697460317460317,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3344828282828283,
+        "cross_encoder_sts": 0.38482222222222223,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20024444444444445,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.4",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.4071818181818182,
+        "cross_encoder_sts": 0.4238571428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3627142857142857,
+        "jaccard": null,
+        "top_element_id": "2.C.4.a",
+        "top_element_label": "Mathematics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4073425619834711
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.4.a",
+        "element_label": "Mathematics",
+        "score": 0.4071818181818182
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4022744588744589
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "108",
+        "element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk).",
+        "score": 0.39573722943722944
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-007",
+        "element_label": "Data and data governance",
+        "score": 0.36435757575757577
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-K-001 (AB, Knowledge) maps to Senior Data Analyst scope as strong fit. Composite score 0.4073 clears the strong fit threshold of 0.35. Top framework anchors: ddat=0.407, onet=0.407, nice=0.402. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within senior-level analytics and business intelligence."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4073 for strong fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AB-K-001 (AB, composite 0.4073) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4073 with signal across ddat=0.407, onet=0.407, nice=0.402 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AB-domain frameworks confirms KSA relevance to Senior Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4073, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:31.719428+00:00",
+    "pipeline_version": "1.0"
+  }
+}

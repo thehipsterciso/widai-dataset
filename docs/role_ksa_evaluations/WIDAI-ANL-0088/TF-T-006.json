@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0088",
+  "role_name": "Senior Data Analyst",
+  "ksa_id": "TF-T-006",
+  "ksa_text": "Configure and manage development, staging, and production environments including environment configuration, dependency specification, secrets management, and environment parity maintenance.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.40988784227820374,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40988784227820374,
+        "cross_encoder_sts": 0.44115783132530123,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3265012048192771,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.40754562607204114,
+        "cross_encoder_sts": 0.4432188679245283,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31241698113207544,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.37474545454545455,
+        "cross_encoder_sts": 0.41804615384615385,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25927692307692307,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-013",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.39623874948580834,
+        "cross_encoder_sts": 0.4346719457013575,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29375022624434394,
+        "jaccard": null,
+        "top_element_id": "K0711",
+        "top_element_label": "Knowledge of evaluation and validation principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3713636363636364,
+        "cross_encoder_sts": 0.4198571428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24204761904761907,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-1.6",
+        "top_element_label": "Context is established and understood."
+      },
+      "onet": {
+        "composite": 0.4077219696969697,
+        "cross_encoder_sts": 0.44608333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.305425,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.40988784227820374
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.4077219696969697
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.40754562607204114
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0711",
+        "element_label": "Knowledge of evaluation and validation principles and practices",
+        "score": 0.39623874948580834
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-013",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.37474545454545455
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-T-006 (TF, Task) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4099 is insufficient to establish relevance to senior-level analytics and business intelligence at IC-to-senior-IC level. Framework signals (dcwf=0.410, onet=0.408, ddat=0.408) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4099 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does TF-domain KSA TF-T-006 (composite 0.4099) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4099 for TF domain does not meet the evidentiary bar for ANL IC-level inclusion per O*NET 15-2051.00 tools/technology section; DCWF technical foundations competencies for analytics work roles. External sources confirm this competency is not a standard expectation for Senior Data Analyst at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms TF domain KSA at composite 0.4099 is not a standard requirement for Senior Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4099, domain TF, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:31.715973+00:00",
+    "pipeline_version": "1.0"
+  }
+}

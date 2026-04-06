@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0051",
+  "role_name": "Data Scientist",
+  "ksa_id": "RM-K-013",
+  "ksa_text": "Knowledge of AI risk governance and organizational structures, including defining AI risk management roles and responsibilities, establishing governance frameworks, and integrating risk management into organizational decision-making.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "too_senior",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-K-013 (Risk Management/Knowledge) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Core signal: 0, OOS signals: 1, seniority: too_senior. Risk Management at this signal level does not meet inclusion threshold for Data Scientist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.000, and Risk Management (RM) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Zero-signal exclusion: does absence of framework signal confirm irrelevance?",
+    "evidence": "Composite 0.0 across 6 frameworks confirms no semantic alignment with any reference element.",
+    "ruling": "Exclusion upheld. Zero framework signal confirmed by market absence. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-K-013 (Risk Management/Knowledge) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Core signal: 0, OOS signals: 1, seniority: too_senior. Risk Management at this signal level does not meet inclusion threshold for Data Scientist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:13:22.253361+00:00",
+    "pipeline_version": "1.0"
+  }
+}

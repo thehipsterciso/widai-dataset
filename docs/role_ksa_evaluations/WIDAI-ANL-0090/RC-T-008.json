@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0090",
+  "role_name": "Quantitative Analyst",
+  "ksa_id": "RC-T-008",
+  "ksa_text": "Monitor regulatory developments, enforcement actions, and supervisory guidance relevant to organizational data and AI activities, producing impact assessments and management recommendations.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4886493066255778,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4251937824675325,
+        "cross_encoder_sts": 0.4352717857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3983191071428571,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.4363356643356644,
+        "cross_encoder_sts": 0.4623596153846154,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36693846153846155,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4658162790697674,
+        "cross_encoder_sts": 0.4556790697674419,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4928488372093023,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41880230566534915,
+        "cross_encoder_sts": 0.4334170289855072,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37982971014492756,
+        "jaccard": null,
+        "top_element_id": "K0748",
+        "top_element_label": "Knowledge of Privacy Impact Assessment (PIA) principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4886493066255778,
+        "cross_encoder_sts": 0.4870864406779661,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49281694915254237,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.41929197860962564,
+        "cross_encoder_sts": 0.4451705882352941,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35028235294117643,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4886493066255778
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4658162790697674
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4363356643356644
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.4251937824675325
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.41929197860962564
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-T-008 (RC, Task) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4886 is insufficient to establish relevance to quantitative analysis, statistical modeling, and financial analytics at IC-to-senior-IC level. Framework signals (nist_ai_rmf=0.489, eu_ai_act=0.466, ddat=0.436) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4886 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does RC-domain KSA RC-T-008 (composite 0.4886) appear in published data analyst or BI role profiles?",
+    "evidence": "RC domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per GDPR, CCPA, SOX; compliance competencies in IC ANL scope limited to data handling obligations, not compliance program ownership. Composite 0.4886 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms RC domain KSA at composite 0.4886 is not a standard requirement for Quantitative Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4886, domain RC, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:15:33.179700+00:00",
+    "pipeline_version": "1.0"
+  }
+}

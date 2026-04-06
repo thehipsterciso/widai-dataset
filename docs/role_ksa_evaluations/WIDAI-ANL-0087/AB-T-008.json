@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0087",
+  "role_name": "Data Analyst",
+  "ksa_id": "AB-T-008",
+  "ksa_text": "Deploy, operate, and maintain continuous monitoring and alerting systems for analytical environments, including configuring telemetry, performing monitoring data assessments, triaging triggered events, and coordinating incident response.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4175055658627087,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3864930855161788,
+        "cross_encoder_sts": 0.4149629237288136,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31057351694915253,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4175055658627087,
+        "cross_encoder_sts": 0.44339183673469384,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34847551020408163,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-042",
+        "top_element_label": "Customer service management"
+      },
+      "eu_ai_act": {
+        "composite": 0.37227777777777776,
+        "cross_encoder_sts": 0.4109333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2691962962962963,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.37508904573687185,
+        "cross_encoder_sts": 0.4056658385093168,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2935509316770186,
+        "jaccard": null,
+        "top_element_id": "K0704",
+        "top_element_label": "Knowledge of database management system (DBMS) principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3710224025974026,
+        "cross_encoder_sts": 0.4097642857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2677107142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3670209090909091,
+        "cross_encoder_sts": 0.40046,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27785000000000004,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.6",
+        "top_element_label": "Information Ordering"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-042",
+        "element_label": "Customer service management",
+        "score": 0.4175055658627087
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.3864930855161788
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0704",
+        "element_label": "Knowledge of database management system (DBMS) principles and practices",
+        "score": 0.37508904573687185
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.37227777777777776
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3710224025974026
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-T-008 (AB, Task) maps to Data Analyst scope as strong fit. Composite score 0.4175 clears the strong fit threshold of 0.35. Top framework anchors: ddat=0.418, dcwf=0.386, nice=0.375. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within analytics and business intelligence."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4175 for strong fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AB-T-008 (AB, composite 0.4175) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4175 with signal across ddat=0.418, dcwf=0.386, nice=0.375 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AB-domain frameworks confirms KSA relevance to Data Analyst at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4175, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:14:12.180249+00:00",
+    "pipeline_version": "1.0"
+  }
+}
