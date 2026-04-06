@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0022",
+  "role_name": "Federated Governance Group Representative",
+  "ksa_id": "AI-S-004",
+  "ksa_text": "Skill in communicating model findings and limitations to non-technical business stakeholders in terms of business impact rather than technical metrics.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4086375921375921,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.388855744949495,
+        "cross_encoder_sts": 0.4073638888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3395006944444445,
+        "jaccard": null,
+        "top_element_id": "187",
+        "top_element_label": "Skill in developing data models."
+      },
+      "ddat": {
+        "composite": 0.4086375921375921,
+        "cross_encoder_sts": 0.4446486486486486,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3126081081081081,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-021",
+        "top_element_label": "Business modelling"
+      },
+      "eu_ai_act": {
+        "composite": 0.36648311688311686,
+        "cross_encoder_sts": 0.40392857142857136,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26662857142857144,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-042",
+        "top_element_label": "Obligations for providers of general-purpose AI models"
+      },
+      "nice": {
+        "composite": 0.4054573426573426,
+        "cross_encoder_sts": 0.42515384615384616,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3529333333333333,
+        "jaccard": null,
+        "top_element_id": "S0029",
+        "top_element_label": "Skill in developing data models"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38514326018808775,
+        "cross_encoder_sts": 0.4119758620689655,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3135896551724138,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.2",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.3761909090909091,
+        "cross_encoder_sts": 0.42279999999999995,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2519,
+        "jaccard": null,
+        "top_element_id": "2.A.1.d",
+        "top_element_label": "Speaking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-021",
+        "element_label": "Business modelling",
+        "score": 0.4086375921375921
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0029",
+        "element_label": "Skill in developing data models",
+        "score": 0.4054573426573426
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "187",
+        "element_label": "Skill in developing data models.",
+        "score": 0.388855744949495
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.2",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.38514326018808775
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.d",
+        "element_label": "Speaking",
+        "score": 0.3761909090909091
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low affinity (0.45) for Federated Governance Group Representative, and the text \u2014 'Skill in communicating model findings and limitations to non-technical business stakeholders in term...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is moderate-to-strong (0.4086)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Federated Governance Group Representative whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low affinity (0.45) for Federated Governance Group Representative, and the text \u2014 'Skill in communicating model findings and limitations to non-technical business stakeholders in term...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is moderate-to-strong (0.4086).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:12.747100Z",
+    "pipeline_version": "1.0"
+  }
+}

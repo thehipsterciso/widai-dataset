@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0023",
+  "role_name": "Data Officer (Federal/DoD)",
+  "ksa_id": "RC-T-002",
+  "ksa_text": "Author, maintain, and enforce enterprise data policies and procedures, ensuring alignment with privacy regulations, internal standards, and regulatory compliance requirements across the organization.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4668272727272727,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4339752392344498,
+        "cross_encoder_sts": 0.43027171052631585,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4438513157894737,
+        "jaccard": null,
+        "top_element_id": "1027A",
+        "top_element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy."
+      },
+      "ddat": {
+        "composite": 0.4372735064935065,
+        "cross_encoder_sts": 0.46846571428571426,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3540942857142857,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4248613636363636,
+        "cross_encoder_sts": 0.430575,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.409625,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-009",
+        "top_element_label": "Technical documentation"
+      },
+      "nice": {
+        "composite": 0.4309065656565656,
+        "cross_encoder_sts": 0.4222361111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.45402777777777775,
+        "jaccard": null,
+        "top_element_id": "S0455",
+        "top_element_label": "Skill in integrating authorizations with requirements"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4668272727272727,
+        "cross_encoder_sts": 0.4662,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4685,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3801212121212121,
+        "cross_encoder_sts": 0.3774666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3872,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4668272727272727
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4372735064935065
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1027A",
+        "element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy.",
+        "score": 0.4339752392344498
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0455",
+        "element_label": "Skill in integrating authorizations with requirements",
+        "score": 0.4309065656565656
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-009",
+        "element_label": "Technical documentation",
+        "score": 0.4248613636363636
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to Data Officer (Federal/DoD) scope \u2014 GOV-specific signals detected (\"data polic\", \"regulatory   :compliance|requirement|obligation|framework|reporting\"). STRM composite is strong (0.4668). Domain Risk & Compliance (affinity 0.85) is a natural fit for this governance role. Seniority is appropriate for manager-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 3 job-posting-level and 0 certification-level matches (CDMP, DAMA, IAPP, NIST AI RMF, ISO 42001). Competency appears regularly in Data Officer (Federal/DoD) role descriptions and/or governance certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to Data Officer (Federal/DoD) scope \u2014 GOV-specific signals detected (\"data polic\", \"regulatory   :compliance|requirement|obligation|framework|reporting\"). STRM composite is strong (0.4668). Domain Risk & Compliance (affinity 0.85) is a natural fit for this governance role. Seniority is appropriate for manager-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:13.733640Z",
+    "pipeline_version": "1.0"
+  }
+}

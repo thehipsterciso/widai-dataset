@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0022",
+  "role_name": "Federated Governance Group Representative",
+  "ksa_id": "OP-T-005",
+  "ksa_text": "Manage data management systems and infrastructure, including data requirements definition, standards implementation, data administration, test data management, database management, and data governance policies.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.4732907734056987,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41129105976896024,
+        "cross_encoder_sts": 0.4379611878453038,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3401707182320442,
+        "jaccard": null,
+        "top_element_id": "1037B",
+        "top_element_label": "Knowledge of program protection planning to include information technology (IT) supply chain security/risk management policies, anti-tampering techniques, and requirements."
+      },
+      "ddat": {
+        "composite": 0.43783598484848485,
+        "cross_encoder_sts": 0.4632041666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3701875,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-013",
+        "top_element_label": "Applying statistical and analytical tools and techniques"
+      },
+      "eu_ai_act": {
+        "composite": 0.437879020979021,
+        "cross_encoder_sts": 0.4418403846153846,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42731538461538465,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.40016646535282896,
+        "cross_encoder_sts": 0.4416625874125874,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28951013986013985,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4732907734056987,
+        "cross_encoder_sts": 0.47915074626865667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4576641791044776,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36784595959595956,
+        "cross_encoder_sts": 0.4046444444444444,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26971666666666666,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4732907734056987
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.437879020979021
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-013",
+        "element_label": "Applying statistical and analytical tools and techniques",
+        "score": 0.43783598484848485
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1037B",
+        "element_label": "Knowledge of program protection planning to include information technology (IT) supply chain security/risk management policies, anti-tampering techniques, and requirements.",
+        "score": 0.41129105976896024
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0655",
+        "element_label": "Knowledge of intelligence fusion",
+        "score": 0.40016646535282896
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to Federated Governance Group Representative scope \u2014 GOV-specific signals detected (\"data governance\", \"governance polic\"). STRM composite is strong (0.4733). Domain Operations & Program Management (affinity 0.65) is a natural fit for this governance role. Seniority is appropriate for manager-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 2 job-posting-level and 1 certification-level matches (CDMP, DAMA, IAPP, NIST AI RMF, ISO 42001). Competency appears regularly in Federated Governance Group Representative role descriptions and/or governance certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to Federated Governance Group Representative scope \u2014 GOV-specific signals detected (\"data governance\", \"governance polic\"). STRM composite is strong (0.4733). Domain Operations & Program Management (affinity 0.65) is a natural fit for this governance role. Seniority is appropriate for manager-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:12.333238Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0024",
+  "role_name": "Evaluation Officer",
+  "ksa_id": "DA-S-009",
+  "ksa_text": "Skill in designing and implementing automated data pipeline testing, including unit tests for transformations, integration tests for end-to-end data flows, and regression testing for schema and data quality changes.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.43916386363636367,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4076597772188286,
+        "cross_encoder_sts": 0.45472830039525697,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28214371541501976,
+        "jaccard": null,
+        "top_element_id": "980A",
+        "top_element_label": "Skill in performing root cause analysis."
+      },
+      "ddat": {
+        "composite": 0.4140351935193519,
+        "cross_encoder_sts": 0.45644752475247524,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3009356435643564,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.43916386363636367,
+        "cross_encoder_sts": 0.4840425,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31948750000000004,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4108464472837577,
+        "cross_encoder_sts": 0.46459787664307384,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2675093023255814,
+        "jaccard": null,
+        "top_element_id": "K0957",
+        "top_element_label": "Knowledge of root cause analysis tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4315584848484849,
+        "cross_encoder_sts": 0.4771466666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30999,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37823850267379683,
+        "cross_encoder_sts": 0.4433264705882353,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20467058823529413,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.43916386363636367
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4315584848484849
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4140351935193519
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0957",
+        "element_label": "Knowledge of root cause analysis tools and techniques",
+        "score": 0.4108464472837577
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "980A",
+        "element_label": "Skill in performing root cause analysis.",
+        "score": 0.4076597772188286
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Architecture domain has low affinity (0.35) for Evaluation Officer, and the text \u2014 'Skill in designing and implementing automated data pipeline testing, including unit tests for transf...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4392)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Evaluation Officer whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Architecture domain has low affinity (0.35) for Evaluation Officer, and the text \u2014 'Skill in designing and implementing automated data pipeline testing, including unit tests for transf...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4392).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:15.200540Z",
+    "pipeline_version": "1.0"
+  }
+}

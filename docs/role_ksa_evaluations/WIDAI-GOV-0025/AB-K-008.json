@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0025",
+  "role_name": "AI Literacy Training Manager",
+  "ksa_id": "AB-K-008",
+  "ksa_text": "Knowledge of data collection and gathering methods, including data sourcing techniques, data monitoring tools, systematic data acquisition approaches, and the assessment of data availability and fitness for analytical use.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4349704545454546,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4065622031122031,
+        "cross_encoder_sts": 0.43514684684684685,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3303364864864865,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3822164772727273,
+        "cross_encoder_sts": 0.43706875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23594375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-011",
+        "top_element_label": "Applied maths, statistics and scientific practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.38035194805194805,
+        "cross_encoder_sts": 0.41264285714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29424285714285714,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-007",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.415622861753631,
+        "cross_encoder_sts": 0.4499869822485207,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32398520710059175,
+        "jaccard": null,
+        "top_element_id": "K0646",
+        "top_element_label": "Knowledge of system optimization techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36487747035573126,
+        "cross_encoder_sts": 0.4072652173913044,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25184347826086956,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.4349704545454546,
+        "cross_encoder_sts": 0.4573,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.375425,
+        "jaccard": null,
+        "top_element_id": "2.C.4.a",
+        "top_element_label": "Mathematics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.4.a",
+        "element_label": "Mathematics",
+        "score": 0.4349704545454546
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0646",
+        "element_label": "Knowledge of system optimization techniques",
+        "score": 0.415622861753631
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.4065622031122031
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-011",
+        "element_label": "Applied maths, statistics and scientific practices",
+        "score": 0.3822164772727273
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-007",
+        "element_label": "Data and data governance",
+        "score": 0.38035194805194805
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Analytics & BI domain has low affinity (0.40) for AI Literacy Training Manager, and the text \u2014 'Knowledge of data collection and gathering methods, including data sourcing techniques, data monitor...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4350)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working AI Literacy Training Manager whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Analytics & BI domain has low affinity (0.40) for AI Literacy Training Manager, and the text \u2014 'Knowledge of data collection and gathering methods, including data sourcing techniques, data monitor...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4350).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:16.650271Z",
+    "pipeline_version": "1.0"
+  }
+}
