@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0046",
+  "role_name": "Synthetic Data Engineer",
+  "ksa_id": "DG-A-001",
+  "ksa_text": "Ability to design and implement AI risk governance frameworks calibrated to organizational risk tolerance and governance objectives.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.45355827123695974,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4062596157654981,
+        "cross_encoder_sts": 0.43795925925925927,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3217272331154684,
+        "jaccard": null,
+        "top_element_id": "1154",
+        "top_element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems."
+      },
+      "ddat": {
+        "composite": 0.4170614100185529,
+        "cross_encoder_sts": 0.462230612244898,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29661020408163263,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-018",
+        "top_element_label": "Availability and capacity management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4221483870967742,
+        "cross_encoder_sts": 0.43390645161290325,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39079354838709673,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.38535205278592377,
+        "cross_encoder_sts": 0.4186540322580645,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29654677419354836,
+        "jaccard": null,
+        "top_element_id": "S0383",
+        "top_element_label": "Skill in analyzing an organization's enterprise information technology architecture"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.45355827123695974,
+        "cross_encoder_sts": 0.4730573770491803,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.40156065573770494,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3989060606060606,
+        "cross_encoder_sts": 0.4482333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2673666666666667,
+        "jaccard": null,
+        "top_element_id": "4.A.4.c.3",
+        "top_element_label": "Monitoring and Controlling Resources"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.45355827123695974
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4221483870967742
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-018",
+        "element_label": "Availability and capacity management",
+        "score": 0.4170614100185529
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1154",
+        "element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems.",
+        "score": 0.4062596157654981
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.4.c.3",
+        "element_label": "Monitoring and Controlling Resources",
+        "score": 0.3989060606060606
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DG-A-001 (Data Governance) scores 0.454 composite (signal: moderate). Scope fit for Synthetic Data Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Governance KSA DG-A-001 as a discrete competency for Synthetic Data Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Synthetic Data Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Data Governance is out of scope for Synthetic Data Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:45:37.031378",
+    "pipeline_version": "1.0"
+  }
+}

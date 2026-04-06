@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0047",
+  "role_name": "Self-Serve Data Platform Engineer",
+  "ksa_id": "AI-S-011",
+  "ksa_text": "Skill in designing and implementing NLP evaluation pipelines that measure task-specific performance, robustness, and fairness.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4250932346723044,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38919320432043203,
+        "cross_encoder_sts": 0.4480311881188118,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23229191419141915,
+        "jaccard": null,
+        "top_element_id": "224",
+        "top_element_label": "Skill in design modeling and building use cases (e.g., unified modeling language)."
+      },
+      "ddat": {
+        "composite": 0.3573272727272727,
+        "cross_encoder_sts": 0.44213023255813955,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1311860465116279,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4250932346723044,
+        "cross_encoder_sts": 0.48454651162790696,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2665511627906977,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3949243010752688,
+        "cross_encoder_sts": 0.4589462365591398,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22419913978494624,
+        "jaccard": null,
+        "top_element_id": "S0631",
+        "top_element_label": "Skill in performing data preprocessing"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39493164983164986,
+        "cross_encoder_sts": 0.44244074074074075,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2682407407407407,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38517727272727276,
+        "cross_encoder_sts": 0.4471857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21982142857142858,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4250932346723044
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.39493164983164986
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0631",
+        "element_label": "Skill in performing data preprocessing",
+        "score": 0.3949243010752688
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "224",
+        "element_label": "Skill in design modeling and building use cases (e.g., unified modeling language).",
+        "score": 0.38919320432043203
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.38517727272727276
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-S-011 (AI and Machine Learning) scores 0.425 composite (signal: weak). Scope fit for Self-Serve Data Platform Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.425 is below 0.43 threshold for edge-case inclusion in Self-Serve Data Platform Engineer.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.425 insufficient for edge-case inclusion (min 0.43). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support AI and Machine Learning KSA AI-S-011 as a discrete competency for Self-Serve Data Platform Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for Self-Serve Data Platform Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.425 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:45:37.232356",
+    "pipeline_version": "1.0"
+  }
+}

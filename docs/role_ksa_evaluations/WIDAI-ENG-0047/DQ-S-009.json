@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0047",
+  "role_name": "Self-Serve Data Platform Engineer",
+  "ksa_id": "DQ-S-009",
+  "ksa_text": "Skill in producing data quality reporting for business and governance audiences, translating technical quality metrics into business risk and operational impact language.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4564135435992579,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40992192513368986,
+        "cross_encoder_sts": 0.41632262443438917,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39285339366515837,
+        "jaccard": null,
+        "top_element_id": "1039A",
+        "top_element_label": "Ability to evaluate/ensure the trustworthiness of the supplier and/or product."
+      },
+      "ddat": {
+        "composite": 0.4564135435992579,
+        "cross_encoder_sts": 0.4727693877551021,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41279795918367346,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-016",
+        "top_element_label": "Architecture communication"
+      },
+      "eu_ai_act": {
+        "composite": 0.4000625,
+        "cross_encoder_sts": 0.39935,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4019625,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-044",
+        "top_element_label": "Obligations for providers of general-purpose AI models"
+      },
+      "nice": {
+        "composite": 0.4157856836077308,
+        "cross_encoder_sts": 0.42287401574803146,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39688346456692913,
+        "jaccard": null,
+        "top_element_id": "S0111",
+        "top_element_label": "Skill in interfacing with customers"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4337905844155844,
+        "cross_encoder_sts": 0.43941071428571427,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41880357142857144,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3826878787878788,
+        "cross_encoder_sts": 0.42988333333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2568333333333333,
+        "jaccard": null,
+        "top_element_id": "2.A.1.d",
+        "top_element_label": "Speaking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-016",
+        "element_label": "Architecture communication",
+        "score": 0.4564135435992579
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4337905844155844
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0111",
+        "element_label": "Skill in interfacing with customers",
+        "score": 0.4157856836077308
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1039A",
+        "element_label": "Ability to evaluate/ensure the trustworthiness of the supplier and/or product.",
+        "score": 0.40992192513368986
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-044",
+        "element_label": "Obligations for providers of general-purpose AI models",
+        "score": 0.4000625
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-S-009 (Data Quality) scores 0.456 composite (signal: moderate). Scope fit for Self-Serve Data Platform Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Edge-case scope, score 0.456 meets threshold. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Data Quality KSA DQ-S-009 as a discrete competency for Self-Serve Data Platform Engineer?",
+    "evidence": "Reviewed against Self-Serve Data Platform Engineer market data. Data quality content is governance/reporting, not self-serve platform quality. Score 0.456 with no role-specific keyword match confirms exclusion.",
+    "ruling": "Revised to exclude. Data quality content is governance/reporting, not self-serve platform quality. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Pass 4 overturn: Data quality content is governance/reporting, not self-serve platform quality.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:45:37.209755",
+    "pipeline_version": "1.0"
+  }
+}
