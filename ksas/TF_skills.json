@@ -1,136 +1,235 @@
 {
   "dataset_id": "widai-tf-skills",
   "domain_code": "TF",
-  "domain_title": "Technical Foundations",
+  "domain_title": "Technology Foundations",
   "type": "Skill",
-  "count": 12,
-  "schema_version": "2.0.0",
+  "count": 25,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "TF-S-001",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in writing production-quality data transformation code in SQL and at least one general-purpose programming language (Python or Scala), including unit testing and documentation.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.03-S-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-002",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in writing well-structured, tested, and documented SQL transformations that produce reliable, reusable datasets for analytics consumers.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.04-S-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-003",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in translating business metric definitions from domain stakeholders into precise, unambiguous SQL logic with documented assumptions and edge case handling.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.04-S-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-004",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in using Git for version control in data and AI projects, including branching, merging, pull request workflows, code review participation, and repository organization for multi-contributor teams.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-005",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in writing automated tests for data applications, including unit tests for transformation logic, integration tests for pipeline components, and data validation tests using appropriate testing frameworks.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-006",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in containerizing data and AI applications using Docker, including Dockerfile authoring, multi-stage builds, image size optimization, and container registry management.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-007",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in provisioning and configuring cloud platform data services, including compute resources, managed databases, object storage, and analytics services, with attention to cost optimization and security configuration.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-008",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in writing shell scripts to automate data operations, including file manipulation, job scheduling, environment configuration, log processing, and pipeline orchestration on Linux systems.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-009",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in designing and implementing APIs for data services, including RESTful endpoint design, request and response formatting, error handling, authentication integration, and API documentation using OpenAPI or equivalent specifications.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-010",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in analyzing and optimizing SQL query execution plans, identifying performance bottlenecks, and implementing indexing, partitioning, and query restructuring strategies to improve data retrieval performance.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-011",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in writing technical documentation for data systems, including architecture diagrams, API specifications, operational runbooks, data dictionaries, and troubleshooting guides that enable team independence.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-S-012",
       "type": "Skill",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Skill in debugging data applications across multiple system layers, tracing issues through application code, database queries, network connectivity, and infrastructure configuration to identify root causes.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-013",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in designing and implementing continuous integration and continuous deployment (CI/CD) pipelines for data and AI applications, including automated testing, security scanning, and automated deployment strategies.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-014",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in orchestrating containerized applications using container management platforms, including deploying and scaling multi-container applications, managing service networking, persistent storage, and resource allocation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-015",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in designing and maintaining automated data pipeline architectures that reliably process, transform, and deliver data at scale, including data quality validation, error handling, and recovery mechanisms.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-016",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in implementing infrastructure-as-code practices for data and AI systems, using declarative configuration tools to provision, version, and manage cloud infrastructure reproducibly and reliably.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-017",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in implementing system monitoring, logging, and observability solutions for data applications, including setting up metrics collection, log aggregation, alerting, and dashboards to track application health and performance.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-018",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in implementing error handling, resilience patterns, and fault tolerance mechanisms in data applications, including designing retry logic, circuit breakers, graceful degradation, and recovery procedures.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-019",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in designing and implementing data serialization and messaging systems for inter-service communication, including selecting appropriate formats and protocols for reliable data exchange in distributed systems.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-020",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in managing and optimizing cloud storage solutions for data and AI applications, including designing storage architectures, implementing data lifecycle policies, optimizing for cost and performance, and ensuring data accessibility.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-021",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in designing and executing security-focused tests for data applications, including identifying vulnerabilities, penetration testing, and compliance validation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-022",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in designing and conducting performance, load, and stress testing for data systems, including capacity planning, bottleneck identification, and scalability assessment.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-023",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in designing normalized database schemas and data models that balance query performance, data integrity, and business requirements across different database systems.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-024",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in documenting data system architectures including component design, integration points, deployment topology, and architecture decision records that guide system evolution.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-S-025",
+      "type": "Skill",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Skill in writing operational procedures, runbooks, and standard operating procedures that enable teams to safely and consistently operate production data systems.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
     }
   ]
 }

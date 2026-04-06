@@ -3,59 +3,188 @@
   "domain_code": "TF",
   "domain_title": "Technical Foundations",
   "type": "Ability",
-  "count": 5,
-  "schema_version": "2.0.0",
+  "count": 18,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "TF-A-001",
       "type": "Ability",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Ability to select appropriate technical tools, languages, and platforms for data and AI requirements, evaluating trade-offs between performance, maintainability, team capability, ecosystem maturity, and cost.",
+      "statement": "Ability to evaluate network infrastructure, system architectures, and platform capabilities, analyzing vulnerabilities and performance characteristics across interconnected systems.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
+      "origin_version": "0.8.0",
       "legacy_ids": []
     },
     {
       "ksa_id": "TF-A-002",
       "type": "Ability",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Ability to diagnose and resolve technical issues that span multiple system layers, tracing problems across application code, data pipelines, databases, networks, and infrastructure to identify and remediate root causes.",
+      "statement": "Ability to diagnose root causes and resolve complex technical issues across system layers, conducting incident analysis and problem remediation.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
+      "origin_version": "0.8.0",
       "legacy_ids": []
     },
     {
       "ksa_id": "TF-A-003",
       "type": "Ability",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Ability to evaluate and adopt new technologies, frameworks, and tools for data and AI work, assessing maturity, community support, integration requirements, and organizational fit before recommending adoption.",
+      "statement": "Ability to design technical procedures, processes, and system components, integrating technology solutions into cohesive systems.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
+      "origin_version": "0.8.0",
       "legacy_ids": []
     },
     {
       "ksa_id": "TF-A-004",
       "type": "Ability",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Ability to design technical implementations that balance immediate delivery requirements with long-term maintainability, scalability, and operational sustainability.",
+      "statement": "Ability to design data systems, databases, and integration mechanisms, determining data requirements and managing data flows.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
+      "origin_version": "0.8.0",
       "legacy_ids": []
     },
     {
       "ksa_id": "TF-A-005",
       "type": "Ability",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Ability to analyze data and AI systems holistically, understanding how changes in one component affect upstream and downstream dependencies, predicting system-level consequences of technical decisions, and designing for resilience across interconnected data pipelines and services.",
+      "statement": "Ability to perform systems analysis and assessments, analyzing system capabilities, architecture, and technical characteristics across complex environments.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.8",
-      "legacy_ids": [],
-      "strm_gap_source": "STRM-001-ONET: O*NET 2.B.4.g (Systems Analysis) \u2014 STS 0.371 to TF-A-002"
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-006",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to establish and maintain continuous monitoring of system activity, properties, and performance, identifying anomalies and changes.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-007",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to design and execute test plans, performance evaluations, and verification protocols, including AI-specific testing, evaluation, verification, and validation (TEVV) methodologies.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-008",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to evaluate technical tools, platforms, and implementations, assessing capabilities, requirements, and trade-offs.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-009",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to identify system requirements, capability gaps, and technical needs, analyzing requirements alignment and organizational fit.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-010",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to manage AI system lifecycle stages, including deployment, monitoring, go/no-go decisions, inventory tracking, and decommissioning.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-011",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to assess system architecture and technical design decisions, identifying misalignment, inefficiencies, and improvement opportunities.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-012",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to design data redundancy and system recovery mechanisms, ensuring resilience and business continuity.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-013",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to evaluate organizational technical capabilities and infrastructure maturity, identifying gaps and prioritizing technical investments.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-014",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to perform intelligence analysis, analyzing information from multiple sources and providing analytical support to inform technical decisions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-015",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to conduct data analysis and mining, analyzing large datasets and data structures to extract insights and validate data requirements.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-016",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to conduct technical business impact analysis, evaluating the organizational, technical, and financial consequences of system changes and design decisions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-017",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to develop and implement risk mitigation strategies for systems and applications, mitigating technical risks and reducing system vulnerabilities.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
+    },
+    {
+      "ksa_id": "TF-A-018",
+      "type": "Ability",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Ability to design network infrastructure contingency and recovery plans, testing implementation approaches and ensuring system resilience.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0",
+      "legacy_ids": []
     }
   ]
 }

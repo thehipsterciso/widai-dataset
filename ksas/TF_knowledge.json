@@ -1,153 +1,163 @@
 {
   "dataset_id": "widai-tf-knowledge",
   "domain_code": "TF",
-  "domain_title": "Technical Foundations",
+  "domain_title": "Technology Foundations",
   "type": "Knowledge",
-  "count": 14,
-  "schema_version": "2.0.0",
+  "count": 17,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "TF-K-001",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of SQL for data querying, including joins, aggregations, window functions, subqueries, and query optimization fundamentals.",
+      "statement": "Knowledge of SQL for data querying and manipulation, including joins, aggregations, window functions, subqueries, and query optimization fundamentals.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ANL-05.01-K-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-002",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of Python programming language fundamentals for data applications, including data structures, control flow, object-oriented and functional programming patterns, standard library capabilities, and the data science ecosystem (NumPy, Pandas, scikit-learn).",
+      "statement": "Knowledge of Python programming language for data applications, including data structures, control flow, object-oriented and functional programming patterns, standard libraries, and the data science ecosystem (NumPy, Pandas, scikit-learn).",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-003",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of relational database management system concepts, including normalization theory, indexing strategies, transaction isolation levels, query execution plans, and performance optimization principles.",
+      "statement": "Knowledge of relational database management system principles and practices, including normalization theory, indexing strategies, transaction isolation levels, query execution plans, and performance optimization.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-004",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of NoSQL database categories and their appropriate use cases, including document stores, key-value stores, wide-column stores, graph databases, and vector databases, with understanding of when each category is preferred over relational alternatives.",
+      "statement": "Knowledge of NoSQL database categories and their use cases, including document stores, key-value stores, wide-column stores, graph databases, and vector databases, with understanding of when each is preferred over relational alternatives.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-005",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of cloud platform services for data and AI workloads across major providers, including compute, storage, managed database, analytics, and machine learning services, and the trade-offs between cloud-native and cloud-agnostic approaches.",
+      "statement": "Knowledge of cloud platform services for data and AI workloads across major providers, including compute, storage, managed database, analytics, and machine learning services, with understanding of cloud-native vs cloud-agnostic trade-offs.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-006",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Knowledge of distributed computing concepts relevant to data processing at scale, including data partitioning strategies, parallel execution models, fault tolerance mechanisms, data locality optimization, and the CAP theorem.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-007",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Knowledge of data serialization formats and their trade-offs for different workloads, including JSON, Apache Avro, Apache Parquet, and Protocol Buffers, with understanding of schema evolution, compression characteristics, and query performance implications.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-008",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of software version control concepts and Git workflows, including branching strategies, merge and rebase operations, conflict resolution, pull request processes, and collaborative development practices.",
+      "statement": "Knowledge of software version control systems and Git workflows, including branching strategies, merge and rebase operations, conflict resolution, pull request processes, and collaborative development practices.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-009",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of CI/CD pipeline concepts for data and AI projects, including continuous integration principles, automated testing integration, artifact management, deployment automation patterns, and environment promotion strategies.",
+      "statement": "Knowledge of continuous integration and continuous deployment (CI/CD) pipeline concepts and practices, including continuous integration principles, automated testing integration, artifact management, deployment automation patterns, and environment promotion strategies.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-010",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of containerization and orchestration concepts for data workloads, including Docker container principles, image layering and optimization, Kubernetes pod and service architecture, and resource management for data-intensive containers.",
+      "statement": "Knowledge of containerization and container orchestration concepts for data workloads, including Docker container principles, image layering and optimization, Kubernetes pod and service architecture, and resource management for data-intensive containers.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-011",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Knowledge of API design patterns and protocols for data services, including REST architectural constraints, GraphQL query patterns, gRPC service definitions, authentication and authorization mechanisms, and API versioning strategies.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-012",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
       "statement": "Knowledge of Linux operating system fundamentals relevant to data engineering, including file system structure, process management, user and permission models, package management, and common command-line utilities for text processing and system monitoring.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-013",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of networking fundamentals relevant to data systems, including TCP/IP, DNS resolution, HTTP/HTTPS protocols, firewall and security group configurations, load balancing, and how network architecture affects data pipeline design and performance.",
+      "statement": "Knowledge of networking fundamentals relevant to data systems, including TCP/IP protocol suite, DNS resolution, HTTP/HTTPS protocols, firewall and security group configurations, load balancing, and how network architecture affects data pipeline design and performance.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "TF-K-014",
       "type": "Knowledge",
-      "domain": "Technical Foundations",
+      "domain": "Technology Foundations",
       "domain_code": "TF",
-      "statement": "Knowledge of computing fundamentals relevant to data and AI work, including computer architecture concepts (processors, memory hierarchy, storage systems), operating system principles, hardware-software interaction, and how infrastructure constraints affect data processing performance and system design decisions.",
+      "statement": "Knowledge of computing fundamentals relevant to data and AI work, including computer architecture (processors, memory hierarchy, storage systems), operating system principles, hardware-software interaction, and how infrastructure constraints affect data processing performance and system design decisions.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.8",
-      "legacy_ids": [],
-      "strm_gap_source": "STRM-001-ONET: O*NET 2.C.3.a (Computers and Electronics) \u2014 STS 0.361 to AI-K-016"
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-015",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of modern software development methodologies and practices, including Agile frameworks, Waterfall and iterative models, Test-Driven Development, DevOps and DevSecOps principles, and their application to data and AI projects.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-016",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of Infrastructure-as-Code, cloud-native development patterns, and platform engineering practices, including containerized infrastructure design, configuration management, service mesh concepts, and orchestration of multi-container applications.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "TF-K-017",
+      "type": "Knowledge",
+      "domain": "Technology Foundations",
+      "domain_code": "TF",
+      "statement": "Knowledge of DevOps and MLOps operational practices for data and AI systems, including system monitoring and observability, logging and tracing, performance metrics collection, incident detection, and automated remediation workflows.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
     }
   ]
 }
