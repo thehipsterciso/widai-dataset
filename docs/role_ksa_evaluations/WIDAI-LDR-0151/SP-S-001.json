@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0151",
+  "role_name": "VP Data Strategy and Operations",
+  "ksa_id": "SP-S-001",
+  "ksa_text": "Skill in conducting privacy impact assessments (PIAs) and data protection impact assessments (DPIAs) for new data processing activities and AI systems.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4804467741935484,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3958427663134412,
+        "cross_encoder_sts": 0.43338337423312884,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29573447852760737,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.3879199043062201,
+        "cross_encoder_sts": 0.43245684210526314,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2691547368421053,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4804467741935484,
+        "cross_encoder_sts": 0.5097064516129033,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4024209677419355,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.39925198031781883,
+        "cross_encoder_sts": 0.44149733806566105,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28659769299023957,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.47569077922077924,
+        "cross_encoder_sts": 0.5093414285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3859557142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.10",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.36701333333333336,
+        "cross_encoder_sts": 0.41153333333333336,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24829333333333334,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4804467741935484
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.10",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.47569077922077924
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39925198031781883
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.3958427663134412
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.3879199043062201
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Security & Platform Strategy is a primary or secondary domain for the VP Data Strategy and Operations. This skill KSA is within scope for the role's expected competency profile and seniority level (vp)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Security & Platform Strategy), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.48). External reviewers may question whether this specific skill KSA is sufficiently distinctive for the VP Data Strategy and Operations versus adjacent roles.",
+    "evidence": "NIST CSF, CMU SEI enterprise security frameworks, and CDAIO job market data consistently include security and platform strategy oversight for senior data leaders.",
+    "ruling": "Upheld: moderate framework signal is consistent with Security & Platform Strategy appearing in job postings and role definition literature for VP Data Strategy and Operations."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Security & Platform Strategy skill KSA is within scope for the VP Data Strategy and Operations at the vp tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.486790+00:00",
+    "pipeline_version": "1.0"
+  }
+}

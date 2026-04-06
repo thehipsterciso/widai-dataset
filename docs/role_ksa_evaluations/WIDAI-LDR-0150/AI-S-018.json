@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0150",
+  "role_name": "VP Data Products",
+  "ksa_id": "AI-S-018",
+  "ksa_text": "Skill in building and presenting AI proof-of-concept demonstrations to executive audiences, communicating capability, limitations, and path to production.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.5211589610389611,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42992209532511033,
+        "cross_encoder_sts": 0.4451740368509212,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3892502512562814,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.40044722222222223,
+        "cross_encoder_sts": 0.43703888888888887,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3028694444444444,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.48786473354231974,
+        "cross_encoder_sts": 0.4828413793103448,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5012603448275862,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.418625112830432,
+        "cross_encoder_sts": 0.4376609929078014,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3678627659574468,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5211589610389611,
+        "cross_encoder_sts": 0.5201342857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5238914285714286,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37201636363636365,
+        "cross_encoder_sts": 0.38022,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35014,
+        "jaccard": null,
+        "top_element_id": "2.B.2.i",
+        "top_element_label": "Complex Problem Solving"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5211589610389611
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.48786473354231974
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.42992209532511033
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0655",
+        "element_label": "Knowledge of intelligence fusion",
+        "score": 0.418625112830432
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.40044722222222223
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "exec_excluded",
+    "seniority_fit": "too_junior",
+    "preliminary_decision": "exclude",
+    "rationale": "This skill KSA describes execution-level work in AI/ML Engineering that is not expected of a VP Data Products (vp tier). The role is responsible for overseeing and directing this work, not performing it directly. Excluded on execution-seniority grounds."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could real-world VP Data Products practitioners be expected to demonstrate this skill KSA in practice, despite the seniority gap?",
+    "evidence": "NewVantage Partners CDO Survey, Wavestone CDAIO Report, and Gartner leadership effectiveness research confirm that vp-tier roles delegate execution responsibilities to appropriate levels rather than owning them directly.",
+    "ruling": "Upheld: seniority-based exclusion is consistent with external evidence on vp-tier role expectations. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Execution-level skill KSA in AI/ML Engineering is outside the expected competency scope for a VP Data Products (vp tier). The role oversees this work; it does not perform it directly.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.311098+00:00",
+    "pipeline_version": "1.0"
+  }
+}

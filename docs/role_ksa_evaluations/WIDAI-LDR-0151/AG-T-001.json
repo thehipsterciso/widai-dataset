@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0151",
+  "role_name": "VP Data Strategy and Operations",
+  "ksa_id": "AG-T-001",
+  "ksa_text": "Define and maintain the enterprise AI governance framework, including the AI system inventory, risk tiering, review thresholds, and decommissioning criteria.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.507518724559023,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39159468085106386,
+        "cross_encoder_sts": 0.4213537234042553,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3122372340425532,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4241847727272727,
+        "cross_encoder_sts": 0.46052499999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3272775,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.47625669421487604,
+        "cross_encoder_sts": 0.46941818181818185,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49449272727272725,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3814696832579186,
+        "cross_encoder_sts": 0.42341674208144797,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2696108597285068,
+        "jaccard": null,
+        "top_element_id": "K0675",
+        "top_element_label": "Knowledge of risk management processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.507518724559023,
+        "cross_encoder_sts": 0.502444776119403,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5210492537313433,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.33735,
+        "cross_encoder_sts": 0.37345,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24108333333333332,
+        "jaccard": null,
+        "top_element_id": "2.B.4.g",
+        "top_element_label": "Systems Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.507518724559023
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.47625669421487604
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4241847727272727
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.39159468085106386
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0675",
+        "element_label": "Knowledge of risk management processes",
+        "score": 0.3814696832579186
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "AI Governance is a primary or secondary domain for the VP Data Strategy and Operations. This task KSA is within scope for the role's expected competency profile and seniority level (vp)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (AI Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.508). External reviewers may question whether this specific task KSA is sufficiently distinctive for the VP Data Strategy and Operations versus adjacent roles.",
+    "evidence": "NIST AI RMF, EU AI Act (Article 9), and OECD AI Principles confirm AI governance as a critical competency for responsible AI leadership.",
+    "ruling": "Upheld: moderate framework signal is consistent with AI Governance appearing in job postings and role definition literature for VP Data Strategy and Operations."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "AI Governance task KSA is within scope for the VP Data Strategy and Operations at the vp tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.481137+00:00",
+    "pipeline_version": "1.0"
+  }
+}

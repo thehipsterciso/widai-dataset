@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0149",
+  "role_name": "VP Data Architecture",
+  "ksa_id": "RM-K-010",
+  "ksa_text": "Knowledge of model validation methodologies including conceptual soundness review, outcomes analysis, benchmarking, sensitivity analysis, back-testing, and champion-challenger model approaches.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.4061274509803921,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40509514603044017,
+        "cross_encoder_sts": 0.43818529411764706,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31685475113122175,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.38336586921850085,
+        "cross_encoder_sts": 0.4296859649122807,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2598456140350877,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-013",
+        "top_element_label": "Applying statistical and analytical tools and techniques"
+      },
+      "eu_ai_act": {
+        "composite": 0.40375265151515155,
+        "cross_encoder_sts": 0.43793333333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3126041666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4015271074380165,
+        "cross_encoder_sts": 0.4362209090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.309010303030303,
+        "jaccard": null,
+        "top_element_id": "K0641",
+        "top_element_label": "Knowledge of market research tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4061274509803921,
+        "cross_encoder_sts": 0.4392745098039215,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31773529411764706,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3775441558441559,
+        "cross_encoder_sts": 0.41108571428571433,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2881,
+        "jaccard": null,
+        "top_element_id": "2.C.1.d",
+        "top_element_label": "Sales and Marketing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4061274509803921
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.40509514603044017
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.40375265151515155
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0641",
+        "element_label": "Knowledge of market research tools and techniques",
+        "score": 0.4015271074380165
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-013",
+        "element_label": "Applying statistical and analytical tools and techniques",
+        "score": 0.38336586921850085
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Risk Management is a primary or secondary domain for the VP Data Architecture. This knowledge KSA is within scope for the role's expected competency profile and seniority level (vp)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Risk Management), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.406). External validation of this knowledge KSA for the VP Data Architecture role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "ISO 31000, NIST RMF, and enterprise risk management frameworks confirm risk management competencies for senior data leadership.",
+    "ruling": "Upheld: domain-level relevance of Risk Management for the VP Data Architecture is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Risk Management knowledge KSA is within scope for the VP Data Architecture at the vp tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.216235+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0149",
+  "role_name": "VP Data Architecture",
+  "ksa_id": "SP-S-004",
+  "ksa_text": "Skill in advising on data processing agreements, standard contractual clauses, binding corporate rules, and other cross-border data transfer mechanisms, ensuring compliance with applicable jurisdictional requirements and supervisory guidance.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4417484848484849,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41389067599067597,
+        "cross_encoder_sts": 0.4307402159244264,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3689585695006748,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4417484848484849,
+        "cross_encoder_sts": 0.47527083333333336,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3523555555555556,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.43331256684491976,
+        "cross_encoder_sts": 0.4436705882352941,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4056911764705882,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4079458833619211,
+        "cross_encoder_sts": 0.4285656603773585,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3529598113207547,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3888451871657754,
+        "cross_encoder_sts": 0.4166176470588235,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31478529411764705,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39508363636363636,
+        "cross_encoder_sts": 0.4377,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28144,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4417484848484849
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.43331256684491976
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.41389067599067597
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4079458833619211
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.39508363636363636
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Security & Platform Strategy is a primary or secondary domain for the VP Data Architecture. This skill KSA is within scope for the role's expected competency profile and seniority level (vp)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Security & Platform Strategy), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.442). External validation of this skill KSA for the VP Data Architecture role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "NIST CSF, CMU SEI enterprise security frameworks, and CDAIO job market data consistently include security and platform strategy oversight for senior data leaders.",
+    "ruling": "Upheld: domain-level relevance of Security & Platform Strategy for the VP Data Architecture is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Security & Platform Strategy skill KSA is within scope for the VP Data Architecture at the vp tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.165273+00:00",
+    "pipeline_version": "1.0"
+  }
+}

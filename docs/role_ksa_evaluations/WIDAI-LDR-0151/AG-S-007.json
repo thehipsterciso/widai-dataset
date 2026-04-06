@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0151",
+  "role_name": "VP Data Strategy and Operations",
+  "ksa_id": "AG-S-007",
+  "ksa_text": "Skill in evaluating AI transparency and accountability mechanisms, including assessing explainability adequacy and output explanation methods, evaluating accountability chain completeness, and designing interpretability approaches for stakeholder needs.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5416144155844156,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4069529187686606,
+        "cross_encoder_sts": 0.43767893544733866,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32501687429218573,
+        "jaccard": null,
+        "top_element_id": "1037A",
+        "top_element_label": "Knowledge of information technology (IT) risk management policies, requirements, and procedures."
+      },
+      "ddat": {
+        "composite": 0.39149700299700296,
+        "cross_encoder_sts": 0.43666153846153843,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2710582417582418,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-014",
+        "top_element_label": "Applying user-centred insights"
+      },
+      "eu_ai_act": {
+        "composite": 0.5244494607087827,
+        "cross_encoder_sts": 0.5293372881355932,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5114152542372882,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-014",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.39909635994087217,
+        "cross_encoder_sts": 0.43819491869918703,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2948335365853658,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5416144155844156,
+        "cross_encoder_sts": 0.5476085714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.52563,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-3.2",
+        "top_element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle."
+      },
+      "onet": {
+        "composite": 0.39276628787878787,
+        "cross_encoder_sts": 0.42397083333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30955416666666663,
+        "jaccard": null,
+        "top_element_id": "2.B.1.b",
+        "top_element_label": "Coordination"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-3.2",
+        "element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle.",
+        "score": 0.5416144155844156
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-014",
+        "element_label": "Human oversight",
+        "score": 0.5244494607087827
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1037A",
+        "element_label": "Knowledge of information technology (IT) risk management policies, requirements, and procedures.",
+        "score": 0.4069529187686606
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39909635994087217
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.b",
+        "element_label": "Coordination",
+        "score": 0.39276628787878787
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "AI Governance is a primary or secondary domain for the VP Data Strategy and Operations. This skill KSA is within scope for the role's expected competency profile and seniority level (vp)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (AI Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.542). External reviewers may question whether this specific skill KSA is sufficiently distinctive for the VP Data Strategy and Operations versus adjacent roles.",
+    "evidence": "NIST AI RMF, EU AI Act (Article 9), and OECD AI Principles confirm AI governance as a critical competency for responsible AI leadership.",
+    "ruling": "Upheld: moderate framework signal is consistent with AI Governance appearing in job postings and role definition literature for VP Data Strategy and Operations."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "AI Governance skill KSA is within scope for the VP Data Strategy and Operations at the vp tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.474625+00:00",
+    "pipeline_version": "1.0"
+  }
+}
