@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0040",
+  "role_name": "Data Contracts Engineer",
+  "ksa_id": "RM-T-007",
+  "ksa_text": "Establish and operate continuous monitoring programs for deployed AI systems to track operational performance, detect degradation and behavioral drift.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.4324023845007452,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3865722796896757,
+        "cross_encoder_sts": 0.4236907002188184,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2875898249452954,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.4085396603396603,
+        "cross_encoder_sts": 0.44666813186813187,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30686373626373625,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-004",
+        "top_element_label": "Agile research practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.39265194805194803,
+        "cross_encoder_sts": 0.42060571428571425,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31810857142857146,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.38773302527348175,
+        "cross_encoder_sts": 0.4280116182572614,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28032344398340253,
+        "jaccard": null,
+        "top_element_id": "K0675",
+        "top_element_label": "Knowledge of risk management processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4324023845007452,
+        "cross_encoder_sts": 0.4652704918032787,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34475409836065574,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.369865367965368,
+        "cross_encoder_sts": 0.4131095238095238,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2545476190476191,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4324023845007452
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-004",
+        "element_label": "Agile research practices",
+        "score": 0.4085396603396603
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.39265194805194803
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0675",
+        "element_label": "Knowledge of risk management processes",
+        "score": 0.38773302527348175
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.3865722796896757
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-T-007 (Risk Management) scores 0.432 composite (signal: weak). Scope fit for Data Contracts Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Risk Management KSA RM-T-007 as a discrete competency for Data Contracts Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Data Contracts Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk Management is out of scope for Data Contracts Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.232596",
+    "pipeline_version": "1.0"
+  }
+}

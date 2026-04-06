@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0039",
+  "role_name": "Data Observability Engineer",
+  "ksa_id": "DQ-K-002",
+  "ksa_text": "Knowledge of data standardization policies and procedures, including regulatory standards (ICH E6, 21 CFR Part 11, Annex 11), industry standards (CDISC CDASH, SDTM, ADaM), and submission dataset requirements for regulatory agencies.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4053913183678532,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.401539272343285,
+        "cross_encoder_sts": 0.43742122492080254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30585406546990496,
+        "jaccard": null,
+        "top_element_id": "1004A",
+        "top_element_label": "Knowledge of information technology (IT) acquisition/procurement requirements."
+      },
+      "ddat": {
+        "composite": 0.3854417185554172,
+        "cross_encoder_sts": 0.4313178082191781,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2631054794520548,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.39037642045454546,
+        "cross_encoder_sts": 0.4131875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.329546875,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4053913183678532,
+        "cross_encoder_sts": 0.4486963165075034,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28991132332878583,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38057712609970673,
+        "cross_encoder_sts": 0.42623870967741934,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2588129032258064,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39951900826446285,
+        "cross_encoder_sts": 0.4399545454545455,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2916909090909091,
+        "jaccard": null,
+        "top_element_id": "2.C.3.a",
+        "top_element_label": "Computers and Electronics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4053913183678532
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1004A",
+        "element_label": "Knowledge of information technology (IT) acquisition/procurement requirements.",
+        "score": 0.401539272343285
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.a",
+        "element_label": "Computers and Electronics",
+        "score": 0.39951900826446285
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.39037642045454546
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.3854417185554172
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-K-002 (Data Quality) scores 0.405 composite (signal: weak). Scope fit for Data Observability Engineer: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.405. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Quality KSA DQ-K-002 as a discrete competency for Data Observability Engineer?",
+    "evidence": "Data Quality is primary for Data Observability Engineer. Score 0.405. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. Data Quality is core for Data Observability Engineer. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality (primary) for Data Observability Engineer. Score 0.405. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.096096",
+    "pipeline_version": "1.0"
+  }
+}

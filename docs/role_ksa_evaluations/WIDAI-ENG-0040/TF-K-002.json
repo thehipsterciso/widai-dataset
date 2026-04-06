@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0040",
+  "role_name": "Data Contracts Engineer",
+  "ksa_id": "TF-K-002",
+  "ksa_text": "Knowledge of Python programming language for data applications, including data structures, control flow, object-oriented and functional programming patterns, standard libraries, and the data science ecosystem (NumPy, Pandas, scikit-learn).",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.4003466507177033,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38798063063063065,
+        "cross_encoder_sts": 0.416504954954955,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31191576576576574,
+        "jaccard": null,
+        "top_element_id": "102",
+        "top_element_label": "Knowledge of programming language structures and logic."
+      },
+      "ddat": {
+        "composite": 0.39574431818181816,
+        "cross_encoder_sts": 0.48261249999999994,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.16409583333333333,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "nice": {
+        "composite": 0.4003466507177033,
+        "cross_encoder_sts": 0.436341447368421,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30436052631578947,
+        "jaccard": null,
+        "top_element_id": "K0068",
+        "top_element_label": "Knowledge of programming language structures and logic"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3519969696969697,
+        "cross_encoder_sts": 0.39443333333333336,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23883333333333334,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-3.2",
+        "top_element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle."
+      },
+      "onet": {
+        "composite": 0.3863204545454545,
+        "cross_encoder_sts": 0.402425,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.343375,
+        "jaccard": null,
+        "top_element_id": "2.C.3.a",
+        "top_element_label": "Computers and Electronics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0068",
+        "element_label": "Knowledge of programming language structures and logic",
+        "score": 0.4003466507177033
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.39574431818181816
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "102",
+        "element_label": "Knowledge of programming language structures and logic.",
+        "score": 0.38798063063063065
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.a",
+        "element_label": "Computers and Electronics",
+        "score": 0.3863204545454545
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-3.2",
+        "element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle.",
+        "score": 0.3519969696969697
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-K-002 (Technical Foundations) scores 0.400 composite (signal: weak). Scope fit for Data Contracts Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.400 is below 0.44 threshold for edge-case inclusion in Data Contracts Engineer.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.400 insufficient for edge-case inclusion (min 0.44). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Technical Foundations KSA TF-K-002 as a discrete competency for Data Contracts Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for Data Contracts Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.400 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.262333",
+    "pipeline_version": "1.0"
+  }
+}

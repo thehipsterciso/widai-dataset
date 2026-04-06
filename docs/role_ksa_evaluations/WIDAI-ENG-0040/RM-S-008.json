@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0040",
+  "role_name": "Data Contracts Engineer",
+  "ksa_id": "RM-S-008",
+  "ksa_text": "Skill in designing risk appetite statements for data and AI activities that are specific enough to guide operational risk decisions yet flexible enough to accommodate business evolution and emerging use cases.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.568804935064935,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42256780017368245,
+        "cross_encoder_sts": 0.46481784816490695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3099010055304173,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.42838759630200307,
+        "cross_encoder_sts": 0.4710601694915254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3145940677966102,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.525045,
+        "cross_encoder_sts": 0.548265,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.463125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-011",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.4118502049847075,
+        "cross_encoder_sts": 0.4581776664280601,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2883103078024338,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.568804935064935,
+        "cross_encoder_sts": 0.5874442857142856,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5191,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4069490909090908,
+        "cross_encoder_sts": 0.44372799999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.308872,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.568804935064935
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-011",
+        "element_label": "Record-keeping",
+        "score": 0.525045
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.42838759630200307
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.42256780017368245
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4118502049847075
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-S-008 (Risk Management) scores 0.569 composite (signal: moderate). Scope fit for Data Contracts Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Risk Management KSA RM-S-008 as a discrete competency for Data Contracts Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Data Contracts Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk Management is out of scope for Data Contracts Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.197937",
+    "pipeline_version": "1.0"
+  }
+}

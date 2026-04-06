@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0040",
+  "role_name": "Data Contracts Engineer",
+  "ksa_id": "TF-A-002",
+  "ksa_text": "Ability to diagnose root causes and resolve complex technical issues across system layers, conducting incident analysis and problem remediation.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.44562184520025433,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.44562184520025433,
+        "cross_encoder_sts": 0.47718435314685315,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3614551573426574,
+        "jaccard": null,
+        "top_element_id": "185A",
+        "top_element_label": "Skill in developing applications that can log and handle errors, exceptions, and application faults and logging."
+      },
+      "ddat": {
+        "composite": 0.43273371212121214,
+        "cross_encoder_sts": 0.4827875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29925694444444445,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-175",
+        "top_element_label": "Troubleshooting and problem resolution"
+      },
+      "eu_ai_act": {
+        "composite": 0.4166154882154882,
+        "cross_encoder_sts": 0.44932962962962963,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32937777777777777,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4443626972601413,
+        "cross_encoder_sts": 0.48702470713525026,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33059733759318427,
+        "jaccard": null,
+        "top_element_id": "S0175",
+        "top_element_label": "Skill in performing root cause analysis"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41678780991735537,
+        "cross_encoder_sts": 0.44920454545454547,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33034318181818184,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.438856993006993,
+        "cross_encoder_sts": 0.4771269230769231,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3368038461538462,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "185A",
+        "element_label": "Skill in developing applications that can log and handle errors, exceptions, and application faults and logging.",
+        "score": 0.44562184520025433
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0175",
+        "element_label": "Skill in performing root cause analysis",
+        "score": 0.4443626972601413
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.438856993006993
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-175",
+        "element_label": "Troubleshooting and problem resolution",
+        "score": 0.43273371212121214
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41678780991735537
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-A-002 (Technical Foundations) scores 0.446 composite (signal: weak). Scope fit for Data Contracts Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Edge-case scope, score 0.446 meets threshold. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Technical Foundations KSA TF-A-002 as a discrete competency for Data Contracts Engineer?",
+    "evidence": "Reviewed against Data Contracts Engineer market data. Technical content is general platform engineering, not data contracts specifically. Score 0.446 with no role-specific keyword match confirms exclusion.",
+    "ruling": "Revised to exclude. Technical content is general platform engineering, not data contracts specifically. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Pass 4 overturn: Technical content is general platform engineering, not data contracts specifically.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.222062",
+    "pipeline_version": "1.0"
+  }
+}

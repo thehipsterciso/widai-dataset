@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0041",
+  "role_name": "MLOps Engineer",
+  "ksa_id": "RC-T-010",
+  "ksa_text": "Prepare and submit regulatory filings, registrations, and notifications required by data protection and AI regulations, including processing registrations, DPO appointments, and system registrations with supporting documentation.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.46858060606060603,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40940699919549484,
+        "cross_encoder_sts": 0.4181690265486726,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.386041592920354,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4135306553911205,
+        "cross_encoder_sts": 0.4506139534883721,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3146418604651163,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.46858060606060603,
+        "cross_encoder_sts": 0.4511866666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5149644444444444,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-006",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.3989335021524436,
+        "cross_encoder_sts": 0.42311643454038994,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3344456824512535,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4199918181818182,
+        "cross_encoder_sts": 0.40871,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4500766666666667,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39591363636363636,
+        "cross_encoder_sts": 0.4155,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34368333333333334,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-006",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.46858060606060603
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4199918181818182
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4135306553911205
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.40940699919549484
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3989335021524436
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-T-010 (Risk and Compliance) scores 0.469 composite (signal: moderate). Scope fit for MLOps Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Risk and Compliance KSA RC-T-010 as a discrete competency for MLOps Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for MLOps Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk and Compliance is out of scope for MLOps Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.377138",
+    "pipeline_version": "1.0"
+  }
+}

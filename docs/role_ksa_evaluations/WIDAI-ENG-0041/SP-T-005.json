@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0041",
+  "role_name": "MLOps Engineer",
+  "ksa_id": "SP-T-005",
+  "ksa_text": "Monitor organizational compliance with privacy regulations and data protection requirements through continuous assessment and periodic audits.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.45330196078431373,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.43780121212121215,
+        "cross_encoder_sts": 0.43978666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4325066666666667,
+        "jaccard": null,
+        "top_element_id": "5863",
+        "top_element_label": "Create and/or maintain processes to ensure data management efforts comply with AI ethical principles."
+      },
+      "ddat": {
+        "composite": 0.45330196078431373,
+        "cross_encoder_sts": 0.47798431372549016,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3874823529411765,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4431181818181818,
+        "cross_encoder_sts": 0.4168724137931034,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5131068965517241,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4343953561589926,
+        "cross_encoder_sts": 0.45352121212121216,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3833930735930736,
+        "jaccard": null,
+        "top_element_id": "K0679",
+        "top_element_label": "Knowledge of privacy policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.45089372294372293,
+        "cross_encoder_sts": 0.4452261904761905,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.46600714285714284,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42063181818181816,
+        "cross_encoder_sts": 0.44004999999999994,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36884999999999996,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.45330196078431373
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.45089372294372293
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4431181818181818
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5863",
+        "element_label": "Create and/or maintain processes to ensure data management efforts comply with AI ethical principles.",
+        "score": 0.43780121212121215
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0679",
+        "element_label": "Knowledge of privacy policies and procedures",
+        "score": 0.4343953561589926
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA SP-T-005 (Security and Privacy) scores 0.453 composite (signal: moderate). Scope fit for MLOps Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.453 is below 0.5 threshold for edge-case inclusion in MLOps Engineer.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.453 insufficient for edge-case inclusion (min 0.5). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Security and Privacy KSA SP-T-005 as a discrete competency for MLOps Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for MLOps Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.453 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.383650",
+    "pipeline_version": "1.0"
+  }
+}

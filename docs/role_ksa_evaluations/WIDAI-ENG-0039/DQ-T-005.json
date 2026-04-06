@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0039",
+  "role_name": "Data Observability Engineer",
+  "ksa_id": "DQ-T-005",
+  "ksa_text": "Design and implement data quality processes, workflows, automation approaches, and remediation procedures.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4277489898989899,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4062218933521259,
+        "cross_encoder_sts": 0.42463436692506457,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3571219638242894,
+        "jaccard": null,
+        "top_element_id": "1107",
+        "top_element_label": "Identify and analyze anomalies in network traffic using metadata (e.g., CENTAUR)."
+      },
+      "ddat": {
+        "composite": 0.4277489898989899,
+        "cross_encoder_sts": 0.45001944444444447,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3683611111111111,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4119123376623377,
+        "cross_encoder_sts": 0.43381428571428576,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35350714285714285,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.39806114190687364,
+        "cross_encoder_sts": 0.416125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3498908536585366,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3723866028708134,
+        "cross_encoder_sts": 0.4053894736842105,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28437894736842106,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3948113636363636,
+        "cross_encoder_sts": 0.41761,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.334015,
+        "jaccard": null,
+        "top_element_id": "2.B.3.k",
+        "top_element_label": "Troubleshooting"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4277489898989899
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4119123376623377
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1107",
+        "element_label": "Identify and analyze anomalies in network traffic using metadata (e.g., CENTAUR).",
+        "score": 0.4062218933521259
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.39806114190687364
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.k",
+        "element_label": "Troubleshooting",
+        "score": 0.3948113636363636
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-T-005 (Data Quality) scores 0.428 composite (signal: weak). Scope fit for Data Observability Engineer: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.428. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Quality KSA DQ-T-005 as a discrete competency for Data Observability Engineer?",
+    "evidence": "Data Quality is primary for Data Observability Engineer. Score 0.428. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. Data Quality is core for Data Observability Engineer. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality (primary) for Data Observability Engineer. Score 0.428. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.069531",
+    "pipeline_version": "1.0"
+  }
+}

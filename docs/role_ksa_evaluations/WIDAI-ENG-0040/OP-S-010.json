@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0040",
+  "role_name": "Data Contracts Engineer",
+  "ksa_id": "OP-S-010",
+  "ksa_text": "Skill in establishing and facilitating data and AI communities of practice, including knowledge-sharing forums, best-practice documentation, cross-team collaboration initiatives, and capability-building activities.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.5271916883116883,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.43100859922586043,
+        "cross_encoder_sts": 0.4480368239355581,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38560000000000005,
+        "jaccard": null,
+        "top_element_id": "5886",
+        "top_element_label": "Facilitate cross-sharing of best practices for data usage."
+      },
+      "ddat": {
+        "composite": 0.4479144628099174,
+        "cross_encoder_sts": 0.49403636363636366,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3249227272727273,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.4699100313479624,
+        "cross_encoder_sts": 0.46435862068965517,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.48471379310344825,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4160923168694822,
+        "cross_encoder_sts": 0.4388782152230971,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3553299212598425,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5271916883116883,
+        "cross_encoder_sts": 0.5357685714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.50432,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.40345649350649354,
+        "cross_encoder_sts": 0.41685714285714287,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3677214285714286,
+        "jaccard": null,
+        "top_element_id": "1.A.1.a.4",
+        "top_element_label": "Written Expression"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.3",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.5271916883116883
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4699100313479624
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.4479144628099174
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5886",
+        "element_label": "Facilitate cross-sharing of best practices for data usage.",
+        "score": 0.43100859922586043
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4160923168694822
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA OP-S-010 (Operational Excellence) scores 0.527 composite (signal: moderate). Scope fit for Data Contracts Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Operational Excellence KSA OP-S-010 as a discrete competency for Data Contracts Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Data Contracts Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Operational Excellence is out of scope for Data Contracts Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.202365",
+    "pipeline_version": "1.0"
+  }
+}

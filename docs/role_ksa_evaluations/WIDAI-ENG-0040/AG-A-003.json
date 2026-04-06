@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0040",
+  "role_name": "Data Contracts Engineer",
+  "ksa_id": "AG-A-003",
+  "ksa_text": "Ability to define, operationalize, and embed trustworthy AI principles\u2014including validity, reliability, safety, security, resilience, accountability, and transparency\u2014into AI system design and organizational governance processes.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.49139269746646796,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41989871578235893,
+        "cross_encoder_sts": 0.41982267657992567,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4201014869888476,
+        "jaccard": null,
+        "top_element_id": "1146",
+        "top_element_label": "Develop and Implement cybersecurity independent audit processes for application software/networks/systems and oversee ongoing independent audits to ensure that operational and Research and Design (R&D) processes and procedures are in compliance with organizational and mandatory cybersecurity requirements and accurately followed by Systems Administrators and other cybersecurity staff when performing their day-to-day activities."
+      },
+      "ddat": {
+        "composite": 0.4266045454545455,
+        "cross_encoder_sts": 0.472774,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30348600000000003,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-020",
+        "top_element_label": "Business architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.45815233415233414,
+        "cross_encoder_sts": 0.4219621621621622,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5546594594594595,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.39944521212121215,
+        "cross_encoder_sts": 0.4106626666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.369532,
+        "jaccard": null,
+        "top_element_id": "K1209",
+        "top_element_label": "Knowledge of risk mitigation principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.49139269746646796,
+        "cross_encoder_sts": 0.4672688524590164,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.555722950819672,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.49139269746646796
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.45815233415233414
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-020",
+        "element_label": "Business architecture",
+        "score": 0.4266045454545455
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1146",
+        "element_label": "Develop and Implement cybersecurity independent audit processes for application software/networks/systems and oversee ongoing independent audits to ensure that operational and Research and Design (R&D) processes and procedures are in compliance with organizational and mandatory cybersecurity requirements and accurately followed by Systems Administrators and other cybersecurity staff when performing their day-to-day activities.",
+        "score": 0.41989871578235893
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1209",
+        "element_label": "Knowledge of risk mitigation principles and practices",
+        "score": 0.39944521212121215
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-A-003 (AI Governance) scores 0.491 composite (signal: moderate). Scope fit for Data Contracts Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support AI Governance KSA AG-A-003 as a discrete competency for Data Contracts Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Data Contracts Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "AI Governance is out of scope for Data Contracts Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.209180",
+    "pipeline_version": "1.0"
+  }
+}

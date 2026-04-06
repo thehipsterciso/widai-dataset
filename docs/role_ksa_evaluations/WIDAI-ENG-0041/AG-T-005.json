@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0041",
+  "role_name": "MLOps Engineer",
+  "ksa_id": "AG-T-005",
+  "ksa_text": "Conduct AI impact assessments for new and materially modified AI systems prior to production deployment, producing documented risk findings with recommended mitigations and residual risk statements.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.4569198863636364,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41399385026737967,
+        "cross_encoder_sts": 0.4205229411764706,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3965829411764706,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.39077803030303027,
+        "cross_encoder_sts": 0.4235791666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30330833333333335,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4569198863636364,
+        "cross_encoder_sts": 0.407125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.58970625,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.38979053803339514,
+        "cross_encoder_sts": 0.42010918367346933,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3089408163265306,
+        "jaccard": null,
+        "top_element_id": "S0449",
+        "top_element_label": "Skill in maintaining automated security control systems"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.45525666666666664,
+        "cross_encoder_sts": 0.41597666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5600033333333333,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37574545454545455,
+        "cross_encoder_sts": 0.3872,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3452,
+        "jaccard": null,
+        "top_element_id": "4.A.1.a.2",
+        "top_element_label": "Monitoring Processes, Materials, or Surroundings"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4569198863636364
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.45525666666666664
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.41399385026737967
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.39077803030303027
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0449",
+        "element_label": "Skill in maintaining automated security control systems",
+        "score": 0.38979053803339514
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-T-005 (AI Governance) scores 0.457 composite (signal: moderate). Scope fit for MLOps Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support AI Governance KSA AG-T-005 as a discrete competency for MLOps Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for MLOps Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "AI Governance is out of scope for MLOps Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:44:48.381628",
+    "pipeline_version": "1.0"
+  }
+}
