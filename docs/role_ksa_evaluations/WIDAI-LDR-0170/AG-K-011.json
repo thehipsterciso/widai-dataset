@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0170",
+  "role_name": "Chief Data Scientist",
+  "ksa_id": "AG-K-011",
+  "ksa_text": "Knowledge of AI system transparency and disclosure requirements, including interaction notification obligations, synthetic content identification, deepfake disclosure, AI-generated content labeling, and the design of transparency mechanisms appropriate to different regulatory contexts.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.3776400826446281,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.36784042832167835,
+        "cross_encoder_sts": 0.4206153846153846,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22710721153846156,
+        "jaccard": null,
+        "top_element_id": "1089",
+        "top_element_label": "Knowledge of reverse engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.36933181818181815,
+        "cross_encoder_sts": 0.447115,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.16191,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-089",
+        "top_element_label": "Financial decision making for technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3575577922077922,
+        "cross_encoder_sts": 0.3958857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25535,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-007",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3642747600225861,
+        "cross_encoder_sts": 0.4212813664596273,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21225714285714287,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3776400826446281,
+        "cross_encoder_sts": 0.4186409090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26830454545454546,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3590266666666667,
+        "cross_encoder_sts": 0.4090866666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22553333333333334,
+        "jaccard": null,
+        "top_element_id": "2.A.1.e",
+        "top_element_label": "Mathematics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3776400826446281
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-089",
+        "element_label": "Financial decision making for technology",
+        "score": 0.36933181818181815
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1089",
+        "element_label": "Knowledge of reverse engineering concepts.",
+        "score": 0.36784042832167835
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3642747600225861
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.e",
+        "element_label": "Mathematics",
+        "score": 0.3590266666666667
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "AI Governance is a primary or secondary domain for the Chief Data Scientist. This knowledge KSA is within scope for the role's expected competency profile and seniority level (c suite)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (AI Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.378). External validation of this knowledge KSA for the Chief Data Scientist role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "NIST AI RMF, EU AI Act (Article 9), and OECD AI Principles confirm AI governance as a critical competency for responsible AI leadership.",
+    "ruling": "Upheld: domain-level relevance of AI Governance for the Chief Data Scientist is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "AI Governance knowledge KSA is within scope for the Chief Data Scientist at the c suite tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:56.050081+00:00",
+    "pipeline_version": "1.0"
+  }
+}
