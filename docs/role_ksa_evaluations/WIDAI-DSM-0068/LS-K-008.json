@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0068",
+  "role_name": "Metadata Manager",
+  "ksa_id": "LS-K-008",
+  "ksa_text": "Knowledge of data and AI strategy development approaches, including strategy formulation methods, alignment with enterprise business strategy, competitive positioning through data capabilities, and strategy communication frameworks.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.49755974025974026,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4267212088345494,
+        "cross_encoder_sts": 0.45377190889370933,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3545860086767896,
+        "jaccard": null,
+        "top_element_id": "5925",
+        "top_element_label": "Use knowledge of business processes to create or recommend AI solutions."
+      },
+      "ddat": {
+        "composite": 0.4275728138528138,
+        "cross_encoder_sts": 0.46597904761904757,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32515619047619043,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.4618797805642633,
+        "cross_encoder_sts": 0.47700344827586205,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42155,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.4366013891726251,
+        "cross_encoder_sts": 0.4747743820224719,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3348067415730337,
+        "jaccard": null,
+        "top_element_id": "K0944",
+        "top_element_label": "Knowledge of intelligence data gathering principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.49755974025974026,
+        "cross_encoder_sts": 0.5206885714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4358828571428572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3859009090909091,
+        "cross_encoder_sts": 0.42640500000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27789,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.49755974025974026
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.4618797805642633
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0944",
+        "element_label": "Knowledge of intelligence data gathering principles and practices",
+        "score": 0.4366013891726251
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.4275728138528138
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5925",
+        "element_label": "Use knowledge of business processes to create or recommend AI solutions.",
+        "score": 0.4267212088345494
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA LS-K-008 (Leadership and Strategy/Knowledge) scores 0.498 composite (highest: NIST AI RMF at 0.498) and is edge_case for the Metadata Manager role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Metadata Manager."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, NIST AI RMF signal (0.498), and Leadership and Strategy handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support this Leadership and Strategy competency for Metadata Manager at composite 0.498?",
+    "evidence": "Market analysis confirms Leadership and Strategy competencies at composite 0.498 are consistent with Metadata Manager hiring criteria.",
+    "ruling": "Include upheld. Market evidence supports this competency for Metadata Manager. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA LS-K-008 (Leadership and Strategy/Knowledge) scores 0.498 composite (highest: NIST AI RMF at 0.498) and is edge_case for the Metadata Manager role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Metadata Manager.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:14.161273+00:00",
+    "pipeline_version": "1.0"
+  }
+}

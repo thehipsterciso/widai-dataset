@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0068",
+  "role_name": "Metadata Manager",
+  "ksa_id": "TF-T-005",
+  "ksa_text": "Monitor and optimize data application performance including resource utilization analysis, query performance profiling, bottleneck identification, and capacity planning for growth.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.42566363636363636,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39990377160030055,
+        "cross_encoder_sts": 0.4305765289256199,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3181097520661157,
+        "jaccard": null,
+        "top_element_id": "1033",
+        "top_element_label": "Knowledge of basic system administration, network, and operating system hardening techniques."
+      },
+      "ddat": {
+        "composite": 0.414000826446281,
+        "cross_encoder_sts": 0.45607272727272724,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3018090909090909,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-017",
+        "top_element_label": "Asset and configuration management"
+      },
+      "eu_ai_act": {
+        "composite": 0.42566363636363636,
+        "cross_encoder_sts": 0.45724,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34146,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3857880761099366,
+        "cross_encoder_sts": 0.4276353488372093,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2741953488372093,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36707636363636365,
+        "cross_encoder_sts": 0.41859999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22968000000000002,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.3972347593582888,
+        "cross_encoder_sts": 0.4340705882352941,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2990058823529412,
+        "jaccard": null,
+        "top_element_id": "2.B.3.d",
+        "top_element_label": "Installation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.42566363636363636
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-017",
+        "element_label": "Asset and configuration management",
+        "score": 0.414000826446281
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1033",
+        "element_label": "Knowledge of basic system administration, network, and operating system hardening techniques.",
+        "score": 0.39990377160030055
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.d",
+        "element_label": "Installation",
+        "score": 0.3972347593582888
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3857880761099366
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-T-005 (Technical Foundations/Task) scores 0.426 composite (highest: EU AI Act at 0.426) and is edge_case for the Metadata Manager role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Metadata Manager."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, EU AI Act signal (0.426), and Technical Foundations handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support this Technical Foundations competency for Metadata Manager at composite 0.426?",
+    "evidence": "Market analysis confirms Technical Foundations competencies at composite 0.426 are consistent with Metadata Manager hiring criteria.",
+    "ruling": "Include upheld. Market evidence supports this competency for Metadata Manager. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA TF-T-005 (Technical Foundations/Task) scores 0.426 composite (highest: EU AI Act at 0.426) and is edge_case for the Metadata Manager role. Domain prior: edge. Core signal hits: 0. OOS hits: 0. Seniority is appropriate for manager-level Metadata Manager.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:14.239373+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0068",
+  "role_name": "Metadata Manager",
+  "ksa_id": "AG-T-003",
+  "ksa_text": "Lead enterprise AI ethics reviews for high-stakes applications, including impact assessments, bias audits, and explainability documentation prior to production deployment.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.47156193181818185,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38537831253713606,
+        "cross_encoder_sts": 0.4113238562091503,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31619019607843135,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.39618337662337666,
+        "cross_encoder_sts": 0.4390857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28177714285714284,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.44705603305785124,
+        "cross_encoder_sts": 0.4567363636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42124181818181816,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3677655138339921,
+        "cross_encoder_sts": 0.4023695652173913,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27548804347826084,
+        "jaccard": null,
+        "top_element_id": "K1317",
+        "top_element_label": "Knowledge of AI bias types"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.47156193181818185,
+        "cross_encoder_sts": 0.4754265625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.46125625,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.47156193181818185
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.44705603305785124
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.39618337662337666
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.38537831253713606
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1317",
+        "element_label": "Knowledge of AI bias types",
+        "score": 0.3677655138339921
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-T-003 (AI Governance/Task) excluded as out_of_scope (composite 0.472, highest: NIST AI RMF at 0.472). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Metadata management and catalog strategy: technical/business/operational metadata, catalog platforms, metadata standards, lineage capture, and metadata enrichment."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.472, and AI Governance (AG) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Metadata Manager?",
+    "evidence": "AI Governance competencies do not appear as Metadata Manager requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Metadata Manager core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-T-003 (AI Governance/Task) excluded as out_of_scope (composite 0.472, highest: NIST AI RMF at 0.472). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Metadata management and catalog strategy: technical/business/operational metadata, catalog platforms, metadata standards, lineage capture, and metadata enrichment.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:14.173231+00:00",
+    "pipeline_version": "1.0"
+  }
+}
