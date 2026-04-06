@@ -3,8 +3,8 @@
   "domain_code": "SP",
   "domain_title": "Security & Privacy",
   "type": "Skill",
-  "count": 8,
-  "schema_version": "2.0.0",
+  "count": 26,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "SP-S-001",
@@ -13,10 +13,7 @@
       "domain_code": "SP",
       "statement": "Skill in conducting privacy impact assessments (PIAs) and data protection impact assessments (DPIAs) for new data processing activities and AI systems.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.04-S-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-S-002",
@@ -25,10 +22,7 @@
       "domain_code": "SP",
       "statement": "Skill in mapping personal data flows across systems, vendors, and jurisdictions to produce records of processing activities (RoPA) in compliance with regulatory requirements.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.04-S-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-S-003",
@@ -37,10 +31,7 @@
       "domain_code": "SP",
       "statement": "Skill in conducting and reviewing Data Protection Impact Assessments, identifying processing activities that present high risk to individuals, and recommending proportionate technical and organizational measures to mitigate identified risks.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.07-S-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-S-004",
@@ -49,10 +40,7 @@
       "domain_code": "SP",
       "statement": "Skill in advising on data processing agreements, standard contractual clauses, binding corporate rules, and other cross-border data transfer mechanisms, ensuring compliance with applicable jurisdictional requirements and supervisory guidance.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.07-S-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-S-005",
@@ -61,8 +49,7 @@
       "domain_code": "SP",
       "statement": "Skill in designing and implementing data anonymization and pseudonymization techniques appropriate to the intended use, including k-anonymity, differential privacy, and synthetic data generation approaches.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-S-006",
@@ -71,8 +58,7 @@
       "domain_code": "SP",
       "statement": "Skill in conducting privacy engineering reviews of data systems, evaluating data flows, access patterns, and retention practices against privacy requirements and privacy-by-design principles.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-S-007",
@@ -81,8 +67,7 @@
       "domain_code": "SP",
       "statement": "Skill in designing data classification frameworks and implementing classification controls that enforce handling, access, and retention requirements based on data sensitivity and regulatory classification.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-S-008",
@@ -91,8 +76,169 @@
       "domain_code": "SP",
       "statement": "Skill in conducting security assessments of data platforms and AI systems, including vulnerability identification, penetration testing coordination, and security architecture review.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-009",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in identifying and researching software vulnerabilities, conducting vulnerability assessments, and evaluating operational capabilities against known attack vectors and exploits.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-010",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in conducting threat analysis and developing threat models for systems and applications, including threat factor analysis, threat environment characterization, and threat-based test planning.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-011",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in designing and evaluating secure network and system architectures, including architecture analysis, secure network design, and evaluation of security designs against threat models.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-012",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in designing and executing security-focused test protocols for AI systems, including selection of appropriate testing methodologies, definition of security test scenarios, and documentation of security test evidence.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-013",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in designing AI training data governance and quality assurance, including data provenance tracking, design choice documentation, representativeness evaluation, and data preparation security.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-014",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in designing and implementing AI system transparency and interpretability mechanisms that enable users and security personnel to understand system decision-making and oversight.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-015",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in implementing secure data handling practices, including secure application development, encrypted communications, and secure deployment of data systems and services.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-016",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in designing privacy impact assessments and privacy policy documentation, including privacy disclosure statements, consent forms, and privacy notice creation for data processing activities.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-017",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in conducting privacy compliance monitoring and privacy vendor assessment, including evaluation of organizational privacy practices and compliance with privacy policies and procedures.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-018",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in implementing continuous security monitoring of AI systems in production, including observability for security events, detection of anomalies, and identification of security control failures.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-019",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in identifying, documenting, and evaluating the effectiveness of internal security controls for AI system components, including assessment of control design and implementation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-020",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in designing AI monitoring and logging systems that capture security-relevant events and support forensic analysis, incident investigation, and continuous security oversight.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-021",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in implementing AI-generated content provenance marking systems and synthetic content identification using machine-readable format standards for authenticity tracking.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-022",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in assessing and classifying AI system security and privacy risk levels, including evaluation of high-risk criteria and determination of appropriate security control intensity.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-023",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in assessing security and privacy impact of substantial modifications to AI systems, including modification scope determination and requirement assessment for re-evaluation.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-024",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in designing human-machine interfaces for AI system security oversight, including design of effective oversight mechanisms and interface usability for security monitoring.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-025",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in creating comprehensive technical documentation for AI systems that demonstrates security and privacy compliance, including architecture, design decisions, and security controls.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-S-026",
+      "type": "Skill",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Skill in creating downstream integration documentation for general-purpose AI models, including capability and limitation disclosure, security constraints, and usage guidance.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
     }
   ]
 }
