@@ -1,24 +1,36 @@
 {
   "dataset_id": "WIDAI-ROLE-KSA-MAP",
   "category_code": "DSM",
-  "relationship_count": 38,
+  "relationship_count": 672,
   "schema_version": "2.0.0",
   "relationships": [
     {
       "work_role_id": "WR-DSM-04.01",
-      "ksa_id": "DQ-K-004",
+      "ksa_id": "DQ-K-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.01",
-      "ksa_id": "DQ-K-005",
+      "ksa_id": "DQ-K-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.01",
-      "ksa_id": "DQ-K-006",
+      "ksa_id": "DQ-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DQ-S-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
@@ -30,91 +42,385 @@
     },
     {
       "work_role_id": "WR-DSM-04.01",
-      "ksa_id": "DQ-S-004",
+      "ksa_id": "DQ-T-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.01",
-      "ksa_id": "DQ-T-004",
+      "ksa_id": "DQ-T-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.01",
-      "ksa_id": "DQ-T-005",
+      "ksa_id": "DQ-A-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.01",
-      "ksa_id": "DQ-T-006",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.01",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DG-K-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.02",
-      "ksa_id": "DQ-K-007",
+      "ksa_id": "DG-K-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.02",
-      "ksa_id": "DQ-K-008",
+      "ksa_id": "DG-K-003",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.02",
-      "ksa_id": "DQ-K-009",
+      "ksa_id": "DG-S-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.02",
-      "ksa_id": "DQ-S-005",
+      "ksa_id": "DG-S-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.02",
-      "ksa_id": "DQ-T-007",
+      "ksa_id": "DG-S-003",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.02",
-      "ksa_id": "TF-T-002",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DQ-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DQ-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DQ-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DQ-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.02",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DG-K-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.03",
-      "ksa_id": "DQ-K-010",
+      "ksa_id": "DG-K-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.03",
-      "ksa_id": "DQ-K-011",
+      "ksa_id": "DG-K-003",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.03",
-      "ksa_id": "DQ-K-012",
+      "ksa_id": "DG-S-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.03",
-      "ksa_id": "DQ-S-006",
+      "ksa_id": "DG-S-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.03",
-      "ksa_id": "DQ-T-008",
+      "ksa_id": "DG-S-003",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
@@ -126,111 +432,3609 @@
     },
     {
       "work_role_id": "WR-DSM-04.03",
-      "ksa_id": "DQ-T-009",
+      "ksa_id": "DG-T-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.03",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
     },
     {
       "work_role_id": "WR-DSM-04.04",
       "ksa_id": "SP-K-002",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "tactical"
     },
     {
       "work_role_id": "WR-DSM-04.04",
       "ksa_id": "SP-K-003",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-DSM-04.04",
-      "ksa_id": "SP-K-004",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-DSM-04.04",
-      "ksa_id": "DQ-K-013",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "tactical"
     },
     {
       "work_role_id": "WR-DSM-04.04",
       "ksa_id": "SP-S-001",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "tactical"
     },
     {
       "work_role_id": "WR-DSM-04.04",
       "ksa_id": "SP-S-002",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "SP-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "SP-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
     },
     {
       "work_role_id": "WR-DSM-04.04",
       "ksa_id": "SP-T-002",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "tactical"
     },
     {
       "work_role_id": "WR-DSM-04.04",
-      "ksa_id": "SP-T-003",
+      "ksa_id": "SP-A-001",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "tactical"
     },
     {
       "work_role_id": "WR-DSM-04.04",
-      "ksa_id": "SP-T-004",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RC-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RC-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RC-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RC-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.04",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DG-K-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.05",
-      "ksa_id": "DQ-K-014",
+      "ksa_id": "DG-K-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.05",
-      "ksa_id": "DQ-K-015",
+      "ksa_id": "DG-K-003",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.05",
-      "ksa_id": "DQ-K-016",
+      "ksa_id": "DG-S-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.05",
-      "ksa_id": "DQ-S-007",
+      "ksa_id": "DG-S-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.05",
-      "ksa_id": "DQ-S-008",
+      "ksa_id": "DG-S-003",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.05",
-      "ksa_id": "DQ-T-010",
+      "ksa_id": "DG-T-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.05",
-      "ksa_id": "DQ-T-011",
+      "ksa_id": "DG-T-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
       "work_role_id": "WR-DSM-04.05",
-      "ksa_id": "DQ-T-012",
+      "ksa_id": "DG-A-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "AI-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "AI-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "AI-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.05",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DQ-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DQ-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DQ-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DQ-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "TF-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "TF-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "TF-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "TF-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "TF-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.06",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "TF-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "TF-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "TF-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "TF-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "TF-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.07",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "SP-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "SP-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "SP-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "SP-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "SP-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "SP-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "SP-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.08",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "TF-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "TF-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "TF-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "TF-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "TF-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.09",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "RC-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "RC-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "RC-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "RC-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "SP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "SP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "SP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.10",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.11",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.12",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.13",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AI-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AI-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AI-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AI-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AI-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AI-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AI-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "AG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.14",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "OP-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "OP-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "OP-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "OP-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "AI-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "AI-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "AI-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.15",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "OP-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "OP-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "OP-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "OP-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "AI-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "AI-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "AI-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.16",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "AI-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "AI-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "AI-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.17",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.18",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DQ-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DQ-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DQ-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DQ-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.19",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DQ-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DQ-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DQ-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DQ-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "TF-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.20",
+      "ksa_id": "TF-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DQ-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DQ-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DQ-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DQ-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "TF-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "TF-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "TF-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "TF-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "TF-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "TF-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "TF-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "TF-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "TF-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "foundational"
+    },
+    {
+      "work_role_id": "WR-DSM-04.21",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "foundational"
     }
   ]
 }

@@ -1,27 +1,9 @@
 {
   "dataset_id": "WIDAI-ROLE-KSA-MAP",
   "category_code": "GOV",
-  "relationship_count": 82,
+  "relationship_count": 800,
   "schema_version": "2.0.0",
   "relationships": [
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "DG-K-001",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "AG-K-002",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "SP-K-006",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
     {
       "work_role_id": "WR-GOV-01.01",
       "ksa_id": "LS-K-001",
@@ -36,19 +18,7 @@
     },
     {
       "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "DG-K-002",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "DA-K-014",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "DG-S-001",
+      "ksa_id": "LS-K-003",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
@@ -60,43 +30,13 @@
     },
     {
       "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "AG-S-001",
+      "ksa_id": "LS-S-002",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "DG-S-002",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "DG-A-001",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "SP-A-001",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "LS-A-001",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "DG-T-002",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "SP-T-005",
+      "ksa_id": "LS-S-003",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
@@ -108,13 +48,217 @@
     },
     {
       "work_role_id": "WR-GOV-01.01",
-      "ksa_id": "DG-T-003",
+      "ksa_id": "LS-T-002",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "AG-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "AG-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
       "ksa_id": "AG-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.01",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "LS-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "DG-K-002",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
@@ -126,25 +270,13 @@
     },
     {
       "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DG-K-004",
+      "ksa_id": "DG-S-001",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DQ-K-019",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DQ-K-020",
-      "relationship_type": "requires",
-      "proficiency_context": "strategic"
-    },
-    {
-      "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DG-K-005",
+      "ksa_id": "DG-S-002",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
@@ -156,345 +288,4521 @@
     },
     {
       "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DG-S-004",
+      "ksa_id": "DG-T-001",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DQ-S-009",
+      "ksa_id": "DG-T-002",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DG-A-002",
+      "ksa_id": "DG-A-001",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DG-T-004",
-      "relationship_type": "requires",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DG-T-005",
-      "relationship_type": "requires",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DG-T-006",
-      "relationship_type": "requires",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.02",
-      "ksa_id": "DQ-T-015",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.02",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "LS-K-001",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.03",
-      "ksa_id": "AG-K-003",
+      "ksa_id": "LS-K-002",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.03",
-      "ksa_id": "AG-K-004",
+      "ksa_id": "LS-K-003",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.03",
-      "ksa_id": "AG-K-005",
+      "ksa_id": "LS-S-001",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.03",
-      "ksa_id": "DG-K-006",
+      "ksa_id": "LS-S-002",
       "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AI-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AI-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AI-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AI-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AI-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AI-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AI-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AG-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "recommends",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.03",
       "ksa_id": "AG-S-002",
-      "relationship_type": "requires",
+      "relationship_type": "recommends",
       "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AG-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AB-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AB-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AB-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AB-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "AB-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.03",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "LS-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "AI-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "AI-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "AI-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.04",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "AG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "AG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "AG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
       "ksa_id": "AG-S-003",
       "relationship_type": "requires",
-      "proficiency_context": "strategic"
+      "proficiency_context": "tactical"
     },
     {
-      "work_role_id": "WR-GOV-01.03",
-      "ksa_id": "DG-A-003",
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "AG-T-001",
       "relationship_type": "requires",
-      "proficiency_context": "strategic"
+      "proficiency_context": "tactical"
     },
     {
-      "work_role_id": "WR-GOV-01.03",
+      "work_role_id": "WR-GOV-01.05",
       "ksa_id": "AG-T-002",
       "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "AG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RM-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RM-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RM-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RM-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.05",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
-      "work_role_id": "WR-GOV-01.03",
-      "ksa_id": "AG-T-003",
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "LS-K-002",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
-      "work_role_id": "WR-GOV-01.03",
-      "ksa_id": "AG-T-004",
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "LS-K-003",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
-      "work_role_id": "WR-GOV-01.03",
-      "ksa_id": "DG-T-007",
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "LS-S-001",
       "relationship_type": "requires",
       "proficiency_context": "strategic"
     },
     {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-K-007",
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "LS-S-002",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-K-008",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-K-009",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-S-005",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-S-006",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-S-007",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-A-004",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "RC-T-002",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-T-008",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-T-009",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.04",
-      "ksa_id": "DG-T-010",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.05",
-      "ksa_id": "AG-K-006",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.05",
-      "ksa_id": "AG-K-007",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.05",
-      "ksa_id": "AG-K-008",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.05",
-      "ksa_id": "AG-S-005",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.05",
-      "ksa_id": "AG-S-004",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.05",
-      "ksa_id": "AI-A-003",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.05",
-      "ksa_id": "AG-T-005",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.05",
-      "ksa_id": "AG-T-006",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
-    },
-    {
-      "work_role_id": "WR-GOV-01.05",
-      "ksa_id": "AG-T-007",
-      "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DG-K-010",
+      "ksa_id": "LS-S-003",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DQ-K-021",
+      "ksa_id": "LS-T-001",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DG-K-011",
+      "ksa_id": "LS-T-002",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DG-S-008",
+      "ksa_id": "LS-A-001",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DQ-S-010",
+      "ksa_id": "DG-K-001",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DG-A-005",
+      "ksa_id": "DG-K-002",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DG-T-011",
+      "ksa_id": "DG-K-003",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DQ-T-016",
+      "ksa_id": "DG-S-001",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DG-T-012",
+      "ksa_id": "DG-S-002",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.06",
-      "ksa_id": "DG-T-013",
+      "ksa_id": "DG-S-003",
       "relationship_type": "requires",
-      "proficiency_context": "operational"
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "SP-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "SP-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "SP-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.06",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
     },
     {
       "work_role_id": "WR-GOV-01.07",
-      "ksa_id": "SP-K-007",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "LS-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.07",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AG-K-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
-      "work_role_id": "WR-GOV-01.07",
-      "ksa_id": "SP-K-008",
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AG-K-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
-      "work_role_id": "WR-GOV-01.07",
-      "ksa_id": "SP-K-009",
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AG-K-003",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
-      "work_role_id": "WR-GOV-01.07",
-      "ksa_id": "SP-K-010",
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AG-S-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
-      "work_role_id": "WR-GOV-01.07",
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.08",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DQ-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DQ-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DQ-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DQ-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.09",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "LS-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.10",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "LS-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.11",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "LS-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.12",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DA-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DA-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DA-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DA-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "TF-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "TF-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "TF-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "TF-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "TF-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.13",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "LS-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.14",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DQ-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DQ-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DQ-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DQ-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DQ-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DQ-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DQ-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.15",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "SP-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "SP-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "SP-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
       "ksa_id": "SP-S-003",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
-      "work_role_id": "WR-GOV-01.07",
-      "ksa_id": "SP-S-004",
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "SP-T-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
-      "work_role_id": "WR-GOV-01.07",
-      "ksa_id": "SP-T-006",
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "SP-T-002",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
-      "work_role_id": "WR-GOV-01.07",
-      "ksa_id": "SP-T-007",
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "SP-A-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
     },
     {
-      "work_role_id": "WR-GOV-01.07",
-      "ksa_id": "SP-T-008",
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RC-K-001",
       "relationship_type": "requires",
       "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RC-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RC-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RC-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RC-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.16",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "SP-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "SP-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "SP-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "SP-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "SP-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "SP-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "SP-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RC-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RC-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RC-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RC-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.17",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "SP-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "SP-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "SP-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "SP-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "SP-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "SP-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "SP-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "TF-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "TF-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "TF-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "TF-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "TF-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "TF-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "TF-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "TF-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "TF-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.18",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.19",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.20",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "TF-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "TF-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "TF-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "TF-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "TF-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "TF-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "TF-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "TF-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "TF-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DA-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DA-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DA-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.21",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "LS-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DQ-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.22",
+      "ksa_id": "DQ-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "operational"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "LS-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "LS-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "LS-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "LS-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "SP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "SP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DA-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.23",
+      "ksa_id": "DA-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RM-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RM-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RM-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RM-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RM-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RM-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RM-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RM-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RM-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "DG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "DG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "DG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "DG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "DG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "DG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "DG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RC-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RC-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RC-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RC-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "RC-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.24",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "strategic"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AG-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AG-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AG-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AG-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AG-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AG-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AG-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AG-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AG-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "OP-K-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "OP-K-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "OP-K-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "OP-S-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "OP-S-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "OP-S-003",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "OP-T-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "OP-T-002",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "OP-A-001",
+      "relationship_type": "requires",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AI-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AI-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AI-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AI-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AI-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "LS-K-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "LS-K-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "LS-S-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "LS-S-002",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "LS-T-001",
+      "relationship_type": "recommends",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "DG-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "DG-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AB-K-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
+    },
+    {
+      "work_role_id": "WR-GOV-01.25",
+      "ksa_id": "AB-S-001",
+      "relationship_type": "optional",
+      "proficiency_context": "tactical"
     }
   ]
 }
