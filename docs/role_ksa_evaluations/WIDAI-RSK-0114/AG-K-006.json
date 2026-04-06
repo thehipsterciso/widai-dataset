@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0114",
+  "role_name": "AI Ethics Board Member",
+  "ksa_id": "AG-K-006",
+  "ksa_text": "Knowledge of AI literacy concepts, including what AI is and is not, how ML models work at a conceptual level, AI limitations and failure modes, responsible AI principles for non-technical audiences, and the design of training programs that build organizational AI competency.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5806822077922078,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4197317906336088,
+        "cross_encoder_sts": 0.445439696969697,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35117737373737373,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.3950188429752066,
+        "cross_encoder_sts": 0.4215145454545454,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32436363636363635,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.565932339791356,
+        "cross_encoder_sts": 0.5709688524590163,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5525016393442622,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.42149767959313417,
+        "cross_encoder_sts": 0.4582020979020979,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32361923076923077,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5806822077922078,
+        "cross_encoder_sts": 0.5852028571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5686271428571429,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.36834848484848487,
+        "cross_encoder_sts": 0.3968666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2923,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.3",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.5806822077922078
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.565932339791356
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.42149767959313417
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.4197317906336088
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.3950188429752066
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to AI Ethics Board Member scope \u2014 RSK-specific signals detected (\"responsible ai\", \"ai principles\"). STRM composite is strong (0.5807); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in RSK job postings or cert curricula (CRISC, FRM, NIST AI RMF, CISM). Would a working AI Ethics Board Member self-report this as required?",
+    "evidence": "Challenge answered: the competency is implicit in AI Ethics Board Member work (domain affinity 0.88, 2 RSK signal(s)). Framework vocabulary matching systematically underrepresents risk management and governance KSAs.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to AI Ethics Board Member scope \u2014 RSK-specific signals detected (\"responsible ai\", \"ai principles\"). STRM composite is strong (0.5807); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:05.976217+00:00",
+    "pipeline_version": "1.0"
+  }
+}

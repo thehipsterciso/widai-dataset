@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0115",
+  "role_name": "AI Compliance Liaison",
+  "ksa_id": "RC-K-008",
+  "ksa_text": "Knowledge of regulatory enforcement mechanisms, including supervisory authority powers, penalty structures, precedent enforcement actions, and the distinction between binding requirements, regulatory guidance, and industry codes of conduct.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4273949494949495,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4112144560357675,
+        "cross_encoder_sts": 0.43041065573770493,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36002459016393445,
+        "jaccard": null,
+        "top_element_id": "1027A",
+        "top_element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy."
+      },
+      "ddat": {
+        "composite": 0.39544104683195597,
+        "cross_encoder_sts": 0.4368848484848485,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2849242424242424,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-044",
+        "top_element_label": "Cyber risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.39526694214876035,
+        "cross_encoder_sts": 0.39544545454545454,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3947909090909091,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4211583562901745,
+        "cross_encoder_sts": 0.4484641414141414,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3483429292929293,
+        "jaccard": null,
+        "top_element_id": "K0639",
+        "top_element_label": "Knowledge of code tailoring tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41646363636363637,
+        "cross_encoder_sts": 0.4362333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3637444444444444,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4273949494949495,
+        "cross_encoder_sts": 0.44935555555555556,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36883333333333335,
+        "jaccard": null,
+        "top_element_id": "2.C.8.b",
+        "top_element_label": "Law and Government"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.b",
+        "element_label": "Law and Government",
+        "score": 0.4273949494949495
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0639",
+        "element_label": "Knowledge of code tailoring tools and techniques",
+        "score": 0.4211583562901745
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41646363636363637
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1027A",
+        "element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy.",
+        "score": 0.4112144560357675
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-044",
+        "element_label": "Cyber risk management",
+        "score": 0.39544104683195597
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Edge case \u2014 included on balance: knowledge contains 0 RSK-relevant signal(s) (domain context) within Risk & Compliance (domain affinity 0.88). STRM composite is moderate (0.4274). A practicing AI Compliance Liaison would encounter this competency regularly."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 1 match(es) in RSK job postings or certification scope. Competency appears in RSK role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 included on balance: knowledge contains 0 RSK-relevant signal(s) (domain context) within Risk & Compliance (domain affinity 0.88). STRM composite is moderate (0.4274). A practicing AI Compliance Liaison would encounter this competency regularly.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:06.686437+00:00",
+    "pipeline_version": "1.0"
+  }
+}

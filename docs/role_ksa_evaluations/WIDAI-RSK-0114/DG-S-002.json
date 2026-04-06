@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0114",
+  "role_name": "AI Ethics Board Member",
+  "ksa_id": "DG-S-002",
+  "ksa_text": "Skill in aligning data and AI program objectives to organizational strategy, translating business priorities into data and AI capability requirements with measurable outcomes.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.5284129117259553,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42819576121030395,
+        "cross_encoder_sts": 0.4598844827586207,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34369250374812593,
+        "jaccard": null,
+        "top_element_id": "296",
+        "top_element_label": "Knowledge of how information needs and collection requirements are translated, tracked, and prioritized across the extended enterprise."
+      },
+      "ddat": {
+        "composite": 0.46023796296296293,
+        "cross_encoder_sts": 0.502974074074074,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.346275,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-067",
+        "top_element_label": "Data visualisation"
+      },
+      "eu_ai_act": {
+        "composite": 0.4836680194805194,
+        "cross_encoder_sts": 0.4812017857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49024464285714286,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4178196933449326,
+        "cross_encoder_sts": 0.4616944976076555,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3008202153110048,
+        "jaccard": null,
+        "top_element_id": "S0727",
+        "top_element_label": "Skill in performing data fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5284129117259553,
+        "cross_encoder_sts": 0.5335275362318841,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5147739130434782,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-1.4",
+        "top_element_label": "Context is established and understood."
+      },
+      "onet": {
+        "composite": 0.40594545454545455,
+        "cross_encoder_sts": 0.43714000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32276,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-1.4",
+        "element_label": "Context is established and understood.",
+        "score": 0.5284129117259553
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4836680194805194
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-067",
+        "element_label": "Data visualisation",
+        "score": 0.46023796296296293
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "296",
+        "element_label": "Knowledge of how information needs and collection requirements are translated, tracked, and prioritized across the extended enterprise.",
+        "score": 0.42819576121030395
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0727",
+        "element_label": "Skill in performing data fusion",
+        "score": 0.4178196933449326
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Governance domain has low AI Ethics Board Member affinity (0.45), and the text \u2014 'Skill in aligning data and AI program objectives to organizational strategy, translating business pr...' \u2014 describes competencies outside the AI Ethics Board Member practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.5284)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Ethics Board Member.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Governance domain has low AI Ethics Board Member affinity (0.45), and the text \u2014 'Skill in aligning data and AI program objectives to organizational strategy, translating business pr...' \u2014 describes competencies outside the AI Ethics Board Member practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.5284).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:05.990002+00:00",
+    "pipeline_version": "1.0"
+  }
+}

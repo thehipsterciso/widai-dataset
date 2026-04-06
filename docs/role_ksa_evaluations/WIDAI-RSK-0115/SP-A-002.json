@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0115",
+  "role_name": "AI Compliance Liaison",
+  "ksa_id": "SP-A-002",
+  "ksa_text": "Ability to design enterprise security and privacy architectures that encompass network infrastructure, system integration, and secure interfaces between information and physical systems.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.5084433403805496,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4175982584722969,
+        "cross_encoder_sts": 0.4596031804733728,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30558513313609464,
+        "jaccard": null,
+        "top_element_id": "494",
+        "top_element_label": "Design and develop cybersecurity or cybersecurity-enabled products."
+      },
+      "ddat": {
+        "composite": 0.44103221925133695,
+        "cross_encoder_sts": 0.48616617647058824,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32067500000000004,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-056",
+        "top_element_label": "Data integration design"
+      },
+      "eu_ai_act": {
+        "composite": 0.5084433403805496,
+        "cross_encoder_sts": 0.5264046511627907,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.460546511627907,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4173746837746838,
+        "cross_encoder_sts": 0.46573103103103103,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28842442442442445,
+        "jaccard": null,
+        "top_element_id": "S0418",
+        "top_element_label": "Skill in applying secure network architectures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4692998509687034,
+        "cross_encoder_sts": 0.4884131147540983,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4183311475409836,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37369090909090913,
+        "cross_encoder_sts": 0.41883750000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2533,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.5084433403805496
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4692998509687034
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-056",
+        "element_label": "Data integration design",
+        "score": 0.44103221925133695
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "494",
+        "element_label": "Design and develop cybersecurity or cybersecurity-enabled products.",
+        "score": 0.4175982584722969
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0418",
+        "element_label": "Skill in applying secure network architectures",
+        "score": 0.4173746837746838
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Security & Privacy domain has low AI Compliance Liaison affinity (0.38), and the text \u2014 'Ability to design enterprise security and privacy architectures that encompass network infrastructur...' \u2014 describes competencies outside the AI Compliance Liaison practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.5084)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Compliance Liaison.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low AI Compliance Liaison affinity (0.38), and the text \u2014 'Ability to design enterprise security and privacy architectures that encompass network infrastructur...' \u2014 describes competencies outside the AI Compliance Liaison practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.5084).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:06.558240+00:00",
+    "pipeline_version": "1.0"
+  }
+}
