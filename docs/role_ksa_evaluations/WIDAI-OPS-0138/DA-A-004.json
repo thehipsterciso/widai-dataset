@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0138",
+  "role_name": "AI UX Designer",
+  "ksa_id": "DA-A-004",
+  "ksa_text": "Ability to identify and resolve metric inconsistency problems that arise when different teams define the same business concept differently in their own queries.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope: Data Architecture (affinity 0.28) \u2014 \"Ability to identify and resolve metric inconsistency problems that arise when di...\" \u2014 no role signals. STRM: minimal (0.0000)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 0 match(es). Gap not material to AI UX Designer.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope: Data Architecture (affinity 0.28) \u2014 \"Ability to identify and resolve metric inconsistency problems that arise when di...\" \u2014 no role signals. STRM: minimal (0.0000).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:07:35.698149+00:00",
+    "pipeline_version": "1.0"
+  }
+}
