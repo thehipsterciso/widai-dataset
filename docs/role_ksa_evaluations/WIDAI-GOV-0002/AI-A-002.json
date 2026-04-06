@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0002",
+  "role_name": "Chief Data Officer",
+  "ksa_id": "AI-A-002",
+  "ksa_text": "Ability to evaluate build-versus-buy decisions for ML platform components with clear criteria based on organizational maturity, team capability, and long-term operational cost.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4213818181818182,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3920583487940631,
+        "cross_encoder_sts": 0.4122081632653061,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33832551020408164,
+        "jaccard": null,
+        "top_element_id": "162",
+        "top_element_label": "Skill in conducting capabilities and requirements analysis."
+      },
+      "ddat": {
+        "composite": 0.4088298181818182,
+        "cross_encoder_sts": 0.44667999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.307896,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "nice": {
+        "composite": 0.3920398034398034,
+        "cross_encoder_sts": 0.41376216216216216,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3341135135135135,
+        "jaccard": null,
+        "top_element_id": "K1185",
+        "top_element_label": "Knowledge of organizational evaluation and validation requirements"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3745954545454545,
+        "cross_encoder_sts": 0.38034999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35925,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4213818181818182,
+        "cross_encoder_sts": 0.4456,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3568,
+        "jaccard": null,
+        "top_element_id": "2.B.4.e",
+        "top_element_label": "Judgment and Decision Making"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.4.e",
+        "element_label": "Judgment and Decision Making",
+        "score": 0.4213818181818182
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4088298181818182
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "162",
+        "element_label": "Skill in conducting capabilities and requirements analysis.",
+        "score": 0.3920583487940631
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1185",
+        "element_label": "Knowledge of organizational evaluation and validation requirements",
+        "score": 0.3920398034398034
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3745954545454545
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low affinity (0.50) for Chief Data Officer, and the text \u2014 'Ability to evaluate build-versus-buy decisions for ML platform components with clear criteria based ...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4214)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Chief Data Officer whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low affinity (0.50) for Chief Data Officer, and the text \u2014 'Ability to evaluate build-versus-buy decisions for ML platform components with clear criteria based ...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4214).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:01.530733Z",
+    "pipeline_version": "1.0"
+  }
+}

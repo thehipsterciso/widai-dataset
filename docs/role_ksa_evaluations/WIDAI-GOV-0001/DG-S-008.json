@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0001",
+  "role_name": "Chief Data and AI Officer",
+  "ksa_id": "DG-S-008",
+  "ksa_text": "Skill in systematically translating organizational objectives and business needs into specific data and information requirements through stakeholder analysis, capacity assessment, requirements documentation, and feasibility evaluation.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.41792045454545457,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4104924672376432,
+        "cross_encoder_sts": 0.43639648127128267,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3414150964812713,
+        "jaccard": null,
+        "top_element_id": "3069",
+        "top_element_label": "Ability to produce technical documentation."
+      },
+      "ddat": {
+        "composite": 0.4154021064301552,
+        "cross_encoder_sts": 0.45354268292682925,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3136939024390244,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4026550802139037,
+        "cross_encoder_sts": 0.44286470588235294,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29542941176470583,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4092939954365318,
+        "cross_encoder_sts": 0.4440431968295905,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3166294583883752,
+        "jaccard": null,
+        "top_element_id": "S0028",
+        "top_element_label": "Skill in developing data dictionaries"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39920548885077184,
+        "cross_encoder_sts": 0.44737169811320754,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2707622641509434,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.41792045454545457,
+        "cross_encoder_sts": 0.43549499999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.371055,
+        "jaccard": null,
+        "top_element_id": "2.C.1.b",
+        "top_element_label": "Administrative"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.b",
+        "element_label": "Administrative",
+        "score": 0.41792045454545457
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.4154021064301552
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "3069",
+        "element_label": "Ability to produce technical documentation.",
+        "score": 0.4104924672376432
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0028",
+        "element_label": "Skill in developing data dictionaries",
+        "score": 0.4092939954365318
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4026550802139037
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: skill from Data Governance (affinity 0.90); no GOV-specific signals and low domain affinity. STRM composite is moderate-to-strong (0.4179). A Chief Data and AI Officer would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Chief Data and AI Officer whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: skill from Data Governance (affinity 0.90); no GOV-specific signals and low domain affinity. STRM composite is moderate-to-strong (0.4179). A Chief Data and AI Officer would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:28.348958Z",
+    "pipeline_version": "1.0"
+  }
+}

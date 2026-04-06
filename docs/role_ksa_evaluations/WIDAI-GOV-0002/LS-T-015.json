@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0002",
+  "role_name": "Chief Data Officer",
+  "ksa_id": "LS-T-015",
+  "ksa_text": "Establish and operate comprehensive AI risk assessment and monitoring infrastructure, including iterative risk assessment across system lifecycle, post-market monitoring design, quality assurance procedures, and incident response protocols.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to Chief Data Officer scope \u2014 GOV-specific signals detected (\"ai risk\", \"ai assess\", \"risk   :assessment|analysis|evaluation|register\"). STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). Domain Leadership & Strategy (affinity 0.88) is a natural fit for this governance role. Seniority is appropriate for C-suite executive level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 3 job-posting-level and 0 certification-level matches (CDMP, DAMA, IAPP, NIST AI RMF, ISO 42001). Competency appears regularly in Chief Data Officer role descriptions and/or governance certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to Chief Data Officer scope \u2014 GOV-specific signals detected (\"ai risk\", \"ai assess\", \"risk   :assessment|analysis|evaluation|register\"). STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). Domain Leadership & Strategy (affinity 0.88) is a natural fit for this governance role. Seniority is appropriate for C-suite executive level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:02.227991Z",
+    "pipeline_version": "1.0"
+  }
+}

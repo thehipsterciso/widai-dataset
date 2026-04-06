@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0002",
+  "role_name": "Chief Data Officer",
+  "ksa_id": "DA-T-001",
+  "ksa_text": "Design and document the enterprise data architecture, including platform topology, data domain structure, integration patterns, and technology choices that support data governance and analytical objectives.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4452180351906158,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42551634199134203,
+        "cross_encoder_sts": 0.4479059523809524,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3658107142857143,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.4452180351906158,
+        "cross_encoder_sts": 0.4687258064516129,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3825306451612903,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-020",
+        "top_element_label": "Business architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.43449696969696977,
+        "cross_encoder_sts": 0.4679666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34524444444444446,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41698103764921945,
+        "cross_encoder_sts": 0.45003282828282826,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3288429292929293,
+        "jaccard": null,
+        "top_element_id": "K0693",
+        "top_element_label": "Knowledge of complex data structure capabilities and applications"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35688257575757576,
+        "cross_encoder_sts": 0.3918916666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.263525,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-3.3",
+        "top_element_label": "AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood."
+      },
+      "onet": {
+        "composite": 0.42220454545454544,
+        "cross_encoder_sts": 0.46225,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3154166666666667,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-020",
+        "element_label": "Business architecture",
+        "score": 0.4452180351906158
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.43449696969696977
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
+        "score": 0.42551634199134203
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.42220454545454544
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0693",
+        "element_label": "Knowledge of complex data structure capabilities and applications",
+        "score": 0.41698103764921945
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: task from Data Architecture (affinity 0.55); strategic/implementation framing outweighs governance signals. STRM composite is strong (0.4452). A Chief Data Officer would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 2 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Chief Data Officer whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: task from Data Architecture (affinity 0.55); strategic/implementation framing outweighs governance signals. STRM composite is strong (0.4452). A Chief Data Officer would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:19:01.345726Z",
+    "pipeline_version": "1.0"
+  }
+}

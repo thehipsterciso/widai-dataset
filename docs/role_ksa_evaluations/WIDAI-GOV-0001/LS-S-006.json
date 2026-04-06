@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0001",
+  "role_name": "Chief Data and AI Officer",
+  "ksa_id": "LS-S-006",
+  "ksa_text": "Skill in conducting organizational data and AI diagnostic assessments, including stakeholder interviews, artifact review, maturity scoring, and finding synthesis.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.5294168642951251,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42633330814079035,
+        "cross_encoder_sts": 0.44654667458432307,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3724309976247031,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.4385265550239234,
+        "cross_encoder_sts": 0.46250789473684206,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3745763157894737,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.47162905844155845,
+        "cross_encoder_sts": 0.46554821428571425,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.48784464285714285,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4237674444199868,
+        "cross_encoder_sts": 0.44423631961259075,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36918377723970947,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5294168642951251,
+        "cross_encoder_sts": 0.5281014492753623,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5329246376811594,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39823352272727275,
+        "cross_encoder_sts": 0.4317125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30895625,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.4",
+        "top_element_label": "Deductive Reasoning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5294168642951251
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.47162905844155845
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.4385265550239234
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.42633330814079035
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4237674444199868
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: skill from Leadership & Strategy (affinity 0.90); no GOV-specific signals and low domain affinity. STRM composite is strong (0.5294). A Chief Data and AI Officer would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Chief Data and AI Officer whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: skill from Leadership & Strategy (affinity 0.90); no GOV-specific signals and low domain affinity. STRM composite is strong (0.5294). A Chief Data and AI Officer would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:18:27.955888Z",
+    "pipeline_version": "1.0"
+  }
+}
