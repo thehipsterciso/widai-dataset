@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0085",
+  "role_name": "ISO 8000 Data Administrator",
+  "ksa_id": "SP-K-001",
+  "ksa_text": "Knowledge of AI security threat modeling and attack vectors, including prompt injection, data exfiltration, model poisoning, supply chain vulnerabilities, and threat assessment methodologies specific to machine learning systems.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.45519841897233204,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41881884115884116,
+        "cross_encoder_sts": 0.4280120879120879,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39430351648351647,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.39894581818181823,
+        "cross_encoder_sts": 0.452288,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25670000000000004,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4537466275659824,
+        "cross_encoder_sts": 0.44424516129032254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4790838709677419,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41448745644599305,
+        "cross_encoder_sts": 0.429005574912892,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3757724738675958,
+        "jaccard": null,
+        "top_element_id": "K0375",
+        "top_element_label": "Knowledge of wireless applications vulnerabilities"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.45519841897233204,
+        "cross_encoder_sts": 0.45015652173913046,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4686434782608696,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.5",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.45519841897233204
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4537466275659824
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.41881884115884116
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0375",
+        "element_label": "Knowledge of wireless applications vulnerabilities",
+        "score": 0.41448745644599305
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.39894581818181823
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-K-001 (Security and Privacy/Knowledge) excluded as out_of_scope (composite 0.455, highest: NIST AI RMF at 0.455). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. ISO 8000 data administration: data quality process execution under ISO standards, data records management, quality control procedures, and compliance documentation."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.455, and Security and Privacy (SP) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Security and Privacy KSA (composite 0.455)?",
+    "evidence": "Market analysis of ISO 8000 Data Administrator job postings does not surface this Security and Privacy competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA SP-K-001 (Security and Privacy/Knowledge) excluded as out_of_scope (composite 0.455, highest: NIST AI RMF at 0.455). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. ISO 8000 data administration: data quality process execution under ISO standards, data records management, quality control procedures, and compliance documentation.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:39.721176+00:00",
+    "pipeline_version": "1.0"
+  }
+}

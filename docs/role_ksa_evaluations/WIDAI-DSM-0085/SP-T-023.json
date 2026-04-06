@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0085",
+  "role_name": "ISO 8000 Data Administrator",
+  "ksa_id": "SP-T-023",
+  "ksa_text": "Coordinate with Chief Information Security Officer and other stakeholders to ensure enterprise-wide alignment of security practices and procedures.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "too_senior",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-T-023 (Security and Privacy/Task) excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: too_senior. ISO 8000 data administration: data quality process execution under ISO standards, data records management, quality control procedures, and compliance documentation."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.000, and Security and Privacy (SP) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Zero-signal exclusion: does absence of framework signal reliably indicate irrelevance?",
+    "evidence": "Composite 0.0 across all 6 frameworks confirms no semantic alignment with ISO 8000 Data Administrator reference elements.",
+    "ruling": "Exclusion upheld. Zero framework signal confirmed by market absence. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA SP-T-023 (Security and Privacy/Task) excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: too_senior. ISO 8000 data administration: data quality process execution under ISO standards, data records management, quality control procedures, and compliance documentation.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:39.894630+00:00",
+    "pipeline_version": "1.0"
+  }
+}

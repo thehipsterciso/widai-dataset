@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0086",
+  "role_name": "ISO 8000 Data Technician",
+  "ksa_id": "TF-S-004",
+  "ksa_text": "Skill in using Git for version control in data and AI projects, including branching, merging, pull request workflows, code review participation, and repository organization for multi-contributor teams.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.4297629629629629,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3815861718926235,
+        "cross_encoder_sts": 0.41801712158808935,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28443697270471463,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4297629629629629,
+        "cross_encoder_sts": 0.4877185185185185,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2752148148148148,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4049205882352941,
+        "cross_encoder_sts": 0.42822352941176467,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3427794117647059,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3804771627565982,
+        "cross_encoder_sts": 0.420220564516129,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2744947580645161,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40180382775119616,
+        "cross_encoder_sts": 0.42919473684210524,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3287614035087719,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.4",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3730854545454545,
+        "cross_encoder_sts": 0.40367999999999993,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2915,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4297629629629629
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.4049205882352941
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.4",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.40180382775119616
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.3815861718926235
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3804771627565982
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-S-004 (Technical Foundations/Skill) scores 0.430 composite (highest: DDaT at 0.430) and is edge_case for the ISO 8000 Data Technician role. Domain prior: edge. Core signal hits: 1. OOS hits: 0. Seniority is appropriate for technician-level ISO 8000 Data Technician."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, DDaT signal (0.430), and Technical Foundations handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support this Technical Foundations competency for ISO 8000 Data Technician at composite 0.430?",
+    "evidence": "Market analysis confirms Technical Foundations competencies at composite 0.430 are consistent with ISO 8000 Data Technician hiring criteria.",
+    "ruling": "Include upheld. Market evidence supports this competency for ISO 8000 Data Technician. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA TF-S-004 (Technical Foundations/Skill) scores 0.430 composite (highest: DDaT at 0.430) and is edge_case for the ISO 8000 Data Technician role. Domain prior: edge. Core signal hits: 1. OOS hits: 0. Seniority is appropriate for technician-level ISO 8000 Data Technician.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:44.943426+00:00",
+    "pipeline_version": "1.0"
+  }
+}

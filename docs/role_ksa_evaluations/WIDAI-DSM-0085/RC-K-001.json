@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0085",
+  "role_name": "ISO 8000 Data Administrator",
+  "ksa_id": "RC-K-001",
+  "ksa_text": "Knowledge of compliance assessment methodologies, including control testing, evidence gathering, gap analysis, and findings documentation standards.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.43934602272727263,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4174409090909091,
+        "cross_encoder_sts": 0.4342259927797834,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3726806859205776,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.3965802773497689,
+        "cross_encoder_sts": 0.4287033898305085,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3109186440677966,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.43934602272727263,
+        "cross_encoder_sts": 0.46174374999999995,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37961874999999995,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-004",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.42601308433168905,
+        "cross_encoder_sts": 0.4426638242894057,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3816111111111111,
+        "jaccard": null,
+        "top_element_id": "K0645",
+        "top_element_label": "Knowledge of standard operating procedures (SOPs)"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4166128644939966,
+        "cross_encoder_sts": 0.4512924528301887,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.324133962264151,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40646136363636365,
+        "cross_encoder_sts": 0.4241,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35942500000000005,
+        "jaccard": null,
+        "top_element_id": "2.C.1.e",
+        "top_element_label": "Customer and Personal Service"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-004",
+        "element_label": "Quality management system",
+        "score": 0.43934602272727263
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0645",
+        "element_label": "Knowledge of standard operating procedures (SOPs)",
+        "score": 0.42601308433168905
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.4174409090909091
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4166128644939966
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.e",
+        "element_label": "Customer and Personal Service",
+        "score": 0.40646136363636365
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RC-K-001 (Risk and Compliance/Knowledge) scores 0.439 composite (highest: EU AI Act at 0.439) and is edge_case for the ISO 8000 Data Administrator role. Domain prior: edge. Core signal hits: 1. OOS hits: 0. Seniority is appropriate for specialist-level ISO 8000 Data Administrator."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Include consistent with edge_case scope, EU AI Act signal (0.439), and Risk and Compliance handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support this Risk and Compliance competency for ISO 8000 Data Administrator at composite 0.439?",
+    "evidence": "Market analysis confirms Risk and Compliance competencies at composite 0.439 are consistent with ISO 8000 Data Administrator hiring criteria.",
+    "ruling": "Include upheld. Market evidence supports this competency for ISO 8000 Data Administrator. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA RC-K-001 (Risk and Compliance/Knowledge) scores 0.439 composite (highest: EU AI Act at 0.439) and is edge_case for the ISO 8000 Data Administrator role. Domain prior: edge. Core signal hits: 1. OOS hits: 0. Seniority is appropriate for specialist-level ISO 8000 Data Administrator.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:39.741904+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0086",
+  "role_name": "ISO 8000 Data Technician",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:20:45.315055+00:00",
+  "total_ksas": 1069,
+  "included": 168,
+  "excluded": 901,
+  "inclusion_rate": 0.1572,
+  "adversarial_overturns": {
+    "pass_3": 5,
+    "pass_4": 0,
+    "total_ksas_affected": 5
+  },
+  "calibration": {
+    "min": 65,
+    "max": 110,
+    "status": "WARNING"
+  },
+  "pass_1_notes": "6 frameworks: dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet. Composite = MAX across frameworks.",
+  "role_scope_notes": "ISO 8000 technical data operations: data entry, validation, verification, quality task execution, and data accuracy maintenance at technician/entry level.",
+  "domain_summary": {
+    "AG": {
+      "include": 0,
+      "exclude": 107,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 31,
+      "exclude": 43,
+      "total": 74,
+      "label": "Risk and Compliance"
+    },
+    "RM": {
+      "include": 0,
+      "exclude": 101,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 0,
+      "exclude": 89,
+      "total": 89,
+      "label": "Leadership and Strategy"
+    },
+    "TF": {
+      "include": 17,
+      "exclude": 70,
+      "total": 87,
+      "label": "Technical Foundations"
+    },
+    "AI": {
+      "include": 0,
+      "exclude": 103,
+      "total": 103,
+      "label": "AI and Machine Learning"
+    },
+    "DG": {
+      "include": 26,
+      "exclude": 66,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "OP": {
+      "include": 27,
+      "exclude": 42,
+      "total": 69,
+      "label": "Operational Excellence"
+    },
+    "SP": {
+      "include": 0,
+      "exclude": 84,
+      "total": 84,
+      "label": "Security and Privacy"
+    },
+    "DA": {
+      "include": 0,
+      "exclude": 93,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 51,
+      "exclude": 31,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "AB": {
+      "include": 16,
+      "exclude": 72,
+      "total": 88,
+      "label": "Core Abilities"
+    }
+  }
+}

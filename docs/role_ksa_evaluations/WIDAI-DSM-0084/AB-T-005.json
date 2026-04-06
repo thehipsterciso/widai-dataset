@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0084",
+  "role_name": "ISO 8000 Data Manager",
+  "ksa_id": "AB-T-005",
+  "ksa_text": "Build data visualizations, dashboards, and performance reports that accurately represent analytical findings, support self-service exploration, and meet defined consumer requirements for content, layout, and refresh frequency.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4115033826638478,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38798581466842336,
+        "cross_encoder_sts": 0.42053719806763284,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30118212560386476,
+        "jaccard": null,
+        "top_element_id": "1020A",
+        "top_element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance)."
+      },
+      "ddat": {
+        "composite": 0.4115033826638478,
+        "cross_encoder_sts": 0.4730325581395349,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24742558139534884,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.37634475524475525,
+        "cross_encoder_sts": 0.4215,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25593076923076924,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3864248484848485,
+        "cross_encoder_sts": 0.42208666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2913266666666667,
+        "jaccard": null,
+        "top_element_id": "S0015",
+        "top_element_label": "Skill in conducting test events"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3633946022727273,
+        "cross_encoder_sts": 0.411553125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.234971875,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.3715768595041323,
+        "cross_encoder_sts": 0.4040909090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2848727272727273,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4115033826638478
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1020A",
+        "element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance).",
+        "score": 0.38798581466842336
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0015",
+        "element_label": "Skill in conducting test events",
+        "score": 0.3864248484848485
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.37634475524475525
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.3715768595041323
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "too_senior",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AB-T-005 (Core Abilities/Task) excluded as edge_case (composite 0.412, highest: DDaT at 0.412). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: too_senior. ISO 8000 data quality management: data quality standards implementation, certification processes, ISO 8000 compliance oversight, data exchange standard management, and quality system governance."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.412, and Core Abilities (AB) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Core Abilities KSA (composite 0.412)?",
+    "evidence": "Market analysis of ISO 8000 Data Manager job postings does not surface this Core Abilities competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AB-T-005 (Core Abilities/Task) excluded as edge_case (composite 0.412, highest: DDaT at 0.412). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: too_senior. ISO 8000 data quality management: data quality standards implementation, certification processes, ISO 8000 compliance oversight, data exchange standard management, and quality system governance.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:36.345797+00:00",
+    "pipeline_version": "1.0"
+  }
+}

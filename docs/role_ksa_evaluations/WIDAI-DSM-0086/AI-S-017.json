@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0086",
+  "role_name": "ISO 8000 Data Technician",
+  "ksa_id": "AI-S-017",
+  "ksa_text": "Skill in evaluating AI use case feasibility, including data availability assessment, technical complexity estimation, and business value quantification.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4308020202020202,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3910640052072033,
+        "cross_encoder_sts": 0.42015560859188544,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31348639618138424,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.4062016317016317,
+        "cross_encoder_sts": 0.4640666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2518948717948718,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4308020202020202,
+        "cross_encoder_sts": 0.4434111111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39717777777777774,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-011",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.39124463684463684,
+        "cross_encoder_sts": 0.424910582010582,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3014687830687831,
+        "jaccard": null,
+        "top_element_id": "K0176",
+        "top_element_label": "Knowledge of Extensible Markup Language (XML) schemas"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4071128099173554,
+        "cross_encoder_sts": 0.41707727272727274,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3805409090909091,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.3639323232323232,
+        "cross_encoder_sts": 0.3994111111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26932222222222224,
+        "jaccard": null,
+        "top_element_id": "2.A.1.e",
+        "top_element_label": "Mathematics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-011",
+        "element_label": "Record-keeping",
+        "score": 0.4308020202020202
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.3",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.4071128099173554
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4062016317016317
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0176",
+        "element_label": "Knowledge of Extensible Markup Language (XML) schemas",
+        "score": 0.39124463684463684
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.3910640052072033
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-S-017 (AI and Machine Learning/Skill) excluded as out_of_scope (composite 0.431, highest: EU AI Act at 0.431). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. ISO 8000 technical data operations: data entry, validation, verification, quality task execution, and data accuracy maintenance at technician/entry level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.431, and AI and Machine Learning (AI) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.431)?",
+    "evidence": "Market analysis of ISO 8000 Data Technician job postings does not surface this AI and Machine Learning competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AI-S-017 (AI and Machine Learning/Skill) excluded as out_of_scope (composite 0.431, highest: EU AI Act at 0.431). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. ISO 8000 technical data operations: data entry, validation, verification, quality task execution, and data accuracy maintenance at technician/entry level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:44.940689+00:00",
+    "pipeline_version": "1.0"
+  }
+}

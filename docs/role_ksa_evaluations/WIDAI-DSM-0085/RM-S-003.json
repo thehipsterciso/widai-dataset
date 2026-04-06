@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0085",
+  "role_name": "ISO 8000 Data Administrator",
+  "ksa_id": "RM-S-003",
+  "ksa_text": "Skill in designing and executing adversarial testing for AI systems, including red-teaming LLMs, testing model robustness to input perturbation, and documenting vulnerability findings.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5428423376623377,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4084235567352356,
+        "cross_encoder_sts": 0.4618060583941606,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26607021897810224,
+        "jaccard": null,
+        "top_element_id": "124A",
+        "top_element_label": "Ability to apply system design tools, methods, and techniques, including automated systems analysis and design tools."
+      },
+      "ddat": {
+        "composite": 0.390564898989899,
+        "cross_encoder_sts": 0.45637777777777777,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2150638888888889,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-004",
+        "top_element_label": "Agile research practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.5240657228017883,
+        "cross_encoder_sts": 0.5598426229508197,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4286606557377049,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-045",
+        "top_element_label": "Obligations of providers of GPAI models with systemic risk"
+      },
+      "nice": {
+        "composite": 0.40691050591199845,
+        "cross_encoder_sts": 0.46362931769722815,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2556603411513859,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5428423376623377,
+        "cross_encoder_sts": 0.5787157142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.44717999999999997,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.6",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.33196636363636367,
+        "cross_encoder_sts": 0.39405,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.16641,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.2",
+        "top_element_label": "Originality"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.6",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.5428423376623377
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-045",
+        "element_label": "Obligations of providers of GPAI models with systemic risk",
+        "score": 0.5240657228017883
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "124A",
+        "element_label": "Ability to apply system design tools, methods, and techniques, including automated systems analysis and design tools.",
+        "score": 0.4084235567352356
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40691050591199845
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-004",
+        "element_label": "Agile research practices",
+        "score": 0.390564898989899
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-S-003 (Risk Management/Skill) excluded as out_of_scope (composite 0.543, highest: NIST AI RMF at 0.543). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. ISO 8000 data administration: data quality process execution under ISO standards, data records management, quality control procedures, and compliance documentation."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.543, and Risk Management (RM) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk Management KSA for ISO 8000 Data Administrator?",
+    "evidence": "Risk Management competencies do not appear as ISO 8000 Data Administrator requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Risk Management is not a ISO 8000 Data Administrator core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-S-003 (Risk Management/Skill) excluded as out_of_scope (composite 0.543, highest: NIST AI RMF at 0.543). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. ISO 8000 data administration: data quality process execution under ISO standards, data records management, quality control procedures, and compliance documentation.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:20:39.670931+00:00",
+    "pipeline_version": "1.0"
+  }
+}
