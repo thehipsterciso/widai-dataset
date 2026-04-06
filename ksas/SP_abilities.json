@@ -3,50 +3,143 @@
   "domain_code": "SP",
   "domain_title": "Security & Privacy",
   "type": "Ability",
-  "count": 4,
-  "schema_version": "2.0.0",
+  "count": 15,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "SP-A-001",
       "type": "Ability",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Ability to identify and resolve conflicts between data monetization objectives and data protection, privacy, and ethical obligations.",
+      "statement": "Ability to design and develop secure applications using secure development methodologies, tools, and frameworks.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.01-A-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-A-002",
       "type": "Ability",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Ability to design security and privacy architectures that enable data utility and AI innovation while maintaining protection levels appropriate to the data sensitivity and regulatory context.",
+      "statement": "Ability to design enterprise security and privacy architectures that encompass network infrastructure, system integration, and secure interfaces between information and physical systems.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-A-003",
       "type": "Ability",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Ability to assess and communicate the security implications of emerging AI technologies, including foundation models, autonomous agents, and AI-generated content, to both technical and executive audiences.",
+      "statement": "Ability to develop comprehensive privacy management frameworks, policies, and compliance procedures that address organizational privacy obligations and regulatory requirements.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-A-004",
       "type": "Ability",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Ability to navigate the tension between data sharing for organizational value creation and data protection requirements, finding practical approaches that satisfy both objectives.",
+      "statement": "Ability to assess, evaluate, and monitor compliance with organizational and regulatory privacy requirements across systems, services, and business agreements.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.1",
-      "legacy_ids": []
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-005",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to integrate privacy and security considerations throughout organizational programs, policies, procedures, and project lifecycles.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-006",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to determine data requirements and design secure data storage, integration, and management systems aligned with organizational security and privacy objectives.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-007",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to conduct security design evaluations and information security risk assessments for systems, applications, and operational environments.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-008",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to communicate security and privacy architectures, IT security value, and assessment findings to technical and executive audiences at appropriate levels of detail.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-009",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to assess privacy risks in AI systems, document AI risk assessments, and communicate AI security implications to technical and non-technical stakeholders.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-010",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to assess and manage privacy and security risks from third-party AI systems, vendor dependencies, and supply chain components.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-011",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to design data backup and recovery capabilities integrated into system architecture and cloud infrastructure solutions.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-012",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to design and execute secure test plans and testing protocols for security validation and compliance verification.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-013",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to assess and ensure data quality, input validation, and representativeness in systems and AI applications.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-014",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to monitor systems and cloud infrastructure for security and privacy compliance through continuous oversight mechanisms.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-A-015",
+      "type": "Ability",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Ability to resolve privacy and security conflicts, collection gaps, and competing security requirements through evidence-based decision-making.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
     }
   ]
 }
