@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0157",
+  "role_name": "Director of Data Governance",
+  "ksa_id": "RC-K-014",
+  "ksa_text": "Knowledge of regulatory examination and audit processes, including common examination scopes, documentation expectations, evidence standards, examiner interaction protocols, and typical findings for data and AI regulatory reviews.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.448624926686217,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4103186614892645,
+        "cross_encoder_sts": 0.4234288944723618,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37535804020100505,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.39935622009569377,
+        "cross_encoder_sts": 0.4306,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31603947368421054,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.448624926686217,
+        "cross_encoder_sts": 0.4329483870967742,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49042903225806456,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4203385026737968,
+        "cross_encoder_sts": 0.44443176470588236,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3560898039215686,
+        "jaccard": null,
+        "top_element_id": "K0645",
+        "top_element_label": "Knowledge of standard operating procedures (SOPs)"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.42013223140495864,
+        "cross_encoder_sts": 0.41676590909090905,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42910909090909094,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40539772727272727,
+        "cross_encoder_sts": 0.41652500000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.375725,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.448624926686217
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0645",
+        "element_label": "Knowledge of standard operating procedures (SOPs)",
+        "score": 0.4203385026737968
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.42013223140495864
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.4103186614892645
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.40539772727272727
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Regulatory Compliance is a primary or secondary domain for the Director of Data Governance. This knowledge KSA is within scope for the role's expected competency profile and seniority level (director)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Regulatory Compliance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.449). External validation of this knowledge KSA for the Director of Data Governance role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "GDPR, CCPA, EU AI Act, and SEC data governance regulations confirm regulatory compliance knowledge for governance-focused leadership.",
+    "ruling": "Upheld: domain-level relevance of Regulatory Compliance for the Director of Data Governance is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Regulatory Compliance knowledge KSA is within scope for the Director of Data Governance at the director tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.392622+00:00",
+    "pipeline_version": "1.0"
+  }
+}

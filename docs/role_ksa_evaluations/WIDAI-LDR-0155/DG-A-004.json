@@ -1,0 +1,126 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0155",
+  "role_name": "Director of Analytics",
+  "ksa_id": "DG-A-004",
+  "ksa_text": "Ability to coordinate data sharing, integration, and consolidation initiatives across organizational units and external partners.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4379012987012987,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38669090909090903,
+        "cross_encoder_sts": 0.40524999999999994,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3372,
+        "jaccard": null,
+        "top_element_id": "4334",
+        "top_element_label": "Ability to promote and enable organizational change"
+      },
+      "ddat": {
+        "composite": 0.4379012987012987,
+        "cross_encoder_sts": 0.4872285714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3063619047619048,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "nice": {
+        "composite": 0.4056181818181819,
+        "cross_encoder_sts": 0.45235000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.281,
+        "jaccard": null,
+        "top_element_id": "T1886",
+        "top_element_label": "Maintain the organizational policy program"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.34791818181818185,
+        "cross_encoder_sts": 0.3951,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2221,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.2",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4379012987012987
+      },
+      {
+        "framework": "nice",
+        "element_id": "T1886",
+        "element_label": "Maintain the organizational policy program",
+        "score": 0.4056181818181819
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "4334",
+        "element_label": "Ability to promote and enable organizational change",
+        "score": 0.38669090909090903
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-2.2",
+        "element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",
+        "score": 0.34791818181818185
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act",
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Data Governance is a primary or secondary domain for the Director of Analytics. This ability KSA is within scope for the role's expected competency profile and seniority level (director)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Data Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.438). External validation of this ability KSA for the Director of Analytics role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "DAMA-DMBOK, EDM Council, and enterprise CDO job descriptions universally include data governance competencies for data leadership roles.",
+    "ruling": "Upheld: domain-level relevance of Data Governance for the Director of Analytics is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Governance ability KSA is within scope for the Director of Analytics at the director tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.059344+00:00",
+    "pipeline_version": "1.0"
+  }
+}

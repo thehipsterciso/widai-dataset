@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0155",
+  "role_name": "Director of Analytics",
+  "ksa_id": "DQ-K-001",
+  "ksa_text": "Knowledge of data quality dimensions (accuracy, completeness, consistency, timeliness, uniqueness, validity, integrity) and the measurement and assessment approaches applicable to each dimension.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.42342845849802374,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39968136260095255,
+        "cross_encoder_sts": 0.4293029612756264,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3206904328018223,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3938064738292011,
+        "cross_encoder_sts": 0.43232424242424244,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2910924242424242,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.38421038961038956,
+        "cross_encoder_sts": 0.38777142857142854,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37471428571428567,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-019",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.42342845849802374,
+        "cross_encoder_sts": 0.46476869565217394,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31318782608695656,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35670247933884297,
+        "cross_encoder_sts": 0.3880363636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2731454545454545,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3745613636363636,
+        "cross_encoder_sts": 0.40645,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28952500000000003,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.42342845849802374
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.39968136260095255
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.3938064738292011
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-019",
+        "element_label": "Quality management system",
+        "score": 0.38421038961038956
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.3745613636363636
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Data Quality KSA with insufficient signal strength (composite score 0.423) to justify inclusion for the Director of Analytics. Without stronger framework alignment, this knowledge KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": "This Knowledge KSA was excluded as an edge case, yet it has a composite score of 0.423 (moderate signal). Knowledge-dimension KSAs represent conceptual awareness rather than execution; exclusion may be too aggressive.",
+    "rebuttal": "Edge-domain Knowledge KSAs require more than moderate signal to justify inclusion; the role's scope does not regularly engage with Data Quality. Exclusion upheld.",
+    "ruling": "Upheld: edge-domain exclusion maintained. Data Quality is not sufficiently central to the Director of Analytics to warrant inclusion at this signal level."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain knowledge KSA be expected in real-world Director of Analytics roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Data Quality is not a standard competency expectation for Director of Analytics. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of Analytics competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.423) and edge-domain placement (Data Quality) do not meet inclusion threshold for the Director of Analytics. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.080535+00:00",
+    "pipeline_version": "1.0"
+  }
+}

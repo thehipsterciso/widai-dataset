@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0157",
+  "role_name": "Director of Data Governance",
+  "ksa_id": "AB-T-010",
+  "ksa_text": "Document analytical methodologies, data sources, findings, business rules, and transformation logic, including producing documentation that meets evidence standards for regulatory compliance, audit, and executive decision support.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4351875,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41894699675324676,
+        "cross_encoder_sts": 0.43562299107142854,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37447767857142855,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.42182224025974024,
+        "cross_encoder_sts": 0.45438392857142856,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33499107142857143,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4351875,
+        "cross_encoder_sts": 0.44574375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4070375,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.40923814333814335,
+        "cross_encoder_sts": 0.42699629629629626,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36188306878306875,
+        "jaccard": null,
+        "top_element_id": "K0800",
+        "top_element_label": "Knowledge of evidence admissibility laws and regulations"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.428367599067599,
+        "cross_encoder_sts": 0.4592487179487179,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3460179487179487,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4194887700534759,
+        "cross_encoder_sts": 0.43232941176470585,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3852470588235294,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4351875
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.428367599067599
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.42182224025974024
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.4194887700534759
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.41894699675324676
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Applied Analytics & BI KSA with insufficient signal strength (composite score 0.435) to justify inclusion for the Director of Data Governance. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain task KSA be expected in real-world Director of Data Governance roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Applied Analytics & BI is not a standard competency expectation for Director of Data Governance. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of Data Governance competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.435) and edge-domain placement (Applied Analytics & BI) do not meet inclusion threshold for the Director of Data Governance. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.401123+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0155",
+  "role_name": "Director of Analytics",
+  "ksa_id": "AI-K-005",
+  "ksa_text": "Knowledge of containerization, orchestration, and infrastructure-as-code as applied to ML workloads, including Docker, Kubernetes, GPU resource management, distributed training job scheduling, and reproducible environment management across development and production.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.3963756784260516,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3963756784260516,
+        "cross_encoder_sts": 0.4382992537313433,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2845794776119403,
+        "jaccard": null,
+        "top_element_id": "7010",
+        "top_element_label": "Knowledge of container orchestration and resource management platforms."
+      },
+      "ddat": {
+        "composite": 0.36239000000000005,
+        "cross_encoder_sts": 0.433655,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.17235,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.3840318181818182,
+        "cross_encoder_sts": 0.41695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29625,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-014",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3862071253071253,
+        "cross_encoder_sts": 0.43790648648648645,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24834216216216218,
+        "jaccard": null,
+        "top_element_id": "K0055",
+        "top_element_label": "Knowledge of microprocessors"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.33456969696969696,
+        "cross_encoder_sts": 0.3798333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21386666666666665,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-3.2",
+        "top_element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle."
+      },
+      "onet": {
+        "composite": 0.3745045454545455,
+        "cross_encoder_sts": 0.42035,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25225,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "7010",
+        "element_label": "Knowledge of container orchestration and resource management platforms.",
+        "score": 0.3963756784260516
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0055",
+        "element_label": "Knowledge of microprocessors",
+        "score": 0.3862071253071253
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-014",
+        "element_label": "Human oversight",
+        "score": 0.3840318181818182
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.3745045454545455
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.36239000000000005
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain AI/ML Engineering KSA with insufficient signal strength (composite score 0.396) to justify inclusion for the Director of Analytics. Without stronger framework alignment, this knowledge KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain knowledge KSA be expected in real-world Director of Analytics roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm AI/ML Engineering is not a standard competency expectation for Director of Analytics. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of Analytics competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.396) and edge-domain placement (AI/ML Engineering) do not meet inclusion threshold for the Director of Analytics. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:21.107530+00:00",
+    "pipeline_version": "1.0"
+  }
+}
