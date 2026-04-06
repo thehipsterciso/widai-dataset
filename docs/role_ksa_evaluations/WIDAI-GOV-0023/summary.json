@@ -1,0 +1,125 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0023",
+  "role_name": "Data Officer (Federal/DoD)",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:38:14.912734Z",
+  "total_evaluated": 1069,
+  "include_count": 251,
+  "exclude_count": 818,
+  "inclusion_rate": 0.2348,
+  "calibration_status": "HIGH",
+  "calibration_note": "251 included KSAs outside 60\u2013200 calibration target.",
+  "confidence_distribution": {
+    "high": 1069,
+    "medium": 0,
+    "low": 0
+  },
+  "adversarial_overturn_distribution": {
+    "zero_overturns": 1069,
+    "one_overturn": 0,
+    "two_overturns": 0
+  },
+  "domain_breakdown": {
+    "TF": {
+      "include": 1,
+      "exclude": 86,
+      "total": 87,
+      "inclusion_rate": 0.011
+    },
+    "DA": {
+      "include": 5,
+      "exclude": 88,
+      "total": 93,
+      "inclusion_rate": 0.054
+    },
+    "DQ": {
+      "include": 13,
+      "exclude": 69,
+      "total": 82,
+      "inclusion_rate": 0.159
+    },
+    "DG": {
+      "include": 67,
+      "exclude": 25,
+      "total": 92,
+      "inclusion_rate": 0.728
+    },
+    "SP": {
+      "include": 16,
+      "exclude": 68,
+      "total": 84,
+      "inclusion_rate": 0.19
+    },
+    "AI": {
+      "include": 6,
+      "exclude": 97,
+      "total": 103,
+      "inclusion_rate": 0.058
+    },
+    "AG": {
+      "include": 36,
+      "exclude": 71,
+      "total": 107,
+      "inclusion_rate": 0.336
+    },
+    "RC": {
+      "include": 33,
+      "exclude": 41,
+      "total": 74,
+      "inclusion_rate": 0.446
+    },
+    "RM": {
+      "include": 50,
+      "exclude": 51,
+      "total": 101,
+      "inclusion_rate": 0.495
+    },
+    "LS": {
+      "include": 13,
+      "exclude": 76,
+      "total": 89,
+      "inclusion_rate": 0.146
+    },
+    "OP": {
+      "include": 11,
+      "exclude": 58,
+      "total": 69,
+      "inclusion_rate": 0.159
+    },
+    "AB": {
+      "include": 0,
+      "exclude": 88,
+      "total": 88,
+      "inclusion_rate": 0.0
+    }
+  },
+  "dimension_breakdown": {
+    "Skill": {
+      "included": 84,
+      "excluded": 244
+    },
+    "Task": {
+      "included": 52,
+      "excluded": 195
+    },
+    "Knowledge": {
+      "included": 90,
+      "excluded": 191
+    },
+    "Ability": {
+      "included": 25,
+      "excluded": 188
+    }
+  },
+  "score_analysis": {
+    "avg_composite_included": 0.2002,
+    "avg_composite_excluded": 0.2123
+  },
+  "adversarial_challenge_counts": {
+    "pass_3_challenges": 0,
+    "pass_3_overturns": 0,
+    "pass_4_challenges": 21,
+    "pass_4_overturns": 0
+  }
+}

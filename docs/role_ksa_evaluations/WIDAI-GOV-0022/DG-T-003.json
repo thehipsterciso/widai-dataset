@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0022",
+  "role_name": "Federated Governance Group Representative",
+  "ksa_id": "DG-T-003",
+  "ksa_text": "Establish and operate the enterprise data governance program, including council structure, policy library, stewardship network, data domain ownership registry, and governance metrics.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4278684659090909,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4065282608695652,
+        "cross_encoder_sts": 0.41064836956521733,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3955413043478261,
+        "jaccard": null,
+        "top_element_id": "2087",
+        "top_element_label": "Collaborate with intelligence analysts/targeting organizations involved in related areas."
+      },
+      "ddat": {
+        "composite": 0.4278684659090909,
+        "cross_encoder_sts": 0.457140625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.349809375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-044",
+        "top_element_label": "Cyber risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4233204545454545,
+        "cross_encoder_sts": 0.40965,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.459775,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.37639262899262904,
+        "cross_encoder_sts": 0.388627027027027,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3437675675675676,
+        "jaccard": null,
+        "top_element_id": "K0668",
+        "top_element_label": "Knowledge of contract management"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4118648760330578,
+        "cross_encoder_sts": 0.3998090909090909,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4440136363636364,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-2.2",
+        "top_element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks."
+      },
+      "onet": {
+        "composite": 0.34466363636363634,
+        "cross_encoder_sts": 0.3595,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3051,
+        "jaccard": null,
+        "top_element_id": "4.A.4.c.3",
+        "top_element_label": "Monitoring and Controlling Resources"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-044",
+        "element_label": "Cyber risk management",
+        "score": 0.4278684659090909
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4233204545454545
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-2.2",
+        "element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",
+        "score": 0.4118648760330578
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2087",
+        "element_label": "Collaborate with intelligence analysts/targeting organizations involved in related areas.",
+        "score": 0.4065282608695652
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0668",
+        "element_label": "Knowledge of contract management",
+        "score": 0.37639262899262904
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to Federated Governance Group Representative scope \u2014 GOV-specific signals detected (\"data governance\", \"data ownership\", \"governance   :council|committee|board|body|structure|model|program|office\"). STRM composite is strong (0.4279). Domain Data Governance (affinity 0.88) is a natural fit for this governance role. Seniority is appropriate for manager-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 5 job-posting-level and 0 certification-level matches (CDMP, DAMA, IAPP, NIST AI RMF, ISO 42001). Competency appears regularly in Federated Governance Group Representative role descriptions and/or governance certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to Federated Governance Group Representative scope \u2014 GOV-specific signals detected (\"data governance\", \"data ownership\", \"governance   :council|committee|board|body|structure|model|program|office\"). STRM composite is strong (0.4279). Domain Data Governance (affinity 0.88) is a natural fit for this governance role. Seniority is appropriate for manager-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:12.556931Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0025",
+  "role_name": "AI Literacy Training Manager",
+  "ksa_id": "SP-K-004",
+  "ksa_text": "Knowledge of data subject rights fulfillment and management, including rights request intake procedures, response workflows, compliance timelines, documentation standards, and remediation processes for access, deletion, and rectification requests.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4524056818181818,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4173184813248767,
+        "cross_encoder_sts": 0.4299839147286822,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.383543992248062,
+        "jaccard": null,
+        "top_element_id": "1037A",
+        "top_element_label": "Knowledge of information technology (IT) risk management policies, requirements, and procedures."
+      },
+      "ddat": {
+        "composite": 0.40790131964809384,
+        "cross_encoder_sts": 0.428991935483871,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35165967741935483,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-024",
+        "top_element_label": "Change management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4524056818181818,
+        "cross_encoder_sts": 0.45591875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.44303750000000003,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4193959277315744,
+        "cross_encoder_sts": 0.4425116719242902,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3577539432176656,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3942090909090909,
+        "cross_encoder_sts": 0.41606,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33594,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36959204545454544,
+        "cross_encoder_sts": 0.383075,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3336375,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4524056818181818
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.4193959277315744
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1037A",
+        "element_label": "Knowledge of information technology (IT) risk management policies, requirements, and procedures.",
+        "score": 0.4173184813248767
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-024",
+        "element_label": "Change management",
+        "score": 0.40790131964809384
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3942090909090909
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Security & Privacy domain has low affinity (0.40) for AI Literacy Training Manager, and the text \u2014 'Knowledge of data subject rights fulfillment and management, including rights request intake procedu...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4524)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working AI Literacy Training Manager whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low affinity (0.40) for AI Literacy Training Manager, and the text \u2014 'Knowledge of data subject rights fulfillment and management, including rights request intake procedu...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4524).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:16.564650Z",
+    "pipeline_version": "1.0"
+  }
+}

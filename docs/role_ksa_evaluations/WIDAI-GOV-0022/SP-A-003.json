@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0022",
+  "role_name": "Federated Governance Group Representative",
+  "ksa_id": "SP-A-003",
+  "ksa_text": "Ability to develop comprehensive privacy management frameworks, policies, and compliance procedures that address organizational privacy obligations and regulatory requirements.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.499866810966811,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42178072314049586,
+        "cross_encoder_sts": 0.4459275,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3573893181818181,
+        "jaccard": null,
+        "top_element_id": "5856",
+        "top_element_label": "Communicate the results of AI risk assessments to relevant stakeholders."
+      },
+      "ddat": {
+        "composite": 0.44258249158249163,
+        "cross_encoder_sts": 0.4950537037037037,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30265925925925924,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4568288461538461,
+        "cross_encoder_sts": 0.436625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5107057692307693,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4069196310935441,
+        "cross_encoder_sts": 0.4404202898550725,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31758454106280193,
+        "jaccard": null,
+        "top_element_id": "K0638",
+        "top_element_label": "Knowledge of security awareness programs"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.499866810966811,
+        "cross_encoder_sts": 0.4929936507936508,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5181952380952382,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40176704545454545,
+        "cross_encoder_sts": 0.442025,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2944125,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.499866810966811
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4568288461538461
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.44258249158249163
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5856",
+        "element_label": "Communicate the results of AI risk assessments to relevant stakeholders.",
+        "score": 0.42178072314049586
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0638",
+        "element_label": "Knowledge of security awareness programs",
+        "score": 0.4069196310935441
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Security & Privacy domain has low affinity (0.45) for Federated Governance Group Representative, and the text \u2014 'Ability to develop comprehensive privacy management frameworks, policies, and compliance procedures ...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4999)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 3 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Federated Governance Group Representative whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low affinity (0.45) for Federated Governance Group Representative, and the text \u2014 'Ability to develop comprehensive privacy management frameworks, policies, and compliance procedures ...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is strong (0.4999).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:12.290343Z",
+    "pipeline_version": "1.0"
+  }
+}

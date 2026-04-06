@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0024",
+  "role_name": "Evaluation Officer",
+  "ksa_id": "DG-K-008",
+  "ksa_text": "Knowledge of data domain ownership and stewardship models, including domain boundary definition, accountability assignment, and cross-domain governance dispute resolution.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.44465959258133175,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.427652742455874,
+        "cross_encoder_sts": 0.43698872651356996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4027567849686848,
+        "jaccard": null,
+        "top_element_id": "28",
+        "top_element_label": "Knowledge of data administration and data standardization policies and standards."
+      },
+      "ddat": {
+        "composite": 0.4268590909090909,
+        "cross_encoder_sts": 0.4422696428571428,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38576428571428567,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.41461545454545456,
+        "cross_encoder_sts": 0.41180500000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42211,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-019",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.44465959258133175,
+        "cross_encoder_sts": 0.45473244147157194,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4177986622073579,
+        "jaccard": null,
+        "top_element_id": "K0700",
+        "top_element_label": "Knowledge of data standardization policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38666666666666666,
+        "cross_encoder_sts": 0.4006111111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3494814814814815,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3698735537190083,
+        "cross_encoder_sts": 0.38830000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3207363636363636,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0700",
+        "element_label": "Knowledge of data standardization policies and procedures",
+        "score": 0.44465959258133175
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "28",
+        "element_label": "Knowledge of data administration and data standardization policies and standards.",
+        "score": 0.427652742455874
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.4268590909090909
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-019",
+        "element_label": "Quality management system",
+        "score": 0.41461545454545456
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38666666666666666
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to Evaluation Officer scope \u2014 GOV-specific signals detected (\"data ownership\", \"accountabilit\"). STRM composite is strong (0.4447). Domain Data Governance (affinity 0.65) is a natural fit for this governance role. Seniority is appropriate for manager-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 3 job-posting-level and 0 certification-level matches (CDMP, DAMA, IAPP, NIST AI RMF, ISO 42001). Competency appears regularly in Evaluation Officer role descriptions and/or governance certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to Evaluation Officer scope \u2014 GOV-specific signals detected (\"data ownership\", \"accountabilit\"). STRM composite is strong (0.4447). Domain Data Governance (affinity 0.65) is a natural fit for this governance role. Seniority is appropriate for manager-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:38:15.165193Z",
+    "pipeline_version": "1.0"
+  }
+}
