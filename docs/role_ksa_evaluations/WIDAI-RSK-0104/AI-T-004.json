@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0104",
+  "role_name": "Data Compliance Analyst",
+  "ksa_id": "AI-T-004",
+  "ksa_text": "Implement model monitoring and observability systems, including performance dashboards, drift detection, degradation alerting, incident response procedures, and automated retraining triggers when defined thresholds are exceeded.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.45203030303030306,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39366992685475444,
+        "cross_encoder_sts": 0.42309563218390805,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3152013793103448,
+        "jaccard": null,
+        "top_element_id": "1073",
+        "top_element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+      },
+      "ddat": {
+        "composite": 0.4110157575757576,
+        "cross_encoder_sts": 0.45824666666666664,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28506666666666663,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.402187012987013,
+        "cross_encoder_sts": 0.4363142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3111809523809524,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-011",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.39701956406166933,
+        "cross_encoder_sts": 0.4347312865497076,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2964549707602339,
+        "jaccard": null,
+        "top_element_id": "K1125",
+        "top_element_label": "Knowledge of continuous monitoring tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41400095693779904,
+        "cross_encoder_sts": 0.45588684210526315,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30230526315789474,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.45203030303030306,
+        "cross_encoder_sts": 0.4534666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4482,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.45203030303030306
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.41400095693779904
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4110157575757576
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-011",
+        "element_label": "Record-keeping",
+        "score": 0.402187012987013
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1125",
+        "element_label": "Knowledge of continuous monitoring tools and techniques",
+        "score": 0.39701956406166933
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to Data Compliance Analyst scope \u2014 RSK-specific signals detected (\"incident response\", \"model monitor\", \"performance.{0,15} ?:degrad|drift\"). STRM composite is strong (0.4520); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 1 match(es) in RSK job postings or certification scope. Competency appears in RSK role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to Data Compliance Analyst scope \u2014 RSK-specific signals detected (\"incident response\", \"model monitor\", \"performance.{0,15} ?:degrad|drift\"). STRM composite is strong (0.4520); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:23:47.735802+00:00",
+    "pipeline_version": "1.0"
+  }
+}

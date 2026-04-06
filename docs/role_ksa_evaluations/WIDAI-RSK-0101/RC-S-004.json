@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0101",
+  "role_name": "AI Risk and Ethics Specialist",
+  "ksa_id": "RC-S-004",
+  "ksa_text": "Skill in conducting Data Protection Impact Assessments for data processing activities, including systematic risk identification, proportionality analysis, and mitigation measure design aligned to GDPR standards.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.49352410468319563,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4234011477607938,
+        "cross_encoder_sts": 0.455737994100295,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33716955752212385,
+        "jaccard": null,
+        "top_element_id": "177",
+        "top_element_label": "Skill in designing countermeasures to identified security risks."
+      },
+      "ddat": {
+        "composite": 0.41539152542372887,
+        "cross_encoder_sts": 0.44902457627118647,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32570338983050845,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4785368338557993,
+        "cross_encoder_sts": 0.5106499999999999,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.392901724137931,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.42544149422006566,
+        "cross_encoder_sts": 0.46113854003139715,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33024937205651494,
+        "jaccard": null,
+        "top_element_id": "K0638",
+        "top_element_label": "Knowledge of security awareness programs"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.49352410468319563,
+        "cross_encoder_sts": 0.5389075757575758,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37250151515151514,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.10",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.3963479623824452,
+        "cross_encoder_sts": 0.44257241379310347,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27308275862068965,
+        "jaccard": null,
+        "top_element_id": "2.C.1.e",
+        "top_element_label": "Customer and Personal Service"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.10",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.49352410468319563
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4785368338557993
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0638",
+        "element_label": "Knowledge of security awareness programs",
+        "score": 0.42544149422006566
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "177",
+        "element_label": "Skill in designing countermeasures to identified security risks.",
+        "score": 0.4234011477607938
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.41539152542372887
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to AI Risk and Ethics Specialist scope \u2014 RSK-specific signals detected (\"risk identif\", \"gdpr\", \"data protection\"). STRM composite is strong (0.4935); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 2 match(es) in RSK job postings or certification scope. Competency appears in RSK role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to AI Risk and Ethics Specialist scope \u2014 RSK-specific signals detected (\"risk identif\", \"gdpr\", \"data protection\"). STRM composite is strong (0.4935); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:22:56.269727+00:00",
+    "pipeline_version": "1.0"
+  }
+}

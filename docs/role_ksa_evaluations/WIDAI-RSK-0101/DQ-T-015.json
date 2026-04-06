@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0101",
+  "role_name": "AI Risk and Ethics Specialist",
+  "ksa_id": "DQ-T-015",
+  "ksa_text": "Assess data quality framework effectiveness, evaluate compliance with standards, and validate assessment and monitoring processes.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.44883421717171723,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4194713665315576,
+        "cross_encoder_sts": 0.43618789808917197,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.374893949044586,
+        "jaccard": null,
+        "top_element_id": "529",
+        "top_element_label": "Develop data standards, policies, and procedures."
+      },
+      "ddat": {
+        "composite": 0.44883421717171723,
+        "cross_encoder_sts": 0.4768902777777778,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37401805555555556,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4222340909090909,
+        "cross_encoder_sts": 0.4451875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.361025,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.41418118096856416,
+        "cross_encoder_sts": 0.4405140186915888,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3439602803738318,
+        "jaccard": null,
+        "top_element_id": "T0068",
+        "top_element_label": "Develop data standards, policies, and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38578636363636365,
+        "cross_encoder_sts": 0.413128125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.312875,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39106022727272727,
+        "cross_encoder_sts": 0.4014375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36338750000000003,
+        "jaccard": null,
+        "top_element_id": "2.B.3.m",
+        "top_element_label": "Quality Control Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.44883421717171723
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4222340909090909
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "529",
+        "element_label": "Develop data standards, policies, and procedures.",
+        "score": 0.4194713665315576
+      },
+      {
+        "framework": "nice",
+        "element_id": "T0068",
+        "element_label": "Develop data standards, policies, and procedures",
+        "score": 0.41418118096856416
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.m",
+        "element_label": "Quality Control Analysis",
+        "score": 0.39106022727272727
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Quality domain has low AI Risk and Ethics Specialist affinity (0.22), and the text \u2014 'Assess data quality framework effectiveness, evaluate compliance with standards, and validate assess...' \u2014 describes competencies outside the AI Risk and Ethics Specialist practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4488)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Risk and Ethics Specialist.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low AI Risk and Ethics Specialist affinity (0.22), and the text \u2014 'Assess data quality framework effectiveness, evaluate compliance with standards, and validate assess...' \u2014 describes competencies outside the AI Risk and Ethics Specialist practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4488).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:22:56.318886+00:00",
+    "pipeline_version": "1.0"
+  }
+}

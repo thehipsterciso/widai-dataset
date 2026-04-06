@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0011",
+  "role_name": "Data Owner",
+  "ksa_id": "OP-T-003",
+  "ksa_text": "Conduct program reviews and continuous improvement activities, including documenting lessons learned, analyzing feedback results, preparing assessment reports, testing and validating improvements, and auditing programs.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.3928879106858054,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3928879106858054,
+        "cross_encoder_sts": 0.42962456140350874,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29492350877192985,
+        "jaccard": null,
+        "top_element_id": "2867",
+        "top_element_label": "Use feedback results (e.g., lesson learned) to identify opportunities to improve collection management efficiency and effectiveness."
+      },
+      "ddat": {
+        "composite": 0.38331975524475526,
+        "cross_encoder_sts": 0.42752307692307695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2654442307692308,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-004",
+        "top_element_label": "Agile research practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.33673719008264463,
+        "cross_encoder_sts": 0.39893636363636364,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.17087272727272726,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.38490796536796534,
+        "cross_encoder_sts": 0.42546380952380947,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2767590476190476,
+        "jaccard": null,
+        "top_element_id": "K0711",
+        "top_element_label": "Knowledge of evaluation and validation principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3785361419068737,
+        "cross_encoder_sts": 0.45016097560975615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18753658536585366,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.1",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.36844488636363637,
+        "cross_encoder_sts": 0.40761875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26398125,
+        "jaccard": null,
+        "top_element_id": "2.B.2.i",
+        "top_element_label": "Complex Problem Solving"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "2867",
+        "element_label": "Use feedback results (e.g., lesson learned) to identify opportunities to improve collection management efficiency and effectiveness.",
+        "score": 0.3928879106858054
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0711",
+        "element_label": "Knowledge of evaluation and validation principles and practices",
+        "score": 0.38490796536796534
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-004",
+        "element_label": "Agile research practices",
+        "score": 0.38331975524475526
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-1.1",
+        "element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",
+        "score": 0.3785361419068737
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.2.i",
+        "element_label": "Complex Problem Solving",
+        "score": 0.36844488636363637
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Operations & Program Management domain has low affinity (0.60) for Data Owner, and the text \u2014 'Conduct program reviews and continuous improvement activities, including documenting lessons learned...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is moderate-to-strong (0.3929)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Data Owner whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Operations & Program Management domain has low affinity (0.60) for Data Owner, and the text \u2014 'Conduct program reviews and continuous improvement activities, including documenting lessons learned...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is moderate-to-strong (0.3929).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:21:50.663093Z",
+    "pipeline_version": "1.0"
+  }
+}

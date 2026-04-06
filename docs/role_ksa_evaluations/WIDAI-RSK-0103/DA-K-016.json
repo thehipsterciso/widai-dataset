@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0103",
+  "role_name": "AI Test and Evaluation Specialist",
+  "ksa_id": "DA-K-016",
+  "ksa_text": "Knowledge of data backup, recovery, and disaster recovery strategies, including backup scheduling and retention policies, recovery point and recovery time objectives (RPO/RTO), and recoverability testing procedures.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4082140565317036,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4069534942256441,
+        "cross_encoder_sts": 0.4277415309446254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35151872964169384,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4035734976887519,
+        "cross_encoder_sts": 0.43429830508474576,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3216406779661017,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.374658041958042,
+        "cross_encoder_sts": 0.40970769230769233,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2811923076923077,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-019",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.4082140565317036,
+        "cross_encoder_sts": 0.4364117647058824,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3330201680672269,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3438263636363636,
+        "cross_encoder_sts": 0.39228999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21459,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-4.1",
+        "top_element_label": "Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly."
+      },
+      "onet": {
+        "composite": 0.3718181818181818,
+        "cross_encoder_sts": 0.4013,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2932,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.1",
+        "top_element_label": "Working with Computers"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4082140565317036
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.4069534942256441
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4035734976887519
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-019",
+        "element_label": "Quality management system",
+        "score": 0.374658041958042
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.3.b.1",
+        "element_label": "Working with Computers",
+        "score": 0.3718181818181818
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Architecture domain has low AI Test and Evaluation Specialist affinity (0.10), and the text \u2014 'Knowledge of data backup, recovery, and disaster recovery strategies, including backup scheduling an...' \u2014 describes competencies outside the AI Test and Evaluation Specialist practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4082)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Test and Evaluation Specialist.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Architecture domain has low AI Test and Evaluation Specialist affinity (0.10), and the text \u2014 'Knowledge of data backup, recovery, and disaster recovery strategies, including backup scheduling an...' \u2014 describes competencies outside the AI Test and Evaluation Specialist practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4082).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:23:47.306367+00:00",
+    "pipeline_version": "1.0"
+  }
+}

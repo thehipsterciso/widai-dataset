@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0104",
+  "role_name": "Data Compliance Analyst",
+  "ksa_id": "LS-A-002",
+  "ksa_text": "Ability to align strategy, business objectives, and technology capabilities, integrating strategic vision, business priorities, and technical capabilities into a unified organizational direction.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4552584415584416,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.43854036740461616,
+        "cross_encoder_sts": 0.4564880829015544,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39067979274611403,
+        "jaccard": null,
+        "top_element_id": "5880",
+        "top_element_label": "Engage and collaborate with allies and partners to advance shared strategic AI objectives."
+      },
+      "ddat": {
+        "composite": 0.4540385026737968,
+        "cross_encoder_sts": 0.4843470588235294,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3732156862745098,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.3911545454545455,
+        "cross_encoder_sts": 0.3887,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3977,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4275598484848485,
+        "cross_encoder_sts": 0.4536766666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35791500000000004,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.43953496503496503,
+        "cross_encoder_sts": 0.4327,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.45776153846153844,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.4",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4552584415584416,
+        "cross_encoder_sts": 0.4893571428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36432857142857145,
+        "jaccard": null,
+        "top_element_id": "2.B.1.d",
+        "top_element_label": "Negotiation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.d",
+        "element_label": "Negotiation",
+        "score": 0.4552584415584416
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4540385026737968
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.4",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.43953496503496503
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5880",
+        "element_label": "Engage and collaborate with allies and partners to advance shared strategic AI objectives.",
+        "score": 0.43854036740461616
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0655",
+        "element_label": "Knowledge of intelligence fusion",
+        "score": 0.4275598484848485
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Leadership & Strategy domain has low Data Compliance Analyst affinity (0.15), and the text \u2014 'Ability to align strategy, business objectives, and technology capabilities, integrating strategic v...' \u2014 describes competencies outside the Data Compliance Analyst practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.4553)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working Data Compliance Analyst.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Leadership & Strategy domain has low Data Compliance Analyst affinity (0.15), and the text \u2014 'Ability to align strategy, business objectives, and technology capabilities, integrating strategic v...' \u2014 describes competencies outside the Data Compliance Analyst practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.4553).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:23:47.729279+00:00",
+    "pipeline_version": "1.0"
+  }
+}

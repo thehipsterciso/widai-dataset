@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0103",
+  "role_name": "AI Test and Evaluation Specialist",
+  "ksa_id": "AI-K-027",
+  "ksa_text": "Knowledge of AI governance and regulatory compliance requirements, including the EU AI Act risk classification system, NIST AI RMF governance functions, organizational AI policy design, and conformity assessment procedures.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.44505454545454537,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4184899097356545,
+        "cross_encoder_sts": 0.4612120567375887,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30456418439716315,
+        "jaccard": null,
+        "top_element_id": "5915",
+        "top_element_label": "Research the latest machine learning and AI tools, techniques, and best practices."
+      },
+      "ddat": {
+        "composite": 0.39043241106719373,
+        "cross_encoder_sts": 0.4608304347826087,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20270434782608698,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.44484123376623375,
+        "cross_encoder_sts": 0.4526178571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4241035714285714,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4121655122655123,
+        "cross_encoder_sts": 0.46600555555555556,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2685920634920635,
+        "jaccard": null,
+        "top_element_id": "K0055",
+        "top_element_label": "Knowledge of microprocessors"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.44505454545454537,
+        "cross_encoder_sts": 0.44901739130434776,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.43448695652173913,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3825454545454546,
+        "cross_encoder_sts": 0.4264,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2656,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.44505454545454537
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.44484123376623375
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5915",
+        "element_label": "Research the latest machine learning and AI tools, techniques, and best practices.",
+        "score": 0.4184899097356545
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0055",
+        "element_label": "Knowledge of microprocessors",
+        "score": 0.4121655122655123
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.39043241106719373
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to AI Test and Evaluation Specialist scope \u2014 RSK-specific signals detected (\"risk classif\", \"ai governance\", \"ai policy\"). STRM composite is moderate (0.4451); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation strong: 2 job-posting-level and 1 certification-level matches (CRISC, CISM, FRM, NIST AI RMF, SR 11-7, IAPP). Competency appears regularly in RSK role descriptions and/or certification curricula.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to AI Test and Evaluation Specialist scope \u2014 RSK-specific signals detected (\"risk classif\", \"ai governance\", \"ai policy\"). STRM composite is moderate (0.4451); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:23:47.165167+00:00",
+    "pipeline_version": "1.0"
+  }
+}

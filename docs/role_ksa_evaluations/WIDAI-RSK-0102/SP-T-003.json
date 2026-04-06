@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0102",
+  "role_name": "AI Security Specialist",
+  "ksa_id": "SP-T-003",
+  "ksa_text": "Conduct privacy impact assessments for new or materially changed data processing activities, documenting findings and mitigation recommendations.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4300048027444254,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4070376086445854,
+        "cross_encoder_sts": 0.4269397932816537,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35396511627906974,
+        "jaccard": null,
+        "top_element_id": "1120",
+        "top_element_label": "Ability to interpret and incorporate data from multiple tool sources."
+      },
+      "ddat": {
+        "composite": 0.4300048027444254,
+        "cross_encoder_sts": 0.46239245283018865,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34363773584905666,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4152090909090909,
+        "cross_encoder_sts": 0.43220000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3699,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3925017937219731,
+        "cross_encoder_sts": 0.4304403587443946,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2913322869955157,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.37512077922077924,
+        "cross_encoder_sts": 0.4069285714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29029999999999995,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.10",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.37816493506493504,
+        "cross_encoder_sts": 0.413,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28527142857142856,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4300048027444254
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4152090909090909
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1120",
+        "element_label": "Ability to interpret and incorporate data from multiple tool sources.",
+        "score": 0.4070376086445854
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.3925017937219731
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.37816493506493504
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to AI Security Specialist scope \u2014 RSK-specific signals detected (\"impact assess\", \"privacy.{0,15} ?:risk|assess|impact\"). STRM composite is moderate (0.4300); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in RSK job postings or cert curricula (CRISC, FRM, NIST AI RMF, CISM). Would a working AI Security Specialist self-report this as required?",
+    "evidence": "Challenge answered: the competency is implicit in AI Security Specialist work (domain affinity 0.80, 2 RSK signal(s)). Framework vocabulary matching systematically underrepresents risk management and governance KSAs.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to AI Security Specialist scope \u2014 RSK-specific signals detected (\"impact assess\", \"privacy.{0,15} ?:risk|assess|impact\"). STRM composite is moderate (0.4300); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:23:46.617591+00:00",
+    "pipeline_version": "1.0"
+  }
+}

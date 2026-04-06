@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0104",
+  "role_name": "Data Compliance Analyst",
+  "ksa_id": "DG-A-003",
+  "ksa_text": "Ability to assess and comprehensively inventory organizational data assets, data flows, and technology resources to inform governance decisions.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.5396160511363637,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4085035133948178,
+        "cross_encoder_sts": 0.4208736714975846,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37551642512077293,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4290333333333334,
+        "cross_encoder_sts": 0.46588333333333337,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33076666666666665,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-043",
+        "top_element_label": "Cyber incident management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4978476489028213,
+        "cross_encoder_sts": 0.4804448275862069,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5442551724137931,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.398299639567481,
+        "cross_encoder_sts": 0.41787797356828194,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3460907488986784,
+        "jaccard": null,
+        "top_element_id": "S0114",
+        "top_element_label": "Skill in performing sensitivity analysis"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5396160511363637,
+        "cross_encoder_sts": 0.527465625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5720171875,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42116590909090906,
+        "cross_encoder_sts": 0.434625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.385275,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.3",
+        "top_element_label": "Problem Sensitivity"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5396160511363637
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4978476489028213
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-043",
+        "element_label": "Cyber incident management",
+        "score": 0.4290333333333334
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.3",
+        "element_label": "Problem Sensitivity",
+        "score": 0.42116590909090906
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.4085035133948178
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Governance domain has low Data Compliance Analyst affinity (0.68), and the text \u2014 'Ability to assess and comprehensively inventory organizational data assets, data flows, and technolo...' \u2014 describes competencies outside the Data Compliance Analyst practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.5396)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working Data Compliance Analyst.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Governance domain has low Data Compliance Analyst affinity (0.68), and the text \u2014 'Ability to assess and comprehensively inventory organizational data assets, data flows, and technolo...' \u2014 describes competencies outside the Data Compliance Analyst practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.5396).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:23:47.662763+00:00",
+    "pipeline_version": "1.0"
+  }
+}

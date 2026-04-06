@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0102",
+  "role_name": "AI Security Specialist",
+  "ksa_id": "OP-K-012",
+  "ksa_text": "Knowledge of machine learning operations (MLOps) processes and practices, including model deployment pipelines, model versioning, model monitoring and drift detection, model retraining workflows, and integration with DevOps and DataOps practices.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Operations & Program Management domain has low AI Security Specialist affinity (0.25), and the text \u2014 'Knowledge of machine learning operations (MLOps) processes and practices, including model deployment...' \u2014 describes competencies outside the AI Security Specialist practice boundary. 1 RSK-specific signal(s) detected. STRM composite is zero (0.0000 \u2014 note: STRM frameworks underweight pure risk vocabulary)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Security Specialist.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Operations & Program Management domain has low AI Security Specialist affinity (0.25), and the text \u2014 'Knowledge of machine learning operations (MLOps) processes and practices, including model deployment...' \u2014 describes competencies outside the AI Security Specialist practice boundary. 1 RSK-specific signal(s) detected. STRM composite is zero (0.0000 \u2014 note: STRM frameworks underweight pure risk vocabulary).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:23:46.833134+00:00",
+    "pipeline_version": "1.0"
+  }
+}

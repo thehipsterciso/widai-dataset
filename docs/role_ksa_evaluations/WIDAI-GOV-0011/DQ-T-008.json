@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0011",
+  "role_name": "Data Owner",
+  "ksa_id": "DQ-T-008",
+  "ksa_text": "Create, maintain, and update enterprise data catalogs, asset registries, and metadata documentation to support data governance.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4220239332096475,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4220239332096475,
+        "cross_encoder_sts": 0.4243234693877551,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4158918367346938,
+        "jaccard": null,
+        "top_element_id": "208",
+        "top_element_label": "Skill in maintaining databases."
+      },
+      "ddat": {
+        "composite": 0.39910188087774295,
+        "cross_encoder_sts": 0.4325862068965517,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30981034482758624,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "nice": {
+        "composite": 0.4161368421052631,
+        "cross_encoder_sts": 0.4243631578947368,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3942,
+        "jaccard": null,
+        "top_element_id": "S0488",
+        "top_element_label": "Skill in maintaining IT systems"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3996363636363637,
+        "cross_encoder_sts": 0.43270000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31146666666666667,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4084045454545454,
+        "cross_encoder_sts": 0.4265,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36015,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.6",
+        "top_element_label": "Documenting/Recording Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "208",
+        "element_label": "Skill in maintaining databases.",
+        "score": 0.4220239332096475
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0488",
+        "element_label": "Skill in maintaining IT systems",
+        "score": 0.4161368421052631
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.3.b.6",
+        "element_label": "Documenting/Recording Information",
+        "score": 0.4084045454545454
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3996363636363637
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.39910188087774295
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: task from Data Quality (affinity 0.65); strategic/implementation framing outweighs governance signals. STRM composite is strong (0.4220). A Data Owner would be aware of but not accountable for this competency."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 3 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Data Owner whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded on balance: task from Data Quality (affinity 0.65); strategic/implementation framing outweighs governance signals. STRM composite is strong (0.4220). A Data Owner would be aware of but not accountable for this competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:21:50.455821Z",
+    "pipeline_version": "1.0"
+  }
+}

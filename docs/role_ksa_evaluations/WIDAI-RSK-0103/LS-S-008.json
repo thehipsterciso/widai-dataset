@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0103",
+  "role_name": "AI Test and Evaluation Specialist",
+  "ksa_id": "LS-S-008",
+  "ksa_text": "Skill in developing enterprise data and AI strategies that connect organizational business objectives to data capabilities, AI initiatives, governance requirements, and measurable value outcomes.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.5539346753246753,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4307726559968898,
+        "cross_encoder_sts": 0.4653491090520314,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3385687811831789,
+        "jaccard": null,
+        "top_element_id": "5872",
+        "top_element_label": "Design, develop, and implement AI tools and techniques to achieve organizational objectives."
+      },
+      "ddat": {
+        "composite": 0.4618330434782609,
+        "cross_encoder_sts": 0.4982086956521739,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36483130434782607,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.5235577922077922,
+        "cross_encoder_sts": 0.5292714285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5083214285714286,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4186077348066298,
+        "cross_encoder_sts": 0.4635560220994475,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.298745635359116,
+        "jaccard": null,
+        "top_element_id": "S0669",
+        "top_element_label": "Skill in integrating technology processes and solutions"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5539346753246753,
+        "cross_encoder_sts": 0.5659514285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.52189,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3874440191387559,
+        "cross_encoder_sts": 0.41639473684210526,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3102421052631579,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5539346753246753
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.5235577922077922
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.4618330434782609
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5872",
+        "element_label": "Design, develop, and implement AI tools and techniques to achieve organizational objectives.",
+        "score": 0.4307726559968898
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0669",
+        "element_label": "Skill in integrating technology processes and solutions",
+        "score": 0.4186077348066298
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Leadership & Strategy domain has low AI Test and Evaluation Specialist affinity (0.15), and the text \u2014 'Skill in developing enterprise data and AI strategies that connect organizational business objective...' \u2014 describes competencies outside the AI Test and Evaluation Specialist practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.5539)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Test and Evaluation Specialist.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Leadership & Strategy domain has low AI Test and Evaluation Specialist affinity (0.15), and the text \u2014 'Skill in developing enterprise data and AI strategies that connect organizational business objective...' \u2014 describes competencies outside the AI Test and Evaluation Specialist practice boundary. 0 RSK-specific signal(s) detected. STRM composite is strong (0.5539).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:23:47.068485+00:00",
+    "pipeline_version": "1.0"
+  }
+}
