@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0026",
+  "role_name": "Data Architect",
+  "ksa_id": "DG-T-003",
+  "ksa_text": "Establish and operate the enterprise data governance program, including council structure, policy library, stewardship network, data domain ownership registry, and governance metrics.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4278684659090909,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4065282608695652,
+        "cross_encoder_sts": 0.41064836956521733,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3955413043478261,
+        "jaccard": null,
+        "top_element_id": "2087",
+        "top_element_label": "Collaborate with intelligence analysts/targeting organizations involved in related areas."
+      },
+      "ddat": {
+        "composite": 0.4278684659090909,
+        "cross_encoder_sts": 0.457140625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.349809375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-044",
+        "top_element_label": "Cyber risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4233204545454545,
+        "cross_encoder_sts": 0.40965,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.459775,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.37639262899262904,
+        "cross_encoder_sts": 0.388627027027027,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3437675675675676,
+        "jaccard": null,
+        "top_element_id": "K0668",
+        "top_element_label": "Knowledge of contract management"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4118648760330578,
+        "cross_encoder_sts": 0.3998090909090909,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4440136363636364,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-2.2",
+        "top_element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks."
+      },
+      "onet": {
+        "composite": 0.34466363636363634,
+        "cross_encoder_sts": 0.3595,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3051,
+        "jaccard": null,
+        "top_element_id": "4.A.4.c.3",
+        "top_element_label": "Monitoring and Controlling Resources"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-044",
+        "element_label": "Cyber risk management",
+        "score": 0.4278684659090909
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4233204545454545
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-2.2",
+        "element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",
+        "score": 0.4118648760330578
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2087",
+        "element_label": "Collaborate with intelligence analysts/targeting organizations involved in related areas.",
+        "score": 0.4065282608695652
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0668",
+        "element_label": "Knowledge of contract management",
+        "score": 0.37639262899262904
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-T-003 (Data Governance) scores 0.428 composite (signal: weak). Scope fit for Data Architect: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.428 is below 0.43 threshold for edge-case inclusion in Data Architect.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.428 insufficient for edge-case inclusion (min 0.43). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Governance KSA DG-T-003 as a discrete competency for Data Architect?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for Data Architect.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.428 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:42:37.564103",
+    "pipeline_version": "1.0"
+  }
+}

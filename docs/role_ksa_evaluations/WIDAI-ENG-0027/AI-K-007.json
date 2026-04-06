@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0027",
+  "role_name": "AI/ML Platform Architect",
+  "ksa_id": "AI-K-007",
+  "ksa_text": "Knowledge of model monitoring requirements, including data drift detection, prediction drift, performance degradation metrics, input data distribution monitoring, latency and throughput tracking, alerting thresholds, and retraining triggers appropriate for different model types and serving patterns.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4070127196333079,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38998398424680014,
+        "cross_encoder_sts": 0.42069277978339353,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30809386281588447,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3724224598930481,
+        "cross_encoder_sts": 0.42103529411764706,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24278823529411764,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.37689628099173555,
+        "cross_encoder_sts": 0.4038318181818182,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3050681818181818,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-011",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.4070127196333079,
+        "cross_encoder_sts": 0.43773487394957983,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32508697478991594,
+        "jaccard": null,
+        "top_element_id": "K0647",
+        "top_element_label": "Knowledge of data visualization tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38440187165775397,
+        "cross_encoder_sts": 0.4226205882352941,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28248529411764706,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3908763636363636,
+        "cross_encoder_sts": 0.41647999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3226,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0647",
+        "element_label": "Knowledge of data visualization tools and techniques",
+        "score": 0.4070127196333079
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.3908763636363636
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.38998398424680014
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.5",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38440187165775397
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-011",
+        "element_label": "Record-keeping",
+        "score": 0.37689628099173555
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-K-007 (AI and Machine Learning) scores 0.407 composite (signal: weak). Scope fit for AI/ML Platform Architect: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.407. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support AI and Machine Learning KSA AI-K-007 as a discrete competency for AI/ML Platform Architect?",
+    "evidence": "AI and Machine Learning is primary for AI/ML Platform Architect. Score 0.407. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. AI and Machine Learning is core for AI/ML Platform Architect. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "AI and Machine Learning (primary) for AI/ML Platform Architect. Score 0.407. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:42:40.669824",
+    "pipeline_version": "1.0"
+  }
+}

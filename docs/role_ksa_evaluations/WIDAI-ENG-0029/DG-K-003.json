@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0029",
+  "role_name": "Analytics Engineer",
+  "ksa_id": "DG-K-003",
+  "ksa_text": "Knowledge of data governance program design and operating models, including federated, centralized, and hub-and-spoke governance structures, governance council architectures, and organizational design patterns.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4283409888357257,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40077055658627087,
+        "cross_encoder_sts": 0.42972918367346935,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32354755102040816,
+        "jaccard": null,
+        "top_element_id": "1033",
+        "top_element_label": "Knowledge of basic system administration, network, and operating system hardening techniques."
+      },
+      "ddat": {
+        "composite": 0.4283409888357257,
+        "cross_encoder_sts": 0.44603859649122807,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3811473684210526,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4060118881118881,
+        "cross_encoder_sts": 0.4361,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3257769230769231,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.40677185241536706,
+        "cross_encoder_sts": 0.4329723849372385,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33690376569037656,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40138227272727267,
+        "cross_encoder_sts": 0.43675499999999995,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30705499999999997,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3701563636363636,
+        "cross_encoder_sts": 0.40271999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28332,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4283409888357257
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0498",
+        "element_label": "Knowledge of operational planning processes",
+        "score": 0.40677185241536706
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4060118881118881
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.40138227272727267
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1033",
+        "element_label": "Knowledge of basic system administration, network, and operating system hardening techniques.",
+        "score": 0.40077055658627087
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-K-003 (Data Governance) scores 0.428 composite (signal: weak). Scope fit for Analytics Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.428 is below 0.47 threshold for edge-case inclusion in Analytics Engineer.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.428 insufficient for edge-case inclusion (min 0.47). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Governance KSA DG-K-003 as a discrete competency for Analytics Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for Analytics Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.428 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:42:40.806256",
+    "pipeline_version": "1.0"
+  }
+}
