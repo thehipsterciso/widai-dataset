@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0136",
+  "role_name": "AI Supervisor / Agent Coordinator",
+  "ksa_id": "DQ-S-003",
+  "ksa_text": "Skill in conducting data profiling to identify patterns, anomalies, and characteristics within data, including analysis of data structures and content assessment.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.47024216073781283,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4149894026974952,
+        "cross_encoder_sts": 0.44810500963391137,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3266811175337187,
+        "jaccard": null,
+        "top_element_id": "1005",
+        "top_element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
+      },
+      "ddat": {
+        "composite": 0.43637519260400615,
+        "cross_encoder_sts": 0.4696042372881356,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34776440677966103,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.45610165289256194,
+        "cross_encoder_sts": 0.5046709090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32658363636363635,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4175844280121792,
+        "cross_encoder_sts": 0.454444019138756,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3192921850079745,
+        "jaccard": null,
+        "top_element_id": "K0647",
+        "top_element_label": "Knowledge of data visualization tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.47024216073781283,
+        "cross_encoder_sts": 0.5300884057971014,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31065217391304345,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4205300940438871,
+        "cross_encoder_sts": 0.4517827586206896,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3371896551724138,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.47024216073781283
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.45610165289256194
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.43637519260400615
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.4205300940438871
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0647",
+        "element_label": "Knowledge of data visualization tools and techniques",
+        "score": 0.4175844280121792
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope: Data Quality (affinity 0.28) \u2014 \"Skill in conducting data profiling to identify patterns, anomalies, and characte...\" \u2014 no role signals. STRM: strong (0.4702)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 0 match(es). Gap not material to AI Supervisor / Agent Coordinator.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope: Data Quality (affinity 0.28) \u2014 \"Skill in conducting data profiling to identify patterns, anomalies, and characte...\" \u2014 no role signals. STRM: strong (0.4702).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:07:00.797365+00:00",
+    "pipeline_version": "1.0"
+  }
+}

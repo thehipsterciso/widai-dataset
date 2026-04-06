@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0136",
+  "role_name": "AI Supervisor / Agent Coordinator",
+  "ksa_id": "OP-A-003",
+  "ksa_text": "Ability to align strategic business objectives, technology capabilities, and operational priorities to establish coherent organizational direction.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.46261470170454544,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4298042424242424,
+        "cross_encoder_sts": 0.45993686274509804,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3494505882352941,
+        "jaccard": null,
+        "top_element_id": "2451",
+        "top_element_label": "Identify collaboration forums that can serve as mechanisms for coordinating processes, functions, and outputs with specified organizations and functional groups."
+      },
+      "ddat": {
+        "composite": 0.46261470170454544,
+        "cross_encoder_sts": 0.50191171875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35782265625,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-056",
+        "top_element_label": "Data integration design"
+      },
+      "eu_ai_act": {
+        "composite": 0.36926545454545456,
+        "cross_encoder_sts": 0.39494,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30079999999999996,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.405338106302643,
+        "cross_encoder_sts": 0.4449150159744409,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2997996805111821,
+        "jaccard": null,
+        "top_element_id": "T1187",
+        "top_element_label": "Establish internal and external cross-team relationships"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40176598240469213,
+        "cross_encoder_sts": 0.43675161290322584,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3084709677419355,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4285464646464647,
+        "cross_encoder_sts": 0.4858888888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27563333333333334,
+        "jaccard": null,
+        "top_element_id": "2.B.1.d",
+        "top_element_label": "Negotiation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-056",
+        "element_label": "Data integration design",
+        "score": 0.46261470170454544
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2451",
+        "element_label": "Identify collaboration forums that can serve as mechanisms for coordinating processes, functions, and outputs with specified organizations and functional groups.",
+        "score": 0.4298042424242424
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.d",
+        "element_label": "Negotiation",
+        "score": 0.4285464646464647
+      },
+      {
+        "framework": "nice",
+        "element_id": "T1187",
+        "element_label": "Establish internal and external cross-team relationships",
+        "score": 0.405338106302643
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.40176598240469213
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope: Operations & Program Management (affinity 0.55) \u2014 \"Ability to align strategic business objectives, technology capabilities, and ope...\" \u2014 no role signals. STRM: strong (0.4626)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 0 match(es). Gap not material to AI Supervisor / Agent Coordinator.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope: Operations & Program Management (affinity 0.55) \u2014 \"Ability to align strategic business objectives, technology capabilities, and ope...\" \u2014 no role signals. STRM: strong (0.4626).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:07:00.806137+00:00",
+    "pipeline_version": "1.0"
+  }
+}

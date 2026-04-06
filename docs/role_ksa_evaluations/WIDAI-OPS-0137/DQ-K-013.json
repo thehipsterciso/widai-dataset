@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0137",
+  "role_name": "Forward-Deployed Engineer",
+  "ksa_id": "DQ-K-013",
+  "ksa_text": "Knowledge of data catalog platform capabilities, including automated metadata harvesting, lineage visualization, search and discovery mechanisms, data classification, business glossary linkage, and impact analysis features.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.41857761248852166,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.404456537433155,
+        "cross_encoder_sts": 0.4230116176470588,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3549763235294118,
+        "jaccard": null,
+        "top_element_id": "1040A",
+        "top_element_label": "Knowledge of relevant laws, policies, procedures, or governance related to critical infrastructure."
+      },
+      "ddat": {
+        "composite": 0.4080798807749627,
+        "cross_encoder_sts": 0.42280983606557376,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3688,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4139276679841897,
+        "cross_encoder_sts": 0.4332913043478261,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.362291304347826,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.41857761248852166,
+        "cross_encoder_sts": 0.44544323232323235,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34693595959595963,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38877759740259743,
+        "cross_encoder_sts": 0.4163357142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31528928571428566,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37732727272727273,
+        "cross_encoder_sts": 0.3934625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3343,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0498",
+        "element_label": "Knowledge of operational planning processes",
+        "score": 0.41857761248852166
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4139276679841897
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4080798807749627
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1040A",
+        "element_label": "Knowledge of relevant laws, policies, procedures, or governance related to critical infrastructure.",
+        "score": 0.404456537433155
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38877759740259743
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded: knowledge in Data Quality (affinity 0.35); insufficient signal match for domain affinity. STRM: moderate (0.4186)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 0 match(es). Gap not material to Forward-Deployed Engineer.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 excluded: knowledge in Data Quality (affinity 0.35); insufficient signal match for domain affinity. STRM: moderate (0.4186).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:07:01.457754+00:00",
+    "pipeline_version": "1.0"
+  }
+}
