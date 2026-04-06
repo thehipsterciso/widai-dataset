@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0030",
+  "role_name": "Data Platform Engineer",
+  "ksa_id": "OP-S-005",
+  "ksa_text": "Skill in triaging data pipeline incidents, including failure identification, impact assessment, escalation decision-making, status communication to affected consumers, and remediation coordination.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.4434347402597402,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.404788502258611,
+        "cross_encoder_sts": 0.4516927018633541,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27971063664596274,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.42216468129571577,
+        "cross_encoder_sts": 0.46084022988505746,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31902988505747126,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-004",
+        "top_element_label": "Agile research practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.41858368983957217,
+        "cross_encoder_sts": 0.45665882352941173,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31705,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.403887679846531,
+        "cross_encoder_sts": 0.4553158264947245,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26674595545134816,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4434347402597402,
+        "cross_encoder_sts": 0.4846267857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33358928571428575,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.369362834224599,
+        "cross_encoder_sts": 0.4232352941176471,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22570294117647058,
+        "jaccard": null,
+        "top_element_id": "2.B.2.i",
+        "top_element_label": "Complex Problem Solving"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4434347402597402
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-004",
+        "element_label": "Agile research practices",
+        "score": 0.42216468129571577
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.41858368983957217
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.404788502258611
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.403887679846531
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA OP-S-005 (Operational Excellence) scores 0.443 composite (signal: weak). Scope fit for Data Platform Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Edge-case scope, score 0.443 meets threshold. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Operational Excellence KSA OP-S-005 as a discrete competency for Data Platform Engineer?",
+    "evidence": "Reviewed against Data Platform Engineer market data. Operational content is training/program management, not platform engineering. Score 0.443 with no role-specific keyword match confirms exclusion.",
+    "ruling": "Revised to exclude. Operational content is training/program management, not platform engineering. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Pass 4 overturn: Operational content is training/program management, not platform engineering.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:30.979216",
+    "pipeline_version": "1.0"
+  }
+}

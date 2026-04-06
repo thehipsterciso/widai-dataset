@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0032",
+  "role_name": "Data Warehouse Architect",
+  "ksa_id": "LS-K-003",
+  "ksa_text": "Knowledge of enterprise transformation program design, including operating model change, capability maturity progression, transformation roadmap construction, and change sequencing principles.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.41213738153738155,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4066455100907239,
+        "cross_encoder_sts": 0.43255682281059066,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3375486761710794,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.3997221343873517,
+        "cross_encoder_sts": 0.43503043478260867,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30556666666666665,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.3829146853146853,
+        "cross_encoder_sts": 0.41825384615384614,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2886769230769231,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-027",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.41213738153738155,
+        "cross_encoder_sts": 0.4389552123552124,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34062316602316606,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3738234265734266,
+        "cross_encoder_sts": 0.4126923076923077,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2701730769230769,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.3",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.3805834710743802,
+        "cross_encoder_sts": 0.4102636363636364,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3014363636363636,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41213738153738155
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
+        "score": 0.4066455100907239
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.3997221343873517
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-027",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.3829146853146853
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.a",
+        "element_label": "Administration and Management",
+        "score": 0.3805834710743802
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA LS-K-003 (Leadership and Strategy) scores 0.412 composite (signal: weak). Scope fit for Data Warehouse Architect: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.412 is below 0.43 threshold for edge-case inclusion in Data Warehouse Architect.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.412 insufficient for edge-case inclusion (min 0.43). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Leadership and Strategy KSA LS-K-003 as a discrete competency for Data Warehouse Architect?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for Data Warehouse Architect.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.412 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:31.354912",
+    "pipeline_version": "1.0"
+  }
+}

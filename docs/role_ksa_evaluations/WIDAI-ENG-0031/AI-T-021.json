@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0031",
+  "role_name": "Data Integration Architect",
+  "ksa_id": "AI-T-021",
+  "ksa_text": "Evaluate AI systems for fairness and bias, including applying fairness metrics across protected attributes, assessing training data representativeness, and documenting disparate impact findings and mitigation actions.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.43093272727272725,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41399296536796537,
+        "cross_encoder_sts": 0.4279916666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37666309523809527,
+        "jaccard": null,
+        "top_element_id": "4360",
+        "top_element_label": "Ability to troubleshoot computer software and hardware issues, make repairs, and schedule updates"
+      },
+      "ddat": {
+        "composite": 0.39569058441558436,
+        "cross_encoder_sts": 0.4386178571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28121785714285713,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-024",
+        "top_element_label": "Change management"
+      },
+      "eu_ai_act": {
+        "composite": 0.38640606060606064,
+        "cross_encoder_sts": 0.42263333333333336,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2898,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3914950802139037,
+        "cross_encoder_sts": 0.4153317647058823,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3279305882352941,
+        "jaccard": null,
+        "top_element_id": "S0837",
+        "top_element_label": "Skill in executing computer scripts to automate tasks"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3527348484848485,
+        "cross_encoder_sts": 0.3930666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24518333333333334,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.43093272727272725,
+        "cross_encoder_sts": 0.42916,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.43566000000000005,
+        "jaccard": null,
+        "top_element_id": "2.B.3.j",
+        "top_element_label": "Equipment Maintenance"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.j",
+        "element_label": "Equipment Maintenance",
+        "score": 0.43093272727272725
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "4360",
+        "element_label": "Ability to troubleshoot computer software and hardware issues, make repairs, and schedule updates",
+        "score": 0.41399296536796537
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-024",
+        "element_label": "Change management",
+        "score": 0.39569058441558436
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0837",
+        "element_label": "Skill in executing computer scripts to automate tasks",
+        "score": 0.3914950802139037
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.38640606060606064
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-T-021 (AI and Machine Learning) scores 0.431 composite (signal: weak). Scope fit for Data Integration Architect: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Edge-case scope, score 0.431 meets threshold. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support AI and Machine Learning KSA AI-T-021 as a discrete competency for Data Integration Architect?",
+    "evidence": "Reviewed against Data Integration Architect market data. AI content is governance/risk/compliance, not data integration architecture. Score 0.431 with no role-specific keyword match confirms exclusion.",
+    "ruling": "Revised to exclude. AI content is governance/risk/compliance, not data integration architecture. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Pass 4 overturn: AI content is governance/risk/compliance, not data integration architecture.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:31.167790",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0032",
+  "role_name": "Data Warehouse Architect",
+  "ksa_id": "LS-K-004",
+  "ksa_text": "Knowledge of data and AI organizational design patterns, including centralized CoE, federated, and hub-and-spoke models, and the conditions under which each is appropriate.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.44330535714285724,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4209664161433131,
+        "cross_encoder_sts": 0.4414242355605889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3664122310305776,
+        "jaccard": null,
+        "top_element_id": "1004",
+        "top_element_label": "Knowledge of critical information technology (IT) procurement requirements."
+      },
+      "ddat": {
+        "composite": 0.4070362391033624,
+        "cross_encoder_sts": 0.43964657534246576,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3200753424657534,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-031",
+        "top_element_label": "Communicating data"
+      },
+      "eu_ai_act": {
+        "composite": 0.44330535714285724,
+        "cross_encoder_sts": 0.44051428571428575,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4507482142857143,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.42963038493038497,
+        "cross_encoder_sts": 0.4601441441441442,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34826036036036034,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4360201398601398,
+        "cross_encoder_sts": 0.43936461538461535,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4271015384615385,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39277545454545454,
+        "cross_encoder_sts": 0.41418999999999995,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33567,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.44330535714285724
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4360201398601398
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.42963038493038497
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1004",
+        "element_label": "Knowledge of critical information technology (IT) procurement requirements.",
+        "score": 0.4209664161433131
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-031",
+        "element_label": "Communicating data",
+        "score": 0.4070362391033624
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA LS-K-004 (Leadership and Strategy) scores 0.443 composite (signal: weak). Scope fit for Data Warehouse Architect: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Edge-case scope, score 0.443 meets threshold. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Leadership and Strategy KSA LS-K-004 as a discrete competency for Data Warehouse Architect?",
+    "evidence": "Reviewed against Data Warehouse Architect market data. Leadership content is executive-level or lacks warehouse architecture framing. Score 0.443 with no role-specific keyword match confirms exclusion.",
+    "ruling": "Revised to exclude. Leadership content is executive-level or lacks warehouse architecture framing. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Pass 4 overturn: Leadership content is executive-level or lacks warehouse architecture framing.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:31.323868",
+    "pipeline_version": "1.0"
+  }
+}

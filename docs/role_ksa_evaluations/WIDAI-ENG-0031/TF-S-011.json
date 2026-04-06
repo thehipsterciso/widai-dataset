@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0031",
+  "role_name": "Data Integration Architect",
+  "ksa_id": "TF-S-011",
+  "ksa_text": "Skill in writing technical documentation for data systems, including architecture diagrams, API specifications, operational runbooks, data dictionaries, and troubleshooting guides that enable team independence.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.46069941348973603,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4215518893280632,
+        "cross_encoder_sts": 0.43343008695652174,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3898766956521739,
+        "jaccard": null,
+        "top_element_id": "1002B",
+        "top_element_label": "Skill in conducting reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.4217604486422668,
+        "cross_encoder_sts": 0.44401428571428575,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3624168831168831,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.43130771869639795,
+        "cross_encoder_sts": 0.4483830188679245,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3857735849056604,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.40848217110867713,
+        "cross_encoder_sts": 0.4245511378848728,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.365631593038822,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.46069941348973603,
+        "cross_encoder_sts": 0.4848370967741935,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39633225806451616,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4256991341991342,
+        "cross_encoder_sts": 0.44470952380952383,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3750047619047619,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.46069941348973603
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.43130771869639795
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.4256991341991342
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4217604486422668
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002B",
+        "element_label": "Skill in conducting reviews of technical systems.",
+        "score": 0.4215518893280632
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-S-011 (Technical Foundations) scores 0.461 composite (signal: moderate). Scope fit for Data Integration Architect: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.461. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Technical Foundations KSA TF-S-011 as a discrete competency for Data Integration Architect?",
+    "evidence": "Technical Foundations is primary for Data Integration Architect. Score 0.461. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. Technical Foundations is core for Data Integration Architect. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Technical Foundations (primary) for Data Integration Architect. Score 0.461. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:31.149786",
+    "pipeline_version": "1.0"
+  }
+}

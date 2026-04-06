@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0032",
+  "role_name": "Data Warehouse Architect",
+  "ksa_id": "LS-T-008",
+  "ksa_text": "Conduct data and AI due diligence assessments for M&A and investment transactions, including data asset evaluation, technical architecture review, AI risk assessment, key person risk assessment, and integration planning.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4659784415584416,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4093492174492175,
+        "cross_encoder_sts": 0.44092490842490845,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3251473748473749,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.41163806818181814,
+        "cross_encoder_sts": 0.449609375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31038125,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.45149090909090905,
+        "cross_encoder_sts": 0.4706875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4003,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.39241143310837634,
+        "cross_encoder_sts": 0.422046288209607,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31338515283842794,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4659784415584416,
+        "cross_encoder_sts": 0.4895128571428572,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.40322,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36940272727272727,
+        "cross_encoder_sts": 0.40681,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26965,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4659784415584416
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.45149090909090905
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.41163806818181814
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.4093492174492175
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39241143310837634
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA LS-T-008 (Leadership and Strategy) scores 0.466 composite (signal: moderate). Scope fit for Data Warehouse Architect: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Edge-case scope, score 0.466 meets threshold. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Leadership and Strategy KSA LS-T-008 as a discrete competency for Data Warehouse Architect?",
+    "evidence": "Reviewed against Data Warehouse Architect market data. Leadership content is executive-level or lacks warehouse architecture framing. Score 0.466 with no role-specific keyword match confirms exclusion.",
+    "ruling": "Revised to exclude. Leadership content is executive-level or lacks warehouse architecture framing. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Pass 4 overturn: Leadership content is executive-level or lacks warehouse architecture framing.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:31.314213",
+    "pipeline_version": "1.0"
+  }
+}
