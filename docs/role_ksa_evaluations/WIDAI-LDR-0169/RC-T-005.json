@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0169",
+  "role_name": "AI CoE Leader",
+  "ksa_id": "RC-T-005",
+  "ksa_text": "Track compliance remediation activities through closure, monitoring milestones and action completion, escalating blockers, maintaining remediation plans with documented evidence, and ensuring verified closure of findings.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4274532828282829,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4149618686868687,
+        "cross_encoder_sts": 0.43319277777777776,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36634611111111115,
+        "jaccard": null,
+        "top_element_id": "1006",
+        "top_element_label": "Create auditable evidence of security measures."
+      },
+      "ddat": {
+        "composite": 0.4274532828282829,
+        "cross_encoder_sts": 0.4534472222222223,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35813611111111116,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.40298181818181816,
+        "cross_encoder_sts": 0.42693000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33912,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-016",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.4093712727272727,
+        "cross_encoder_sts": 0.43366,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34460133333333337,
+        "jaccard": null,
+        "top_element_id": "K0800",
+        "top_element_label": "Knowledge of evidence admissibility laws and regulations"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.398312987012987,
+        "cross_encoder_sts": 0.43293571428571426,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3059857142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3972693181818182,
+        "cross_encoder_sts": 0.4175875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3430875,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4274532828282829
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1006",
+        "element_label": "Create auditable evidence of security measures.",
+        "score": 0.4149618686868687
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0800",
+        "element_label": "Knowledge of evidence admissibility laws and regulations",
+        "score": 0.4093712727272727
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-016",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.40298181818181816
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.398312987012987
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Regulatory Compliance KSA with insufficient signal strength (composite score 0.427) to justify inclusion for the AI CoE Leader. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain task KSA be expected in real-world AI CoE Leader roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Regulatory Compliance is not a standard competency expectation for AI CoE Leader. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the AI CoE Leader competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.427) and edge-domain placement (Regulatory Compliance) do not meet inclusion threshold for the AI CoE Leader. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.868544+00:00",
+    "pipeline_version": "1.0"
+  }
+}

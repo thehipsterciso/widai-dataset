@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0169",
+  "role_name": "AI CoE Leader",
+  "ksa_id": "RC-S-002",
+  "ksa_text": "Skill in interpreting regulatory text, supervisory guidance, and enforcement decisions, translating legal requirements into operational controls and measurable organizational obligations.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4574261363636364,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42528781878187827,
+        "cross_encoder_sts": 0.4324518151815182,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4061838283828383,
+        "jaccard": null,
+        "top_element_id": "3057",
+        "top_element_label": "Ability to interpret and apply laws, regulations, policies, and guidance relevant to organization cyber objectives."
+      },
+      "ddat": {
+        "composite": 0.4245227272727272,
+        "cross_encoder_sts": 0.46774999999999994,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30924999999999997,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-019",
+        "top_element_label": "Business analysis (IT operations)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4574261363636364,
+        "cross_encoder_sts": 0.45521875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4633125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.41760768328445746,
+        "cross_encoder_sts": 0.42573354838709676,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39593870967741934,
+        "jaccard": null,
+        "top_element_id": "K0962",
+        "top_element_label": "Knowledge of targeting laws and regulations"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4300590909090909,
+        "cross_encoder_sts": 0.43593333333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41439444444444445,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4291356060606061,
+        "cross_encoder_sts": 0.45298333333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36554166666666665,
+        "jaccard": null,
+        "top_element_id": "2.A.1.a",
+        "top_element_label": "Reading Comprehension"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4574261363636364
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4300590909090909
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.a",
+        "element_label": "Reading Comprehension",
+        "score": 0.4291356060606061
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "3057",
+        "element_label": "Ability to interpret and apply laws, regulations, policies, and guidance relevant to organization cyber objectives.",
+        "score": 0.42528781878187827
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-019",
+        "element_label": "Business analysis (IT operations)",
+        "score": 0.4245227272727272
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Although Regulatory Compliance is an edge domain for the AI CoE Leader, this skill KSA presents sufficient signal (composite score 0.457) and conceptual alignment to include at the c suite level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Regulatory Compliance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.457). External reviewers may question whether this specific skill KSA is sufficiently distinctive for the AI CoE Leader versus adjacent roles.",
+    "evidence": "GDPR, CCPA, EU AI Act, and SEC data governance regulations confirm regulatory compliance knowledge for governance-focused leadership.",
+    "ruling": "Upheld: moderate framework signal is consistent with Regulatory Compliance appearing in job postings and role definition literature for AI CoE Leader."
+  },
+  "final_decision": "include",
+  "decision_confidence": "low",
+  "decision_rationale": "Edge-domain Regulatory Compliance skill KSA cleared adversarial review with score 0.457. Included based on sufficient framework alignment and role relevance for the AI CoE Leader.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.845636+00:00",
+    "pipeline_version": "1.0"
+  }
+}

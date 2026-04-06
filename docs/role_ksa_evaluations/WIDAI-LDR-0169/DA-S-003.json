@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0169",
+  "role_name": "AI CoE Leader",
+  "ksa_id": "DA-S-003",
+  "ksa_text": "Skill in defining and enforcing enterprise data modeling standards, naming conventions, and structural patterns across engineering teams.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4339641277641278,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.416901384083045,
+        "cross_encoder_sts": 0.4341451557093426,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3709179930795848,
+        "jaccard": null,
+        "top_element_id": "224",
+        "top_element_label": "Skill in design modeling and building use cases (e.g., unified modeling language)."
+      },
+      "ddat": {
+        "composite": 0.4339641277641278,
+        "cross_encoder_sts": 0.45273513513513514,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3839081081081081,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4210513742071882,
+        "cross_encoder_sts": 0.4465697674418605,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3530023255813953,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4270427294017458,
+        "cross_encoder_sts": 0.4528470725995316,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3582311475409836,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4213259504132231,
+        "cross_encoder_sts": 0.4534472727272727,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3356690909090909,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4263881118881119,
+        "cross_encoder_sts": 0.45749999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34342307692307694,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4339641277641278
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4270427294017458
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.4263881118881119
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4213259504132231
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4210513742071882
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Data Architecture & Analytics KSA with insufficient signal strength (composite score 0.434) to justify inclusion for the AI CoE Leader. Without stronger framework alignment, this skill KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain skill KSA be expected in real-world AI CoE Leader roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Data Architecture & Analytics is not a standard competency expectation for AI CoE Leader. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the AI CoE Leader competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.434) and edge-domain placement (Data Architecture & Analytics) do not meet inclusion threshold for the AI CoE Leader. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.861097+00:00",
+    "pipeline_version": "1.0"
+  }
+}

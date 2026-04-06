@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0167",
+  "role_name": "BI Director",
+  "ksa_id": "AI-S-019",
+  "ksa_text": "Skill in implementing AI system transparency and explainability mechanisms, including model interpretability techniques, output explanation methods, and confidence communication appropriate to different user contexts and regulatory requirements.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4430460925039873,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4002006504568685,
+        "cross_encoder_sts": 0.43609931856899486,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3044708688245315,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.39696202020202026,
+        "cross_encoder_sts": 0.4529311111111112,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2477111111111111,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4416283813747228,
+        "cross_encoder_sts": 0.4551829268292683,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4054829268292683,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3841776427061311,
+        "cross_encoder_sts": 0.4329360465116279,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25415523255813954,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4430460925039873,
+        "cross_encoder_sts": 0.4506771929824562,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4226964912280701,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40504747474747477,
+        "cross_encoder_sts": 0.4295777777777778,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33963333333333334,
+        "jaccard": null,
+        "top_element_id": "2.A.1.d",
+        "top_element_label": "Speaking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4430460925039873
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4416283813747228
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.d",
+        "element_label": "Speaking",
+        "score": 0.40504747474747477
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.4002006504568685
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.39696202020202026
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain AI/ML Engineering KSA with insufficient signal strength (composite score 0.443) to justify inclusion for the BI Director. Without stronger framework alignment, this skill KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain skill KSA be expected in real-world BI Director roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm AI/ML Engineering is not a standard competency expectation for BI Director. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the BI Director competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.443) and edge-domain placement (AI/ML Engineering) do not meet inclusion threshold for the BI Director. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.530232+00:00",
+    "pipeline_version": "1.0"
+  }
+}

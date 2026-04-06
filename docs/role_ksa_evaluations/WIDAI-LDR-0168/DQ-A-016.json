@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0168",
+  "role_name": "GenAI CoE Leader",
+  "ksa_id": "DQ-A-016",
+  "ksa_text": "Ability to continuously monitor data quality indicators and operational performance to identify degradation patterns and initiate corrective actions.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Data Quality falls outside the primary competency scope of the GenAI CoE Leader. This ability KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Data Quality truly out-of-scope for the GenAI CoE Leader? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Data Quality as a core or recommended competency for the GenAI CoE Leader. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Data Quality falls outside the established competency profile for the GenAI CoE Leader. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality is outside the competency scope of the GenAI CoE Leader. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.801600+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0167",
+  "role_name": "BI Director",
+  "ksa_id": "LS-A-006",
+  "ksa_text": "Ability to lead organizational change and AI adoption, driving transformation efforts, navigating organizational resistance, building leadership support, and communicating change rationale across the organization.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Leadership & Strategy falls outside the primary competency scope of the BI Director. This ability KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Leadership & Strategy truly out-of-scope for the BI Director? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Leadership & Strategy as a core or recommended competency for the BI Director. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Leadership & Strategy falls outside the established competency profile for the BI Director. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Leadership & Strategy is outside the competency scope of the BI Director. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.618139+00:00",
+    "pipeline_version": "1.0"
+  }
+}

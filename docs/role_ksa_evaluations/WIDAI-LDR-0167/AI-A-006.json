@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0167",
+  "role_name": "BI Director",
+  "ksa_id": "AI-A-006",
+  "ksa_text": "Ability to interpret model outputs in business context, including understanding what a model is and is not telling you, assessing the practical significance of results, and identifying when model behavior signals a problem versus expected variation.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain AI/ML Engineering KSA with insufficient signal strength (composite score 0.0) to justify inclusion for the BI Director. Without stronger framework alignment, this ability KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain ability KSA be expected in real-world BI Director roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm AI/ML Engineering is not a standard competency expectation for BI Director. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the BI Director competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.0) and edge-domain placement (AI/ML Engineering) do not meet inclusion threshold for the BI Director. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.616748+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0168",
+  "role_name": "GenAI CoE Leader",
+  "ksa_id": "DQ-S-004",
+  "ksa_text": "Skill in designing and implementing data validation procedures, verification workflows, completeness checks, and anomaly detection mechanisms.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.441283137829912,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40951045698487565,
+        "cross_encoder_sts": 0.43785867620751345,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33391520572450806,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.441283137829912,
+        "cross_encoder_sts": 0.46819032258064514,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36953064516129036,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4259949090909091,
+        "cross_encoder_sts": 0.44107999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.385768,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4147552477565353,
+        "cross_encoder_sts": 0.4499042918454935,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3210244635193133,
+        "jaccard": null,
+        "top_element_id": "S0931",
+        "top_element_label": "Skill in conducting technical business impact analysis"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4239966740576497,
+        "cross_encoder_sts": 0.44214634146341464,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37559756097560976,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3545050505050505,
+        "cross_encoder_sts": 0.39007777777777775,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2596444444444444,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.441283137829912
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4259949090909091
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4239966740576497
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0931",
+        "element_label": "Skill in conducting technical business impact analysis",
+        "score": 0.4147552477565353
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.40951045698487565
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Data Quality falls outside the primary competency scope of the GenAI CoE Leader. This skill KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Data Quality truly out-of-scope for the GenAI CoE Leader? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Data Quality as a core or recommended competency for the GenAI CoE Leader. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Data Quality falls outside the established competency profile for the GenAI CoE Leader. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality is outside the competency scope of the GenAI CoE Leader. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.690762+00:00",
+    "pipeline_version": "1.0"
+  }
+}

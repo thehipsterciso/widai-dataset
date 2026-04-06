@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0167",
+  "role_name": "BI Director",
+  "ksa_id": "DQ-K-010",
+  "ksa_text": "Knowledge of reference data management principles, including reference data taxonomy design, governance of controlled vocabularies, change management for reference data updates, and maintaining consistency across reference datasets.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.42559286833855803,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4246960487729588,
+        "cross_encoder_sts": 0.4364735144312394,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3932894736842105,
+        "jaccard": null,
+        "top_element_id": "4072",
+        "top_element_label": "Knowledge of collection systems, capabilities, and processes."
+      },
+      "ddat": {
+        "composite": 0.40309768595041323,
+        "cross_encoder_sts": 0.43528,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3172781818181818,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.3932,
+        "cross_encoder_sts": 0.41738,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32872,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.42559286833855803,
+        "cross_encoder_sts": 0.44706551724137933,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3683324712643678,
+        "jaccard": null,
+        "top_element_id": "T0942",
+        "top_element_label": "Identify the types of information to be processed, stored, or transmitted by a system"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3576972727272728,
+        "cross_encoder_sts": 0.37597,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30897,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4137981818181818,
+        "cross_encoder_sts": 0.42507,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38373999999999997,
+        "jaccard": null,
+        "top_element_id": "1.A.1.d.1",
+        "top_element_label": "Memorization"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "T0942",
+        "element_label": "Identify the types of information to be processed, stored, or transmitted by a system",
+        "score": 0.42559286833855803
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "4072",
+        "element_label": "Knowledge of collection systems, capabilities, and processes.",
+        "score": 0.4246960487729588
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.d.1",
+        "element_label": "Memorization",
+        "score": 0.4137981818181818
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.40309768595041323
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.3932
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Data Quality falls outside the primary competency scope of the BI Director. This knowledge KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Data Quality truly out-of-scope for the BI Director? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Data Quality as a core or recommended competency for the BI Director. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Data Quality falls outside the established competency profile for the BI Director. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality is outside the competency scope of the BI Director. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.548522+00:00",
+    "pipeline_version": "1.0"
+  }
+}

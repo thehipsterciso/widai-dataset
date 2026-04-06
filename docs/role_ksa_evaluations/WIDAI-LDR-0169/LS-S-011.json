@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0169",
+  "role_name": "AI CoE Leader",
+  "ksa_id": "LS-S-011",
+  "ksa_text": "Skill in evaluating emerging data and AI technologies for strategic relevance, assessing maturity, organizational fit, competitive impact, and integration requirements before recommending investment.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.5042306493506493,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4268362978555453,
+        "cross_encoder_sts": 0.44510535455861067,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3781188133140376,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.4377298245614035,
+        "cross_encoder_sts": 0.4665087719298246,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3609859649122807,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4702512864493997,
+        "cross_encoder_sts": 0.4674679245283019,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4776735849056604,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.42394779088595885,
+        "cross_encoder_sts": 0.45427506361323156,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34307506361323153,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5042306493506493,
+        "cross_encoder_sts": 0.5051314285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5018285714285714,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38918545454545456,
+        "cross_encoder_sts": 0.41252000000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32696,
+        "jaccard": null,
+        "top_element_id": "4.A.2.b.1",
+        "top_element_label": "Making Decisions and Solving Problems"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5042306493506493
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4702512864493997
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4377298245614035
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.4268362978555453
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.42394779088595885
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Leadership & Strategy is a primary or secondary domain for the AI CoE Leader. This skill KSA is within scope for the role's expected competency profile and seniority level (c suite)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Leadership & Strategy), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.504). External reviewers may question whether this specific skill KSA is sufficiently distinctive for the AI CoE Leader versus adjacent roles.",
+    "evidence": "McKinsey, Gartner, and Harvard Business Review consistently identify leadership and strategy skills as core differentiators for C-suite and VP data leaders.",
+    "ruling": "Upheld: moderate framework signal is consistent with Leadership & Strategy appearing in job postings and role definition literature for AI CoE Leader."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Leadership & Strategy skill KSA is within scope for the AI CoE Leader at the c suite tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.833766+00:00",
+    "pipeline_version": "1.0"
+  }
+}

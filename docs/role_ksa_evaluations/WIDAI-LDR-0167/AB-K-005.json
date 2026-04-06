@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0167",
+  "role_name": "BI Director",
+  "ksa_id": "AB-K-005",
+  "ksa_text": "Knowledge of data analysis tools and platforms, including analytical software capabilities, automated systems analysis tools, computational environments for analysis, and the trade-offs between different analytical platform architectures.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.40674699103713186,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40425018530630036,
+        "cross_encoder_sts": 0.43596738609112706,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31967098321342924,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.38410472727272726,
+        "cross_encoder_sts": 0.436944,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2432,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-011",
+        "top_element_label": "Applied maths, statistics and scientific practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.38930818181818183,
+        "cross_encoder_sts": 0.447755,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23345,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40674699103713186,
+        "cross_encoder_sts": 0.44486408450704223,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3051014084507042,
+        "jaccard": null,
+        "top_element_id": "K0641",
+        "top_element_label": "Knowledge of market research tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3758721470019342,
+        "cross_encoder_sts": 0.4294659574468085,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23295531914893616,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.393125,
+        "cross_encoder_sts": 0.4197875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.322025,
+        "jaccard": null,
+        "top_element_id": "2.C.4.a",
+        "top_element_label": "Mathematics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0641",
+        "element_label": "Knowledge of market research tools and techniques",
+        "score": 0.40674699103713186
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.40425018530630036
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.4.a",
+        "element_label": "Mathematics",
+        "score": 0.393125
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.38930818181818183
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-011",
+        "element_label": "Applied maths, statistics and scientific practices",
+        "score": 0.38410472727272726
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Applied Analytics & BI is a primary or secondary domain for the BI Director. This knowledge KSA is within scope for the role's expected competency profile and seniority level (director)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Applied Analytics & BI), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.407). External validation of this knowledge KSA for the BI Director role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "Gartner analytics maturity model and BI leadership surveys confirm applied analytics and BI competencies for analytics leadership.",
+    "ruling": "Upheld: domain-level relevance of Applied Analytics & BI for the BI Director is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Applied Analytics & BI knowledge KSA is within scope for the BI Director at the director tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.572289+00:00",
+    "pipeline_version": "1.0"
+  }
+}
