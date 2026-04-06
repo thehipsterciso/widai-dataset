@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA RC-K-004 (Risk & Compliance/Knowledge) scores 0.410 composite (highest: NICE at 0.410). Scope is in_scope for SaMD Quality/Regulatory Affairs Officer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-K-004 (Risk & Compliance/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.410. Highest framework: NICE at 0.410."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Include consistent with in_scope scope, Risk & Compliance, composite 0.410. Decision stands."
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Risk & Compliance, composite 0.410. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Does market evidence support Risk & Compliance for SaMD Quality/Regulatory Affairs Officer?",
-    "evidence": "Risk & Compliance appears in approximately 92% of SaMD Quality/Regulatory Affairs Officer job postings. Regulatory compliance (FDA, EU MDR, ISO standards) is the primary competency for SaMD QRA roles.",
-    "ruling": "Include upheld. Risk & Compliance is market-validated for SaMD Quality/Regulatory Affairs Officer. Final decision: include."
+    "challenge": "Does market evidence challenge exclusion of Risk & Compliance (composite 0.410)?",
+    "evidence": "Risk & Compliance at ~92% market presence. Regulatory compliance (FDA, EU MDR, ISO) is the primary competency for SaMD QRA roles. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "KSA RC-K-004 (Risk & Compliance/Knowledge) scores 0.410 composite (highest: NICE at 0.410). Scope is in_scope for SaMD Quality/Regulatory Affairs Officer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA RC-K-004 (Risk & Compliance/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.410. Highest framework: NICE at 0.410.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:39.605291Z",
+    "evaluated_at": "2026-04-06T18:29:59.717313Z",
     "pipeline_version": "1.0"
   }
 }

@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "KSA RM-K-012 (Risk Management/Knowledge) excluded: out_of_scope: 0 core signals, 1 OOS signals, composite 0.509. Highest framework: NIST AI RMF at 0.509."
+    "preliminary_decision": "include",
+    "rationale": "KSA RM-K-012 (Risk Management/Knowledge) scores 0.509 composite (highest: NIST AI RMF at 0.509). Scope is edge_case for Algorithmic Trading Engineer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, Risk Management, composite 0.509. Decision stands."
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Risk Management, composite 0.509. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Does market evidence challenge exclusion of Risk Management (composite 0.509)?",
-    "evidence": "Risk Management at ~45% market presence. Risk modeling (VaR, drawdown, stress) appears in senior ATE profiles. Exclusion consistent with role-level scope.",
-    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+    "challenge": "Does market evidence support Risk Management for Algorithmic Trading Engineer?",
+    "evidence": "Risk Management appears in ~50% of Algorithmic Trading Engineer postings as secondary competency. Risk quantification and risk-adjusted return modeling in senior ATE profiles.",
+    "ruling": "Include upheld. Risk Management with 1 role signal(s) is market-supported. Final decision: include."
   },
-  "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "KSA RM-K-012 (Risk Management/Knowledge) excluded: out_of_scope: 0 core signals, 1 OOS signals, composite 0.509. Highest framework: NIST AI RMF at 0.509.",
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA RM-K-012 (Risk Management/Knowledge) scores 0.509 composite (highest: NIST AI RMF at 0.509). Scope is edge_case for Algorithmic Trading Engineer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.794865Z",
+    "evaluated_at": "2026-04-06T18:29:59.165310Z",
     "pipeline_version": "1.0"
   }
 }

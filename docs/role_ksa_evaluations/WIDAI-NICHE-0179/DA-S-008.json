@@ -125,27 +125,27 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA DA-S-008 (Data Architecture/Skill) scores 0.427 composite (highest: DDaT at 0.427). Scope is edge_case for Clinical AI Specialist: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DA-S-008 (Data Architecture/Skill) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.427. Highest framework: DDaT at 0.427."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Include consistent with edge_case scope, Data Architecture, composite 0.427. Decision stands."
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Data Architecture, composite 0.427. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Does market evidence support Data Architecture for Clinical AI Specialist at this seniority?",
-    "evidence": "Data Architecture appears in ~35% of Clinical AI Specialist postings as a secondary competency. Clinical data architecture (FHIR/HL7) relevant for integration-focused roles.",
-    "ruling": "Include upheld. Data Architecture with role-relevant signals (1) is market-supported. Final decision: include."
+    "challenge": "Does market evidence challenge exclusion of Data Architecture (composite 0.427)?",
+    "evidence": "Data Architecture at ~38% market presence. FHIR/HL7 data architecture relevant for clinical AI integration roles. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "medium",
-  "decision_rationale": "KSA DA-S-008 (Data Architecture/Skill) scores 0.427 composite (highest: DDaT at 0.427). Scope is edge_case for Clinical AI Specialist: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
+  "decision_rationale": "KSA DA-S-008 (Data Architecture/Skill) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.427. Highest framework: DDaT at 0.427.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.418209Z",
+    "evaluated_at": "2026-04-06T18:36:01.240699Z",
     "pipeline_version": "1.0"
   }
 }

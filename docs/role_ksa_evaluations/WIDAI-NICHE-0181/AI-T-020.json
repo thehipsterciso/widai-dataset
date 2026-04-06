@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "KSA AI-T-020 (AI & ML/Task) scores 0.508 composite (highest: NIST AI RMF at 0.508). Scope is in_scope for SaMD Quality/Regulatory Affairs Officer: 3 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "rationale": "KSA AI-T-020 (AI & ML/Task) scores 0.508 composite (highest: NIST AI RMF at 0.508). Scope is edge_case for SaMD Quality/Regulatory Affairs Officer: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Include consistent with in_scope scope, AI & ML, composite 0.508. Decision stands."
+    "ruling": "No inconsistency. Include consistent with edge_case scope, AI & ML, composite 0.508. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
+    "outcome": "overturned",
     "challenge": "Does market evidence support AI & ML for SaMD Quality/Regulatory Affairs Officer?",
-    "evidence": "AI & ML appears in approximately 55% of SaMD Quality/Regulatory Affairs Officer job postings. AI/ML in SaMD is a growing competency requirement for regulatory review of adaptive algorithms.",
-    "ruling": "Include upheld. AI & ML is market-validated for SaMD Quality/Regulatory Affairs Officer. Final decision: include."
+    "evidence": "AI & ML appears in ~52% of SaMD Quality/Regulatory Affairs Officer postings as secondary competency. AI/ML technical understanding required for review of adaptive SaMD algorithms. Zero role-specific signals insufficient for edge-case inclusion at 52% market penetration.",
+    "ruling": "Revised to exclude. AI & ML without role signals not market-supported. Final decision: exclude."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "KSA AI-T-020 (AI & ML/Task) scores 0.508 composite (highest: NIST AI RMF at 0.508). Scope is in_scope for SaMD Quality/Regulatory Affairs Officer: 3 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
-  "adversarial_disagreements": 0,
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. AI & ML without role signals not market-supported. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:39.467906Z",
+    "evaluated_at": "2026-04-06T18:29:59.583584Z",
     "pipeline_version": "1.0"
   }
 }

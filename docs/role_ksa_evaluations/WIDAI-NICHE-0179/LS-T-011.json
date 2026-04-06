@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA LS-T-011 (Leadership & Strategy/Task) scores 0.457 composite (highest: NIST AI RMF at 0.457). Scope is edge_case for Clinical AI Specialist: 3 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-T-011 (Leadership & Strategy/Task) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.457. Highest framework: NIST AI RMF at 0.457."
   },
   "pass_3_adversarial_internal": {
-    "outcome": "overturned",
-    "challenge": "NIST AI RMF signal on Leadership & Strategy \u2014 false-positive risk for out-prior domain.",
+    "outcome": "upheld",
+    "challenge": null,
     "rebuttal": null,
-    "ruling": "Overturned to exclude. Leadership & Strategy driven by governance framework signal, not Clinical AI Specialist scope."
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, Leadership & Strategy, composite 0.457. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": "Does market evidence challenge exclusion of Leadership & Strategy (composite 0.457)?",
-    "evidence": "Leadership & Strategy at ~15% market presence. Enterprise strategy is above IC/senior IC Clinical AI Specialist scope. Exclusion consistent with role-level scope.",
-    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+    "evidence": "Leadership & Strategy at ~12% market presence. Enterprise strategy above IC/senior IC Clinical AI Specialist scope. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "medium",
-  "decision_rationale": "Overturned to exclude. Leadership & Strategy driven by governance framework signal, not Clinical AI Specialist scope.",
-  "adversarial_disagreements": 1,
+  "decision_confidence": "high",
+  "decision_rationale": "KSA LS-T-011 (Leadership & Strategy/Task) excluded: out_of_scope: 0 core signals, 0 OOS signals, composite 0.457. Highest framework: NIST AI RMF at 0.457.",
+  "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.332756Z",
+    "evaluated_at": "2026-04-06T18:36:01.192889Z",
     "pipeline_version": "1.0"
   }
 }

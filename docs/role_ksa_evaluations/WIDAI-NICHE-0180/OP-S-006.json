@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA OP-S-006 (Operations & Program Management/Skill) scores 0.452 composite (highest: EU AI Act at 0.452). Scope is edge_case for Algorithmic Trading Engineer: 3 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA OP-S-006 (Operations & Program Management/Skill) excluded: out_of_scope: 1 core signals, 0 OOS signals, composite 0.452. Highest framework: EU AI Act at 0.452."
   },
   "pass_3_adversarial_internal": {
-    "outcome": "overturned",
-    "challenge": "EU AI Act signal on Operations & Program Management \u2014 false-positive risk for out-prior domain.",
+    "outcome": "upheld",
+    "challenge": null,
     "rebuttal": null,
-    "ruling": "Overturned to exclude. Operations & Program Management driven by governance framework signal, not Algorithmic Trading Engineer scope."
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, Operations & Program Management, composite 0.452. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": "Does market evidence challenge exclusion of Operations & Program Management (composite 0.452)?",
-    "evidence": "Operations & Program Management at ~8% market presence. Organizational program management not in ATE job descriptions. Exclusion consistent with role-level scope.",
-    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+    "evidence": "Operations & Program Management at ~6% market presence. Org program management not in ATE job descriptions. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "medium",
-  "decision_rationale": "Overturned to exclude. Operations & Program Management driven by governance framework signal, not Algorithmic Trading Engineer scope.",
-  "adversarial_disagreements": 1,
+  "decision_confidence": "high",
+  "decision_rationale": "KSA OP-S-006 (Operations & Program Management/Skill) excluded: out_of_scope: 1 core signals, 0 OOS signals, composite 0.452. Highest framework: EU AI Act at 0.452.",
+  "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.839231Z",
+    "evaluated_at": "2026-04-06T18:29:59.200188Z",
     "pipeline_version": "1.0"
   }
 }

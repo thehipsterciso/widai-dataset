@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA AI-S-019 (AI & ML/Skill) scores 0.443 composite (highest: NIST AI RMF at 0.443). Scope is in_scope for Algorithmic Trading Engineer: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-S-019 (AI & ML/Skill) excluded: out_of_scope: 0 core signals, 2 OOS signals, composite 0.443. Highest framework: NIST AI RMF at 0.443."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Include consistent with in_scope scope, AI & ML, composite 0.443. Decision stands."
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, AI & ML, composite 0.443. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Does market evidence support AI & ML for Algorithmic Trading Engineer?",
-    "evidence": "AI & ML appears in approximately 85% of Algorithmic Trading Engineer job postings. ML/quant modeling is a primary competency in algorithmic trading roles.",
-    "ruling": "Include upheld. AI & ML is market-validated for Algorithmic Trading Engineer. Final decision: include."
+    "challenge": "Does market evidence challenge exclusion of AI & ML (composite 0.443)?",
+    "evidence": "AI & ML at ~88% market presence. ML model development, evaluation, deployment are primary ATE competencies. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "KSA AI-S-019 (AI & ML/Skill) scores 0.443 composite (highest: NIST AI RMF at 0.443). Scope is in_scope for Algorithmic Trading Engineer: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
+  "decision_rationale": "KSA AI-S-019 (AI & ML/Skill) excluded: out_of_scope: 0 core signals, 2 OOS signals, composite 0.443. Highest framework: NIST AI RMF at 0.443.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.847932Z",
+    "evaluated_at": "2026-04-06T18:29:59.208204Z",
     "pipeline_version": "1.0"
   }
 }

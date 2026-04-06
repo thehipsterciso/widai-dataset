@@ -126,7 +126,7 @@
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "KSA SP-S-005 (Security & Privacy/Skill) excluded: edge_case: 1 core signals, 0 OOS signals, composite 0.399. Highest framework: NICE at 0.399."
+    "rationale": "KSA SP-S-005 (Security & Privacy/Skill) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.399. Highest framework: NICE at 0.399."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
@@ -137,15 +137,15 @@
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": "Does market evidence challenge exclusion of Security & Privacy (composite 0.399)?",
-    "evidence": "Security & Privacy at ~45% market presence. HIPAA/PHI security competencies present as secondary requirement in regulated health AI. Exclusion consistent with role-level scope.",
-    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+    "evidence": "Security & Privacy at ~50% market presence. HIPAA/PHI security is a required secondary competency in health AI environments. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "medium",
-  "decision_rationale": "KSA SP-S-005 (Security & Privacy/Skill) excluded: edge_case: 1 core signals, 0 OOS signals, composite 0.399. Highest framework: NICE at 0.399.",
+  "decision_rationale": "KSA SP-S-005 (Security & Privacy/Skill) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.399. Highest framework: NICE at 0.399.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.495813Z",
+    "evaluated_at": "2026-04-06T18:36:01.308500Z",
     "pipeline_version": "1.0"
   }
 }

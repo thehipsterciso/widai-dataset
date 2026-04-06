@@ -125,27 +125,27 @@
   "pass_2_evaluation": {
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA TF-S-010 (Technology Fundamentals/Skill) scores 0.378 composite (highest: NICE at 0.378). Scope is in_scope for Algorithmic Trading Engineer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA TF-S-010 (Technology Fundamentals/Skill) excluded: in_scope: 2 core signals, 0 OOS signals, composite 0.378. Highest framework: NICE at 0.378."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Include consistent with in_scope scope, Technology Fundamentals, composite 0.378. Decision stands."
+    "ruling": "No inconsistency. Exclude consistent with in_scope scope, Technology Fundamentals, composite 0.378. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Does market evidence support Technology Fundamentals for Algorithmic Trading Engineer?",
-    "evidence": "Technology Fundamentals appears in approximately 80% of Algorithmic Trading Engineer job postings. Low-latency systems, compute optimization appear in 75-85% of ATE postings.",
-    "ruling": "Include upheld. Technology Fundamentals is market-validated for Algorithmic Trading Engineer. Final decision: include."
+    "challenge": "Does market evidence challenge exclusion of Technology Fundamentals (composite 0.378)?",
+    "evidence": "Technology Fundamentals at ~82% market presence. Low-latency systems, compute, distributed processing in 78-85% of ATE postings. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "KSA TF-S-010 (Technology Fundamentals/Skill) scores 0.378 composite (highest: NICE at 0.378). Scope is in_scope for Algorithmic Trading Engineer: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
+  "decision_rationale": "KSA TF-S-010 (Technology Fundamentals/Skill) excluded: in_scope: 2 core signals, 0 OOS signals, composite 0.378. Highest framework: NICE at 0.378.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.998773Z",
+    "evaluated_at": "2026-04-06T18:29:59.317112Z",
     "pipeline_version": "1.0"
   }
 }

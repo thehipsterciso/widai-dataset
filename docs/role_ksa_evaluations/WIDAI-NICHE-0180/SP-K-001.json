@@ -114,29 +114,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA SP-K-001 (Security & Privacy/Knowledge) scores 0.455 composite (highest: NIST AI RMF at 0.455). Scope is in_scope for Algorithmic Trading Engineer: 2 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-K-001 (Security & Privacy/Knowledge) excluded: edge_case: 1 core signals, 0 OOS signals, composite 0.455. Highest framework: NIST AI RMF at 0.455."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Include consistent with in_scope scope, Security & Privacy, composite 0.455. Decision stands."
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Security & Privacy, composite 0.455. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "Does market evidence support Security & Privacy for Algorithmic Trading Engineer at this seniority?",
-    "evidence": "Security & Privacy appears in ~40% of Algorithmic Trading Engineer postings as a secondary competency. Secure comms and access control relevant especially at hedge funds/banks.",
-    "ruling": "Include upheld. Security & Privacy with role-relevant signals (2) is market-supported. Final decision: include."
+    "challenge": "Does market evidence challenge exclusion of Security & Privacy (composite 0.455)?",
+    "evidence": "Security & Privacy at ~42% market presence. Secure trading infrastructure and access controls relevant at hedge funds/banks. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "KSA SP-K-001 (Security & Privacy/Knowledge) scores 0.455 composite (highest: NIST AI RMF at 0.455). Scope is in_scope for Algorithmic Trading Engineer: 2 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA SP-K-001 (Security & Privacy/Knowledge) excluded: edge_case: 1 core signals, 0 OOS signals, composite 0.455. Highest framework: NIST AI RMF at 0.455.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.835377Z",
+    "evaluated_at": "2026-04-06T18:29:59.197010Z",
     "pipeline_version": "1.0"
   }
 }

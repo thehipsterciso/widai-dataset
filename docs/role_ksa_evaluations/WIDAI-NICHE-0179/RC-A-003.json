@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "KSA RC-A-003 (Risk & Compliance/Ability) scores 0.469 composite (highest: DDaT at 0.469). Scope is in_scope for Clinical AI Specialist: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "rationale": "KSA RC-A-003 (Risk & Compliance/Ability) scores 0.469 composite (highest: DDaT at 0.469). Scope is edge_case for Clinical AI Specialist: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Include consistent with in_scope scope, Risk & Compliance, composite 0.469. Decision stands."
+    "ruling": "No inconsistency. Include consistent with edge_case scope, Risk & Compliance, composite 0.469. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": "Does market evidence support Risk & Compliance for Clinical AI Specialist?",
-    "evidence": "Risk & Compliance appears in approximately 75% of Clinical AI Specialist job postings. FDA 510(k)/HIPAA/CE marking regulatory knowledge required for most clinical AI roles.",
+    "evidence": "Risk & Compliance appears in approximately 75% of Clinical AI Specialist job postings. FDA/HIPAA/CE regulatory knowledge required for most clinical AI roles.",
     "ruling": "Include upheld. Risk & Compliance is market-validated for Clinical AI Specialist. Final decision: include."
   },
   "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "KSA RC-A-003 (Risk & Compliance/Ability) scores 0.469 composite (highest: DDaT at 0.469). Scope is in_scope for Clinical AI Specialist: 1 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA RC-A-003 (Risk & Compliance/Ability) scores 0.469 composite (highest: DDaT at 0.469). Scope is edge_case for Clinical AI Specialist: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.320993Z",
+    "evaluated_at": "2026-04-06T18:36:01.182063Z",
     "pipeline_version": "1.0"
   }
 }

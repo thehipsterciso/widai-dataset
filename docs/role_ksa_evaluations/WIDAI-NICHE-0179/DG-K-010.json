@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "KSA DG-K-010 (Data Governance/Knowledge) excluded: out_of_scope: 1 core signals, 1 OOS signals, composite 0.433. Highest framework: DDaT at 0.433."
+    "rationale": "KSA DG-K-010 (Data Governance/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.433. Highest framework: DDaT at 0.433."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Exclude consistent with out_of_scope scope, Data Governance, composite 0.433. Decision stands."
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Data Governance, composite 0.433. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": "Does market evidence challenge exclusion of Data Governance (composite 0.433)?",
-    "evidence": "Data Governance at ~40% market presence. Healthcare data governance appears as supporting competency in senior clinical AI profiles. Exclusion consistent with role-level scope.",
-    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+    "evidence": "Data Governance at ~42% market presence. Healthcare data governance relevant for EHR integration contexts. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "KSA DG-K-010 (Data Governance/Knowledge) excluded: out_of_scope: 1 core signals, 1 OOS signals, composite 0.433. Highest framework: DDaT at 0.433.",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DG-K-010 (Data Governance/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.433. Highest framework: DDaT at 0.433.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.383816Z",
+    "evaluated_at": "2026-04-06T18:36:01.226604Z",
     "pipeline_version": "1.0"
   }
 }

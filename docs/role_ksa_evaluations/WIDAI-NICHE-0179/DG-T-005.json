@@ -125,27 +125,27 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA DG-T-005 (Data Governance/Task) scores 0.418 composite (highest: DDaT at 0.418). Scope is edge_case for Clinical AI Specialist: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DG-T-005 (Data Governance/Task) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.418. Highest framework: DDaT at 0.418."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Include consistent with edge_case scope, Data Governance, composite 0.418. Decision stands."
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Data Governance, composite 0.418. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "overturned",
-    "challenge": "Does market evidence support Data Governance for Clinical AI Specialist at this seniority?",
-    "evidence": "Data Governance appears in ~40% of Clinical AI Specialist postings as a secondary competency. Healthcare data governance appears as supporting competency in senior clinical AI profiles. Zero role-specific signals insufficient for inclusion.",
-    "ruling": "Revised to exclude. Data Governance without role signals not market-supported. Final decision: exclude."
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Data Governance (composite 0.418)?",
+    "evidence": "Data Governance at ~42% market presence. Healthcare data governance relevant for EHR integration contexts. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "medium",
-  "decision_rationale": "Revised to exclude. Data Governance without role signals not market-supported. Final decision: exclude.",
-  "adversarial_disagreements": 1,
+  "decision_rationale": "KSA DG-T-005 (Data Governance/Task) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.418. Highest framework: DDaT at 0.418.",
+  "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.450050Z",
+    "evaluated_at": "2026-04-06T18:36:01.269072Z",
     "pipeline_version": "1.0"
   }
 }

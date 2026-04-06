@@ -125,27 +125,27 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "KSA DA-K-016 (Data Architecture/Knowledge) scores 0.408 composite (highest: NICE at 0.408). Scope is edge_case for Clinical AI Specialist: 0 in-scope signals, 0 out-of-scope signals. Seniority is appropriate."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DA-K-016 (Data Architecture/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.408. Highest framework: NICE at 0.408."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "No inconsistency. Include consistent with edge_case scope, Data Architecture, composite 0.408. Decision stands."
+    "ruling": "No inconsistency. Exclude consistent with edge_case scope, Data Architecture, composite 0.408. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "overturned",
-    "challenge": "Does market evidence support Data Architecture for Clinical AI Specialist at this seniority?",
-    "evidence": "Data Architecture appears in ~35% of Clinical AI Specialist postings as a secondary competency. Clinical data architecture (FHIR/HL7) relevant for integration-focused roles. Zero role-specific signals insufficient for inclusion.",
-    "ruling": "Revised to exclude. Data Architecture without role signals not market-supported. Final decision: exclude."
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge exclusion of Data Architecture (composite 0.408)?",
+    "evidence": "Data Architecture at ~38% market presence. FHIR/HL7 data architecture relevant for clinical AI integration roles. Exclusion consistent with role scope.",
+    "ruling": "Exclusion upheld. Market evidence consistent. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "medium",
-  "decision_rationale": "Revised to exclude. Data Architecture without role signals not market-supported. Final decision: exclude.",
-  "adversarial_disagreements": 1,
+  "decision_rationale": "KSA DA-K-016 (Data Architecture/Knowledge) excluded: edge_case: 0 core signals, 0 OOS signals, composite 0.408. Highest framework: NICE at 0.408.",
+  "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:16:38.477327Z",
+    "evaluated_at": "2026-04-06T18:36:01.292730Z",
     "pipeline_version": "1.0"
   }
 }
