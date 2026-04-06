@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0014",
+  "role_name": "Data Governance Council Chair",
+  "ksa_id": "DG-T-015",
+  "ksa_text": "Process data access requests per defined procedures, including request validation, approval routing, provisioning, access log documentation, and ongoing access review.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.3961023140495868,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3961023140495868,
+        "cross_encoder_sts": 0.41661454545454546,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3414030303030303,
+        "jaccard": null,
+        "top_element_id": "1032",
+        "top_element_label": "Continuously validate the organization against policies/guidelines/procedures/regulations/laws to ensure compliance."
+      },
+      "ddat": {
+        "composite": 0.39043868471953574,
+        "cross_encoder_sts": 0.42589787234042553,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2958808510638298,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-042",
+        "top_element_label": "Customer service management"
+      },
+      "eu_ai_act": {
+        "composite": 0.37767181818181816,
+        "cross_encoder_sts": 0.40363,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30845,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-018",
+        "top_element_label": "Obligations of providers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.39528058651026393,
+        "cross_encoder_sts": 0.4242206451612903,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3181070967741936,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36253846153846153,
+        "cross_encoder_sts": 0.39973846153846154,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2633384615384615,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.37528863636363635,
+        "cross_encoder_sts": 0.413025,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27465833333333334,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1032",
+        "element_label": "Continuously validate the organization against policies/guidelines/procedures/regulations/laws to ensure compliance.",
+        "score": 0.3961023140495868
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.39528058651026393
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-042",
+        "element_label": "Customer service management",
+        "score": 0.39043868471953574
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-018",
+        "element_label": "Obligations of providers of high-risk AI systems",
+        "score": 0.37767181818181816
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.37528863636363635
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to Data Governance Council Chair scope \u2014 GOV-specific signals detected (\"access   :policy|control|management|governance|review|rights\"). STRM composite is moderate-to-strong (0.3961). Domain Data Governance (affinity 0.95) is a natural fit for this governance role. Seniority is appropriate for director-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in governance job postings or certification curricula (CDMP, DAMA, IAPP CIPP/CIPM, NIST AI RMF, ISO 42001). Would a working Data Governance Council Chair self-report this as a required competency?",
+    "evidence": "Challenge answered: the governance competency is implicit in Data Governance Council Chair practice (domain affinity 0.95, 1 GOV signal(s)). Framework vocabulary matching underrepresents many legitimate governance competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to Data Governance Council Chair scope \u2014 GOV-specific signals detected (\"access   :policy|control|management|governance|review|rights\"). STRM composite is moderate-to-strong (0.3961). Domain Data Governance (affinity 0.95) is a natural fit for this governance role. Seniority is appropriate for director-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:30:58.302733Z",
+    "pipeline_version": "1.0"
+  }
+}

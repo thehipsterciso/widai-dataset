@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0014",
+  "role_name": "Data Governance Council Chair",
+  "ksa_id": "RM-S-021",
+  "ksa_text": "Skill in AI risk prioritization and mitigation strategy development, including ranking risks by impact and likelihood, assessing available mitigation resources, and designing risk response approaches.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: skill maps directly to Data Governance Council Chair scope \u2014 GOV-specific signals detected (\"ai risk\", \"risk   :mitigation|treatment|response|management|framework|program\"). STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). Domain Risk Management (affinity 0.72) is a natural fit for this governance role. Seniority is appropriate for director-level level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 2 match(es) in governance job postings or certification scope (CDMP, IAPP, NIST AI RMF). Competency appears in Data Governance Council Chair role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: skill maps directly to Data Governance Council Chair scope \u2014 GOV-specific signals detected (\"ai risk\", \"risk   :mitigation|treatment|response|management|framework|program\"). STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). Domain Risk Management (affinity 0.72) is a natural fit for this governance role. Seniority is appropriate for director-level level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:30:58.385790Z",
+    "pipeline_version": "1.0"
+  }
+}

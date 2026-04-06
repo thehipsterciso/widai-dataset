@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0013",
+  "role_name": "Data Custodian",
+  "ksa_id": "DG-K-019",
+  "ksa_text": "Knowledge of data asset management principles, including data asset inventory methods, data source documentation, data provenance tracking, and asset lifecycle management.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to Data Custodian scope \u2014 GOV-specific signals detected (\"data inventory\", \"data   :monetiz|valuation|product|asset management\"). STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). Domain Data Governance (affinity 0.85) is a natural fit for this governance role. Seniority is appropriate for IC level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in governance job postings or certification curricula (CDMP, DAMA, IAPP CIPP/CIPM, NIST AI RMF, ISO 42001). Would a working Data Custodian self-report this as a required competency?",
+    "evidence": "Challenge answered: the governance competency is implicit in Data Custodian practice (domain affinity 0.85, 2 GOV signal(s)). Framework vocabulary matching underrepresents many legitimate governance competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to Data Custodian scope \u2014 GOV-specific signals detected (\"data inventory\", \"data   :monetiz|valuation|product|asset management\"). STRM composite is minimal (0.0000 \u2014 likely framework vocabulary mismatch). Domain Data Governance (affinity 0.85) is a natural fit for this governance role. Seniority is appropriate for IC level.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:30:57.271941Z",
+    "pipeline_version": "1.0"
+  }
+}

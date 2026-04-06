@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0013",
+  "role_name": "Data Custodian",
+  "ksa_id": "TF-K-012",
+  "ksa_text": "Knowledge of Linux operating system fundamentals relevant to data engineering, including file system structure, process management, user and permission models, package management, and common command-line utilities for text processing and system monitoring.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.40842257172485313,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40752220434432823,
+        "cross_encoder_sts": 0.42308761061946903,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3660144542772861,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.3916513636363637,
+        "cross_encoder_sts": 0.45874500000000007,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21273499999999998,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.3496954545454545,
+        "cross_encoder_sts": 0.36219999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31635,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.40842257172485313,
+        "cross_encoder_sts": 0.4290456273764259,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3534277566539924,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3394181818181818,
+        "cross_encoder_sts": 0.38495,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.218,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.39104545454545453,
+        "cross_encoder_sts": 0.4014,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36343333333333333,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40842257172485313
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.40752220434432823
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.3916513636363637
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.39104545454545453
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.3496954545454545
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Technology Fundamentals domain has low affinity (0.55) for Data Custodian, and the text \u2014 'Knowledge of Linux operating system fundamentals relevant to data engineering, including file system...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is moderate-to-strong (0.4084)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 1 match(es) in governance job postings or certification curricula. A gap here would not be noticeable to a working Data Custodian whose mandate centers on policy, oversight, and governance.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Technology Fundamentals domain has low affinity (0.55) for Data Custodian, and the text \u2014 'Knowledge of Linux operating system fundamentals relevant to data engineering, including file system...' \u2014 describes competencies outside the policy/oversight/governance mandate. No GOV-specific signals detected. STRM composite is moderate-to-strong (0.4084).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:30:56.938274Z",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-GOV-0014",
+  "role_name": "Data Governance Council Chair",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:30:58.997219Z",
+  "total_evaluated": 1069,
+  "include_count": 200,
+  "exclude_count": 869,
+  "inclusion_rate": 0.1871,
+  "calibration_status": "OK",
+  "calibration_note": "200 included KSAs within 60\u2013200 calibration target.",
+  "confidence_distribution": {
+    "high": 1069,
+    "medium": 0,
+    "low": 0
+  },
+  "adversarial_overturn_distribution": {
+    "zero_overturns": 1069,
+    "one_overturn": 0,
+    "two_overturns": 0
+  },
+  "domain_breakdown": {
+    "TF": {
+      "include": 0,
+      "exclude": 87,
+      "total": 87,
+      "inclusion_rate": 0.0
+    },
+    "DA": {
+      "include": 5,
+      "exclude": 88,
+      "total": 93,
+      "inclusion_rate": 0.054
+    },
+    "DQ": {
+      "include": 13,
+      "exclude": 69,
+      "total": 82,
+      "inclusion_rate": 0.159
+    },
+    "DG": {
+      "include": 67,
+      "exclude": 25,
+      "total": 92,
+      "inclusion_rate": 0.728
+    },
+    "SP": {
+      "include": 11,
+      "exclude": 73,
+      "total": 84,
+      "inclusion_rate": 0.131
+    },
+    "AI": {
+      "include": 4,
+      "exclude": 99,
+      "total": 103,
+      "inclusion_rate": 0.039
+    },
+    "AG": {
+      "include": 36,
+      "exclude": 71,
+      "total": 107,
+      "inclusion_rate": 0.336
+    },
+    "RC": {
+      "include": 16,
+      "exclude": 58,
+      "total": 74,
+      "inclusion_rate": 0.216
+    },
+    "RM": {
+      "include": 23,
+      "exclude": 78,
+      "total": 101,
+      "inclusion_rate": 0.228
+    },
+    "LS": {
+      "include": 14,
+      "exclude": 75,
+      "total": 89,
+      "inclusion_rate": 0.157
+    },
+    "OP": {
+      "include": 11,
+      "exclude": 58,
+      "total": 69,
+      "inclusion_rate": 0.159
+    },
+    "AB": {
+      "include": 0,
+      "exclude": 88,
+      "total": 88,
+      "inclusion_rate": 0.0
+    }
+  },
+  "dimension_breakdown": {
+    "Skill": {
+      "included": 61,
+      "excluded": 267
+    },
+    "Task": {
+      "included": 40,
+      "excluded": 207
+    },
+    "Knowledge": {
+      "included": 82,
+      "excluded": 199
+    },
+    "Ability": {
+      "included": 17,
+      "excluded": 196
+    }
+  },
+  "score_analysis": {
+    "avg_composite_included": 0.2116,
+    "avg_composite_excluded": 0.209
+  },
+  "adversarial_challenge_counts": {
+    "pass_3_challenges": 0,
+    "pass_3_overturns": 0,
+    "pass_4_challenges": 14,
+    "pass_4_overturns": 0
+  }
+}
