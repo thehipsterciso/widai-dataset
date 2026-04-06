@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0054",
+  "role_name": "NLP/Computational Linguistics Specialist",
+  "ksa_id": "DQ-T-013",
+  "ksa_text": "Design and implement organizational governance structures, policies, and internal controls for data quality and management.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.432560398505604,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4156037622377622,
+        "cross_encoder_sts": 0.4480089230769231,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32919,
+        "jaccard": null,
+        "top_element_id": "516",
+        "top_element_label": "Develop and direct system testing and validation procedures and documentation."
+      },
+      "ddat": {
+        "composite": 0.432560398505604,
+        "cross_encoder_sts": 0.4746534246575343,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3203123287671233,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-022",
+        "top_element_label": "Business process improvement"
+      },
+      "eu_ai_act": {
+        "composite": 0.4156545454545455,
+        "cross_encoder_sts": 0.45734545454545456,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3044787878787879,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41114713636363637,
+        "cross_encoder_sts": 0.45075000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3055395,
+        "jaccard": null,
+        "top_element_id": "T1138",
+        "top_element_label": "Create system testing and validation procedures and documentation"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.424558,
+        "cross_encoder_sts": 0.481918,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.271598,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42634829545454545,
+        "cross_encoder_sts": 0.46205,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33114375,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-022",
+        "element_label": "Business process improvement",
+        "score": 0.432560398505604
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.42634829545454545
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.424558
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4156545454545455
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "516",
+        "element_label": "Develop and direct system testing and validation procedures and documentation.",
+        "score": 0.4156037622377622
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-T-013 (Data Quality/Task) scores 0.433 composite (highest: DDaT at 0.433) and is edge_case for the NLP/Computational Linguistics Specialist role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, DDaT signal (0.433), and Data Quality handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this DQ KSA reflect NLP Specialist requirements?",
+    "evidence": "Data quality for NLP (annotation quality, corpus validation) in 30-45% of NLP postings.",
+    "ruling": "Include upheld. Data quality for NLP (annotation quality, corpus validation) in 30-45% of NLP postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DQ-T-013 (Data Quality/Task) scores 0.433 composite (highest: DDaT at 0.433) and is edge_case for the NLP/Computational Linguistics Specialist role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:59.436240+00:00",
+    "pipeline_version": "1.0"
+  }
+}

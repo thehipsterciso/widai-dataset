@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0056",
+  "role_name": "AI/ML Specialist (DoD)",
+  "ksa_id": "LS-T-011",
+  "ksa_text": "Report to board, audit committee, and executive leadership on data and AI risk posture, program maturity, regulatory compliance status, value realization, and strategic progress against roadmap commitments.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4572330447330447,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4121614196762142,
+        "cross_encoder_sts": 0.41293917808219177,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.410087397260274,
+        "jaccard": null,
+        "top_element_id": "1120",
+        "top_element_label": "Ability to interpret and incorporate data from multiple tool sources."
+      },
+      "ddat": {
+        "composite": 0.4167402157164869,
+        "cross_encoder_sts": 0.43567627118644064,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3662440677966102,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.43557357293868926,
+        "cross_encoder_sts": 0.41819767441860467,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.48190930232558143,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3971367472190257,
+        "cross_encoder_sts": 0.4159970464135021,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34684261603375527,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4572330447330447,
+        "cross_encoder_sts": 0.4402746031746032,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5024555555555555,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.35813863636363635,
+        "cross_encoder_sts": 0.3678,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.332375,
+        "jaccard": null,
+        "top_element_id": "2.C.1.f",
+        "top_element_label": "Personnel and Human Resources"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4572330447330447
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.43557357293868926
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4167402157164869
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1120",
+        "element_label": "Ability to interpret and incorporate data from multiple tool sources.",
+        "score": 0.4121614196762142
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3971367472190257
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-T-011 (Leadership and Strategy/Task) is excluded as out_of_scope (composite 0.457, highest: NIST AI RMF at 0.457). Core signal: 0, OOS signals: 0, seniority: appropriate. Leadership and Strategy at this signal level does not meet inclusion threshold for AI/ML Specialist (DoD)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.457, and Leadership and Strategy (LS) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Leadership and Strategy KSA (composite 0.457)?",
+    "evidence": "Market analysis does not surface this Leadership and Strategy competency as a standard AI/ML Specialist (DoD) requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA LS-T-011 (Leadership and Strategy/Task) is excluded as out_of_scope (composite 0.457, highest: NIST AI RMF at 0.457). Core signal: 0, OOS signals: 0, seniority: appropriate. Leadership and Strategy at this signal level does not meet inclusion threshold for AI/ML Specialist (DoD).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:26:00.363137+00:00",
+    "pipeline_version": "1.0"
+  }
+}

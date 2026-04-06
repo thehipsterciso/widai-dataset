@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0054",
+  "role_name": "NLP/Computational Linguistics Specialist",
+  "ksa_id": "RM-T-007",
+  "ksa_text": "Establish and operate continuous monitoring programs for deployed AI systems to track operational performance, detect degradation and behavioral drift.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.4324023845007452,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3865722796896757,
+        "cross_encoder_sts": 0.4236907002188184,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2875898249452954,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.4085396603396603,
+        "cross_encoder_sts": 0.44666813186813187,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30686373626373625,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-004",
+        "top_element_label": "Agile research practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.39265194805194803,
+        "cross_encoder_sts": 0.42060571428571425,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31810857142857146,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.38773302527348175,
+        "cross_encoder_sts": 0.4280116182572614,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28032344398340253,
+        "jaccard": null,
+        "top_element_id": "K0675",
+        "top_element_label": "Knowledge of risk management processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4324023845007452,
+        "cross_encoder_sts": 0.4652704918032787,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34475409836065574,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.369865367965368,
+        "cross_encoder_sts": 0.4131095238095238,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2545476190476191,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4324023845007452
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-004",
+        "element_label": "Agile research practices",
+        "score": 0.4085396603396603
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.39265194805194803
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0675",
+        "element_label": "Knowledge of risk management processes",
+        "score": 0.38773302527348175
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.3865722796896757
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-T-007 (Risk Management/Task) is excluded as out_of_scope (composite 0.432, highest: NIST AI RMF at 0.432). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk Management at this signal level does not meet inclusion threshold for NLP/Computational Linguistics Specialist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.432, and Risk Management (RM) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk Management KSA (composite 0.432)?",
+    "evidence": "Market analysis does not surface this Risk Management competency as a standard NLP/Computational Linguistics Specialist requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-T-007 (Risk Management/Task) is excluded as out_of_scope (composite 0.432, highest: NIST AI RMF at 0.432). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk Management at this signal level does not meet inclusion threshold for NLP/Computational Linguistics Specialist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:59.436891+00:00",
+    "pipeline_version": "1.0"
+  }
+}
