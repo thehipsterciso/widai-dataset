@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0146",
+  "role_name": "VP Analytics",
+  "ksa_id": "AB-T-007",
+  "ksa_text": "Manage and maintain databases and analytical infrastructure, including monitoring database performance, maintaining DBMS software, optimizing queries, and providing ongoing operational support.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4168727272727273,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4068964749536178,
+        "cross_encoder_sts": 0.4504326530612245,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2908,
+        "jaccard": null,
+        "top_element_id": "1154",
+        "top_element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems."
+      },
+      "ddat": {
+        "composite": 0.38216983471074384,
+        "cross_encoder_sts": 0.4472227272727273,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20869545454545457,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-022",
+        "top_element_label": "Business process improvement"
+      },
+      "eu_ai_act": {
+        "composite": 0.33565000000000006,
+        "cross_encoder_sts": 0.39265000000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18364999999999998,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-009",
+        "top_element_label": "Technical documentation"
+      },
+      "nice": {
+        "composite": 0.3920246212121212,
+        "cross_encoder_sts": 0.44554166666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24931250000000002,
+        "jaccard": null,
+        "top_element_id": "K0992",
+        "top_element_label": "Knowledge of database maintenance principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3828409090909091,
+        "cross_encoder_sts": 0.44575000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21508333333333332,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.2",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4168727272727273,
+        "cross_encoder_sts": 0.4625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2952,
+        "jaccard": null,
+        "top_element_id": "2.B.3.j",
+        "top_element_label": "Equipment Maintenance"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.j",
+        "element_label": "Equipment Maintenance",
+        "score": 0.4168727272727273
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1154",
+        "element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems.",
+        "score": 0.4068964749536178
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0992",
+        "element_label": "Knowledge of database maintenance principles and practices",
+        "score": 0.3920246212121212
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-2.2",
+        "element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",
+        "score": 0.3828409090909091
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-022",
+        "element_label": "Business process improvement",
+        "score": 0.38216983471074384
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Applied Analytics & BI KSA with insufficient signal strength (composite score 0.417) to justify inclusion for the VP Analytics. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain task KSA be expected in real-world VP Analytics roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Applied Analytics & BI is not a standard competency expectation for VP Analytics. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the VP Analytics competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Insufficient signal (score 0.417) and edge-domain placement (Applied Analytics & BI) do not meet inclusion threshold for the VP Analytics. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.690559+00:00",
+    "pipeline_version": "1.0"
+  }
+}

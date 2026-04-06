@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0146",
+  "role_name": "VP Analytics",
+  "ksa_id": "AB-T-005",
+  "ksa_text": "Build data visualizations, dashboards, and performance reports that accurately represent analytical findings, support self-service exploration, and meet defined consumer requirements for content, layout, and refresh frequency.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4115033826638478,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38798581466842336,
+        "cross_encoder_sts": 0.42053719806763284,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30118212560386476,
+        "jaccard": null,
+        "top_element_id": "1020A",
+        "top_element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance)."
+      },
+      "ddat": {
+        "composite": 0.4115033826638478,
+        "cross_encoder_sts": 0.4730325581395349,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24742558139534884,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.37634475524475525,
+        "cross_encoder_sts": 0.4215,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25593076923076924,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3864248484848485,
+        "cross_encoder_sts": 0.42208666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2913266666666667,
+        "jaccard": null,
+        "top_element_id": "S0015",
+        "top_element_label": "Skill in conducting test events"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3633946022727273,
+        "cross_encoder_sts": 0.411553125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.234971875,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.3715768595041323,
+        "cross_encoder_sts": 0.4040909090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2848727272727273,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4115033826638478
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1020A",
+        "element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance).",
+        "score": 0.38798581466842336
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0015",
+        "element_label": "Skill in conducting test events",
+        "score": 0.3864248484848485
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.37634475524475525
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.3715768595041323
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Applied Analytics & BI KSA with insufficient signal strength (composite score 0.412) to justify inclusion for the VP Analytics. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain task KSA be expected in real-world VP Analytics roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Applied Analytics & BI is not a standard competency expectation for VP Analytics. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the VP Analytics competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Insufficient signal (score 0.412) and edge-domain placement (Applied Analytics & BI) do not meet inclusion threshold for the VP Analytics. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.697011+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0146",
+  "role_name": "VP Analytics",
+  "ksa_id": "AG-T-009",
+  "ksa_text": "Monitor AI regulatory developments and assess their implications for the enterprise AI system portfolio, producing compliance gap analyses for impacted systems.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5257180397727272,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40425667655786346,
+        "cross_encoder_sts": 0.4309851632047477,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3329807121661721,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.3916822410147991,
+        "cross_encoder_sts": 0.4266325581395348,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2984813953488372,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.483763807890223,
+        "cross_encoder_sts": 0.4613867924528302,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5434358490566038,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.37815554760200426,
+        "cross_encoder_sts": 0.41462047244094485,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28091574803149605,
+        "jaccard": null,
+        "top_element_id": "K0768",
+        "top_element_label": "Knowledge of automated systems analysis tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5257180397727272,
+        "cross_encoder_sts": 0.505959375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5784078125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.13",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.3811754545454546,
+        "cross_encoder_sts": 0.40994,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30447,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.13",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.5257180397727272
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.483763807890223
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.40425667655786346
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.3916822410147991
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.3811754545454546
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Although AI Governance is an edge domain for the VP Analytics, this task KSA presents sufficient signal (composite score 0.526) and conceptual alignment to include at the vp level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (AI Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.526). External reviewers may question whether this specific task KSA is sufficiently distinctive for the VP Analytics versus adjacent roles.",
+    "evidence": "NIST AI RMF, EU AI Act (Article 9), and OECD AI Principles confirm AI governance as a critical competency for responsible AI leadership.",
+    "ruling": "Upheld: moderate framework signal is consistent with AI Governance appearing in job postings and role definition literature for VP Analytics."
+  },
+  "final_decision": "include",
+  "decision_confidence": "low",
+  "decision_rationale": "Edge-domain AI Governance task KSA cleared adversarial review with score 0.526. Included based on sufficient framework alignment and role relevance for the VP Analytics.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.624004+00:00",
+    "pipeline_version": "1.0"
+  }
+}

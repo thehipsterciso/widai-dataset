@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0148",
+  "role_name": "VP AI/ML",
+  "ksa_id": "DQ-S-006",
+  "ksa_text": "Skill in establishing, maintaining, and utilizing data dictionaries and metadata repositories to document data characteristics, definitions, lineage, and governance context.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4420710303030303,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42944676358373896,
+        "cross_encoder_sts": 0.45567568740955133,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35950296671490595,
+        "jaccard": null,
+        "top_element_id": "3298",
+        "top_element_label": "Knowledge of how to extract, analyze, and use metadata."
+      },
+      "ddat": {
+        "composite": 0.4420710303030303,
+        "cross_encoder_sts": 0.46327066666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38553866666666664,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.40662382445141065,
+        "cross_encoder_sts": 0.4371758620689655,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32515172413793103,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4265224090909091,
+        "cross_encoder_sts": 0.457474125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34398449999999997,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39339727272727276,
+        "cross_encoder_sts": 0.43670200000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.277918,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4158010489510489,
+        "cross_encoder_sts": 0.4423384615384615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3450346153846154,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.5",
+        "top_element_label": "Inductive Reasoning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.4420710303030303
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "3298",
+        "element_label": "Knowledge of how to extract, analyze, and use metadata.",
+        "score": 0.42944676358373896
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4265224090909091
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.5",
+        "element_label": "Inductive Reasoning",
+        "score": 0.4158010489510489
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.40662382445141065
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Data Quality falls outside the primary competency scope of the VP AI/ML. This skill KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Data Quality truly out-of-scope for the VP AI/ML? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Data Quality as a core or recommended competency for the VP AI/ML. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Data Quality falls outside the established competency profile for the VP AI/ML. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality is outside the competency scope of the VP AI/ML. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.988652+00:00",
+    "pipeline_version": "1.0"
+  }
+}

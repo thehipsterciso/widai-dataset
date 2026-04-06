@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0148",
+  "role_name": "VP AI/ML",
+  "ksa_id": "AI-K-015",
+  "ksa_text": "Knowledge of cloud data platform services and infrastructure across major providers, including managed compute, serverless processing, object storage, data warehouse, streaming platforms, and their architectural implications for data and ML workloads.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4098233449477352,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4098233449477352,
+        "cross_encoder_sts": 0.4412731707317073,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3259571428571429,
+        "jaccard": null,
+        "top_element_id": "1038A",
+        "top_element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability."
+      },
+      "ddat": {
+        "composite": 0.40327272727272734,
+        "cross_encoder_sts": 0.4593464285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25374285714285716,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.39484545454545456,
+        "cross_encoder_sts": 0.3916,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4035,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.39191535162950253,
+        "cross_encoder_sts": 0.4328594339622641,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2827311320754717,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35741818181818186,
+        "cross_encoder_sts": 0.395,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-4.1",
+        "top_element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data."
+      },
+      "onet": {
+        "composite": 0.33657272727272725,
+        "cross_encoder_sts": 0.3702,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2469,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.1",
+        "top_element_label": "Working with Computers"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1038A",
+        "element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability.",
+        "score": 0.4098233449477352
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.40327272727272734
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.39484545454545456
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39191535162950253
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-4.1",
+        "element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data.",
+        "score": 0.35741818181818186
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "AI/ML Engineering is a primary or secondary domain for the VP AI/ML. This knowledge KSA is within scope for the role's expected competency profile and seniority level (vp)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (AI/ML Engineering), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.41). External validation of this knowledge KSA for the VP AI/ML role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "O*NET, DCWF, and ML engineering job market data confirm AI/ML competencies for technical data leadership roles.",
+    "ruling": "Upheld: domain-level relevance of AI/ML Engineering for the VP AI/ML is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "AI/ML Engineering knowledge KSA is within scope for the VP AI/ML at the vp tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:20.025384+00:00",
+    "pipeline_version": "1.0"
+  }
+}

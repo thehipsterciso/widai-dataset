@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0146",
+  "role_name": "VP Analytics",
+  "ksa_id": "AB-T-008",
+  "ksa_text": "Deploy, operate, and maintain continuous monitoring and alerting systems for analytical environments, including configuring telemetry, performing monitoring data assessments, triaging triggered events, and coordinating incident response.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4175055658627087,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3864930855161788,
+        "cross_encoder_sts": 0.4149629237288136,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31057351694915253,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4175055658627087,
+        "cross_encoder_sts": 0.44339183673469384,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34847551020408163,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-042",
+        "top_element_label": "Customer service management"
+      },
+      "eu_ai_act": {
+        "composite": 0.37227777777777776,
+        "cross_encoder_sts": 0.4109333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2691962962962963,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.37508904573687185,
+        "cross_encoder_sts": 0.4056658385093168,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2935509316770186,
+        "jaccard": null,
+        "top_element_id": "K0704",
+        "top_element_label": "Knowledge of database management system (DBMS) principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3710224025974026,
+        "cross_encoder_sts": 0.4097642857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2677107142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3670209090909091,
+        "cross_encoder_sts": 0.40046,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27785000000000004,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.6",
+        "top_element_label": "Information Ordering"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-042",
+        "element_label": "Customer service management",
+        "score": 0.4175055658627087
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.3864930855161788
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0704",
+        "element_label": "Knowledge of database management system (DBMS) principles and practices",
+        "score": 0.37508904573687185
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.37227777777777776
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3710224025974026
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Applied Analytics & BI KSA with insufficient signal strength (composite score 0.418) to justify inclusion for the VP Analytics. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain task KSA be expected in real-world VP Analytics roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Applied Analytics & BI is not a standard competency expectation for VP Analytics. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the VP Analytics competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Insufficient signal (score 0.418) and edge-domain placement (Applied Analytics & BI) do not meet inclusion threshold for the VP Analytics. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.689672+00:00",
+    "pipeline_version": "1.0"
+  }
+}

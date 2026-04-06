@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0146",
+  "role_name": "VP Analytics",
+  "ksa_id": "SP-T-007",
+  "ksa_text": "Implement data security controls and access management measures to protect personal and sensitive data across systems and applications.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4080420062695925,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40770280126849895,
+        "cross_encoder_sts": 0.41876569767441857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3782017441860466,
+        "jaccard": null,
+        "top_element_id": "1031",
+        "top_element_label": "Serve as technical expert and liaison to law enforcement personnel and explain incident details as required."
+      },
+      "ddat": {
+        "composite": 0.4080420062695925,
+        "cross_encoder_sts": 0.45891034482758625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2723931034482759,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.38058181818181824,
+        "cross_encoder_sts": 0.40195000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3236,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3864464059196618,
+        "cross_encoder_sts": 0.4067534883720931,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3322941860465116,
+        "jaccard": null,
+        "top_element_id": "S0822",
+        "top_element_label": "Skill in collaborating with stakeholders"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.34887272727272733,
+        "cross_encoder_sts": 0.36555000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3044,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3724963636363636,
+        "cross_encoder_sts": 0.40464,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28678,
+        "jaccard": null,
+        "top_element_id": "2.A.1.b",
+        "top_element_label": "Active Listening"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4080420062695925
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1031",
+        "element_label": "Serve as technical expert and liaison to law enforcement personnel and explain incident details as required.",
+        "score": 0.40770280126849895
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0822",
+        "element_label": "Skill in collaborating with stakeholders",
+        "score": 0.3864464059196618
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.38058181818181824
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.b",
+        "element_label": "Active Listening",
+        "score": 0.3724963636363636
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Security & Platform Strategy is a primary or secondary domain for the VP Analytics. This task KSA is within scope for the role's expected competency profile and seniority level (vp)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Security & Platform Strategy), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Framework signal is weak (composite 0.408). External validation of this task KSA for the VP Analytics role relies primarily on domain-level alignment rather than specific framework matches.",
+    "evidence": "NIST CSF, CMU SEI enterprise security frameworks, and CDAIO job market data consistently include security and platform strategy oversight for senior data leaders.",
+    "ruling": "Upheld: domain-level relevance of Security & Platform Strategy for the VP Analytics is corroborated by DAMA-DMBOK, CDO survey data, and role-specific job market analysis, despite weak cross-framework signal."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Security & Platform Strategy task KSA is within scope for the VP Analytics at the vp tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.701149+00:00",
+    "pipeline_version": "1.0"
+  }
+}

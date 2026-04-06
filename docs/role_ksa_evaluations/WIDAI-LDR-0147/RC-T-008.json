@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0147",
+  "role_name": "VP Data Governance",
+  "ksa_id": "RC-T-008",
+  "ksa_text": "Monitor regulatory developments, enforcement actions, and supervisory guidance relevant to organizational data and AI activities, producing impact assessments and management recommendations.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4886493066255778,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4251937824675325,
+        "cross_encoder_sts": 0.4352717857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3983191071428571,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.4363356643356644,
+        "cross_encoder_sts": 0.4623596153846154,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36693846153846155,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4658162790697674,
+        "cross_encoder_sts": 0.4556790697674419,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4928488372093023,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41880230566534915,
+        "cross_encoder_sts": 0.4334170289855072,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37982971014492756,
+        "jaccard": null,
+        "top_element_id": "K0748",
+        "top_element_label": "Knowledge of Privacy Impact Assessment (PIA) principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4886493066255778,
+        "cross_encoder_sts": 0.4870864406779661,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49281694915254237,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.41929197860962564,
+        "cross_encoder_sts": 0.4451705882352941,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35028235294117643,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4886493066255778
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4658162790697674
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4363356643356644
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.4251937824675325
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.41929197860962564
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Regulatory Compliance is a primary or secondary domain for the VP Data Governance. This task KSA is within scope for the role's expected competency profile and seniority level (vp)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Regulatory Compliance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.489). External reviewers may question whether this specific task KSA is sufficiently distinctive for the VP Data Governance versus adjacent roles.",
+    "evidence": "GDPR, CCPA, EU AI Act, and SEC data governance regulations confirm regulatory compliance knowledge for governance-focused leadership.",
+    "ruling": "Upheld: moderate framework signal is consistent with Regulatory Compliance appearing in job postings and role definition literature for VP Data Governance."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Regulatory Compliance task KSA is within scope for the VP Data Governance at the vp tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.809003+00:00",
+    "pipeline_version": "1.0"
+  }
+}

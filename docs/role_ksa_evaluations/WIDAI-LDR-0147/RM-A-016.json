@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0147",
+  "role_name": "VP Data Governance",
+  "ksa_id": "RM-A-016",
+  "ksa_text": "Ability to analyze intelligence from multiple sources to understand threat contexts, adversary capabilities, and implications for organizational risk posture.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Risk Management KSA with insufficient signal strength (composite score 0.0) to justify inclusion for the VP Data Governance. Without stronger framework alignment, this ability KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain ability KSA be expected in real-world VP Data Governance roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Risk Management is not a standard competency expectation for VP Data Governance. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the VP Data Governance competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Insufficient signal (score 0.0) and edge-domain placement (Risk Management) do not meet inclusion threshold for the VP Data Governance. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.916567+00:00",
+    "pipeline_version": "1.0"
+  }
+}
