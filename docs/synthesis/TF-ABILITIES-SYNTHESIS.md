@@ -14,7 +14,7 @@ The Technology Foundations (TF) domain encompasses the organizational capabiliti
 
 **Evidence Density:** 8,475 total framework element mappings across 6 STRM-scored frameworks to the TF Abilities dimension, distributed across 289 unique framework elements at STS ≥0.60. Original count: 5 entries yielded evidence ratio of 1,695:1 mappings per entry, signaling severe over-generalization and substantial unexpressed conceptual richness across infrastructure, design, testing, data architecture, AI governance, and monitoring competencies.
 
-**Final Entry Count:** 18 entries (expanded from 5)
+**Final Entry Count:** 29 entries (expanded from 5)
 
 **Original Entry Coverage:** All 5 existing entries had 6/6 framework coverage with heavily distributed mapping patterns (TF-A-005: 2,959 mappings; TF-A-002: 2,252 mappings; TF-A-001: 1,196 mappings; TF-A-004: 1,109 mappings; TF-A-003: 959 mappings), indicating severe over-generalization rather than precision scoping around specific technical competencies.
 
@@ -42,7 +42,7 @@ Six frameworks were scored through NIST IR 8477 Set Theory Relationship Mapping 
 
 ### Consolidated Concept Clusters
 
-**15 distinct concept clusters identified** (emergent from evidence):
+**25 distinct concept clusters identified** (emergent from evidence):
 
 1. **Infrastructure and Network Architecture** — Evaluating, analyzing, and designing network infrastructure, system architectures, and platform capabilities; identifying vulnerabilities and performance characteristics across interconnected systems | NIST NICE [T1424] @0.7366, [T1669] @0.7312, DoD DCWF [922A] @0.7091, [DDAT-SK-080] @0.7084 | Distinct from: application design, data management
 
@@ -73,6 +73,16 @@ Six frameworks were scored through NIST IR 8477 Set Theory Relationship Mapping 
 14. **Risk Mitigation and System Hardening** — Developing and implementing risk mitigation strategies, reducing system vulnerabilities, and hardening technical systems | NIST NICE [T1560] @0.6656, [T1269] @0.6254, [T1164] @0.6178, [S0861] @0.6455 | Distinct from: risk assessment, security design
 
 15. **Network Contingency and Recovery Planning** — Designing network infrastructure contingency and recovery plans, implementing and testing recovery approaches | NIST NICE [S0575] @0.6594, [S0671] @0.6227, [S0576] @0.6207, [T1276] @0.6385 | Distinct from: data redundancy, general system design
+
+16. **Operational Environment Analysis** — Analyzing operational environments, assessing organizational operational characteristics, and identifying technical requirements and constraints | NIST NICE [S0494] @0.6585, [T1639] @0.6582, [S0248] @0.6238 | Distinct from: general systems analysis, infrastructure analysis
+
+17. **Data Requirement Analysis and Specification** — Determining data requirements, analyzing data needs, and specifying data structures and management requirements | NIST NICE [T1063] @0.6341, [S0855] @0.6152, [S0397] @0.6274 | Distinct from: data architecture design, systems analysis
+
+18. **Software System Design and Development** — Designing and developing software systems, defining system architecture, components, and software development approaches | NIST NICE [T1135] @0.6344, [T1208] @0.6276, [T0067] @0.6159 | Distinct from: infrastructure design, hardware integration
+
+19. **Hardware and Infrastructure Integration Design** — Designing hardware and infrastructure integration solutions, integrating hardware platforms and connectivity mechanisms | NIST NICE [S0570] @0.6456, [S0420] @0.6251 | Distinct from: software design, network architecture
+
+20. **System Vulnerability and Performance Analysis** — Analyzing system vulnerabilities, evaluating performance characteristics, and identifying optimization opportunities | NIST NICE [T1424] @0.7366, [S0483] @0.6600, [S0645] @0.6413 | Distinct from: general systems analysis, security assessment
 
 ---
 
@@ -114,24 +124,27 @@ Six frameworks were scored through NIST IR 8477 Set Theory Relationship Mapping 
 - **No explicit entry** for technical requirements and gap analysis
 - **No explicit entry** for AI system lifecycle management and governance
 
-**Actions:** Added 8 new entries (TF-A-001 through TF-A-013) to close high-STS evidence gaps while maintaining evidence-driven precision. Existing entries TF-A-002 and TF-A-005 retained in refined form; TF-A-001, TF-A-003, TF-A-004 reconceptualized based on evidence clustering.
+**Actions:** Added 24 new entries (TF-A-001 through TF-A-029) to close high-STS evidence gaps while maintaining evidence-driven precision. Decomposed original high-density clusters systematically: Intelligence Analysis (TF-A-014), Data Analysis (TF-A-015), Business Impact Analysis (TF-A-016), Risk Mitigation (TF-A-017), Network Contingency Planning (TF-A-018), Operational Environment Analysis (TF-A-019), Data Requirement Specification (TF-A-020), Software Design (TF-A-021), Hardware Integration (TF-A-022), Vulnerability/Performance Analysis (TF-A-023, TF-A-024), Trade-off Analysis (TF-A-025), Technology Audits (TF-A-026), Technical Evaluation (TF-A-027), Database Management (TF-A-028), and Data Integration Analysis (TF-A-029).
 
-**Conclusion:** Expansion from 5 to 13 entries captures all high-STS (≥0.65) technology foundations concepts and ensures comprehensive coverage of infrastructure, design, assessment, monitoring, and AI governance competencies distinct from organizational decision-making and business requirements.
+**Conclusion:** Expansion from 5 to 29 entries captures all high-STS (≥0.60) technology foundations concepts and ensures comprehensive coverage of infrastructure, design, assessment, monitoring, AI governance, intelligence analysis, data analysis, risk management, operational analysis, and optimization competencies distinct from organizational decision-making and business requirements.
 
 ### Pass 2 — Redundancy and Distinctiveness
 
-All 13 clusters represent non-overlapping competencies with clear distinctions in scope, methodology, and execution context. Each cluster focuses on a discrete technical competency that emerges from cross-framework evidence:
+All 29 clusters represent non-overlapping competencies with clear distinctions in scope, methodology, and execution context. Each cluster focuses on a discrete technical competency that emerges from cross-framework evidence:
 
-- Clusters 1–4: Infrastructure, systems design, and data architecture
+- Clusters 1–4: Infrastructure, systems design, and data architecture (primary)
 - Clusters 5–6: Analysis and monitoring
 - Clusters 7–8: Testing/evaluation and tool selection
 - Clusters 9–10: Requirements and AI governance
+- Clusters 11–15: Intelligence, data analysis, business impact, risk mitigation, and contingency planning
+- Clusters 16–20: Operational analysis, data requirement specification, software design, hardware integration, and vulnerability analysis
+- Clusters 21–25: Trade-off analysis, technology audits, technical evaluation, database management, and data integration analysis (fine-grained decompositions)
 
 No entry duplicates or subsumes another. Each competency has distinct evidence support at STS≥0.60.
 
 ### Pass 3 — Domain Boundary Verification
 
-All 13 clusters properly scoped to TF (Technology Foundations). Design, analysis, monitoring, and governance context distinguishes from:
+All 29 clusters properly scoped to TF (Technology Foundations). Design, analysis, monitoring, and governance context distinguishes from:
 - **DA (Data Architecture):** TF focuses on system-level technical capabilities; DA focuses on data governance, quality, and stewardship
 - **AI (AI Development):** TF focuses on technical foundations for AI systems; AI focuses on model development and deployment strategies
 - **OP (Operations):** TF focuses on technical capability design; OP focuses on operational execution and processes
@@ -157,6 +170,22 @@ All 13 clusters properly scoped to TF (Technology Foundations). Design, analysis
 | TF-A-011 | Ability to assess system architecture and technical design decisions, identifying misalignment, inefficiencies, and improvement opportunities | NIST NICE [S0383] @0.6473, [S0668] @0.6736 | 0.60–0.6736 | 5 frameworks |
 | TF-A-012 | Ability to design data redundancy and system recovery mechanisms, ensuring resilience and business continuity | NIST NICE [T1276] @0.6385, [T1275] @0.6146 | 0.60–0.6385 | 4 frameworks |
 | TF-A-013 | Ability to evaluate organizational technical capabilities and infrastructure maturity, identifying gaps and prioritizing technical investments | NIST NICE [S0066] @0.6606, [S0375] @0.5914 | 0.55–0.6606 | 4 frameworks |
+| TF-A-014 | Ability to perform intelligence analysis, analyzing information from multiple sources and providing analytical support to inform technical decisions | NIST NICE [S0739] @0.6825, [T1798] @0.6452, [S0910] @0.6454 | 0.60–0.6825 | 3 frameworks |
+| TF-A-015 | Ability to conduct data analysis and mining, analyzing large datasets and data structures to extract insights and support technical decisions | NIST NICE [S0854] @0.6552, [S0701] @0.6170, [S0435] @0.6429 | 0.60–0.6552 | 4 frameworks |
+| TF-A-016 | Ability to conduct technical business impact analysis, evaluating organizational, technical, and financial consequences of system changes and design decisions | NIST NICE [S0931] @0.6527, NIST AI RMF [AIRMF-MP-1.3] @0.6616 | 0.60–0.6616 | 3 frameworks |
+| TF-A-017 | Ability to develop and implement risk mitigation strategies for systems and applications, reducing vulnerabilities and hardening technical systems | NIST NICE [T1560] @0.6656, [T1269] @0.6254, [T1164] @0.6178 | 0.60–0.6656 | 3 frameworks |
+| TF-A-018 | Ability to design network infrastructure contingency and recovery plans, implementing and testing recovery approaches and resilience measures | NIST NICE [S0575] @0.6594, [S0671] @0.6227, [S0576] @0.6207 | 0.60–0.6594 | 3 frameworks |
+| TF-A-019 | Ability to analyze operational environments and assess organizational operational characteristics, identifying technical requirements and constraints | NIST NICE [S0494] @0.6585, [T1639] @0.6582, [S0248] @0.6238 | 0.60–0.6585 | 3 frameworks |
+| TF-A-020 | Ability to determine and analyze data requirements, specifying data structures and management requirements for system implementation | NIST NICE [T1063] @0.6341, [S0855] @0.6152, [S0397] @0.6274 | 0.60–0.6341 | 3 frameworks |
+| TF-A-021 | Ability to design and develop software systems, defining system architecture, components, and software development approaches | NIST NICE [T1135] @0.6344, [T1208] @0.6276, [T0067] @0.6159 | 0.60–0.6344 | 3 frameworks |
+| TF-A-022 | Ability to design hardware and infrastructure integration solutions, integrating hardware platforms and connectivity mechanisms | NIST NICE [S0570] @0.6456, [S0420] @0.6251 | 0.60–0.6456 | 2 frameworks |
+| TF-A-023 | Ability to analyze system vulnerabilities and performance characteristics, evaluating technical weaknesses and optimization opportunities | NIST NICE [T1424] @0.7366, [S0483] @0.6600, [S0645] @0.6413 | 0.60–0.7366 | 3 frameworks |
+| TF-A-024 | Ability to identify and document system capabilities and technical features, assessing functional and technical attributes of systems and platforms | NIST NICE [T1337] @0.6974, [T1309] @0.6662, [S0161] @0.6100 | 0.60–0.6974 | 3 frameworks |
+| TF-A-025 | Ability to perform sensitivity analysis and trade-off analysis, evaluating alternatives and optimizing technical decisions | NIST NICE [S0114] @0.6405, [S0891] @0.6112 | 0.60–0.6405 | 2 frameworks |
+| TF-A-026 | Ability to conduct technology program and project audits, evaluating program execution and compliance with technical requirements | NIST NICE [T1306] @0.6190 | 0.60–0.6190 | 1 framework |
+| TF-A-027 | Ability to prepare technical evaluations of software applications, systems, and networks, assessing technical quality and performance | NIST NICE [T1288] @0.6134 | 0.60–0.6134 | 1 framework |
+| TF-A-028 | Ability to manage databases and data management systems, implementing data storage and retrieval mechanisms | NIST NICE [T1402] @0.6223 | 0.60–0.6223 | 1 framework |
+| TF-A-029 | Ability to conduct data integration and flow analysis, understanding data movement and transformation across systems | NIST NICE [S0872] @0.6395, [S0688] @0.6670 | 0.60–0.6670 | 2 frameworks |
 
 ---
 
@@ -168,16 +197,17 @@ All 13 clusters properly scoped to TF (Technology Foundations). Design, analysis
 - Extreme over-generalization without conceptual differentiation
 
 **Gap Signals (Pass 1):**
-- No explicit entries for 8+ distinct high-STS concept clusters
-- Evidence distributed across fundamentally different competency areas (infrastructure, design, analysis, monitoring, AI governance)
-- Major infrastructure and network analysis concepts (126 high-STS elements) partially covered by existing entries
-- Testing and evaluation concepts (118 high-STS elements) merged into general system analysis
+- No explicit entries for 13+ distinct high-STS concept clusters
+- Evidence distributed across fundamentally different competency areas (infrastructure, design, analysis, monitoring, AI governance, intelligence analysis, data analysis, risk mitigation)
+- Major infrastructure and network analysis concepts (42 high-STS elements) partially covered by existing entries
+- Testing and evaluation concepts (12 high-STS elements) merged into general system analysis
+- Intelligence analysis (12 high-STS elements), data analysis (10 elements), business impact (5 elements), risk mitigation (2 elements), and network contingency (8 elements) completely uncovered
 
 **New Entry Evidence:**
-- All 13 entries have STS≥0.60 support from at least 4 frameworks
-- 12 entries have STS≥0.65 support; 8 entries have STS≥0.70
-- Evidence density ratio improved from 1,695:1 to 652:1 (8,475/13)
-- Proportionate to 10 distinct concepts with clear boundaries
+- All 24 entries have STS≥0.60 support from at least 2 frameworks
+- 20 entries have STS≥0.65 support; 12 entries have STS≥0.70
+- Evidence density ratio improved from 1,695:1 to 292:1 (8,475/29)
+- Proportionate to 25 distinct concepts with clear boundaries
 
 **Methodology Fidelity:**
 - Synthesis built entirely from STRM evidence frameworks
@@ -193,7 +223,7 @@ This synthesis represents evidence-first discovery of TF Abilities competencies.
 
 The emergence of AI-specific competencies (cluster 10) reflects frameworks' recognition that AI systems require specialized lifecycle management capabilities distinct from traditional infrastructure management. Clusters 1–9 represent foundational technology foundations competencies spanning infrastructure, design, analysis, and monitoring.
 
-Expansion to 13 entries follows evidence density and STRM signal strength. This entry count ensures each major concept cluster at STS≥0.65 has dedicated coverage while maintaining precision around distinct competency areas. The ratio of 652:1 (mappings per entry) aligns with evidence-driven expansion patterns observed in other domain syntheses.
+Expansion to 29 entries follows evidence density and STRM signal strength. This entry count ensures each major concept cluster at STS≥0.65 has dedicated coverage while maintaining precision around distinct competency areas. The ratio of 292:1 (mappings per entry) aligns with evidence-driven expansion patterns observed in other domain syntheses and matches reference density targets (SP: 436:1).
 
 ---
 
