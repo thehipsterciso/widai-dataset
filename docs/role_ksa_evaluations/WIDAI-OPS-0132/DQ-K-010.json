@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0132",
+  "role_name": "Citizen Data Steward",
+  "ksa_id": "DQ-K-010",
+  "ksa_text": "Knowledge of reference data management principles, including reference data taxonomy design, governance of controlled vocabularies, change management for reference data updates, and maintaining consistency across reference datasets.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.42559286833855803,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4246960487729588,
+        "cross_encoder_sts": 0.4364735144312394,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3932894736842105,
+        "jaccard": null,
+        "top_element_id": "4072",
+        "top_element_label": "Knowledge of collection systems, capabilities, and processes."
+      },
+      "ddat": {
+        "composite": 0.40309768595041323,
+        "cross_encoder_sts": 0.43528,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3172781818181818,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.3932,
+        "cross_encoder_sts": 0.41738,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32872,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.42559286833855803,
+        "cross_encoder_sts": 0.44706551724137933,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3683324712643678,
+        "jaccard": null,
+        "top_element_id": "T0942",
+        "top_element_label": "Identify the types of information to be processed, stored, or transmitted by a system"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3576972727272728,
+        "cross_encoder_sts": 0.37597,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30897,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4137981818181818,
+        "cross_encoder_sts": 0.42507,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38373999999999997,
+        "jaccard": null,
+        "top_element_id": "1.A.1.d.1",
+        "top_element_label": "Memorization"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "T0942",
+        "element_label": "Identify the types of information to be processed, stored, or transmitted by a system",
+        "score": 0.42559286833855803
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "4072",
+        "element_label": "Knowledge of collection systems, capabilities, and processes.",
+        "score": 0.4246960487729588
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.d.1",
+        "element_label": "Memorization",
+        "score": 0.4137981818181818
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.40309768595041323
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.3932
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps to Citizen Data Steward scope \u2014 role signals (\"change manage\"). STRM: strong (0.4256). Domain Data Quality (affinity 0.65), seniority appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External present: 2 match(es) \u2014 sufficient to uphold for Citizen Data Steward.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps to Citizen Data Steward scope \u2014 role signals (\"change manage\"). STRM: strong (0.4256). Domain Data Quality (affinity 0.65), seniority appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:06:21.667819+00:00",
+    "pipeline_version": "1.0"
+  }
+}

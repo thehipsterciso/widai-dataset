@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0132",
+  "role_name": "Citizen Data Steward",
+  "ksa_id": "DG-A-005",
+  "ksa_text": "Ability to monitor and control AI systems' operational performance against established governance standards, policies, and risk thresholds.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4397299806576403,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4155812788906009,
+        "cross_encoder_sts": 0.4308913559322034,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.374754406779661,
+        "jaccard": null,
+        "top_element_id": "1030",
+        "top_element_label": "Collect intrusion artifacts (e.g., source code, malware, trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise."
+      },
+      "ddat": {
+        "composite": 0.4397299806576403,
+        "cross_encoder_sts": 0.4592117021276596,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38777872340425534,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.374029090909091,
+        "cross_encoder_sts": 0.38868,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33496000000000004,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4007235397452789,
+        "cross_encoder_sts": 0.426412077294686,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3322207729468599,
+        "jaccard": null,
+        "top_element_id": "S0111",
+        "top_element_label": "Skill in interfacing with customers"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40185,
+        "cross_encoder_sts": 0.43083,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32456999999999997,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.41450826446280986,
+        "cross_encoder_sts": 0.4355727272727272,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3583363636363636,
+        "jaccard": null,
+        "top_element_id": "2.A.1.d",
+        "top_element_label": "Speaking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.4397299806576403
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1030",
+        "element_label": "Collect intrusion artifacts (e.g., source code, malware, trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.",
+        "score": 0.4155812788906009
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.d",
+        "element_label": "Speaking",
+        "score": 0.41450826446280986
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.3",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.40185
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0111",
+        "element_label": "Skill in interfacing with customers",
+        "score": 0.4007235397452789
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: ability maps to Citizen Data Steward scope \u2014 role signals (\"ai   :solution|application|system|deployment|implementation\"). STRM: strong (0.4397). Domain Data Governance (affinity 0.72), seniority appropriate."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: 0 job-posting or cert matches. Required for Citizen Data Steward?",
+    "evidence": "Challenge answered: OPS competency implicit in Citizen Data Steward practice (domain affinity 0.72, 1 signal(s)). Framework vocabulary underrepresents many operational competencies.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: ability maps to Citizen Data Steward scope \u2014 role signals (\"ai   :solution|application|system|deployment|implementation\"). STRM: strong (0.4397). Domain Data Governance (affinity 0.72), seniority appropriate.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:06:21.618746+00:00",
+    "pipeline_version": "1.0"
+  }
+}

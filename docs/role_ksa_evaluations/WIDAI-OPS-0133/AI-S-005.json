@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0133",
+  "role_name": "AI Trainer",
+  "ksa_id": "AI-S-005",
+  "ksa_text": "Skill in designing and implementing model serving APIs, including input validation, output formatting, error handling, authentication, and versioning.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.41499646464646467,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40706737138830157,
+        "cross_encoder_sts": 0.43200155038759686,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3405762273901809,
+        "jaccard": null,
+        "top_element_id": "1062",
+        "top_element_label": "Knowledge of software reverse engineering techniques."
+      },
+      "ddat": {
+        "composite": 0.4128424947145877,
+        "cross_encoder_sts": 0.452853488372093,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30614651162790696,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.41499646464646467,
+        "cross_encoder_sts": 0.4249222222222222,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3885277777777778,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4089119666048237,
+        "cross_encoder_sts": 0.4372051020408163,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3334636054421769,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39666789772727273,
+        "cross_encoder_sts": 0.42235625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.328165625,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.4",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4111742424242424,
+        "cross_encoder_sts": 0.4424333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32781666666666665,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.41499646464646467
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4128424947145877
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.4111742424242424
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4089119666048237
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1062",
+        "element_label": "Knowledge of software reverse engineering techniques.",
+        "score": 0.40706737138830157
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope: AI & ML Infrastructure (affinity 0.78) \u2014 \"Skill in designing and implementing model serving APIs, including input validati...\" \u2014 no role signals. STRM: moderate (0.4150)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 0 match(es). Gap not material to AI Trainer.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope: AI & ML Infrastructure (affinity 0.78) \u2014 \"Skill in designing and implementing model serving APIs, including input validati...\" \u2014 no role signals. STRM: moderate (0.4150).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:06:22.248251+00:00",
+    "pipeline_version": "1.0"
+  }
+}

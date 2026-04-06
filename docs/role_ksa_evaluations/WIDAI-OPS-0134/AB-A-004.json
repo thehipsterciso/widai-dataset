@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-OPS-0134",
+  "role_name": "Data Mesh Enabling Team Coach",
+  "ksa_id": "AB-A-004",
+  "ksa_text": "Ability to translate analytical findings into actionable business recommendations, calibrating the level of certainty, supporting evidence, and detail to the decision authority and needs of the audience.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4413424242424242,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40687675938025014,
+        "cross_encoder_sts": 0.44380862422997946,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3083917864476386,
+        "jaccard": null,
+        "top_element_id": "3039",
+        "top_element_label": "Ability to develop or recommend analytic approaches or solutions to problems and situations for which information is incomplete or for which no precedent exists."
+      },
+      "ddat": {
+        "composite": 0.43857160262417993,
+        "cross_encoder_sts": 0.47928247422680414,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33000927835051547,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-013",
+        "top_element_label": "Applying statistical and analytical tools and techniques"
+      },
+      "eu_ai_act": {
+        "composite": 0.4082288401253919,
+        "cross_encoder_sts": 0.45236551724137936,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29053103448275863,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.40693730084348645,
+        "cross_encoder_sts": 0.44223041237113403,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31282233676975946,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.43424561128526645,
+        "cross_encoder_sts": 0.4757913793103448,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32345689655172416,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4413424242424242,
+        "cross_encoder_sts": 0.47407948717948717,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35404358974358974,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.4413424242424242
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-013",
+        "element_label": "Applying statistical and analytical tools and techniques",
+        "score": 0.43857160262417993
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.43424561128526645
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4082288401253919
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0498",
+        "element_label": "Knowledge of operational planning processes",
+        "score": 0.40693730084348645
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope: Analytics & BI (affinity 0.35) \u2014 \"Ability to translate analytical findings into actionable business recommendation...\" \u2014 no role signals. STRM: strong (0.4413)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External confirms exclusion: 0 match(es). Gap not material to Data Mesh Enabling Team Coach.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope: Analytics & BI (affinity 0.35) \u2014 \"Ability to translate analytical findings into actionable business recommendation...\" \u2014 no role signals. STRM: strong (0.4413).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T19:06:22.689157+00:00",
+    "pipeline_version": "1.0"
+  }
+}
