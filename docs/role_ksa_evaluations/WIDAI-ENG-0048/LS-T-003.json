@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0048",
+  "role_name": "Context Engineer",
+  "ksa_id": "LS-T-003",
+  "ksa_text": "Build and lead cross-functional transformation teams, establishing shared objectives, working norms, accountability structures across organizational boundaries, and facilitating cross-domain solutions.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.47853636363636365,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4365106187929717,
+        "cross_encoder_sts": 0.4487840336134454,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.40378151260504197,
+        "jaccard": null,
+        "top_element_id": "143A",
+        "top_element_label": "Knowledge of integrating the organization\u2019s goals and objectives into the architecture."
+      },
+      "ddat": {
+        "composite": 0.4709899686520376,
+        "cross_encoder_sts": 0.49880344827586204,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3968206896551724,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.4402090909090909,
+        "cross_encoder_sts": 0.4557,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3989,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-021",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.42758827751196177,
+        "cross_encoder_sts": 0.44891842105263163,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3707078947368421,
+        "jaccard": null,
+        "top_element_id": "S0427",
+        "top_element_label": "Skill in building frameworks"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4613515151515151,
+        "cross_encoder_sts": 0.48643333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3944666666666667,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-2.1",
+        "top_element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks."
+      },
+      "onet": {
+        "composite": 0.47853636363636365,
+        "cross_encoder_sts": 0.49928,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42322,
+        "jaccard": null,
+        "top_element_id": "2.B.1.d",
+        "top_element_label": "Negotiation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.d",
+        "element_label": "Negotiation",
+        "score": 0.47853636363636365
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.4709899686520376
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-2.1",
+        "element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",
+        "score": 0.4613515151515151
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-021",
+        "element_label": "Quality management system",
+        "score": 0.4402090909090909
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "143A",
+        "element_label": "Knowledge of integrating the organization\u2019s goals and objectives into the architecture.",
+        "score": 0.4365106187929717
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-T-003 (Leadership and Strategy) scores 0.479 composite (signal: moderate). Scope fit for Context Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Leadership and Strategy KSA LS-T-003 as a discrete competency for Context Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Context Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Leadership and Strategy is out of scope for Context Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:03.540013",
+    "pipeline_version": "1.0"
+  }
+}

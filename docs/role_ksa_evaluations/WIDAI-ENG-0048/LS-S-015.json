@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0048",
+  "role_name": "Context Engineer",
+  "ksa_id": "LS-S-015",
+  "ksa_text": "Skill in planning and executing organizational change management for data and AI initiatives, including adoption strategy design, readiness assessment, resistance mitigation, and organizational transition planning.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-S-015 (Leadership and Strategy) scores 0.000 composite (signal: none). Scope fit for Context Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Leadership and Strategy KSA LS-S-015 as a discrete competency for Context Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Context Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Zero composite score: no framework signal. Not a discrete competency for Context Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:03.639979",
+    "pipeline_version": "1.0"
+  }
+}

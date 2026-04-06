@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0050",
+  "role_name": "Embedding Engineer",
+  "ksa_id": "SP-S-006",
+  "ksa_text": "Skill in conducting privacy engineering reviews of data systems, evaluating data flows, access patterns, and retention practices against privacy requirements and privacy-by-design principles.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.41381301907968576,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4011748257513303,
+        "cross_encoder_sts": 0.4444585325638912,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28575160758450124,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.41381301907968576,
+        "cross_encoder_sts": 0.4564864197530864,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3000172839506173,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.39870757575757576,
+        "cross_encoder_sts": 0.4441666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2774833333333333,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-006",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.4039181196226806,
+        "cross_encoder_sts": 0.4527214367160775,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2737759407069555,
+        "jaccard": null,
+        "top_element_id": "K0937",
+        "top_element_label": "Knowledge of countermeasure design principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3882683566433567,
+        "cross_encoder_sts": 0.4450826923076923,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23676346153846153,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37221136363636365,
+        "cross_encoder_sts": 0.435435,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20361500000000002,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.41381301907968576
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0937",
+        "element_label": "Knowledge of countermeasure design principles and practices",
+        "score": 0.4039181196226806
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.4011748257513303
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-006",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.39870757575757576
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3882683566433567
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-S-006 (Security and Privacy) scores 0.414 composite (signal: weak). Scope fit for Embedding Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Security and Privacy KSA SP-S-006 as a discrete competency for Embedding Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Embedding Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Security and Privacy is out of scope for Embedding Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:03.973148",
+    "pipeline_version": "1.0"
+  }
+}

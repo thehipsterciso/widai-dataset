@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0049",
+  "role_name": "RAG Engineer",
+  "ksa_id": "AI-A-003",
+  "ksa_text": "Ability to apply consistent governance standards across heterogeneous AI systems \u2014 from simple rule-based automation to large language models \u2014 without treating all systems identically.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4394678571428572,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.37087320394960843,
+        "cross_encoder_sts": 0.41618014981273405,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2500546816479401,
+        "jaccard": null,
+        "top_element_id": "102A",
+        "top_element_label": "Ability to apply programming language structures (e.g., source code review) and logic."
+      },
+      "ddat": {
+        "composite": 0.3824614325068871,
+        "cross_encoder_sts": 0.43832424242424245,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2334939393939394,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4394678571428572,
+        "cross_encoder_sts": 0.42597857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47543928571428573,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3636698310539019,
+        "cross_encoder_sts": 0.41056902654867256,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23860530973451327,
+        "jaccard": null,
+        "top_element_id": "S0097",
+        "top_element_label": "Skill in applying security controls"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.42270883838383844,
+        "cross_encoder_sts": 0.4178861111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.43556944444444445,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.392387012987013,
+        "cross_encoder_sts": 0.44474285714285716,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2527714285714286,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.4",
+        "top_element_label": "Deductive Reasoning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4394678571428572
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.42270883838383844
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.4",
+        "element_label": "Deductive Reasoning",
+        "score": 0.392387012987013
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.3824614325068871
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "102A",
+        "element_label": "Ability to apply programming language structures (e.g., source code review) and logic.",
+        "score": 0.37087320394960843
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-A-003 (AI and Machine Learning) scores 0.439 composite (signal: weak). Scope fit for RAG Engineer: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.439. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support AI and Machine Learning KSA AI-A-003 as a discrete competency for RAG Engineer?",
+    "evidence": "Reviewed against RAG Engineer job posting data. AI content is governance/compliance/executive-communication focused, not engineering-platform scope. Not market-supported as discrete platform engineering competency.",
+    "ruling": "Revised to exclude. AI content is governance/compliance/executive-communication focused, not engineering-platform scope. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Pass 4 overturn: No market evidence for this role.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:03.737399",
+    "pipeline_version": "1.0"
+  }
+}

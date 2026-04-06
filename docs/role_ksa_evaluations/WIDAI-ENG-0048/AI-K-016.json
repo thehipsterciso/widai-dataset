@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0048",
+  "role_name": "Context Engineer",
+  "ksa_id": "AI-K-016",
+  "ksa_text": "Knowledge of ML platform components and pipeline orchestration, including feature stores, model registries, experiment tracking systems, model serving infrastructure, and the architectural trade-offs between managed and self-hosted ML platforms.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4268622933884298,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4169646214466648,
+        "cross_encoder_sts": 0.4315959752321981,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37794767801857587,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.390743771043771,
+        "cross_encoder_sts": 0.43617407407407405,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2695962962962963,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.38315151515151513,
+        "cross_encoder_sts": 0.39103333333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36213333333333336,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-014",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4268622933884298,
+        "cross_encoder_sts": 0.4486573863636364,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3687420454545455,
+        "jaccard": null,
+        "top_element_id": "K0055",
+        "top_element_label": "Knowledge of microprocessors"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3991445454545455,
+        "cross_encoder_sts": 0.40254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39009,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.35826818181818176,
+        "cross_encoder_sts": 0.361575,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34945,
+        "jaccard": null,
+        "top_element_id": "2.C.3.a",
+        "top_element_label": "Computers and Electronics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0055",
+        "element_label": "Knowledge of microprocessors",
+        "score": 0.4268622933884298
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.4169646214466648
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.3991445454545455
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.390743771043771
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-014",
+        "element_label": "Human oversight",
+        "score": 0.38315151515151513
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-K-016 (AI and Machine Learning) scores 0.427 composite (signal: weak). Scope fit for Context Engineer: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.427. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support AI and Machine Learning KSA AI-K-016 as a discrete competency for Context Engineer?",
+    "evidence": "AI and Machine Learning is primary for Context Engineer. Score 0.427. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. AI and Machine Learning is core for Context Engineer. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "AI and Machine Learning (primary) for Context Engineer. Score 0.427. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:46:03.567852",
+    "pipeline_version": "1.0"
+  }
+}
