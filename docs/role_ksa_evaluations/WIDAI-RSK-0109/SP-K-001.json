@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0109",
+  "role_name": "Model Validator",
+  "ksa_id": "SP-K-001",
+  "ksa_text": "Knowledge of AI security threat modeling and attack vectors, including prompt injection, data exfiltration, model poisoning, supply chain vulnerabilities, and threat assessment methodologies specific to machine learning systems.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.45519841897233204,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41881884115884116,
+        "cross_encoder_sts": 0.4280120879120879,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39430351648351647,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.39894581818181823,
+        "cross_encoder_sts": 0.452288,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25670000000000004,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4537466275659824,
+        "cross_encoder_sts": 0.44424516129032254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4790838709677419,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41448745644599305,
+        "cross_encoder_sts": 0.429005574912892,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3757724738675958,
+        "jaccard": null,
+        "top_element_id": "K0375",
+        "top_element_label": "Knowledge of wireless applications vulnerabilities"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.45519841897233204,
+        "cross_encoder_sts": 0.45015652173913046,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4686434782608696,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.5",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.45519841897233204
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4537466275659824
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.41881884115884116
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0375",
+        "element_label": "Knowledge of wireless applications vulnerabilities",
+        "score": 0.41448745644599305
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.39894581818181823
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Edge case \u2014 included on balance: knowledge contains 4 RSK-relevant signal(s) (\"threat model\", \"threat assess\") within Security & Privacy (domain affinity 0.35). STRM composite is strong (0.4552). A practicing Model Validator would encounter this competency regularly."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 1 match(es) in RSK job postings or certification scope. Competency appears in RSK role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 included on balance: knowledge contains 4 RSK-relevant signal(s) (\"threat model\", \"threat assess\") within Security & Privacy (domain affinity 0.35). STRM composite is strong (0.4552). A practicing Model Validator would encounter this competency regularly.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:37.448029+00:00",
+    "pipeline_version": "1.0"
+  }
+}

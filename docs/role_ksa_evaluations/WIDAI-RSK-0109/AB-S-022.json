@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0109",
+  "role_name": "Model Validator",
+  "ksa_id": "AB-S-022",
+  "ksa_text": "Skill in selecting appropriate mathematical and quantitative methods for analytical problems, including evaluating method assumptions against data characteristics and choosing techniques that match the business question.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Analytics & BI domain has low Model Validator affinity (0.08), and the text \u2014 'Skill in selecting appropriate mathematical and quantitative methods for analytical problems, includ...' \u2014 describes competencies outside the Model Validator practice boundary. 0 RSK-specific signal(s) detected. STRM composite is zero (0.0000 \u2014 note: STRM frameworks underweight pure risk vocabulary)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working Model Validator.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Analytics & BI domain has low Model Validator affinity (0.08), and the text \u2014 'Skill in selecting appropriate mathematical and quantitative methods for analytical problems, includ...' \u2014 describes competencies outside the Model Validator practice boundary. 0 RSK-specific signal(s) detected. STRM composite is zero (0.0000 \u2014 note: STRM frameworks underweight pure risk vocabulary).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:37.663251+00:00",
+    "pipeline_version": "1.0"
+  }
+}

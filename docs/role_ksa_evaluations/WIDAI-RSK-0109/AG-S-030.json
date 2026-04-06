@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0109",
+  "role_name": "Model Validator",
+  "ksa_id": "AG-S-030",
+  "ksa_text": "Skill in designing AI risk measurement approaches and trustworthiness metrics, including developing performance evaluation metrics, engaging independent experts for assessment, and validating measurement effectiveness.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Edge case \u2014 included on balance: skill contains 2 RSK-relevant signal(s) (\"ai risk\", \"trustworth\") within AI Governance (domain affinity 0.72). STRM composite is zero (0.0000 \u2014 note: STRM frameworks underweight pure risk vocabulary). A practicing Model Validator would encounter this competency regularly."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: no matches in RSK job postings or cert curricula (CRISC, FRM, NIST AI RMF, CISM). Would a working Model Validator self-report this as required?",
+    "evidence": "Challenge answered: the competency is implicit in Model Validator work (domain affinity 0.72, 2 RSK signal(s)). Framework vocabulary matching systematically underrepresents risk management and governance KSAs.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 included on balance: skill contains 2 RSK-relevant signal(s) (\"ai risk\", \"trustworth\") within AI Governance (domain affinity 0.72). STRM composite is zero (0.0000 \u2014 note: STRM frameworks underweight pure risk vocabulary). A practicing Model Validator would encounter this competency regularly.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:37.676927+00:00",
+    "pipeline_version": "1.0"
+  }
+}

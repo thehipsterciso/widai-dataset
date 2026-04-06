@@ -1,0 +1,101 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0110",
+  "role_name": "Model Owner",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:24:38.458072+00:00",
+  "total_ksas": 1069,
+  "included": 189,
+  "excluded": 880,
+  "inclusion_rate": 0.1768,
+  "adversarial_overturns": {
+    "pass_3": 0,
+    "pass_4": 0,
+    "total_ksas_affected": 0
+  },
+  "calibration": {
+    "min": 100,
+    "max": 200,
+    "status": "ok"
+  },
+  "pass_1_notes": "6 frameworks: dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet. Composite = MAX across frameworks.",
+  "role_scope_notes": "Model ownership accountability, model lifecycle oversight, model performance monitoring, model documentation, coordinating validation and governance processes",
+  "domain_summary": {
+    "TF": {
+      "include": 0,
+      "exclude": 87,
+      "total": 87,
+      "label": "Technology Fundamentals"
+    },
+    "DA": {
+      "include": 0,
+      "exclude": 93,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 1,
+      "exclude": 81,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "DG": {
+      "include": 12,
+      "exclude": 80,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "SP": {
+      "include": 11,
+      "exclude": 73,
+      "total": 84,
+      "label": "Security & Privacy"
+    },
+    "AI": {
+      "include": 15,
+      "exclude": 88,
+      "total": 103,
+      "label": "AI & ML Infrastructure"
+    },
+    "AG": {
+      "include": 46,
+      "exclude": 61,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 21,
+      "exclude": 53,
+      "total": 74,
+      "label": "Risk & Compliance"
+    },
+    "RM": {
+      "include": 79,
+      "exclude": 22,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 3,
+      "exclude": 86,
+      "total": 89,
+      "label": "Leadership & Strategy"
+    },
+    "OP": {
+      "include": 1,
+      "exclude": 68,
+      "total": 69,
+      "label": "Operations & Program Management"
+    },
+    "AB": {
+      "include": 0,
+      "exclude": 88,
+      "total": 88,
+      "label": "Analytics & BI"
+    }
+  },
+  "score_analysis": {
+    "avg_composite_included": 0.2139,
+    "avg_composite_excluded": 0.2085
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0110",
+  "role_name": "Model Owner",
+  "ksa_id": "RM-T-002",
+  "ksa_text": "Perform AI architecture security reviews and gap analysis to evaluate security controls, identify architectural vulnerabilities, and develop security risk management plans.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5397058441558441,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4242475623625749,
+        "cross_encoder_sts": 0.46984403669724767,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3026569641367806,
+        "jaccard": null,
+        "top_element_id": "2054",
+        "top_element_label": "Assess the effectiveness of security controls."
+      },
+      "ddat": {
+        "composite": 0.42108344988344987,
+        "cross_encoder_sts": 0.4863820512820513,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24695384615384613,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.5026736677115987,
+        "cross_encoder_sts": 0.516205172413793,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4665896551724138,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-016",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.4343672749125874,
+        "cross_encoder_sts": 0.48008197115384615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31246141826923074,
+        "jaccard": null,
+        "top_element_id": "T0309",
+        "top_element_label": "Assess the effectiveness of security controls"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5397058441558441,
+        "cross_encoder_sts": 0.5569585714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49369857142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3682097902097902,
+        "cross_encoder_sts": 0.42968461538461544,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20427692307692305,
+        "jaccard": null,
+        "top_element_id": "2.B.4.h",
+        "top_element_label": "Systems Evaluation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.1",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.5397058441558441
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-016",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.5026736677115987
+      },
+      {
+        "framework": "nice",
+        "element_id": "T0309",
+        "element_label": "Assess the effectiveness of security controls",
+        "score": 0.4343672749125874
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2054",
+        "element_label": "Assess the effectiveness of security controls.",
+        "score": 0.4242475623625749
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.42108344988344987
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: task maps directly to Model Owner scope \u2014 RSK-specific signals detected (\"risk manag\", \"vulnerabilit\", \"security risk\"). STRM composite is strong (0.5397); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 1 match(es) in RSK job postings or certification scope. Competency appears in RSK role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: task maps directly to Model Owner scope \u2014 RSK-specific signals detected (\"risk manag\", \"vulnerabilit\", \"security risk\"). STRM composite is strong (0.5397); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:24:37.931953+00:00",
+    "pipeline_version": "1.0"
+  }
+}
