@@ -125,27 +125,27 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "Edge case \u2014 included on balance: knowledge carries regulatory/compliance signals (\"compl  :y|ies|ying|iant|iance|iances)\", \"regulat  :ory|ion|ions|e|ed|ing)\") in a AI & ML Infrastructure context (affinity 0.16). Composite score is moderate-to-strong (0.4451). An AI Provider Compliance Lead would encounter this competency when interpreting regulatory requirements or managing compliance programs in this domain."
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: edge case falls below inclusion threshold. Domain AI (affinity 0.16), composite moderate-to-strong (0.4451). Text 'Knowledge of AI governance and regulatory compliance requirements, including the EU AI Act risk clas...' does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "exclude"
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": null,
-    "evidence": "External validation strong: 7 job-posting-level and 9 certification/framework-level matches (EU AI Act, ISO 42001, NIST AI RMF, CIPP/E, CRISC curricula). Competency appears regularly in AI compliance and regulatory affairs role descriptions.",
-    "ruling": "include"
+    "evidence": "External validation confirms exclusion: 16 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working AI Provider Compliance Lead.",
+    "ruling": "exclude"
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 included on balance: knowledge carries regulatory/compliance signals (\"compl  :y|ies|ying|iant|iance|iances)\", \"regulat  :ory|ion|ions|e|ed|ing)\") in a AI & ML Infrastructure context (affinity 0.16). Composite score is moderate-to-strong (0.4451). An AI Provider Compliance Lead would encounter this competency when interpreting regulatory requirements or managing compliance programs in this domain.",
+  "decision_rationale": "Edge case \u2014 excluded on balance: edge case falls below inclusion threshold. Domain AI (affinity 0.16), composite moderate-to-strong (0.4451). Text 'Knowledge of AI governance and regulatory compliance requirements, including the EU AI Act risk clas...' does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:22.968589+00:00",
+    "evaluated_at": "2026-04-06T18:41:01.937709+00:00",
     "pipeline_version": "1.0"
   }
 }

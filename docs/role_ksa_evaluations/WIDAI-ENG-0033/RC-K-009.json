@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0033",
+  "role_name": "Data Modeler",
+  "ksa_id": "RC-K-009",
+  "ksa_text": "Knowledge of model risk management regulatory expectations, including SR 11-7, SS1/23, and EU AI Act requirements as they apply to AI and ML models in regulated industries, including effective challenge, validation, and ongoing monitoring obligations.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4927023923444976,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4029092606883779,
+        "cross_encoder_sts": 0.4239224108658744,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3468741935483871,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.4026234090909091,
+        "cross_encoder_sts": 0.446165,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2865125,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4927023923444976,
+        "cross_encoder_sts": 0.4855894736842105,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5116701754385965,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4115390363988043,
+        "cross_encoder_sts": 0.43908955512572534,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33807098646034817,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4772762845849803,
+        "cross_encoder_sts": 0.4721304347826087,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4909985507246377,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37328701298701294,
+        "cross_encoder_sts": 0.4018571428571428,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2971,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4927023923444976
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4772762845849803
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4115390363988043
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.4029092606883779
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4026234090909091
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-K-009 (Risk and Compliance) scores 0.493 composite (signal: moderate). Scope fit for Data Modeler: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Risk and Compliance KSA RC-K-009 as a discrete competency for Data Modeler?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Data Modeler.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk and Compliance is out of scope for Data Modeler.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:58.929121",
+    "pipeline_version": "1.0"
+  }
+}

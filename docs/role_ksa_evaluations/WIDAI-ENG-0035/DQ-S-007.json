@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0035",
+  "role_name": "Cloud Data Architect",
+  "ksa_id": "DQ-S-007",
+  "ksa_text": "Skill in defining data requirements, articulating specification needs, and translating business needs into data quality standards and expectations.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4328554752066116,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41044552129221734,
+        "cross_encoder_sts": 0.43720763582966227,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3390798825256975,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4328554752066116,
+        "cross_encoder_sts": 0.46508068181818185,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3469215909090909,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.40812020202020205,
+        "cross_encoder_sts": 0.40821111111111114,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4078777777777778,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-013",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.4101935598282621,
+        "cross_encoder_sts": 0.4422094455852156,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.324817864476386,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35062727272727273,
+        "cross_encoder_sts": 0.38135,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2687,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.39197056277056275,
+        "cross_encoder_sts": 0.43113809523809526,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2875238095238095,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4328554752066116
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.41044552129221734
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4101935598282621
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-013",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.40812020202020205
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.39197056277056275
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-S-007 (Data Quality) scores 0.433 composite (signal: weak). Scope fit for Cloud Data Architect: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Edge-case scope, score 0.433 meets threshold. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Quality KSA DQ-S-007 as a discrete competency for Cloud Data Architect?",
+    "evidence": "KSA content maps to documented requirements in Cloud Data Architect job postings. Role-specific keyword match in Data Quality confirms applicability.",
+    "ruling": "Upheld. Content is market-supported as a discrete competency for Cloud Data Architect. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality (secondary) for Cloud Data Architect. Score 0.433. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:59.284251",
+    "pipeline_version": "1.0"
+  }
+}

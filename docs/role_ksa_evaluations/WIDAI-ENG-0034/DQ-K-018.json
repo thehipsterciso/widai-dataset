@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0034",
+  "role_name": "Database Administrator",
+  "ksa_id": "DQ-K-018",
+  "ksa_text": "Knowledge of data remediation tools and techniques, including data cleansing, standardization, deduplication, enrichment, imputation approaches, and quality improvement workflows for addressing identified data issues.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.41046183385579943,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40007677397415553,
+        "cross_encoder_sts": 0.43743690773067334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3004497506234414,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4013978409090909,
+        "cross_encoder_sts": 0.4397525,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29911875,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.40773388429752067,
+        "cross_encoder_sts": 0.4431,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31342424242424244,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41046183385579943,
+        "cross_encoder_sts": 0.449843275862069,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3054446551724138,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38757515151515154,
+        "cross_encoder_sts": 0.43975833333333336,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24842,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.38422613636363634,
+        "cross_encoder_sts": 0.4191625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2910625,
+        "jaccard": null,
+        "top_element_id": "2.B.3.m",
+        "top_element_label": "Quality Control Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.41046183385579943
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.40773388429752067
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4013978409090909
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.40007677397415553
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.3",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.38757515151515154
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-K-018 (Data Quality) scores 0.410 composite (signal: weak). Scope fit for Database Administrator: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.410 is below 0.43 threshold for edge-case inclusion in Database Administrator.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.410 insufficient for edge-case inclusion (min 0.43). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Quality KSA DQ-K-018 as a discrete competency for Database Administrator?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for Database Administrator.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.410 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:59.145215",
+    "pipeline_version": "1.0"
+  }
+}

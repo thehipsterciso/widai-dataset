@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0033",
+  "role_name": "Data Modeler",
+  "ksa_id": "RM-S-002",
+  "ksa_text": "Skill in conducting AI security assessments, including threat modeling for AI systems, attack surface analysis, and control gap identification.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5759785243741765,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4393867828242327,
+        "cross_encoder_sts": 0.4728379310344828,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3501837209302326,
+        "jaccard": null,
+        "top_element_id": "5941",
+        "top_element_label": "Utilize tools and techniques like risk assessment, threat modeling, and cybersecurity to detect and analyze the threats."
+      },
+      "ddat": {
+        "composite": 0.4238277777777778,
+        "cross_encoder_sts": 0.4778527777777778,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2797611111111111,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.5375562695924765,
+        "cross_encoder_sts": 0.5408431034482759,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5287913793103448,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-016",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.44738283858998146,
+        "cross_encoder_sts": 0.48585102040816325,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3448010204081633,
+        "jaccard": null,
+        "top_element_id": "K0692",
+        "top_element_label": "Knowledge of vulnerability assessment tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5759785243741765,
+        "cross_encoder_sts": 0.5826492753623188,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5581898550724638,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.7",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.35807954545454546,
+        "cross_encoder_sts": 0.3922625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.266925,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.2",
+        "top_element_label": "Flexibility of Closure"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.7",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.5759785243741765
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-016",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.5375562695924765
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0692",
+        "element_label": "Knowledge of vulnerability assessment tools and techniques",
+        "score": 0.44738283858998146
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5941",
+        "element_label": "Utilize tools and techniques like risk assessment, threat modeling, and cybersecurity to detect and analyze the threats.",
+        "score": 0.4393867828242327
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4238277777777778
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-S-002 (Risk Management) scores 0.576 composite (signal: moderate). Scope fit for Data Modeler: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Risk Management KSA RM-S-002 as a discrete competency for Data Modeler?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Data Modeler.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk Management is out of scope for Data Modeler.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:58.917110",
+    "pipeline_version": "1.0"
+  }
+}

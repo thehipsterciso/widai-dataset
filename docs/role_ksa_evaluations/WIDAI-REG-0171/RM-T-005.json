@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "Edge case \u2014 included on balance: task carries regulatory/compliance signals (domain context (Risk Management, affinity 0.52)) in a Risk Management context (affinity 0.52). Composite score is moderate-to-strong (0.4973). An AI Provider Compliance Lead would encounter this competency when interpreting regulatory requirements or managing compliance programs in this domain."
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Risk Management (affinity 0.52) with insufficient REG signals (0). Composite moderate-to-strong (0.4973). AI Provider Compliance Lead interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "exclude"
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "External check: limited external signal (0 match(es)) in AI compliance role descriptions or certification curricula. Would an AI Provider Compliance Lead self-report this as a required competency?",
-    "evidence": "Challenge answered: competency is implied by AI Provider Compliance Lead scope (domain affinity 0.52, 0 REG signal(s)). Some regulatory competencies appear implicitly in role descriptions without explicit vocabulary matches.",
-    "ruling": "include"
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working AI Provider Compliance Lead.",
+    "ruling": "exclude"
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 included on balance: task carries regulatory/compliance signals (domain context (Risk Management, affinity 0.52)) in a Risk Management context (affinity 0.52). Composite score is moderate-to-strong (0.4973). An AI Provider Compliance Lead would encounter this competency when interpreting regulatory requirements or managing compliance programs in this domain.",
+  "decision_rationale": "Excluded on scope grounds: Risk Management (affinity 0.52) with insufficient REG signals (0). Composite moderate-to-strong (0.4973). AI Provider Compliance Lead interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:22.920966+00:00",
+    "evaluated_at": "2026-04-06T18:41:01.880059+00:00",
     "pipeline_version": "1.0"
   }
 }

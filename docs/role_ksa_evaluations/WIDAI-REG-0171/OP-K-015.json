@@ -30,29 +30,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to AI Provider Compliance Lead scope \u2014 regulatory/compliance signals detected (\"governance   :frame|structure|require|policy|program|mechanism)\", \"accountabilit  :y|ies)\", \"explainabilit  :y\"). Composite score is minimal (0.0000). Domain OP (affinity 0.28) aligns with primary REG competency areas. Seniority is appropriate for IC-lead-to-manager band: the KSA describes regulatory interpretation, compliance program work, or governance oversight."
+    "preliminary_decision": "exclude",
+    "rationale": "Edge case \u2014 excluded on balance: edge case falls below inclusion threshold. Domain OP (affinity 0.28), composite minimal (0.0000). Text 'Knowledge of AI ethics frameworks and responsible AI operations, including fairness assessment and b...' does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "exclude"
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": null,
-    "evidence": "External validation strong: 3 job-posting-level and 3 certification/framework-level matches (EU AI Act, ISO 42001, NIST AI RMF, CIPP/E, CRISC curricula). Competency appears regularly in AI compliance and regulatory affairs role descriptions.",
-    "ruling": "include"
+    "evidence": "External validation confirms exclusion: 8 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working AI Provider Compliance Lead.",
+    "ruling": "exclude"
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to AI Provider Compliance Lead scope \u2014 regulatory/compliance signals detected (\"governance   :frame|structure|require|policy|program|mechanism)\", \"accountabilit  :y|ies)\", \"explainabilit  :y\"). Composite score is minimal (0.0000). Domain OP (affinity 0.28) aligns with primary REG competency areas. Seniority is appropriate for IC-lead-to-manager band: the KSA describes regulatory interpretation, compliance program work, or governance oversight.",
+  "decision_rationale": "Edge case \u2014 excluded on balance: edge case falls below inclusion threshold. Domain OP (affinity 0.28), composite minimal (0.0000). Text 'Knowledge of AI ethics frameworks and responsible AI operations, including fairness assessment and b...' does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:23.190895+00:00",
+    "evaluated_at": "2026-04-06T18:41:02.191832+00:00",
     "pipeline_version": "1.0"
   }
 }

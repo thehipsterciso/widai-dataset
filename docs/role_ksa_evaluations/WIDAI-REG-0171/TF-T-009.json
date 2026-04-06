@@ -33,7 +33,7 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Technology Fundamentals domain has low REG affinity (0.14) with insufficient regulatory signals. KSA text \u2014 'Implement automated data testing on transformation outputs including uniqueness validation, null val...' \u2014 describes competencies outside AI Provider Compliance Lead scope. Composite score is minimal (0.0000). REG roles interpret and apply technical concepts; they do not implement them."
+    "rationale": "Excluded on scope grounds: Technology Fundamentals (affinity 0.14) with insufficient REG signals (0). Composite minimal (0.0000). AI Provider Compliance Lead interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
@@ -44,15 +44,15 @@
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions or regulatory certification curricula. A gap here would not be noticeable to a working AI Provider Compliance Lead focused on regulatory interpretation, compliance program management, and AI Act obligations.",
+    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working AI Provider Compliance Lead.",
     "ruling": "exclude"
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Technology Fundamentals domain has low REG affinity (0.14) with insufficient regulatory signals. KSA text \u2014 'Implement automated data testing on transformation outputs including uniqueness validation, null val...' \u2014 describes competencies outside AI Provider Compliance Lead scope. Composite score is minimal (0.0000). REG roles interpret and apply technical concepts; they do not implement them.",
+  "decision_rationale": "Excluded on scope grounds: Technology Fundamentals (affinity 0.14) with insufficient REG signals (0). Composite minimal (0.0000). AI Provider Compliance Lead interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:23.364181+00:00",
+    "evaluated_at": "2026-04-06T18:41:02.397563+00:00",
     "pipeline_version": "1.0"
   }
 }

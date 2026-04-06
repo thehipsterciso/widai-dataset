@@ -126,7 +126,7 @@
     "scope_fit": "in_scope",
     "seniority_fit": "too_senior",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on seniority grounds: the knowledge contains executive/organizational scope signals ('executive   :team|sponsor|committee)'), placing it above AI Provider Compliance Lead level. Composite score is moderate-to-strong (0.4731). This role manages and executes compliance programs; it does not set enterprise-wide strategy or govern at C-suite authority."
+    "rationale": "Excluded on seniority grounds: the knowledge contains executive/organizational scope signals ('executive   :team|sponsor|committee'), placing it above AI Provider Compliance Lead band. Composite moderate-to-strong (0.4731)."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
@@ -136,16 +136,16 @@
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 5 match(es) in AI compliance role descriptions or regulatory certification curricula. A gap here would not be noticeable to a working AI Provider Compliance Lead focused on regulatory interpretation, compliance program management, and AI Act obligations.",
+    "challenge": "External check: 7 matches for a Leadership & Strategy KSA (affinity 0.76).",
+    "evidence": "Challenge partially answered: market presence noted (7 matches), but exclusion stands on scope grounds.",
     "ruling": "exclude"
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on seniority grounds: the knowledge contains executive/organizational scope signals ('executive   :team|sponsor|committee)'), placing it above AI Provider Compliance Lead level. Composite score is moderate-to-strong (0.4731). This role manages and executes compliance programs; it does not set enterprise-wide strategy or govern at C-suite authority.",
+  "decision_rationale": "Excluded on seniority grounds: the knowledge contains executive/organizational scope signals ('executive   :team|sponsor|committee'), placing it above AI Provider Compliance Lead band. Composite moderate-to-strong (0.4731).",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:22.935634+00:00",
+    "evaluated_at": "2026-04-06T18:41:01.898183+00:00",
     "pipeline_version": "1.0"
   }
 }

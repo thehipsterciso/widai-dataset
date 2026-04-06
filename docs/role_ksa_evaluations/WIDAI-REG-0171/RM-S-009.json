@@ -30,10 +30,10 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: insufficient regulatory signals and low domain affinity. Domain RM (affinity 0.52), composite minimal (0.0000). KSA text \u2014 'Skill in AI model development lifecycle governance, including documentation of design decisions, tra...' \u2014 does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities."
+    "rationale": "Excluded on scope grounds: Risk Management (affinity 0.52) with insufficient REG signals (2). Composite minimal (0.0000). AI Provider Compliance Lead interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
@@ -44,15 +44,15 @@
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": null,
-    "evidence": "External validation confirms exclusion: 4 match(es) in AI compliance role descriptions or regulatory certification curricula. A gap here would not be noticeable to a working AI Provider Compliance Lead focused on regulatory interpretation, compliance program management, and AI Act obligations.",
+    "evidence": "External validation confirms exclusion: 4 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working AI Provider Compliance Lead.",
     "ruling": "exclude"
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: insufficient regulatory signals and low domain affinity. Domain RM (affinity 0.52), composite minimal (0.0000). KSA text \u2014 'Skill in AI model development lifecycle governance, including documentation of design decisions, tra...' \u2014 does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities.",
+  "decision_rationale": "Excluded on scope grounds: Risk Management (affinity 0.52) with insufficient REG signals (2). Composite minimal (0.0000). AI Provider Compliance Lead interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:23.140180+00:00",
+    "evaluated_at": "2026-04-06T18:41:02.132710+00:00",
     "pipeline_version": "1.0"
   }
 }

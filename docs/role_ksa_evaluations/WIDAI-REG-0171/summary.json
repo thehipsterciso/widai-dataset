@@ -3,13 +3,13 @@
   "pipeline_version": "1.0",
   "role_id": "WIDAI-REG-0171",
   "role_name": "AI Provider Compliance Lead",
-  "evaluated_at": "2026-04-06T18:17:23.372131+00:00",
+  "evaluated_at": "2026-04-06T18:41:02.462114+00:00",
   "total_ksas": 1069,
-  "include_count": 286,
-  "exclude_count": 783,
-  "inclusion_rate": 0.2675,
+  "include_count": 225,
+  "exclude_count": 844,
+  "inclusion_rate": 0.2105,
   "calibration_status": "OUT_OF_RANGE",
-  "calibration_note": "286 included KSAs \u2014 outside 120\u2013220 REG calibration target. Review thresholds.",
+  "calibration_note": "225 included \u2014 outside 120\u2013220 target.",
   "confidence_distribution": {
     "high": 1070,
     "medium": 0,
@@ -22,104 +22,104 @@
   },
   "domain_breakdown": {
     "TF": {
-      "included": 0,
-      "excluded": 87,
+      "include": 0,
+      "exclude": 87,
       "total": 87,
       "inclusion_rate": 0.0
     },
     "DA": {
-      "included": 0,
-      "excluded": 93,
+      "include": 0,
+      "exclude": 93,
       "total": 93,
       "inclusion_rate": 0.0
     },
     "DQ": {
-      "included": 2,
-      "excluded": 80,
+      "include": 0,
+      "exclude": 82,
       "total": 82,
-      "inclusion_rate": 0.0244
+      "inclusion_rate": 0.0
     },
     "DG": {
-      "included": 48,
-      "excluded": 44,
+      "include": 16,
+      "exclude": 76,
       "total": 92,
-      "inclusion_rate": 0.5217
+      "inclusion_rate": 0.1739
     },
     "SP": {
-      "included": 19,
-      "excluded": 65,
+      "include": 16,
+      "exclude": 68,
       "total": 84,
-      "inclusion_rate": 0.2262
+      "inclusion_rate": 0.1905
     },
     "AI": {
-      "included": 1,
-      "excluded": 102,
+      "include": 0,
+      "exclude": 103,
       "total": 103,
-      "inclusion_rate": 0.0097
+      "inclusion_rate": 0.0
     },
     "AG": {
-      "included": 70,
-      "excluded": 37,
+      "include": 93,
+      "exclude": 14,
       "total": 107,
-      "inclusion_rate": 0.6542
+      "inclusion_rate": 0.8692
     },
     "RC": {
-      "included": 73,
-      "excluded": 1,
+      "include": 73,
+      "exclude": 1,
       "total": 74,
       "inclusion_rate": 0.9865
     },
     "RM": {
-      "included": 28,
-      "excluded": 73,
+      "include": 11,
+      "exclude": 90,
       "total": 101,
-      "inclusion_rate": 0.2772
+      "inclusion_rate": 0.1089
     },
     "LS": {
-      "included": 42,
-      "excluded": 47,
+      "include": 15,
+      "exclude": 74,
       "total": 89,
-      "inclusion_rate": 0.4719
+      "inclusion_rate": 0.1685
     },
     "OP": {
-      "included": 3,
-      "excluded": 66,
+      "include": 1,
+      "exclude": 68,
       "total": 69,
-      "inclusion_rate": 0.0435
+      "inclusion_rate": 0.0145
     },
     "AB": {
-      "included": 0,
-      "excluded": 88,
+      "include": 0,
+      "exclude": 88,
       "total": 88,
       "inclusion_rate": 0.0
     }
   },
   "dimension_breakdown": {
     "Skill": {
-      "include": 88,
-      "exclude": 240
+      "include": 69,
+      "exclude": 259
     },
     "Task": {
-      "include": 68,
-      "exclude": 179
+      "include": 51,
+      "exclude": 196
     },
     "Knowledge": {
-      "include": 79,
-      "exclude": 202
+      "include": 60,
+      "exclude": 221
     },
     "Ability": {
-      "include": 51,
-      "exclude": 162
+      "include": 45,
+      "exclude": 168
     }
   },
   "score_analysis": {
-    "avg_composite_included": 0.2868,
-    "avg_composite_excluded": 0.1812
+    "avg_composite_included": 0.2075,
+    "avg_composite_excluded": 0.21
   },
   "adversarial_challenge_counts": {
     "pass_3_challenges": 0,
     "pass_3_overturns": 0,
-    "pass_4_challenges": 79,
+    "pass_4_challenges": 44,
     "pass_4_overturns": 0
   }
 }

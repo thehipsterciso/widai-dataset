@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0034",
+  "role_name": "Database Administrator",
+  "ksa_id": "RC-A-001",
+  "ksa_text": "Ability to interpret and apply laws, regulations, policies, and organizational guidance in specific operational contexts.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.45888051948051944,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.430068075179952,
+        "cross_encoder_sts": 0.45300791788856304,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36889516129032257,
+        "jaccard": null,
+        "top_element_id": "3057",
+        "top_element_label": "Ability to interpret and apply laws, regulations, policies, and guidance relevant to organization cyber objectives."
+      },
+      "ddat": {
+        "composite": 0.4324306220095694,
+        "cross_encoder_sts": 0.4755631578947368,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3174105263157895,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.44437624633431083,
+        "cross_encoder_sts": 0.4687774193548387,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3793064516129032,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4158025923295454,
+        "cross_encoder_sts": 0.4474923828125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.331296484375,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4417891495601173,
+        "cross_encoder_sts": 0.47648709677419354,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34926129032258063,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.45888051948051944,
+        "cross_encoder_sts": 0.4835428571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39311428571428575,
+        "jaccard": null,
+        "top_element_id": "2.C.8.b",
+        "top_element_label": "Law and Government"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.b",
+        "element_label": "Law and Government",
+        "score": 0.45888051948051944
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.44437624633431083
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4417891495601173
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.4324306220095694
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "3057",
+        "element_label": "Ability to interpret and apply laws, regulations, policies, and guidance relevant to organization cyber objectives.",
+        "score": 0.430068075179952
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-A-001 (Risk and Compliance) scores 0.459 composite (signal: moderate). Scope fit for Database Administrator: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Risk and Compliance KSA RC-A-001 as a discrete competency for Database Administrator?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Database Administrator.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk and Compliance is out of scope for Database Administrator.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:59.102898",
+    "pipeline_version": "1.0"
+  }
+}

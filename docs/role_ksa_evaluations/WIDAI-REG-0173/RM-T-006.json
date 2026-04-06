@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0173",
+  "role_name": "Authorized Representative (AI)",
+  "ksa_id": "RM-T-006",
+  "ksa_text": "Conduct threat modeling and assessment to identify threat actors, characterize attack surfaces, analyze threat criticality, and evaluate insider threats.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.4365320855614973,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4021053115423902,
+        "cross_encoder_sts": 0.42599943820224717,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3383876404494382,
+        "jaccard": null,
+        "top_element_id": "1003",
+        "top_element_label": "Develop and document supply chain risks for critical system elements, as appropriate."
+      },
+      "ddat": {
+        "composite": 0.3957724517906336,
+        "cross_encoder_sts": 0.4259393939393939,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31532727272727273,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-043",
+        "top_element_label": "Cyber incident management"
+      },
+      "eu_ai_act": {
+        "composite": 0.41798282828282823,
+        "cross_encoder_sts": 0.4089222222222222,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.44214444444444445,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.39772502085070893,
+        "cross_encoder_sts": 0.43104128440366973,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3088816513761468,
+        "jaccard": null,
+        "top_element_id": "K0735",
+        "top_element_label": "Knowledge of risk management models and frameworks"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4365320855614973,
+        "cross_encoder_sts": 0.43935882352941175,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4289941176470588,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4365320855614973
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.41798282828282823
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1003",
+        "element_label": "Develop and document supply chain risks for critical system elements, as appropriate.",
+        "score": 0.4021053115423902
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0735",
+        "element_label": "Knowledge of risk management models and frameworks",
+        "score": 0.39772502085070893
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-043",
+        "element_label": "Cyber incident management",
+        "score": 0.3957724517906336
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Risk Management (affinity 0.58) with insufficient REG signals (0). Composite moderate-to-strong (0.4365). Authorized Representative (AI) interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working Authorized Representative (AI).",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Risk Management (affinity 0.58) with insufficient REG signals (0). Composite moderate-to-strong (0.4365). Authorized Representative (AI) interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:36.041752+00:00",
+    "pipeline_version": "1.0"
+  }
+}

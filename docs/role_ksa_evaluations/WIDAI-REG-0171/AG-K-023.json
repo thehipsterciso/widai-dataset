@@ -30,29 +30,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: insufficient regulatory signals and low domain affinity. Domain AG (affinity 0.85), composite minimal (0.0000). KSA text \u2014 'Knowledge of AI legal and ethical responsibilities, including the legal responsibilities of AI syste...' \u2014 does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities."
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to AI Provider Compliance Lead scope \u2014 regulatory/compliance signals detected (\"legal   :require|oblig|framework|standard|basis|du\", \"ethical   :ai|principles|framework|responsibilit\"). Composite minimal (0.0000). Domain AG (affinity 0.85) aligns with REG competency profile. Seniority appropriate: describes regulatory interpretation, compliance program execution, or governance oversight."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "include"
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions or regulatory certification curricula. A gap here would not be noticeable to a working AI Provider Compliance Lead focused on regulatory interpretation, compliance program management, and AI Act obligations.",
-    "ruling": "exclude"
+    "challenge": "External check: limited signal (0 match(es)) in AI compliance role descriptions or certification curricula.",
+    "evidence": "Challenge answered: competency implied by AI Provider Compliance Lead scope (domain affinity 0.85, 2 REG signal(s)). Some regulatory competencies appear implicitly in role descriptions.",
+    "ruling": "include"
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: insufficient regulatory signals and low domain affinity. Domain AG (affinity 0.85), composite minimal (0.0000). KSA text \u2014 'Knowledge of AI legal and ethical responsibilities, including the legal responsibilities of AI syste...' \u2014 does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities.",
+  "decision_rationale": "Included: knowledge maps directly to AI Provider Compliance Lead scope \u2014 regulatory/compliance signals detected (\"legal   :require|oblig|framework|standard|basis|du\", \"ethical   :ai|principles|framework|responsibilit\"). Composite minimal (0.0000). Domain AG (affinity 0.85) aligns with REG competency profile. Seniority appropriate: describes regulatory interpretation, compliance program execution, or governance oversight.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:23.251697+00:00",
+    "evaluated_at": "2026-04-06T18:41:02.264585+00:00",
     "pipeline_version": "1.0"
   }
 }

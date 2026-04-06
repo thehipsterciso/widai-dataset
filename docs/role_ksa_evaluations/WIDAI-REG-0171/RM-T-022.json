@@ -32,27 +32,27 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: insufficient regulatory signals and low domain affinity. Domain RM (affinity 0.52), composite minimal (0.0000). KSA text \u2014 'Develop and maintain AI risk management frameworks, including policies for risk governance, responsi...' \u2014 does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities."
+    "preliminary_decision": "include",
+    "rationale": "Edge case \u2014 included on balance: task carries governance/compliance signals (\"polic  :y|ies\", \"risk   :govern|quantif|measur|metric|mitigation|re\") in Risk Management context (affinity 0.52). Composite minimal (0.0000). A AI Provider Compliance Lead would encounter this competency in regulatory program work."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "include"
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
     "challenge": null,
-    "evidence": "External validation confirms exclusion: 4 match(es) in AI compliance role descriptions or regulatory certification curricula. A gap here would not be noticeable to a working AI Provider Compliance Lead focused on regulatory interpretation, compliance program management, and AI Act obligations.",
-    "ruling": "exclude"
+    "evidence": "External validation present: 3 match(es) in AI compliance job postings or certification curricula. Sufficient to uphold inclusion.",
+    "ruling": "include"
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: insufficient regulatory signals and low domain affinity. Domain RM (affinity 0.52), composite minimal (0.0000). KSA text \u2014 'Develop and maintain AI risk management frameworks, including policies for risk governance, responsi...' \u2014 does not demonstrate sufficient alignment with AI Provider Compliance Lead core responsibilities.",
+  "decision_rationale": "Edge case \u2014 included on balance: task carries governance/compliance signals (\"polic  :y|ies\", \"risk   :govern|quantif|measur|metric|mitigation|re\") in Risk Management context (affinity 0.52). Composite minimal (0.0000). A AI Provider Compliance Lead would encounter this competency in regulatory program work.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:23.209687+00:00",
+    "evaluated_at": "2026-04-06T18:41:02.214645+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0172",
+  "role_name": "AI Deployer Compliance Lead",
+  "ksa_id": "AG-A-004",
+  "ksa_text": "Ability to develop, document, communicate, and iteratively update governance policies that reflect organizational objectives, regulatory requirements, and evolving AI capabilities.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5069277922077922,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3904811023622047,
+        "cross_encoder_sts": 0.4358921259842519,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26938503937007874,
+        "jaccard": null,
+        "top_element_id": "1027A",
+        "top_element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy."
+      },
+      "ddat": {
+        "composite": 0.3969873376623377,
+        "cross_encoder_sts": 0.4567428571428572,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23763928571428572,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4677142148760331,
+        "cross_encoder_sts": 0.4799472727272728,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.43509272727272724,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3758916666666667,
+        "cross_encoder_sts": 0.42878385416666664,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23484583333333334,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5069277922077922,
+        "cross_encoder_sts": 0.5277057142857142,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.45152000000000003,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38096363636363634,
+        "cross_encoder_sts": 0.445225,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2096,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5069277922077922
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4677142148760331
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.3969873376623377
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1027A",
+        "element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy.",
+        "score": 0.3904811023622047
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.38096363636363634
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: ability maps directly to AI Deployer Compliance Lead scope \u2014 regulatory/compliance signals detected (\"regulat  :ory|ion|ions|e|ed|ing|or|ors\", \"regulatory   :require|oblig|frame|standard|report|\", \"polic  :y|ies\"). Composite strong (0.5069). Domain AG (affinity 0.82) aligns with REG competency profile. Seniority appropriate: describes regulatory interpretation, compliance program execution, or governance oversight."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 4 match(es) in AI compliance job postings or certification curricula. Sufficient to uphold inclusion.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: ability maps directly to AI Deployer Compliance Lead scope \u2014 regulatory/compliance signals detected (\"regulat  :ory|ion|ions|e|ed|ing|or|ors\", \"regulatory   :require|oblig|frame|standard|report|\", \"polic  :y|ies\"). Composite strong (0.5069). Domain AG (affinity 0.82) aligns with REG competency profile. Seniority appropriate: describes regulatory interpretation, compliance program execution, or governance oversight.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:28.412917+00:00",
+    "pipeline_version": "1.0"
+  }
+}

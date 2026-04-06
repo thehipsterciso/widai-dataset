@@ -123,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to AI Provider Compliance Lead scope \u2014 regulatory/compliance signals detected (core regulatory/compliance vocabulary). Composite score is moderate-to-strong (0.4532). Domain LS (affinity 0.76) aligns with primary REG competency areas. Seniority is appropriate for IC-lead-to-manager band: the KSA describes regulatory interpretation, compliance program work, or governance oversight."
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Leadership & Strategy (affinity 0.76) with insufficient REG signals (0). Composite moderate-to-strong (0.4532). AI Provider Compliance Lead interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "exclude"
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "External check: limited external signal (0 match(es)) in AI compliance role descriptions or certification curricula. Would an AI Provider Compliance Lead self-report this as a required competency?",
-    "evidence": "Challenge answered: competency is implied by AI Provider Compliance Lead scope (domain affinity 0.76, 0 REG signal(s)). Some regulatory competencies appear implicitly in role descriptions without explicit vocabulary matches.",
-    "ruling": "include"
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions. A gap here would not be noticeable to a working AI Provider Compliance Lead.",
+    "ruling": "exclude"
   },
-  "final_decision": "include",
+  "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to AI Provider Compliance Lead scope \u2014 regulatory/compliance signals detected (core regulatory/compliance vocabulary). Composite score is moderate-to-strong (0.4532). Domain LS (affinity 0.76) aligns with primary REG competency areas. Seniority is appropriate for IC-lead-to-manager band: the KSA describes regulatory interpretation, compliance program work, or governance oversight.",
+  "decision_rationale": "Excluded on scope grounds: Leadership & Strategy (affinity 0.76) with insufficient REG signals (0). Composite moderate-to-strong (0.4532). AI Provider Compliance Lead interprets and applies regulatory requirements; does not build systems, deliver training curricula, or develop business cases.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T18:17:22.960450+00:00",
+    "evaluated_at": "2026-04-06T18:41:01.927533+00:00",
     "pipeline_version": "1.0"
   }
 }

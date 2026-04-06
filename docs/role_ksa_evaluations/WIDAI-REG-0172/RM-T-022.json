@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0172",
+  "role_name": "AI Deployer Compliance Lead",
+  "ksa_id": "RM-T-022",
+  "ksa_text": "Develop and maintain AI risk management frameworks, including policies for risk governance, responsibility assignment, and organizational alignment.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Edge case \u2014 included on balance: task carries governance/compliance signals (\"polic  :y|ies\", \"risk   :govern|quantif|measur|metric|mitigation|re\") in Risk Management context (affinity 0.58). Composite minimal (0.0000). A AI Deployer Compliance Lead would encounter this competency in regulatory program work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 3 match(es) in AI compliance job postings or certification curricula. Sufficient to uphold inclusion.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Edge case \u2014 included on balance: task carries governance/compliance signals (\"polic  :y|ies\", \"risk   :govern|quantif|measur|metric|mitigation|re\") in Risk Management context (affinity 0.58). Composite minimal (0.0000). A AI Deployer Compliance Lead would encounter this competency in regulatory program work.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:28.761250+00:00",
+    "pipeline_version": "1.0"
+  }
+}

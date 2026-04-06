@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0034",
+  "role_name": "Database Administrator",
+  "ksa_id": "RM-T-002",
+  "ksa_text": "Perform AI architecture security reviews and gap analysis to evaluate security controls, identify architectural vulnerabilities, and develop security risk management plans.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5397058441558441,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4242475623625749,
+        "cross_encoder_sts": 0.46984403669724767,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3026569641367806,
+        "jaccard": null,
+        "top_element_id": "2054",
+        "top_element_label": "Assess the effectiveness of security controls."
+      },
+      "ddat": {
+        "composite": 0.42108344988344987,
+        "cross_encoder_sts": 0.4863820512820513,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24695384615384613,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.5026736677115987,
+        "cross_encoder_sts": 0.516205172413793,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4665896551724138,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-016",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.4343672749125874,
+        "cross_encoder_sts": 0.48008197115384615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31246141826923074,
+        "jaccard": null,
+        "top_element_id": "T0309",
+        "top_element_label": "Assess the effectiveness of security controls"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5397058441558441,
+        "cross_encoder_sts": 0.5569585714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49369857142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3682097902097902,
+        "cross_encoder_sts": 0.42968461538461544,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20427692307692305,
+        "jaccard": null,
+        "top_element_id": "2.B.4.h",
+        "top_element_label": "Systems Evaluation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.1",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.5397058441558441
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-016",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.5026736677115987
+      },
+      {
+        "framework": "nice",
+        "element_id": "T0309",
+        "element_label": "Assess the effectiveness of security controls",
+        "score": 0.4343672749125874
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2054",
+        "element_label": "Assess the effectiveness of security controls.",
+        "score": 0.4242475623625749
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.42108344988344987
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-T-002 (Risk Management) scores 0.540 composite (signal: moderate). Scope fit for Database Administrator: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Risk Management KSA RM-T-002 as a discrete competency for Database Administrator?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Database Administrator.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk Management is out of scope for Database Administrator.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:59.086288",
+    "pipeline_version": "1.0"
+  }
+}

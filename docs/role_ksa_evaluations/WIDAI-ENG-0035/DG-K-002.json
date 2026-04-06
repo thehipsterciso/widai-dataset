@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0035",
+  "role_name": "Cloud Data Architect",
+  "ksa_id": "DG-K-002",
+  "ksa_text": "Knowledge of enterprise board-level risk reporting and integration of data risk, AI risk, and technology risk into executive risk dashboards and board governance.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.5408418181818181,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4041020584515948,
+        "cross_encoder_sts": 0.44898276661514686,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28442017001545594,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.4187929752066116,
+        "cross_encoder_sts": 0.46998863636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2822712121212121,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.49237257575757576,
+        "cross_encoder_sts": 0.5237916666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.40858833333333333,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.41162085057799347,
+        "cross_encoder_sts": 0.4550100470957614,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2959163265306123,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5408418181818181,
+        "cross_encoder_sts": 0.5775399999999999,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.44298000000000004,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.4",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3575982404692082,
+        "cross_encoder_sts": 0.42179999999999995,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18639354838709676,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.4",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5408418181818181
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.49237257575757576
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4187929752066116
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41162085057799347
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.4041020584515948
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-K-002 (Data Governance) scores 0.541 composite (signal: moderate). Scope fit for Cloud Data Architect: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Edge-case scope, score 0.541 meets threshold. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Data Governance KSA DG-K-002 as a discrete competency for Cloud Data Architect?",
+    "evidence": "Reviewed against Cloud Data Architect market data. Governance content is policy/program management, not cloud architecture. Score 0.541 with no role-specific keyword match confirms exclusion.",
+    "ruling": "Revised to exclude. Governance content is policy/program management, not cloud architecture. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Pass 4 overturn: Governance content is policy/program management, not cloud architecture.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:59.250710",
+    "pipeline_version": "1.0"
+  }
+}

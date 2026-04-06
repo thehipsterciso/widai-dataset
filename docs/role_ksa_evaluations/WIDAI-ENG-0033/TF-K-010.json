@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0033",
+  "role_name": "Data Modeler",
+  "ksa_id": "TF-K-010",
+  "ksa_text": "Knowledge of containerization and container orchestration concepts for data workloads, including Docker container principles, image layering and optimization, Kubernetes pod and service architecture, and resource management for data-intensive containers.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.3604124845182066,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3604124845182066,
+        "cross_encoder_sts": 0.42322874659400544,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19290245231607628,
+        "jaccard": null,
+        "top_element_id": "7010",
+        "top_element_label": "Knowledge of container orchestration and resource management platforms."
+      },
+      "ddat": {
+        "composite": 0.35908149350649354,
+        "cross_encoder_sts": 0.4358464285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.15437499999999998,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.33782045454545456,
+        "cross_encoder_sts": 0.3929625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.190775,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.357968547008547,
+        "cross_encoder_sts": 0.4303962393162393,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1648280341880342,
+        "jaccard": null,
+        "top_element_id": "K0754",
+        "top_element_label": "Knowledge of resource management principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3198557312252964,
+        "cross_encoder_sts": 0.39485217391304345,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.11986521739130435,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3313661157024793,
+        "cross_encoder_sts": 0.3962454545454545,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.15835454545454544,
+        "jaccard": null,
+        "top_element_id": "2.B.3.b",
+        "top_element_label": "Technology Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "7010",
+        "element_label": "Knowledge of container orchestration and resource management platforms.",
+        "score": 0.3604124845182066
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.35908149350649354
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0754",
+        "element_label": "Knowledge of resource management principles and practices",
+        "score": 0.357968547008547
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.33782045454545456
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.b",
+        "element_label": "Technology Design",
+        "score": 0.3313661157024793
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-K-010 (Technical Foundations) scores 0.360 composite (signal: weak). Scope fit for Data Modeler: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.360. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Technical Foundations KSA TF-K-010 as a discrete competency for Data Modeler?",
+    "evidence": "Technical Foundations is primary for Data Modeler. Score 0.360. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. Technical Foundations is core for Data Modeler. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Technical Foundations (primary) for Data Modeler. Score 0.360. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:58.993180",
+    "pipeline_version": "1.0"
+  }
+}

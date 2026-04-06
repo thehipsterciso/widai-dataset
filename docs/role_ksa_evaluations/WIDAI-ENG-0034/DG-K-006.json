@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0034",
+  "role_name": "Database Administrator",
+  "ksa_id": "DG-K-006",
+  "ksa_text": "Knowledge of AI model lifecycle governance, including model versioning strategies, performance monitoring, drift detection, retraining decision logic, and decommissioning procedures.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.4894150610583447,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40540561327561325,
+        "cross_encoder_sts": 0.436108253968254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32353190476190474,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.375505785123967,
+        "cross_encoder_sts": 0.4197181818181818,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2576060606060606,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.47033584905660375,
+        "cross_encoder_sts": 0.46446037735849055,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.48600377358490565,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40778419811320754,
+        "cross_encoder_sts": 0.44595849056603776,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30598608490566037,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4894150610583447,
+        "cross_encoder_sts": 0.4964522388059702,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4706492537313433,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.339169696969697,
+        "cross_encoder_sts": 0.38103333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22753333333333334,
+        "jaccard": null,
+        "top_element_id": "2.C.1.e",
+        "top_element_label": "Customer and Personal Service"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4894150610583447
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.47033584905660375
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.40778419811320754
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.40540561327561325
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.375505785123967
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DG-K-006 (Data Governance) scores 0.489 composite (signal: moderate). Scope fit for Database Administrator: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Governance KSA DG-K-006 as a discrete competency for Database Administrator?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Database Administrator.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Data Governance is out of scope for Database Administrator.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:59.095592",
+    "pipeline_version": "1.0"
+  }
+}

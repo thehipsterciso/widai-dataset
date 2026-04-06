@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0035",
+  "role_name": "Cloud Data Architect",
+  "ksa_id": "RM-T-008",
+  "ksa_text": "Develop continuous monitoring measurement strategies, performance indicators, and automated reporting requirements for ongoing risk assessment.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.4266568181818182,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4266568181818182,
+        "cross_encoder_sts": 0.4361659482758621,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4012991379310345,
+        "jaccard": null,
+        "top_element_id": "1000",
+        "top_element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.41672945454545457,
+        "cross_encoder_sts": 0.444918,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34156,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4150765550239235,
+        "cross_encoder_sts": 0.4253684210526316,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38763157894736844,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.42240784632034634,
+        "cross_encoder_sts": 0.4442529761904762,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36415416666666667,
+        "jaccard": null,
+        "top_element_id": "K0700",
+        "top_element_label": "Knowledge of data standardization policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4073153605015674,
+        "cross_encoder_sts": 0.43798965517241384,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3255172413793103,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36705909090909095,
+        "cross_encoder_sts": 0.3788,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33575,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1000",
+        "element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary.",
+        "score": 0.4266568181818182
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0700",
+        "element_label": "Knowledge of data standardization policies and procedures",
+        "score": 0.42240784632034634
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.41672945454545457
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4150765550239235
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4073153605015674
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-T-008 (Risk Management) scores 0.427 composite (signal: weak). Scope fit for Cloud Data Architect: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Risk Management KSA RM-T-008 as a discrete competency for Cloud Data Architect?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Cloud Data Architect.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk Management is out of scope for Cloud Data Architect.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:43:59.290572",
+    "pipeline_version": "1.0"
+  }
+}
