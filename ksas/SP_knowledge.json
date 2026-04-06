@@ -3,176 +3,179 @@
   "domain_code": "SP",
   "domain_title": "Security & Privacy",
   "type": "Knowledge",
-  "count": 14,
-  "schema_version": "2.0.0",
+  "count": 19,
+  "schema_version": "3.0.0",
   "entries": [
     {
       "ksa_id": "SP-K-001",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of AI application security risks, including prompt injection, jailbreaking, data exfiltration via LLM outputs, and model supply chain vulnerabilities.",
+      "statement": "Knowledge of AI security threat modeling and attack vectors, including prompt injection, data exfiltration, model poisoning, supply chain vulnerabilities, and threat assessment methodologies specific to machine learning systems.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DEV-03.03-K-004"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-002",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of global data protection regulations, including GDPR, CCPA/CPRA, LGPD, PDPA, and sector-specific privacy obligations, and the data management requirements each creates.",
+      "statement": "Knowledge of global data protection regulations and privacy laws, including GDPR, CCPA/CPRA, LGPD, PDPA, and sector-specific privacy obligations, with focus on applicable legal bases for processing and regulatory enforcement.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.04-K-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-003",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of privacy-by-design principles and how to embed privacy requirements into data platform design, data product development, and AI system design.",
+      "statement": "Knowledge of privacy-by-design and privacy-by-default principles, including integration into system architecture, data minimization, purpose limitation, storage limitation, and consent management design patterns across data and AI systems.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.04-K-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-004",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of data subject rights management, including rights request intake, fulfillment workflows, response timelines, and documentation requirements.",
+      "statement": "Knowledge of data subject rights fulfillment and management, including rights request intake procedures, response workflows, compliance timelines, documentation standards, and remediation processes for access, deletion, and rectification requests.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "DSM-04.04-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-005",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of data classification, sensitivity labeling, and the architectural controls required to enforce data access, privacy, and residency requirements by design.",
+      "statement": "Knowledge of data classification, sensitivity labeling, and access controls, including classification standards and policies, architectural enforcement mechanisms, and controls required to enforce data privacy and residency requirements by design.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "ENG-02.01-K-005"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-006",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of the regulatory and compliance landscape governing enterprise data and AI, including data protection law, AI-specific regulation, sector-specific obligations, and cross-jurisdictional compliance requirements.",
+      "statement": "Knowledge of the regulatory and compliance landscape governing enterprise data and AI systems, including data protection law, AI-specific regulation, sector-specific obligations, cross-jurisdictional requirements, and regulatory authority oversight mechanisms.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.01-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-007",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of data protection law, including GDPR, CCPA/CPRA, and sector-specific privacy regulations, with emphasis on the legal bases for processing, data subject rights, cross-border transfer mechanisms, and enforcement precedent.",
+      "statement": "Knowledge of data protection law in detail, including GDPR, CCPA/CPRA, and sector-specific privacy regulations, with focus on legal bases for processing, data subject rights, cross-border transfer mechanisms, compliance procedures, and enforcement precedent.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.07-K-001"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-008",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of the Data Protection Officer's statutory role, responsibilities, and independence requirements under GDPR Articles 37-39, including reporting lines, conflict-of-interest prohibitions, and the distinction between advisory and decision-making authority.",
+      "statement": "Knowledge of the Data Protection Officer role and responsibilities, including statutory independence requirements under GDPR Articles 37-39, reporting structures, conflict-of-interest prohibitions, advisory authority, and coordination with supervisory authorities.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.07-K-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-009",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of Data Protection Impact Assessment methodology, including the conditions that make assessments mandatory, techniques for evaluating risk to individuals, and how to document residual risk and mitigation measures to supervisory authority standards.",
+      "statement": "Knowledge of Data Protection Impact Assessment (DPIA) methodology, including triggering conditions, risk evaluation techniques, individual impact assessment, residual risk documentation, and supervisory authority reporting standards.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.07-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-010",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of privacy-by-design and privacy-by-default principles, including their application to system architecture, data minimization, purpose limitation, storage limitation, and consent management design patterns.",
+      "statement": "Knowledge of privacy technologies and data protection tools, including encryption standards, anonymization and de-identification techniques, privacy-enhancing technologies, data minimization implementations, and monitoring tools for privacy compliance.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "GOV-01.07-K-004"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-011",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of training data integrity risks, including data poisoning attack vectors, supply chain contamination, label manipulation, and the detection and prevention methods for each.",
+      "statement": "Knowledge of training data integrity risks and mitigation, including data poisoning attack vectors, supply chain contamination, label manipulation, detection methodologies, and prevention controls for AI model training pipelines.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "RSK-06.02-K-002"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-012",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of LLM-specific security vulnerabilities, including the OWASP Top 10 for LLM Applications (prompt injection, insecure output handling, training data poisoning, model theft, excessive agency).",
+      "statement": "Knowledge of LLM-specific security vulnerabilities and risks, including prompt injection, jailbreaking, insecure output handling, training data poisoning, model theft, prompt leakage, and model supply chain security.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "RSK-06.02-K-003"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-013",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of model supply chain security, including risks in open-source model adoption, fine-tuning pipeline integrity, third-party dataset provenance, and model registry security controls.",
+      "statement": "Knowledge of AI model supply chain security and risk management, including third-party component risks, open-source model adoption risks, fine-tuning pipeline integrity, dataset provenance verification, and model registry controls.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "RSK-06.02-K-004"
-      ]
+      "origin_version": "0.8.0"
     },
     {
       "ksa_id": "SP-K-014",
       "type": "Knowledge",
       "domain": "Security & Privacy",
       "domain_code": "SP",
-      "statement": "Knowledge of data protection regulatory requirements, including GDPR, CCPA, HIPAA, SOX data requirements, and sector-specific data regulations, and the specific data management obligations each creates.",
+      "statement": "Knowledge of sector-specific data protection and privacy regulations, including HIPAA health information requirements, SOX financial data standards, industry-specific compliance obligations, and cross-jurisdictional regulatory interactions.",
       "origin_framework": "WIDAI",
-      "origin_version": "0.5.0",
-      "legacy_ids": [
-        "RSK-06.04-K-001"
-      ]
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-K-015",
+      "type": "Knowledge",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Knowledge of AI risk assessment and bias detection methodologies for privacy and security, including fairness assessment, privacy risk evaluation across AI lifecycle, trustworthiness evaluation frameworks, and detection techniques for bias in data and models.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-K-016",
+      "type": "Knowledge",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Knowledge of data remediation and recovery procedures, including data breach response workflows, data deletion and sanitization methods, remediation requirements under privacy law, forensic data recovery considerations, and incident documentation standards.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-K-017",
+      "type": "Knowledge",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Knowledge of privacy risk assessment and continuous monitoring, including Privacy Impact Assessment methodologies, risk scoring and prioritization, anomaly detection for privacy violations, threat assessment techniques, and continuous monitoring frameworks.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-K-018",
+      "type": "Knowledge",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Knowledge of AI model and system transparency and explainability requirements, including interpretability mechanisms, output explanation methods, documentation of model capabilities and limitations, and design of human oversight mechanisms.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
+    },
+    {
+      "ksa_id": "SP-K-019",
+      "type": "Knowledge",
+      "domain": "Security & Privacy",
+      "domain_code": "SP",
+      "statement": "Knowledge of AI quality management systems and regulatory compliance documentation, including compliance strategy development, design control documentation, quality assurance procedures, conformity assessment, and technical documentation for regulatory demonstration.",
+      "origin_framework": "WIDAI",
+      "origin_version": "0.8.0"
     }
   ]
 }
