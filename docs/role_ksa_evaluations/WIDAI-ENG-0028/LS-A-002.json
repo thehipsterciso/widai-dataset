@@ -7,7 +7,7 @@
   "ksa_dimension": "Ability",
   "ksa_domain": "LS",
   "pass_1_scoring": {
-    "composite_score": 0.4540385026737968,
+    "composite_score": 0.4552584415584416,
     "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.39067979274611403,
         "jaccard": null,
         "top_element_id": "5880",
-        "top_element_label": ""
+        "top_element_label": "Engage and collaborate with allies and partners to advance shared strategic AI objectives."
       },
       "ddat": {
         "composite": 0.4540385026737968,
@@ -29,9 +29,55 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.3911545454545455,
+        "cross_encoder_sts": 0.3887,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3977,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4275598484848485,
+        "cross_encoder_sts": 0.4536766666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35791500000000004,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.43953496503496503,
+        "cross_encoder_sts": 0.4327,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.45776153846153844,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.4",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4552584415584416,
+        "cross_encoder_sts": 0.4893571428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36432857142857145,
+        "jaccard": null,
+        "top_element_id": "2.B.1.d",
+        "top_element_label": "Negotiation"
       }
     },
     "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.d",
+        "element_label": "Negotiation",
+        "score": 0.4552584415584416
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-010",
@@ -39,12 +85,33 @@
         "score": 0.4540385026737968
       },
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.4",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.43953496503496503
+      },
+      {
         "framework": "dcwf",
         "element_id": "5880",
-        "element_label": "",
+        "element_label": "Engage and collaborate with allies and partners to advance shared strategic AI objectives.",
         "score": 0.43854036740461616
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0655",
+        "element_label": "Knowledge of intelligence fusion",
+        "score": 0.4275598484848485
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Leadership & Strategy domain has low DE affinity (0.06), and the text \u2014 'Ability to align strategy, business objectives, and technology capabilities, integrating strategic v...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4540, top tier for this dataset)."
+    "rationale": "KSA LS-A-002 (Leadership and Strategy/Ability) is excluded as out_of_scope (composite 0.455, highest: O*NET at 0.455). Leadership and Strategy is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own leadership and strategy frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.455, and Leadership and Strategy (LS) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Leadership and Strategy KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Leadership and Strategy competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Leadership and Strategy is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Leadership & Strategy domain has low DE affinity (0.06), and the text \u2014 'Ability to align strategy, business objectives, and technology capabilities, integrating strategic v...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4540, top tier for this dataset).",
+  "decision_rationale": "KSA LS-A-002 (Leadership and Strategy/Ability) is excluded as out_of_scope (composite 0.455, highest: O*NET at 0.455). Leadership and Strategy is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own leadership and strategy frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.125594Z",
+    "evaluated_at": "2026-04-06T17:57:45.276961+00:00",
     "pipeline_version": "1.0"
   }
 }

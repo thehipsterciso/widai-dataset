@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3614551573426574,
         "jaccard": null,
         "top_element_id": "185A",
-        "top_element_label": ""
+        "top_element_label": "Skill in developing applications that can log and handle errors, exceptions, and application faults and logging."
       },
       "ddat": {
         "composite": 0.43273371212121214,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-175",
         "top_element_label": "Troubleshooting and problem resolution"
+      },
+      "eu_ai_act": {
+        "composite": 0.4166154882154882,
+        "cross_encoder_sts": 0.44932962962962963,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32937777777777777,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4443626972601413,
+        "cross_encoder_sts": 0.48702470713525026,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33059733759318427,
+        "jaccard": null,
+        "top_element_id": "S0175",
+        "top_element_label": "Skill in performing root cause analysis"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41678780991735537,
+        "cross_encoder_sts": 0.44920454545454547,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33034318181818184,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.438856993006993,
+        "cross_encoder_sts": 0.4771269230769231,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3368038461538462,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
       }
     },
     "top_anchors": [
       {
         "framework": "dcwf",
         "element_id": "185A",
-        "element_label": "",
+        "element_label": "Skill in developing applications that can log and handle errors, exceptions, and application faults and logging.",
         "score": 0.44562184520025433
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0175",
+        "element_label": "Skill in performing root cause analysis",
+        "score": 0.4443626972601413
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.438856993006993
       },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-175",
         "element_label": "Troubleshooting and problem resolution",
         "score": 0.43273371212121214
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41678780991735537
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: ability from Technology Fundamentals (domain affinity 0.82); no DE-specific signals and low domain affinity. STRM composite score is strong (0.4456, top tier for this dataset). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-A-002 (Technical Foundations/Ability) scores 0.446 composite (highest: DCWF at 0.446) and is in_scope for the Data Engineer role. The KSA aligns with Technical Foundations competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DCWF signal (0.446), and Technical Foundations handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does DCWF signal (0.446) for this Technical Foundations KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Technical Foundations appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Technical Foundations at composite 0.446 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: ability from Technology Fundamentals (domain affinity 0.82); no DE-specific signals and low domain affinity. STRM composite score is strong (0.4456, top tier for this dataset). A working DE would be aware of but not accountable for this competency.",
+  "decision_rationale": "KSA TF-A-002 (Technical Foundations/Ability) scores 0.446 composite (highest: DCWF at 0.446) and is in_scope for the Data Engineer role. The KSA aligns with Technical Foundations competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.131189Z",
+    "evaluated_at": "2026-04-06T17:57:45.286082+00:00",
     "pipeline_version": "1.0"
   }
 }

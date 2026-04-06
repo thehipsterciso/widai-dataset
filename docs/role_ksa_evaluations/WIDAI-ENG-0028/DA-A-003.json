@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3323748538011696,
         "jaccard": null,
         "top_element_id": "1099",
-        "top_element_label": ""
+        "top_element_label": "Skill in analyzing volatile data."
       },
       "ddat": {
         "composite": 0.41051324675324674,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3373363636363636,
+        "cross_encoder_sts": 0.3651,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2633,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.39201491170699804,
+        "cross_encoder_sts": 0.4235021582733813,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3080489208633094,
+        "jaccard": null,
+        "top_element_id": "K0907",
+        "top_element_label": "Knowledge of cross-domain solutions"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38677832167832166,
+        "cross_encoder_sts": 0.42483846153846155,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28528461538461536,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.40446558441558444,
+        "cross_encoder_sts": 0.42485,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35010714285714284,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.3",
+        "top_element_label": "Problem Sensitivity"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.41051324675324674
       },
       {
+        "framework": "onet",
+        "element_id": "1.A.1.b.3",
+        "element_label": "Problem Sensitivity",
+        "score": 0.40446558441558444
+      },
+      {
         "framework": "dcwf",
         "element_id": "1099",
-        "element_label": "",
+        "element_label": "Skill in analyzing volatile data.",
         "score": 0.39711020733652314
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0907",
+        "element_label": "Knowledge of cross-domain solutions",
+        "score": 0.39201491170699804
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-5.2",
+        "element_label": "Processes are in place for robust engagement with relevant AI actors.",
+        "score": 0.38677832167832166
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: ability maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"data pipelin\"). STRM composite score is moderate-to-strong (0.4105); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA DA-A-003 (Data Architecture/Ability) scores 0.411 composite (highest: DDaT at 0.411) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.411), and Data Architecture handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 1 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does DDaT signal (0.411) for this Data Architecture KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Architecture appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Architecture at composite 0.411 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: ability maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"data pipelin\"). STRM composite score is moderate-to-strong (0.4105); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA DA-A-003 (Data Architecture/Ability) scores 0.411 composite (highest: DDaT at 0.411) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.303074Z",
+    "evaluated_at": "2026-04-06T17:57:45.385065+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.19290245231607628,
         "jaccard": null,
         "top_element_id": "7010",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of container orchestration and resource management platforms."
       },
       "ddat": {
         "composite": 0.35908149350649354,
@@ -29,13 +29,53 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.33782045454545456,
+        "cross_encoder_sts": 0.3929625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.190775,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.357968547008547,
+        "cross_encoder_sts": 0.4303962393162393,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1648280341880342,
+        "jaccard": null,
+        "top_element_id": "K0754",
+        "top_element_label": "Knowledge of resource management principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3198557312252964,
+        "cross_encoder_sts": 0.39485217391304345,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.11986521739130435,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3313661157024793,
+        "cross_encoder_sts": 0.3962454545454545,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.15835454545454544,
+        "jaccard": null,
+        "top_element_id": "2.B.3.b",
+        "top_element_label": "Technology Design"
       }
     },
     "top_anchors": [
       {
         "framework": "dcwf",
         "element_id": "7010",
-        "element_label": "",
+        "element_label": "Knowledge of container orchestration and resource management platforms.",
         "score": 0.3604124845182066
       },
       {
@@ -43,8 +83,35 @@
         "element_id": "DDAT-SK-010",
         "element_label": "Analysis and synthesis (data ethics)",
         "score": 0.35908149350649354
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0754",
+        "element_label": "Knowledge of resource management principles and practices",
+        "score": 0.357968547008547
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.33782045454545456
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.b",
+        "element_label": "Technology Design",
+        "score": 0.3313661157024793
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"orchestrat\", \"containers?  ?:data|applic|image|deploy|workload\", \"kubernetes\"). STRM composite score is moderate-to-strong (0.3604); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA TF-K-010 (Technical Foundations/Knowledge) scores 0.360 composite (highest: DCWF at 0.360) and is in_scope for the Data Engineer role. The KSA aligns with Technical Foundations competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DCWF signal (0.360), and Technical Foundations handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 2 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does DCWF signal (0.360) for this Technical Foundations KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Technical Foundations appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Technical Foundations at composite 0.360 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"orchestrat\", \"containers?  ?:data|applic|image|deploy|workload\", \"kubernetes\"). STRM composite score is moderate-to-strong (0.3604); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA TF-K-010 (Technical Foundations/Knowledge) scores 0.360 composite (highest: DCWF at 0.360) and is in_scope for the Data Engineer role. The KSA aligns with Technical Foundations competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.431342Z",
+    "evaluated_at": "2026-04-06T17:57:45.426475+00:00",
     "pipeline_version": "1.0"
   }
 }

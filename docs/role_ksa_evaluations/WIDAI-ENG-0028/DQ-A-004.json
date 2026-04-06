@@ -7,7 +7,7 @@
   "ksa_dimension": "Ability",
   "ksa_domain": "DQ",
   "pass_1_scoring": {
-    "composite_score": 0.4151080999569151,
+    "composite_score": 0.42798522727272725,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3530317535545024,
         "jaccard": null,
         "top_element_id": "1020A",
-        "top_element_label": ""
+        "top_element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance)."
       },
       "ddat": {
         "composite": 0.4117689393939394,
@@ -29,13 +29,65 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-014",
         "top_element_label": "Applying user-centred insights"
+      },
+      "eu_ai_act": {
+        "composite": 0.42798522727272725,
+        "cross_encoder_sts": 0.458575,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3464125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.41736551114255394,
+        "cross_encoder_sts": 0.4442377431906615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3457062256809339,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.388893388429752,
+        "cross_encoder_sts": 0.4260363636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2898454545454545,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4095969696969697,
+        "cross_encoder_sts": 0.4315333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35109999999999997,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
       }
     },
     "top_anchors": [
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.42798522727272725
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41736551114255394
+      },
+      {
         "framework": "dcwf",
         "element_id": "1020A",
-        "element_label": "",
+        "element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance).",
         "score": 0.4151080999569151
       },
       {
@@ -43,8 +95,23 @@
         "element_id": "DDAT-SK-014",
         "element_label": "Applying user-centred insights",
         "score": 0.4117689393939394
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.4095969696969697
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: ability maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data quality\", \"data lifecycle\"). STRM composite score is moderate-to-strong (0.4151); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA DQ-A-004 (Data Quality/Ability) scores 0.428 composite (highest: EU AI Act at 0.428) and is in_scope for the Data Engineer role. The KSA addresses data quality enforcement and validation \u2014 a primary IC-level data engineering responsibility. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, EU AI Act signal (0.428), and Data Quality handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 1 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does EU AI Act signal (0.428) for this Data Quality KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Quality appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Quality at composite 0.428 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: ability maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data quality\", \"data lifecycle\"). STRM composite score is moderate-to-strong (0.4151); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA DQ-A-004 (Data Quality/Ability) scores 0.428 composite (highest: EU AI Act at 0.428) and is in_scope for the Data Engineer role. The KSA addresses data quality enforcement and validation \u2014 a primary IC-level data engineering responsibility. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.268037Z",
+    "evaluated_at": "2026-04-06T17:57:45.326459+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -7,8 +7,8 @@
   "ksa_dimension": "Ability",
   "ksa_domain": "SP",
   "pass_1_scoring": {
-    "composite_score": 0.44258249158249163,
-    "signal_strength": "weak",
+    "composite_score": 0.499866810966811,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.42178072314049586,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3573893181818181,
         "jaccard": null,
         "top_element_id": "5856",
-        "top_element_label": ""
+        "top_element_label": "Communicate the results of AI risk assessments to relevant stakeholders."
       },
       "ddat": {
         "composite": 0.44258249158249163,
@@ -29,9 +29,61 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4568288461538461,
+        "cross_encoder_sts": 0.436625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5107057692307693,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4069196310935441,
+        "cross_encoder_sts": 0.4404202898550725,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31758454106280193,
+        "jaccard": null,
+        "top_element_id": "K0638",
+        "top_element_label": "Knowledge of security awareness programs"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.499866810966811,
+        "cross_encoder_sts": 0.4929936507936508,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5181952380952382,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40176704545454545,
+        "cross_encoder_sts": 0.442025,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2944125,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
       }
     },
     "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.499866810966811
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4568288461538461
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-010",
@@ -41,10 +93,25 @@
       {
         "framework": "dcwf",
         "element_id": "5856",
-        "element_label": "",
+        "element_label": "Communicate the results of AI risk assessments to relevant stakeholders.",
         "score": 0.42178072314049586
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0638",
+        "element_label": "Knowledge of security awareness programs",
+        "score": 0.4069196310935441
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
-    "seniority_fit": "appropriate",
+    "scope_fit": "edge_case",
+    "seniority_fit": "too_senior",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Ability to develop comprehensive privacy management frameworks, policies, and compliance procedures ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4426, top tier for this dataset)."
+    "rationale": "KSA SP-A-003 (Security and Privacy/Ability) is excluded as edge_case (composite 0.500, highest: NIST AI RMF at 0.500). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.500, and Security and Privacy (SP) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Security and Privacy KSA (composite 0.500)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this Security and Privacy competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Ability to develop comprehensive privacy management frameworks, policies, and compliance procedures ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4426, top tier for this dataset).",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA SP-A-003 (Security and Privacy/Ability) is excluded as edge_case (composite 0.500, highest: NIST AI RMF at 0.500). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.135633Z",
+    "evaluated_at": "2026-04-06T17:57:45.242900+00:00",
     "pipeline_version": "1.0"
   }
 }

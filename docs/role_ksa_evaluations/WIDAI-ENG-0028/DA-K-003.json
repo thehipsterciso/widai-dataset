@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "DA",
   "pass_1_scoring": {
-    "composite_score": 0.39760414673046257,
+    "composite_score": 0.40383299999999994,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.34131578947368424,
         "jaccard": null,
         "top_element_id": "120",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of sources, characteristics, and uses of the organization\u2019s data assets."
       },
       "ddat": {
         "composite": 0.3964098484848485,
@@ -29,13 +29,49 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-047",
         "top_element_label": "Data architecture"
+      },
+      "nice": {
+        "composite": 0.40383299999999994,
+        "cross_encoder_sts": 0.42053399999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.359297,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36224090909090906,
+        "cross_encoder_sts": 0.4195,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20955000000000001,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-3.4",
+        "top_element_label": "AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood."
+      },
+      "onet": {
+        "composite": 0.3487212121212121,
+        "cross_encoder_sts": 0.3961666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22219999999999998,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40383299999999994
+      },
+      {
         "framework": "dcwf",
         "element_id": "120",
-        "element_label": "",
+        "element_label": "Knowledge of sources, characteristics, and uses of the organization\u2019s data assets.",
         "score": 0.39760414673046257
       },
       {
@@ -43,7 +79,29 @@
         "element_id": "DDAT-SK-047",
         "element_label": "Data architecture",
         "score": 0.3964098484848485
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-3.4",
+        "element_label": "AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood.",
+        "score": 0.36224090909090906
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.3487212121212121
       }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
     ],
     "metrics_used": [
       "bi_encoder_cosine",
@@ -56,29 +114,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: knowledge from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.3976). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-K-003 (Data Architecture/Knowledge) scores 0.404 composite (highest: NICE at 0.404) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.404), and Data Architecture handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does NICE signal (0.404) for this Data Architecture KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Architecture appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Architecture at composite 0.404 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: knowledge from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.3976). A working DE would be aware of but not accountable for this competency.",
+  "decision_rationale": "KSA DA-K-003 (Data Architecture/Knowledge) scores 0.404 composite (highest: NICE at 0.404) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.377727Z",
+    "evaluated_at": "2026-04-06T17:57:45.402636+00:00",
     "pipeline_version": "1.0"
   }
 }

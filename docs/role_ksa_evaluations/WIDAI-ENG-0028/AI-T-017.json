@@ -7,7 +7,7 @@
   "ksa_dimension": "Task",
   "ksa_domain": "AI",
   "pass_1_scoring": {
-    "composite_score": 0.4034236612702366,
+    "composite_score": 0.4299038567493113,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.31016593406593407,
         "jaccard": null,
         "top_element_id": "1073",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
       },
       "ddat": {
         "composite": 0.4034236612702366,
@@ -29,9 +29,67 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4299038567493113,
+        "cross_encoder_sts": 0.4614666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3457363636363636,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.39991092772527614,
+        "cross_encoder_sts": 0.4396846266471449,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29384773060029284,
+        "jaccard": null,
+        "top_element_id": "K1072",
+        "top_element_label": "Knowledge of automated security control testing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4191858800773694,
+        "cross_encoder_sts": 0.4527574468085106,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32966170212765955,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.40660194805194805,
+        "cross_encoder_sts": 0.43597857142857144,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32826428571428573,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
       }
     },
     "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4299038567493113
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.4191858800773694
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.40660194805194805
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-023",
@@ -39,12 +97,21 @@
         "score": 0.4034236612702366
       },
       {
-        "framework": "dcwf",
-        "element_id": "1073",
-        "element_label": "",
-        "score": 0.398065145965146
+        "framework": "nice",
+        "element_id": "K1072",
+        "element_label": "Knowledge of automated security control testing tools and techniques",
+        "score": 0.39991092772527614
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: task from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4034). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-T-017 (AI and Machine Learning/Task) scores 0.430 composite (highest: EU AI Act at 0.430) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, EU AI Act signal (0.430), and AI and Machine Learning handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 1 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence support AI/ML (AI) competencies for Data Engineer IC/senior IC, or does this belong to ML Engineering?",
+    "evidence": "AI/ML engineering overlap appears in 30-40% of senior DE postings: feature engineering, ML pipelines, data prep for training. Governance/ethics framing (DE signals=2, OOS signals=0) shifts the boundary toward MLOps or AI governance roles.",
+    "ruling": "Include upheld. Technical ML/DE overlap with 2 DE signals and no OOS signals is market-supported. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: task from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4034). A working DE would be aware of but not accountable for this competency.",
+  "decision_rationale": "KSA AI-T-017 (AI and Machine Learning/Task) scores 0.430 composite (highest: EU AI Act at 0.430) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.358023Z",
+    "evaluated_at": "2026-04-06T17:57:45.322115+00:00",
     "pipeline_version": "1.0"
   }
 }

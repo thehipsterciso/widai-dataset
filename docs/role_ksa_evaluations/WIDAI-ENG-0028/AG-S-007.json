@@ -7,8 +7,8 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "AG",
   "pass_1_scoring": {
-    "composite_score": 0.4069529187686606,
-    "signal_strength": "weak",
+    "composite_score": 0.5416144155844156,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.4069529187686606,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.32501687429218573,
         "jaccard": null,
         "top_element_id": "1037A",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of information technology (IT) risk management policies, requirements, and procedures."
       },
       "ddat": {
         "composite": 0.39149700299700296,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-014",
         "top_element_label": "Applying user-centred insights"
+      },
+      "eu_ai_act": {
+        "composite": 0.5244494607087827,
+        "cross_encoder_sts": 0.5293372881355932,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5114152542372882,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-014",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.39909635994087217,
+        "cross_encoder_sts": 0.43819491869918703,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2948335365853658,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5416144155844156,
+        "cross_encoder_sts": 0.5476085714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.52563,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-3.2",
+        "top_element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle."
+      },
+      "onet": {
+        "composite": 0.39276628787878787,
+        "cross_encoder_sts": 0.42397083333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30955416666666663,
+        "jaccard": null,
+        "top_element_id": "2.B.1.b",
+        "top_element_label": "Coordination"
       }
     },
     "top_anchors": [
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-3.2",
+        "element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle.",
+        "score": 0.5416144155844156
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-014",
+        "element_label": "Human oversight",
+        "score": 0.5244494607087827
+      },
+      {
         "framework": "dcwf",
         "element_id": "1037A",
-        "element_label": "",
+        "element_label": "Knowledge of information technology (IT) risk management policies, requirements, and procedures.",
         "score": 0.4069529187686606
       },
       {
-        "framework": "ddat",
-        "element_id": "DDAT-SK-014",
-        "element_label": "Applying user-centred insights",
-        "score": 0.39149700299700296
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39909635994087217
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.b",
+        "element_label": "Coordination",
+        "score": 0.39276628787878787
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Skill in evaluating AI transparency and accountability mechanisms, including assessing explainabilit...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4070)."
+    "rationale": "KSA AG-S-007 (AI Governance/Skill) is excluded as out_of_scope (composite 0.542, highest: NIST AI RMF at 0.542). AI Governance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own ai governance frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.542, and AI Governance (AG) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "AI Governance competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Skill in evaluating AI transparency and accountability mechanisms, including assessing explainabilit...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4070).",
+  "decision_rationale": "KSA AG-S-007 (AI Governance/Skill) is excluded as out_of_scope (composite 0.542, highest: NIST AI RMF at 0.542). AI Governance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own ai governance frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.332585Z",
+    "evaluated_at": "2026-04-06T17:57:45.223008+00:00",
     "pipeline_version": "1.0"
   }
 }

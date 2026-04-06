@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.36998865546218485,
         "jaccard": null,
         "top_element_id": "1027A",
-        "top_element_label": ""
+        "top_element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy."
       },
       "ddat": {
         "composite": 0.4692260442260442,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-016",
         "top_element_label": "Architecture communication"
+      },
+      "eu_ai_act": {
+        "composite": 0.4253785714285715,
+        "cross_encoder_sts": 0.42762857142857147,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41937857142857143,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-009",
+        "top_element_label": "Technical documentation"
+      },
+      "nice": {
+        "composite": 0.42012126823793494,
+        "cross_encoder_sts": 0.4527253086419753,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3331771604938272,
+        "jaccard": null,
+        "top_element_id": "K0476",
+        "top_element_label": "Knowledge of language processing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4335684210526316,
+        "cross_encoder_sts": 0.4364578947368421,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42586315789473683,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.430892513368984,
+        "cross_encoder_sts": 0.46385882352941177,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34298235294117646,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.4692260442260442
       },
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4335684210526316
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.430892513368984
+      },
+      {
         "framework": "dcwf",
         "element_id": "1027A",
-        "element_label": "",
+        "element_label": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy.",
         "score": 0.42699675324675324
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-009",
+        "element_label": "Technical documentation",
+        "score": 0.4253785714285715
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Risk & Compliance domain has low DE affinity (0.18), and the text \u2014 'Ability to conduct risk analyses of systems, applications, and business processes to identify compli...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4692, top tier for this dataset)."
+    "rationale": "KSA RC-A-003 (Risk and Compliance/Ability) is excluded as out_of_scope (composite 0.469, highest: DDaT at 0.469). Risk and Compliance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own risk and compliance frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.469, and Risk and Compliance (RC) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Risk and Compliance KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Risk and Compliance competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Risk and Compliance is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Risk & Compliance domain has low DE affinity (0.18), and the text \u2014 'Ability to conduct risk analyses of systems, applications, and business processes to identify compli...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4692, top tier for this dataset).",
+  "decision_rationale": "KSA RC-A-003 (Risk and Compliance/Ability) is excluded as out_of_scope (composite 0.469, highest: DDaT at 0.469). Risk and Compliance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own risk and compliance frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.118476Z",
+    "evaluated_at": "2026-04-06T17:57:45.260094+00:00",
     "pipeline_version": "1.0"
   }
 }

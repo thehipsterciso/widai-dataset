@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.36218826714801444,
         "jaccard": null,
         "top_element_id": "1034A",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of Personally Identifiable Information (PII) data security standards."
       },
       "ddat": {
         "composite": 0.4329619617224881,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-007",
         "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4164477272727273,
+        "cross_encoder_sts": 0.432495,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.373655,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-007",
+        "top_element_label": "Registration"
+      },
+      "nice": {
+        "composite": 0.428357169361251,
+        "cross_encoder_sts": 0.4556848396501458,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35548338192419826,
+        "jaccard": null,
+        "top_element_id": "K0934",
+        "top_element_label": "Knowledge of data classification policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39570259740259744,
+        "cross_encoder_sts": 0.4198214285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3313857142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4028839160839161,
+        "cross_encoder_sts": 0.42527692307692305,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3431692307692308,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.4329619617224881
       },
       {
+        "framework": "nice",
+        "element_id": "K0934",
+        "element_label": "Knowledge of data classification policies and procedures",
+        "score": 0.428357169361251
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-007",
+        "element_label": "Registration",
+        "score": 0.4164477272727273
+      },
+      {
         "framework": "dcwf",
         "element_id": "1034A",
-        "element_label": "",
+        "element_label": "Knowledge of Personally Identifiable Information (PII) data security standards.",
         "score": 0.4126213488677388
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.b",
+        "element_label": "Active Learning",
+        "score": 0.4028839160839161
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"data quality\", \"monitoring data\"). STRM composite score is strong (0.4330, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA DG-K-010 (Data Governance/Knowledge) scores 0.433 composite (highest: DDaT at 0.433) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.433), and Data Governance handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation strong: 3 job-posting-level and 0 certification-level matches (AWS DE, Databricks, dbt, GCP DE). Competency appears regularly in DE role descriptions and/or certification curricula.",
-    "ruling": "include"
+    "challenge": "Does market evidence support Data Governance (DG) \u2014 specifically implementation vs. ownership \u2014 for Data Engineer roles?",
+    "evidence": "Data Engineers implement governance processes (metadata tagging, lineage capture, catalog population, quality rule enforcement) \u2014 present in 25-40% of senior DE postings. Governance ownership (policy authoring, stewardship programs) belongs to governance-specific roles.",
+    "ruling": "Include upheld. Governance implementation with 4 DE signals is market-supported for senior DE profiles. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"data quality\", \"monitoring data\"). STRM composite score is strong (0.4330, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA DG-K-010 (Data Governance/Knowledge) scores 0.433 composite (highest: DDaT at 0.433) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.164055Z",
+    "evaluated_at": "2026-04-06T17:57:45.313472+00:00",
     "pipeline_version": "1.0"
   }
 }

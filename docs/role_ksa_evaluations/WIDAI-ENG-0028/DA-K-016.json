@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "DA",
   "pass_1_scoring": {
-    "composite_score": 0.4069534942256441,
+    "composite_score": 0.4082140565317036,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.35151872964169384,
         "jaccard": null,
         "top_element_id": "1002A",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting reviews of systems."
       },
       "ddat": {
         "composite": 0.4035734976887519,
@@ -29,13 +29,59 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.374658041958042,
+        "cross_encoder_sts": 0.40970769230769233,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2811923076923077,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-019",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.4082140565317036,
+        "cross_encoder_sts": 0.4364117647058824,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3330201680672269,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3438263636363636,
+        "cross_encoder_sts": 0.39228999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21459,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-4.1",
+        "top_element_label": "Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly."
+      },
+      "onet": {
+        "composite": 0.3718181818181818,
+        "cross_encoder_sts": 0.4013,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2932,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.1",
+        "top_element_label": "Working with Computers"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4082140565317036
+      },
+      {
         "framework": "dcwf",
         "element_id": "1002A",
-        "element_label": "",
+        "element_label": "Skill in conducting reviews of systems.",
         "score": 0.4069534942256441
       },
       {
@@ -43,8 +89,29 @@
         "element_id": "DDAT-SK-023",
         "element_label": "Capability building for digital, data and technology",
         "score": 0.4035734976887519
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-019",
+        "element_label": "Quality management system",
+        "score": 0.374658041958042
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.3.b.1",
+        "element_label": "Working with Computers",
+        "score": 0.3718181818181818
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: knowledge from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4070). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-K-016 (Data Architecture/Knowledge) scores 0.408 composite (highest: NICE at 0.408) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.408), and Data Architecture handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does NICE signal (0.408) for this Data Architecture KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Architecture appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Architecture at composite 0.408 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: knowledge from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4070). A working DE would be aware of but not accountable for this competency.",
+  "decision_rationale": "KSA DA-K-016 (Data Architecture/Knowledge) scores 0.408 composite (highest: NICE at 0.408) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.331884Z",
+    "evaluated_at": "2026-04-06T17:57:45.391209+00:00",
     "pipeline_version": "1.0"
   }
 }

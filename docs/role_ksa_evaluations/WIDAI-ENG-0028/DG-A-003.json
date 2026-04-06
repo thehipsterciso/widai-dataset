@@ -7,8 +7,8 @@
   "ksa_dimension": "Ability",
   "ksa_domain": "DG",
   "pass_1_scoring": {
-    "composite_score": 0.4290333333333334,
-    "signal_strength": "weak",
+    "composite_score": 0.5396160511363637,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.4085035133948178,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.37551642512077293,
         "jaccard": null,
         "top_element_id": "1002A",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting reviews of systems."
       },
       "ddat": {
         "composite": 0.4290333333333334,
@@ -29,9 +29,61 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-043",
         "top_element_label": "Cyber incident management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4978476489028213,
+        "cross_encoder_sts": 0.4804448275862069,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5442551724137931,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.398299639567481,
+        "cross_encoder_sts": 0.41787797356828194,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3460907488986784,
+        "jaccard": null,
+        "top_element_id": "S0114",
+        "top_element_label": "Skill in performing sensitivity analysis"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5396160511363637,
+        "cross_encoder_sts": 0.527465625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5720171875,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42116590909090906,
+        "cross_encoder_sts": 0.434625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.385275,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.3",
+        "top_element_label": "Problem Sensitivity"
       }
     },
     "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5396160511363637
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4978476489028213
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-043",
@@ -39,12 +91,27 @@
         "score": 0.4290333333333334
       },
       {
+        "framework": "onet",
+        "element_id": "1.A.1.b.3",
+        "element_label": "Problem Sensitivity",
+        "score": 0.42116590909090906
+      },
+      {
         "framework": "dcwf",
         "element_id": "1002A",
-        "element_label": "",
+        "element_label": "Skill in conducting reviews of systems.",
         "score": 0.4085035133948178
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Ability to assess and comprehensively inventory organizational data assets, data flows, and technolo...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4290, top tier for this dataset)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-A-003 (Data Governance/Ability) scores 0.540 composite (highest: NIST AI RMF at 0.540) and is edge_case for the Data Engineer role. The KSA is an edge case for Data Governance but contains 0 DE pattern signals sufficient to warrant inclusion for a senior IC data engineer. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, NIST AI RMF signal (0.540), and Data Governance handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Data Governance (DG) \u2014 specifically implementation vs. ownership \u2014 for Data Engineer roles?",
+    "evidence": "Data Engineers implement governance processes (metadata tagging, lineage capture, catalog population, quality rule enforcement) \u2014 present in 25-40% of senior DE postings. Governance ownership (policy authoring, stewardship programs) belongs to governance-specific roles.",
+    "ruling": "Revised to exclude. DG content signals ownership rather than implementation. Market evidence supports exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Ability to assess and comprehensively inventory organizational data assets, data flows, and technolo...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4290, top tier for this dataset).",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. DG content signals ownership rather than implementation. Market evidence supports exclusion. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.177264Z",
+    "evaluated_at": "2026-04-06T17:57:45.224161+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -7,8 +7,8 @@
   "ksa_dimension": "Ability",
   "ksa_domain": "RC",
   "pass_1_scoring": {
-    "composite_score": 0.44353090909090914,
-    "signal_strength": "weak",
+    "composite_score": 0.558881652892562,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.44334713538997644,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.4060983089064262,
         "jaccard": null,
         "top_element_id": "5868",
-        "top_element_label": ""
+        "top_element_label": "Define and/or implement policies and procedures to enable an AI risk assessment process and assess risk mitigation efforts."
       },
       "ddat": {
         "composite": 0.44353090909090914,
@@ -29,9 +29,61 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-007",
         "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.558881652892562,
+        "cross_encoder_sts": 0.5627236363636363,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5486363636363637,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.43861270468661767,
+        "cross_encoder_sts": 0.4619614906832298,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3763492753623188,
+        "jaccard": null,
+        "top_element_id": "K0675",
+        "top_element_label": "Knowledge of risk management processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.533313006993007,
+        "cross_encoder_sts": 0.5427015384615385,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5082769230769231,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3951387878787879,
+        "cross_encoder_sts": 0.4202133333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32827333333333336,
+        "jaccard": null,
+        "top_element_id": "2.B.2.i",
+        "top_element_label": "Complex Problem Solving"
       }
     },
     "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.558881652892562
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.533313006993007
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-007",
@@ -41,10 +93,25 @@
       {
         "framework": "dcwf",
         "element_id": "5868",
-        "element_label": "",
+        "element_label": "Define and/or implement policies and procedures to enable an AI risk assessment process and assess risk mitigation efforts.",
         "score": 0.44334713538997644
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0675",
+        "element_label": "Knowledge of risk management processes",
+        "score": 0.43861270468661767
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Risk & Compliance domain has low DE affinity (0.18), and the text \u2014 'Ability to monitor emerging regulatory requirements and assess the impact of regulatory changes on o...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4435, top tier for this dataset)."
+    "rationale": "KSA RC-A-005 (Risk and Compliance/Ability) is excluded as out_of_scope (composite 0.559, highest: EU AI Act at 0.559). The KSA contains 2 out-of-scope signals (governance ownership, policy development, or organizational strategy) that exceed the Data Engineer role boundary."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.559, and Risk and Compliance (RC) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 1 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Risk and Compliance KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Risk and Compliance competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Risk and Compliance is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Risk & Compliance domain has low DE affinity (0.18), and the text \u2014 'Ability to monitor emerging regulatory requirements and assess the impact of regulatory changes on o...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4435, top tier for this dataset).",
+  "decision_rationale": "KSA RC-A-005 (Risk and Compliance/Ability) is excluded as out_of_scope (composite 0.559, highest: EU AI Act at 0.559). The KSA contains 2 out-of-scope signals (governance ownership, policy development, or organizational strategy) that exceed the Data Engineer role boundary.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.135087Z",
+    "evaluated_at": "2026-04-06T17:57:45.218937+00:00",
     "pipeline_version": "1.0"
   }
 }

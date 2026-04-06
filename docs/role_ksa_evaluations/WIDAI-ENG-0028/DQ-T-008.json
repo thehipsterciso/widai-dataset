@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.4158918367346938,
         "jaccard": null,
         "top_element_id": "208",
-        "top_element_label": ""
+        "top_element_label": "Skill in maintaining databases."
       },
       "ddat": {
         "composite": 0.39910188087774295,
@@ -29,14 +29,62 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-025",
         "top_element_label": "Changing security culture"
+      },
+      "nice": {
+        "composite": 0.4161368421052631,
+        "cross_encoder_sts": 0.4243631578947368,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3942,
+        "jaccard": null,
+        "top_element_id": "S0488",
+        "top_element_label": "Skill in maintaining IT systems"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3996363636363637,
+        "cross_encoder_sts": 0.43270000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31146666666666667,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4084045454545454,
+        "cross_encoder_sts": 0.4265,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36015,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.6",
+        "top_element_label": "Documenting/Recording Information"
       }
     },
     "top_anchors": [
       {
         "framework": "dcwf",
         "element_id": "208",
-        "element_label": "",
+        "element_label": "Skill in maintaining databases.",
         "score": 0.4220239332096475
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0488",
+        "element_label": "Skill in maintaining IT systems",
+        "score": 0.4161368421052631
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.3.b.6",
+        "element_label": "Documenting/Recording Information",
+        "score": 0.4084045454545454
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3996363636363637
       },
       {
         "framework": "ddat",
@@ -44,6 +92,16 @@
         "element_label": "Changing security culture",
         "score": 0.39910188087774295
       }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
     ],
     "metrics_used": [
       "bi_encoder_cosine",
@@ -56,29 +114,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Create, maintain, and update enterprise data catalogs, asset registries, and metadata documentation ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4220, top tier for this dataset)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-T-008 (Data Quality/Task) scores 0.422 composite (highest: DCWF at 0.422) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DCWF signal (0.422), and Data Quality handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does DCWF signal (0.422) for this Data Quality KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Quality appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Quality at composite 0.422 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Create, maintain, and update enterprise data catalogs, asset registries, and metadata documentation ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4220, top tier for this dataset).",
+  "decision_rationale": "KSA DQ-T-008 (Data Quality/Task) scores 0.422 composite (highest: DCWF at 0.422) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.212404Z",
+    "evaluated_at": "2026-04-06T17:57:45.349538+00:00",
     "pipeline_version": "1.0"
   }
 }

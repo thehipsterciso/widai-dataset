@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "DA",
   "pass_1_scoring": {
-    "composite_score": 0.39166784738577487,
+    "composite_score": 0.40140054477357845,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.2662095336787565,
         "jaccard": null,
         "top_element_id": "1005",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
       },
       "ddat": {
         "composite": 0.38308378970427165,
@@ -29,14 +29,72 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.39555350649350646,
+        "cross_encoder_sts": 0.44637428571428567,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2600314285714286,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.40140054477357845,
+        "cross_encoder_sts": 0.451651872659176,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26739700374531833,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38474612794612795,
+        "cross_encoder_sts": 0.440887037037037,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23503703703703704,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3534170454545455,
+        "cross_encoder_sts": 0.41248125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1959125,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40140054477357845
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.39555350649350646
+      },
+      {
         "framework": "dcwf",
         "element_id": "1005",
-        "element_label": "",
+        "element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes).",
         "score": 0.39166784738577487
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38474612794612795
       },
       {
         "framework": "ddat",
@@ -45,6 +103,15 @@
         "score": 0.38308378970427165
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"schemas?\", \"data monitor\"). STRM composite score is moderate-to-strong (0.3917); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA DA-K-013 (Data Architecture/Knowledge) scores 0.401 composite (highest: NICE at 0.401) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.401), and Data Architecture handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation strong: 4 job-posting-level and 0 certification-level matches (AWS DE, Databricks, dbt, GCP DE). Competency appears regularly in DE role descriptions and/or certification curricula.",
-    "ruling": "include"
+    "challenge": "Does NICE signal (0.401) for this Data Architecture KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Architecture appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Architecture at composite 0.401 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"schemas?\", \"data monitor\"). STRM composite score is moderate-to-strong (0.3917); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA DA-K-013 (Data Architecture/Knowledge) scores 0.401 composite (highest: NICE at 0.401) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.399559Z",
+    "evaluated_at": "2026-04-06T17:57:45.405286+00:00",
     "pipeline_version": "1.0"
   }
 }

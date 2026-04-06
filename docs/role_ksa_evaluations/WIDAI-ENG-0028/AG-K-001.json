@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "AG",
   "pass_1_scoring": {
-    "composite_score": 0.3848275982638051,
+    "composite_score": 0.39743831033831034,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.28179031830238727,
         "jaccard": null,
         "top_element_id": "1012A",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
       },
       "ddat": {
         "composite": 0.3732201533406353,
@@ -29,13 +29,71 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-007",
         "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.38529636363636366,
+        "cross_encoder_sts": 0.42029,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29197999999999996,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.39743831033831034,
+        "cross_encoder_sts": 0.4396802494802495,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2847931392931393,
+        "jaccard": null,
+        "top_element_id": "K0476",
+        "top_element_label": "Knowledge of language processing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38625491651205934,
+        "cross_encoder_sts": 0.42399591836734696,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28561224489795917,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36708214285714286,
+        "cross_encoder_sts": 0.40993928571428573,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25279642857142853,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0476",
+        "element_label": "Knowledge of language processing tools and techniques",
+        "score": 0.39743831033831034
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38625491651205934
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.38529636363636366
+      },
+      {
         "framework": "dcwf",
         "element_id": "1012A",
-        "element_label": "",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
         "score": 0.3848275982638051
       },
       {
@@ -45,6 +103,15 @@
         "score": 0.3732201533406353
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Knowledge of AI explainability and interpretability methods, including SHAP values, LIME, partial de...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3848)."
+    "rationale": "KSA AG-K-001 (AI Governance/Knowledge) is excluded as out_of_scope (composite 0.397, highest: NICE at 0.397). AI Governance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own ai governance frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.397, and AI Governance (AG) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "AI Governance competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Knowledge of AI explainability and interpretability methods, including SHAP values, LIME, partial de...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3848).",
+  "decision_rationale": "KSA AG-K-001 (AI Governance/Knowledge) is excluded as out_of_scope (composite 0.397, highest: NICE at 0.397). AI Governance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own ai governance frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.413568Z",
+    "evaluated_at": "2026-04-06T17:57:45.410725+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "AI",
   "pass_1_scoring": {
-    "composite_score": 0.4194702909647779,
+    "composite_score": 0.4341707292707293,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3621091883614089,
         "jaccard": null,
         "top_element_id": "101",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of process engineering concepts."
       },
       "ddat": {
         "composite": 0.37757348484848485,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-035",
         "top_element_label": "Community collaboration"
+      },
+      "eu_ai_act": {
+        "composite": 0.3848704545454545,
+        "cross_encoder_sts": 0.38544999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38332499999999997,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4341707292707293,
+        "cross_encoder_sts": 0.4648524725274725,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3523527472527473,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3877625668449198,
+        "cross_encoder_sts": 0.40047647058823527,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3538588235294118,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3784168831168831,
+        "cross_encoder_sts": 0.417,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27552857142857146,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4341707292707293
+      },
+      {
         "framework": "dcwf",
         "element_id": "101",
-        "element_label": "",
+        "element_label": "Knowledge of process engineering concepts.",
         "score": 0.4194702909647779
       },
       {
-        "framework": "ddat",
-        "element_id": "DDAT-SK-035",
-        "element_label": "Community collaboration",
-        "score": 0.37757348484848485
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.3877625668449198
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.3848704545454545
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.3784168831168831
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -58,27 +125,27 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: knowledge from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4195). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-K-017 (AI and Machine Learning/Knowledge) scores 0.434 composite (highest: NICE at 0.434) and is edge_case for the Data Engineer role. The KSA is an edge case for AI and Machine Learning but contains 1 DE pattern signals sufficient to warrant inclusion for a senior IC data engineer. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, NICE signal (0.434), and AI and Machine Learning handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 2 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "outcome": "overturned",
+    "challenge": "Does market evidence support AI/ML (AI) competencies for Data Engineer IC/senior IC, or does this belong to ML Engineering?",
+    "evidence": "AI/ML engineering overlap appears in 30-40% of senior DE postings: feature engineering, ML pipelines, data prep for training. Governance/ethics framing (DE signals=1, OOS signals=0) shifts the boundary toward MLOps or AI governance roles.",
+    "ruling": "Revised to exclude. AI/ML content skews governance/strategy. Not market-supported at IC/senior IC DE level. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: knowledge from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4195). A working DE would be aware of but not accountable for this competency.",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. AI/ML content skews governance/strategy. Not market-supported at IC/senior IC DE level. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.231622Z",
+    "evaluated_at": "2026-04-06T17:57:45.309364+00:00",
     "pipeline_version": "1.0"
   }
 }

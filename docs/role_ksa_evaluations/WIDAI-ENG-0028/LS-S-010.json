@@ -7,7 +7,7 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "LS",
   "pass_1_scoring": {
-    "composite_score": 0.45625378787878784,
+    "composite_score": 0.5158863636363636,
     "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.33256180555555553,
         "jaccard": null,
         "top_element_id": "1002B",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting reviews of technical systems."
       },
       "ddat": {
         "composite": 0.45625378787878784,
@@ -29,9 +29,61 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-007",
         "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.469451114922813,
+        "cross_encoder_sts": 0.4772320754716981,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4487018867924528,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4050585393685812,
+        "cross_encoder_sts": 0.44114309623430964,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30883305439330544,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5158863636363636,
+        "cross_encoder_sts": 0.5228214285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4973928571428572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.9",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.41437359307359306,
+        "cross_encoder_sts": 0.45490476190476187,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3062904761904762,
+        "jaccard": null,
+        "top_element_id": "2.A.1.d",
+        "top_element_label": "Speaking"
       }
     },
     "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.9",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.5158863636363636
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.469451114922813
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-007",
@@ -41,10 +93,25 @@
       {
         "framework": "dcwf",
         "element_id": "1002B",
-        "element_label": "",
+        "element_label": "Skill in conducting reviews of technical systems.",
         "score": 0.41760162037037035
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.d",
+        "element_label": "Speaking",
+        "score": 0.41437359307359306
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "too_senior",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on seniority grounds: the skill contains explicit executive/organizational scope signals ('board.level'), placing it above IC-to-senior-IC Data Engineer level. STRM composite score is strong (0.4563, top tier for this dataset); semantic alignment with data frameworks may be present, but the described responsibilities involve setting or leading organizational programs rather than executing technical data work. Data Engineers implement within structures they do not establish."
+    "rationale": "KSA LS-S-010 (Leadership and Strategy/Skill) is excluded as out_of_scope (composite 0.516, highest: NIST AI RMF at 0.516). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.516, and Leadership and Strategy (LS) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Leadership and Strategy KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Leadership and Strategy competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Leadership and Strategy is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on seniority grounds: the skill contains explicit executive/organizational scope signals ('board.level'), placing it above IC-to-senior-IC Data Engineer level. STRM composite score is strong (0.4563, top tier for this dataset); semantic alignment with data frameworks may be present, but the described responsibilities involve setting or leading organizational programs rather than executing technical data work. Data Engineers implement within structures they do not establish.",
+  "decision_rationale": "KSA LS-S-010 (Leadership and Strategy/Skill) is excluded as out_of_scope (composite 0.516, highest: NIST AI RMF at 0.516). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.124466Z",
+    "evaluated_at": "2026-04-06T17:57:45.233552+00:00",
     "pipeline_version": "1.0"
   }
 }

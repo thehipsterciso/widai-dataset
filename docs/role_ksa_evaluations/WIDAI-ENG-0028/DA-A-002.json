@@ -7,7 +7,7 @@
   "ksa_dimension": "Ability",
   "ksa_domain": "DA",
   "pass_1_scoring": {
-    "composite_score": 0.41514010695187165,
+    "composite_score": 0.4367575757575758,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.326718431372549,
         "jaccard": null,
         "top_element_id": "1003",
-        "top_element_label": ""
+        "top_element_label": "Develop and document supply chain risks for critical system elements, as appropriate."
       },
       "ddat": {
         "composite": 0.4151305785123967,
@@ -29,13 +29,59 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4367575757575758,
+        "cross_encoder_sts": 0.4742916666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33666666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4145704859656473,
+        "cross_encoder_sts": 0.45882972350230417,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29654585253456217,
+        "jaccard": null,
+        "top_element_id": "K0725",
+        "top_element_label": "Knowledge of incident response tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40432828282828287,
+        "cross_encoder_sts": 0.43517222222222224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32207777777777774,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.39363051948051947,
+        "cross_encoder_sts": 0.42395,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3127785714285714,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.3",
+        "top_element_label": "Problem Sensitivity"
       }
     },
     "top_anchors": [
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.4367575757575758
+      },
+      {
         "framework": "dcwf",
         "element_id": "1003",
-        "element_label": "",
+        "element_label": "Develop and document supply chain risks for critical system elements, as appropriate.",
         "score": 0.41514010695187165
       },
       {
@@ -43,8 +89,29 @@
         "element_id": "DDAT-SK-010",
         "element_label": "Analysis and synthesis (data ethics)",
         "score": 0.4151305785123967
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0725",
+        "element_label": "Knowledge of incident response tools and techniques",
+        "score": 0.4145704859656473
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-6.2",
+        "element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "score": 0.40432828282828287
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Architecture domain has low DE affinity (0.60), and the text \u2014 'Ability to document and communicate architecture rationale, design decisions, and constraints to bot...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4151)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-A-002 (Data Architecture/Ability) scores 0.437 composite (highest: EU AI Act at 0.437) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, EU AI Act signal (0.437), and Data Architecture handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does EU AI Act signal (0.437) for this Data Architecture KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Architecture appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Architecture at composite 0.437 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Architecture domain has low DE affinity (0.60), and the text \u2014 'Ability to document and communicate architecture rationale, design decisions, and constraints to bot...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4151).",
+  "decision_rationale": "KSA DA-A-002 (Data Architecture/Ability) scores 0.437 composite (highest: EU AI Act at 0.437) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.267529Z",
+    "evaluated_at": "2026-04-06T17:57:45.305115+00:00",
     "pipeline_version": "1.0"
   }
 }

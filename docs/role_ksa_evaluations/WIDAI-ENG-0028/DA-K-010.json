@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "DA",
   "pass_1_scoring": {
-    "composite_score": 0.38268954460173976,
+    "composite_score": 0.3936375571356019,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.30203227016885553,
         "jaccard": null,
         "top_element_id": "108",
-        "top_element_label": ""
+        "top_element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
       },
       "ddat": {
         "composite": 0.38146242424242427,
@@ -29,13 +29,59 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.34663376623376624,
+        "cross_encoder_sts": 0.3731,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27605714285714283,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3936375571356019,
+        "cross_encoder_sts": 0.4237206703910615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3134159217877095,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.37338529411764704,
+        "cross_encoder_sts": 0.40161176470588233,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29811470588235295,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.36293916083916083,
+        "cross_encoder_sts": 0.3934615384615385,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28154615384615383,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3936375571356019
+      },
+      {
         "framework": "dcwf",
         "element_id": "108",
-        "element_label": "",
+        "element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk).",
         "score": 0.38268954460173976
       },
       {
@@ -43,8 +89,29 @@
         "element_id": "DDAT-SK-023",
         "element_label": "Capability building for digital, data and technology",
         "score": 0.38146242424242427
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.37338529411764704
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.36293916083916083
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"version control\", \"infrastructure.as.code\", \"terraform\"). STRM composite score is moderate-to-strong (0.3827); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA DA-K-010 (Data Architecture/Knowledge) scores 0.394 composite (highest: NICE at 0.394) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.394), and Data Architecture handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 2 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does NICE signal (0.394) for this Data Architecture KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Architecture appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Architecture at composite 0.394 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"version control\", \"infrastructure.as.code\", \"terraform\"). STRM composite score is moderate-to-strong (0.3827); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA DA-K-010 (Data Architecture/Knowledge) scores 0.394 composite (highest: NICE at 0.394) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.418080Z",
+    "evaluated_at": "2026-04-06T17:57:45.418013+00:00",
     "pipeline_version": "1.0"
   }
 }

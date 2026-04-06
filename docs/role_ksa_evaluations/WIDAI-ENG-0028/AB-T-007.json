@@ -7,7 +7,7 @@
   "ksa_dimension": "Task",
   "ksa_domain": "AB",
   "pass_1_scoring": {
-    "composite_score": 0.4068964749536178,
+    "composite_score": 0.4168727272727273,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.2908,
         "jaccard": null,
         "top_element_id": "1154",
-        "top_element_label": ""
+        "top_element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems."
       },
       "ddat": {
         "composite": 0.38216983471074384,
@@ -29,14 +29,72 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-022",
         "top_element_label": "Business process improvement"
+      },
+      "eu_ai_act": {
+        "composite": 0.33565000000000006,
+        "cross_encoder_sts": 0.39265000000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18364999999999998,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-009",
+        "top_element_label": "Technical documentation"
+      },
+      "nice": {
+        "composite": 0.3920246212121212,
+        "cross_encoder_sts": 0.44554166666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24931250000000002,
+        "jaccard": null,
+        "top_element_id": "K0992",
+        "top_element_label": "Knowledge of database maintenance principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3828409090909091,
+        "cross_encoder_sts": 0.44575000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21508333333333332,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.2",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4168727272727273,
+        "cross_encoder_sts": 0.4625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2952,
+        "jaccard": null,
+        "top_element_id": "2.B.3.j",
+        "top_element_label": "Equipment Maintenance"
       }
     },
     "top_anchors": [
       {
+        "framework": "onet",
+        "element_id": "2.B.3.j",
+        "element_label": "Equipment Maintenance",
+        "score": 0.4168727272727273
+      },
+      {
         "framework": "dcwf",
         "element_id": "1154",
-        "element_label": "",
+        "element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems.",
         "score": 0.4068964749536178
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0992",
+        "element_label": "Knowledge of database maintenance principles and practices",
+        "score": 0.3920246212121212
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-2.2",
+        "element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",
+        "score": 0.3828409090909091
       },
       {
         "framework": "ddat",
@@ -45,6 +103,15 @@
         "score": 0.38216983471074384
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Manage and maintain databases and analytical infrastructure, including monitoring database performan...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4069)."
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-T-007 (Core Abilities/Task) scores 0.417 composite (highest: O*NET at 0.417) and is in_scope for the Data Engineer role. The KSA covers data modeling, schema design, and database work that are core Data Engineer competencies. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
-    "outcome": "upheld",
-    "challenge": null,
+    "outcome": "overturned",
+    "challenge": "Include for edge domain (Core Abilities) at composite 0.417. Edge domain threshold is \u22650.42. Consistency check: this may fall below the applied standard.",
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.417 is below threshold."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 3 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Core Abilities KSA (composite 0.417)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this Core Abilities competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Manage and maintain databases and analytical infrastructure, including monitoring database performan...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4069).",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "medium",
+  "decision_rationale": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.417 is below threshold.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.333192Z",
+    "evaluated_at": "2026-04-06T17:57:45.367084+00:00",
     "pipeline_version": "1.0"
   }
 }

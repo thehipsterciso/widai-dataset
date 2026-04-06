@@ -7,8 +7,8 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "TF",
   "pass_1_scoring": {
-    "composite_score": 0.4058394580419581,
-    "signal_strength": "weak",
+    "composite_score": 0.4630181818181818,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.4058394580419581,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.31628673076923075,
         "jaccard": null,
         "top_element_id": "1033",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of basic system administration, network, and operating system hardening techniques."
       },
       "ddat": {
         "composite": 0.39442954545454545,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-043",
         "top_element_label": "Cyber incident management"
+      },
+      "eu_ai_act": {
+        "composite": 0.37808909090909093,
+        "cross_encoder_sts": 0.41101,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2903,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-011",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.39897156304186276,
+        "cross_encoder_sts": 0.43935912806539507,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2912713896457766,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36341287878787876,
+        "cross_encoder_sts": 0.4151583333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.225425,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4630181818181818,
+        "cross_encoder_sts": 0.50005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3642666666666667,
+        "jaccard": null,
+        "top_element_id": "2.B.3.e",
+        "top_element_label": "Programming"
       }
     },
     "top_anchors": [
       {
+        "framework": "onet",
+        "element_id": "2.B.3.e",
+        "element_label": "Programming",
+        "score": 0.4630181818181818
+      },
+      {
         "framework": "dcwf",
         "element_id": "1033",
-        "element_label": "",
+        "element_label": "Knowledge of basic system administration, network, and operating system hardening techniques.",
         "score": 0.4058394580419581
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39897156304186276
       },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-043",
         "element_label": "Cyber incident management",
         "score": 0.39442954545454545
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-011",
+        "element_label": "Record-keeping",
+        "score": 0.37808909090909093
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"orchestrat\", \"job schedul\"). STRM composite score is moderate-to-strong (0.4058); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA TF-S-008 (Technical Foundations/Skill) scores 0.463 composite (highest: O*NET at 0.463) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, O*NET signal (0.463), and Technical Foundations handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 2 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does O*NET signal (0.463) for this Technical Foundations KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Technical Foundations appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Technical Foundations at composite 0.463 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"orchestrat\", \"job schedul\"). STRM composite score is moderate-to-strong (0.4058); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA TF-S-008 (Technical Foundations/Skill) scores 0.463 composite (highest: O*NET at 0.463) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.339155Z",
+    "evaluated_at": "2026-04-06T17:57:45.265040+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.31240564053537284,
         "jaccard": null,
         "top_element_id": "190",
-        "top_element_label": ""
+        "top_element_label": "Skill in developing operations-based testing scenarios."
       },
       "ddat": {
         "composite": 0.41623030303030306,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-003",
         "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.41455095137420717,
+        "cross_encoder_sts": 0.4499813953488372,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32006976744186044,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.3976716426255172,
+        "cross_encoder_sts": 0.4383824108241082,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28910959409594095,
+        "jaccard": null,
+        "top_element_id": "K1072",
+        "top_element_label": "Knowledge of automated security control testing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40516459330143545,
+        "cross_encoder_sts": 0.4482684210526316,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29022105263157894,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4038507177033493,
+        "cross_encoder_sts": 0.4479736842105263,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2861894736842105,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.41623030303030306
       },
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.41455095137420717
+      },
+      {
         "framework": "dcwf",
         "element_id": "190",
-        "element_label": "",
+        "element_label": "Skill in developing operations-based testing scenarios.",
         "score": 0.41053725882148445
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.40516459330143545
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.4038507177033493
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"transformation logic\", \"data validat\"). STRM composite score is moderate-to-strong (0.4162); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA TF-S-005 (Technical Foundations/Skill) scores 0.416 composite (highest: DDaT at 0.416) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.416), and Technical Foundations handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 2 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does DDaT signal (0.416) for this Technical Foundations KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Technical Foundations appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Technical Foundations at composite 0.416 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"transformation logic\", \"data validat\"). STRM composite score is moderate-to-strong (0.4162); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA TF-S-005 (Technical Foundations/Skill) scores 0.416 composite (highest: DDaT at 0.416) and is in_scope for the Data Engineer role. The KSA addresses pipeline and ETL/ELT engineering work central to the Data Engineer role. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.261569Z",
+    "evaluated_at": "2026-04-06T17:57:45.369876+00:00",
     "pipeline_version": "1.0"
   }
 }

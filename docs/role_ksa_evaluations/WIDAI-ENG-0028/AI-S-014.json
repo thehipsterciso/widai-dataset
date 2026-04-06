@@ -7,7 +7,7 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "AI",
   "pass_1_scoring": {
-    "composite_score": 0.3941254630948988,
+    "composite_score": 0.41590080213903746,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.2621177115987461,
         "jaccard": null,
         "top_element_id": "1002",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
       },
       "ddat": {
         "composite": 0.37572517482517487,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.41590080213903746,
+        "cross_encoder_sts": 0.4737735294117647,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2615735294117647,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3980560975609756,
+        "cross_encoder_sts": 0.4556128603104213,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24457139689578714,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4092231404958678,
+        "cross_encoder_sts": 0.46167454545454545,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26935272727272724,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3867397727272727,
+        "cross_encoder_sts": 0.4421,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2391125,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
       }
     },
     "top_anchors": [
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.41590080213903746
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.6",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4092231404958678
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.3980560975609756
+      },
+      {
         "framework": "dcwf",
         "element_id": "1002",
-        "element_label": "",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
         "score": 0.3941254630948988
       },
       {
-        "framework": "ddat",
-        "element_id": "DDAT-SK-023",
-        "element_label": "Capability building for digital, data and technology",
-        "score": 0.37572517482517487
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.3867397727272727
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "in_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "include",
-    "rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"feature engineer\", \"latency\"). STRM composite score is moderate-to-strong (0.3941); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-S-014 (AI and Machine Learning/Skill) is excluded as edge_case (composite 0.416, highest: EU AI Act at 0.416). Insufficient combination of domain alignment (AI and Machine Learning), composite score (0.416), and DE pattern signals (1 matches) to meet the inclusion threshold for this role."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.416, and AI and Machine Learning (AI) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "External check: no matches in DE job postings or cert curricula (AWS DE, Databricks, dbt, GCP DE). Would a working Data Engineer self-report this as required?",
-    "evidence": "Challenge answered: the technical practice is implicit in DE work (domain affinity 0.38, 3 DE signal(s)). Framework vocabulary matching underrepresents many legitimate DE competencies.",
-    "ruling": "include"
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.416)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this AI and Machine Learning competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"feature engineer\", \"latency\"). STRM composite score is moderate-to-strong (0.3941); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AI-S-014 (AI and Machine Learning/Skill) is excluded as edge_case (composite 0.416, highest: EU AI Act at 0.416). Insufficient combination of domain alignment (AI and Machine Learning), composite score (0.416), and DE pattern signals (1 matches) to meet the inclusion threshold for this role.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.392747Z",
+    "evaluated_at": "2026-04-06T17:57:45.370727+00:00",
     "pipeline_version": "1.0"
   }
 }

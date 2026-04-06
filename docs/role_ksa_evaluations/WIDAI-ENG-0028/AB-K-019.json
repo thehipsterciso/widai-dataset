@@ -11,6 +11,15 @@
     "signal_strength": "none",
     "framework_scores": {},
     "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
     "metrics_used": [],
     "metrics_absent": [
       "cross_encoder_sts",
@@ -24,26 +33,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Knowledge of research methodology and multi-source synthesis, including methods for gathering, integ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is minimal (0.0000 \u2014 likely framework vocabulary mismatch, not irrelevance)."
+    "rationale": "KSA AB-K-019 (Core Abilities/Knowledge) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Zero composite score across all 6 frameworks (dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet) \u2014 no semantic alignment with Data Engineer reference elements detected in any framework."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.000, and Core Abilities (AB) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Zero-signal exclusion: does absence of framework signal reliably indicate irrelevance for the Data Engineer role?",
+    "evidence": "Composite 0.0 across 6 frameworks confirms no semantic alignment with any DE reference element. Market analysis does not surface these competencies as DE requirements.",
+    "ruling": "Exclusion upheld. Zero framework signal confirmed by market absence. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Knowledge of research methodology and multi-source synthesis, including methods for gathering, integ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is minimal (0.0000 \u2014 likely framework vocabulary mismatch, not irrelevance).",
+  "decision_rationale": "KSA AB-K-019 (Core Abilities/Knowledge) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Zero composite score across all 6 frameworks (dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet) \u2014 no semantic alignment with Data Engineer reference elements detected in any framework.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.753824Z",
+    "evaluated_at": "2026-04-06T17:57:45.608533+00:00",
     "pipeline_version": "1.0"
   }
 }

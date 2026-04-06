@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "RM",
   "pass_1_scoring": {
-    "composite_score": 0.40509514603044017,
+    "composite_score": 0.4061274509803921,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.31685475113122175,
         "jaccard": null,
         "top_element_id": "1002A",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting reviews of systems."
       },
       "ddat": {
         "composite": 0.38336586921850085,
@@ -29,14 +29,72 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-013",
         "top_element_label": "Applying statistical and analytical tools and techniques"
+      },
+      "eu_ai_act": {
+        "composite": 0.40375265151515155,
+        "cross_encoder_sts": 0.43793333333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3126041666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4015271074380165,
+        "cross_encoder_sts": 0.4362209090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.309010303030303,
+        "jaccard": null,
+        "top_element_id": "K0641",
+        "top_element_label": "Knowledge of market research tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4061274509803921,
+        "cross_encoder_sts": 0.4392745098039215,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31773529411764706,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3775441558441559,
+        "cross_encoder_sts": 0.41108571428571433,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2881,
+        "jaccard": null,
+        "top_element_id": "2.C.1.d",
+        "top_element_label": "Sales and Marketing"
       }
     },
     "top_anchors": [
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4061274509803921
+      },
+      {
         "framework": "dcwf",
         "element_id": "1002A",
-        "element_label": "",
+        "element_label": "Skill in conducting reviews of systems.",
         "score": 0.40509514603044017
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.40375265151515155
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0641",
+        "element_label": "Knowledge of market research tools and techniques",
+        "score": 0.4015271074380165
       },
       {
         "framework": "ddat",
@@ -45,6 +103,15 @@
         "score": 0.38336586921850085
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Risk Management domain has low DE affinity (0.10), and the text \u2014 'Knowledge of model validation methodologies including conceptual soundness review, outcomes analysis...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4051)."
+    "rationale": "KSA RM-K-010 (Risk Management/Knowledge) is excluded as out_of_scope (composite 0.406, highest: NIST AI RMF at 0.406). Risk Management is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own risk management frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.406, and Risk Management (RM) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Risk Management KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Risk Management competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Risk Management is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Risk Management domain has low DE affinity (0.10), and the text \u2014 'Knowledge of model validation methodologies including conceptual soundness review, outcomes analysis...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4051).",
+  "decision_rationale": "KSA RM-K-010 (Risk Management/Knowledge) is excluded as out_of_scope (composite 0.406, highest: NIST AI RMF at 0.406). Risk Management is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own risk management frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.347398Z",
+    "evaluated_at": "2026-04-06T17:57:45.398494+00:00",
     "pipeline_version": "1.0"
   }
 }

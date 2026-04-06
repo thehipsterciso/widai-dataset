@@ -7,7 +7,7 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "LS",
   "pass_1_scoring": {
-    "composite_score": 0.4117718475073314,
+    "composite_score": 0.4219575757575758,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3327548387096774,
         "jaccard": null,
         "top_element_id": "101",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of process engineering concepts."
       },
       "ddat": {
         "composite": 0.4117718475073314,
@@ -29,9 +29,61 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4070228956228956,
+        "cross_encoder_sts": 0.4521037037037037,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2868074074074074,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3981185513673319,
+        "cross_encoder_sts": 0.43157560975609754,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30889972899728996,
+        "jaccard": null,
+        "top_element_id": "K0068",
+        "top_element_label": "Knowledge of programming language structures and logic"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41561157024793394,
+        "cross_encoder_sts": 0.4570568181818182,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3050909090909091,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4219575757575758,
+        "cross_encoder_sts": 0.4670916666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30160000000000003,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
       }
     },
     "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.a",
+        "element_label": "Administration and Management",
+        "score": 0.4219575757575758
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41561157024793394
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-010",
@@ -41,10 +93,25 @@
       {
         "framework": "dcwf",
         "element_id": "101",
-        "element_label": "",
+        "element_label": "Knowledge of process engineering concepts.",
         "score": 0.40857941882164756
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4070228956228956
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Leadership & Strategy domain has low DE affinity (0.06), and the text \u2014 'Skill in designing transformation roadmaps that sequence capability development logically, with depe...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4118)."
+    "rationale": "KSA LS-S-003 (Leadership and Strategy/Skill) is excluded as out_of_scope (composite 0.422, highest: O*NET at 0.422). Leadership and Strategy is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own leadership and strategy frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.422, and Leadership and Strategy (LS) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Leadership and Strategy KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Leadership and Strategy competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Leadership and Strategy is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Leadership & Strategy domain has low DE affinity (0.06), and the text \u2014 'Skill in designing transformation roadmaps that sequence capability development logically, with depe...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4118).",
+  "decision_rationale": "KSA LS-S-003 (Leadership and Strategy/Skill) is excluded as out_of_scope (composite 0.422, highest: O*NET at 0.422). Leadership and Strategy is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own leadership and strategy frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.292694Z",
+    "evaluated_at": "2026-04-06T17:57:45.350435+00:00",
     "pipeline_version": "1.0"
   }
 }

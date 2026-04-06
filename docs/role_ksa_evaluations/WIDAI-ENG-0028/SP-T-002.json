@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3937548780487805,
         "jaccard": null,
         "top_element_id": "208",
-        "top_element_label": ""
+        "top_element_label": "Skill in maintaining databases."
       },
       "ddat": {
         "composite": 0.3877224242424242,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-052",
         "top_element_label": "Data governance"
+      },
+      "eu_ai_act": {
+        "composite": 0.3895181818181818,
+        "cross_encoder_sts": 0.4001,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3613,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-009",
+        "top_element_label": "Technical documentation"
+      },
+      "nice": {
+        "composite": 0.38675382775119616,
+        "cross_encoder_sts": 0.4035236842105263,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34203421052631583,
+        "jaccard": null,
+        "top_element_id": "S0843",
+        "top_element_label": "Skill in maintaining data"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3950863636363636,
+        "cross_encoder_sts": 0.41805000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33385,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-1.2",
+        "top_element_label": "Appropriate methods and metrics are identified and applied."
+      },
+      "onet": {
+        "composite": 0.3701363636363636,
+        "cross_encoder_sts": 0.3631,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3889,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
       }
     },
     "top_anchors": [
       {
         "framework": "dcwf",
         "element_id": "208",
-        "element_label": "",
+        "element_label": "Skill in maintaining databases.",
         "score": 0.4083473392461197
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-1.2",
+        "element_label": "Appropriate methods and metrics are identified and applied.",
+        "score": 0.3950863636363636
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-009",
+        "element_label": "Technical documentation",
+        "score": 0.3895181818181818
       },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-052",
         "element_label": "Data governance",
         "score": 0.3877224242424242
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0843",
+        "element_label": "Skill in maintaining data",
+        "score": 0.38675382775119616
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Conduct and document privacy awareness training programs and communications for organizational staff...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4083)."
+    "rationale": "KSA SP-T-002 (Security and Privacy/Task) is excluded as edge_case (composite 0.408, highest: DCWF at 0.408). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.408, and Security and Privacy (SP) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Security and Privacy KSA (composite 0.408)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this Security and Privacy competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Conduct and document privacy awareness training programs and communications for organizational staff...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4083).",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA SP-T-002 (Security and Privacy/Task) is excluded as edge_case (composite 0.408, highest: DCWF at 0.408). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.322878Z",
+    "evaluated_at": "2026-04-06T17:57:45.390750+00:00",
     "pipeline_version": "1.0"
   }
 }

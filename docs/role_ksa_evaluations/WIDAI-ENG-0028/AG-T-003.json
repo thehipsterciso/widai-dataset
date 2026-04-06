@@ -7,8 +7,8 @@
   "ksa_dimension": "Task",
   "ksa_domain": "AG",
   "pass_1_scoring": {
-    "composite_score": 0.39618337662337666,
-    "signal_strength": "weak",
+    "composite_score": 0.47156193181818185,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.38537831253713606,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.31619019607843135,
         "jaccard": null,
         "top_element_id": "1002",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
       },
       "ddat": {
         "composite": 0.39618337662337666,
@@ -29,9 +29,51 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.44705603305785124,
+        "cross_encoder_sts": 0.4567363636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42124181818181816,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3677655138339921,
+        "cross_encoder_sts": 0.4023695652173913,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27548804347826084,
+        "jaccard": null,
+        "top_element_id": "K1317",
+        "top_element_label": "Knowledge of AI bias types"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.47156193181818185,
+        "cross_encoder_sts": 0.4754265625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.46125625,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
       }
     },
     "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.47156193181818185
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.44705603305785124
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-023",
@@ -41,9 +83,25 @@
       {
         "framework": "dcwf",
         "element_id": "1002",
-        "element_label": "",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
         "score": 0.38537831253713606
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1317",
+        "element_label": "Knowledge of AI bias types",
+        "score": 0.3677655138339921
       }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
     ],
     "metrics_used": [
       "bi_encoder_cosine",
@@ -59,26 +117,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Lead enterprise AI ethics reviews for high-stakes applications, including impact assessments, bias a...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3962)."
+    "rationale": "KSA AG-T-003 (AI Governance/Task) is excluded as out_of_scope (composite 0.472, highest: NIST AI RMF at 0.472). AI Governance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own ai governance frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.472, and AI Governance (AG) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "AI Governance competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Lead enterprise AI ethics reviews for high-stakes applications, including impact assessments, bias a...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3962).",
+  "decision_rationale": "KSA AG-T-003 (AI Governance/Task) is excluded as out_of_scope (composite 0.472, highest: NIST AI RMF at 0.472). AI Governance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own ai governance frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.386204Z",
+    "evaluated_at": "2026-04-06T17:57:45.258244+00:00",
     "pipeline_version": "1.0"
   }
 }

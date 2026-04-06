@@ -7,8 +7,8 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "DG",
   "pass_1_scoring": {
-    "composite_score": 0.43686743801652894,
-    "signal_strength": "weak",
+    "composite_score": 0.464150586510264,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.41488281840408986,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3871955990220049,
         "jaccard": null,
         "top_element_id": "108",
-        "top_element_label": ""
+        "top_element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
       },
       "ddat": {
         "composite": 0.43686743801652894,
@@ -29,9 +29,55 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-016",
         "top_element_label": "Architecture communication"
+      },
+      "eu_ai_act": {
+        "composite": 0.42397090909090906,
+        "cross_encoder_sts": 0.40348999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47858666666666666,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40567574321413186,
+        "cross_encoder_sts": 0.4221710900473934,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3616881516587678,
+        "jaccard": null,
+        "top_element_id": "K0655",
+        "top_element_label": "Knowledge of intelligence fusion"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.464150586510264,
+        "cross_encoder_sts": 0.4522258064516129,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49595,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42533884297520663,
+        "cross_encoder_sts": 0.44524545454545456,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37225454545454545,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
       }
     },
     "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.464150586510264
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-016",
@@ -39,12 +85,33 @@
         "score": 0.43686743801652894
       },
       {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.42533884297520663
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.42397090909090906
+      },
+      {
         "framework": "dcwf",
         "element_id": "108",
-        "element_label": "",
+        "element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk).",
         "score": 0.41488281840408986
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "too_senior",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on seniority grounds: the skill contains explicit executive/organizational scope signals ('c.suite'), placing it above IC-to-senior-IC Data Engineer level. STRM composite score is strong (0.4369, top tier for this dataset); semantic alignment with data frameworks may be present, but the described responsibilities involve setting or leading organizational programs rather than executing technical data work. Data Engineers implement within structures they do not establish."
+    "rationale": "KSA DG-S-001 (Data Governance/Skill) is excluded as edge_case (composite 0.464, highest: NIST AI RMF at 0.464). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.464, and Data Governance (DG) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Data Governance KSA (composite 0.464)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this Data Governance competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on seniority grounds: the skill contains explicit executive/organizational scope signals ('c.suite'), placing it above IC-to-senior-IC Data Engineer level. STRM composite score is strong (0.4369, top tier for this dataset); semantic alignment with data frameworks may be present, but the described responsibilities involve setting or leading organizational programs rather than executing technical data work. Data Engineers implement within structures they do not establish.",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DG-S-001 (Data Governance/Skill) is excluded as edge_case (composite 0.464, highest: NIST AI RMF at 0.464). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.151871Z",
+    "evaluated_at": "2026-04-06T17:57:45.264238+00:00",
     "pipeline_version": "1.0"
   }
 }

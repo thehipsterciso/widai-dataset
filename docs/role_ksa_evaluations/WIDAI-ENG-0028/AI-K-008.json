@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "AI",
   "pass_1_scoring": {
-    "composite_score": 0.4061569770654877,
+    "composite_score": 0.4194156754460493,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.33020273556231006,
         "jaccard": null,
         "top_element_id": "10",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of application vulnerabilities."
       },
       "ddat": {
         "composite": 0.3675506993006993,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-064",
         "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.39360844155844155,
+        "cross_encoder_sts": 0.4383142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27439285714285716,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4194156754460493,
+        "cross_encoder_sts": 0.448142523364486,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3428107476635514,
+        "jaccard": null,
+        "top_element_id": "K0068",
+        "top_element_label": "Knowledge of programming language structures and logic"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3693420454545455,
+        "cross_encoder_sts": 0.40969375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2617375,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.38124545454545455,
+        "cross_encoder_sts": 0.43644,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23406,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0068",
+        "element_label": "Knowledge of programming language structures and logic",
+        "score": 0.4194156754460493
+      },
+      {
         "framework": "dcwf",
         "element_id": "10",
-        "element_label": "",
+        "element_label": "Knowledge of application vulnerabilities.",
         "score": 0.4061569770654877
       },
       {
-        "framework": "ddat",
-        "element_id": "DDAT-SK-064",
-        "element_label": "Data risk management",
-        "score": 0.3675506993006993
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.39360844155844155
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.38124545454545455
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.3693420454545455
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: knowledge from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4062). A working DE would be aware of but not accountable for this competency."
+    "rationale": "KSA AI-K-008 (AI and Machine Learning/Knowledge) is excluded as edge_case (composite 0.419, highest: NICE at 0.419). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.419, and AI and Machine Learning (AI) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.419)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this AI and Machine Learning competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: knowledge from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4062). A working DE would be aware of but not accountable for this competency.",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AI-K-008 (AI and Machine Learning/Knowledge) is excluded as edge_case (composite 0.419, highest: NICE at 0.419). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.338024Z",
+    "evaluated_at": "2026-04-06T17:57:45.359183+00:00",
     "pipeline_version": "1.0"
   }
 }

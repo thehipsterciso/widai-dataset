@@ -7,7 +7,7 @@
   "ksa_dimension": "Task",
   "ksa_domain": "LS",
   "pass_1_scoring": {
-    "composite_score": 0.45250936639118455,
+    "composite_score": 0.4583772727272727,
     "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3682939890710383,
         "jaccard": null,
         "top_element_id": "2290",
-        "top_element_label": ""
+        "top_element_label": "Allocate collection assets based on leadership's guidance, priorities, and/or operational emphasis."
       },
       "ddat": {
         "composite": 0.45250936639118455,
@@ -29,9 +29,55 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.36817272727272726,
+        "cross_encoder_sts": 0.3619,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3849,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3894233566433567,
+        "cross_encoder_sts": 0.4142969230769231,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3230938461538462,
+        "jaccard": null,
+        "top_element_id": "S0762",
+        "top_element_label": "Skill in integrating organization objectives"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4583772727272727,
+        "cross_encoder_sts": 0.48385,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39044999999999996,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-2.3",
+        "top_element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks."
+      },
+      "onet": {
+        "composite": 0.38492499999999996,
+        "cross_encoder_sts": 0.39902499999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.347325,
+        "jaccard": null,
+        "top_element_id": "2.B.1.c",
+        "top_element_label": "Persuasion"
       }
     },
     "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-2.3",
+        "element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",
+        "score": 0.4583772727272727
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-010",
@@ -41,10 +87,31 @@
       {
         "framework": "dcwf",
         "element_id": "2290",
-        "element_label": "",
+        "element_label": "Allocate collection assets based on leadership's guidance, priorities, and/or operational emphasis.",
         "score": 0.40257714853452553
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0762",
+        "element_label": "Skill in integrating organization objectives",
+        "score": 0.3894233566433567
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.c",
+        "element_label": "Persuasion",
+        "score": 0.38492499999999996
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "too_senior",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on seniority grounds: the task contains explicit executive/organizational scope signals ('executive sponsor'), placing it above IC-to-senior-IC Data Engineer level. STRM composite score is strong (0.4525, top tier for this dataset); semantic alignment with data frameworks may be present, but the described responsibilities involve setting or leading organizational programs rather than executing technical data work. Data Engineers implement within structures they do not establish."
+    "rationale": "KSA LS-T-010 (Leadership and Strategy/Task) is excluded as out_of_scope (composite 0.458, highest: NIST AI RMF at 0.458). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.458, and Leadership and Strategy (LS) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Leadership and Strategy KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Leadership and Strategy competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Leadership and Strategy is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on seniority grounds: the task contains explicit executive/organizational scope signals ('executive sponsor'), placing it above IC-to-senior-IC Data Engineer level. STRM composite score is strong (0.4525, top tier for this dataset); semantic alignment with data frameworks may be present, but the described responsibilities involve setting or leading organizational programs rather than executing technical data work. Data Engineers implement within structures they do not establish.",
+  "decision_rationale": "KSA LS-T-010 (Leadership and Strategy/Task) is excluded as out_of_scope (composite 0.458, highest: NIST AI RMF at 0.458). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.127468Z",
+    "evaluated_at": "2026-04-06T17:57:45.271131+00:00",
     "pipeline_version": "1.0"
   }
 }

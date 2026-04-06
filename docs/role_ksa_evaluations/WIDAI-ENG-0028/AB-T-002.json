@@ -7,7 +7,7 @@
   "ksa_dimension": "Task",
   "ksa_domain": "AB",
   "pass_1_scoring": {
-    "composite_score": 0.4143508417508418,
+    "composite_score": 0.4206409090909091,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.31094620811287477,
         "jaccard": null,
         "top_element_id": "4237",
-        "top_element_label": ""
+        "top_element_label": "Ability to develop dashboards to better visualize data"
       },
       "ddat": {
         "composite": 0.4143508417508418,
@@ -29,9 +29,55 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3822676767676768,
+        "cross_encoder_sts": 0.41755555555555557,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2881666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-011",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.3830924242424242,
+        "cross_encoder_sts": 0.4142938596491228,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29988859649122807,
+        "jaccard": null,
+        "top_element_id": "S0029",
+        "top_element_label": "Skill in developing data models"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3684337662337662,
+        "cross_encoder_sts": 0.4059742857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26832571428571433,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.4206409090909091,
+        "cross_encoder_sts": 0.45715,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3232833333333333,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
       }
     },
     "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.4206409090909091
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-023",
@@ -41,10 +87,31 @@
       {
         "framework": "dcwf",
         "element_id": "4237",
-        "element_label": "",
+        "element_label": "Ability to develop dashboards to better visualize data",
         "score": 0.3861095238095238
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0029",
+        "element_label": "Skill in developing data models",
+        "score": 0.3830924242424242
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-011",
+        "element_label": "Record-keeping",
+        "score": 0.3822676767676768
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Collect and integrate data from databases, APIs, external sources, and organizational systems, inclu...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4144)."
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-T-002 (Core Abilities/Task) scores 0.421 composite (highest: O*NET at 0.421) and is edge_case for the Data Engineer role. The KSA covers data modeling, schema design, and database work that are core Data Engineer competencies. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, O*NET signal (0.421), and Core Abilities handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "outcome": "overturned",
+    "challenge": "Does market evidence support this Core Ability as a distinct Data Engineer competency at IC/senior IC level?",
+    "evidence": "General abilities appear implicitly in DE postings but rarely as discrete competencies. When explicit, they appear in context of pipeline design, data modeling, or quality enforcement (DE signals here: 1, composite: 0.421).",
+    "ruling": "Revised to exclude. General ability without sufficient DE-specific context is not a distinct market requirement. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Collect and integrate data from databases, APIs, external sources, and organizational systems, inclu...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4144).",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. General ability without sufficient DE-specific context is not a distinct market requirement. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.274160Z",
+    "evaluated_at": "2026-04-06T17:57:45.353934+00:00",
     "pipeline_version": "1.0"
   }
 }

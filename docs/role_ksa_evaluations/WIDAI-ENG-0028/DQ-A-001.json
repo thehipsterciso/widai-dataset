@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.2763445807770961,
         "jaccard": null,
         "top_element_id": "5874",
-        "top_element_label": ""
+        "top_element_label": "Develop a data management strategy that helps to prioritize investments and resource allocations (e.g., data analytics, data infrastructure)."
       },
       "ddat": {
         "composite": 0.42554720893141945,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.3845909090909091,
+        "cross_encoder_sts": 0.40190909090909094,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33840909090909094,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-028",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.3796236179049377,
+        "cross_encoder_sts": 0.4364257868020304,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22815116751269038,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4000985257985258,
+        "cross_encoder_sts": 0.43283243243243247,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3128081081081081,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3907758741258741,
+        "cross_encoder_sts": 0.4407846153846154,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2574192307692308,
+        "jaccard": null,
+        "top_element_id": "2.A.1.e",
+        "top_element_label": "Mathematics"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.42554720893141945
       },
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4000985257985258
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.e",
+        "element_label": "Mathematics",
+        "score": 0.3907758741258741
+      },
+      {
         "framework": "dcwf",
         "element_id": "5874",
-        "element_label": "",
+        "element_label": "Develop a data management strategy that helps to prioritize investments and resource allocations (e.g., data analytics, data infrastructure).",
         "score": 0.386173768358431
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-028",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.3845909090909091
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: ability maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data quality\"). STRM composite score is strong (0.4255, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA DQ-A-001 (Data Quality/Ability) scores 0.426 composite (highest: DDaT at 0.426) and is in_scope for the Data Engineer role. The KSA addresses data quality enforcement and validation \u2014 a primary IC-level data engineering responsibility. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.426), and Data Quality handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 1 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does DDaT signal (0.426) for this Data Quality KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Quality appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Quality at composite 0.426 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: ability maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data quality\"). STRM composite score is strong (0.4255, top tier for this dataset); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA DQ-A-001 (Data Quality/Ability) scores 0.426 composite (highest: DDaT at 0.426) and is in_scope for the Data Engineer role. The KSA addresses data quality enforcement and validation \u2014 a primary IC-level data engineering responsibility. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.192386Z",
+    "evaluated_at": "2026-04-06T17:57:45.336969+00:00",
     "pipeline_version": "1.0"
   }
 }

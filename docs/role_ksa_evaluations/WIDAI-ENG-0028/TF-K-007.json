@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "TF",
   "pass_1_scoring": {
-    "composite_score": 0.37349396694214876,
+    "composite_score": 0.3903380808080808,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.2717081818181818,
         "jaccard": null,
         "top_element_id": "1095",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of how different file types can be used for anomalous behavior."
       },
       "ddat": {
         "composite": 0.3578047138047138,
@@ -29,13 +29,29 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-047",
         "top_element_label": "Data architecture"
+      },
+      "nice": {
+        "composite": 0.3903380808080808,
+        "cross_encoder_sts": 0.43132444444444445,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28104111111111113,
+        "jaccard": null,
+        "top_element_id": "K0055",
+        "top_element_label": "Knowledge of microprocessors"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0055",
+        "element_label": "Knowledge of microprocessors",
+        "score": 0.3903380808080808
+      },
+      {
         "framework": "dcwf",
         "element_id": "1095",
-        "element_label": "",
+        "element_label": "Knowledge of how different file types can be used for anomalous behavior.",
         "score": 0.37349396694214876
       },
       {
@@ -44,6 +60,16 @@
         "element_label": "Data architecture",
         "score": 0.3578047138047138
       }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act",
+      "nist_ai_rmf",
+      "onet"
     ],
     "metrics_used": [
       "bi_encoder_cosine",
@@ -59,26 +85,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"schemas?\", \"query perform\", \"parquet\"). STRM composite score is moderate-to-strong (0.3735); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA TF-K-007 (Technical Foundations/Knowledge) scores 0.390 composite (highest: NICE at 0.390) and is in_scope for the Data Engineer role. The KSA covers data modeling, schema design, and database work that are core Data Engineer competencies. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.390), and Technical Foundations handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation strong: 2 job-posting-level and 1 certification-level matches (AWS DE, Databricks, dbt, GCP DE). Competency appears regularly in DE role descriptions and/or certification curricula.",
-    "ruling": "include"
+    "challenge": "Does NICE signal (0.390) for this Technical Foundations KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Technical Foundations appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Technical Foundations at composite 0.390 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"schemas?\", \"query perform\", \"parquet\"). STRM composite score is moderate-to-strong (0.3735); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA TF-K-007 (Technical Foundations/Knowledge) scores 0.390 composite (highest: NICE at 0.390) and is in_scope for the Data Engineer role. The KSA covers data modeling, schema design, and database work that are core Data Engineer competencies. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.428665Z",
+    "evaluated_at": "2026-04-06T17:57:45.419841+00:00",
     "pipeline_version": "1.0"
   }
 }

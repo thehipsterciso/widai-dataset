@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.29961440217391305,
         "jaccard": null,
         "top_element_id": "1108",
-        "top_element_label": ""
+        "top_element_label": "Conduct research, analysis, and correlation across a wide variety of all source data sets (indications and warnings)."
       },
       "ddat": {
         "composite": 0.40551790633608814,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.35620303030303035,
+        "cross_encoder_sts": 0.3822666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2867,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.39316648735879506,
+        "cross_encoder_sts": 0.4309514792899408,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29240650887573966,
+        "jaccard": null,
+        "top_element_id": "K0961",
+        "top_element_label": "Knowledge of planning systems and software"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3953772727272727,
+        "cross_encoder_sts": 0.4216,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32545,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.36009090909090913,
+        "cross_encoder_sts": 0.39110000000000006,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2774,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.40551790633608814
       },
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-6.2",
+        "element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "score": 0.3953772727272727
+      },
+      {
         "framework": "dcwf",
         "element_id": "1108",
-        "element_label": "",
+        "element_label": "Conduct research, analysis, and correlation across a wide variety of all source data sets (indications and warnings).",
         "score": 0.3937808053359684
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0961",
+        "element_label": "Knowledge of planning systems and software",
+        "score": 0.39316648735879506
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.a",
+        "element_label": "Administration and Management",
+        "score": 0.36009090909090913
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Operations & Program Management domain has low DE affinity (0.15), and the text \u2014 'Conduct capacity planning and trend analysis for data infrastructure, including growth projection an...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4055)."
+    "rationale": "KSA OP-T-012 (Operational Excellence/Task) is excluded as out_of_scope (composite 0.406, highest: DDaT at 0.406). The KSA contains an out-of-scope signal (governance/strategy) shifting accountability beyond the IC/senior IC data engineer."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.406, and Operational Excellence (OP) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 1 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Operational Excellence KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Operational Excellence competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Operational Excellence is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Operations & Program Management domain has low DE affinity (0.15), and the text \u2014 'Conduct capacity planning and trend analysis for data infrastructure, including growth projection an...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4055).",
+  "decision_rationale": "KSA OP-T-012 (Operational Excellence/Task) is excluded as out_of_scope (composite 0.406, highest: DDaT at 0.406). The KSA contains an out-of-scope signal (governance/strategy) shifting accountability beyond the IC/senior IC data engineer.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.341757Z",
+    "evaluated_at": "2026-04-06T17:57:45.399372+00:00",
     "pipeline_version": "1.0"
   }
 }

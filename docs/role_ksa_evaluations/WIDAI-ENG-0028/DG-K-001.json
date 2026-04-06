@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3061107003891051,
         "jaccard": null,
         "top_element_id": "7017",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of data operations (DataOps) processes and best practices."
       },
       "ddat": {
         "composite": 0.43980701298701297,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-008",
         "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.4073943488943489,
+        "cross_encoder_sts": 0.44017837837837837,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3199702702702703,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4256709742475954,
+        "cross_encoder_sts": 0.4683827645051195,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.311772866894198,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40539170653907497,
+        "cross_encoder_sts": 0.44549122807017544,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29845964912280704,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.37652545454545455,
+        "cross_encoder_sts": 0.43118,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23078,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.43980701298701297
       },
       {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4256709742475954
+      },
+      {
         "framework": "dcwf",
         "element_id": "7017",
-        "element_label": "",
+        "element_label": "Knowledge of data operations (DataOps) processes and best practices.",
         "score": 0.4133460735762292
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4073943488943489
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.40539170653907497
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Knowledge of enterprise data strategy frameworks, including organizational data vision, strategic da...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4398, top tier for this dataset)."
+    "rationale": "KSA DG-K-001 (Data Governance/Knowledge) is excluded as out_of_scope (composite 0.440, highest: DDaT at 0.440). The KSA contains an out-of-scope signal (governance/strategy) shifting accountability beyond the IC/senior IC data engineer."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.440, and Data Governance (DG) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Data Governance KSA (composite 0.440)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this Data Governance competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Knowledge of enterprise data strategy frameworks, including organizational data vision, strategic da...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4398, top tier for this dataset).",
+  "decision_rationale": "KSA DG-K-001 (Data Governance/Knowledge) is excluded as out_of_scope (composite 0.440, highest: DDaT at 0.440). The KSA contains an out-of-scope signal (governance/strategy) shifting accountability beyond the IC/senior IC data engineer.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.141424Z",
+    "evaluated_at": "2026-04-06T17:57:45.296858+00:00",
     "pipeline_version": "1.0"
   }
 }

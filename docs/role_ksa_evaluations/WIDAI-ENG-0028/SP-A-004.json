@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.32851568627450983,
         "jaccard": null,
         "top_element_id": "5886",
-        "top_element_label": ""
+        "top_element_label": "Facilitate cross-sharing of best practices for data usage."
       },
       "ddat": {
         "composite": 0.4266099343955013,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-009",
         "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.38940419580419583,
+        "cross_encoder_sts": 0.4167692307692308,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31643076923076924,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.3876347238967929,
+        "cross_encoder_sts": 0.418185676392573,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3061655172413793,
+        "jaccard": null,
+        "top_element_id": "S0097",
+        "top_element_label": "Skill in applying security controls"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3973631016042781,
+        "cross_encoder_sts": 0.4353676470588235,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29601764705882355,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3916272727272727,
+        "cross_encoder_sts": 0.4308625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.287,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.4266099343955013
       },
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3973631016042781
+      },
+      {
         "framework": "dcwf",
         "element_id": "5886",
-        "element_label": "",
+        "element_label": "Facilitate cross-sharing of best practices for data usage.",
         "score": 0.3973251931075461
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.7",
+        "element_label": "Category Flexibility",
+        "score": 0.3916272727272727
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.38940419580419583
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Ability to assess, evaluate, and monitor compliance with organizational and regulatory privacy requi...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4266, top tier for this dataset)."
+    "preliminary_decision": "include",
+    "rationale": "KSA SP-A-004 (Security and Privacy/Ability) scores 0.427 composite (highest: DDaT at 0.427) and is edge_case for the Data Engineer role. The KSA covers pipeline observability and monitoring \u2014 a core operational responsibility for data engineers. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, DDaT signal (0.427), and Security and Privacy handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 1 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Security/Privacy (SP) competencies for Data Engineer IC/senior IC roles?",
+    "evidence": "Data-level security (column-level security, encryption, masking, access controls) appears in 20-35% of DE job descriptions in regulated industries. Org-level policy work is absent from DE postings at IC/senior IC.",
+    "ruling": "Revised to exclude. Security content is policy/org-level, not data-implementation. Not market-supported at IC/senior IC DE. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Ability to assess, evaluate, and monitor compliance with organizational and regulatory privacy requi...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4266, top tier for this dataset).",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Security content is policy/org-level, not data-implementation. Not market-supported at IC/senior IC DE. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.189119Z",
+    "evaluated_at": "2026-04-06T17:57:45.333067+00:00",
     "pipeline_version": "1.0"
   }
 }

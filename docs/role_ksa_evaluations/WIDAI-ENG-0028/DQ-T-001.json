@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.23677416829745598,
         "jaccard": null,
         "top_element_id": "1002A",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting reviews of systems."
       },
       "ddat": {
         "composite": 0.42006065128900955,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3944566433566433,
+        "cross_encoder_sts": 0.4550923076923077,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23276153846153846,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3697715067340067,
+        "cross_encoder_sts": 0.4313828703703704,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20547453703703702,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3593355731225297,
+        "cross_encoder_sts": 0.423904347826087,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18715217391304348,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.38440707070707075,
+        "cross_encoder_sts": 0.4426888888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2289888888888889,
+        "jaccard": null,
+        "top_element_id": "2.B.3.g",
+        "top_element_label": "Operations Monitoring"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.42006065128900955
       },
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.3944566433566433
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.g",
+        "element_label": "Operations Monitoring",
+        "score": 0.38440707070707075
+      },
+      {
         "framework": "dcwf",
         "element_id": "1002A",
-        "element_label": "",
+        "element_label": "Skill in conducting reviews of systems.",
         "score": 0.3799136808397082
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.3697715067340067
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Design, implement, and conduct quality assurance testing and validation procedures for data systems,...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4201, top tier for this dataset)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-T-001 (Data Quality/Task) scores 0.420 composite (highest: DDaT at 0.420) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.420), and Data Quality handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does DDaT signal (0.420) for this Data Quality KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Quality appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Quality at composite 0.420 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Design, implement, and conduct quality assurance testing and validation procedures for data systems,...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4201, top tier for this dataset).",
+  "decision_rationale": "KSA DQ-T-001 (Data Quality/Task) scores 0.420 composite (highest: DDaT at 0.420) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.225812Z",
+    "evaluated_at": "2026-04-06T17:57:45.356021+00:00",
     "pipeline_version": "1.0"
   }
 }

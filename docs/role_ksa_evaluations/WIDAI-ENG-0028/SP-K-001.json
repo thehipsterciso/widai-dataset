@@ -7,8 +7,8 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "SP",
   "pass_1_scoring": {
-    "composite_score": 0.41881884115884116,
-    "signal_strength": "weak",
+    "composite_score": 0.45519841897233204,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.41881884115884116,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.39430351648351647,
         "jaccard": null,
         "top_element_id": "10",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of application vulnerabilities."
       },
       "ddat": {
         "composite": 0.39894581818181823,
@@ -29,14 +29,62 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-025",
         "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4537466275659824,
+        "cross_encoder_sts": 0.44424516129032254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4790838709677419,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41448745644599305,
+        "cross_encoder_sts": 0.429005574912892,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3757724738675958,
+        "jaccard": null,
+        "top_element_id": "K0375",
+        "top_element_label": "Knowledge of wireless applications vulnerabilities"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.45519841897233204,
+        "cross_encoder_sts": 0.45015652173913046,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4686434782608696,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
       }
     },
     "top_anchors": [
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.5",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.45519841897233204
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4537466275659824
+      },
+      {
         "framework": "dcwf",
         "element_id": "10",
-        "element_label": "",
+        "element_label": "Knowledge of application vulnerabilities.",
         "score": 0.41881884115884116
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0375",
+        "element_label": "Knowledge of wireless applications vulnerabilities",
+        "score": 0.41448745644599305
       },
       {
         "framework": "ddat",
@@ -44,6 +92,16 @@
         "element_label": "Changing security culture",
         "score": 0.39894581818181823
       }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
     ],
     "metrics_used": [
       "bi_encoder_cosine",
@@ -56,29 +114,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Knowledge of AI security threat modeling and attack vectors, including prompt injection, data exfilt...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4188)."
+    "preliminary_decision": "include",
+    "rationale": "KSA SP-K-001 (Security and Privacy/Knowledge) scores 0.455 composite (highest: NIST AI RMF at 0.455) and is edge_case for the Data Engineer role. The KSA is an edge case for Security and Privacy but contains 0 DE pattern signals sufficient to warrant inclusion for a senior IC data engineer. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, NIST AI RMF signal (0.455), and Security and Privacy handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Security/Privacy (SP) competencies for Data Engineer IC/senior IC roles?",
+    "evidence": "Data-level security (column-level security, encryption, masking, access controls) appears in 20-35% of DE job descriptions in regulated industries. Org-level policy work is absent from DE postings at IC/senior IC.",
+    "ruling": "Revised to exclude. Security content is policy/org-level, not data-implementation. Not market-supported at IC/senior IC DE. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Knowledge of AI security threat modeling and attack vectors, including prompt injection, data exfilt...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4188).",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Security content is policy/org-level, not data-implementation. Not market-supported at IC/senior IC DE. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.237834Z",
+    "evaluated_at": "2026-04-06T17:57:45.277409+00:00",
     "pipeline_version": "1.0"
   }
 }

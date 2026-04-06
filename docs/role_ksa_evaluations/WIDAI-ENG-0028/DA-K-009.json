@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.33805722891566264,
         "jaccard": null,
         "top_element_id": "101",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of process engineering concepts."
       },
       "ddat": {
         "composite": 0.40502587412587415,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3530195286195286,
+        "cross_encoder_sts": 0.4013407407407407,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22416296296296295,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.39953972133394244,
+        "cross_encoder_sts": 0.4252105527638191,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3310841708542714,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.34402130681818177,
+        "cross_encoder_sts": 0.39501875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.208028125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3883857142857143,
+        "cross_encoder_sts": 0.4096,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3318142857142857,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.40502587412587415
       },
       {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39953972133394244
+      },
+      {
         "framework": "dcwf",
         "element_id": "101",
-        "element_label": "",
+        "element_label": "Knowledge of process engineering concepts.",
         "score": 0.3912395582329318
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.3883857142857143
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.3530195286195286
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: knowledge from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4050). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-K-009 (Data Architecture/Knowledge) scores 0.405 composite (highest: DDaT at 0.405) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.405), and Data Architecture handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 4 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does DDaT signal (0.405) for this Data Architecture KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Architecture appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Architecture at composite 0.405 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: knowledge from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.4050). A working DE would be aware of but not accountable for this competency.",
+  "decision_rationale": "KSA DA-K-009 (Data Architecture/Knowledge) scores 0.405 composite (highest: DDaT at 0.405) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.348035Z",
+    "evaluated_at": "2026-04-06T17:57:45.401493+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "DQ",
   "pass_1_scoring": {
-    "composite_score": 0.41867987012987007,
+    "composite_score": 0.42307250608272506,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.32726915297092285,
         "jaccard": null,
         "top_element_id": "1000A",
-        "top_element_label": ""
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
       },
       "ddat": {
         "composite": 0.41867987012987007,
@@ -29,9 +29,55 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-008",
         "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.4025355555555556,
+        "cross_encoder_sts": 0.43034222222222224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3283844444444445,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.42307250608272506,
+        "cross_encoder_sts": 0.4532294403892944,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34265401459854017,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39866451612903225,
+        "cross_encoder_sts": 0.43890322580645164,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2913612903225806,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4131597402597403,
+        "cross_encoder_sts": 0.4475857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32135714285714284,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
       }
     },
     "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0498",
+        "element_label": "Knowledge of operational planning processes",
+        "score": 0.42307250608272506
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-008",
@@ -39,12 +85,33 @@
         "score": 0.41867987012987007
       },
       {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.4131597402597403
+      },
+      {
         "framework": "dcwf",
         "element_id": "1000A",
-        "element_label": "",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
         "score": 0.40549639121940007
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4025355555555556
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"transformation logic\", \"data quality\", \"transform  ?:data|layer|logic|pipeline|model\"). STRM composite score is moderate-to-strong (0.4187); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA DQ-K-005 (Data Quality/Knowledge) scores 0.423 composite (highest: NICE at 0.423) and is in_scope for the Data Engineer role. The KSA addresses data quality enforcement and validation \u2014 a primary IC-level data engineering responsibility. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.423), and Data Quality handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 1 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does NICE signal (0.423) for this Data Quality KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Quality appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Quality at composite 0.423 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"transformation logic\", \"data quality\", \"transform  ?:data|layer|logic|pipeline|model\"). STRM composite score is moderate-to-strong (0.4187); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA DQ-K-005 (Data Quality/Knowledge) scores 0.423 composite (highest: NICE at 0.423) and is in_scope for the Data Engineer role. The KSA addresses data quality enforcement and validation \u2014 a primary IC-level data engineering responsibility. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.239639Z",
+    "evaluated_at": "2026-04-06T17:57:45.345866+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.33254961360123647,
         "jaccard": null,
         "top_element_id": "101",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of process engineering concepts."
       },
       "ddat": {
         "composite": 0.4261025691699605,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.41684688995215313,
+        "cross_encoder_sts": 0.43917894736842106,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3572947368421053,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40894608244608244,
+        "cross_encoder_sts": 0.4380903903903904,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33122792792792793,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4051148221343874,
+        "cross_encoder_sts": 0.4309782608695652,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33614565217391307,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3966531468531469,
+        "cross_encoder_sts": 0.4343,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29626153846153847,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.5",
+        "top_element_label": "Inductive Reasoning"
       }
     },
     "top_anchors": [
@@ -39,12 +79,39 @@
         "score": 0.4261025691699605
       },
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.41684688995215313
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40894608244608244
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4051148221343874
+      },
+      {
         "framework": "dcwf",
         "element_id": "101",
-        "element_label": "",
+        "element_label": "Knowledge of process engineering concepts.",
         "score": 0.3994624139384572
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Skill in building, managing, and operating a Data Governance Council, including membership design, d...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4261, top tier for this dataset)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-S-004 (Data Governance/Skill) scores 0.426 composite (highest: DDaT at 0.426) and is edge_case for the Data Engineer role. The KSA is an edge case for Data Governance but contains 0 DE pattern signals sufficient to warrant inclusion for a senior IC data engineer. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, DDaT signal (0.426), and Data Governance handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Data Governance (DG) \u2014 specifically implementation vs. ownership \u2014 for Data Engineer roles?",
+    "evidence": "Data Engineers implement governance processes (metadata tagging, lineage capture, catalog population, quality rule enforcement) \u2014 present in 25-40% of senior DE postings. Governance ownership (policy authoring, stewardship programs) belongs to governance-specific roles.",
+    "ruling": "Revised to exclude. DG content signals ownership rather than implementation. Market evidence supports exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Skill in building, managing, and operating a Data Governance Council, including membership design, d...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4261, top tier for this dataset).",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. DG content signals ownership rather than implementation. Market evidence supports exclusion. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.190580Z",
+    "evaluated_at": "2026-04-06T17:57:45.333986+00:00",
     "pipeline_version": "1.0"
   }
 }

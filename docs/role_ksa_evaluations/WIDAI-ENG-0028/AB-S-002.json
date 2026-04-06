@@ -7,7 +7,7 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "AB",
   "pass_1_scoring": {
-    "composite_score": 0.4242296600790514,
+    "composite_score": 0.43288707850013486,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3879655652173913,
         "jaccard": null,
         "top_element_id": "1002",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
       },
       "ddat": {
         "composite": 0.4111549242424243,
@@ -29,14 +29,72 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-009",
         "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.40965768025078364,
+        "cross_encoder_sts": 0.4352103448275862,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34151724137931033,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.43288707850013486,
+        "cross_encoder_sts": 0.44980118694362015,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3877827893175075,
+        "jaccard": null,
+        "top_element_id": "K1096",
+        "top_element_label": "Knowledge of data analysis tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41326870629370627,
+        "cross_encoder_sts": 0.44898076923076924,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31803653846153845,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4275186602870813,
+        "cross_encoder_sts": 0.4431315789473684,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38588421052631583,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K1096",
+        "element_label": "Knowledge of data analysis tools and techniques",
+        "score": 0.43288707850013486
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.4275186602870813
+      },
+      {
         "framework": "dcwf",
         "element_id": "1002",
-        "element_label": "",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
         "score": 0.4242296600790514
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41326870629370627
       },
       {
         "framework": "ddat",
@@ -45,6 +103,15 @@
         "score": 0.4111549242424243
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Skill in querying and extracting data from relational databases, data warehouses, and analytical rep...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4242, top tier for this dataset)."
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-S-002 (Core Abilities/Skill) scores 0.433 composite (highest: NICE at 0.433) and is in_scope for the Data Engineer role. The KSA covers data modeling, schema design, and database work that are core Data Engineer competencies. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.433), and Core Abilities handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 1 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence support this Core Ability as a distinct Data Engineer competency at IC/senior IC level?",
+    "evidence": "General abilities appear implicitly in DE postings but rarely as discrete competencies. When explicit, they appear in context of pipeline design, data modeling, or quality enforcement (DE signals here: 2, composite: 0.433).",
+    "ruling": "Include upheld. Core ability with 2 DE signals and composite 0.433 reflects market-relevant technical judgment. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Analytics & BI domain has low DE affinity (0.28), and the text \u2014 'Skill in querying and extracting data from relational databases, data warehouses, and analytical rep...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4242, top tier for this dataset).",
+  "decision_rationale": "KSA AB-S-002 (Core Abilities/Skill) scores 0.433 composite (highest: NICE at 0.433) and is in_scope for the Data Engineer role. The KSA covers data modeling, schema design, and database work that are core Data Engineer competencies. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.198639Z",
+    "evaluated_at": "2026-04-06T17:57:45.313914+00:00",
     "pipeline_version": "1.0"
   }
 }

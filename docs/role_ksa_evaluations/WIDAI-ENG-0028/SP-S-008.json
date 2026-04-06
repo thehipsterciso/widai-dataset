@@ -7,8 +7,8 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "SP",
   "pass_1_scoring": {
-    "composite_score": 0.444244192599853,
-    "signal_strength": "weak",
+    "composite_score": 0.5246480716253443,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.444244192599853,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3591289757412399,
         "jaccard": null,
         "top_element_id": "10A",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting application vulnerability assessments."
       },
       "ddat": {
         "composite": 0.43009501466275657,
@@ -29,13 +29,71 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.5029368338557993,
+        "cross_encoder_sts": 0.5048327586206897,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4978810344827586,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-016",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.4484020936075183,
+        "cross_encoder_sts": 0.48186581371545545,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35916550665301944,
+        "jaccard": null,
+        "top_element_id": "S0509",
+        "top_element_label": "Skill in evaluating security products"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5246480716253443,
+        "cross_encoder_sts": 0.5355121212121212,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49567727272727274,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.7",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.3723077922077922,
+        "cross_encoder_sts": 0.4126285714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2647857142857143,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
       }
     },
     "top_anchors": [
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.7",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.5246480716253443
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-016",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.5029368338557993
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0509",
+        "element_label": "Skill in evaluating security products",
+        "score": 0.4484020936075183
+      },
+      {
         "framework": "dcwf",
         "element_id": "10A",
-        "element_label": "",
+        "element_label": "Skill in conducting application vulnerability assessments.",
         "score": 0.444244192599853
       },
       {
@@ -45,6 +103,15 @@
         "score": 0.43009501466275657
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -58,27 +125,27 @@
   "pass_2_evaluation": {
     "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: skill from Security & Privacy (domain affinity 0.30); strategic/governance framing outweighs technical signals. STRM composite score is strong (0.4442, top tier for this dataset). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA SP-S-008 (Security and Privacy/Skill) scores 0.525 composite (highest: NIST AI RMF at 0.525) and is edge_case for the Data Engineer role. The KSA is an edge case for Security and Privacy but contains 1 DE pattern signals sufficient to warrant inclusion for a senior IC data engineer. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, NIST AI RMF signal (0.525), and Security and Privacy handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Security/Privacy (SP) competencies for Data Engineer IC/senior IC roles?",
+    "evidence": "Data-level security (column-level security, encryption, masking, access controls) appears in 20-35% of DE job descriptions in regulated industries. Org-level policy work is absent from DE postings at IC/senior IC.",
+    "ruling": "Revised to exclude. Security content is policy/org-level, not data-implementation. Not market-supported at IC/senior IC DE. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: skill from Security & Privacy (domain affinity 0.30); strategic/governance framing outweighs technical signals. STRM composite score is strong (0.4442, top tier for this dataset). A working DE would be aware of but not accountable for this competency.",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Security content is policy/org-level, not data-implementation. Not market-supported at IC/senior IC DE. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.133516Z",
+    "evaluated_at": "2026-04-06T17:57:45.230738+00:00",
     "pipeline_version": "1.0"
   }
 }

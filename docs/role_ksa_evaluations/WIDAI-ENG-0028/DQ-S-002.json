@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.269631462585034,
         "jaccard": null,
         "top_element_id": "1002",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
       },
       "ddat": {
         "composite": 0.4163351325757576,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-009",
         "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.3853754545454545,
+        "cross_encoder_sts": 0.414935,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30655,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.398463961038961,
+        "cross_encoder_sts": 0.45482806122448977,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24815969387755102,
+        "jaccard": null,
+        "top_element_id": "K1246",
+        "top_element_label": "Knowledge of data handling tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3734552188552188,
+        "cross_encoder_sts": 0.422237037037037,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24337037037037035,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3977142857142857,
+        "cross_encoder_sts": 0.4418357142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28005714285714284,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
       }
     },
     "top_anchors": [
@@ -41,10 +81,37 @@
       {
         "framework": "dcwf",
         "element_id": "1002",
-        "element_label": "",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
         "score": 0.400940306122449
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1246",
+        "element_label": "Knowledge of data handling tools and techniques",
+        "score": 0.398463961038961
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.3977142857142857
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.3853754545454545
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data quality\", \"data asset\"). STRM composite score is moderate-to-strong (0.4163); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA DQ-S-002 (Data Quality/Skill) scores 0.416 composite (highest: DDaT at 0.416) and is in_scope for the Data Engineer role. The KSA addresses data quality enforcement and validation \u2014 a primary IC-level data engineering responsibility. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.416), and Data Quality handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 1 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does DDaT signal (0.416) for this Data Quality KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Quality appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Quality at composite 0.416 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
   "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"data quality\", \"data asset\"). STRM composite score is moderate-to-strong (0.4163); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
+  "decision_rationale": "KSA DQ-S-002 (Data Quality/Skill) scores 0.416 composite (highest: DDaT at 0.416) and is in_scope for the Data Engineer role. The KSA addresses data quality enforcement and validation \u2014 a primary IC-level data engineering responsibility. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.260930Z",
+    "evaluated_at": "2026-04-06T17:57:45.369454+00:00",
     "pipeline_version": "1.0"
   }
 }

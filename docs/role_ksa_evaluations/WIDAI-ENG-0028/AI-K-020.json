@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3393331761006289,
         "jaccard": null,
         "top_element_id": "1002A",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting reviews of systems."
       },
       "ddat": {
         "composite": 0.40006897546897546,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.3614727272727273,
+        "cross_encoder_sts": 0.4074666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2388222222222222,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.40406854349951127,
+        "cross_encoder_sts": 0.43576344086021507,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3195488172043011,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.33573636363636367,
+        "cross_encoder_sts": 0.396755,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.17302,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3678715909090909,
+        "cross_encoder_sts": 0.3862125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3189625,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
       }
     },
     "top_anchors": [
       {
         "framework": "dcwf",
         "element_id": "1002A",
-        "element_label": "",
+        "element_label": "Skill in conducting reviews of systems.",
         "score": 0.40800293024585477
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40406854349951127
       },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-010",
         "element_label": "Analysis and synthesis (data ethics)",
         "score": 0.40006897546897546
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.3678715909090909
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.3614727272727273
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"columnar\", \"object storage\", \"parquet\"). STRM composite score is moderate-to-strong (0.4080); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA AI-K-020 (AI and Machine Learning/Knowledge) scores 0.408 composite (highest: DCWF at 0.408) and is in_scope for the Data Engineer role. The KSA covers data modeling, schema design, and database work that are core Data Engineer competencies. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
-    "outcome": "upheld",
-    "challenge": null,
+    "outcome": "overturned",
+    "challenge": "Include for edge domain (AI and Machine Learning) at composite 0.408. Edge domain threshold is \u22650.42. Consistency check: this may fall below the applied standard.",
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.408 is below threshold."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 1 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.408)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this AI and Machine Learning competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"columnar\", \"object storage\", \"parquet\"). STRM composite score is moderate-to-strong (0.4080); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
-  "adversarial_disagreements": 0,
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.408 is below threshold.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.325358Z",
+    "evaluated_at": "2026-04-06T17:57:45.392880+00:00",
     "pipeline_version": "1.0"
   }
 }

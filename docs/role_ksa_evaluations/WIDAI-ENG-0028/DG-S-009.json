@@ -7,8 +7,8 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "DG",
   "pass_1_scoring": {
-    "composite_score": 0.4325598842975207,
-    "signal_strength": "weak",
+    "composite_score": 0.5278677922077921,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.4325598842975207,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.37279545454545454,
         "jaccard": null,
         "top_element_id": "5874",
-        "top_element_label": ""
+        "top_element_label": "Develop a data management strategy that helps to prioritize investments and resource allocations (e.g., data analytics, data infrastructure)."
       },
       "ddat": {
         "composite": 0.4318820754716981,
@@ -29,13 +29,65 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-003",
         "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.48384991423670676,
+        "cross_encoder_sts": 0.4868792452830189,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4757716981132076,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4230913253413254,
+        "cross_encoder_sts": 0.45178003663003663,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34658809523809525,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5278677922077921,
+        "cross_encoder_sts": 0.5378885714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5011457142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.2",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.41313766233766236,
+        "cross_encoder_sts": 0.42657142857142855,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3773142857142857,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
       }
     },
     "top_anchors": [
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-1.2",
+        "element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",
+        "score": 0.5278677922077921
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.48384991423670676
+      },
+      {
         "framework": "dcwf",
         "element_id": "5874",
-        "element_label": "",
+        "element_label": "Develop a data management strategy that helps to prioritize investments and resource allocations (e.g., data analytics, data infrastructure).",
         "score": 0.4325598842975207
       },
       {
@@ -43,8 +95,23 @@
         "element_id": "DDAT-SK-003",
         "element_label": "Agile and Lean practices",
         "score": 0.4318820754716981
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4230913253413254
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -57,28 +124,28 @@
   },
   "pass_2_evaluation": {
     "scope_fit": "out_of_scope",
-    "seniority_fit": "appropriate",
+    "seniority_fit": "too_senior",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Skill in designing data management systems, data architectures, data structures, storage solutions, ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4326, top tier for this dataset)."
+    "rationale": "KSA DG-S-009 (Data Governance/Skill) is excluded as out_of_scope (composite 0.528, highest: NIST AI RMF at 0.528). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.528, and Data Governance (DG) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Data Governance KSA (composite 0.528)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this Data Governance competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Skill in designing data management systems, data architectures, data structures, storage solutions, ...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4326, top tier for this dataset).",
+  "decision_rationale": "KSA DG-S-009 (Data Governance/Skill) is excluded as out_of_scope (composite 0.528, highest: NIST AI RMF at 0.528). The KSA describes responsibilities at an executive or organizational leadership level above the IC/senior IC Data Engineer boundary.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.166795Z",
+    "evaluated_at": "2026-04-06T17:57:45.227994+00:00",
     "pipeline_version": "1.0"
   }
 }

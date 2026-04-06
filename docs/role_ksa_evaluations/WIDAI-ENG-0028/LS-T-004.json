@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3344168049792531,
         "jaccard": null,
         "top_element_id": "1062",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of software reverse engineering techniques."
       },
       "ddat": {
         "composite": 0.4267760606060606,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-002",
         "top_element_label": "Adapting to delivery methodologies"
+      },
+      "eu_ai_act": {
+        "composite": 0.36428181818181815,
+        "cross_encoder_sts": 0.39822857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27375714285714287,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-012",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.3894273235144744,
+        "cross_encoder_sts": 0.4211474860335196,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30484022346368717,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3704433155080214,
+        "cross_encoder_sts": 0.40594117647058825,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2757823529411765,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.403498051948052,
+        "cross_encoder_sts": 0.44655000000000006,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28869285714285714,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
       }
     },
     "top_anchors": [
@@ -41,10 +81,37 @@
       {
         "framework": "dcwf",
         "element_id": "1062",
-        "element_label": "",
+        "element_label": "Knowledge of software reverse engineering techniques.",
         "score": 0.4088705205582799
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.403498051948052
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3894273235144744
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-5.2",
+        "element_label": "Processes are in place for robust engagement with relevant AI actors.",
+        "score": 0.3704433155080214
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Leadership & Strategy domain has low DE affinity (0.06), and the text \u2014 'Translate business requirements into operational capabilities, working with technical teams to conve...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4268, top tier for this dataset)."
+    "rationale": "KSA LS-T-004 (Leadership and Strategy/Task) is excluded as out_of_scope (composite 0.427, highest: DDaT at 0.427). Leadership and Strategy is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own leadership and strategy frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.427, and Leadership and Strategy (LS) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Leadership and Strategy KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Leadership and Strategy competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Leadership and Strategy is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Leadership & Strategy domain has low DE affinity (0.06), and the text \u2014 'Translate business requirements into operational capabilities, working with technical teams to conve...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4268, top tier for this dataset).",
+  "decision_rationale": "KSA LS-T-004 (Leadership and Strategy/Task) is excluded as out_of_scope (composite 0.427, highest: DDaT at 0.427). Leadership and Strategy is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own leadership and strategy frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.186144Z",
+    "evaluated_at": "2026-04-06T17:57:45.331955+00:00",
     "pipeline_version": "1.0"
   }
 }

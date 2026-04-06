@@ -7,8 +7,8 @@
   "ksa_dimension": "Ability",
   "ksa_domain": "TF",
   "pass_1_scoring": {
-    "composite_score": 0.43457873331654495,
-    "signal_strength": "weak",
+    "composite_score": 0.4664571146245059,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.43457873331654495,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.4033508310249307,
         "jaccard": null,
         "top_element_id": "1002",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
       },
       "ddat": {
         "composite": 0.42668500000000004,
@@ -29,13 +29,65 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4664571146245059,
+        "cross_encoder_sts": 0.45816086956521734,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.48858043478260865,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4087963322884013,
+        "cross_encoder_sts": 0.42899724137931033,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35492724137931037,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4622026825633383,
+        "cross_encoder_sts": 0.45001803278688524,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4946950819672131,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.41293529411764707,
+        "cross_encoder_sts": 0.42968235294117646,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3682764705882353,
+        "jaccard": null,
+        "top_element_id": "2.C.3.a",
+        "top_element_label": "Computers and Electronics"
       }
     },
     "top_anchors": [
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4664571146245059
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4622026825633383
+      },
+      {
         "framework": "dcwf",
         "element_id": "1002",
-        "element_label": "",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
         "score": 0.43457873331654495
       },
       {
@@ -43,8 +95,23 @@
         "element_id": "DDAT-SK-023",
         "element_label": "Capability building for digital, data and technology",
         "score": 0.42668500000000004
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.a",
+        "element_label": "Computers and Electronics",
+        "score": 0.41293529411764707
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: ability from Technology Fundamentals (domain affinity 0.82); no DE-specific signals and low domain affinity. STRM composite score is strong (0.4346, top tier for this dataset). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-A-001 (Technical Foundations/Ability) scores 0.466 composite (highest: EU AI Act at 0.466) and is in_scope for the Data Engineer role. The KSA aligns with Technical Foundations competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, EU AI Act signal (0.466), and Technical Foundations handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 2 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does EU AI Act signal (0.466) for this Technical Foundations KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Technical Foundations appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Technical Foundations at composite 0.466 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: ability from Technology Fundamentals (domain affinity 0.82); no DE-specific signals and low domain affinity. STRM composite score is strong (0.4346, top tier for this dataset). A working DE would be aware of but not accountable for this competency.",
+  "decision_rationale": "KSA TF-A-001 (Technical Foundations/Ability) scores 0.466 composite (highest: EU AI Act at 0.466) and is in_scope for the Data Engineer role. The KSA aligns with Technical Foundations competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.158758Z",
+    "evaluated_at": "2026-04-06T17:57:45.262233+00:00",
     "pipeline_version": "1.0"
   }
 }

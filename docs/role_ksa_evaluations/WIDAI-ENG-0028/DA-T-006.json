@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.30654280442804427,
         "jaccard": null,
         "top_element_id": "1000A",
-        "top_element_label": ""
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
       },
       "ddat": {
         "composite": 0.41821675579322637,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-022",
         "top_element_label": "Business process improvement"
+      },
+      "eu_ai_act": {
+        "composite": 0.35510545454545456,
+        "cross_encoder_sts": 0.39695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24352000000000001,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-050",
+        "top_element_label": "Post-market monitoring by providers"
+      },
+      "nice": {
+        "composite": 0.38792658846529815,
+        "cross_encoder_sts": 0.4269349462365591,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2839043010752688,
+        "jaccard": null,
+        "top_element_id": "K1315",
+        "top_element_label": "Knowledge of system safety and reliability metrics"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39082357954545455,
+        "cross_encoder_sts": 0.446190625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.243178125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-1.1",
+        "top_element_label": "Context is established and understood."
+      },
+      "onet": {
+        "composite": 0.37068,
+        "cross_encoder_sts": 0.40494,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27932,
+        "jaccard": null,
+        "top_element_id": "2.B.4.h",
+        "top_element_label": "Systems Evaluation"
       }
     },
     "top_anchors": [
@@ -41,10 +81,37 @@
       {
         "framework": "dcwf",
         "element_id": "1000A",
-        "element_label": "",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
         "score": 0.39665350553505535
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-1.1",
+        "element_label": "Context is established and understood.",
+        "score": 0.39082357954545455
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1315",
+        "element_label": "Knowledge of system safety and reliability metrics",
+        "score": 0.38792658846529815
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.4.h",
+        "element_label": "Systems Evaluation",
+        "score": 0.37068
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Architecture domain has low DE affinity (0.60), and the text \u2014 'Implement platform monitoring and alerting systems for data availability, performance, cost optimiza...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4182)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-T-006 (Data Architecture/Task) scores 0.418 composite (highest: DDaT at 0.418) and is in_scope for the Data Engineer role. The KSA covers pipeline observability and monitoring \u2014 a core operational responsibility for data engineers. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.418), and Data Architecture handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 2 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does DDaT signal (0.418) for this Data Architecture KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Architecture appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Architecture at composite 0.418 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Architecture domain has low DE affinity (0.60), and the text \u2014 'Implement platform monitoring and alerting systems for data availability, performance, cost optimiza...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4182).",
+  "decision_rationale": "KSA DA-T-006 (Data Architecture/Task) scores 0.418 composite (highest: DDaT at 0.418) and is in_scope for the Data Engineer role. The KSA covers pipeline observability and monitoring \u2014 a core operational responsibility for data engineers. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.244398Z",
+    "evaluated_at": "2026-04-06T17:57:45.363416+00:00",
     "pipeline_version": "1.0"
   }
 }

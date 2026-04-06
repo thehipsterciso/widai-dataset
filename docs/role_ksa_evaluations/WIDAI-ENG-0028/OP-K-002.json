@@ -7,8 +7,8 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "OP",
   "pass_1_scoring": {
-    "composite_score": 0.41164271775345074,
-    "signal_strength": "weak",
+    "composite_score": 0.4655540308747856,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.41164271775345074,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.39710811518324607,
         "jaccard": null,
         "top_element_id": "1021",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of risk threat assessment."
       },
       "ddat": {
         "composite": 0.3996751420454545,
@@ -29,13 +29,71 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-010",
         "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4655540308747856,
+        "cross_encoder_sts": 0.4488415094339622,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5101207547169812,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41788903896103896,
+        "cross_encoder_sts": 0.42575714285714283,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3969074285714286,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.46491529581529584,
+        "cross_encoder_sts": 0.45441746031746033,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4929095238095238,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3856581818181819,
+        "cross_encoder_sts": 0.40122,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34416,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
       }
     },
     "top_anchors": [
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4655540308747856
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.46491529581529584
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.41788903896103896
+      },
+      {
         "framework": "dcwf",
         "element_id": "1021",
-        "element_label": "",
+        "element_label": "Knowledge of risk threat assessment.",
         "score": 0.41164271775345074
       },
       {
@@ -45,6 +103,15 @@
         "score": 0.3996751420454545
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Operations & Program Management domain has low DE affinity (0.15), and the text \u2014 'Knowledge of data and AI program risk types, including technical risk, data availability risk, model...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4116)."
+    "rationale": "KSA OP-K-002 (Operational Excellence/Knowledge) is excluded as out_of_scope (composite 0.466, highest: EU AI Act at 0.466). Operational Excellence is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own operational excellence frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.466, and Operational Excellence (OP) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 1 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Operational Excellence KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "Operational Excellence competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. Operational Excellence is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Operations & Program Management domain has low DE affinity (0.15), and the text \u2014 'Knowledge of data and AI program risk types, including technical risk, data availability risk, model...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4116).",
+  "decision_rationale": "KSA OP-K-002 (Operational Excellence/Knowledge) is excluded as out_of_scope (composite 0.466, highest: EU AI Act at 0.466). Operational Excellence is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own operational excellence frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.294530Z",
+    "evaluated_at": "2026-04-06T17:57:45.263436+00:00",
     "pipeline_version": "1.0"
   }
 }

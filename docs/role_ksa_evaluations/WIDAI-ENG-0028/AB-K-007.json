@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "AB",
   "pass_1_scoring": {
-    "composite_score": 0.3971433616742969,
+    "composite_score": 0.41420267611176703,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3289223021582734,
         "jaccard": null,
         "top_element_id": "107",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of resource management principles and techniques."
       },
       "ddat": {
         "composite": 0.3951808080808081,
@@ -29,13 +29,59 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-052",
         "top_element_label": "Data governance"
+      },
+      "eu_ai_act": {
+        "composite": 0.3553227272727273,
+        "cross_encoder_sts": 0.37902,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29213,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.41420267611176703,
+        "cross_encoder_sts": 0.44544458874458875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33089090909090907,
+        "jaccard": null,
+        "top_element_id": "K0660",
+        "top_element_label": "Knowledge of appropriate use policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3617471074380166,
+        "cross_encoder_sts": 0.39611818181818187,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2700909090909091,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36684545454545453,
+        "cross_encoder_sts": 0.3744,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3467,
+        "jaccard": null,
+        "top_element_id": "4.A.4.b.6",
+        "top_element_label": "Providing Consultation and Advice to Others"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0660",
+        "element_label": "Knowledge of appropriate use policies and procedures",
+        "score": 0.41420267611176703
+      },
+      {
         "framework": "dcwf",
         "element_id": "107",
-        "element_label": "",
+        "element_label": "Knowledge of resource management principles and techniques.",
         "score": 0.3971433616742969
       },
       {
@@ -43,8 +89,29 @@
         "element_id": "DDAT-SK-052",
         "element_label": "Data governance",
         "score": 0.3951808080808081
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.4.b.6",
+        "element_label": "Providing Consultation and Advice to Others",
+        "score": 0.36684545454545453
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3617471074380166
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"sql\", \"query optim\", \"relational database\"). STRM composite score is moderate-to-strong (0.3971); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA AB-K-007 (Core Abilities/Knowledge) scores 0.414 composite (highest: NICE at 0.414) and is in_scope for the Data Engineer role. The KSA covers data modeling, schema design, and database work that are core Data Engineer competencies. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
-    "outcome": "upheld",
-    "challenge": null,
+    "outcome": "overturned",
+    "challenge": "Include for edge domain (Core Abilities) at composite 0.414. Edge domain threshold is \u22650.42. Consistency check: this may fall below the applied standard.",
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.414 is below threshold."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation present: 2 match(es) in DE job postings or certification scope. Skill appears in DE role descriptions \u2014 sufficient to uphold.",
-    "ruling": "include"
+    "challenge": "Does market evidence challenge the exclusion of this Core Abilities KSA (composite 0.414)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this Core Abilities competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "Included: knowledge maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"sql\", \"query optim\", \"relational database\"). STRM composite score is moderate-to-strong (0.3971); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
-  "adversarial_disagreements": 0,
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.414 is below threshold.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.379833Z",
+    "evaluated_at": "2026-04-06T17:57:45.375569+00:00",
     "pipeline_version": "1.0"
   }
 }

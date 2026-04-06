@@ -7,7 +7,7 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "AI",
   "pass_1_scoring": {
-    "composite_score": 0.38919320432043203,
+    "composite_score": 0.4250932346723044,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.23229191419141915,
         "jaccard": null,
         "top_element_id": "224",
-        "top_element_label": ""
+        "top_element_label": "Skill in design modeling and building use cases (e.g., unified modeling language)."
       },
       "ddat": {
         "composite": 0.3573272727272727,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4250932346723044,
+        "cross_encoder_sts": 0.48454651162790696,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2665511627906977,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3949243010752688,
+        "cross_encoder_sts": 0.4589462365591398,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22419913978494624,
+        "jaccard": null,
+        "top_element_id": "S0631",
+        "top_element_label": "Skill in performing data preprocessing"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39493164983164986,
+        "cross_encoder_sts": 0.44244074074074075,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2682407407407407,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38517727272727276,
+        "cross_encoder_sts": 0.4471857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21982142857142858,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
       }
     },
     "top_anchors": [
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4250932346723044
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.39493164983164986
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0631",
+        "element_label": "Skill in performing data preprocessing",
+        "score": 0.3949243010752688
+      },
+      {
         "framework": "dcwf",
         "element_id": "224",
-        "element_label": "",
+        "element_label": "Skill in design modeling and building use cases (e.g., unified modeling language).",
         "score": 0.38919320432043203
       },
       {
-        "framework": "ddat",
-        "element_id": "DDAT-SK-023",
-        "element_label": "Capability building for digital, data and technology",
-        "score": 0.3573272727272727
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.38517727272727276
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: skill from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.3892). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-S-011 (AI and Machine Learning/Skill) scores 0.425 composite (highest: EU AI Act at 0.425) and is in_scope for the Data Engineer role. The KSA aligns with AI and Machine Learning competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, EU AI Act signal (0.425), and AI and Machine Learning handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 1 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence support AI/ML (AI) competencies for Data Engineer IC/senior IC, or does this belong to ML Engineering?",
+    "evidence": "AI/ML engineering overlap appears in 30-40% of senior DE postings: feature engineering, ML pipelines, data prep for training. Governance/ethics framing (DE signals=2, OOS signals=0) shifts the boundary toward MLOps or AI governance roles.",
+    "ruling": "Include upheld. Technical ML/DE overlap with 2 DE signals and no OOS signals is market-supported. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: skill from AI & ML Infrastructure (domain affinity 0.38); strategic/governance framing outweighs technical signals. STRM composite score is moderate-to-strong (0.3892). A working DE would be aware of but not accountable for this competency.",
+  "decision_rationale": "KSA AI-S-011 (AI and Machine Learning/Skill) scores 0.425 composite (highest: EU AI Act at 0.425) and is in_scope for the Data Engineer role. The KSA aligns with AI and Machine Learning competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.404208Z",
+    "evaluated_at": "2026-04-06T17:57:45.338683+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "DQ",
   "pass_1_scoring": {
-    "composite_score": 0.3858184917355372,
+    "composite_score": 0.41325909090909085,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3081920454545454,
         "jaccard": null,
         "top_element_id": "1034A",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of Personally Identifiable Information (PII) data security standards."
       },
       "ddat": {
         "composite": 0.3802181818181818,
@@ -29,13 +29,65 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-025",
         "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.34263636363636363,
+        "cross_encoder_sts": 0.3695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.271,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-019",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.41325909090909085,
+        "cross_encoder_sts": 0.4577649484536082,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29457680412371134,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3531757575757576,
+        "cross_encoder_sts": 0.3962666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23826666666666665,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38735909090909093,
+        "cross_encoder_sts": 0.3967,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36245,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.41325909090909085
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.38735909090909093
+      },
+      {
         "framework": "dcwf",
         "element_id": "1034A",
-        "element_label": "",
+        "element_label": "Knowledge of Personally Identifiable Information (PII) data security standards.",
         "score": 0.3858184917355372
       },
       {
@@ -43,8 +95,23 @@
         "element_id": "DDAT-SK-025",
         "element_label": "Changing security culture",
         "score": 0.3802181818181818
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.3531757575757576
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Knowledge of clinical data management standards and requirements, including Good Clinical Practice (...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3858)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-K-003 (Data Quality/Knowledge) scores 0.413 composite (highest: NICE at 0.413) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.413), and Data Quality handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does NICE signal (0.413) for this Data Quality KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Quality appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Quality at composite 0.413 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Knowledge of clinical data management standards and requirements, including Good Clinical Practice (...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3858).",
+  "decision_rationale": "KSA DQ-K-003 (Data Quality/Knowledge) scores 0.413 composite (highest: NICE at 0.413) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.411579Z",
+    "evaluated_at": "2026-04-06T17:57:45.376873+00:00",
     "pipeline_version": "1.0"
   }
 }

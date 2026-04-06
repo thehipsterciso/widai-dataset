@@ -7,8 +7,8 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "AG",
   "pass_1_scoring": {
-    "composite_score": 0.4100481929955291,
-    "signal_strength": "weak",
+    "composite_score": 0.524297688751926,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.4100481929955291,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.36193627049180327,
         "jaccard": null,
         "top_element_id": "10",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of application vulnerabilities."
       },
       "ddat": {
         "composite": 0.3978245059288538,
@@ -29,13 +29,71 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-047",
         "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.524297688751926,
+        "cross_encoder_sts": 0.5118525423728814,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5574847457627118,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-007",
+        "top_element_label": "Registration"
+      },
+      "nice": {
+        "composite": 0.41828990374331554,
+        "cross_encoder_sts": 0.4519623529411765,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3284967058823529,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.49260868385346,
+        "cross_encoder_sts": 0.48146268656716423,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5223313432835821,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36904,
+        "cross_encoder_sts": 0.37888,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3428,
+        "jaccard": null,
+        "top_element_id": "2.C.1.d",
+        "top_element_label": "Sales and Marketing"
       }
     },
     "top_anchors": [
       {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-007",
+        "element_label": "Registration",
+        "score": 0.524297688751926
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.49260868385346
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41828990374331554
+      },
+      {
         "framework": "dcwf",
         "element_id": "10",
-        "element_label": "",
+        "element_label": "Knowledge of application vulnerabilities.",
         "score": 0.4100481929955291
       },
       {
@@ -45,6 +103,15 @@
         "score": 0.3978245059288538
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Knowledge of AI regulatory frameworks and compliance requirements, including the EU AI Act risk clas...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4100)."
+    "rationale": "KSA AG-K-005 (AI Governance/Knowledge) is excluded as out_of_scope (composite 0.524, highest: EU AI Act at 0.524). AI Governance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own ai governance frameworks, strategies, or programs."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.524, and AI Governance (AG) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "AI Governance competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Knowledge of AI regulatory frameworks and compliance requirements, including the EU AI Act risk clas...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4100).",
+  "decision_rationale": "KSA AG-K-005 (AI Governance/Knowledge) is excluded as out_of_scope (composite 0.524, highest: EU AI Act at 0.524). AI Governance is outside the Data Engineer role boundary at IC/senior IC level. Data engineers implement technical systems; they do not own ai governance frameworks, strategies, or programs.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.308205Z",
+    "evaluated_at": "2026-04-06T17:57:45.231264+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "AI",
   "pass_1_scoring": {
-    "composite_score": 0.35434941972920697,
+    "composite_score": 0.3610272727272727,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.20118191489361703,
         "jaccard": null,
         "top_element_id": "108",
-        "top_element_label": ""
+        "top_element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
       },
       "ddat": {
         "composite": 0.343082196969697,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-025",
         "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.3181409090909091,
+        "cross_encoder_sts": 0.37975000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.15385,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-012",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.35243352272727274,
+        "cross_encoder_sts": 0.41267375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19179291666666665,
+        "jaccard": null,
+        "top_element_id": "K0693",
+        "top_element_label": "Knowledge of complex data structure capabilities and applications"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.31938727272727274,
+        "cross_encoder_sts": 0.37582,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1689,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.3610272727272727,
+        "cross_encoder_sts": 0.3984142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2613285714285714,
+        "jaccard": null,
+        "top_element_id": "1.A.1.e.1",
+        "top_element_label": "Speed of Closure"
       }
     },
     "top_anchors": [
       {
+        "framework": "onet",
+        "element_id": "1.A.1.e.1",
+        "element_label": "Speed of Closure",
+        "score": 0.3610272727272727
+      },
+      {
         "framework": "dcwf",
         "element_id": "108",
-        "element_label": "",
+        "element_label": "* Knowledge of risk management processes (e.g., methods for assessing and mitigating risk).",
         "score": 0.35434941972920697
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0693",
+        "element_label": "Knowledge of complex data structure capabilities and applications",
+        "score": 0.35243352272727274
       },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-025",
         "element_label": "Changing security culture",
         "score": 0.343082196969697
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-6.2",
+        "element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "score": 0.31938727272727274
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low DE affinity (0.38), and the text \u2014 'Knowledge of retrieval-augmented generation (RAG) architecture patterns, including vector store desi...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3543)."
+    "rationale": "KSA AI-K-009 (AI and Machine Learning/Knowledge) is excluded as edge_case (composite 0.361, highest: O*NET at 0.361). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.361, and AI and Machine Learning (AI) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.361)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this AI and Machine Learning competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low DE affinity (0.38), and the text \u2014 'Knowledge of retrieval-augmented generation (RAG) architecture patterns, including vector store desi...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3543).",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AI-K-009 (AI and Machine Learning/Knowledge) is excluded as edge_case (composite 0.361, highest: O*NET at 0.361). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.432499Z",
+    "evaluated_at": "2026-04-06T17:57:45.425989+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -7,7 +7,7 @@
   "ksa_dimension": "Skill",
   "ksa_domain": "AI",
   "pass_1_scoring": {
-    "composite_score": 0.4117570674486804,
+    "composite_score": 0.41596363636363637,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.34658967741935487,
         "jaccard": null,
         "top_element_id": "101",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of process engineering concepts."
       },
       "ddat": {
         "composite": 0.37719629629629636,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-047",
         "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.39660371900826447,
+        "cross_encoder_sts": 0.42861818181818184,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31123181818181817,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.40325519702140866,
+        "cross_encoder_sts": 0.43927474402730377,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30720307167235494,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3867932400932401,
+        "cross_encoder_sts": 0.4240897435897436,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28733589743589744,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.2",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.41596363636363637,
+        "cross_encoder_sts": 0.42385,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39493333333333336,
+        "jaccard": null,
+        "top_element_id": "2.B.3.e",
+        "top_element_label": "Programming"
       }
     },
     "top_anchors": [
       {
+        "framework": "onet",
+        "element_id": "2.B.3.e",
+        "element_label": "Programming",
+        "score": 0.41596363636363637
+      },
+      {
         "framework": "dcwf",
         "element_id": "101",
-        "element_label": "",
+        "element_label": "Knowledge of process engineering concepts.",
         "score": 0.4117570674486804
       },
       {
-        "framework": "ddat",
-        "element_id": "DDAT-SK-047",
-        "element_label": "Data architecture",
-        "score": 0.37719629629629636
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40325519702140866
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.39660371900826447
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.2",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.3867932400932401
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"unit test\", \"feature engineer\"). STRM composite score is moderate-to-strong (0.4118); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA AI-S-003 (AI and Machine Learning/Skill) scores 0.416 composite (highest: O*NET at 0.416) and is in_scope for the Data Engineer role. The KSA aligns with AI and Machine Learning competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
-    "outcome": "upheld",
-    "challenge": null,
+    "outcome": "overturned",
+    "challenge": "Include for edge domain (AI and Machine Learning) at composite 0.416. Edge domain threshold is \u22650.42. Consistency check: this may fall below the applied standard.",
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.416 is below threshold."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": "External check: no matches in DE job postings or cert curricula (AWS DE, Databricks, dbt, GCP DE). Would a working Data Engineer self-report this as required?",
-    "evidence": "Challenge answered: the technical practice is implicit in DE work (domain affinity 0.38, 3 DE signal(s)). Framework vocabulary matching underrepresents many legitimate DE competencies.",
-    "ruling": "include"
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.416)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this AI and Machine Learning competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "Included: skill maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"pipelines?\", \"unit test\", \"feature engineer\"). STRM composite score is moderate-to-strong (0.4118); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
-  "adversarial_disagreements": 0,
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.416 is below threshold.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.293418Z",
+    "evaluated_at": "2026-04-06T17:57:45.370363+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "SP",
   "pass_1_scoring": {
-    "composite_score": 0.4017727272727273,
+    "composite_score": 0.4117563636363636,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.353643085106383,
         "jaccard": null,
         "top_element_id": "110A",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of security management."
       },
       "ddat": {
         "composite": 0.4017727272727273,
@@ -29,9 +29,61 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-047",
         "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4117563636363636,
+        "cross_encoder_sts": 0.38761999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47612,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-008",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.41148407212622085,
+        "cross_encoder_sts": 0.43779504132231406,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3413214876033058,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38543863636363634,
+        "cross_encoder_sts": 0.3876,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.379675,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3979181818181817,
+        "cross_encoder_sts": 0.41164999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36129999999999995,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
       }
     },
     "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-008",
+        "element_label": "Data and data governance",
+        "score": 0.4117563636363636
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.41148407212622085
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-047",
@@ -39,12 +91,27 @@
         "score": 0.4017727272727273
       },
       {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.3979181818181817
+      },
+      {
         "framework": "dcwf",
         "element_id": "110A",
-        "element_label": "",
+        "element_label": "Knowledge of security management.",
         "score": 0.39527712765957446
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Knowledge of the Data Protection Officer role and responsibilities, including statutory independence...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4018)."
+    "rationale": "KSA SP-K-008 (Security and Privacy/Knowledge) is excluded as edge_case (composite 0.412, highest: EU AI Act at 0.412). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.412, and Security and Privacy (SP) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this Security and Privacy KSA (composite 0.412)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this Security and Privacy competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low DE affinity (0.30), and the text \u2014 'Knowledge of the Data Protection Officer role and responsibilities, including statutory independence...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4018).",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA SP-K-008 (Security and Privacy/Knowledge) is excluded as edge_case (composite 0.412, highest: EU AI Act at 0.412). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.362599Z",
+    "evaluated_at": "2026-04-06T17:57:45.381335+00:00",
     "pipeline_version": "1.0"
   }
 }

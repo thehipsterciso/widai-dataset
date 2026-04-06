@@ -7,8 +7,8 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "AG",
   "pass_1_scoring": {
-    "composite_score": 0.4197317906336088,
-    "signal_strength": "weak",
+    "composite_score": 0.5806822077922078,
+    "signal_strength": "moderate",
     "framework_scores": {
       "dcwf": {
         "composite": 0.4197317906336088,
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.35117737373737373,
         "jaccard": null,
         "top_element_id": "1000B",
-        "top_element_label": ""
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
       },
       "ddat": {
         "composite": 0.3950188429752066,
@@ -29,13 +29,71 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-047",
         "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.565932339791356,
+        "cross_encoder_sts": 0.5709688524590163,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5525016393442622,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.42149767959313417,
+        "cross_encoder_sts": 0.4582020979020979,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32361923076923077,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5806822077922078,
+        "cross_encoder_sts": 0.5852028571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5686271428571429,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.36834848484848487,
+        "cross_encoder_sts": 0.3968666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2923,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
       }
     },
     "top_anchors": [
       {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.3",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.5806822077922078
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.565932339791356
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.42149767959313417
+      },
+      {
         "framework": "dcwf",
         "element_id": "1000B",
-        "element_label": "",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
         "score": 0.4197317906336088
       },
       {
@@ -45,6 +103,15 @@
         "score": 0.3950188429752066
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "out_of_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Knowledge of AI literacy concepts, including what AI is and is not, how ML models work at a conceptu...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4197)."
+    "rationale": "KSA AG-K-006 (AI Governance/Knowledge) is excluded as out_of_scope (composite 0.581, highest: NIST AI RMF at 0.581). The KSA contains 2 out-of-scope signals (governance ownership, policy development, or organizational strategy) that exceed the Data Engineer role boundary."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.581, and AI Governance (AG) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Data Engineer IC/senior IC roles?",
+    "evidence": "AI Governance competencies do not appear as Data Engineer requirements in IC/senior IC job postings. They are allocated to governance, compliance, risk, or leadership roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Data Engineer core competency at IC/senior IC level. Final decision: exclude."
   },
   "final_decision": "exclude",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: AI Governance domain has low DE affinity (0.10), and the text \u2014 'Knowledge of AI literacy concepts, including what AI is and is not, how ML models work at a conceptu...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.4197).",
+  "decision_rationale": "KSA AG-K-006 (AI Governance/Knowledge) is excluded as out_of_scope (composite 0.581, highest: NIST AI RMF at 0.581). The KSA contains 2 out-of-scope signals (governance ownership, policy development, or organizational strategy) that exceed the Data Engineer role boundary.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.229311Z",
+    "evaluated_at": "2026-04-06T17:57:45.216358+00:00",
     "pipeline_version": "1.0"
   }
 }

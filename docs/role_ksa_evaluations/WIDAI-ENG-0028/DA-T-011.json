@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.30813240740740744,
         "jaccard": null,
         "top_element_id": "1071",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of secure software deployment methodologies, tools, and practices."
       },
       "ddat": {
         "composite": 0.4354674715909091,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-132",
         "top_element_label": "Programming and build (data and analytics engineering)"
+      },
+      "eu_ai_act": {
+        "composite": 0.39427233201581025,
+        "cross_encoder_sts": 0.4373608695652174,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27936956521739126,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.38944761325630883,
+        "cross_encoder_sts": 0.438495652173913,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2586528428093645,
+        "jaccard": null,
+        "top_element_id": "K1072",
+        "top_element_label": "Knowledge of automated security control testing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3815761904761905,
+        "cross_encoder_sts": 0.42550476190476194,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2644333333333333,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38743090909090905,
+        "cross_encoder_sts": 0.44337,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23826,
+        "jaccard": null,
+        "top_element_id": "1.A.1.c.2",
+        "top_element_label": "Number Facility"
       }
     },
     "top_anchors": [
@@ -41,10 +81,37 @@
       {
         "framework": "dcwf",
         "element_id": "1071",
-        "element_label": "",
+        "element_label": "Knowledge of secure software deployment methodologies, tools, and practices.",
         "score": 0.41238510101010106
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.39427233201581025
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1072",
+        "element_label": "Knowledge of automated security control testing tools and techniques",
+        "score": 0.38944761325630883
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.c.2",
+        "element_label": "Number Facility",
+        "score": 0.38743090909090905
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "edge_case",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Edge case \u2014 excluded on balance: task from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is strong (0.4355, top tier for this dataset). A working DE would be aware of but not accountable for this competency."
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-T-011 (Data Architecture/Task) scores 0.435 composite (highest: DDaT at 0.435) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.435), and Data Architecture handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 1 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does DDaT signal (0.435) for this Data Architecture KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Architecture appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Architecture at composite 0.435 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Edge case \u2014 excluded on balance: task from Data Architecture (domain affinity 0.60); strategic/governance framing outweighs technical signals. STRM composite score is strong (0.4355, top tier for this dataset). A working DE would be aware of but not accountable for this competency.",
+  "decision_rationale": "KSA DA-T-011 (Data Architecture/Task) scores 0.435 composite (highest: DDaT at 0.435) and is in_scope for the Data Engineer role. The KSA aligns with Data Architecture competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.156538Z",
+    "evaluated_at": "2026-04-06T17:57:45.307195+00:00",
     "pipeline_version": "1.0"
   }
 }

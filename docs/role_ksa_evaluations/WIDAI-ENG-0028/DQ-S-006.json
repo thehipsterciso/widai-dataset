@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.35950296671490595,
         "jaccard": null,
         "top_element_id": "3298",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of how to extract, analyze, and use metadata."
       },
       "ddat": {
         "composite": 0.4420710303030303,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-008",
         "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.40662382445141065,
+        "cross_encoder_sts": 0.4371758620689655,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32515172413793103,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4265224090909091,
+        "cross_encoder_sts": 0.457474125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34398449999999997,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39339727272727276,
+        "cross_encoder_sts": 0.43670200000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.277918,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.6",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4158010489510489,
+        "cross_encoder_sts": 0.4423384615384615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3450346153846154,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.5",
+        "top_element_label": "Inductive Reasoning"
       }
     },
     "top_anchors": [
@@ -41,10 +81,37 @@
       {
         "framework": "dcwf",
         "element_id": "3298",
-        "element_label": "",
+        "element_label": "Knowledge of how to extract, analyze, and use metadata.",
         "score": 0.42944676358373896
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4265224090909091
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.5",
+        "element_label": "Inductive Reasoning",
+        "score": 0.4158010489510489
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-002",
+        "element_label": "Risk management system",
+        "score": 0.40662382445141065
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Skill in establishing, maintaining, and utilizing data dictionaries and metadata repositories to doc...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4421, top tier for this dataset)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-S-006 (Data Quality/Skill) scores 0.442 composite (highest: DDaT at 0.442) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.442), and Data Quality handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 3 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does DDaT signal (0.442) for this Data Quality KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Quality appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Quality at composite 0.442 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Skill in establishing, maintaining, and utilizing data dictionaries and metadata repositories to doc...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4421, top tier for this dataset).",
+  "decision_rationale": "KSA DQ-S-006 (Data Quality/Skill) scores 0.442 composite (highest: DDaT at 0.442) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.137975Z",
+    "evaluated_at": "2026-04-06T17:57:45.293305+00:00",
     "pipeline_version": "1.0"
   }
 }

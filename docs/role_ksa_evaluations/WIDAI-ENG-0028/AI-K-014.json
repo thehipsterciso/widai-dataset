@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "AI",
   "pass_1_scoring": {
-    "composite_score": 0.35645645110902846,
+    "composite_score": 0.3585099442074171,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.18803333333333333,
         "jaccard": null,
         "top_element_id": "106",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of remote access technology concepts."
       },
       "ddat": {
         "composite": 0.34352097902097906,
@@ -29,13 +29,49 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-064",
         "top_element_label": "Data risk management"
+      },
+      "nice": {
+        "composite": 0.3585099442074171,
+        "cross_encoder_sts": 0.43232707581227436,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.16166425992779784,
+        "jaccard": null,
+        "top_element_id": "K0055",
+        "top_element_label": "Knowledge of microprocessors"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.33839545454545455,
+        "cross_encoder_sts": 0.36485,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26785,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-3.2",
+        "top_element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle."
+      },
+      "onet": {
+        "composite": 0.33183409090909094,
+        "cross_encoder_sts": 0.3747,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.217525,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
       }
     },
     "top_anchors": [
       {
+        "framework": "nice",
+        "element_id": "K0055",
+        "element_label": "Knowledge of microprocessors",
+        "score": 0.3585099442074171
+      },
+      {
         "framework": "dcwf",
         "element_id": "106",
-        "element_label": "",
+        "element_label": "Knowledge of remote access technology concepts.",
         "score": 0.35645645110902846
       },
       {
@@ -43,7 +79,29 @@
         "element_id": "DDAT-SK-064",
         "element_label": "Data risk management",
         "score": 0.34352097902097906
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-3.2",
+        "element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle.",
+        "score": 0.33839545454545455
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.33183409090909094
       }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
     ],
     "metrics_used": [
       "bi_encoder_cosine",
@@ -56,29 +114,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
     "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low DE affinity (0.38), and the text \u2014 'Knowledge of CNN architectures, vision transformer architectures, and the data augmentation, regular...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3565)."
+    "rationale": "KSA AI-K-014 (AI and Machine Learning/Knowledge) is excluded as edge_case (composite 0.359, highest: NICE at 0.359). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.359, and AI and Machine Learning (AI) handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.359)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this AI and Machine Learning competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low DE affinity (0.38), and the text \u2014 'Knowledge of CNN architectures, vision transformer architectures, and the data augmentation, regular...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3565).",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AI-K-014 (AI and Machine Learning/Knowledge) is excluded as edge_case (composite 0.359, highest: NICE at 0.359). No data engineering pattern signals found. The KSA does not address ETL/ELT, schema design, orchestration, data quality enforcement, storage optimization, or related core DE competencies.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.431919Z",
+    "evaluated_at": "2026-04-06T17:57:45.426875+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3208543956043956,
         "jaccard": null,
         "top_element_id": "1002A",
-        "top_element_label": ""
+        "top_element_label": "Skill in conducting reviews of systems."
       },
       "ddat": {
         "composite": 0.42352689393939397,
@@ -29,6 +29,46 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.33213030303030305,
+        "cross_encoder_sts": 0.3826666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19736666666666666,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.39310583985550873,
+        "cross_encoder_sts": 0.4256662251655629,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3062781456953642,
+        "jaccard": null,
+        "top_element_id": "K0661",
+        "top_element_label": "Knowledge of reauthorization processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.34022727272727277,
+        "cross_encoder_sts": 0.393,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1995,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.1",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.3450818181818182,
+        "cross_encoder_sts": 0.41605714285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1558142857142857,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
       }
     },
     "top_anchors": [
@@ -41,10 +81,37 @@
       {
         "framework": "dcwf",
         "element_id": "1002A",
-        "element_label": "",
+        "element_label": "Skill in conducting reviews of systems.",
         "score": 0.3959457042957043
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0661",
+        "element_label": "Knowledge of reauthorization processes",
+        "score": 0.39310583985550873
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.7",
+        "element_label": "Category Flexibility",
+        "score": 0.3450818181818182
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-6.1",
+        "element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "score": 0.34022727272727277
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "edge_case",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Manage data access control, including reviewing and approving access requests, data sharing agreemen...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4235, top tier for this dataset)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DG-T-013 (Data Governance/Task) scores 0.424 composite (highest: DDaT at 0.424) and is edge_case for the Data Engineer role. The KSA is an edge case for Data Governance but contains 0 DE pattern signals sufficient to warrant inclusion for a senior IC data engineer. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, DDaT signal (0.424), and Data Governance handling. Decision stands."
   },
   "pass_4_adversarial_external": {
-    "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "outcome": "overturned",
+    "challenge": "Does market evidence support Data Governance (DG) \u2014 specifically implementation vs. ownership \u2014 for Data Engineer roles?",
+    "evidence": "Data Engineers implement governance processes (metadata tagging, lineage capture, catalog population, quality rule enforcement) \u2014 present in 25-40% of senior DE postings. Governance ownership (policy authoring, stewardship programs) belongs to governance-specific roles.",
+    "ruling": "Revised to exclude. DG content signals ownership rather than implementation. Market evidence supports exclusion. Final decision: exclude."
   },
   "final_decision": "exclude",
-  "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Governance domain has low DE affinity (0.22), and the text \u2014 'Manage data access control, including reviewing and approving access requests, data sharing agreemen...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is strong (0.4235, top tier for this dataset).",
-  "adversarial_disagreements": 0,
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. DG content signals ownership rather than implementation. Market evidence supports exclusion. Final decision: exclude.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.202305Z",
+    "evaluated_at": "2026-04-06T17:57:45.341903+00:00",
     "pipeline_version": "1.0"
   }
 }

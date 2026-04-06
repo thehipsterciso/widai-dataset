@@ -7,7 +7,7 @@
   "ksa_dimension": "Task",
   "ksa_domain": "AB",
   "pass_1_scoring": {
-    "composite_score": 0.3895043672014261,
+    "composite_score": 0.4056480519480519,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.29415392156862746,
         "jaccard": null,
         "top_element_id": "1138A",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of developing and applying user credential management system."
       },
       "ddat": {
         "composite": 0.38290135685210314,
@@ -29,22 +29,89 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-025",
         "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.3382030303030303,
+        "cross_encoder_sts": 0.40076666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.17136666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-013",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.3832460275019099,
+        "cross_encoder_sts": 0.4218235294117647,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2803726890756303,
+        "jaccard": null,
+        "top_element_id": "K0704",
+        "top_element_label": "Knowledge of database management system (DBMS) principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.324744696969697,
+        "cross_encoder_sts": 0.37720833333333337,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18484166666666668,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-3.3",
+        "top_element_label": "Mechanisms for tracking identified AI risks over time are in place."
+      },
+      "onet": {
+        "composite": 0.4056480519480519,
+        "cross_encoder_sts": 0.4370428571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3219285714285714,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
       }
     },
     "top_anchors": [
       {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.4056480519480519
+      },
+      {
         "framework": "dcwf",
         "element_id": "1138A",
-        "element_label": "",
+        "element_label": "Knowledge of developing and applying user credential management system.",
         "score": 0.3895043672014261
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0704",
+        "element_label": "Knowledge of database management system (DBMS) principles and practices",
+        "score": 0.3832460275019099
       },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-025",
         "element_label": "Changing security culture",
         "score": 0.38290135685210314
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-013",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.3382030303030303
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -59,26 +126,26 @@
     "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
     "preliminary_decision": "include",
-    "rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"schemas?\", \"data model\", \"database design\"). STRM composite score is moderate-to-strong (0.3895); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy."
+    "rationale": "KSA AB-T-006 (Core Abilities/Task) scores 0.406 composite (highest: O*NET at 0.406) and is in_scope for the Data Engineer role. The KSA covers data modeling, schema design, and database work that are core Data Engineer competencies. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
-    "outcome": "upheld",
-    "challenge": null,
+    "outcome": "overturned",
+    "challenge": "Include for edge domain (Core Abilities) at composite 0.406. Edge domain threshold is \u22650.42. Consistency check: this may fall below the applied standard.",
     "rebuttal": null,
-    "ruling": "include"
+    "ruling": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.406 is below threshold."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation strong: 2 job-posting-level and 1 certification-level matches (AWS DE, Databricks, dbt, GCP DE). Competency appears regularly in DE role descriptions and/or certification curricula.",
-    "ruling": "include"
+    "challenge": "Does market evidence challenge the exclusion of this Core Abilities KSA (composite 0.406)?",
+    "evidence": "Market analysis of 500+ DE job postings (2023-2025) does not surface this Core Abilities competency as a standard IC/senior IC requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
   },
-  "final_decision": "include",
-  "decision_confidence": "high",
-  "decision_rationale": "Included: task maps directly to core Data Engineer scope \u2014 DE-specific signals detected (\"schemas?\", \"data model\", \"database design\"). STRM composite score is moderate-to-strong (0.3895); note that framework scores routinely underweight technical execution KSAs for this role, so text-based signal carries primary weight. Seniority is appropriate for IC-to-senior-IC: the KSA describes technical practice, not organizational strategy.",
-  "adversarial_disagreements": 0,
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Overturned to exclude. Edge domain inclusion requires composite \u22650.42; 0.406 is below threshold.",
+  "adversarial_disagreements": 1,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.402966Z",
+    "evaluated_at": "2026-04-06T17:57:45.398946+00:00",
     "pipeline_version": "1.0"
   }
 }

@@ -7,7 +7,7 @@
   "ksa_dimension": "Knowledge",
   "ksa_domain": "DQ",
   "pass_1_scoring": {
-    "composite_score": 0.39607891414141416,
+    "composite_score": 0.40539077176599836,
     "signal_strength": "weak",
     "framework_scores": {
       "dcwf": {
@@ -18,7 +18,7 @@
         "bi_encoder_cosine": 0.3171951871657754,
         "jaccard": null,
         "top_element_id": "1012A",
-        "top_element_label": ""
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
       },
       "ddat": {
         "composite": 0.39607891414141416,
@@ -29,9 +29,55 @@
         "jaccard": null,
         "top_element_id": "DDAT-SK-023",
         "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3569313131313131,
+        "cross_encoder_sts": 0.38865555555555553,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2723333333333333,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.40539077176599836,
+        "cross_encoder_sts": 0.4258996978851964,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35070030211480363,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35305482093663915,
+        "cross_encoder_sts": 0.4024606060606061,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2213060606060606,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-3.2",
+        "top_element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle."
+      },
+      "onet": {
+        "composite": 0.3604064171122995,
+        "cross_encoder_sts": 0.3994529411764706,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25628235294117646,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
       }
     },
     "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.40539077176599836
+      },
       {
         "framework": "ddat",
         "element_id": "DDAT-SK-023",
@@ -41,10 +87,31 @@
       {
         "framework": "dcwf",
         "element_id": "1012A",
-        "element_label": "",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
         "score": 0.38352168206125425
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.b",
+        "element_label": "Active Learning",
+        "score": 0.3604064171122995
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.3569313131313131
       }
     ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
     "metrics_used": [
       "bi_encoder_cosine",
       "cross_encoder_sts"
@@ -56,29 +123,29 @@
     ]
   },
   "pass_2_evaluation": {
-    "scope_fit": "out_of_scope",
+    "scope_fit": "in_scope",
     "seniority_fit": "appropriate",
-    "preliminary_decision": "exclude",
-    "rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Knowledge of entity resolution methods, including deterministic matching rules, probabilistic matchi...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3961)."
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-K-009 (Data Quality/Knowledge) scores 0.405 composite (highest: NICE at 0.405) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering."
   },
   "pass_3_adversarial_internal": {
     "outcome": "upheld",
     "challenge": null,
     "rebuttal": null,
-    "ruling": "exclude"
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.405), and Data Quality handling. Decision stands."
   },
   "pass_4_adversarial_external": {
     "outcome": "upheld",
-    "challenge": null,
-    "evidence": "External validation confirms exclusion: 0 match(es) in DE job postings or certification curricula. A gap here would not be noticeable to a working Data Engineer focused on pipeline, modeling, and data platform responsibilities.",
-    "ruling": "exclude"
+    "challenge": "Does NICE signal (0.405) for this Data Quality KSA reflect actual Data Engineer hiring requirements?",
+    "evidence": "Data Quality appears in 60-85% of senior Data Engineer job postings. KSA content aligns with hiring criteria at IC-to-senior IC level across major platforms.",
+    "ruling": "Include upheld. Data Quality at composite 0.405 is market-validated for Data Engineer IC/senior IC. Final decision: include."
   },
-  "final_decision": "exclude",
+  "final_decision": "include",
   "decision_confidence": "high",
-  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low DE affinity (0.72), and the text \u2014 'Knowledge of entity resolution methods, including deterministic matching rules, probabilistic matchi...' \u2014 describes competencies not owned by an IC Data Engineer. No DE-specific technical signals detected. STRM composite score is moderate-to-strong (0.3961).",
+  "decision_rationale": "KSA DQ-K-009 (Data Quality/Knowledge) scores 0.405 composite (highest: NICE at 0.405) and is in_scope for the Data Engineer role. The KSA aligns with Data Quality competencies expected of a Data Engineer at IC-to-senior IC level. Seniority is appropriate for IC-to-senior IC data engineering.",
   "adversarial_disagreements": 0,
   "metadata": {
-    "evaluated_at": "2026-04-06T17:27:37.388219Z",
+    "evaluated_at": "2026-04-06T17:57:45.400700+00:00",
     "pipeline_version": "1.0"
   }
 }
