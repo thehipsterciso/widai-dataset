@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0042",
+  "role_name": "LLMOps Engineer",
+  "ksa_id": "DQ-T-009",
+  "ksa_text": "Document data lineage, supply chain risks, and develop comprehensive risk management documentation for data assets.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4131956112852665,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.384647079094191,
+        "cross_encoder_sts": 0.4223835740072202,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28401642599277976,
+        "jaccard": null,
+        "top_element_id": "1000",
+        "top_element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.4131956112852665,
+        "cross_encoder_sts": 0.4594637931034483,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2898137931034483,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3764551948051948,
+        "cross_encoder_sts": 0.4206857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2585071428571429,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.36900547177940546,
+        "cross_encoder_sts": 0.4152457345971564,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24569810426540284,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.37612670454545455,
+        "cross_encoder_sts": 0.432665625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22535625,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3580779220779221,
+        "cross_encoder_sts": 0.39571428571428574,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25771428571428573,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.6",
+        "top_element_label": "Documenting/Recording Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.4131956112852665
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000",
+        "element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary.",
+        "score": 0.384647079094191
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.3764551948051948
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.37612670454545455
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.36900547177940546
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-T-009 (Data Quality) scores 0.413 composite (signal: weak). Scope fit for LLMOps Engineer: edge_case. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "Score 0.413 is below 0.44 threshold for edge-case inclusion in LLMOps Engineer.",
+    "rebuttal": null,
+    "ruling": "Overturned to exclude. Score 0.413 insufficient for edge-case inclusion (min 0.44). Decision: exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Quality KSA DQ-T-009 as a discrete competency for LLMOps Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: edge_case) or Pass 3. No market evidence warrants reversal for LLMOps Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Edge-case scope with score 0.413 below minimum threshold. Overturned at Pass 3.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:45:16.605834",
+    "pipeline_version": "1.0"
+  }
+}

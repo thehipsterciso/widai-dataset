@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0043",
+  "role_name": "Knowledge Graph Engineer",
+  "ksa_id": "AG-K-002",
+  "ksa_text": "Knowledge of AI governance structures and framework components, including model risk management, AI lifecycle oversight, accountability assignment, AI system registries, tiered review processes, impact assessment methodologies, post-deployment monitoring requirements, and the organizational conditions that enable responsible AI deployment at scale.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5794557142857143,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4199105487732606,
+        "cross_encoder_sts": 0.443638852672751,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3566350717079531,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.3962694805194805,
+        "cross_encoder_sts": 0.42734285714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3134071428571429,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.5456507575757577,
+        "cross_encoder_sts": 0.5372116666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5681550000000001,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41805251765778084,
+        "cross_encoder_sts": 0.4515080200501253,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3288378446115288,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5794557142857143,
+        "cross_encoder_sts": 0.5707085714285715,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.6027814285714286,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-2.1",
+        "top_element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks."
+      },
+      "onet": {
+        "composite": 0.35634876033057855,
+        "cross_encoder_sts": 0.39072727272727276,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2646727272727273,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-2.1",
+        "element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",
+        "score": 0.5794557142857143
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.5456507575757577
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.4199105487732606
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41805251765778084
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.3962694805194805
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-K-002 (AI Governance) scores 0.579 composite (signal: moderate). Scope fit for Knowledge Graph Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support AI Governance KSA AG-K-002 as a discrete competency for Knowledge Graph Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Knowledge Graph Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "AI Governance is out of scope for Knowledge Graph Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:45:16.725009",
+    "pipeline_version": "1.0"
+  }
+}

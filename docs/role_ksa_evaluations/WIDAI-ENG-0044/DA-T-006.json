@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0044",
+  "role_name": "Ontologist",
+  "ksa_id": "DA-T-006",
+  "ksa_text": "Implement platform monitoring and alerting systems for data availability, performance, cost optimization, and operational health, with defined escalation procedures and continuous performance measurement.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.41821675579322637,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39665350553505535,
+        "cross_encoder_sts": 0.4304450184501845,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30654280442804427,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.41821675579322637,
+        "cross_encoder_sts": 0.45605686274509805,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31730980392156866,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-022",
+        "top_element_label": "Business process improvement"
+      },
+      "eu_ai_act": {
+        "composite": 0.35510545454545456,
+        "cross_encoder_sts": 0.39695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24352000000000001,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-050",
+        "top_element_label": "Post-market monitoring by providers"
+      },
+      "nice": {
+        "composite": 0.38792658846529815,
+        "cross_encoder_sts": 0.4269349462365591,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2839043010752688,
+        "jaccard": null,
+        "top_element_id": "K1315",
+        "top_element_label": "Knowledge of system safety and reliability metrics"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39082357954545455,
+        "cross_encoder_sts": 0.446190625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.243178125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-1.1",
+        "top_element_label": "Context is established and understood."
+      },
+      "onet": {
+        "composite": 0.37068,
+        "cross_encoder_sts": 0.40494,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27932,
+        "jaccard": null,
+        "top_element_id": "2.B.4.h",
+        "top_element_label": "Systems Evaluation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-022",
+        "element_label": "Business process improvement",
+        "score": 0.41821675579322637
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
+        "score": 0.39665350553505535
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-1.1",
+        "element_label": "Context is established and understood.",
+        "score": 0.39082357954545455
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1315",
+        "element_label": "Knowledge of system safety and reliability metrics",
+        "score": 0.38792658846529815
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.4.h",
+        "element_label": "Systems Evaluation",
+        "score": 0.37068
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-T-006 (Data Architecture) scores 0.418 composite (signal: weak). Scope fit for Ontologist: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.418. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Data Architecture KSA DA-T-006 as a discrete competency for Ontologist?",
+    "evidence": "Data Architecture is primary for Ontologist. Score 0.418. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. Data Architecture is core for Ontologist. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Architecture (primary) for Ontologist. Score 0.418. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:45:17.033584",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0043",
+  "role_name": "Knowledge Graph Engineer",
+  "ksa_id": "TF-S-008",
+  "ksa_text": "Skill in writing shell scripts to automate data operations, including file manipulation, job scheduling, environment configuration, log processing, and pipeline orchestration on Linux systems.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.4630181818181818,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4058394580419581,
+        "cross_encoder_sts": 0.4394217307692308,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31628673076923075,
+        "jaccard": null,
+        "top_element_id": "1033",
+        "top_element_label": "Knowledge of basic system administration, network, and operating system hardening techniques."
+      },
+      "ddat": {
+        "composite": 0.39442954545454545,
+        "cross_encoder_sts": 0.456540625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2288,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-043",
+        "top_element_label": "Cyber incident management"
+      },
+      "eu_ai_act": {
+        "composite": 0.37808909090909093,
+        "cross_encoder_sts": 0.41101,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2903,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-011",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.39897156304186276,
+        "cross_encoder_sts": 0.43935912806539507,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2912713896457766,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36341287878787876,
+        "cross_encoder_sts": 0.4151583333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.225425,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4630181818181818,
+        "cross_encoder_sts": 0.50005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3642666666666667,
+        "jaccard": null,
+        "top_element_id": "2.B.3.e",
+        "top_element_label": "Programming"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.e",
+        "element_label": "Programming",
+        "score": 0.4630181818181818
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1033",
+        "element_label": "Knowledge of basic system administration, network, and operating system hardening techniques.",
+        "score": 0.4058394580419581
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39897156304186276
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-043",
+        "element_label": "Cyber incident management",
+        "score": 0.39442954545454545
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-011",
+        "element_label": "Record-keeping",
+        "score": 0.37808909090909093
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-S-008 (Technical Foundations) scores 0.463 composite (signal: moderate). Scope fit for Knowledge Graph Engineer: in_scope. Preliminary decision: include."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. In-scope domain, score 0.463. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Technical Foundations KSA TF-S-008 as a discrete competency for Knowledge Graph Engineer?",
+    "evidence": "Technical Foundations is primary for Knowledge Graph Engineer. Score 0.463. Market evidence strongly supports inclusion.",
+    "ruling": "Upheld. Technical Foundations is core for Knowledge Graph Engineer. Market evidence supports inclusion."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Technical Foundations (primary) for Knowledge Graph Engineer. Score 0.463. Market evidence supports inclusion as a discrete competency.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:45:16.745143",
+    "pipeline_version": "1.0"
+  }
+}

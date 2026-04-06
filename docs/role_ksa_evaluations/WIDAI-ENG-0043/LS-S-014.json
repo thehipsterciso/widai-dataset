@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0043",
+  "role_name": "Knowledge Graph Engineer",
+  "ksa_id": "LS-S-014",
+  "ksa_text": "Skill in influencing organizational decision-makers and cross-functional stakeholders to adopt data-driven approaches, including framing technical value propositions in business terms, building consensus across competing priorities, and overcoming resistance through evidence rather than authority.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.46275097643097646,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4033402507215007,
+        "cross_encoder_sts": 0.43323551587301584,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32361954365079365,
+        "jaccard": null,
+        "top_element_id": "1002B",
+        "top_element_label": "Skill in conducting reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.46275097643097646,
+        "cross_encoder_sts": 0.49321481481481483,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38151407407407406,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-002",
+        "top_element_label": "Adapting to delivery methodologies"
+      },
+      "eu_ai_act": {
+        "composite": 0.3929282608695652,
+        "cross_encoder_sts": 0.4300695652173913,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29388478260869566,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.40239519191919193,
+        "cross_encoder_sts": 0.43141688888888885,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.325004,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4416157394843962,
+        "cross_encoder_sts": 0.47640597014925373,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3488417910447761,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40432327272727275,
+        "cross_encoder_sts": 0.457102,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26358,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-002",
+        "element_label": "Adapting to delivery methodologies",
+        "score": 0.46275097643097646
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4416157394843962
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.a",
+        "element_label": "Administration and Management",
+        "score": 0.40432327272727275
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002B",
+        "element_label": "Skill in conducting reviews of technical systems.",
+        "score": 0.4033402507215007
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40239519191919193
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-S-014 (Leadership and Strategy) scores 0.463 composite (signal: moderate). Scope fit for Knowledge Graph Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Leadership and Strategy KSA LS-S-014 as a discrete competency for Knowledge Graph Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Knowledge Graph Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Leadership and Strategy is out of scope for Knowledge Graph Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:45:16.745727",
+    "pipeline_version": "1.0"
+  }
+}

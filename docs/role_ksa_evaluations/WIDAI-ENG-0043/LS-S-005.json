@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ENG-0043",
+  "role_name": "Knowledge Graph Engineer",
+  "ksa_id": "LS-S-005",
+  "ksa_text": "Skill in communicating research findings to both technical and non-technical audiences, including paper writing, conference presentation, and internal briefing formats.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.45745757575757573,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4351658380681819,
+        "cross_encoder_sts": 0.453490234375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38630078125,
+        "jaccard": null,
+        "top_element_id": "1120",
+        "top_element_label": "Ability to interpret and incorporate data from multiple tool sources."
+      },
+      "ddat": {
+        "composite": 0.43451754756871036,
+        "cross_encoder_sts": 0.47939767441860465,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31483720930232556,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.3658818181818182,
+        "cross_encoder_sts": 0.385825,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3127,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-044",
+        "top_element_label": "Obligations for providers of general-purpose AI models"
+      },
+      "nice": {
+        "composite": 0.4432009009009009,
+        "cross_encoder_sts": 0.4674738738738739,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.378472972972973,
+        "jaccard": null,
+        "top_element_id": "K0776",
+        "top_element_label": "Knowledge of collaboration tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38032424242424245,
+        "cross_encoder_sts": 0.42202083333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26913333333333334,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.2",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.45745757575757573,
+        "cross_encoder_sts": 0.4840833333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38645555555555555,
+        "jaccard": null,
+        "top_element_id": "2.A.1.c",
+        "top_element_label": "Writing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.c",
+        "element_label": "Writing",
+        "score": 0.45745757575757573
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0776",
+        "element_label": "Knowledge of collaboration tools and techniques",
+        "score": 0.4432009009009009
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1120",
+        "element_label": "Ability to interpret and incorporate data from multiple tool sources.",
+        "score": 0.4351658380681819
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.43451754756871036
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.2",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.38032424242424245
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-S-005 (Leadership and Strategy) scores 0.457 composite (signal: moderate). Scope fit for Knowledge Graph Engineer: out_of_scope. Preliminary decision: exclude."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Out-of-scope exclusion is internally consistent. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence support Leadership and Strategy KSA LS-S-005 as a discrete competency for Knowledge Graph Engineer?",
+    "evidence": "KSA excluded at Pass 2 (scope: out_of_scope) or Pass 3. No market evidence warrants reversal for Knowledge Graph Engineer.",
+    "ruling": "No reversal warranted. Exclusion upheld."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Leadership and Strategy is out of scope for Knowledge Graph Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:45:16.748198",
+    "pipeline_version": "1.0"
+  }
+}
