@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0058",
+  "role_name": "AI Research Scientist",
+  "ksa_id": "DA-S-007",
+  "ksa_text": "Skill in deploying, configuring, and scaling data platform components using infrastructure-as-code with version control and automated testing.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4316556818181818,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42450795256916996,
+        "cross_encoder_sts": 0.45213252173913043,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3508424347826087,
+        "jaccard": null,
+        "top_element_id": "1020A",
+        "top_element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance)."
+      },
+      "ddat": {
+        "composite": 0.4188103386809269,
+        "cross_encoder_sts": 0.450956862745098,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33308627450980394,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-004",
+        "top_element_label": "Agile research practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.3966297202797203,
+        "cross_encoder_sts": 0.4358384615384615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29207307692307694,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41833014723066136,
+        "cross_encoder_sts": 0.451627763496144,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3295365038560411,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3833784090909091,
+        "cross_encoder_sts": 0.421353125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2821125,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.4316556818181818,
+        "cross_encoder_sts": 0.472575,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3225375,
+        "jaccard": null,
+        "top_element_id": "2.C.3.a",
+        "top_element_label": "Computers and Electronics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.a",
+        "element_label": "Computers and Electronics",
+        "score": 0.4316556818181818
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1020A",
+        "element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance).",
+        "score": 0.42450795256916996
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-004",
+        "element_label": "Agile research practices",
+        "score": 0.4188103386809269
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41833014723066136
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.3966297202797203
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-S-007 (Data Architecture/Skill) scores 0.432 composite (highest: O*NET at 0.432) and is edge_case for the AI Research Scientist role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, O*NET signal (0.432), and Data Architecture handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this DA KSA reflect AI Research Scientist requirements?",
+    "evidence": "Research data architecture (large datasets, dataset curation) in 25-40% of AI Research Scientist postings.",
+    "ruling": "Include upheld. Research data architecture (large datasets, dataset curation) in 25-40% of AI Research Scientist postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DA-S-007 (Data Architecture/Skill) scores 0.432 composite (highest: O*NET at 0.432) and is edge_case for the AI Research Scientist role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.568992+00:00",
+    "pipeline_version": "1.0"
+  }
+}

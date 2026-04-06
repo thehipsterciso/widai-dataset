@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0063",
+  "role_name": "Statistician",
+  "ksa_id": "RM-K-012",
+  "ksa_text": "Knowledge of enterprise risk management integration, including how data risk, AI risk, model risk, and technology risk roll up into enterprise risk taxonomy and board-level reporting.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5094014705882353,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40013089375479255,
+        "cross_encoder_sts": 0.4367161199625117,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30257029053420803,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.4027611650485437,
+        "cross_encoder_sts": 0.4426087378640777,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2965009708737864,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.4612639794168096,
+        "cross_encoder_sts": 0.4804433962264151,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4101188679245283,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.4033130124777184,
+        "cross_encoder_sts": 0.4397798039215686,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30606823529411764,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5094014705882353,
+        "cross_encoder_sts": 0.5351264705882353,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.44080147058823527,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-4.1",
+        "top_element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data."
+      },
+      "onet": {
+        "composite": 0.36390717703349285,
+        "cross_encoder_sts": 0.4167789473684211,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22291578947368423,
+        "jaccard": null,
+        "top_element_id": "2.A.2.b",
+        "top_element_label": "Active Learning"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-4.1",
+        "element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data.",
+        "score": 0.5094014705882353
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.4612639794168096
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4033130124777184
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.4027611650485437
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.40013089375479255
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "too_senior",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-K-012 (Risk Management/Knowledge) is excluded as out_of_scope (composite 0.509, highest: NIST AI RMF at 0.509). Core signal: 0, OOS signals: 1, seniority: too_senior. Risk Management at this signal level does not meet inclusion threshold for Statistician."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.509, and Risk Management (RM) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk Management KSA (composite 0.509)?",
+    "evidence": "Market analysis does not surface this Risk Management competency as a standard Statistician requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-K-012 (Risk Management/Knowledge) is excluded as out_of_scope (composite 0.509, highest: NIST AI RMF at 0.509). Core signal: 0, OOS signals: 1, seniority: too_senior. Risk Management at this signal level does not meet inclusion threshold for Statistician.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:07.003588+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0058",
+  "role_name": "AI Research Scientist",
+  "ksa_id": "RM-A-003",
+  "ksa_text": "Ability to design organizational risk management frameworks, governance structures, policies, and procedures that operationalize risk management strategy.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5479687012987013,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40012897840682277,
+        "cross_encoder_sts": 0.4586568862275449,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24405455755156355,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.4201265412748172,
+        "cross_encoder_sts": 0.4813218390804598,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2569390804597701,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4823211570247934,
+        "cross_encoder_sts": 0.5097327272727272,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4092236363636364,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.3996489822018544,
+        "cross_encoder_sts": 0.4600378663540446,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23861195779601407,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5479687012987013,
+        "cross_encoder_sts": 0.5779414285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4680414285714286,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.2",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.38504848484848486,
+        "cross_encoder_sts": 0.44926666666666665,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2138,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.2",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.5479687012987013
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4823211570247934
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4201265412748172
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.40012897840682277
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.3996489822018544
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-A-003 (Risk Management/Ability) is excluded as out_of_scope (composite 0.548, highest: NIST AI RMF at 0.548). Core signal: 0, OOS signals: 1, seniority: appropriate. Risk Management at this signal level does not meet inclusion threshold for AI Research Scientist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.548, and Risk Management (RM) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk Management KSA (composite 0.548)?",
+    "evidence": "Market analysis does not surface this Risk Management competency as a standard AI Research Scientist requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-A-003 (Risk Management/Ability) is excluded as out_of_scope (composite 0.548, highest: NIST AI RMF at 0.548). Core signal: 0, OOS signals: 1, seniority: appropriate. Risk Management at this signal level does not meet inclusion threshold for AI Research Scientist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.494300+00:00",
+    "pipeline_version": "1.0"
+  }
+}

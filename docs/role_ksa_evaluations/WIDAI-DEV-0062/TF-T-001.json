@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0062",
+  "role_name": "Decision Scientist",
+  "ksa_id": "TF-T-001",
+  "ksa_text": "Configure, implement, and maintain continuous integration and continuous deployment pipelines including tool selection, build automation, test execution, artifact management, and deployment workflows.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.39495340014316394,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39495340014316394,
+        "cross_encoder_sts": 0.41668267716535434,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33700866141732283,
+        "jaccard": null,
+        "top_element_id": "1064",
+        "top_element_label": "Knowledge of Extensible Markup Language (XML) schemas."
+      },
+      "ddat": {
+        "composite": 0.3946869090909091,
+        "cross_encoder_sts": 0.469184,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19602799999999998,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-043",
+        "top_element_label": "Cyber incident management"
+      },
+      "eu_ai_act": {
+        "composite": 0.3478636363636364,
+        "cross_encoder_sts": 0.3618,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3107,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-045",
+        "top_element_label": "Obligations of providers of GPAI models with systemic risk"
+      },
+      "nice": {
+        "composite": 0.36097176015473886,
+        "cross_encoder_sts": 0.40353404255319153,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2474723404255319,
+        "jaccard": null,
+        "top_element_id": "K0176",
+        "top_element_label": "Knowledge of Extensible Markup Language (XML) schemas"
+      },
+      "onet": {
+        "composite": 0.38067727272727275,
+        "cross_encoder_sts": 0.40845,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3066166666666667,
+        "jaccard": null,
+        "top_element_id": "2.B.3.b",
+        "top_element_label": "Technology Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1064",
+        "element_label": "Knowledge of Extensible Markup Language (XML) schemas.",
+        "score": 0.39495340014316394
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-043",
+        "element_label": "Cyber incident management",
+        "score": 0.3946869090909091
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.b",
+        "element_label": "Technology Design",
+        "score": 0.38067727272727275
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0176",
+        "element_label": "Knowledge of Extensible Markup Language (XML) schemas",
+        "score": 0.36097176015473886
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-045",
+        "element_label": "Obligations of providers of GPAI models with systemic risk",
+        "score": 0.3478636363636364
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "nist_ai_rmf"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-T-001 (Technical Foundations/Task) scores 0.395 composite (highest: DCWF at 0.395) and is in_scope for the Decision Scientist role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DCWF signal (0.395), and Technical Foundations handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this TF KSA reflect Decision Scientist requirements?",
+    "evidence": "Technical Foundations (Python, R, SQL, statistical tools) in 80-90% of Decision Scientist postings.",
+    "ruling": "Include upheld. Technical Foundations (Python, R, SQL, statistical tools) in 80-90% of Decision Scientist postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA TF-T-001 (Technical Foundations/Task) scores 0.395 composite (highest: DCWF at 0.395) and is in_scope for the Decision Scientist role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:06.760554+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0057",
+  "role_name": "Deep Learning Engineer",
+  "ksa_id": "RC-K-003",
+  "ksa_text": "Knowledge of AI-specific regulatory frameworks, including the EU AI Act risk classification system, prohibited practices, high-risk AI system requirements, conformity assessment obligations, and AI literacy mandates.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.5100507438016529,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40335077369439076,
+        "cross_encoder_sts": 0.4284744680851064,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3363542553191489,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.3846566233766234,
+        "cross_encoder_sts": 0.4360914285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24749714285714286,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.5100507438016529,
+        "cross_encoder_sts": 0.4850818181818182,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5766345454545455,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.40496037698802273,
+        "cross_encoder_sts": 0.4430304535637149,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3034401727861771,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4733629233511586,
+        "cross_encoder_sts": 0.4443549019607843,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5507176470588235,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.35711590909090907,
+        "cross_encoder_sts": 0.39292499999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.261625,
+        "jaccard": null,
+        "top_element_id": "2.C.8.b",
+        "top_element_label": "Law and Government"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.5100507438016529
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4733629233511586
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40496037698802273
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.40335077369439076
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.3846566233766234
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-K-003 (Risk and Compliance/Knowledge) is excluded as out_of_scope (composite 0.510, highest: EU AI Act at 0.510). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk and Compliance at this signal level does not meet inclusion threshold for Deep Learning Engineer."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.510, and Risk and Compliance (RC) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk and Compliance KSA (composite 0.510)?",
+    "evidence": "Market analysis does not surface this Risk and Compliance competency as a standard Deep Learning Engineer requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RC-K-003 (Risk and Compliance/Knowledge) is excluded as out_of_scope (composite 0.510, highest: EU AI Act at 0.510). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk and Compliance at this signal level does not meet inclusion threshold for Deep Learning Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.110078+00:00",
+    "pipeline_version": "1.0"
+  }
+}

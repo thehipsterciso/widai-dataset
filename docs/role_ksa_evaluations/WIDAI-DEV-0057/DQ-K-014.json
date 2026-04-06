@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0057",
+  "role_name": "Deep Learning Engineer",
+  "ksa_id": "DQ-K-014",
+  "ksa_text": "Knowledge of database management system (DBMS) principles and practices, including data persistence, transaction management, index optimization, query performance tuning, backup and recovery procedures, and data retention policies.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4207205211726385,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39997226697353283,
+        "cross_encoder_sts": 0.41788227848101267,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35221223628691983,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.40474687499999995,
+        "cross_encoder_sts": 0.427290625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3446302083333333,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4160102272727273,
+        "cross_encoder_sts": 0.43925000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3540375,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.4207205211726385,
+        "cross_encoder_sts": 0.44454560260586323,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3571869706840391,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3672340909090909,
+        "cross_encoder_sts": 0.3958875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.290825,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3940390909090909,
+        "cross_encoder_sts": 0.41303999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34337,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4207205211726385
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4160102272727273
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.40474687499999995
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
+        "score": 0.39997226697353283
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.3940390909090909
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-K-014 (Data Quality/Knowledge) scores 0.421 composite (highest: NICE at 0.421) and is edge_case for the Deep Learning Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, NICE signal (0.421), and Data Quality handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this DQ KSA reflect Deep Learning Engineer requirements?",
+    "evidence": "Training data quality (dataset curation, labeling quality) in 30-50% of DL Eng postings.",
+    "ruling": "Include upheld. Training data quality (dataset curation, labeling quality) in 30-50% of DL Eng postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DQ-K-014 (Data Quality/Knowledge) scores 0.421 composite (highest: NICE at 0.421) and is edge_case for the Deep Learning Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.195884+00:00",
+    "pipeline_version": "1.0"
+  }
+}

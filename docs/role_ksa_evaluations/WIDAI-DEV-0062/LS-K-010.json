@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0062",
+  "role_name": "Decision Scientist",
+  "ksa_id": "LS-K-010",
+  "ksa_text": "Knowledge of data and AI governance structures at the board and executive committee level, including oversight responsibilities, reporting cadences, decision rights allocation, and escalation frameworks.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4730909090909091,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4210530608840701,
+        "cross_encoder_sts": 0.4371937614678899,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37801119266055044,
+        "jaccard": null,
+        "top_element_id": "1037",
+        "top_element_label": "Knowledge of information technology (IT) supply chain security and risk management policies, requirements, and procedures."
+      },
+      "ddat": {
+        "composite": 0.41375900826446277,
+        "cross_encoder_sts": 0.4338763636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3601127272727273,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.4700631493506493,
+        "cross_encoder_sts": 0.46044999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4956982142857143,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4279257134451309,
+        "cross_encoder_sts": 0.4602550161812297,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34171423948220064,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4730909090909091,
+        "cross_encoder_sts": 0.46668260869565215,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.49017971014492756,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-2.3",
+        "top_element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks."
+      },
+      "onet": {
+        "composite": 0.4045436363636364,
+        "cross_encoder_sts": 0.42304,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35522,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-2.3",
+        "element_label": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",
+        "score": 0.4730909090909091
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4700631493506493
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4279257134451309
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1037",
+        "element_label": "Knowledge of information technology (IT) supply chain security and risk management policies, requirements, and procedures.",
+        "score": 0.4210530608840701
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.41375900826446277
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "too_senior",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-K-010 (Leadership and Strategy/Knowledge) is excluded as out_of_scope (composite 0.473, highest: NIST AI RMF at 0.473). Core signal: 0, OOS signals: 2, seniority: too_senior. Leadership and Strategy at this signal level does not meet inclusion threshold for Decision Scientist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.473, and Leadership and Strategy (LS) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Leadership and Strategy KSA (composite 0.473)?",
+    "evidence": "Market analysis does not surface this Leadership and Strategy competency as a standard Decision Scientist requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA LS-K-010 (Leadership and Strategy/Knowledge) is excluded as out_of_scope (composite 0.473, highest: NIST AI RMF at 0.473). Core signal: 0, OOS signals: 2, seniority: too_senior. Leadership and Strategy at this signal level does not meet inclusion threshold for Decision Scientist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:06.657751+00:00",
+    "pipeline_version": "1.0"
+  }
+}

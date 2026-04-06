@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0061",
+  "role_name": "RLHF Specialist",
+  "ksa_id": "AG-S-001",
+  "ksa_text": "Skill in designing and implementing AI risk management systems, including establishing governance frameworks aligned to organizational risk tolerance, defining roles and responsibilities, and creating decision structures.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5347985714285715,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4209966491841492,
+        "cross_encoder_sts": 0.44565296474358973,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3552464743589744,
+        "jaccard": null,
+        "top_element_id": "101",
+        "top_element_label": "Knowledge of process engineering concepts."
+      },
+      "ddat": {
+        "composite": 0.4266739332096475,
+        "cross_encoder_sts": 0.45190816326530614,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3593826530612245,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.5240598746081504,
+        "cross_encoder_sts": 0.525798275862069,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5194241379310345,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4112037467325007,
+        "cross_encoder_sts": 0.44198067092651755,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32913194888178915,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5347985714285715,
+        "cross_encoder_sts": 0.5406528571428572,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5191871428571428,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40315000000000006,
+        "cross_encoder_sts": 0.42602500000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34215,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5347985714285715
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.5240598746081504
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4266739332096475
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "101",
+        "element_label": "Knowledge of process engineering concepts.",
+        "score": 0.4209966491841492
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4112037467325007
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "too_senior",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-S-001 (AI Governance/Skill) is excluded as out_of_scope (composite 0.535, highest: NIST AI RMF at 0.535). Core signal: 0, OOS signals: 3, seniority: too_senior. AI Governance at this signal level does not meet inclusion threshold for RLHF Specialist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.535, and AI Governance (AG) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA (composite 0.535)?",
+    "evidence": "Market analysis does not surface this AI Governance competency as a standard RLHF Specialist requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-S-001 (AI Governance/Skill) is excluded as out_of_scope (composite 0.535, highest: NIST AI RMF at 0.535). Core signal: 0, OOS signals: 3, seniority: too_senior. AI Governance at this signal level does not meet inclusion threshold for RLHF Specialist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:28:45.406427+00:00",
+    "pipeline_version": "1.0"
+  }
+}

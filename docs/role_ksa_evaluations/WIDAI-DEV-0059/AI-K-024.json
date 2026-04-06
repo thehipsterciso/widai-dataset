@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0059",
+  "role_name": "Prompt Engineer",
+  "ksa_id": "AI-K-024",
+  "ksa_text": "Knowledge of AI capability landscape, including current capabilities and limitations of generative AI, predictive AI, and autonomous systems as applied to enterprise business problems.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4166374655647383,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3987936604736917,
+        "cross_encoder_sts": 0.4329340093603744,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30775273010920434,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3900094235033259,
+        "cross_encoder_sts": 0.4425829268292683,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24981341463414633,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4166374655647383,
+        "cross_encoder_sts": 0.4443878787878788,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34263636363636363,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.41115442006269587,
+        "cross_encoder_sts": 0.44846534482758615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31165862068965516,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40566188197767145,
+        "cross_encoder_sts": 0.43902456140350876,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31669473684210525,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.408494696969697,
+        "cross_encoder_sts": 0.4443333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.312925,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.4166374655647383
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.41115442006269587
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.408494696969697
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.40566188197767145
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.3987936604736917
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-K-024 (AI and Machine Learning/Knowledge) scores 0.417 composite (highest: EU AI Act at 0.417) and is in_scope for the Prompt Engineer role. Core role signal: 1 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, EU AI Act signal (0.417), and AI and Machine Learning handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this AI KSA reflect Prompt Engineer requirements?",
+    "evidence": "LLM/prompt competencies in 85-95% of Prompt Engineer postings.",
+    "ruling": "Include upheld. LLM/prompt competencies in 85-95% of Prompt Engineer postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AI-K-024 (AI and Machine Learning/Knowledge) scores 0.417 composite (highest: EU AI Act at 0.417) and is in_scope for the Prompt Engineer role. Core role signal: 1 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:28:12.632469+00:00",
+    "pipeline_version": "1.0"
+  }
+}

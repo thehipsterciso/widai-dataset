@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0064",
+  "role_name": "Operations Research Analyst",
+  "ksa_id": "SP-K-005",
+  "ksa_text": "Knowledge of data classification, sensitivity labeling, and access controls, including classification standards and policies, architectural enforcement mechanisms, and controls required to enforce data privacy and residency requirements by design.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4326858812615956,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4258291708291708,
+        "cross_encoder_sts": 0.44062637362637364,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3863699633699634,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.4124277685950414,
+        "cross_encoder_sts": 0.43778,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3448218181818182,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-044",
+        "top_element_label": "Cyber risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4172446640316205,
+        "cross_encoder_sts": 0.4242086956521739,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3986739130434782,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4326858812615956,
+        "cross_encoder_sts": 0.45302938775510204,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37843653061224486,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.40226647727272724,
+        "cross_encoder_sts": 0.42145625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35109375,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.41693030303030304,
+        "cross_encoder_sts": 0.42536666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39443333333333336,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0498",
+        "element_label": "Knowledge of operational planning processes",
+        "score": 0.4326858812615956
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.4258291708291708
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4172446640316205
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.41693030303030304
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-044",
+        "element_label": "Cyber risk management",
+        "score": 0.4124277685950414
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-K-005 (Security and Privacy/Knowledge) is excluded as out_of_scope (composite 0.433, highest: NICE at 0.433). Core signal: 0, OOS signals: 0, seniority: appropriate. Security and Privacy at this signal level does not meet inclusion threshold for Operations Research Analyst."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.433, and Security and Privacy (SP) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Security and Privacy KSA (composite 0.433)?",
+    "evidence": "Market analysis does not surface this Security and Privacy competency as a standard Operations Research Analyst requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA SP-K-005 (Security and Privacy/Knowledge) is excluded as out_of_scope (composite 0.433, highest: NICE at 0.433). Core signal: 0, OOS signals: 0, seniority: appropriate. Security and Privacy at this signal level does not meet inclusion threshold for Operations Research Analyst.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:20.487421+00:00",
+    "pipeline_version": "1.0"
+  }
+}

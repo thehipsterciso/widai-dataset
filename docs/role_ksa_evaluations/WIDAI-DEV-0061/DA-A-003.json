@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0061",
+  "role_name": "RLHF Specialist",
+  "ksa_id": "DA-A-003",
+  "ksa_text": "Ability to conduct systematic root cause analysis and diagnosis of data pipeline failures, identifying underlying causes and recommending mitigations under time pressure.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.41051324675324674,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39711020733652314,
+        "cross_encoder_sts": 0.4213859649122807,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3323748538011696,
+        "jaccard": null,
+        "top_element_id": "1099",
+        "top_element_label": "Skill in analyzing volatile data."
+      },
+      "ddat": {
+        "composite": 0.41051324675324674,
+        "cross_encoder_sts": 0.45791714285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28410285714285716,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3373363636363636,
+        "cross_encoder_sts": 0.3651,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2633,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.39201491170699804,
+        "cross_encoder_sts": 0.4235021582733813,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3080489208633094,
+        "jaccard": null,
+        "top_element_id": "K0907",
+        "top_element_label": "Knowledge of cross-domain solutions"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38677832167832166,
+        "cross_encoder_sts": 0.42483846153846155,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28528461538461536,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.40446558441558444,
+        "cross_encoder_sts": 0.42485,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35010714285714284,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.3",
+        "top_element_label": "Problem Sensitivity"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.41051324675324674
+      },
+      {
+        "framework": "onet",
+        "element_id": "1.A.1.b.3",
+        "element_label": "Problem Sensitivity",
+        "score": 0.40446558441558444
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1099",
+        "element_label": "Skill in analyzing volatile data.",
+        "score": 0.39711020733652314
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0907",
+        "element_label": "Knowledge of cross-domain solutions",
+        "score": 0.39201491170699804
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-5.2",
+        "element_label": "Processes are in place for robust engagement with relevant AI actors.",
+        "score": 0.38677832167832166
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DA-A-003 (Data Architecture/Ability) is excluded as edge_case (composite 0.411, highest: DDaT at 0.411). Core signal: 0, OOS signals: 0, seniority: appropriate. Data Architecture at this signal level does not meet inclusion threshold for RLHF Specialist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with edge_case classification, composite 0.411, and Data Architecture (DA) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Data Architecture KSA (composite 0.411)?",
+    "evidence": "Market analysis does not surface this Data Architecture competency as a standard RLHF Specialist requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DA-A-003 (Data Architecture/Ability) is excluded as edge_case (composite 0.411, highest: DDaT at 0.411). Core signal: 0, OOS signals: 0, seniority: appropriate. Data Architecture at this signal level does not meet inclusion threshold for RLHF Specialist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:28:45.505833+00:00",
+    "pipeline_version": "1.0"
+  }
+}

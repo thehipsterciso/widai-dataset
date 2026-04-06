@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0059",
+  "role_name": "Prompt Engineer",
+  "ksa_id": "SP-T-006",
+  "ksa_text": "Determine organizational compliance with privacy policies, data security standards, and regulatory requirements across all business units.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.45695639730639726,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4225016484413253,
+        "cross_encoder_sts": 0.4398447037701975,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37625350089766607,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.45695639730639726,
+        "cross_encoder_sts": 0.4866296296296296,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37782777777777776,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4070059090909091,
+        "cross_encoder_sts": 0.41881500000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.375515,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4176059689770273,
+        "cross_encoder_sts": 0.44605377969762416,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3417451403887689,
+        "jaccard": null,
+        "top_element_id": "K0970",
+        "top_element_label": "Knowledge of auditing policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3897570247933884,
+        "cross_encoder_sts": 0.4252909090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.295,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42801818181818185,
+        "cross_encoder_sts": 0.418125,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4544,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.45695639730639726
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.3",
+        "element_label": "Evaluating Information to Determine Compliance with Standards",
+        "score": 0.42801818181818185
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.4225016484413253
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0970",
+        "element_label": "Knowledge of auditing policies and procedures",
+        "score": 0.4176059689770273
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.4070059090909091
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-T-006 (Security and Privacy/Task) is excluded as out_of_scope (composite 0.457, highest: DDaT at 0.457). Core signal: 0, OOS signals: 0, seniority: appropriate. Security and Privacy at this signal level does not meet inclusion threshold for Prompt Engineer."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.457, and Security and Privacy (SP) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Security and Privacy KSA (composite 0.457)?",
+    "evidence": "Market analysis does not surface this Security and Privacy competency as a standard Prompt Engineer requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA SP-T-006 (Security and Privacy/Task) is excluded as out_of_scope (composite 0.457, highest: DDaT at 0.457). Core signal: 0, OOS signals: 0, seniority: appropriate. Security and Privacy at this signal level does not meet inclusion threshold for Prompt Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:28:12.556961+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0057",
+  "role_name": "Deep Learning Engineer",
+  "ksa_id": "AI-K-015",
+  "ksa_text": "Knowledge of cloud data platform services and infrastructure across major providers, including managed compute, serverless processing, object storage, data warehouse, streaming platforms, and their architectural implications for data and ML workloads.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4098233449477352,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4098233449477352,
+        "cross_encoder_sts": 0.4412731707317073,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3259571428571429,
+        "jaccard": null,
+        "top_element_id": "1038A",
+        "top_element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability."
+      },
+      "ddat": {
+        "composite": 0.40327272727272734,
+        "cross_encoder_sts": 0.4593464285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25374285714285716,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.39484545454545456,
+        "cross_encoder_sts": 0.3916,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4035,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-020",
+        "top_element_label": "Quality management system"
+      },
+      "nice": {
+        "composite": 0.39191535162950253,
+        "cross_encoder_sts": 0.4328594339622641,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2827311320754717,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35741818181818186,
+        "cross_encoder_sts": 0.395,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-4.1",
+        "top_element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data."
+      },
+      "onet": {
+        "composite": 0.33657272727272725,
+        "cross_encoder_sts": 0.3702,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2469,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.1",
+        "top_element_label": "Working with Computers"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1038A",
+        "element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability.",
+        "score": 0.4098233449477352
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.40327272727272734
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-020",
+        "element_label": "Quality management system",
+        "score": 0.39484545454545456
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39191535162950253
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-4.1",
+        "element_label": "Risks and benefits are mapped for all components of the AI system including third-party software and data.",
+        "score": 0.35741818181818186
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-K-015 (AI and Machine Learning/Knowledge) scores 0.410 composite (highest: DCWF at 0.410) and is in_scope for the Deep Learning Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DCWF signal (0.410), and AI and Machine Learning handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this AI KSA reflect Deep Learning Engineer requirements?",
+    "evidence": "Deep learning AI competencies in 85-95% of Deep Learning Engineer postings.",
+    "ruling": "Include upheld. Deep learning AI competencies in 85-95% of Deep Learning Engineer postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AI-K-015 (AI and Machine Learning/Knowledge) scores 0.410 composite (highest: DCWF at 0.410) and is in_scope for the Deep Learning Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.220457+00:00",
+    "pipeline_version": "1.0"
+  }
+}

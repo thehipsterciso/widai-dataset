@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0058",
+  "role_name": "AI Research Scientist",
+  "ksa_id": "LS-K-023",
+  "ksa_text": "Knowledge of AI resource allocation and alternative analysis methodologies, including assessing resource requirements for AI initiatives, conducting cost-benefit analysis across competing AI projects, and optimizing resource utilization.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-K-023 (Leadership and Strategy/Knowledge) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Core signal: 0, OOS signals: 0, seniority: appropriate. Leadership and Strategy at this signal level does not meet inclusion threshold for AI Research Scientist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.000, and Leadership and Strategy (LS) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Zero-signal exclusion: does absence of framework signal confirm irrelevance?",
+    "evidence": "Composite 0.0 across 6 frameworks confirms no semantic alignment with any reference element.",
+    "ruling": "Exclusion upheld. Zero framework signal confirmed by market absence. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA LS-K-023 (Leadership and Strategy/Knowledge) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Core signal: 0, OOS signals: 0, seniority: appropriate. Leadership and Strategy at this signal level does not meet inclusion threshold for AI Research Scientist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.743545+00:00",
+    "pipeline_version": "1.0"
+  }
+}

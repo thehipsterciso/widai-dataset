@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0058",
+  "role_name": "AI Research Scientist",
+  "ksa_id": "SP-T-009",
+  "ksa_text": "Execute security testing and validation for AI systems, including adversarial robustness testing and reliability assessment.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.46093564593301434,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4196552042160738,
+        "cross_encoder_sts": 0.43309399585921327,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3838184265010352,
+        "jaccard": null,
+        "top_element_id": "1020A",
+        "top_element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance)."
+      },
+      "ddat": {
+        "composite": 0.41791176470588237,
+        "cross_encoder_sts": 0.4651352941176471,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29198235294117647,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.46093564593301434,
+        "cross_encoder_sts": 0.4425236842105263,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5100342105263158,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4097935561497326,
+        "cross_encoder_sts": 0.42890058823529414,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3588414705882353,
+        "jaccard": null,
+        "top_element_id": "K1072",
+        "top_element_label": "Knowledge of automated security control testing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4584335497835498,
+        "cross_encoder_sts": 0.4394595238095238,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5090309523809524,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.46093564593301434
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4584335497835498
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1020A",
+        "element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance).",
+        "score": 0.4196552042160738
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.41791176470588237
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1072",
+        "element_label": "Knowledge of automated security control testing tools and techniques",
+        "score": 0.4097935561497326
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-T-009 (Security and Privacy/Task) is excluded as out_of_scope (composite 0.461, highest: EU AI Act at 0.461). Core signal: 1, OOS signals: 0, seniority: appropriate. Security and Privacy at this signal level does not meet inclusion threshold for AI Research Scientist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.461, and Security and Privacy (SP) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Security and Privacy KSA (composite 0.461)?",
+    "evidence": "Market analysis does not surface this Security and Privacy competency as a standard AI Research Scientist requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA SP-T-009 (Security and Privacy/Task) is excluded as out_of_scope (composite 0.461, highest: EU AI Act at 0.461). Core signal: 1, OOS signals: 0, seniority: appropriate. Security and Privacy at this signal level does not meet inclusion threshold for AI Research Scientist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.529747+00:00",
+    "pipeline_version": "1.0"
+  }
+}

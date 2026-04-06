@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0057",
+  "role_name": "Deep Learning Engineer",
+  "ksa_id": "DA-K-012",
+  "ksa_text": "Knowledge of data privacy and protection techniques as applied to data architecture, including data masking, tokenization, anonymization, pseudonymization, and privacy-by-design architectural patterns.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.4447976239669421,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4447976239669421,
+        "cross_encoder_sts": 0.4571960227272727,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41173522727272727,
+        "jaccard": null,
+        "top_element_id": "1000",
+        "top_element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.4326650505050505,
+        "cross_encoder_sts": 0.4577511111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36576888888888887,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.42005272727272724,
+        "cross_encoder_sts": 0.44200999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3615,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-010",
+        "top_element_label": "Record-keeping"
+      },
+      "nice": {
+        "composite": 0.43469927129375224,
+        "cross_encoder_sts": 0.45718988173455977,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37472431011826546,
+        "jaccard": null,
+        "top_element_id": "K0018",
+        "top_element_label": "Knowledge of encryption algorithms"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38710727272727274,
+        "cross_encoder_sts": 0.4154,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31166,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.39294545454545454,
+        "cross_encoder_sts": 0.4161,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3312,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1000",
+        "element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary.",
+        "score": 0.4447976239669421
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0018",
+        "element_label": "Knowledge of encryption algorithms",
+        "score": 0.43469927129375224
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4326650505050505
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-010",
+        "element_label": "Record-keeping",
+        "score": 0.42005272727272724
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.39294545454545454
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-K-012 (Data Architecture/Knowledge) scores 0.445 composite (highest: DCWF at 0.445) and is edge_case for the Deep Learning Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, DCWF signal (0.445), and Data Architecture handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this DA KSA reflect Deep Learning Engineer requirements?",
+    "evidence": "Data architecture for DL training (data pipelines, dataset management) in 25-40% of DL Eng postings.",
+    "ruling": "Include upheld. Data architecture for DL training (data pipelines, dataset management) in 25-40% of DL Eng postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA DA-K-012 (Data Architecture/Knowledge) scores 0.445 composite (highest: DCWF at 0.445) and is edge_case for the Deep Learning Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.147616+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0061",
+  "role_name": "RLHF Specialist",
+  "ksa_id": "RM-K-005",
+  "ksa_text": "Knowledge of AI-specific attack and threat taxonomies, including adversarial examples, model evasion, model extraction, model inversion, membership inference, data poisoning, and prompt injection.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.4377316804407713,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41261536438767843,
+        "cross_encoder_sts": 0.43562830578512396,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35124752066115705,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.3895235294117647,
+        "cross_encoder_sts": 0.45998823529411764,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2016176470588235,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-064",
+        "top_element_label": "Data risk management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4377316804407713,
+        "cross_encoder_sts": 0.44286969696969697,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42403030303030304,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4154184291898578,
+        "cross_encoder_sts": 0.44079115646258504,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3477578231292517,
+        "jaccard": null,
+        "top_element_id": "K0480",
+        "top_element_label": "Knowledge of malware"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41982379110251444,
+        "cross_encoder_sts": 0.427963829787234,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39811702127659576,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.5",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4377316804407713
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.5",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41982379110251444
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0480",
+        "element_label": "Knowledge of malware",
+        "score": 0.4154184291898578
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.41261536438767843
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-064",
+        "element_label": "Data risk management",
+        "score": 0.3895235294117647
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-K-005 (Risk Management/Knowledge) is excluded as out_of_scope (composite 0.438, highest: EU AI Act at 0.438). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk Management at this signal level does not meet inclusion threshold for RLHF Specialist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.438, and Risk Management (RM) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk Management KSA (composite 0.438)?",
+    "evidence": "Market analysis does not surface this Risk Management competency as a standard RLHF Specialist requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RM-K-005 (Risk Management/Knowledge) is excluded as out_of_scope (composite 0.438, highest: EU AI Act at 0.438). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk Management at this signal level does not meet inclusion threshold for RLHF Specialist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:28:45.455717+00:00",
+    "pipeline_version": "1.0"
+  }
+}

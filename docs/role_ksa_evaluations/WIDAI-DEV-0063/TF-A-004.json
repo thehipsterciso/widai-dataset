@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0063",
+  "role_name": "Statistician",
+  "ksa_id": "TF-A-004",
+  "ksa_text": "Ability to design data systems, databases, and integration mechanisms, determining data requirements and managing data flows.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.44072867132867133,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42167755775577553,
+        "cross_encoder_sts": 0.44983201320132016,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3465990099009901,
+        "jaccard": null,
+        "top_element_id": "1038A",
+        "top_element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability."
+      },
+      "ddat": {
+        "composite": 0.42754387878787875,
+        "cross_encoder_sts": 0.4694773333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31572133333333335,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-017",
+        "top_element_label": "Asset and configuration management"
+      },
+      "eu_ai_act": {
+        "composite": 0.4099231060606061,
+        "cross_encoder_sts": 0.45582083333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28752916666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4035554644808743,
+        "cross_encoder_sts": 0.44156120218579237,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3022068306010929,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4173352727272728,
+        "cross_encoder_sts": 0.455324,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31603200000000004,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.44072867132867133,
+        "cross_encoder_sts": 0.4665307692307692,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3719230769230769,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.44072867132867133
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-017",
+        "element_label": "Asset and configuration management",
+        "score": 0.42754387878787875
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1038A",
+        "element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability.",
+        "score": 0.42167755775577553
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4173352727272728
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4099231060606061
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-A-004 (Technical Foundations/Ability) scores 0.441 composite (highest: O*NET at 0.441) and is in_scope for the Statistician role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, O*NET signal (0.441), and Technical Foundations handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this TF KSA reflect Statistician requirements?",
+    "evidence": "Statistical software and computing (R, SAS, Python, SPSS) in 80-90% of Statistician postings.",
+    "ruling": "Include upheld. Statistical software and computing (R, SAS, Python, SPSS) in 80-90% of Statistician postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA TF-A-004 (Technical Foundations/Ability) scores 0.441 composite (highest: O*NET at 0.441) and is in_scope for the Statistician role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:07.045324+00:00",
+    "pipeline_version": "1.0"
+  }
+}

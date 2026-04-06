@@ -1,0 +1,97 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0061",
+  "role_name": "RLHF Specialist",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:28:45.679386+00:00",
+  "total_ksas": 1069,
+  "included": 126,
+  "excluded": 943,
+  "inclusion_rate": 0.1179,
+  "adversarial_overturns": {
+    "pass_3": 0,
+    "pass_4": 47,
+    "total_ksas_affected": 47
+  },
+  "calibration": {
+    "min": 90,
+    "max": 135,
+    "status": "ok"
+  },
+  "pass_1_notes": "6 frameworks: dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet. Composite = MAX across frameworks.",
+  "role_scope_notes": "RLHF Specialist IC to mid. Core: reinforcement learning from human feedback, reward modeling, preference learning, human feedback collection and annotation, model alignment, PPO/reward shaping, comparative ranking, feedback data pipelines, model safety training. Narrow specialized role at IC-mid seniority \u2014 expect fewer inclusions. NOT: general ML engineering, infrastructure ownership, governance framework authorship.",
+  "domain_summary": {
+    "AG": {
+      "include": 0,
+      "exclude": 107,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 0,
+      "exclude": 74,
+      "total": 74,
+      "label": "Risk and Compliance"
+    },
+    "RM": {
+      "include": 0,
+      "exclude": 101,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 0,
+      "exclude": 89,
+      "total": 89,
+      "label": "Leadership and Strategy"
+    },
+    "TF": {
+      "include": 39,
+      "exclude": 48,
+      "total": 87,
+      "label": "Technical Foundations"
+    },
+    "AI": {
+      "include": 72,
+      "exclude": 31,
+      "total": 103,
+      "label": "AI and Machine Learning"
+    },
+    "DG": {
+      "include": 0,
+      "exclude": 92,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "OP": {
+      "include": 0,
+      "exclude": 69,
+      "total": 69,
+      "label": "Operational Excellence"
+    },
+    "SP": {
+      "include": 0,
+      "exclude": 84,
+      "total": 84,
+      "label": "Security and Privacy"
+    },
+    "DA": {
+      "include": 0,
+      "exclude": 93,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 0,
+      "exclude": 82,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "AB": {
+      "include": 15,
+      "exclude": 73,
+      "total": 88,
+      "label": "Core Abilities"
+    }
+  }
+}

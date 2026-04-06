@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0065",
+  "role_name": "Robotics Engineer",
+  "ksa_id": "TF-K-005",
+  "ksa_text": "Knowledge of cloud platform services for data and AI workloads across major providers, including compute, storage, managed database, analytics, and machine learning services, with understanding of cloud-native vs cloud-agnostic trade-offs.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.3842509803921569,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.38003973214285713,
+        "cross_encoder_sts": 0.4251495535714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.259746875,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.3621800865800866,
+        "cross_encoder_sts": 0.4251547619047619,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.19424761904761906,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.3767611285266458,
+        "cross_encoder_sts": 0.4008965517241379,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3124,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-005",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.36794823413996075,
+        "cross_encoder_sts": 0.4217179856115108,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22456223021582733,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3842509803921569,
+        "cross_encoder_sts": 0.4174156862745098,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29581176470588233,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.35078181818181814,
+        "cross_encoder_sts": 0.3891,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2486,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.1",
+        "top_element_label": "Working with Computers"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.3",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.3842509803921569
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.38003973214285713
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-005",
+        "element_label": "Risk management system",
+        "score": 0.3767611285266458
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.36794823413996075
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.3621800865800866
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-K-005 (Technical Foundations/Knowledge) scores 0.384 composite (highest: NIST AI RMF at 0.384) and is in_scope for the Robotics Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NIST AI RMF signal (0.384), and Technical Foundations handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this TF KSA reflect Robotics Engineer requirements?",
+    "evidence": "Technical Foundations (C++, Python, ROS, embedded systems) in 85-95% of Robotics Engineer postings.",
+    "ruling": "Include upheld. Technical Foundations (C++, Python, ROS, embedded systems) in 85-95% of Robotics Engineer postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA TF-K-005 (Technical Foundations/Knowledge) scores 0.384 composite (highest: NIST AI RMF at 0.384) and is in_scope for the Robotics Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:20.956309+00:00",
+    "pipeline_version": "1.0"
+  }
+}

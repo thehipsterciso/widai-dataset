@@ -1,0 +1,97 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0058",
+  "role_name": "AI Research Scientist",
+  "pipeline_version": "1.0",
+  "evaluated_at": "2026-04-06T18:27:26.834891+00:00",
+  "total_ksas": 1069,
+  "included": 222,
+  "excluded": 847,
+  "inclusion_rate": 0.2077,
+  "adversarial_overturns": {
+    "pass_3": 1,
+    "pass_4": 0,
+    "total_ksas_affected": 1
+  },
+  "calibration": {
+    "min": 130,
+    "max": 230,
+    "status": "ok"
+  },
+  "pass_1_notes": "6 frameworks: dcwf, ddat, eu_ai_act, nice, nist_ai_rmf, onet. Composite = MAX across frameworks.",
+  "role_scope_notes": "AI Research Scientist IC to principal. Core: novel AI/ML research, model architecture innovation, theoretical foundations, experimental design for ML, literature review and synthesis, benchmark evaluation, ablation studies, publication, algorithm development, research implementation. IC-to-principal seniority warrants broader coverage including deep analytical abilities. NOT: governance framework ownership, organizational strategy, product management.",
+  "domain_summary": {
+    "AG": {
+      "include": 30,
+      "exclude": 77,
+      "total": 107,
+      "label": "AI Governance"
+    },
+    "RC": {
+      "include": 0,
+      "exclude": 74,
+      "total": 74,
+      "label": "Risk and Compliance"
+    },
+    "RM": {
+      "include": 0,
+      "exclude": 101,
+      "total": 101,
+      "label": "Risk Management"
+    },
+    "LS": {
+      "include": 0,
+      "exclude": 89,
+      "total": 89,
+      "label": "Leadership and Strategy"
+    },
+    "TF": {
+      "include": 39,
+      "exclude": 48,
+      "total": 87,
+      "label": "Technical Foundations"
+    },
+    "AI": {
+      "include": 72,
+      "exclude": 31,
+      "total": 103,
+      "label": "AI and Machine Learning"
+    },
+    "DG": {
+      "include": 0,
+      "exclude": 92,
+      "total": 92,
+      "label": "Data Governance"
+    },
+    "OP": {
+      "include": 0,
+      "exclude": 69,
+      "total": 69,
+      "label": "Operational Excellence"
+    },
+    "SP": {
+      "include": 0,
+      "exclude": 84,
+      "total": 84,
+      "label": "Security and Privacy"
+    },
+    "DA": {
+      "include": 19,
+      "exclude": 74,
+      "total": 93,
+      "label": "Data Architecture"
+    },
+    "DQ": {
+      "include": 28,
+      "exclude": 54,
+      "total": 82,
+      "label": "Data Quality"
+    },
+    "AB": {
+      "include": 34,
+      "exclude": 54,
+      "total": 88,
+      "label": "Core Abilities"
+    }
+  }
+}

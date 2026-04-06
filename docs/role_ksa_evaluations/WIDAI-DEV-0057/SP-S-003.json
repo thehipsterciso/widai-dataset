@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0057",
+  "role_name": "Deep Learning Engineer",
+  "ksa_id": "SP-S-003",
+  "ksa_text": "Skill in conducting and reviewing Data Protection Impact Assessments, identifying processing activities that present high risk to individuals, and recommending proportionate technical and organizational measures to mitigate identified risks.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4839480303030303,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41979181195516807,
+        "cross_encoder_sts": 0.43275976027397256,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38521061643835613,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.4411568521031208,
+        "cross_encoder_sts": 0.4570686567164179,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3987253731343284,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.45195413223140496,
+        "cross_encoder_sts": 0.46709545454545454,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41157727272727274,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4215203800298063,
+        "cross_encoder_sts": 0.43964620901639345,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3731848360655738,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4839480303030303,
+        "cross_encoder_sts": 0.5026416666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4340983333333333,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.10",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.40734242424242423,
+        "cross_encoder_sts": 0.4220333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3681666666666667,
+        "jaccard": null,
+        "top_element_id": "2.B.2.i",
+        "top_element_label": "Complex Problem Solving"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.10",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.4839480303030303
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.45195413223140496
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4411568521031208
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4215203800298063
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.41979181195516807
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-S-003 (Security and Privacy/Skill) is excluded as out_of_scope (composite 0.484, highest: NIST AI RMF at 0.484). Core signal: 0, OOS signals: 0, seniority: appropriate. Security and Privacy at this signal level does not meet inclusion threshold for Deep Learning Engineer."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.484, and Security and Privacy (SP) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Security and Privacy KSA (composite 0.484)?",
+    "evidence": "Market analysis does not surface this Security and Privacy competency as a standard Deep Learning Engineer requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA SP-S-003 (Security and Privacy/Skill) is excluded as out_of_scope (composite 0.484, highest: NIST AI RMF at 0.484). Core signal: 0, OOS signals: 0, seniority: appropriate. Security and Privacy at this signal level does not meet inclusion threshold for Deep Learning Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.120787+00:00",
+    "pipeline_version": "1.0"
+  }
+}

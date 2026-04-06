@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0063",
+  "role_name": "Statistician",
+  "ksa_id": "TF-A-005",
+  "ksa_text": "Ability to perform systems analysis and assessments, analyzing system capabilities, architecture, and technical characteristics across complex environments.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.5536802597402597,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4249776074146119,
+        "cross_encoder_sts": 0.4669876651982379,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31295078665827564,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.44923668543845535,
+        "cross_encoder_sts": 0.5011823008849557,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31071504424778756,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-080",
+        "top_element_label": "Digital and data systems analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.5160172727272728,
+        "cross_encoder_sts": 0.5409400000000001,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4495566666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.41018395379757355,
+        "cross_encoder_sts": 0.45696371115173673,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2854379341864716,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5536802597402597,
+        "cross_encoder_sts": 0.5818257142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47862571428571427,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.1",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.41696776859504137,
+        "cross_encoder_sts": 0.47248181818181817,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2689303030303031,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-2.1",
+        "element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",
+        "score": 0.5536802597402597
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.5160172727272728
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-080",
+        "element_label": "Digital and data systems analysis",
+        "score": 0.44923668543845535
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.4249776074146119
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.41696776859504137
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-A-005 (Technical Foundations/Ability) scores 0.554 composite (highest: NIST AI RMF at 0.554) and is in_scope for the Statistician role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NIST AI RMF signal (0.554), and Technical Foundations handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this TF KSA reflect Statistician requirements?",
+    "evidence": "Statistical software and computing (R, SAS, Python, SPSS) in 80-90% of Statistician postings.",
+    "ruling": "Include upheld. Statistical software and computing (R, SAS, Python, SPSS) in 80-90% of Statistician postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA TF-A-005 (Technical Foundations/Ability) scores 0.554 composite (highest: NIST AI RMF at 0.554) and is in_scope for the Statistician role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:06.990677+00:00",
+    "pipeline_version": "1.0"
+  }
+}

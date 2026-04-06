@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0063",
+  "role_name": "Statistician",
+  "ksa_id": "AG-A-009",
+  "ksa_text": "Ability to design governance frameworks for human oversight of AI systems, including defining decision authority thresholds, understanding system capacities and limitations, and establishing feedback and adjudication processes.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-A-009 (AI Governance/Ability) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Core signal: 0, OOS signals: 2, seniority: appropriate. AI Governance at this signal level does not meet inclusion threshold for Statistician."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.000, and AI Governance (AG) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Zero-signal exclusion: does absence of framework signal confirm irrelevance?",
+    "evidence": "Composite 0.0 across 6 frameworks confirms no semantic alignment with any reference element.",
+    "ruling": "Exclusion upheld. Zero framework signal confirmed by market absence. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-A-009 (AI Governance/Ability) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Core signal: 0, OOS signals: 2, seniority: appropriate. AI Governance at this signal level does not meet inclusion threshold for Statistician.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:07.222997+00:00",
+    "pipeline_version": "1.0"
+  }
+}

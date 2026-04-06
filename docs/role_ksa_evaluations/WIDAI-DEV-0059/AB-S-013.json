@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0059",
+  "role_name": "Prompt Engineer",
+  "ksa_id": "AB-S-013",
+  "ksa_text": "Skill in deploying and managing continuous monitoring systems for analytical environments, including configuring automated alerting, conducting monitoring data assessments, and maintaining monitoring infrastructure.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AB-S-013 (Core Abilities/Skill) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Core signal: 0, OOS signals: 0, seniority: appropriate. Core Abilities at this signal level does not meet inclusion threshold for Prompt Engineer."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.000, and Core Abilities (AB) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Zero-signal exclusion: does absence of framework signal confirm irrelevance?",
+    "evidence": "Composite 0.0 across 6 frameworks confirms no semantic alignment with any reference element.",
+    "ruling": "Exclusion upheld. Zero framework signal confirmed by market absence. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AB-S-013 (Core Abilities/Skill) is excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Core signal: 0, OOS signals: 0, seniority: appropriate. Core Abilities at this signal level does not meet inclusion threshold for Prompt Engineer.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:28:12.680009+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0061",
+  "role_name": "RLHF Specialist",
+  "ksa_id": "AG-K-008",
+  "ksa_text": "Knowledge of AI and machine learning-specific model risk considerations, including data drift, concept drift, black-box explainability requirements, model instability, and how traditional model risk frameworks must adapt for non-parametric, ensemble, deep learning, and foundation models.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5494330721003134,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40978380736346187,
+        "cross_encoder_sts": 0.42995489443378115,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3559942418426104,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.40104017595307917,
+        "cross_encoder_sts": 0.4523806451612903,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2641322580645161,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.5494330721003134,
+        "cross_encoder_sts": 0.5283827586206896,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.6055672413793104,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-008",
+        "top_element_label": "Prohibited AI practices"
+      },
+      "nice": {
+        "composite": 0.4101997635933806,
+        "cross_encoder_sts": 0.44303947990543735,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32262718676122937,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5049265395894428,
+        "cross_encoder_sts": 0.48921612903225803,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5468209677419356,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3709272727272727,
+        "cross_encoder_sts": 0.40285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2858,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-008",
+        "element_label": "Prohibited AI practices",
+        "score": 0.5494330721003134
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5049265395894428
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4101997635933806
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.40978380736346187
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.40104017595307917
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-K-008 (AI Governance/Knowledge) is excluded as out_of_scope (composite 0.549, highest: EU AI Act at 0.549). Core signal: 0, OOS signals: 0, seniority: appropriate. AI Governance at this signal level does not meet inclusion threshold for RLHF Specialist."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.549, and AI Governance (AG) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA (composite 0.549)?",
+    "evidence": "Market analysis does not surface this AI Governance competency as a standard RLHF Specialist requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-K-008 (AI Governance/Knowledge) is excluded as out_of_scope (composite 0.549, highest: EU AI Act at 0.549). Core signal: 0, OOS signals: 0, seniority: appropriate. AI Governance at this signal level does not meet inclusion threshold for RLHF Specialist.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:28:45.403451+00:00",
+    "pipeline_version": "1.0"
+  }
+}

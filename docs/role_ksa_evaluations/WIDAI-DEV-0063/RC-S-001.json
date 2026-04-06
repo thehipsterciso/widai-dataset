@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0063",
+  "role_name": "Statistician",
+  "ksa_id": "RC-S-001",
+  "ksa_text": "Skill in conducting data compliance gap assessments against specific regulatory frameworks, producing findings with evidence references and prioritized remediation recommendations.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.43095363636363637,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40067527843883866,
+        "cross_encoder_sts": 0.44519350785340317,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28196,
+        "jaccard": null,
+        "top_element_id": "478",
+        "top_element_label": "Correlate incident data to identify specific vulnerabilities and make recommendations that enable expeditious remediation."
+      },
+      "ddat": {
+        "composite": 0.4121615650172612,
+        "cross_encoder_sts": 0.461226582278481,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28132151898734176,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.43095363636363637,
+        "cross_encoder_sts": 0.469298,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.328702,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.398514393939394,
+        "cross_encoder_sts": 0.4392294217687075,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28994098639455784,
+        "jaccard": null,
+        "top_element_id": "K0690",
+        "top_element_label": "Knowledge of requirements analysis principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.42271883116883113,
+        "cross_encoder_sts": 0.4755875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2817357142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.13",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.41378333333333334,
+        "cross_encoder_sts": 0.47750000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24387222222222224,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.43095363636363637
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.13",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.42271883116883113
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.f",
+        "element_label": "Science",
+        "score": 0.41378333333333334
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4121615650172612
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "478",
+        "element_label": "Correlate incident data to identify specific vulnerabilities and make recommendations that enable expeditious remediation.",
+        "score": 0.40067527843883866
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-S-001 (Risk and Compliance/Skill) is excluded as out_of_scope (composite 0.431, highest: EU AI Act at 0.431). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk and Compliance at this signal level does not meet inclusion threshold for Statistician."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Exclude consistent with out_of_scope classification, composite 0.431, and Risk and Compliance (RC) handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this Risk and Compliance KSA (composite 0.431)?",
+    "evidence": "Market analysis does not surface this Risk and Compliance competency as a standard Statistician requirement. Exclusion consistent with the role's technical focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RC-S-001 (Risk and Compliance/Skill) is excluded as out_of_scope (composite 0.431, highest: EU AI Act at 0.431). Core signal: 0, OOS signals: 0, seniority: appropriate. Risk and Compliance at this signal level does not meet inclusion threshold for Statistician.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:07.061288+00:00",
+    "pipeline_version": "1.0"
+  }
+}

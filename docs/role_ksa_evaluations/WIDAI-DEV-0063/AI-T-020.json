@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0063",
+  "role_name": "Statistician",
+  "ksa_id": "AI-T-020",
+  "ksa_text": "Conduct AI risk assessments across the system lifecycle, including risk identification, impact analysis, likelihood estimation, and documentation of proportionate mitigation measures for different risk categories.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.5077487012987013,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42129771332961513,
+        "cross_encoder_sts": 0.43968846625766866,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37225570552147236,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.42070867768595044,
+        "cross_encoder_sts": 0.45190454545454545,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33751969696969697,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.501424512987013,
+        "cross_encoder_sts": 0.5118767857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4735517857142857,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-041",
+        "top_element_label": "Obligations for providers of general-purpose AI models"
+      },
+      "nice": {
+        "composite": 0.39378380165289256,
+        "cross_encoder_sts": 0.41650763636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3331869090909091,
+        "jaccard": null,
+        "top_element_id": "K0733",
+        "top_element_label": "Knowledge of information technology (IT) architecture models and frameworks"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5077487012987013,
+        "cross_encoder_sts": 0.5116342857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4973871428571429,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.5",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.39785702479338847,
+        "cross_encoder_sts": 0.4083272727272727,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3699363636363637,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.5",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.5077487012987013
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-041",
+        "element_label": "Obligations for providers of general-purpose AI models",
+        "score": 0.501424512987013
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
+        "score": 0.42129771332961513
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.42070867768595044
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.39785702479338847
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AI-T-020 (AI and Machine Learning/Task) scores 0.508 composite (highest: NIST AI RMF at 0.508) and is edge_case for the Statistician role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with edge_case scope, NIST AI RMF signal (0.508), and AI and Machine Learning handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "Does this AI KSA reflect Statistician requirements?",
+    "evidence": "Statistical ML (Bayesian methods, regression, predictive modeling) in 40-60% of Statistician postings. Deep learning engineering is not a core Statistician competency.",
+    "ruling": "Revised to exclude. Statistical ML (Bayesian methods, regression, predictive modeling) in 40-60% of Statistician postings. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Revised to exclude. Statistical ML (Bayesian methods, regression, predictive modeling) in 40-60% of Statistician postings. Final decision: exclude.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:07.004181+00:00",
+    "pipeline_version": "1.0"
+  }
+}

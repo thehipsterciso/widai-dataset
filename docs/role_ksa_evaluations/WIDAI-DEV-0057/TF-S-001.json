@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0057",
+  "role_name": "Deep Learning Engineer",
+  "ksa_id": "TF-S-001",
+  "ksa_text": "Skill in writing production-quality data transformation code in SQL and at least one general-purpose programming language (Python or Scala), including unit testing and documentation.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.39789071566731143,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.396010986382039,
+        "cross_encoder_sts": 0.4258002024291498,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31657307692307696,
+        "jaccard": null,
+        "top_element_id": "102",
+        "top_element_label": "Knowledge of programming language structures and logic."
+      },
+      "ddat": {
+        "composite": 0.39789071566731143,
+        "cross_encoder_sts": 0.45387234042553193,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2486063829787234,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.3779006734006734,
+        "cross_encoder_sts": 0.4274703703703704,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2457148148148148,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.39239966740576493,
+        "cross_encoder_sts": 0.43219024390243904,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28629146341463413,
+        "jaccard": null,
+        "top_element_id": "K0068",
+        "top_element_label": "Knowledge of programming language structures and logic"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.369148347107438,
+        "cross_encoder_sts": 0.4283909090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2111681818181818,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.2",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.3671776859504132,
+        "cross_encoder_sts": 0.39608181818181815,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2901,
+        "jaccard": null,
+        "top_element_id": "2.B.3.e",
+        "top_element_label": "Programming"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.39789071566731143
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "102",
+        "element_label": "Knowledge of programming language structures and logic.",
+        "score": 0.396010986382039
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0068",
+        "element_label": "Knowledge of programming language structures and logic",
+        "score": 0.39239966740576493
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.3779006734006734
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.2",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.369148347107438
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-S-001 (Technical Foundations/Skill) scores 0.398 composite (highest: DDaT at 0.398) and is in_scope for the Deep Learning Engineer role. Core role signal: 1 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, DDaT signal (0.398), and Technical Foundations handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this TF KSA reflect Deep Learning Engineer requirements?",
+    "evidence": "Technical Foundations (PyTorch, TensorFlow, GPU, CUDA) in 85-95% of DL Engineer postings.",
+    "ruling": "Include upheld. Technical Foundations (PyTorch, TensorFlow, GPU, CUDA) in 85-95% of DL Engineer postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA TF-S-001 (Technical Foundations/Skill) scores 0.398 composite (highest: DDaT at 0.398) and is in_scope for the Deep Learning Engineer role. Core role signal: 1 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:27:26.237755+00:00",
+    "pipeline_version": "1.0"
+  }
+}

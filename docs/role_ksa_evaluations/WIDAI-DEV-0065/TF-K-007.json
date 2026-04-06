@@ -1,0 +1,110 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DEV-0065",
+  "role_name": "Robotics Engineer",
+  "ksa_id": "TF-K-007",
+  "ksa_text": "Knowledge of data serialization formats and their trade-offs for different workloads, including JSON, Apache Avro, Apache Parquet, and Protocol Buffers, with understanding of schema evolution, compression characteristics, and query performance implications.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "TF",
+  "pass_1_scoring": {
+    "composite_score": 0.3903380808080808,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.37349396694214876,
+        "cross_encoder_sts": 0.4116636363636364,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2717081818181818,
+        "jaccard": null,
+        "top_element_id": "1095",
+        "top_element_label": "Knowledge of how different file types can be used for anomalous behavior."
+      },
+      "ddat": {
+        "composite": 0.3578047138047138,
+        "cross_encoder_sts": 0.43275925925925923,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.15792592592592594,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "nice": {
+        "composite": 0.3903380808080808,
+        "cross_encoder_sts": 0.43132444444444445,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28104111111111113,
+        "jaccard": null,
+        "top_element_id": "K0055",
+        "top_element_label": "Knowledge of microprocessors"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0055",
+        "element_label": "Knowledge of microprocessors",
+        "score": 0.3903380808080808
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1095",
+        "element_label": "Knowledge of how different file types can be used for anomalous behavior.",
+        "score": 0.37349396694214876
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.3578047138047138
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA TF-K-007 (Technical Foundations/Knowledge) scores 0.390 composite (highest: NICE at 0.390) and is in_scope for the Robotics Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency identified. Include consistent with in_scope scope, NICE signal (0.390), and Technical Foundations handling. Decision stands."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does this TF KSA reflect Robotics Engineer requirements?",
+    "evidence": "Technical Foundations (C++, Python, ROS, embedded systems) in 85-95% of Robotics Engineer postings.",
+    "ruling": "Include upheld. Technical Foundations (C++, Python, ROS, embedded systems) in 85-95% of Robotics Engineer postings. Final decision: include."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA TF-K-007 (Technical Foundations/Knowledge) scores 0.390 composite (highest: NICE at 0.390) and is in_scope for the Robotics Engineer role. Core role signal: 0 pattern match(es). Seniority is appropriate for this role.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:29:20.954936+00:00",
+    "pipeline_version": "1.0"
+  }
+}
