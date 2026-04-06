@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0119",
+  "role_name": "AI Ethics Assessor",
+  "ksa_id": "SP-T-002",
+  "ksa_text": "Conduct and document privacy awareness training programs and communications for organizational staff at all levels.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4083473392461197,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4083473392461197,
+        "cross_encoder_sts": 0.4138195121951219,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3937548780487805,
+        "jaccard": null,
+        "top_element_id": "208",
+        "top_element_label": "Skill in maintaining databases."
+      },
+      "ddat": {
+        "composite": 0.3877224242424242,
+        "cross_encoder_sts": 0.42432333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29012,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-052",
+        "top_element_label": "Data governance"
+      },
+      "eu_ai_act": {
+        "composite": 0.3895181818181818,
+        "cross_encoder_sts": 0.4001,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3613,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-009",
+        "top_element_label": "Technical documentation"
+      },
+      "nice": {
+        "composite": 0.38675382775119616,
+        "cross_encoder_sts": 0.4035236842105263,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34203421052631583,
+        "jaccard": null,
+        "top_element_id": "S0843",
+        "top_element_label": "Skill in maintaining data"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3950863636363636,
+        "cross_encoder_sts": 0.41805000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33385,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-1.2",
+        "top_element_label": "Appropriate methods and metrics are identified and applied."
+      },
+      "onet": {
+        "composite": 0.3701363636363636,
+        "cross_encoder_sts": 0.3631,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3889,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "208",
+        "element_label": "Skill in maintaining databases.",
+        "score": 0.4083473392461197
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-1.2",
+        "element_label": "Appropriate methods and metrics are identified and applied.",
+        "score": 0.3950863636363636
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-009",
+        "element_label": "Technical documentation",
+        "score": 0.3895181818181818
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-052",
+        "element_label": "Data governance",
+        "score": 0.3877224242424242
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0843",
+        "element_label": "Skill in maintaining data",
+        "score": 0.38675382775119616
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Security & Privacy domain has low AI Ethics Assessor affinity (0.32), and the text \u2014 'Conduct and document privacy awareness training programs and communications for organizational staff...' \u2014 describes competencies outside the AI Ethics Assessor practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4083)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Ethics Assessor.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Security & Privacy domain has low AI Ethics Assessor affinity (0.32), and the text \u2014 'Conduct and document privacy awareness training programs and communications for organizational staff...' \u2014 describes competencies outside the AI Ethics Assessor practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4083).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:21.038863+00:00",
+    "pipeline_version": "1.0"
+  }
+}

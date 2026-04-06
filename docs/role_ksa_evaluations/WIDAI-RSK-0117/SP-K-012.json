@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0117",
+  "role_name": "Post-Market Monitoring Manager",
+  "ksa_id": "SP-K-012",
+  "ksa_text": "Knowledge of LLM-specific security vulnerabilities and risks, including prompt injection, jailbreaking, insecure output handling, training data poisoning, model theft, prompt leakage, and model supply chain security.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4507727272727272,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42253463002114167,
+        "cross_encoder_sts": 0.41995906976744185,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.42940279069767445,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.3860786561264822,
+        "cross_encoder_sts": 0.43798695652173913,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24765652173913041,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4507727272727272,
+        "cross_encoder_sts": 0.45694999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4343,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-016",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.4198375054896794,
+        "cross_encoder_sts": 0.4224048309178744,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41299130434782605,
+        "jaccard": null,
+        "top_element_id": "K0375",
+        "top_element_label": "Knowledge of wireless applications vulnerabilities"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.34606363636363635,
+        "cross_encoder_sts": 0.3681,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2873,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-016",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.4507727272727272
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.42253463002114167
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0375",
+        "element_label": "Knowledge of wireless applications vulnerabilities",
+        "score": 0.4198375054896794
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.3860786561264822
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-3.2",
+        "element_label": "AI risks and benefits from third-party entities are managed.",
+        "score": 0.34606363636363635
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to Post-Market Monitoring Manager scope \u2014 RSK-specific signals detected (\"vulnerabilit\", \"jailbreak\", \"prompt injection\"). STRM composite is strong (0.4508); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation present: 1 match(es) in RSK job postings or certification scope. Competency appears in RSK role descriptions \u2014 sufficient to uphold.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to Post-Market Monitoring Manager scope \u2014 RSK-specific signals detected (\"vulnerabilit\", \"jailbreak\", \"prompt injection\"). STRM composite is strong (0.4508); note that framework scores routinely underweight risk management and governance vocabulary, so text-based signal carries primary weight here. Seniority is appropriate: the KSA describes practice-level execution, not enterprise strategy.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:19.678530+00:00",
+    "pipeline_version": "1.0"
+  }
+}

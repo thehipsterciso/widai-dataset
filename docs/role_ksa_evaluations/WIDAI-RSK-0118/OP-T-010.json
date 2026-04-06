@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0118",
+  "role_name": "Bias Auditor",
+  "ksa_id": "OP-T-010",
+  "ksa_text": "Develop and maintain operational documentation for data and AI systems, including standard operating procedures, runbooks, system security documentation, knowledge base articles, technical documentation, and process diagrams.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "OP",
+  "pass_1_scoring": {
+    "composite_score": 0.4297578624078624,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4243201862527716,
+        "cross_encoder_sts": 0.4407058536585366,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3806250731707317,
+        "jaccard": null,
+        "top_element_id": "515C",
+        "top_element_label": "Develop system testing and validation procedures, programming, and documentation."
+      },
+      "ddat": {
+        "composite": 0.4297578624078624,
+        "cross_encoder_sts": 0.4580418918918919,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3543337837837838,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.4088782241014799,
+        "cross_encoder_sts": 0.4397395348837209,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3265813953488372,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4189297942932979,
+        "cross_encoder_sts": 0.4381894160583942,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.367570802919708,
+        "jaccard": null,
+        "top_element_id": "T0068",
+        "top_element_label": "Develop data standards, policies, and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4214761363636364,
+        "cross_encoder_sts": 0.4647696428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3060267857142857,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.425789696969697,
+        "cross_encoder_sts": 0.44321333333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37932666666666665,
+        "jaccard": null,
+        "top_element_id": "2.C.1.b",
+        "top_element_label": "Administrative"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4297578624078624
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.1.b",
+        "element_label": "Administrative",
+        "score": 0.425789696969697
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "515C",
+        "element_label": "Develop system testing and validation procedures, programming, and documentation.",
+        "score": 0.4243201862527716
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4214761363636364
+      },
+      {
+        "framework": "nice",
+        "element_id": "T0068",
+        "element_label": "Develop data standards, policies, and procedures",
+        "score": 0.4189297942932979
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Operations & Program Management domain has low Bias Auditor affinity (0.25), and the text \u2014 'Develop and maintain operational documentation for data and AI systems, including standard operating...' \u2014 describes competencies outside the Bias Auditor practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4298)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working Bias Auditor.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Operations & Program Management domain has low Bias Auditor affinity (0.25), and the text \u2014 'Develop and maintain operational documentation for data and AI systems, including standard operating...' \u2014 describes competencies outside the Bias Auditor practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4298).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:20.331513+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0118",
+  "role_name": "Bias Auditor",
+  "ksa_id": "AI-S-012",
+  "ksa_text": "Skill in preparing image and video datasets for model training, including annotation pipeline design, quality control, augmentation strategy, and train/validation split construction.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.41720371057513916,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39193338910578174,
+        "cross_encoder_sts": 0.4374124744376278,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2706558282208589,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.374352766798419,
+        "cross_encoder_sts": 0.42877608695652175,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22922391304347825,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-049",
+        "top_element_label": "Data development process"
+      },
+      "eu_ai_act": {
+        "composite": 0.40924903581267214,
+        "cross_encoder_sts": 0.4476969696969697,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3067212121212121,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-005",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.39262442407728515,
+        "cross_encoder_sts": 0.43939209809264307,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26791062670299726,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.41720371057513916,
+        "cross_encoder_sts": 0.4470795918367347,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33753469387755103,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3802545454545454,
+        "cross_encoder_sts": 0.424,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2636,
+        "jaccard": null,
+        "top_element_id": "2.B.3.m",
+        "top_element_label": "Quality Control Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.41720371057513916
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-005",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.40924903581267214
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.39262442407728515
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.39193338910578174
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.m",
+        "element_label": "Quality Control Analysis",
+        "score": 0.3802545454545454
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low Bias Auditor affinity (0.72), and the text \u2014 'Skill in preparing image and video datasets for model training, including annotation pipeline design...' \u2014 describes competencies outside the Bias Auditor practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4172)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working Bias Auditor.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low Bias Auditor affinity (0.72), and the text \u2014 'Skill in preparing image and video datasets for model training, including annotation pipeline design...' \u2014 describes competencies outside the Bias Auditor practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4172).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:20.387594+00:00",
+    "pipeline_version": "1.0"
+  }
+}

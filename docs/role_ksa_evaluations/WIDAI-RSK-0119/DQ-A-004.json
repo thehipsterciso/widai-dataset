@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-RSK-0119",
+  "role_name": "AI Ethics Assessor",
+  "ksa_id": "DQ-A-004",
+  "ksa_text": "Ability to manage the full data lifecycle including collection, curation, transformation, and assurance to ensure data quality at each stage.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.42798522727272725,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4151080999569151,
+        "cross_encoder_sts": 0.4383867298578199,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3530317535545024,
+        "jaccard": null,
+        "top_element_id": "1020A",
+        "top_element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance)."
+      },
+      "ddat": {
+        "composite": 0.4117689393939394,
+        "cross_encoder_sts": 0.44934166666666664,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31157500000000005,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-014",
+        "top_element_label": "Applying user-centred insights"
+      },
+      "eu_ai_act": {
+        "composite": 0.42798522727272725,
+        "cross_encoder_sts": 0.458575,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3464125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.41736551114255394,
+        "cross_encoder_sts": 0.4442377431906615,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3457062256809339,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.388893388429752,
+        "cross_encoder_sts": 0.4260363636363636,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2898454545454545,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-5.2",
+        "top_element_label": "Processes are in place for robust engagement with relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4095969696969697,
+        "cross_encoder_sts": 0.4315333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35109999999999997,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.42798522727272725
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41736551114255394
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1020A",
+        "element_label": "Skill in secure test plan design (e. g. unit, integration, system, acceptance).",
+        "score": 0.4151080999569151
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-014",
+        "element_label": "Applying user-centred insights",
+        "score": 0.4117689393939394
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.4095969696969697
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Quality domain has low AI Ethics Assessor affinity (0.20), and the text \u2014 'Ability to manage the full data lifecycle including collection, curation, transformation, and assura...' \u2014 describes competencies outside the AI Ethics Assessor practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4280)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in RSK job postings or certification curricula. A gap here would not be noticeable to a working AI Ethics Assessor.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Quality domain has low AI Ethics Assessor affinity (0.20), and the text \u2014 'Ability to manage the full data lifecycle including collection, curation, transformation, and assura...' \u2014 describes competencies outside the AI Ethics Assessor practice boundary. 0 RSK-specific signal(s) detected. STRM composite is moderate (0.4280).",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:25:20.949573+00:00",
+    "pipeline_version": "1.0"
+  }
+}
