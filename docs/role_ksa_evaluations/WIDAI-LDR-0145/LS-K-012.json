@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0145",
+  "role_name": "VP Data Science",
+  "ksa_id": "LS-K-012",
+  "ksa_text": "Knowledge of data and AI due diligence frameworks for mergers, acquisitions, and private equity transactions, including data asset valuation, technical debt assessment, key person risk evaluation, and integration complexity analysis.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.4888596103896104,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4148547114539596,
+        "cross_encoder_sts": 0.4577993555316864,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3003356605800215,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.4030672727272727,
+        "cross_encoder_sts": 0.4562225,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26132,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.46364529505582136,
+        "cross_encoder_sts": 0.4986175438596491,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37038596491228065,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41115727563171645,
+        "cross_encoder_sts": 0.45710319488817885,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2886348242811501,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4888596103896104,
+        "cross_encoder_sts": 0.5409485714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3499557142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.38065333333333334,
+        "cross_encoder_sts": 0.42373333333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26577333333333336,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4888596103896104
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.46364529505582136
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.4148547114539596
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.41115727563171645
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.4030672727272727
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Although Leadership & Strategy is an edge domain for the VP Data Science, this knowledge KSA presents sufficient signal (composite score 0.489) and conceptual alignment to include at the vp level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Leadership & Strategy), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.489). External reviewers may question whether this specific knowledge KSA is sufficiently distinctive for the VP Data Science versus adjacent roles.",
+    "evidence": "McKinsey, Gartner, and Harvard Business Review consistently identify leadership and strategy skills as core differentiators for C-suite and VP data leaders.",
+    "ruling": "Upheld: moderate framework signal is consistent with Leadership & Strategy appearing in job postings and role definition literature for VP Data Science."
+  },
+  "final_decision": "include",
+  "decision_confidence": "low",
+  "decision_rationale": "Edge-domain Leadership & Strategy knowledge KSA cleared adversarial review with score 0.489. Included based on sufficient framework alignment and role relevance for the VP Data Science.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.463450+00:00",
+    "pipeline_version": "1.0"
+  }
+}

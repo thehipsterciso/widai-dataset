@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0143",
+  "role_name": "Data and AI Strategy Consultant",
+  "ksa_id": "AB-T-006",
+  "ksa_text": "Design analytical systems, data models, and architectures, including database design, analytical schema construction, prototype development, and data integration design to support analytical capabilities.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4056480519480519,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3895043672014261,
+        "cross_encoder_sts": 0.42526078431372555,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29415392156862746,
+        "jaccard": null,
+        "top_element_id": "1138A",
+        "top_element_label": "Knowledge of developing and applying user credential management system."
+      },
+      "ddat": {
+        "composite": 0.38290135685210314,
+        "cross_encoder_sts": 0.432689552238806,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2501328358208955,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.3382030303030303,
+        "cross_encoder_sts": 0.40076666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.17136666666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-013",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.3832460275019099,
+        "cross_encoder_sts": 0.4218235294117647,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2803726890756303,
+        "jaccard": null,
+        "top_element_id": "K0704",
+        "top_element_label": "Knowledge of database management system (DBMS) principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.324744696969697,
+        "cross_encoder_sts": 0.37720833333333337,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18484166666666668,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-3.3",
+        "top_element_label": "Mechanisms for tracking identified AI risks over time are in place."
+      },
+      "onet": {
+        "composite": 0.4056480519480519,
+        "cross_encoder_sts": 0.4370428571428571,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3219285714285714,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.4056480519480519
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1138A",
+        "element_label": "Knowledge of developing and applying user credential management system.",
+        "score": 0.3895043672014261
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0704",
+        "element_label": "Knowledge of database management system (DBMS) principles and practices",
+        "score": 0.3832460275019099
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.38290135685210314
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-013",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.3382030303030303
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Applied Analytics & BI KSA with insufficient signal strength (composite score 0.406) to justify inclusion for the Data and AI Strategy Consultant. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain task KSA be expected in real-world Data and AI Strategy Consultant roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Applied Analytics & BI is not a standard competency expectation for Data and AI Strategy Consultant. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Data and AI Strategy Consultant competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.406) and edge-domain placement (Applied Analytics & BI) do not meet inclusion threshold for the Data and AI Strategy Consultant. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.174380+00:00",
+    "pipeline_version": "1.0"
+  }
+}

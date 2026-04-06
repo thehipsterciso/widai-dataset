@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0144",
+  "role_name": "VP Data Engineering",
+  "ksa_id": "DQ-K-005",
+  "ksa_text": "Knowledge of root cause analysis methods for data quality failures, including source system analysis, data transformation logic review, process failure identification, and remediation strategy development.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.42307250608272506,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40549639121940007,
+        "cross_encoder_sts": 0.434831605562579,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32726915297092285,
+        "jaccard": null,
+        "top_element_id": "1000A",
+        "top_element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.41867987012987007,
+        "cross_encoder_sts": 0.449754081632653,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.335815306122449,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-008",
+        "top_element_label": "Analysis and insight"
+      },
+      "eu_ai_act": {
+        "composite": 0.4025355555555556,
+        "cross_encoder_sts": 0.43034222222222224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3283844444444445,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.42307250608272506,
+        "cross_encoder_sts": 0.4532294403892944,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34265401459854017,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39866451612903225,
+        "cross_encoder_sts": 0.43890322580645164,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2913612903225806,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4131597402597403,
+        "cross_encoder_sts": 0.4475857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32135714285714284,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0498",
+        "element_label": "Knowledge of operational planning processes",
+        "score": 0.42307250608272506
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-008",
+        "element_label": "Analysis and insight",
+        "score": 0.41867987012987007
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.4131597402597403
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000A",
+        "element_label": "Ensure design and development activities are properly documented (providing a functional description of implementation) and updated as necessary.",
+        "score": 0.40549639121940007
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.4025355555555556
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Data Quality KSA with insufficient signal strength (composite score 0.423) to justify inclusion for the VP Data Engineering. Without stronger framework alignment, this knowledge KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": "This Knowledge KSA was excluded as an edge case, yet it has a composite score of 0.423 (moderate signal). Knowledge-dimension KSAs represent conceptual awareness rather than execution; exclusion may be too aggressive.",
+    "rebuttal": "Edge-domain Knowledge KSAs require more than moderate signal to justify inclusion; the role's scope does not regularly engage with Data Quality. Exclusion upheld.",
+    "ruling": "Upheld: edge-domain exclusion maintained. Data Quality is not sufficiently central to the VP Data Engineering to warrant inclusion at this signal level."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain knowledge KSA be expected in real-world VP Data Engineering roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Data Quality is not a standard competency expectation for VP Data Engineering. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the VP Data Engineering competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.423) and edge-domain placement (Data Quality) do not meet inclusion threshold for the VP Data Engineering. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.331424+00:00",
+    "pipeline_version": "1.0"
+  }
+}

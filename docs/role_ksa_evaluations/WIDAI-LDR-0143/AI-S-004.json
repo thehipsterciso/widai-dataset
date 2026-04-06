@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0143",
+  "role_name": "Data and AI Strategy Consultant",
+  "ksa_id": "AI-S-004",
+  "ksa_text": "Skill in communicating model findings and limitations to non-technical business stakeholders in terms of business impact rather than technical metrics.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.4086375921375921,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.388855744949495,
+        "cross_encoder_sts": 0.4073638888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3395006944444445,
+        "jaccard": null,
+        "top_element_id": "187",
+        "top_element_label": "Skill in developing data models."
+      },
+      "ddat": {
+        "composite": 0.4086375921375921,
+        "cross_encoder_sts": 0.4446486486486486,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3126081081081081,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-021",
+        "top_element_label": "Business modelling"
+      },
+      "eu_ai_act": {
+        "composite": 0.36648311688311686,
+        "cross_encoder_sts": 0.40392857142857136,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26662857142857144,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-042",
+        "top_element_label": "Obligations for providers of general-purpose AI models"
+      },
+      "nice": {
+        "composite": 0.4054573426573426,
+        "cross_encoder_sts": 0.42515384615384616,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3529333333333333,
+        "jaccard": null,
+        "top_element_id": "S0029",
+        "top_element_label": "Skill in developing data models"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38514326018808775,
+        "cross_encoder_sts": 0.4119758620689655,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3135896551724138,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.2",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.3761909090909091,
+        "cross_encoder_sts": 0.42279999999999995,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2519,
+        "jaccard": null,
+        "top_element_id": "2.A.1.d",
+        "top_element_label": "Speaking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-021",
+        "element_label": "Business modelling",
+        "score": 0.4086375921375921
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0029",
+        "element_label": "Skill in developing data models",
+        "score": 0.4054573426573426
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "187",
+        "element_label": "Skill in developing data models.",
+        "score": 0.388855744949495
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.2",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.38514326018808775
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.d",
+        "element_label": "Speaking",
+        "score": 0.3761909090909091
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain AI/ML Engineering KSA with insufficient signal strength (composite score 0.409) to justify inclusion for the Data and AI Strategy Consultant. Without stronger framework alignment, this skill KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain skill KSA be expected in real-world Data and AI Strategy Consultant roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm AI/ML Engineering is not a standard competency expectation for Data and AI Strategy Consultant. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Data and AI Strategy Consultant competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.409) and edge-domain placement (AI/ML Engineering) do not meet inclusion threshold for the Data and AI Strategy Consultant. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.170708+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0143",
+  "role_name": "Data and AI Strategy Consultant",
+  "ksa_id": "RM-T-004",
+  "ksa_text": "Execute AI system testing activities including functional testing, integration testing, automated testing, and acceptance testing to validate system performance.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5221202597402598,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4172154584360005,
+        "cross_encoder_sts": 0.43052054208273893,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3817352353780314,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.40951325757575757,
+        "cross_encoder_sts": 0.4448666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3152375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-020",
+        "top_element_label": "Business architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.5093907550077041,
+        "cross_encoder_sts": 0.4878152542372881,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5669254237288135,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4093771147771148,
+        "cross_encoder_sts": 0.429638223938224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35534749034749036,
+        "jaccard": null,
+        "top_element_id": "K1007",
+        "top_element_label": "Knowledge of intelligence requirements tasking systems and software"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5221202597402598,
+        "cross_encoder_sts": 0.5098642857142858,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5548028571428572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4059727272727272,
+        "cross_encoder_sts": 0.4245571428571428,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3564142857142857,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5221202597402598
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.5093907550077041
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.4172154584360005
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-020",
+        "element_label": "Business architecture",
+        "score": 0.40951325757575757
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1007",
+        "element_label": "Knowledge of intelligence requirements tasking systems and software",
+        "score": 0.4093771147771148
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Risk Management is a primary or secondary domain for the Data and AI Strategy Consultant. This task KSA is within scope for the role's expected competency profile and seniority level (senior specialist)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Risk Management), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.522). External reviewers may question whether this specific task KSA is sufficiently distinctive for the Data and AI Strategy Consultant versus adjacent roles.",
+    "evidence": "ISO 31000, NIST RMF, and enterprise risk management frameworks confirm risk management competencies for senior data leadership.",
+    "ruling": "Upheld: moderate framework signal is consistent with Risk Management appearing in job postings and role definition literature for Data and AI Strategy Consultant."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Risk Management task KSA is within scope for the Data and AI Strategy Consultant at the senior specialist tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.110107+00:00",
+    "pipeline_version": "1.0"
+  }
+}

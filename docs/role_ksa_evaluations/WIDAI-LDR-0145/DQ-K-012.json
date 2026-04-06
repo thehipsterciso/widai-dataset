@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0145",
+  "role_name": "VP Data Science",
+  "ksa_id": "DQ-K-012",
+  "ksa_text": "Knowledge of data lineage concepts and documentation methods, including end-to-end lineage from source to consumption, transformation-level lineage, lineage visualization, and impact analysis use cases for data change management.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4019124143444496,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4013145596590909,
+        "cross_encoder_sts": 0.44369869791666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2882901909722222,
+        "jaccard": null,
+        "top_element_id": "100",
+        "top_element_label": "Knowledge of Privacy Impact Assessments."
+      },
+      "ddat": {
+        "composite": 0.4017545454545454,
+        "cross_encoder_sts": 0.44536,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2854733333333333,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.3747962703962704,
+        "cross_encoder_sts": 0.427025641025641,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2355179487179487,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4019124143444496,
+        "cross_encoder_sts": 0.4490172110552764,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27629962311557793,
+        "jaccard": null,
+        "top_element_id": "K1096",
+        "top_element_label": "Knowledge of data analysis tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4015021103896104,
+        "cross_encoder_sts": 0.4687946428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22205535714285715,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3709258741258741,
+        "cross_encoder_sts": 0.41980384615384614,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2405846153846154,
+        "jaccard": null,
+        "top_element_id": "2.A.1.f",
+        "top_element_label": "Science"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K1096",
+        "element_label": "Knowledge of data analysis tools and techniques",
+        "score": 0.4019124143444496
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4017545454545454
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4015021103896104
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "100",
+        "element_label": "Knowledge of Privacy Impact Assessments.",
+        "score": 0.4013145596590909
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.3747962703962704
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Data Quality falls outside the primary competency scope of the VP Data Science. This knowledge KSA does not align with the role's core responsibilities and is excluded."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Is Data Quality truly out-of-scope for the VP Data Science? Emerging role definitions may include broader competency expectations.",
+    "evidence": "Current job market analysis and framework definitions (DCWF, DDAT, NICE) do not list Data Quality as a core or recommended competency for the VP Data Science. Role scope exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence confirms Data Quality falls outside the established competency profile for the VP Data Science. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Data Quality is outside the competency scope of the VP Data Science. All evaluation passes consistently support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:19.525789+00:00",
+    "pipeline_version": "1.0"
+  }
+}
