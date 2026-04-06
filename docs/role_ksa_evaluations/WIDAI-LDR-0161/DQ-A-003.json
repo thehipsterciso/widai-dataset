@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0161",
+  "role_name": "Director of Data Products",
+  "ksa_id": "DQ-A-003",
+  "ksa_text": "Ability to design effective data structures, models, and schemas that balance organizational needs, technical constraints, and long-term maintainability.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.44184184952978056,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3780306707239762,
+        "cross_encoder_sts": 0.42204463040446305,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26066011157601116,
+        "jaccard": null,
+        "top_element_id": "1073",
+        "top_element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+      },
+      "ddat": {
+        "composite": 0.44184184952978056,
+        "cross_encoder_sts": 0.4918896551724138,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3083810344827586,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.3902105263157895,
+        "cross_encoder_sts": 0.4356368421052632,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2690736842105263,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.37613187571921747,
+        "cross_encoder_sts": 0.41926227848101266,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2611174683544304,
+        "jaccard": null,
+        "top_element_id": "K0702",
+        "top_element_label": "Knowledge of data warehousing principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38597337662337666,
+        "cross_encoder_sts": 0.44604642857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2257785714285714,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.403227807486631,
+        "cross_encoder_sts": 0.44988823529411764,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2788,
+        "jaccard": null,
+        "top_element_id": "2.A.2.d",
+        "top_element_label": "Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.44184184952978056
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.d",
+        "element_label": "Monitoring",
+        "score": 0.403227807486631
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.3902105263157895
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.38597337662337666
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1073",
+        "element_label": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools.",
+        "score": 0.3780306707239762
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Data Quality KSA with insufficient signal strength (composite score 0.442) to justify inclusion for the Director of Data Products. Without stronger framework alignment, this ability KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain ability KSA be expected in real-world Director of Data Products roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Data Quality is not a standard competency expectation for Director of Data Products. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of Data Products competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.442) and edge-domain placement (Data Quality) do not meet inclusion threshold for the Director of Data Products. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.039819+00:00",
+    "pipeline_version": "1.0"
+  }
+}

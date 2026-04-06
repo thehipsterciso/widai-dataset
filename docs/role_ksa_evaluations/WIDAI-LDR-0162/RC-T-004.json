@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0162",
+  "role_name": "Director of Master Data Management",
+  "ksa_id": "RC-T-004",
+  "ksa_text": "Prepare, validate, and coordinate regulatory data submissions, managing data collection workflows, verification processes, and submission execution while maintaining accuracy documentation and reporting.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4438131661442007,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41663060701054433,
+        "cross_encoder_sts": 0.4262244514106583,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39104702194357366,
+        "jaccard": null,
+        "top_element_id": "1032",
+        "top_element_label": "Continuously validate the organization against policies/guidelines/procedures/regulations/laws to ensure compliance."
+      },
+      "ddat": {
+        "composite": 0.4424085561497326,
+        "cross_encoder_sts": 0.4696823529411765,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.369678431372549,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4438131661442007,
+        "cross_encoder_sts": 0.45673103448275865,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4093655172413793,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41316643796455116,
+        "cross_encoder_sts": 0.4284937106918239,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3722937106918239,
+        "jaccard": null,
+        "top_element_id": "K0699",
+        "top_element_label": "Knowledge of data administration policies and procedures"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39294195804195803,
+        "cross_encoder_sts": 0.42235769230769227,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3145,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4377527272727273,
+        "cross_encoder_sts": 0.44792,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41064,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.4438131661442007
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.4424085561497326
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.2",
+        "element_label": "Processing Information",
+        "score": 0.4377527272727273
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1032",
+        "element_label": "Continuously validate the organization against policies/guidelines/procedures/regulations/laws to ensure compliance.",
+        "score": 0.41663060701054433
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0699",
+        "element_label": "Knowledge of data administration policies and procedures",
+        "score": 0.41316643796455116
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Edge-domain Regulatory Compliance KSA with insufficient signal strength (composite score 0.444) to justify inclusion for the Director of Master Data Management. Without stronger framework alignment, this task KSA does not meet the inclusion threshold."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could this edge-domain task KSA be expected in real-world Director of Master Data Management roles, even if not core to the role definition?",
+    "evidence": "Job market analysis and framework role definitions confirm Regulatory Compliance is not a standard competency expectation for Director of Master Data Management. Edge-case exclusion is consistent with external evidence.",
+    "ruling": "Upheld: external evidence does not support including this edge-domain KSA in the Director of Master Data Management competency profile. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "low",
+  "decision_rationale": "Insufficient signal (score 0.444) and edge-domain placement (Regulatory Compliance) do not meet inclusion threshold for the Director of Master Data Management. All passes support exclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.194990+00:00",
+    "pipeline_version": "1.0"
+  }
+}

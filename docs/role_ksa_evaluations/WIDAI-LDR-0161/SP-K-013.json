@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0161",
+  "role_name": "Director of Data Products",
+  "ksa_id": "SP-K-013",
+  "ksa_text": "Knowledge of AI model supply chain security and risk management, including third-party component risks, open-source model adoption risks, fine-tuning pipeline integrity, dataset provenance verification, and model registry controls.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4594015151515151,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41410779780564266,
+        "cross_encoder_sts": 0.44055387931034484,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3435849137931034,
+        "jaccard": null,
+        "top_element_id": "1000",
+        "top_element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary."
+      },
+      "ddat": {
+        "composite": 0.41147171717171716,
+        "cross_encoder_sts": 0.45947777777777776,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28345555555555557,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4594015151515151,
+        "cross_encoder_sts": 0.4937833333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3677166666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-016",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.412105816226784,
+        "cross_encoder_sts": 0.4432174731182796,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3291413978494624,
+        "jaccard": null,
+        "top_element_id": "K0638",
+        "top_element_label": "Knowledge of security awareness programs"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4245016528925619,
+        "cross_encoder_sts": 0.44700909090909086,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36448181818181813,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.1",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.3739878787878788,
+        "cross_encoder_sts": 0.41163333333333335,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2736,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-016",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.4594015151515151
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-6.1",
+        "element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "score": 0.4245016528925619
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000",
+        "element_label": "Ensure security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary.",
+        "score": 0.41410779780564266
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0638",
+        "element_label": "Knowledge of security awareness programs",
+        "score": 0.412105816226784
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.41147171717171716
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "too_junior",
+    "preliminary_decision": "exclude",
+    "rationale": "This knowledge KSA describes hands-on technical execution that falls below the expected seniority threshold for a Director of Data Products (director tier). Execution-level work in Security & Platform Strategy is not expected at this level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": "Seniority fit was marked 'too_junior', but the dimension is Knowledge \u2014 awareness-level KSAs are typically appropriate across seniority tiers.",
+    "rebuttal": "Even Knowledge-level KSAs that describe specific low-level technical details (e.g., implementation internals) are not expected at the director level. Exclusion upheld.",
+    "ruling": "Exclusion upheld: Knowledge KSAs with predominantly execution-oriented framing are appropriately excluded at the director tier."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could real-world Director of Data Products practitioners be expected to demonstrate this knowledge KSA in practice, despite the seniority gap?",
+    "evidence": "NewVantage Partners CDO Survey, Wavestone CDAIO Report, and Gartner leadership effectiveness research confirm that director-tier roles delegate execution responsibilities to appropriate levels rather than owning them directly.",
+    "ruling": "Upheld: seniority-based exclusion is consistent with external evidence on director-tier role expectations. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Seniority mismatch: this knowledge KSA is below the expected level for the Director of Data Products (director tier). Consistently excluded.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.030396+00:00",
+    "pipeline_version": "1.0"
+  }
+}

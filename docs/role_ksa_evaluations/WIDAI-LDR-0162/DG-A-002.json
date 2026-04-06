@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0162",
+  "role_name": "Director of Master Data Management",
+  "ksa_id": "DG-A-002",
+  "ksa_text": "Ability to develop and implement data and AI governance policies and procedures that operationalize organizational governance frameworks.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DG",
+  "pass_1_scoring": {
+    "composite_score": 0.47138347107438017,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40184230055658626,
+        "cross_encoder_sts": 0.41984285714285713,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35384081632653064,
+        "jaccard": null,
+        "top_element_id": "2064",
+        "top_element_label": "Assist in the development and refinement of priority information requirements."
+      },
+      "ddat": {
+        "composite": 0.47138347107438017,
+        "cross_encoder_sts": 0.4868636363636364,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4301030303030303,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4236181818181818,
+        "cross_encoder_sts": 0.3742,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5554,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3979876033057851,
+        "cross_encoder_sts": 0.4199818181818182,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3393363636363636,
+        "jaccard": null,
+        "top_element_id": "S0721",
+        "top_element_label": "Skill in prioritizing information"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3954409090909091,
+        "cross_encoder_sts": 0.421875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32495,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-1.2",
+        "top_element_label": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+      },
+      "onet": {
+        "composite": 0.44416363636363637,
+        "cross_encoder_sts": 0.4776,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.355,
+        "jaccard": null,
+        "top_element_id": "4.A.4.c.3",
+        "top_element_label": "Monitoring and Controlling Resources"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.47138347107438017
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.4.c.3",
+        "element_label": "Monitoring and Controlling Resources",
+        "score": 0.44416363636363637
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4236181818181818
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2064",
+        "element_label": "Assist in the development and refinement of priority information requirements.",
+        "score": 0.40184230055658626
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0721",
+        "element_label": "Skill in prioritizing information",
+        "score": 0.3979876033057851
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Data Governance is a primary or secondary domain for the Director of Master Data Management. This ability KSA is within scope for the role's expected competency profile and seniority level (director)."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope (Data Governance), seniority fit, and signal level are internally consistent with inclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Pass 1 signal is moderate (composite 0.471). External reviewers may question whether this specific ability KSA is sufficiently distinctive for the Director of Master Data Management versus adjacent roles.",
+    "evidence": "DAMA-DMBOK, EDM Council, and enterprise CDO job descriptions universally include data governance competencies for data leadership roles.",
+    "ruling": "Upheld: moderate framework signal is consistent with Data Governance appearing in job postings and role definition literature for Director of Master Data Management."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Data Governance ability KSA is within scope for the Director of Master Data Management at the director tier. Seniority fit is appropriate. All three evaluation passes support inclusion.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.182976+00:00",
+    "pipeline_version": "1.0"
+  }
+}

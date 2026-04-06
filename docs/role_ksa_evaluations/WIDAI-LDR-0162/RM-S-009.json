@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-LDR-0162",
+  "role_name": "Director of Master Data Management",
+  "ksa_id": "RM-S-009",
+  "ksa_text": "Skill in AI model development lifecycle governance, including documentation of design decisions, training methodologies, hyperparameter choices, and model versioning for risk management audits.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "too_junior",
+    "preliminary_decision": "exclude",
+    "rationale": "This skill KSA describes hands-on technical execution that falls below the expected seniority threshold for a Director of Master Data Management (director tier). Execution-level work in Risk Management is not expected at this level."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No internal inconsistency identified. Domain scope, seniority fit, and signal level are internally consistent with exclusion."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Could real-world Director of Master Data Management practitioners be expected to demonstrate this skill KSA in practice, despite the seniority gap?",
+    "evidence": "NewVantage Partners CDO Survey, Wavestone CDAIO Report, and Gartner leadership effectiveness research confirm that director-tier roles delegate execution responsibilities to appropriate levels rather than owning them directly.",
+    "ruling": "Upheld: seniority-based exclusion is consistent with external evidence on director-tier role expectations. Exclusion maintained."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Seniority mismatch: this skill KSA is below the expected level for the Director of Master Data Management (director tier). Consistently excluded.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:40:22.249267+00:00",
+    "pipeline_version": "1.0"
+  }
+}
