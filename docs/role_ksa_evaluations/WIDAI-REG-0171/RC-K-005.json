@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0171",
+  "role_name": "AI Provider Compliance Lead",
+  "ksa_id": "RC-K-005",
+  "ksa_text": "Knowledge of lawful bases for data processing under applicable regulations, including consent requirements, contractual necessity, legal obligations, vital interests, public task authority, and legitimate interest balancing tests.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.4551818181818182,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41839361405465697,
+        "cross_encoder_sts": 0.4262794478527607,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.39736472392638034,
+        "jaccard": null,
+        "top_element_id": "1005",
+        "top_element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
+      },
+      "ddat": {
+        "composite": 0.417805996131528,
+        "cross_encoder_sts": 0.44489999999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34555531914893617,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.41489805194805196,
+        "cross_encoder_sts": 0.4074642857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4347214285714286,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-008",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.41987420033670037,
+        "cross_encoder_sts": 0.4318574074074074,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.38791898148148146,
+        "jaccard": null,
+        "top_element_id": "K0637",
+        "top_element_label": "Knowledge of data repositories"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.39766298701298697,
+        "cross_encoder_sts": 0.4205857142857143,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33653571428571427,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4551818181818182,
+        "cross_encoder_sts": 0.452025,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4636,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.4551818181818182
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0637",
+        "element_label": "Knowledge of data repositories",
+        "score": 0.41987420033670037
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1005",
+        "element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes).",
+        "score": 0.41839361405465697
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.417805996131528
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-008",
+        "element_label": "Data and data governance",
+        "score": 0.41489805194805196
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "in_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "Included: knowledge maps directly to AI Provider Compliance Lead scope \u2014 regulatory/compliance signals detected (\"regulat  :ory|ion|ions|e|ed|ing)\", \"legal   :require|oblig|framework|standard|basis|duty|duties)\", \"obligation  :s\"). Composite score is moderate-to-strong (0.4552). Domain RC (affinity 0.92) aligns with primary REG competency areas. Seniority is appropriate for IC-lead-to-manager band: the KSA describes regulatory interpretation, compliance program work, or governance oversight."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "include"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External check: limited external signal (1 match(es)) in AI compliance role descriptions or certification curricula. Would an AI Provider Compliance Lead self-report this as a required competency?",
+    "evidence": "Challenge answered: competency is implied by AI Provider Compliance Lead scope (domain affinity 0.92, 3 REG signal(s)). Some regulatory competencies appear implicitly in role descriptions without explicit vocabulary matches.",
+    "ruling": "include"
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Included: knowledge maps directly to AI Provider Compliance Lead scope \u2014 regulatory/compliance signals detected (\"regulat  :ory|ion|ions|e|ed|ing)\", \"legal   :require|oblig|framework|standard|basis|duty|duties)\", \"obligation  :s\"). Composite score is moderate-to-strong (0.4552). Domain RC (affinity 0.92) aligns with primary REG competency areas. Seniority is appropriate for IC-lead-to-manager band: the KSA describes regulatory interpretation, compliance program work, or governance oversight.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:22.958340+00:00",
+    "pipeline_version": "1.0"
+  }
+}

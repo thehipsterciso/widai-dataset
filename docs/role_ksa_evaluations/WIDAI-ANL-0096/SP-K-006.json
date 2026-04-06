@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0096",
+  "role_name": "Financial Risk Specialist",
+  "ksa_id": "SP-K-006",
+  "ksa_text": "Knowledge of the regulatory and compliance landscape governing enterprise data and AI systems, including data protection law, AI-specific regulation, sector-specific obligations, cross-jurisdictional requirements, and regulatory authority oversight mechanisms.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.5054996212121212,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.43358704545454546,
+        "cross_encoder_sts": 0.44047375000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41522249999999994,
+        "jaccard": null,
+        "top_element_id": "7036",
+        "top_element_label": "Knowledge of laws, regulations, and policies related to AI, data security/privacy, and use of publicly procured data for government."
+      },
+      "ddat": {
+        "composite": 0.41650363636363635,
+        "cross_encoder_sts": 0.4406333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35215777777777774,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-035",
+        "top_element_label": "Community collaboration"
+      },
+      "eu_ai_act": {
+        "composite": 0.5054996212121212,
+        "cross_encoder_sts": 0.4927854166666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5394041666666667,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-003",
+        "top_element_label": "Human oversight"
+      },
+      "nice": {
+        "composite": 0.4279764389456697,
+        "cross_encoder_sts": 0.4371633136094675,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4034781065088757,
+        "jaccard": null,
+        "top_element_id": "K1260",
+        "top_element_label": "Knowledge of intelligence laws and regulations"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4663742946708464,
+        "cross_encoder_sts": 0.46887586206896553,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.45970344827586207,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.42022363636363635,
+        "cross_encoder_sts": 0.43757999999999997,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37394,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-003",
+        "element_label": "Human oversight",
+        "score": 0.5054996212121212
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4663742946708464
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "7036",
+        "element_label": "Knowledge of laws, regulations, and policies related to AI, data security/privacy, and use of publicly procured data for government.",
+        "score": 0.43358704545454546
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1260",
+        "element_label": "Knowledge of intelligence laws and regulations",
+        "score": 0.4279764389456697
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.42022363636363635
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-K-006 (SP, Knowledge) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.5055 is insufficient to establish relevance to financial risk analytics, quantitative risk modeling, and data-driven risk assessment at IC-to-senior-IC level. Framework signals (eu_ai_act=0.505, nist_ai_rmf=0.466, dcwf=0.434) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.5055 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does SP-domain KSA SP-K-006 (composite 0.5055) appear in published data analyst or BI role profiles?",
+    "evidence": "SP domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per NIST CSF, ISO 27001; security competencies in IC ANL scope limited to data access controls awareness, not security architecture. Composite 0.5055 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms SP domain KSA at composite 0.5055 is not a standard requirement for Financial Risk Specialist at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.5055, domain SP, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.710445+00:00",
+    "pipeline_version": "1.0"
+  }
+}

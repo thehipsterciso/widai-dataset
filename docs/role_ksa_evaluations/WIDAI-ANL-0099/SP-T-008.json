@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0099",
+  "role_name": "Digital Evaluator",
+  "ksa_id": "SP-T-008",
+  "ksa_text": "Implement and maintain security measures to mitigate or remediate identified vulnerabilities and security risks.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.44029999999999997,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4332424654150198,
+        "cross_encoder_sts": 0.46634918478260873,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34495788043478265,
+        "jaccard": null,
+        "top_element_id": "1018",
+        "top_element_label": "Ensure all acquisitions, procurements, and outsourcing efforts address information security requirements consistent with organization goals."
+      },
+      "ddat": {
+        "composite": 0.434538961038961,
+        "cross_encoder_sts": 0.4702095238095238,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3394174603174603,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4060115151515152,
+        "cross_encoder_sts": 0.43981333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31587333333333334,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4320288723471651,
+        "cross_encoder_sts": 0.4685317073170732,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3346879790940766,
+        "jaccard": null,
+        "top_element_id": "T1318",
+        "top_element_label": "Integrate security requirements into application design elements"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.44029999999999997,
+        "cross_encoder_sts": 0.48854,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31166,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4104068181818182,
+        "cross_encoder_sts": 0.4377,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.337625,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.44029999999999997
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.434538961038961
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1018",
+        "element_label": "Ensure all acquisitions, procurements, and outsourcing efforts address information security requirements consistent with organization goals.",
+        "score": 0.4332424654150198
+      },
+      {
+        "framework": "nice",
+        "element_id": "T1318",
+        "element_label": "Integrate security requirements into application design elements",
+        "score": 0.4320288723471651
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.4104068181818182
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-T-008 (SP, Task) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4403 is insufficient to establish relevance to digital program evaluation, performance analytics, and evidence-based assessment at IC-to-senior-IC level. Framework signals (nist_ai_rmf=0.440, ddat=0.435, dcwf=0.433) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4403 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does SP-domain KSA SP-T-008 (composite 0.4403) appear in published data analyst or BI role profiles?",
+    "evidence": "SP domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per NIST CSF, ISO 27001; security competencies in IC ANL scope limited to data access controls awareness, not security architecture. Composite 0.4403 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms SP domain KSA at composite 0.4403 is not a standard requirement for Digital Evaluator at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4403, domain SP, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:45.734747+00:00",
+    "pipeline_version": "1.0"
+  }
+}

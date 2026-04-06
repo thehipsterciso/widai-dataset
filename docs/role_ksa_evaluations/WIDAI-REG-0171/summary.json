@@ -1,0 +1,125 @@
+{
+  "schema_version": "2.0",
+  "pipeline_version": "1.0",
+  "role_id": "WIDAI-REG-0171",
+  "role_name": "AI Provider Compliance Lead",
+  "evaluated_at": "2026-04-06T18:17:23.372131+00:00",
+  "total_ksas": 1069,
+  "include_count": 286,
+  "exclude_count": 783,
+  "inclusion_rate": 0.2675,
+  "calibration_status": "OUT_OF_RANGE",
+  "calibration_note": "286 included KSAs \u2014 outside 120\u2013220 REG calibration target. Review thresholds.",
+  "confidence_distribution": {
+    "high": 1070,
+    "medium": 0,
+    "low": 0
+  },
+  "adversarial_overturn_distribution": {
+    "zero_overturns": 1070,
+    "one_overturn": 0,
+    "two_overturns": 0
+  },
+  "domain_breakdown": {
+    "TF": {
+      "included": 0,
+      "excluded": 87,
+      "total": 87,
+      "inclusion_rate": 0.0
+    },
+    "DA": {
+      "included": 0,
+      "excluded": 93,
+      "total": 93,
+      "inclusion_rate": 0.0
+    },
+    "DQ": {
+      "included": 2,
+      "excluded": 80,
+      "total": 82,
+      "inclusion_rate": 0.0244
+    },
+    "DG": {
+      "included": 48,
+      "excluded": 44,
+      "total": 92,
+      "inclusion_rate": 0.5217
+    },
+    "SP": {
+      "included": 19,
+      "excluded": 65,
+      "total": 84,
+      "inclusion_rate": 0.2262
+    },
+    "AI": {
+      "included": 1,
+      "excluded": 102,
+      "total": 103,
+      "inclusion_rate": 0.0097
+    },
+    "AG": {
+      "included": 70,
+      "excluded": 37,
+      "total": 107,
+      "inclusion_rate": 0.6542
+    },
+    "RC": {
+      "included": 73,
+      "excluded": 1,
+      "total": 74,
+      "inclusion_rate": 0.9865
+    },
+    "RM": {
+      "included": 28,
+      "excluded": 73,
+      "total": 101,
+      "inclusion_rate": 0.2772
+    },
+    "LS": {
+      "included": 42,
+      "excluded": 47,
+      "total": 89,
+      "inclusion_rate": 0.4719
+    },
+    "OP": {
+      "included": 3,
+      "excluded": 66,
+      "total": 69,
+      "inclusion_rate": 0.0435
+    },
+    "AB": {
+      "included": 0,
+      "excluded": 88,
+      "total": 88,
+      "inclusion_rate": 0.0
+    }
+  },
+  "dimension_breakdown": {
+    "Skill": {
+      "include": 88,
+      "exclude": 240
+    },
+    "Task": {
+      "include": 68,
+      "exclude": 179
+    },
+    "Knowledge": {
+      "include": 79,
+      "exclude": 202
+    },
+    "Ability": {
+      "include": 51,
+      "exclude": 162
+    }
+  },
+  "score_analysis": {
+    "avg_composite_included": 0.2868,
+    "avg_composite_excluded": 0.1812
+  },
+  "adversarial_challenge_counts": {
+    "pass_3_challenges": 0,
+    "pass_3_overturns": 0,
+    "pass_4_challenges": 79,
+    "pass_4_overturns": 0
+  }
+}

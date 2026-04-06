@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0099",
+  "role_name": "Digital Evaluator",
+  "ksa_id": "RM-K-004",
+  "ksa_text": "Knowledge of AI testing methodologies including adversarial testing, red-teaming, edge case construction, distributional shift testing, and structured failure mode analysis.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5007737662337662,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4049381178287732,
+        "cross_encoder_sts": 0.44705230582524275,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29263361650485437,
+        "jaccard": null,
+        "top_element_id": "7075",
+        "top_element_label": "Skill in testing and evaluating machine learning algorithms and/or AI solutions."
+      },
+      "ddat": {
+        "composite": 0.3672165656565657,
+        "cross_encoder_sts": 0.4174711111111111,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23320444444444444,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-089",
+        "top_element_label": "Financial decision making for technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.4697111285266458,
+        "cross_encoder_sts": 0.49730689655172416,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3961224137931035,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.40623406986531985,
+        "cross_encoder_sts": 0.45448912037037037,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2775539351851852,
+        "jaccard": null,
+        "top_element_id": "K1072",
+        "top_element_label": "Knowledge of automated security control testing tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5007737662337662,
+        "cross_encoder_sts": 0.5345642857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4106657142857143,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.35971212121212126,
+        "cross_encoder_sts": 0.4029666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24436666666666665,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5007737662337662
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.4697111285266458
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1072",
+        "element_label": "Knowledge of automated security control testing tools and techniques",
+        "score": 0.40623406986531985
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "7075",
+        "element_label": "Skill in testing and evaluating machine learning algorithms and/or AI solutions.",
+        "score": 0.4049381178287732
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-089",
+        "element_label": "Financial decision making for technology",
+        "score": 0.3672165656565657
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RM-K-004 (RM, Knowledge) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.5008 is insufficient to establish relevance to digital program evaluation, performance analytics, and evidence-based assessment at IC-to-senior-IC level. Framework signals (nist_ai_rmf=0.501, eu_ai_act=0.470, nice=0.406) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.5008 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does RM-domain KSA RM-K-004 (composite 0.5008) appear in published data analyst or BI role profiles?",
+    "evidence": "RM domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per COSO ERM framework; risk competencies in IC ANL scope limited to data risk identification, not enterprise risk management. Composite 0.5008 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms RM domain KSA at composite 0.5008 is not a standard requirement for Digital Evaluator at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.5008, domain RM, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:45.709723+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0171",
+  "role_name": "AI Provider Compliance Lead",
+  "ksa_id": "AI-K-010",
+  "ksa_text": "Knowledge of agentic AI design patterns, including tool use, multi-agent coordination, memory systems, and the safety and reliability challenges specific to agentic architectures.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.49449363636363636,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4067374802767326,
+        "cross_encoder_sts": 0.4397407209612817,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31872883845126837,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.381100845665962,
+        "cross_encoder_sts": 0.43800697674418604,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22935116279069767,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.4777728896103896,
+        "cross_encoder_sts": 0.47809285714285715,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47691964285714283,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.40408917289606944,
+        "cross_encoder_sts": 0.4397519893899204,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30898832891246686,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.49449363636363636,
+        "cross_encoder_sts": 0.5020785714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4742671428571429,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3818936363636363,
+        "cross_encoder_sts": 0.41911,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28264999999999996,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.49449363636363636
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.4777728896103896
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.4067374802767326
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40408917289606944
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.3818936363636363
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low REG affinity (0.16) with insufficient regulatory signals. KSA text \u2014 'Knowledge of agentic AI design patterns, including tool use, multi-agent coordination, memory system...' \u2014 describes competencies outside AI Provider Compliance Lead scope. Composite score is moderate-to-strong (0.4945). REG roles interpret and apply technical concepts; they do not implement them."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions or regulatory certification curricula. A gap here would not be noticeable to a working AI Provider Compliance Lead focused on regulatory interpretation, compliance program management, and AI Act obligations.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: AI & ML Infrastructure domain has low REG affinity (0.16) with insufficient regulatory signals. KSA text \u2014 'Knowledge of agentic AI design patterns, including tool use, multi-agent coordination, memory system...' \u2014 describes competencies outside AI Provider Compliance Lead scope. Composite score is moderate-to-strong (0.4945). REG roles interpret and apply technical concepts; they do not implement them.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:22.922939+00:00",
+    "pipeline_version": "1.0"
+  }
+}

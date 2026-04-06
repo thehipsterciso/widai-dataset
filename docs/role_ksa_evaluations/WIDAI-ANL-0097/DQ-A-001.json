@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0097",
+  "role_name": "Survey Researcher",
+  "ksa_id": "DQ-A-001",
+  "ksa_text": "Ability to develop and communicate data quality investment strategies that prioritize remediation efforts based on business impact and organizational decision-making needs.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.42554720893141945,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.386173768358431,
+        "cross_encoder_sts": 0.4273597137014315,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2763445807770961,
+        "jaccard": null,
+        "top_element_id": "5874",
+        "top_element_label": "Develop a data management strategy that helps to prioritize investments and resource allocations (e.g., data analytics, data infrastructure)."
+      },
+      "ddat": {
+        "composite": 0.42554720893141945,
+        "cross_encoder_sts": 0.46668333333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31585087719298244,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.3845909090909091,
+        "cross_encoder_sts": 0.40190909090909094,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33840909090909094,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-028",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.3796236179049377,
+        "cross_encoder_sts": 0.4364257868020304,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22815116751269038,
+        "jaccard": null,
+        "top_element_id": "K0498",
+        "top_element_label": "Knowledge of operational planning processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4000985257985258,
+        "cross_encoder_sts": 0.43283243243243247,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3128081081081081,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3907758741258741,
+        "cross_encoder_sts": 0.4407846153846154,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2574192307692308,
+        "jaccard": null,
+        "top_element_id": "2.A.1.e",
+        "top_element_label": "Mathematics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.42554720893141945
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.3",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4000985257985258
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.1.e",
+        "element_label": "Mathematics",
+        "score": 0.3907758741258741
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "5874",
+        "element_label": "Develop a data management strategy that helps to prioritize investments and resource allocations (e.g., data analytics, data infrastructure).",
+        "score": 0.386173768358431
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-028",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.3845909090909091
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-A-001 (DQ, Ability) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4255 is insufficient to establish relevance to survey design, statistical analysis, and research data management at IC-to-senior-IC level. Framework signals (ddat=0.426, nist_ai_rmf=0.400, onet=0.391) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4255 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DQ-domain KSA DQ-A-001 (composite 0.4255) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4255 for DQ domain does not meet the evidentiary bar for ANL IC-level inclusion per DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles. External sources confirm this competency is not a standard expectation for Survey Researcher at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DQ domain KSA at composite 0.4255 is not a standard requirement for Survey Researcher at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4255, domain DQ, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.943101+00:00",
+    "pipeline_version": "1.0"
+  }
+}

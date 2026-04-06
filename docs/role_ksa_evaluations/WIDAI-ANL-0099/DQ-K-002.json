@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0099",
+  "role_name": "Digital Evaluator",
+  "ksa_id": "DQ-K-002",
+  "ksa_text": "Knowledge of data standardization policies and procedures, including regulatory standards (ICH E6, 21 CFR Part 11, Annex 11), industry standards (CDISC CDASH, SDTM, ADaM), and submission dataset requirements for regulatory agencies.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4053913183678532,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.401539272343285,
+        "cross_encoder_sts": 0.43742122492080254,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30585406546990496,
+        "jaccard": null,
+        "top_element_id": "1004A",
+        "top_element_label": "Knowledge of information technology (IT) acquisition/procurement requirements."
+      },
+      "ddat": {
+        "composite": 0.3854417185554172,
+        "cross_encoder_sts": 0.4313178082191781,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2631054794520548,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.39037642045454546,
+        "cross_encoder_sts": 0.4131875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.329546875,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4053913183678532,
+        "cross_encoder_sts": 0.4486963165075034,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28991132332878583,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38057712609970673,
+        "cross_encoder_sts": 0.42623870967741934,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2588129032258064,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39951900826446285,
+        "cross_encoder_sts": 0.4399545454545455,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2916909090909091,
+        "jaccard": null,
+        "top_element_id": "2.C.3.a",
+        "top_element_label": "Computers and Electronics"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4053913183678532
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1004A",
+        "element_label": "Knowledge of information technology (IT) acquisition/procurement requirements.",
+        "score": 0.401539272343285
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.a",
+        "element_label": "Computers and Electronics",
+        "score": 0.39951900826446285
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.39037642045454546
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.3854417185554172
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-K-002 (DQ, Knowledge) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4054 is insufficient to establish relevance to digital program evaluation, performance analytics, and evidence-based assessment at IC-to-senior-IC level. Framework signals (nice=0.405, dcwf=0.402, onet=0.400) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4054 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DQ-domain KSA DQ-K-002 (composite 0.4054) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4054 for DQ domain does not meet the evidentiary bar for ANL IC-level inclusion per DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles. External sources confirm this competency is not a standard expectation for Digital Evaluator at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DQ domain KSA at composite 0.4054 is not a standard requirement for Digital Evaluator at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4054, domain DQ, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:45.781812+00:00",
+    "pipeline_version": "1.0"
+  }
+}

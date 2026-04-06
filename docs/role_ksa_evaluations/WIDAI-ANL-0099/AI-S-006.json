@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0099",
+  "role_name": "Digital Evaluator",
+  "ksa_id": "AI-S-006",
+  "ksa_text": "Skill in implementing automated ML retraining pipelines triggered by performance degradation signals or data distribution shifts.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.424080343980344,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4111850984067479,
+        "cross_encoder_sts": 0.446739175257732,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31637422680412375,
+        "jaccard": null,
+        "top_element_id": "174",
+        "top_element_label": "Skill in creating programs that validate and process multiple inputs including command line arguments, environmental variables, and input streams."
+      },
+      "ddat": {
+        "composite": 0.401657438016529,
+        "cross_encoder_sts": 0.45235454545454545,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.26646515151515154,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.424080343980344,
+        "cross_encoder_sts": 0.47152972972972973,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29754864864864866,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-012",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.4126972817281728,
+        "cross_encoder_sts": 0.4565857425742574,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29566138613861387,
+        "jaccard": null,
+        "top_element_id": "S0670",
+        "top_element_label": "Skill in implementing error handling in applications"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.400574,
+        "cross_encoder_sts": 0.449384,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.270414,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.3",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.40913540669856463,
+        "cross_encoder_sts": 0.4575789473684211,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27995263157894734,
+        "jaccard": null,
+        "top_element_id": "2.C.3.b",
+        "top_element_label": "Engineering and Technology"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-012",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.424080343980344
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0670",
+        "element_label": "Skill in implementing error handling in applications",
+        "score": 0.4126972817281728
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "174",
+        "element_label": "Skill in creating programs that validate and process multiple inputs including command line arguments, environmental variables, and input streams.",
+        "score": 0.4111850984067479
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.b",
+        "element_label": "Engineering and Technology",
+        "score": 0.40913540669856463
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.401657438016529
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-S-006 (AI, Skill) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4241 is insufficient to establish relevance to digital program evaluation, performance analytics, and evidence-based assessment at IC-to-senior-IC level. Framework signals (eu_ai_act=0.424, nice=0.413, dcwf=0.411) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4241 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does AI-domain KSA AI-S-006 (composite 0.4241) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4241 for AI domain does not meet the evidentiary bar for ANL IC-level inclusion per NIST AI RMF; EU AI Act practitioner obligations; AI-adjacent competencies appear in senior analytics IC roles at awareness level only. External sources confirm this competency is not a standard expectation for Digital Evaluator at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms AI domain KSA at composite 0.4241 is not a standard requirement for Digital Evaluator at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4241, domain AI, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:45.754632+00:00",
+    "pipeline_version": "1.0"
+  }
+}

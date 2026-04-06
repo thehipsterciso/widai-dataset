@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-REG-0171",
+  "role_name": "AI Provider Compliance Lead",
+  "ksa_id": "DA-K-003",
+  "ksa_text": "Knowledge of complex data structures and types, including nested structures, array types, graph data structures, and their capabilities and applications within data systems.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.40383299999999994,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.39760414673046257,
+        "cross_encoder_sts": 0.4187122807017544,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34131578947368424,
+        "jaccard": null,
+        "top_element_id": "120",
+        "top_element_label": "Knowledge of sources, characteristics, and uses of the organization\u2019s data assets."
+      },
+      "ddat": {
+        "composite": 0.3964098484848485,
+        "cross_encoder_sts": 0.433775,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2967694444444444,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-047",
+        "top_element_label": "Data architecture"
+      },
+      "nice": {
+        "composite": 0.40383299999999994,
+        "cross_encoder_sts": 0.42053399999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.359297,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36224090909090906,
+        "cross_encoder_sts": 0.4195,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20955000000000001,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MP-3.4",
+        "top_element_label": "AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood."
+      },
+      "onet": {
+        "composite": 0.3487212121212121,
+        "cross_encoder_sts": 0.3961666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22219999999999998,
+        "jaccard": null,
+        "top_element_id": "2.A.2.a",
+        "top_element_label": "Critical Thinking"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.40383299999999994
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "120",
+        "element_label": "Knowledge of sources, characteristics, and uses of the organization\u2019s data assets.",
+        "score": 0.39760414673046257
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-047",
+        "element_label": "Data architecture",
+        "score": 0.3964098484848485
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MP-3.4",
+        "element_label": "AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood.",
+        "score": 0.36224090909090906
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.A.2.a",
+        "element_label": "Critical Thinking",
+        "score": 0.3487212121212121
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "Excluded on scope grounds: Data Architecture domain has low REG affinity (0.10) with insufficient regulatory signals. KSA text \u2014 'Knowledge of complex data structures and types, including nested structures, array types, graph data...' \u2014 describes competencies outside AI Provider Compliance Lead scope. Composite score is moderate-to-strong (0.4038). REG roles interpret and apply technical concepts; they do not implement them."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "exclude"
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": null,
+    "evidence": "External validation confirms exclusion: 0 match(es) in AI compliance role descriptions or regulatory certification curricula. A gap here would not be noticeable to a working AI Provider Compliance Lead focused on regulatory interpretation, compliance program management, and AI Act obligations.",
+    "ruling": "exclude"
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Excluded on scope grounds: Data Architecture domain has low REG affinity (0.10) with insufficient regulatory signals. KSA text \u2014 'Knowledge of complex data structures and types, including nested structures, array types, graph data...' \u2014 describes competencies outside AI Provider Compliance Lead scope. Composite score is moderate-to-strong (0.4038). REG roles interpret and apply technical concepts; they do not implement them.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:23.099389+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0100",
+  "role_name": "Citizen Data Scientist",
+  "ksa_id": "DQ-K-018",
+  "ksa_text": "Knowledge of data remediation tools and techniques, including data cleansing, standardization, deduplication, enrichment, imputation approaches, and quality improvement workflows for addressing identified data issues.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.41046183385579943,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40007677397415553,
+        "cross_encoder_sts": 0.43743690773067334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3004497506234414,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4013978409090909,
+        "cross_encoder_sts": 0.4397525,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29911875,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.40773388429752067,
+        "cross_encoder_sts": 0.4431,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31342424242424244,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.41046183385579943,
+        "cross_encoder_sts": 0.449843275862069,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3054446551724138,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38757515151515154,
+        "cross_encoder_sts": 0.43975833333333336,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24842,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.38422613636363634,
+        "cross_encoder_sts": 0.4191625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2910625,
+        "jaccard": null,
+        "top_element_id": "2.B.3.m",
+        "top_element_label": "Quality Control Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.41046183385579943
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.40773388429752067
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4013978409090909
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.40007677397415553
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.3",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.38757515151515154
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-K-018 (DQ, Knowledge) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4105 is insufficient to establish relevance to self-service analytics, business-led data exploration, and low-code BI at IC-to-senior-IC level. Framework signals (nice=0.410, eu_ai_act=0.408, ddat=0.401) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4105 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DQ-domain KSA DQ-K-018 (composite 0.4105) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4105 for DQ domain does not meet the evidentiary bar for ANL IC-level inclusion per DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles. External sources confirm this competency is not a standard expectation for Citizen Data Scientist at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DQ domain KSA at composite 0.4105 is not a standard requirement for Citizen Data Scientist at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4105, domain DQ, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:45.959737+00:00",
+    "pipeline_version": "1.0"
+  }
+}

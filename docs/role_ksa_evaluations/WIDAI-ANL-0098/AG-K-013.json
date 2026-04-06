@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0098",
+  "role_name": "Bioinformatics Technician",
+  "ksa_id": "AG-K-013",
+  "ksa_text": "Knowledge of AI conformity assessment and compliance lifecycle management, including conformity assessment procedures, CE marking requirements, notified body engagement, post-market surveillance obligations, and AI value chain liability triggers.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5264882352941176,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4147420889748549,
+        "cross_encoder_sts": 0.4160204255319149,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.41133319148936165,
+        "jaccard": null,
+        "top_element_id": "1037",
+        "top_element_label": "Knowledge of information technology (IT) supply chain security and risk management policies, requirements, and procedures."
+      },
+      "ddat": {
+        "composite": 0.3865479797979798,
+        "cross_encoder_sts": 0.4324388888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2641722222222222,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-089",
+        "top_element_label": "Financial decision making for technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.5264882352941176,
+        "cross_encoder_sts": 0.4998470588235294,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5975313725490196,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4138451825951826,
+        "cross_encoder_sts": 0.431115811965812,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3677901709401709,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4654040998217469,
+        "cross_encoder_sts": 0.43689607843137257,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5414254901960784,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3965545454545455,
+        "cross_encoder_sts": 0.4031,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3791,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.5264882352941176
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4654040998217469
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1037",
+        "element_label": "Knowledge of information technology (IT) supply chain security and risk management policies, requirements, and procedures.",
+        "score": 0.4147420889748549
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4138451825951826
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.a.3",
+        "element_label": "Evaluating Information to Determine Compliance with Standards",
+        "score": 0.3965545454545455
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AG-K-013 (AG, Knowledge) maps to Bioinformatics Technician scope as weak fit. Composite score 0.5265 clears the weak fit threshold of 0.52. Top framework anchors: eu_ai_act=0.526, nist_ai_rmf=0.465, dcwf=0.415. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within bioinformatics analysis, genomic data processing, and life sciences analytics."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "weak fit domain KSA AG-K-013 with composite 0.5265 was preliminarily included, but the KSA text contains no direct analytics-domain signals. Internal consistency requires this to be re-examined against ANL scope.",
+    "rebuttal": "Composite 0.5265 above the weak_fit threshold of 0.52 but absence of analytics terminology in the AG domain text means the signal is framework-incidental rather than role-specific. Exclusion is more internally consistent with ANL scope definition.",
+    "ruling": "P2 include overturned. AG domain KSA with no analytics text signals at composite 0.5265 does not survive internal consistency review. Revised to exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does AG-domain KSA AG-K-013 (composite 0.5265) appear in published data analyst or BI role profiles?",
+    "evidence": "AG domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per NIST AI RMF; EU AI Act governance obligations; governance competencies are primarily above IC ANL scope. Composite 0.5265 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms AG domain KSA at composite 0.5265 is not a standard requirement for Bioinformatics Technician at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: exclude. Composite 0.5265, domain AG. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:39.092389+00:00",
+    "pipeline_version": "1.0"
+  }
+}

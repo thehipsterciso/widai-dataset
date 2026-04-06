@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0100",
+  "role_name": "Citizen Data Scientist",
+  "ksa_id": "DQ-S-007",
+  "ksa_text": "Skill in defining data requirements, articulating specification needs, and translating business needs into data quality standards and expectations.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4328554752066116,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41044552129221734,
+        "cross_encoder_sts": 0.43720763582966227,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3390798825256975,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4328554752066116,
+        "cross_encoder_sts": 0.46508068181818185,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3469215909090909,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.40812020202020205,
+        "cross_encoder_sts": 0.40821111111111114,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4078777777777778,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-013",
+        "top_element_label": "Transparency and provision of information to deployers"
+      },
+      "nice": {
+        "composite": 0.4101935598282621,
+        "cross_encoder_sts": 0.4422094455852156,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.324817864476386,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35062727272727273,
+        "cross_encoder_sts": 0.38135,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2687,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.1",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.39197056277056275,
+        "cross_encoder_sts": 0.43113809523809526,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2875238095238095,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.4328554752066116
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.41044552129221734
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4101935598282621
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-013",
+        "element_label": "Transparency and provision of information to deployers",
+        "score": 0.40812020202020205
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.39197056277056275
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-S-007 (DQ, Skill) maps to Citizen Data Scientist scope as moderate fit. Composite score 0.4329 clears the moderate fit threshold of 0.43. Top framework anchors: ddat=0.433, dcwf=0.410, nice=0.410. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within self-service analytics, business-led data exploration, and low-code BI."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4329 for moderate fit domain is consistent with ANL IC-level scope. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "External validation: does KSA DQ-S-007 (DQ, composite 0.4329) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "Survey of DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles does not surface this DQ-domain content as a core or common requirement for IC-to-senior-IC data analyst roles. Score 0.4329 may reflect incidental framework overlap. Without direct analytics-domain text confirmation, external ground truth does not support inclusion at this signal level.",
+    "ruling": "P3 include overturned. Insufficient external evidence for DQ domain content at composite 0.4329 without confirming text signals. Revised to exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P4 external ground truth. Final decision: exclude. Composite 0.4329, domain DQ. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:45.932816+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0096",
+  "role_name": "Financial Risk Specialist",
+  "ksa_id": "DA-K-002",
+  "ksa_text": "Knowledge of data platform architecture patterns including data warehouse, data lake, data lakehouse, data mesh, and data fabric architectures, and the trade-offs and selection criteria for each pattern.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.43185800256081947,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41205598401598403,
+        "cross_encoder_sts": 0.43311208791208794,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3559063736263736,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.3944078455790785,
+        "cross_encoder_sts": 0.4231260273972603,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3178260273972603,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.37783301435406697,
+        "cross_encoder_sts": 0.4138157894736842,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28187894736842106,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.43185800256081947,
+        "cross_encoder_sts": 0.45582852112676053,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3679366197183099,
+        "jaccard": null,
+        "top_element_id": "K1278",
+        "top_element_label": "Knowledge of data vaulting principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3645235294117647,
+        "cross_encoder_sts": 0.4098676470588235,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2436058823529412,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.38946000000000003,
+        "cross_encoder_sts": 0.4278,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28722,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K1278",
+        "element_label": "Knowledge of data vaulting principles and practices",
+        "score": 0.43185800256081947
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.41205598401598403
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.3944078455790785
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.38946000000000003
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.37783301435406697
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DA-K-002 (DA, Knowledge) maps to Financial Risk Specialist scope as moderate fit. Composite score 0.4319 clears the moderate fit threshold of 0.43. Top framework anchors: nice=0.432, dcwf=0.412, ddat=0.394. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within financial risk analytics, quantitative risk modeling, and data-driven risk assessment."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4319 for moderate fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA DA-K-002 (DA, composite 0.4319) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with DCWF 421 and DDAT Data Architect profiles; DA competencies at awareness level appear in senior IC data analyst role profiles. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4319 with signal across nice=0.432, dcwf=0.412, ddat=0.394 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from DA-domain frameworks confirms KSA relevance to Financial Risk Specialist at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4319, domain DA, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.743882+00:00",
+    "pipeline_version": "1.0"
+  }
+}

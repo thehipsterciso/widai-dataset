@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0097",
+  "role_name": "Survey Researcher",
+  "ksa_id": "RM-T-004",
+  "ksa_text": "Execute AI system testing activities including functional testing, integration testing, automated testing, and acceptance testing to validate system performance.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5221202597402598,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4172154584360005,
+        "cross_encoder_sts": 0.43052054208273893,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3817352353780314,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.40951325757575757,
+        "cross_encoder_sts": 0.4448666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3152375,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-020",
+        "top_element_label": "Business architecture"
+      },
+      "eu_ai_act": {
+        "composite": 0.5093907550077041,
+        "cross_encoder_sts": 0.4878152542372881,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5669254237288135,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4093771147771148,
+        "cross_encoder_sts": 0.429638223938224,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35534749034749036,
+        "jaccard": null,
+        "top_element_id": "K1007",
+        "top_element_label": "Knowledge of intelligence requirements tasking systems and software"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5221202597402598,
+        "cross_encoder_sts": 0.5098642857142858,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5548028571428572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4059727272727272,
+        "cross_encoder_sts": 0.4245571428571428,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3564142857142857,
+        "jaccard": null,
+        "top_element_id": "1.A.1.b.7",
+        "top_element_label": "Category Flexibility"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5221202597402598
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.5093907550077041
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.4172154584360005
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-020",
+        "element_label": "Business architecture",
+        "score": 0.40951325757575757
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1007",
+        "element_label": "Knowledge of intelligence requirements tasking systems and software",
+        "score": 0.4093771147771148
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RM-T-004 (RM, Task) maps to Survey Researcher scope as weak fit. Composite score 0.5221 clears the weak fit threshold of 0.52. Top framework anchors: nist_ai_rmf=0.522, eu_ai_act=0.509, dcwf=0.417. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within survey design, statistical analysis, and research data management."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "weak fit domain KSA RM-T-004 with composite 0.5221 was preliminarily included, but the KSA text contains no direct analytics-domain signals. Internal consistency requires this to be re-examined against ANL scope.",
+    "rebuttal": "Composite 0.5221 above the weak_fit threshold of 0.52 but absence of analytics terminology in the RM domain text means the signal is framework-incidental rather than role-specific. Exclusion is more internally consistent with ANL scope definition.",
+    "ruling": "P2 include overturned. RM domain KSA with no analytics text signals at composite 0.5221 does not survive internal consistency review. Revised to exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does RM-domain KSA RM-T-004 (composite 0.5221) appear in published data analyst or BI role profiles?",
+    "evidence": "RM domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per COSO ERM framework; risk competencies in IC ANL scope limited to data risk identification, not enterprise risk management. Composite 0.5221 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms RM domain KSA at composite 0.5221 is not a standard requirement for Survey Researcher at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: exclude. Composite 0.5221, domain RM. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.897834+00:00",
+    "pipeline_version": "1.0"
+  }
+}

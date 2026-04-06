@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0100",
+  "role_name": "Citizen Data Scientist",
+  "ksa_id": "SP-T-002",
+  "ksa_text": "Conduct and document privacy awareness training programs and communications for organizational staff at all levels.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4083473392461197,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4083473392461197,
+        "cross_encoder_sts": 0.4138195121951219,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3937548780487805,
+        "jaccard": null,
+        "top_element_id": "208",
+        "top_element_label": "Skill in maintaining databases."
+      },
+      "ddat": {
+        "composite": 0.3877224242424242,
+        "cross_encoder_sts": 0.42432333333333333,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29012,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-052",
+        "top_element_label": "Data governance"
+      },
+      "eu_ai_act": {
+        "composite": 0.3895181818181818,
+        "cross_encoder_sts": 0.4001,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3613,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-009",
+        "top_element_label": "Technical documentation"
+      },
+      "nice": {
+        "composite": 0.38675382775119616,
+        "cross_encoder_sts": 0.4035236842105263,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34203421052631583,
+        "jaccard": null,
+        "top_element_id": "S0843",
+        "top_element_label": "Skill in maintaining data"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3950863636363636,
+        "cross_encoder_sts": 0.41805000000000003,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33385,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-1.2",
+        "top_element_label": "Appropriate methods and metrics are identified and applied."
+      },
+      "onet": {
+        "composite": 0.3701363636363636,
+        "cross_encoder_sts": 0.3631,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3889,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.2",
+        "top_element_label": "Processing Information"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "208",
+        "element_label": "Skill in maintaining databases.",
+        "score": 0.4083473392461197
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-1.2",
+        "element_label": "Appropriate methods and metrics are identified and applied.",
+        "score": 0.3950863636363636
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-009",
+        "element_label": "Technical documentation",
+        "score": 0.3895181818181818
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-052",
+        "element_label": "Data governance",
+        "score": 0.3877224242424242
+      },
+      {
+        "framework": "nice",
+        "element_id": "S0843",
+        "element_label": "Skill in maintaining data",
+        "score": 0.38675382775119616
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-T-002 (SP, Task) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4083 is insufficient to establish relevance to self-service analytics, business-led data exploration, and low-code BI at IC-to-senior-IC level. Framework signals (dcwf=0.408, nist_ai_rmf=0.395, eu_ai_act=0.390) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4083 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does SP-domain KSA SP-T-002 (composite 0.4083) appear in published data analyst or BI role profiles?",
+    "evidence": "SP domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per NIST CSF, ISO 27001; security competencies in IC ANL scope limited to data access controls awareness, not security architecture. Composite 0.4083 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms SP domain KSA at composite 0.4083 is not a standard requirement for Citizen Data Scientist at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4083, domain SP, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:45.961635+00:00",
+    "pipeline_version": "1.0"
+  }
+}

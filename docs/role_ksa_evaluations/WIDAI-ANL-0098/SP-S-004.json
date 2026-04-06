@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0098",
+  "role_name": "Bioinformatics Technician",
+  "ksa_id": "SP-S-004",
+  "ksa_text": "Skill in advising on data processing agreements, standard contractual clauses, binding corporate rules, and other cross-border data transfer mechanisms, ensuring compliance with applicable jurisdictional requirements and supervisory guidance.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "SP",
+  "pass_1_scoring": {
+    "composite_score": 0.4417484848484849,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41389067599067597,
+        "cross_encoder_sts": 0.4307402159244264,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3689585695006748,
+        "jaccard": null,
+        "top_element_id": "1002A",
+        "top_element_label": "Skill in conducting reviews of systems."
+      },
+      "ddat": {
+        "composite": 0.4417484848484849,
+        "cross_encoder_sts": 0.47527083333333336,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3523555555555556,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.43331256684491976,
+        "cross_encoder_sts": 0.4436705882352941,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4056911764705882,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-003",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4079458833619211,
+        "cross_encoder_sts": 0.4285656603773585,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3529598113207547,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3888451871657754,
+        "cross_encoder_sts": 0.4166176470588235,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31478529411764705,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.39508363636363636,
+        "cross_encoder_sts": 0.4377,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28144,
+        "jaccard": null,
+        "top_element_id": "2.C.8.a",
+        "top_element_label": "Public Safety and Security"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.4417484848484849
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-003",
+        "element_label": "Risk management system",
+        "score": 0.43331256684491976
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002A",
+        "element_label": "Skill in conducting reviews of systems.",
+        "score": 0.41389067599067597
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4079458833619211
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.8.a",
+        "element_label": "Public Safety and Security",
+        "score": 0.39508363636363636
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA SP-S-004 (SP, Skill) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4417 is insufficient to establish relevance to bioinformatics analysis, genomic data processing, and life sciences analytics at IC-to-senior-IC level. Framework signals (ddat=0.442, eu_ai_act=0.433, dcwf=0.414) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4417 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does SP-domain KSA SP-S-004 (composite 0.4417) appear in published data analyst or BI role profiles?",
+    "evidence": "SP domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per NIST CSF, ISO 27001; security competencies in IC ANL scope limited to data access controls awareness, not security architecture. Composite 0.4417 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms SP domain KSA at composite 0.4417 is not a standard requirement for Bioinformatics Technician at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4417, domain SP, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:39.120451+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0069",
+  "role_name": "Data Privacy Specialist",
+  "ksa_id": "AG-S-002",
+  "ksa_text": "Skill in conducting iterative AI risk assessments across the system lifecycle, including risk identification and analysis at development and deployment phases, impact and likelihood estimation with proportionate documentation, and maintenance of risk registries with proxy indicators for unmeasurable risks.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "AG",
+  "pass_1_scoring": {
+    "composite_score": 0.5852888311688311,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40526041861918155,
+        "cross_encoder_sts": 0.4555233676975945,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27122588774341355,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.41185642633228847,
+        "cross_encoder_sts": 0.4603327586206897,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.28258620689655173,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-010",
+        "top_element_label": "Analysis and synthesis (data ethics)"
+      },
+      "eu_ai_act": {
+        "composite": 0.5632734976887519,
+        "cross_encoder_sts": 0.5827966101694915,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5112118644067797,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-001",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.38978606938206595,
+        "cross_encoder_sts": 0.4467204429301533,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23796107325383306,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5852888311688311,
+        "cross_encoder_sts": 0.6021585714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5403028571428571,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-3.2",
+        "top_element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle."
+      },
+      "onet": {
+        "composite": 0.3711587121212121,
+        "cross_encoder_sts": 0.41470416666666665,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2550375,
+        "jaccard": null,
+        "top_element_id": "2.C.1.a",
+        "top_element_label": "Administration and Management"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-3.2",
+        "element_label": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle.",
+        "score": 0.5852888311688311
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-001",
+        "element_label": "Risk management system",
+        "score": 0.5632734976887519
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-010",
+        "element_label": "Analysis and synthesis (data ethics)",
+        "score": 0.41185642633228847
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.40526041861918155
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.38978606938206595
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AG-S-002 (AI Governance/Skill) excluded as out_of_scope (composite 0.585, highest: NIST AI RMF at 0.585). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data privacy compliance and implementation: GDPR/CCPA/HIPAA, PII identification, privacy-by-design, anonymization, consent management, and privacy impact assessments."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.585, and AI Governance (AG) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI Governance KSA for Data Privacy Specialist?",
+    "evidence": "AI Governance competencies do not appear as Data Privacy Specialist requirements in job postings. They are allocated to specialist roles. Exclusion consistent with market patterns.",
+    "ruling": "Exclusion upheld by market evidence. AI Governance is not a Data Privacy Specialist core competency. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA AG-S-002 (AI Governance/Skill) excluded as out_of_scope (composite 0.585, highest: NIST AI RMF at 0.585). Domain prior: out. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data privacy compliance and implementation: GDPR/CCPA/HIPAA, PII identification, privacy-by-design, anonymization, consent management, and privacy impact assessments.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:51.979783+00:00",
+    "pipeline_version": "1.0"
+  }
+}

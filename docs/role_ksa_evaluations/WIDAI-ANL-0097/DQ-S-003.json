@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0097",
+  "role_name": "Survey Researcher",
+  "ksa_id": "DQ-S-003",
+  "ksa_text": "Skill in conducting data profiling to identify patterns, anomalies, and characteristics within data, including analysis of data structures and content assessment.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.47024216073781283,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4149894026974952,
+        "cross_encoder_sts": 0.44810500963391137,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3266811175337187,
+        "jaccard": null,
+        "top_element_id": "1005",
+        "top_element_label": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
+      },
+      "ddat": {
+        "composite": 0.43637519260400615,
+        "cross_encoder_sts": 0.4696042372881356,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34776440677966103,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-009",
+        "top_element_label": "Analysis and synthesis"
+      },
+      "eu_ai_act": {
+        "composite": 0.45610165289256194,
+        "cross_encoder_sts": 0.5046709090909091,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.32658363636363635,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.4175844280121792,
+        "cross_encoder_sts": 0.454444019138756,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3192921850079745,
+        "jaccard": null,
+        "top_element_id": "K0647",
+        "top_element_label": "Knowledge of data visualization tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.47024216073781283,
+        "cross_encoder_sts": 0.5300884057971014,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.31065217391304345,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4205300940438871,
+        "cross_encoder_sts": 0.4517827586206896,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3371896551724138,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.47024216073781283
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.45610165289256194
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-009",
+        "element_label": "Analysis and synthesis",
+        "score": 0.43637519260400615
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.C.3.c",
+        "element_label": "Design",
+        "score": 0.4205300940438871
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0647",
+        "element_label": "Knowledge of data visualization tools and techniques",
+        "score": 0.4175844280121792
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA DQ-S-003 (DQ, Skill) maps to Survey Researcher scope as moderate fit. Composite score 0.4702 clears the moderate fit threshold of 0.43. Top framework anchors: nist_ai_rmf=0.470, eu_ai_act=0.456, ddat=0.436. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within survey design, statistical analysis, and research data management."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4702 for moderate fit domain is consistent with ANL IC-level scope. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "overturned",
+    "challenge": "External validation: does KSA DQ-S-003 (DQ, composite 0.4702) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "Survey of DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles does not surface this DQ-domain content as a core or common requirement for IC-to-senior-IC data analyst roles. Score 0.4702 may reflect incidental framework overlap. Without direct analytics-domain text confirmation, external ground truth does not support inclusion at this signal level.",
+    "ruling": "P3 include overturned. Insufficient external evidence for DQ domain content at composite 0.4702 without confirming text signals. Revised to exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P4 external ground truth. Final decision: exclude. Composite 0.4702, domain DQ. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.909021+00:00",
+    "pipeline_version": "1.0"
+  }
+}

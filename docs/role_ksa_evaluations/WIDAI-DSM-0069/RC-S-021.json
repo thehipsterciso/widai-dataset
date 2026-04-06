@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0069",
+  "role_name": "Data Privacy Specialist",
+  "ksa_id": "RC-S-021",
+  "ksa_text": "Skill in conducting business impact and cost-benefit analysis for regulatory compliance initiatives, including cost estimation, benefit identification, return-on-investment analysis, and financial impact modeling.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "out_of_scope",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA RC-S-021 (Risk and Compliance/Skill) excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Domain prior: in_scope. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data privacy compliance and implementation: GDPR/CCPA/HIPAA, PII identification, privacy-by-design, anonymization, consent management, and privacy impact assessments."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with out_of_scope classification, composite 0.000, and Risk and Compliance (RC) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Zero-signal exclusion: does absence of framework signal reliably indicate irrelevance?",
+    "evidence": "Composite 0.0 across all 6 frameworks confirms no semantic alignment with Data Privacy Specialist reference elements.",
+    "ruling": "Exclusion upheld. Zero framework signal confirmed by market absence. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "KSA RC-S-021 (Risk and Compliance/Skill) excluded as out_of_scope (composite 0.000, highest: DCWF at 0.000). Domain prior: in_scope. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data privacy compliance and implementation: GDPR/CCPA/HIPAA, PII identification, privacy-by-design, anonymization, consent management, and privacy impact assessments.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:52.301179+00:00",
+    "pipeline_version": "1.0"
+  }
+}

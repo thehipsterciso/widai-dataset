@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0098",
+  "role_name": "Bioinformatics Technician",
+  "ksa_id": "RM-K-008",
+  "ksa_text": "Knowledge of AI system documentation standards including model cards, system cards, datasheets for datasets, and evaluation evidence standards required for regulatory conformity assessment.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "RM",
+  "pass_1_scoring": {
+    "composite_score": 0.5375454545454545,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42075703103542983,
+        "cross_encoder_sts": 0.43695740181268883,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37755604229607254,
+        "jaccard": null,
+        "top_element_id": "1000B",
+        "top_element_label": "Ensure that AI design and development activities are properly documented and updated."
+      },
+      "ddat": {
+        "composite": 0.3870193548387097,
+        "cross_encoder_sts": 0.4223709677419355,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2927483870967742,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.5375454545454545,
+        "cross_encoder_sts": 0.5228213114754098,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5768098360655738,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-002",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.42402274590163935,
+        "cross_encoder_sts": 0.4492602459016394,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3567227459016394,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5127173796791444,
+        "cross_encoder_sts": 0.5065705882352942,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5291088235294117,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.3845579545454546,
+        "cross_encoder_sts": 0.3917375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36541250000000003,
+        "jaccard": null,
+        "top_element_id": "2.C.1.d",
+        "top_element_label": "Sales and Marketing"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-002",
+        "element_label": "Risk management system",
+        "score": 0.5375454545454545
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5127173796791444
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.42402274590163935
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1000B",
+        "element_label": "Ensure that AI design and development activities are properly documented and updated.",
+        "score": 0.42075703103542983
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.3870193548387097
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RM-K-008 (RM, Knowledge) maps to Bioinformatics Technician scope as weak fit. Composite score 0.5375 clears the weak fit threshold of 0.52. Top framework anchors: eu_ai_act=0.538, nist_ai_rmf=0.513, nice=0.424. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within bioinformatics analysis, genomic data processing, and life sciences analytics."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "weak fit domain KSA RM-K-008 with composite 0.5375 was preliminarily included, but the KSA text contains no direct analytics-domain signals. Internal consistency requires this to be re-examined against ANL scope.",
+    "rebuttal": "Composite 0.5375 above the weak_fit threshold of 0.52 but absence of analytics terminology in the RM domain text means the signal is framework-incidental rather than role-specific. Exclusion is more internally consistent with ANL scope definition.",
+    "ruling": "P2 include overturned. RM domain KSA with no analytics text signals at composite 0.5375 does not survive internal consistency review. Revised to exclude."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does RM-domain KSA RM-K-008 (composite 0.5375) appear in published data analyst or BI role profiles?",
+    "evidence": "RM domain content (AI governance, security/privacy, risk management, compliance) is not a primary expectation in IC-to-senior-IC ANL roles per COSO ERM framework; risk competencies in IC ANL scope limited to data risk identification, not enterprise risk management. Composite 0.5375 confirms weak signal. Exclusion consistent with published ANL frameworks.",
+    "ruling": "P3 exclude upheld. External evidence confirms RM domain KSA at composite 0.5375 is not a standard requirement for Bioinformatics Technician at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: exclude. Composite 0.5375, domain RM. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:39.090652+00:00",
+    "pipeline_version": "1.0"
+  }
+}

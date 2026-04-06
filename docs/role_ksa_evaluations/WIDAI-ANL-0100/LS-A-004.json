@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0100",
+  "role_name": "Citizen Data Scientist",
+  "ksa_id": "LS-A-004",
+  "ksa_text": "Ability to identify, connect, and influence key stakeholders to speed data and AI adoption, mapping stakeholder relationships, building coalitions, and creating influence channels for organizational change.",
+  "ksa_dimension": "Ability",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.46128670033670033,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.423708220188902,
+        "cross_encoder_sts": 0.45298084415584416,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3456478896103896,
+        "jaccard": null,
+        "top_element_id": "1004A",
+        "top_element_label": "Knowledge of information technology (IT) acquisition/procurement requirements."
+      },
+      "ddat": {
+        "composite": 0.46128670033670033,
+        "cross_encoder_sts": 0.5025740740740741,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.351187037037037,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-003",
+        "top_element_label": "Agile and Lean practices"
+      },
+      "eu_ai_act": {
+        "composite": 0.44554935064935064,
+        "cross_encoder_sts": 0.4378964285714286,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.46595714285714285,
+        "jaccard": null,
+        "top_element_id": "EUAIA-C-001",
+        "top_element_label": "AI literacy"
+      },
+      "nice": {
+        "composite": 0.40041062388591797,
+        "cross_encoder_sts": 0.44013137254901963,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.29448862745098037,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.4606535714285714,
+        "cross_encoder_sts": 0.4570535714285714,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47025357142857144,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.2",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4053519480519481,
+        "cross_encoder_sts": 0.4306142857142857,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3379857142857143,
+        "jaccard": null,
+        "top_element_id": "2.B.1.f",
+        "top_element_label": "Service Orientation"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-003",
+        "element_label": "Agile and Lean practices",
+        "score": 0.46128670033670033
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.2",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.4606535714285714
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-C-001",
+        "element_label": "AI literacy",
+        "score": 0.44554935064935064
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1004A",
+        "element_label": "Knowledge of information technology (IT) acquisition/procurement requirements.",
+        "score": 0.423708220188902
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.1.f",
+        "element_label": "Service Orientation",
+        "score": 0.4053519480519481
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-A-004 (LS, Ability) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4613 is insufficient to establish relevance to self-service analytics, business-led data exploration, and low-code BI at IC-to-senior-IC level. Framework signals (ddat=0.461, nist_ai_rmf=0.461, eu_ai_act=0.446) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4613 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does LS-domain KSA LS-A-004 (composite 0.4613) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4613 for LS domain does not meet the evidentiary bar for ANL IC-level inclusion per Leadership competencies in IC-to-senior-IC analytics roles are limited to peer influence and technical mentorship, not organizational strategy. External sources confirm this competency is not a standard expectation for Citizen Data Scientist at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms LS domain KSA at composite 0.4613 is not a standard requirement for Citizen Data Scientist at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4613, domain LS, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:45.914945+00:00",
+    "pipeline_version": "1.0"
+  }
+}

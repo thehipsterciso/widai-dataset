@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0098",
+  "role_name": "Bioinformatics Technician",
+  "ksa_id": "AB-T-010",
+  "ksa_text": "Document analytical methodologies, data sources, findings, business rules, and transformation logic, including producing documentation that meets evidence standards for regulatory compliance, audit, and executive decision support.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4351875,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.41894699675324676,
+        "cross_encoder_sts": 0.43562299107142854,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.37447767857142855,
+        "jaccard": null,
+        "top_element_id": "1002",
+        "top_element_label": "Skill in conducting audits or reviews of technical systems."
+      },
+      "ddat": {
+        "composite": 0.42182224025974024,
+        "cross_encoder_sts": 0.45438392857142856,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.33499107142857143,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-007",
+        "top_element_label": "Analysis"
+      },
+      "eu_ai_act": {
+        "composite": 0.4351875,
+        "cross_encoder_sts": 0.44574375,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4070375,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.40923814333814335,
+        "cross_encoder_sts": 0.42699629629629626,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.36188306878306875,
+        "jaccard": null,
+        "top_element_id": "K0800",
+        "top_element_label": "Knowledge of evidence admissibility laws and regulations"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.428367599067599,
+        "cross_encoder_sts": 0.4592487179487179,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3460179487179487,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.4194887700534759,
+        "cross_encoder_sts": 0.43232941176470585,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3852470588235294,
+        "jaccard": null,
+        "top_element_id": "2.B.3.a",
+        "top_element_label": "Operations Analysis"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4351875
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.428367599067599
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-007",
+        "element_label": "Analysis",
+        "score": 0.42182224025974024
+      },
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.a",
+        "element_label": "Operations Analysis",
+        "score": 0.4194887700534759
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1002",
+        "element_label": "Skill in conducting audits or reviews of technical systems.",
+        "score": 0.41894699675324676
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-T-010 (AB, Task) maps to Bioinformatics Technician scope as strong fit. Composite score 0.4352 clears the strong fit threshold of 0.35. Top framework anchors: eu_ai_act=0.435, nist_ai_rmf=0.428, ddat=0.422. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within bioinformatics analysis, genomic data processing, and life sciences analytics."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4352 for strong fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AB-T-010 (AB, composite 0.4352) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4352 with signal across eu_ai_act=0.435, nist_ai_rmf=0.428, ddat=0.422 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AB-domain frameworks confirms KSA relevance to Bioinformatics Technician at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4352, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:39.126539+00:00",
+    "pipeline_version": "1.0"
+  }
+}

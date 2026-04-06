@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0097",
+  "role_name": "Survey Researcher",
+  "ksa_id": "DA-S-006",
+  "ksa_text": "Skill in performance tuning data pipelines, including query optimization, partition strategy, caching, and resource scaling.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.41261804195804197,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3959964069264069,
+        "cross_encoder_sts": 0.4240695238095238,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3211347619047619,
+        "jaccard": null,
+        "top_element_id": "1038",
+        "top_element_label": "Knowledge of local specialized system requirements (e.g., critical infrastructure systems that may not use standard information technology [IT]) for safety, performance, and reliability."
+      },
+      "ddat": {
+        "composite": 0.39936658476658476,
+        "cross_encoder_sts": 0.45378378378378376,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.25425405405405405,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.37869545454545456,
+        "cross_encoder_sts": 0.430425,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24075000000000002,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-015",
+        "top_element_label": "Accuracy, robustness and cybersecurity"
+      },
+      "nice": {
+        "composite": 0.41261804195804197,
+        "cross_encoder_sts": 0.4412015384615385,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3363953846153846,
+        "jaccard": null,
+        "top_element_id": "K0064",
+        "top_element_label": "Knowledge of performance tuning tools and techniques"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.35540064935064936,
+        "cross_encoder_sts": 0.4097571428571429,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21045,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-3.2",
+        "top_element_label": "AI risks and benefits from third-party entities are managed."
+      },
+      "onet": {
+        "composite": 0.3840666666666667,
+        "cross_encoder_sts": 0.4428666666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22726666666666664,
+        "jaccard": null,
+        "top_element_id": "4.A.2.b.5",
+        "top_element_label": "Scheduling Work and Activities"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "nice",
+        "element_id": "K0064",
+        "element_label": "Knowledge of performance tuning tools and techniques",
+        "score": 0.41261804195804197
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.39936658476658476
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1038",
+        "element_label": "Knowledge of local specialized system requirements (e.g., critical infrastructure systems that may not use standard information technology [IT]) for safety, performance, and reliability.",
+        "score": 0.3959964069264069
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.2.b.5",
+        "element_label": "Scheduling Work and Activities",
+        "score": 0.3840666666666667
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-015",
+        "element_label": "Accuracy, robustness and cybersecurity",
+        "score": 0.37869545454545456
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DA-S-006 (DA, Skill) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4126 is insufficient to establish relevance to survey design, statistical analysis, and research data management at IC-to-senior-IC level. Framework signals (nice=0.413, ddat=0.399, dcwf=0.396) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "overturned",
+    "challenge": "DA domain KSA DA-S-006 excluded at composite 0.4126, but KSA text contains direct analytics-domain signals. Internal consistency: the presence of analytics terminology in a moderate fit KSA at score 0.4126 suggests the threshold is excluding genuinely relevant content.",
+    "rebuttal": "Composite 0.4126 with confirmed analytics-domain terminology for a DA (moderate fit) KSA indicates real role relevance for Survey Researcher. The 0.43 threshold is a calibration heuristic; text-signal confirmation overrides marginal score shortfall at this level.",
+    "ruling": "P2 exclude overturned. DA KSA with composite 0.4126 and confirmed analytics-domain text signals included on internal consistency grounds."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA DA-S-006 (DA, composite 0.4126) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with DCWF 421 and DDAT Data Architect profiles; DA competencies at awareness level appear in senior IC data analyst role profiles. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4126 with signal across nice=0.413, ddat=0.399, dcwf=0.396 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from DA-domain frameworks confirms KSA relevance to Survey Researcher at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "medium",
+  "decision_rationale": "Single adversarial overturn by P3 internal consistency. Final decision: include. Composite 0.4126, domain DA. Medium confidence \u2014 one agent challenged and overturned the preliminary assessment.",
+  "adversarial_disagreements": 1,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.961256+00:00",
+    "pipeline_version": "1.0"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0097",
+  "role_name": "Survey Researcher",
+  "ksa_id": "AI-K-023",
+  "ksa_text": "Knowledge of experimental design for ML research, including ablation study design, statistical significance in ML evaluation, benchmark construction, and reproducibility standards.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.40405730568525133,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40405730568525133,
+        "cross_encoder_sts": 0.4275536253776435,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.34140045317220546,
+        "jaccard": null,
+        "top_element_id": "1012A",
+        "top_element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI))."
+      },
+      "ddat": {
+        "composite": 0.37061831955922864,
+        "cross_encoder_sts": 0.4165439393939394,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24815,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-014",
+        "top_element_label": "Applying user-centred insights"
+      },
+      "eu_ai_act": {
+        "composite": 0.3996267045454545,
+        "cross_encoder_sts": 0.41695,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35343125,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-027",
+        "top_element_label": "Obligations of deployers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.39852622175512353,
+        "cross_encoder_sts": 0.4241234104046243,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3302670520231214,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38186019656019654,
+        "cross_encoder_sts": 0.41474594594594594,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2941648648648649,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-6.2",
+        "top_element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+      },
+      "onet": {
+        "composite": 0.35819469696969697,
+        "cross_encoder_sts": 0.40845833333333337,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22415833333333335,
+        "jaccard": null,
+        "top_element_id": "2.C.3.c",
+        "top_element_label": "Design"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1012A",
+        "element_label": "Knowledge of test procedures, principles, and methodologies (e.g., Capabilities and Maturity Model Integration (CMMI)).",
+        "score": 0.40405730568525133
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-027",
+        "element_label": "Obligations of deployers of high-risk AI systems",
+        "score": 0.3996267045454545
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.39852622175512353
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-6.2",
+        "element_label": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "score": 0.38186019656019654
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-014",
+        "element_label": "Applying user-centred insights",
+        "score": 0.37061831955922864
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-K-023 (AI, Knowledge) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4041 is insufficient to establish relevance to survey design, statistical analysis, and research data management at IC-to-senior-IC level. Framework signals (dcwf=0.404, eu_ai_act=0.400, nice=0.399) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4041 below threshold for weak fit domain. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does AI-domain KSA AI-K-023 (composite 0.4041) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4041 for AI domain does not meet the evidentiary bar for ANL IC-level inclusion per NIST AI RMF; EU AI Act practitioner obligations; AI-adjacent competencies appear in senior analytics IC roles at awareness level only. External sources confirm this competency is not a standard expectation for Survey Researcher at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms AI domain KSA at composite 0.4041 is not a standard requirement for Survey Researcher at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4041, domain AI, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.972153+00:00",
+    "pipeline_version": "1.0"
+  }
+}

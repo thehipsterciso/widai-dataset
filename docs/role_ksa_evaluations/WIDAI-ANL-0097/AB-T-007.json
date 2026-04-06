@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0097",
+  "role_name": "Survey Researcher",
+  "ksa_id": "AB-T-007",
+  "ksa_text": "Manage and maintain databases and analytical infrastructure, including monitoring database performance, maintaining DBMS software, optimizing queries, and providing ongoing operational support.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "AB",
+  "pass_1_scoring": {
+    "composite_score": 0.4168727272727273,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.4068964749536178,
+        "cross_encoder_sts": 0.4504326530612245,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2908,
+        "jaccard": null,
+        "top_element_id": "1154",
+        "top_element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems."
+      },
+      "ddat": {
+        "composite": 0.38216983471074384,
+        "cross_encoder_sts": 0.4472227272727273,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.20869545454545457,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-022",
+        "top_element_label": "Business process improvement"
+      },
+      "eu_ai_act": {
+        "composite": 0.33565000000000006,
+        "cross_encoder_sts": 0.39265000000000005,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.18364999999999998,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-009",
+        "top_element_label": "Technical documentation"
+      },
+      "nice": {
+        "composite": 0.3920246212121212,
+        "cross_encoder_sts": 0.44554166666666667,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.24931250000000002,
+        "jaccard": null,
+        "top_element_id": "K0992",
+        "top_element_label": "Knowledge of database maintenance principles and practices"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.3828409090909091,
+        "cross_encoder_sts": 0.44575000000000004,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.21508333333333332,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MG-2.2",
+        "top_element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+      },
+      "onet": {
+        "composite": 0.4168727272727273,
+        "cross_encoder_sts": 0.4625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2952,
+        "jaccard": null,
+        "top_element_id": "2.B.3.j",
+        "top_element_label": "Equipment Maintenance"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "onet",
+        "element_id": "2.B.3.j",
+        "element_label": "Equipment Maintenance",
+        "score": 0.4168727272727273
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "1154",
+        "element_label": "Perform configuration management, problem management, capacity management, and financial management for databases and data management systems.",
+        "score": 0.4068964749536178
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0992",
+        "element_label": "Knowledge of database maintenance principles and practices",
+        "score": 0.3920246212121212
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MG-2.2",
+        "element_label": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",
+        "score": 0.3828409090909091
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-022",
+        "element_label": "Business process improvement",
+        "score": 0.38216983471074384
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "strong_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA AB-T-007 (AB, Task) maps to Survey Researcher scope as strong fit. Composite score 0.4169 clears the strong fit threshold of 0.35. Top framework anchors: onet=0.417, dcwf=0.407, nice=0.392. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within survey design, statistical analysis, and research data management."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.4169 for strong fit domain is consistent with ANL IC-level scope. Analytics-domain text signals confirmed. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA AB-T-007 (AB, composite 0.4169) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "KSA content aligns with O*NET 15-2051.00 (Data Scientists), DCWF 411 (Data Analyst) and 421 profiles, DDAT Data Analyst role framework. Analytics-domain terminology in KSA text confirms practical relevance to IC ANL work. Composite 0.4169 with signal across onet=0.417, dcwf=0.407, nice=0.392 is consistent with documented ANL competency expectations at IC-to-senior-IC level. External ground truth supports inclusion.",
+    "ruling": "P3 include upheld. External evidence from AB-domain frameworks confirms KSA relevance to Survey Researcher at IC-to-senior-IC level."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4169, domain AB, scope strong fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.955856+00:00",
+    "pipeline_version": "1.0"
+  }
+}

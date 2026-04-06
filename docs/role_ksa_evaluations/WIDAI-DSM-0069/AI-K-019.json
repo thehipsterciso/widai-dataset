@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-DSM-0069",
+  "role_name": "Data Privacy Specialist",
+  "ksa_id": "AI-K-019",
+  "ksa_text": "Knowledge of GPU and accelerated compute infrastructure, including cluster management, resource scheduling, distributed training architectures, and cost optimization strategies.",
+  "ksa_dimension": "Knowledge",
+  "ksa_domain": "AI",
+  "pass_1_scoring": {
+    "composite_score": 0.3787754409769335,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.3787754409769335,
+        "cross_encoder_sts": 0.41403134328358204,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2847597014925373,
+        "jaccard": null,
+        "top_element_id": "1038A",
+        "top_element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability."
+      },
+      "ddat": {
+        "composite": 0.35953585858585857,
+        "cross_encoder_sts": 0.4394388888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.1464611111111111,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-089",
+        "top_element_label": "Financial decision making for technology"
+      },
+      "nice": {
+        "composite": 0.37210696150696154,
+        "cross_encoder_sts": 0.4239558558558559,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.23384324324324327,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.36067272727272726,
+        "cross_encoder_sts": 0.3607,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3606,
+        "jaccard": null,
+        "top_element_id": "AIRMF-MS-2.12",
+        "top_element_label": "AI systems are evaluated for trustworthy characteristics."
+      },
+      "onet": {
+        "composite": 0.3476727272727273,
+        "cross_encoder_sts": 0.3747,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2756,
+        "jaccard": null,
+        "top_element_id": "4.A.3.b.1",
+        "top_element_label": "Working with Computers"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "dcwf",
+        "element_id": "1038A",
+        "element_label": "Knowledge of infrastructure supporting information technology (IT) for safety, performance, and reliability.",
+        "score": 0.3787754409769335
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.37210696150696154
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-MS-2.12",
+        "element_label": "AI systems are evaluated for trustworthy characteristics.",
+        "score": 0.36067272727272726
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-089",
+        "element_label": "Financial decision making for technology",
+        "score": 0.35953585858585857
+      },
+      {
+        "framework": "onet",
+        "element_id": "4.A.3.b.1",
+        "element_label": "Working with Computers",
+        "score": 0.3476727272727273
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [
+      "eu_ai_act"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "edge_case",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA AI-K-019 (AI and Machine Learning/Knowledge) excluded as edge_case (composite 0.379, highest: DCWF at 0.379). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data privacy compliance and implementation: GDPR/CCPA/HIPAA, PII identification, privacy-by-design, anonymization, consent management, and privacy impact assessments."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "No inconsistency. Exclude consistent with edge_case classification, composite 0.379, and AI and Machine Learning (AI) handling."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "Does market evidence challenge the exclusion of this AI and Machine Learning KSA (composite 0.379)?",
+    "evidence": "Market analysis of Data Privacy Specialist job postings does not surface this AI and Machine Learning competency as a standard requirement at the relevant level. Exclusion consistent with role focus.",
+    "ruling": "Exclusion upheld. Market evidence consistent with exclusion. Final decision: exclude."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "medium",
+  "decision_rationale": "KSA AI-K-019 (AI and Machine Learning/Knowledge) excluded as edge_case (composite 0.379, highest: DCWF at 0.379). Domain prior: edge. Core hits: 0. OOS hits: 0. Seniority: appropriate. Data privacy compliance and implementation: GDPR/CCPA/HIPAA, PII identification, privacy-by-design, anonymization, consent management, and privacy impact assessments.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:52.149158+00:00",
+    "pipeline_version": "1.0"
+  }
+}

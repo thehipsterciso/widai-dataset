@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0096",
+  "role_name": "Financial Risk Specialist",
+  "ksa_id": "DA-S-014",
+  "ksa_text": "Skill in data platform capacity planning and scaling, including workload forecasting, resource utilization analysis, auto-scaling configuration, and proactive scaling decisions that prevent service degradation.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "DA",
+  "pass_1_scoring": {
+    "composite_score": 0.0,
+    "signal_strength": "none",
+    "framework_scores": {},
+    "top_anchors": [],
+    "frameworks_with_signal": [],
+    "frameworks_no_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "metrics_used": [],
+    "metrics_absent": [
+      "cross_encoder_sts",
+      "bertscore",
+      "nli_score",
+      "bi_encoder_cosine",
+      "jaccard"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DA-S-014 (DA, Skill) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.0000 is insufficient to establish relevance to financial risk analytics, quantitative risk modeling, and data-driven risk assessment at IC-to-senior-IC level. Framework signals () do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.0000 below threshold for moderate fit domain. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DA-domain KSA DA-S-014 (composite 0.0000) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.0000 for DA domain does not meet the evidentiary bar for ANL IC-level inclusion per DCWF 421 and DDAT Data Architect profiles; DA competencies at awareness level appear in senior IC data analyst role profiles. External sources confirm this competency is not a standard expectation for Financial Risk Specialist at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DA domain KSA at composite 0.0000 is not a standard requirement for Financial Risk Specialist at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.0000, domain DA, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.823747+00:00",
+    "pipeline_version": "1.0"
+  }
+}

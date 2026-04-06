@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0098",
+  "role_name": "Bioinformatics Technician",
+  "ksa_id": "DQ-T-014",
+  "ksa_text": "Conduct comprehensive quality assurance activities throughout the data and AI system lifecycle, including testing, monitoring, and compliance verification.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "DQ",
+  "pass_1_scoring": {
+    "composite_score": 0.4216237154150198,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40283100955648127,
+        "cross_encoder_sts": 0.43879366576819406,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3069305929919138,
+        "jaccard": null,
+        "top_element_id": "3063",
+        "top_element_label": "Ability to monitor system operations and react to events in response to triggers and/or observation of trends or unusual activity."
+      },
+      "ddat": {
+        "composite": 0.4201376811594203,
+        "cross_encoder_sts": 0.4623898550724638,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30746521739130434,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-022",
+        "top_element_label": "Business process improvement"
+      },
+      "eu_ai_act": {
+        "composite": 0.4216237154150198,
+        "cross_encoder_sts": 0.4632869565217391,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3105217391304348,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-006",
+        "top_element_label": "Data and data governance"
+      },
+      "nice": {
+        "composite": 0.3916257090909091,
+        "cross_encoder_sts": 0.4368038,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2711508,
+        "jaccard": null,
+        "top_element_id": "K1071",
+        "top_element_label": "Knowledge of continuous monitoring processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.38992848484848486,
+        "cross_encoder_sts": 0.42824666666666666,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2877466666666667,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-4.3",
+        "top_element_label": "Organizational teams are committed to a culture that considers and communicates AI risk."
+      },
+      "onet": {
+        "composite": 0.3891619318181818,
+        "cross_encoder_sts": 0.4492625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.22889375,
+        "jaccard": null,
+        "top_element_id": "2.B.3.g",
+        "top_element_label": "Operations Monitoring"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-006",
+        "element_label": "Data and data governance",
+        "score": 0.4216237154150198
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-022",
+        "element_label": "Business process improvement",
+        "score": 0.4201376811594203
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "3063",
+        "element_label": "Ability to monitor system operations and react to events in response to triggers and/or observation of trends or unusual activity.",
+        "score": 0.40283100955648127
+      },
+      {
+        "framework": "nice",
+        "element_id": "K1071",
+        "element_label": "Knowledge of continuous monitoring processes",
+        "score": 0.3916257090909091
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-4.3",
+        "element_label": "Organizational teams are committed to a culture that considers and communicates AI risk.",
+        "score": 0.38992848484848486
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "moderate_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA DQ-T-014 (DQ, Task) does not clear the moderate fit inclusion threshold of 0.43. Composite score 0.4216 is insufficient to establish relevance to bioinformatics analysis, genomic data processing, and life sciences analytics at IC-to-senior-IC level. Framework signals (eu_ai_act=0.422, ddat=0.420, dcwf=0.403) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4216 below threshold for moderate fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does DQ-domain KSA DQ-T-014 (composite 0.4216) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4216 for DQ domain does not meet the evidentiary bar for ANL IC-level inclusion per DCAT-AP, DAMA DMBOK data quality competency framework; DQ awareness is a documented expectation in senior IC analyst roles. External sources confirm this competency is not a standard expectation for Bioinformatics Technician at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms DQ domain KSA at composite 0.4216 is not a standard requirement for Bioinformatics Technician at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4216, domain DQ, scope moderate fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:39.145421+00:00",
+    "pipeline_version": "1.0"
+  }
+}

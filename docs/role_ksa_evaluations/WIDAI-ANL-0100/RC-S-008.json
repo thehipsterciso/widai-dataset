@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0100",
+  "role_name": "Citizen Data Scientist",
+  "ksa_id": "RC-S-008",
+  "ksa_text": "Skill in conducting AI conformity assessments under the EU AI Act, including risk classification determination, technical documentation evaluation, and compliance assessment against applicable high-risk AI system requirements.",
+  "ksa_dimension": "Skill",
+  "ksa_domain": "RC",
+  "pass_1_scoring": {
+    "composite_score": 0.6000317436661698,
+    "signal_strength": "moderate",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.40952398663898165,
+        "cross_encoder_sts": 0.4376574975173783,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.3345012909632572,
+        "jaccard": null,
+        "top_element_id": "10",
+        "top_element_label": "Knowledge of application vulnerabilities."
+      },
+      "ddat": {
+        "composite": 0.39948223140495864,
+        "cross_encoder_sts": 0.44584772727272726,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.2758409090909091,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-023",
+        "top_element_label": "Capability building for digital, data and technology"
+      },
+      "eu_ai_act": {
+        "composite": 0.6000317436661698,
+        "cross_encoder_sts": 0.5992180327868852,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.6022016393442623,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-004",
+        "top_element_label": "Risk management system"
+      },
+      "nice": {
+        "composite": 0.4048408870255958,
+        "cross_encoder_sts": 0.4430709951456311,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.30289393203883497,
+        "jaccard": null,
+        "top_element_id": "K0092",
+        "top_element_label": "Knowledge of technology integration processes"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.5844027272727272,
+        "cross_encoder_sts": 0.5804914285714285,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5948328571428572,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      },
+      "onet": {
+        "composite": 0.36312828282828286,
+        "cross_encoder_sts": 0.3979888888888889,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.27016666666666667,
+        "jaccard": null,
+        "top_element_id": "4.A.2.a.3",
+        "top_element_label": "Evaluating Information to Determine Compliance with Standards"
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-004",
+        "element_label": "Risk management system",
+        "score": 0.6000317436661698
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.5844027272727272
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "10",
+        "element_label": "Knowledge of application vulnerabilities.",
+        "score": 0.40952398663898165
+      },
+      {
+        "framework": "nice",
+        "element_id": "K0092",
+        "element_label": "Knowledge of technology integration processes",
+        "score": 0.4048408870255958
+      },
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-023",
+        "element_label": "Capability building for digital, data and technology",
+        "score": 0.39948223140495864
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf",
+      "onet"
+    ],
+    "frameworks_no_signal": [],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "include",
+    "rationale": "KSA RC-S-008 (RC, Skill) maps to Citizen Data Scientist scope as weak fit. Composite score 0.6000 clears the weak fit threshold of 0.52. Top framework anchors: eu_ai_act=0.600, nist_ai_rmf=0.584, dcwf=0.410. Seniority fit: appropriate; content reflects IC-to-senior-IC execution work within self-service analytics, business-led data exploration, and low-code BI."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 include upheld. Score 0.6000 for weak fit domain is consistent with ANL IC-level scope. No internal contradictions identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does KSA RC-S-008 (RC, composite 0.6000) appear in published data analyst / BI role profiles and workforce frameworks?",
+    "evidence": "Composite 0.6000 for RC domain provides sufficient cross-framework signal per GDPR, CCPA, SOX; compliance competencies in IC ANL scope limited to data handling obligations, not compliance program ownership. Strong signal across eu_ai_act=0.600, nist_ai_rmf=0.584, dcwf=0.410 indicates genuine competency overlap despite absence of direct analytics terminology. External ground truth upholds inclusion.",
+    "ruling": "P3 include upheld. Score 0.6000 exceeds external evidence threshold for RC domain inclusion in Citizen Data Scientist."
+  },
+  "final_decision": "include",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: include. P2 include confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.6000, domain RC, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:45.891195+00:00",
+    "pipeline_version": "1.0"
+  }
+}

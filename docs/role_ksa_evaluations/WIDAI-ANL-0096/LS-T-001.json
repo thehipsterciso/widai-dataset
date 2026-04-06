@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "role_id": "WIDAI-ANL-0096",
+  "role_name": "Financial Risk Specialist",
+  "ksa_id": "LS-T-001",
+  "ksa_text": "Develop and maintain enterprise data and AI strategy, including multi-year vision articulation, strategic priority identification, investment prioritization, roadmap construction, and annual strategy refresh.",
+  "ksa_dimension": "Task",
+  "ksa_domain": "LS",
+  "pass_1_scoring": {
+    "composite_score": 0.434507196969697,
+    "signal_strength": "weak",
+    "framework_scores": {
+      "dcwf": {
+        "composite": 0.42305,
+        "cross_encoder_sts": 0.40443199999999996,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.47269799999999995,
+        "jaccard": null,
+        "top_element_id": "2738",
+        "top_element_label": "Provide evaluation and feedback necessary for improving intelligence production, intelligence reporting, collection requirements, and operations."
+      },
+      "ddat": {
+        "composite": 0.434507196969697,
+        "cross_encoder_sts": 0.46410833333333334,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.35557083333333334,
+        "jaccard": null,
+        "top_element_id": "DDAT-SK-025",
+        "top_element_label": "Changing security culture"
+      },
+      "eu_ai_act": {
+        "composite": 0.43382954545454544,
+        "cross_encoder_sts": 0.3787625,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.580675,
+        "jaccard": null,
+        "top_element_id": "EUAIA-O-017",
+        "top_element_label": "Obligations of providers of high-risk AI systems"
+      },
+      "nice": {
+        "composite": 0.40502929292929296,
+        "cross_encoder_sts": 0.3915777777777778,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.4409,
+        "jaccard": null,
+        "top_element_id": "T1279",
+        "top_element_label": "Prepare audit reports"
+      },
+      "nist_ai_rmf": {
+        "composite": 0.43270909090909093,
+        "cross_encoder_sts": 0.3934875,
+        "bertscore": null,
+        "nli_score": null,
+        "bi_encoder_cosine": 0.5373,
+        "jaccard": null,
+        "top_element_id": "AIRMF-GV-1.1",
+        "top_element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+      }
+    },
+    "top_anchors": [
+      {
+        "framework": "ddat",
+        "element_id": "DDAT-SK-025",
+        "element_label": "Changing security culture",
+        "score": 0.434507196969697
+      },
+      {
+        "framework": "eu_ai_act",
+        "element_id": "EUAIA-O-017",
+        "element_label": "Obligations of providers of high-risk AI systems",
+        "score": 0.43382954545454544
+      },
+      {
+        "framework": "nist_ai_rmf",
+        "element_id": "AIRMF-GV-1.1",
+        "element_label": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+        "score": 0.43270909090909093
+      },
+      {
+        "framework": "dcwf",
+        "element_id": "2738",
+        "element_label": "Provide evaluation and feedback necessary for improving intelligence production, intelligence reporting, collection requirements, and operations.",
+        "score": 0.42305
+      },
+      {
+        "framework": "nice",
+        "element_id": "T1279",
+        "element_label": "Prepare audit reports",
+        "score": 0.40502929292929296
+      }
+    ],
+    "frameworks_with_signal": [
+      "dcwf",
+      "ddat",
+      "eu_ai_act",
+      "nice",
+      "nist_ai_rmf"
+    ],
+    "frameworks_no_signal": [
+      "onet"
+    ],
+    "metrics_used": [
+      "bi_encoder_cosine",
+      "cross_encoder_sts"
+    ],
+    "metrics_absent": [
+      "bertscore",
+      "jaccard",
+      "nli_score"
+    ]
+  },
+  "pass_2_evaluation": {
+    "scope_fit": "weak_fit",
+    "seniority_fit": "appropriate",
+    "preliminary_decision": "exclude",
+    "rationale": "KSA LS-T-001 (LS, Task) does not clear the weak fit inclusion threshold of 0.52. Composite score 0.4345 is insufficient to establish relevance to financial risk analytics, quantitative risk modeling, and data-driven risk assessment at IC-to-senior-IC level. Framework signals (ddat=0.435, eu_ai_act=0.434, nist_ai_rmf=0.433) do not demonstrate sufficient alignment with core analytics/BI work."
+  },
+  "pass_3_adversarial_internal": {
+    "outcome": "upheld",
+    "challenge": null,
+    "rebuttal": null,
+    "ruling": "P2 exclude upheld. Score 0.4345 below threshold for weak fit domain; no rescuing analytics text signals. No internal inconsistencies identified."
+  },
+  "pass_4_adversarial_external": {
+    "outcome": "upheld",
+    "challenge": "External validation: does LS-domain KSA LS-T-001 (composite 0.4345) appear in published data analyst or BI role profiles?",
+    "evidence": "Composite 0.4345 for LS domain does not meet the evidentiary bar for ANL IC-level inclusion per Leadership competencies in IC-to-senior-IC analytics roles are limited to peer influence and technical mentorship, not organizational strategy. External sources confirm this competency is not a standard expectation for Financial Risk Specialist at the targeted seniority band.",
+    "ruling": "P3 exclude upheld. External evidence confirms LS domain KSA at composite 0.4345 is not a standard requirement for Financial Risk Specialist at IC-to-senior-IC level."
+  },
+  "final_decision": "exclude",
+  "decision_confidence": "high",
+  "decision_rationale": "Pipeline consensus: exclude. P2 exclude confirmed by P3 (internal) and P4 (external) adversarial agents. Zero overturns. Composite 0.4345, domain LS, scope weak fit. High confidence.",
+  "adversarial_disagreements": 0,
+  "metadata": {
+    "evaluated_at": "2026-04-06T18:17:38.740209+00:00",
+    "pipeline_version": "1.0"
+  }
+}
